@@ -1,0 +1,83 @@
+   <talk>
+      <npcename>n2649_hongryun_scholar</npcename>
+      <npcid>2649</npcid>
+      <startexe>0</startexe>
+      <comment>#249199 추가 입장권 판매 상점 제거 (95001)
+api_ui_OpenShop(userObjID,89011,100); 커뮤니티 상점
+api_ui_OpenShop(userObjID,53000,100); 포인트 교환 상점
+api_ui_OpenShop(userObjID,89000,100); 사제 포인트 교환 상점</comment>
+      <npckname mid="3"><![CDATA[Heraldry Scholar Hakyul]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="7"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill_crest" mid="309"><![CDATA[<html>[Skill Heraldry Shop]</html>]]></talk_answer>
+         <talk_answer link_index="community" mid="331"><![CDATA[<html>[Community Shop]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="338"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Heraldry Scholar Hakyul${action:Talk}<BR>Did you have a restful night?<BR>You look to be in fine form.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="001" mid="231"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="341" link_target="sqc25_3770_secretly_risky.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Secretly with Risk</FONT></html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Heraldry Scholar Hakyul$<BR>Okay! Let's find what truths are hidden in this crest!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="335"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="320"><![CDATA[<html>$Heraldry Scholar Hakyul${action:Refusal}<BR>…Hmm? What are you talking about?<BR>
+This pig is not for eating!<BR>He's my good buddy. I first met him through Trainer Ming-ming.<BR>
+That's right, we're friends!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenCompoundEmblem(userObjID);</exe>
+         <exe type="conexe" true="3" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="8" false="5">1</exe>
+         <exe type="conexe" true="9" false="6">2</exe>
+         <exe type="conexe" true="10" false="7">3</exe>
+         <exe type="conexe" true="11" false="23">4</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200004,100);</exe>
+         <exe type="conexe" true="20" false="14">5</exe>
+         <exe type="conexe" true="16,17,18,19" false="15">7</exe>
+         <exe type="talk">lack_of_matrials</exe>
+         <exe type="talk">inven_full</exe>
+         <exe type="custom">api_user_DelItem(userObjID, 337839361, 1, 0);</exe>
+         <exe type="custom">api_user_DelItem(userObjID, 337839362, 1, 0);</exe>
+         <exe type="custom">api_user_AddItem(userObjID, 337839360, 1, 0);</exe>
+         <exe type="talk">trade_complete</exe>
+         <exe type="conexe" true="13" false="14">6</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200005,100);</exe>
+         <exe type="custom">api_ui_OpenGlyphLift(userObjID);</exe>
+         <exe type="conexe" true="21" false="24">8</exe>
+         <exe type="conexe" true="25" false="27">9</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200006,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200007,100);</exe>
+         <exe type="conexe" true="26" false="28">10</exe>
+         <exe type="conexe" true="29" false="34">11</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200008,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200009,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,53000,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,89000,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,89011,100);</exe>
+         <exe type="conexe" true="30" false="35">12</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200010,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="lvl" op=">=">40</chk>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="item" num="1" op=">=">337839361</chk>
+         <chk type="item" num="1" op=">=">337839362</chk>
+         <chk type="custom">api_user_CheckInvenForAddItem(userObjID, 337839360, 1) >= 0</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="class" op="=">9</chk>
+      </conditions>
+      <exelink idx="skill_crest">4</exelink>
+      <exelink idx="community">33</exelink>
+   </talk>

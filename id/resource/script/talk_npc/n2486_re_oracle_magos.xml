@@ -1,0 +1,50 @@
+   <talk>
+      <npcename>n2486_re_oracle_magos</npcename>
+      <npcid>2486</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Magos]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="002" mid="4"><![CDATA[<html>Was there a need for this?</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Magos$<BR>
+This place was made by distorting your consciousness.<BR>Although we are at Hermit’s Village now,<BR>your distorted senses are recognising this place as somewhere else.<BR>
+ <BR>
+ </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="003" mid="6"><![CDATA[<html>I have special powers?</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Magos$<BR>
+You have <FONT color=#a82424>special powers</FONT> within you.<BR>However, you must awaken the power yourself first.<BR>To do that, you must shut out external disturbances and focus all your attention on yourself.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="004" mid="8"><![CDATA[<html>Master died because... because I was too incompetent…!</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Magos$<BR>
+Yes, if you attained those powers early… <BR>
+You wouldn’t have had to go through this tragedy.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_answer link_index="005" mid="10"><![CDATA[<html>Please teach me! How can I get that power?</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Magos$<BR>
+Don’t waste your energy blaming yourself. Use it to train yourself instead.<BR>Destiny will not wait for you.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="005" image="" itemindex="">
+         <talk_answer link_index="set_skill" mid="12"><![CDATA[<html>Okay!</html>]]></talk_answer>
+         <talk_question mid="11"><![CDATA[<html>$Magos$<BR>I will summon my underlings now.<BR>Try fighting them to awaken the <FONT color=#a82424>special power</FONT> inside you.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="0,3" false="">0</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 243, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 89 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 287, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4069, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4070, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4071, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4072, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4073, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 88</chk>
+      </conditions>
+      <exelink idx="set_skill">2,4,5,6,7,8,9</exelink>
+   </talk>

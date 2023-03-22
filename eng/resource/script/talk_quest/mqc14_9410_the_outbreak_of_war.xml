@@ -1,0 +1,612 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc14_9410_the_outbreak_of_war</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>14</qchapter>
+      <qid>9410</qid>
+      <designer>최지은</designer>
+      <qlevel>70</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9411</nextqid>
+      <nextqname>mqc14_9411_entrance_of_monolith</nextqname>
+      <nextqnpc>n1047_argenta</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[The War Begins]]></qkname>
+      <qnpc>
+         <npcid>1047</npcid>
+         <npcename>n1047_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1065</npcid>
+         <npcename>n1065_geraint_kid</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1067</npcid>
+         <npcename>n1067_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1505</npcid>
+         <npcename>n1505_elf_king</npcename>
+         <npckname>엘프 왕 페르데레스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1506</npcid>
+         <npcename>n1506_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1507</npcid>
+         <npcename>n1507_gereint_kid</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1551</npcid>
+         <npcename>n1551_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>249</npcid>
+         <npcename>n249_saint_guard</npcename>
+         <npckname>왕성 근위병 로이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>38</npcid>
+         <npcename>n038_royal_magician_kalaen</npcename>
+         <npckname>궁정 소서리스 칼라엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>41</npcid>
+         <npcename>n041_duke_stwart</npcename>
+         <npckname>공작 스튜어트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>822</npcid>
+         <npcename>n822_teramai</npcename>
+         <npckname>테렌스 테라마이</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Royal Guard Roy$<BR><FONT color=#387206>{user_nick}</FONT>, there's a message from the Royal Castle. You have been summoned to come to the castle right now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-b" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The Royal Castle?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-c" mid="10" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Royal Guard Roy$<BR>Yes, I don't know about the details but I heard something about Anu Arendel's messenger.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-acceptted" mid="12" select_type="3" />
+      <talk_question mid="11"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Anu Arendel…! <BR>(Does that mean…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-1-" mid="62" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Royal Guard Roy$<BR>His Highness is waiting for you.<BR>Please make your way.<FONT color=#7e12d2>(Roy bows politely and walks away. Go to Royal Castle)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-" mid="63" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Elf Elder$<BR>The news must have arrived by now.<BR><FONT color=#7e12d2>(Meet King Cassius)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-a" mid="64" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Duke Stuart$<BR>It has been so long since you have been called for. Why are you here only now?<BR>Everyone, don't you think we have been trusting this adventurer too much?<BR>This person probably has no idea what's being done.<BR><FONT color=#7e12d2>(Stuart looks unhappy)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-a" image="" itemindex="" portrait_left="NPC_Left_Teramai.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-b" mid="65" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Terrence Terramai$<BR>Good to see you, <FONT color=#387206>{user_nick}</FONT>. We just got a message from Elf Elder.<BR>There's an intruder at the entrance of the Monolith.<BR>The movement of the Dragon Followers seem alarming too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-c" mid="66" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Court Sorceress Kayleen$<BR>I also received a report that intruder of the Monolith was wearing the Dragon Follower's mask.<BR>
+So all this is due to the Dragon Followers. <BR>
+Let's take this chance to burn all of them! Save the world and kill the Dragon Followers too!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-d" mid="67" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Court Sorceress Kayleen$<BR>It's a pity that we can't enter the Monolith, but there's no choice.<BR>We don't know what might happen if we go in there, and the Elves have been protecting that place since the beginning of this world...<BR>We have no choice but to trust them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-e" mid="68" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Duke Stuart$<BR><FONT color=#7e12d2>(Stuart still looks unhappy)</FONT><BR>Let me say this again, there would be no support from me.<BR>I will only use my forces in protecting Saint Haven.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-e" image="" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-f" mid="70" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$General Douglas$<BR>I can't give much support too as my soldiers are busy fighting the monsters.<BR>
+It will probably be Terramai's Templar Knights and Kayleen's Royal Sorceresses who would be going to Anu Arendel, <BR>
+but I will still get some troops ready for emergency.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-f" image="" itemindex="" portrait_left="NPC_Left_Teramai.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-g" mid="71" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Terrence Terramai$<BR>That would be enough. Anu Arendel isn't a big so not many soldiers are needed at first.<BR>
+Besides fighting the Dragon Followers, we should always keep in mind that we should protect Anu Arendel.<BR>
+Then <FONT color=#387206>{user_nick}</FONT>... since you are the one who has notified the Royal Castle of this issue, the King has issued a royal command.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-g" image="" itemindex="" portrait_left="NPC_Left_Teramai.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-h" mid="72" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-i" mid="73" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$King Cassius$<BR>E-ehem! Urrhem! Eeeehhkkkehm!<BR><FONT color=#7e12d2>(Cassius is clearing his throat a bit too much.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-j" mid="74" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$King Cassius$<BR>W-we are at a v-v-very dangerous s-situation...<BR><FONT color=#7e12d2>(Cassius reads the words on the scroll with his hands shaking vigorously. Stuart is worriedly looking at the young king too)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-k" mid="75" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$King Cassius$<BR>M-monolith in d-d-danger means this w-w-world in danger. As I understand the s-severity of this issue, I request the Elf Elder f-for cooperation f-f-from the Elves. <FONT color=#387206>{user_nick}</FONT>, your c-contribution has b-been highly r-r-recognized.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-l" mid="122" select_type="0"><![CDATA[<html>(He's making me choke too)</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-1-l" mid="123" select_type="0"><![CDATA[<html>(You can do it, Cassius...) </html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-1-l" mid="124" select_type="0"><![CDATA[<html>(What the heck is he saying?)</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$King Cassius$<BR>Th-this m-m-m-moment! Is a v-v-very meaningful m-m-moment. We will j-j-join hands with the Elves. And… we… we… we are g-going to r-recover the g-g-glory of the h-h-heroes of the p-past.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-m" mid="77" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$King Cassius$<BR>We are ready to f-f-fight the crisis instead of running f-f-from it..!<BR><FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723>,</FONT> c-convey this m-m-message to Elf Elder.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-n" mid="78" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$King Cassius$<BR><FONT color=#662500>(Cassius hands over the scroll with his face pale like he will pass out any moment. Take it quickly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-n" image="" itemindex="" portrait_left="NPC_Left_Stwart.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-o" mid="79" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Duke Stuart$<BR>His Highness didn't read the entire scroll.<BR>
+The size of our army and the future plans are also in the scroll so deliver it safely.<BR>
+You will be held responsible if it is somehow damaged.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-o" image="" itemindex="" portrait_left="NPC_Left_Stwart.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-p" mid="80" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Understood.<BR>(It feels like the scroll may get wet from the sweaty palms…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-" mid="81" select_type="5" />
+      <talk_question mid="31"><![CDATA[<html>$Terrence Terramai$<BR>We will send our soldiers soon so don't worry.<BR>
+<FONT color=#7e12d2>(Terramai pats your shoulder like he's trying to comfort you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-1-" mid="82" select_type="5" />
+      <talk_question mid="32"><![CDATA[<html>$Terrence Terramai$<BR>…We won't be shifting the responsibility like last time. <BR>
+There is bound to be people who disagree in whatever happens so don't worry about it too much.<BR><FONT color=#7e12d2>(Terramai speaks as he stares at Stuart)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-1-" mid="83" select_type="5" />
+      <talk_question mid="33"><![CDATA[<html>$Court Sorceress Kayleen$<BR>So, the clerics will do more than twiddle their thumbs for once. I appreciate <FONT color=#a82424>Terrence Terramai's...</FONT> eagerness to help. It's so unlikely of that toad Ignacio.<BR><FONT color=#7e12d2>(Kayleen is looking at Terramai)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-1-" mid="84" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$Duke Stuart$<BR>I'm sure I needn't warn you what will happen if you betray us...<BR><FONT color=#7e12d2>(There are dark rings under the duke's eyes.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="85" select_type="5" />
+      <talk_question mid="35"><![CDATA[<html>$General Douglas$<BR>Your courage is an inspiration to us all.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-" mid="185" select_type="5" />
+      <talk_question mid="184"><![CDATA[<html>$Argenta$<BR>Do your job.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1065_geraint_kid-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1065_geraint_kid-1-" mid="187" select_type="5" />
+      <talk_question mid="186"><![CDATA[<html><FONT color=#2b2723>$Geraint$</FONT><BR><FONT color=#7e12d2>(He looks unhappy)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-" mid="223" select_type="5" />
+      <talk_question mid="36"><![CDATA[<html>$King Cassius$<BR>B-b-be safe, my friend...<BR><FONT color=#7e12d2>(Cassius speaks in hushed tones. Visit the Elf Elder.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-a" mid="86" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Elf Elder$<BR>Welcome back. Have you delivered my message to the Royal Castle?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-b" mid="87" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well, of course. Here's the reply.<BR>(Hand over Cassius's scroll)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-c" mid="88" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Elf Elder${action:Talk}<BR>Hmm.<FONT color=#7e12d2>(Elf Elder unrolls the scroll and reads it)</FONT> <BR>… Looks like Terrence put in a good word for us.<BR>According to this, you'll be working directly with me, is that right, <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-d" mid="89" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hmm? Is there something for me to do?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-e" mid="90" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Elf Elder$<BR><FONT color=#7e12d2>(The Elf Elder wears a grim frown.)</FONT><BR>Our new King would like to speak with you. Our dragon friends are also waiting. Would you follow me into the <FONT color=#a82424>Tree of Life?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-f" mid="91" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The new king…!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-3" mid="92" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Elf Elder$<BR><FONT color=#7e12d2>(The Elf Elder forces a strained smile)</FONT><BR>Yes. <FONT color=#387206>{user_nick}</FONT>, you know him well too.<BR>You'll recognize him as soon as you enter.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-3-" mid="93" select_type="5" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay. (Enter the Tree of Life)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-a" mid="125" select_type="2" />
+      <talk_question mid="94"><![CDATA[<html>$Elf King Federeth${action:See}<BR>Welcome. We're meeting for the first time after I've changed.<BR><FONT color=#7e12d2>(The Elf King moves his body that looks uncomfortable)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-b" mid="126" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yuvenciel...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-c" mid="127" select_type="0"><![CDATA[<html>Oh right…</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-c" mid="128" select_type="0"><![CDATA[<html>Nice to meet you again.</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-c" mid="129" select_type="0"><![CDATA[<html>(He has changed a lot…)</html>]]></talk_answer>
+      <talk_question mid="96"><![CDATA[<html>$Elf King Federeth${sound:npc_ElfKing_9410_qu_01.ogg}<BR>Please call me Federeth. Like the previous Queens, I've gained a new name as I took the throne.<BR><FONT color=#7e12d2>(Federeth smiles)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-c" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-d" mid="130" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>$Argenta$<BR>Stop rambling and get to the main point.<BR>I'm not so free to be here to see the two of you have a chit-chat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-e" mid="131" select_type="2" />
+      <talk_question mid="98"><![CDATA[<html>$Elf King Federeth${action:Smile}<BR>… All good things come in their own time, my dear Silver Dragon. A little patience will do wonders.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-e" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-f" mid="132" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>$Argenta${action:Hwww}<BR>You're the one who's making me lose patience!!<BR>But...<FONT color=#7e12d2>(Argenta gives you a quick glance)</FONT> it looks like what you said is true.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-g" mid="133" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>$Elf King Federeth$<BR>I wouldn't dare lie to the Silver Dragon! I have checked that Chaos Dragon's power has spread all across Anu Arendel. And one of them is shining from <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-g" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-h" mid="134" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>$Argenta$<BR><FONT color=#387206>{user_nick}</FONT>, did you kill the Chaos Dragon? But it looks like you didn't absorb the jewel. What happened?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-h" image="QN_Npc_White_dragon.dds" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-i" mid="135" select_type="2" />
+      <talk_question mid="102"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No I didn't kill him… well, Iona was…<BR>(Tell her what happened)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-i" image="QN_Npc_White_dragon.dds" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-j" mid="136" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$Argenta${sound:npc_Argenta_9410_qu_01.ogg}<BR>White Dragon Iona?! Are you talking about that ball of energy… It was ages ago that I last saw it, how can it still be around? And it just gave its power to you and disappeared? Well, fools recognize fools so well. You guys must get along really well.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-k" mid="137" select_type="2" />
+      <talk_question mid="104"><![CDATA[<html>$Geraint${sound:npc_GeraintKid_9410_qu_01.ogg}<BR>You spared a Chaos Dragon?<BR>I didn't hear about that before.<BR><FONT color=#7e12d2>(Geraint turns grumpy)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-k" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-l" mid="138" select_type="0"><![CDATA[<html>Run errands?! </html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-l" mid="139" select_type="0"><![CDATA[<html>(Yuvenciel! You made me a servant?!)</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-l" mid="140" select_type="0"><![CDATA[<html>(Your heart is pounding in your chest) It's an honour.</html>]]></talk_answer>
+      <talk_question mid="105"><![CDATA[<html>$Argenta$<BR>Well, it's a long story. Whatever the case, if you have the power of Chaos Dragon you should be able to move even when you get to the Monolith. Yuvenciel, it looks like we have a servant just like you said.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-l" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-m" mid="141" select_type="0"><![CDATA[<html>(YAY~) Okay!</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-m" mid="142" select_type="0"><![CDATA[<html>I'll do my best.</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-m" mid="143" select_type="0"><![CDATA[<html>I won't be a burden to you.</html>]]></talk_answer>
+      <talk_question mid="106"><![CDATA[<html>$Argenta$<BR>Hmph.<FONT color=#7e12d2>(Doesn't even listen)</FONT><BR>So the three of us - Geraint, I, and the servant - can go near the Monolith entrance now.<BR>
+But if you do anything foolish, I'll make sure you're chased out of Anu Arendel so keep that in mind!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-m" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-n" mid="144" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Argenta$<BR>…Know your place.<BR>Don't do anything other than what I tell you to do.<BR>Not even orders from the king or the Elf Elder.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-n" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-o" mid="145" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>$Argenta${action:Talk_Angry}<BR>
+Honestly I don't like you guys either.<BR>If you let the Dragon Follower scums get near the Monolith like what happened during the Conclave, you'll get it from me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-p" mid="146" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>$Elf King Federeth$<BR>Well, of course my lady. We won't be attacked hands down like what happened in the Conclave.<BR>We will do our best to stop them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-p" image="" itemindex="" portrait_left="NPC_Left_Elder_elf.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-q" mid="147" select_type="2" />
+      <talk_question mid="110"><![CDATA[<html>$Elf Elder$<BR><FONT color=#7e12d2>(He is glaring at the King fiercely)</FONT><BR>..There isn't any traitors among us anymore. The humans have promised to join forces too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-r" mid="148" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>$Argenta$<BR>What?<FONT color=#7e12d2>(Argenta's eyes widen with surprise.)</FONT><BR>The humans? They finally realize that it isn't their lands that are under attack, don't they?<BR>The Dragon Followers and the Black Dragon must have taught them a good lesson.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-r" image="" itemindex="" portrait_left="NPC_Left_Elder_elf.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-s" mid="149" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>$Elf Elder${sound:npc_ElfElder_9427_qu_08.ogg}<BR><FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723> here has worked hard to </FONT>persuade them for action.<BR>That is how it all worked out.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-s" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-t" mid="211" select_type="0"><![CDATA[<html>I just thoght it would be better if we joined forces.</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-t" mid="212" select_type="0"><![CDATA[<html>I want to learn from Geraint.</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-t" mid="213" select_type="0"><![CDATA[<html>I'm not a young kid who considers this as a game.</html>]]></talk_answer>
+      <talk_question mid="113"><![CDATA[<html>$Argenta$<BR>What? You?<FONT color=#7e12d2>(Argenta looks a little suprised)</FONT><BR>Hah! Are you trying to copy Geraint?<BR>Or you want to play the "hero", huh?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-u" mid="151" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>$Argenta$<BR>Hahaha! You make it sound so glorious.<BR>It's amazing that the humans have faith in you! Haha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-u" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-v" mid="152" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Is that a compliment or what...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-v" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-w" mid="153" select_type="0"><![CDATA[<html>Hey, how can you say that!</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-w" mid="154" select_type="0"><![CDATA[<html>You really don't remember anything..</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-w" mid="155" select_type="0"><![CDATA[<html>There are lessons to learn even from defeat.</html>]]></talk_answer>
+      <talk_question mid="116"><![CDATA[<html>$Geraint${sound:npc_GeraintKid_9410_qu_02.ogg}<BR>Talking about old me again? Old Geraint was a loser, wasn't I? Why do you want to copy that?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-w" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-x" mid="156" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>$Geraint$<BR>Hmph! Am I to congratulate you for gathering a herd of useless sheep to fight a dragon? If we're lucky, they'll all die before they have a chance to get in my way!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-x" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-y" mid="157" select_type="2" />
+      <talk_question mid="118"><![CDATA[<html>$Argenta$<BR>They will spare us from wasting our time on those stupid Dragon Followers and let us focus on the <FONT color=#a82424>Monolith.</FONT> But this conversation bores me. I'm leaving.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-y" image="" itemindex="" portrait_left="NPC_Left_King_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-z" mid="158" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>$Elf King Federeth$<BR>Stay safe, my charming Silver Dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-z" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-4" mid="159" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>$Elf Elder$<BR>I'll take my leave as well.<BR>Please rest, my King.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1506_argenta-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1506_argenta-3-" mid="176" select_type="5" />
+      <talk_question mid="175"><![CDATA[<html>$Argenta$<BR>What are you looking at? Do your own job.<BR><FONT color=#7e12d2>(Talk to Elf King Federeth)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1507_gereint_kid-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1507_gereint_kid-3-" mid="178" select_type="5" />
+      <talk_question mid="177"><![CDATA[<html>$Geraint${action:Talk}<BR>Are those two not on good terms?<BR>Well, it's none of my business.<BR><FONT color=#7e12d2>(Talk to Elf King Federeth)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1551_elder_elf-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1551_elder_elf-3-" mid="180" select_type="5" />
+      <talk_question mid="179"><![CDATA[<html>$Elf Elder$<BR>I didn't expect Yuvenciel to become the king but…<BR>I'm just doing my duty. If he has enough grace to be the King.<BR><FONT color=#7e12d2>(Talk to Elf King Federeth)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-4" image="" itemindex="" portrait_left="NPC_Left_King_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-4-" mid="161" select_type="5" />
+      <talk_question mid="160"><![CDATA[<html>$Elf King Federeth${action:See}<BR>...Please don't look at me like that. We're allies now, remember?<BR><FONT color=#7e12d2>(Federeth bows. Go outside and talk to Argenta.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-4-a" mid="163" select_type="2" />
+      <talk_question mid="162"><![CDATA[<html>$Argenta$<BR>I'll tell you what to do now. Pay attention.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-4-b" mid="165" select_type="2" />
+      <talk_question mid="164"><![CDATA[<html>$Argenta$<BR>If you can't keep up, I will abandon you. I don't care if you convince a thousand kingdoms to fight for you. Mortal armies mean nothing in the <FONT color=#a82424>Monolith,</FONT> and the only thing you can rely on is yourself.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-4-c" mid="167" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm ready for this.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-c" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1047_argenta-4-d" mid="169" select_type="2" />
+      <talk_question mid="168"><![CDATA[<html>$Geraint$<BR>…What the heck have I been doing in the past?<BR><FONT color=#7e12d2>(He looks grumpy)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-d" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1047_argenta-4-e" mid="171" select_type="4" />
+      <talk_question mid="170"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-4-!next" mid="215" select_type="2" />
+      <talk_question mid="172"><![CDATA[<html>$Argenta$<BR><FONT color=#7e12d2>(Argenta ignores Geraint)</FONT><BR>Hmph, <FONT color=#387206>{user_nick}</FONT>… you answer more confidently now. That's better.<BR>Good. There's more to explain to you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1065_geraint_kid-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1065_geraint_kid-4-" mid="188" select_type="5" />
+      <talk_question mid="182"><![CDATA[<html>$Geraint$<BR><FONT color=#7e12d2>(He looks grumpy)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1506_argenta-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1506_argenta-4-" mid="218" select_type="5" />
+      <talk_question mid="217"><![CDATA[<html>$Argenta$<BR>Seriously.... All those that become king are...<BR><FONT color=#7e12d2>(Argenta mumbles something to herself in irritation. Go outside and talk to her)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1551_elder_elf-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1551_elder_elf-4-" mid="222" select_type="5" />
+      <talk_question mid="221"><![CDATA[<html>$Elf Elder$<BR>I'll take my leave as well.<BR>
+<FONT color=#7e12d2>(Go outside and talk to Argenta)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9410</exe>
+         <exe type="talk" npc="n249_saint_guard">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="hascomq">9459</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 9459, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="" false="2">0</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">94100,,,,,,,,,</exe>
+         <exe type="complete" true="">9410</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n249_saint_guard" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n040_king_casius" sub="b" />
+   <exelink qstep="1" npc="n040_king_casius" sub="c" />
+   <exelink qstep="1" npc="n040_king_casius" sub="d" />
+   <exelink qstep="1" npc="n040_king_casius" sub="e" />
+   <exelink qstep="1" npc="n040_king_casius" sub="f" />
+   <exelink qstep="1" npc="n040_king_casius" sub="g" />
+   <exelink qstep="1" npc="n040_king_casius" sub="h" />
+   <exelink qstep="1" npc="n040_king_casius" sub="i" />
+   <exelink qstep="1" npc="n040_king_casius" sub="j" />
+   <exelink qstep="1" npc="n040_king_casius" sub="k" />
+   <exelink qstep="1" npc="n040_king_casius" sub="l" />
+   <exelink qstep="1" npc="n040_king_casius" sub="l" />
+   <exelink qstep="1" npc="n040_king_casius" sub="l" />
+   <exelink qstep="1" npc="n040_king_casius" sub="m" />
+   <exelink qstep="1" npc="n040_king_casius" sub="n" />
+   <exelink qstep="1" npc="n040_king_casius" sub="o" />
+   <exelink qstep="1" npc="n040_king_casius" sub="p">0,1</exelink>
+   <exelink qstep="1" npc="n040_king_casius" sub="" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="b" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="c" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="d" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="e" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="f" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="3">0,1,3</exelink>
+   <exelink qstep="3" npc="n1505_elf_king" sub="b" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="c" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="c" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="c" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="d" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="e" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="f" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="g" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="h" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="i" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="j" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="k" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="l" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="l" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="l" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="m" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="m" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="m" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="n" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="o" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="p" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="q" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="r" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="s" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="t" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="t" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="t" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="u" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="v" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="w" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="w" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="w" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="x" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="y" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="z" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n1047_argenta" sub="b" />
+   <exelink qstep="4" npc="n1047_argenta" sub="c" />
+   <exelink qstep="4" npc="n1047_argenta" sub="d">0</exelink>
+   <exelink qstep="4" npc="n1047_argenta" sub="e">1</exelink>
+   <exelink qstep="4" npc="n1047_argenta" sub="!next" />
+   <journal_data recompense="94100" quest_title="개전" chapterid="14" quest_level="70" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>11,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="45"><![CDATA[The War Begins 1]]></title>
+         <contents mid="46"><![CDATA[<html>Royal Guard Roy has passed you a message from King Cassius.<BR>Go to Saint Haven Royal Castle to meet Cassius.<BR><BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>- King Cassius</FONT></html>]]></contents>
+         <destination mid="47"><![CDATA[Talk to King Cassius]]></destination>
+         <todo_msg mid="48"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Elder_elf.dds</contents_image>
+         <destination_pos>34,n1067</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1067</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="49"><![CDATA[The War Begins 2]]></title>
+         <contents mid="50"><![CDATA[<html>You have received the scroll from King Cassius.<BR>Deliver it to Elf Elder in Anu Arendel.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life Entrance)</FONT> <FONT color=#a82424>- Elf Elder</FONT></html>]]></contents>
+         <destination mid="51"><![CDATA[Talk to Elf Elder]]></destination>
+         <todo_msg mid="52"><![CDATA[Deliver the scroll to Elf Elder in Anu Arendel.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>34,n1505</destination_pos>
+         <destination_mode>custom:34@2</destination_mode>
+         <statemark_npcid>1505</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="53"><![CDATA[The War Begins 3]]></title>
+         <contents mid="54"><![CDATA[<html>Go inside the Tree of Life and meet Yuvenciel who has become the Elf King.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life Entrance)</FONT> <FONT color=#a82424>- Inside the Tree of Life (Elf King Federeth)</FONT></html>]]></contents>
+         <destination mid="55"><![CDATA[Talk to Elf King Federeth]]></destination>
+         <todo_msg mid="56"><![CDATA[Go inside the Tree of Life and meet Elf King Federeth.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>34,n1047</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1047</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="57"><![CDATA[The War Begins 4]]></title>
+         <contents mid="58"><![CDATA[<html>You have met Elf King Federeth. Looks like you'll be following Argenta around from now on thanks to him.<BR>Discuss with Argenta what to do next.<BR><BR><FONT color=#086171>Anu Arendel </FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="59"><![CDATA[Talk to Argenta]]></destination>
+         <todo_msg mid="60"><![CDATA[Go outside the Tree of Life and talk to Argenta.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>70:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>9737</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

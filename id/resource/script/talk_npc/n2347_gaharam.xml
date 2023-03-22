@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n2347_gaharam</npcename>
+      <npcid>2347</npcid>
+      <startexe>6</startexe>
+      <comment>듀얼캐릭터 때문에 메인퀘 완료 여부를 체크함</comment>
+      <npckname mid="1"><![CDATA[Gaharam's Spirit (Prologue)]]></npckname>
+      <talk_paragraph index="001" image="QW_PrairieTown.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Gaharam's Spirit$ {action:Talk}<BR><FONT color=#387206>{user_nick}</FONT>, kau baik-baik saja rupanya. Terima kasih Goddess….<BR>Sekarang hanya kaulah orang yang selamat di klan kita.<BR>Pergilah ke Prairie Town, tempat star of destiny muncul.<BR>Temui prophet di sana dan lindungilah dia.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="11" link_target="mq01_026_incompleted_mission.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>Unfinished Mission</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back" mid="12"><![CDATA[<html>(kembali)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Gaharam's Spirit$ {action:Talk}<BR><FONT color=#7e12d2>(Gaharam's Spirit sepertinya berbicara sesuatu)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,26, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 26,1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 26, 1);</exe>
+         <exe type="conexe" true="0" false="0">0</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 24, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="0" false="7">1</exe>
+         <exe type="conexe" true="0,1,2,3" false="4">2</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">6</chk>
+         <chk type="hascomq">26</chk>
+         <chk type="hascomq">997</chk>
+      </conditions>
+      <exelink idx="back">0</exelink>
+   </talk>

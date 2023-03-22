@@ -1,0 +1,111 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq34_4449_night_forest_09</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4449</qid>
+      <designer>정진호</designer>
+      <qlevel>70</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Swamp of Dead Night Challenge 09.]]></qkname>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="6" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">4449</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">4449</exe>
+         <exe type="recompense">44490,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">0</exelink>
+   <remotecomplete qstep="2">1,0</remotecomplete>
+   <journal_data recompense="44490" quest_title="죽은 밤의 늪 Challenge 09." chapterid="" quest_level="70" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_87.dds</contents_image>
+         <destination_pos>871,0,0</destination_pos>
+         <destination_mode>custom:871@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="13"><![CDATA[Swamp of Dead Night Challenge 09.]]></title>
+         <contents mid="14"><![CDATA[<html>Kill Ogre Mugmug within 1 min 40 sec after becoming its enemy at the Swamp of Dead Night Abyss.<BR><BR>* <FONT color=#7e12d2>This quest can only be taken at Abyss difficulty level.</FONT><BR><BR><FONT color=#086171>Anu Arendel (Forest of Shady Blue Moon Entrance) </FONT><FONT color=#a82424>- Swamp of Dead Night(Abyss)</FONT></html>]]></contents>
+         <destination mid="15"><![CDATA[[Abyss] Kill Ogre Mugmug within the time limit]]></destination>
+         <todo_msg mid="16"><![CDATA[Kill Ogre Mugmug within 1 min 40 sec.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos />
+         <destination_mode />
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="20"><![CDATA[Goal achieved!]]></title>
+         <contents mid="21"><![CDATA[<html>Quest goal has been achieved. Open the Remote Quest window to complete the quest and receive the rewards.<BR><BR><FONT color=#7e12d2>* Remote quests can be completed immediately once the quest goals have been achieved.</FONT></html>]]></contents>
+         <destination mid="22"><![CDATA[Remote Quest Completed]]></destination>
+         <todo_msg mid="23"><![CDATA[Open the Remote Quest window to complete the quest.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

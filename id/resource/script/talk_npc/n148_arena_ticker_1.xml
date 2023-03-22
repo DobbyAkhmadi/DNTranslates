@@ -1,0 +1,36 @@
+   <talk>
+      <npcename>n148_arena_ticker_1</npcename>
+      <npcid>148</npcid>
+      <startexe>0</startexe>
+      <npckname mid="1"><![CDATA[Colosseum Officer Joseph]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="gogogo" mid="4"><![CDATA[<html>[Masuki Colosseum]</html>]]></talk_answer>
+         <talk_answer link_index="ask_colosseum1" mid="6"><![CDATA[<html>[Talk] Apa itu Colosseum?</html>]]></talk_answer>
+         <talk_answer link_index="exit_colosseum1" mid="7"><![CDATA[<html>[Talk] Bagaimana cara pergi dari Colosseum?</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="19"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Colosseum Officer Joseph${action:Talk}<BR>Para Adventurer di seluruh <FONT color=#a82424>Verathea</FONT> menuju tempat ini untuk  menunjukkan skill dan membuktikan diri mereka.<BR>Apakah kamu  ingin menguji dirimu juga? </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="ask_colosseum1" image="" itemindex="">
+         <talk_answer link_index="ask_colosseum2" mid="9"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Colosseum Officer Joseph${action:Talk}<BR><FONT color=#a82424>Saint's Haven</FONT> terkenal karena arena kompetisi berkalanya. <FONT color=#a82424>Royal</FONT> <FONT color=#a82424>Guards</FONT> dipilih dari yang telah membuktikan dirinya melalui kompetisi.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="ask_colosseum2" image="" itemindex="">
+         <talk_answer link_index="001" mid="11"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Colosseum Officer Joseph${action:Talk}<BR>Ingat <FONT color=#a82424>Velskud</FONT>? Hero yang kalah melawan <FONT color=#a82424>Black Dragon</FONT> 50 tahun yang lalu. Dia menjadi Captain setelah memenangkan salah satu pertandingan di Colosseum.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="exit_colosseum1" image="" itemindex="">
+         <talk_answer link_index="001" mid="13"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Colosseum Officer Joseph${action:Talk}<BR>Pintu keluar ada disebelah kananmu... Cepatlah kembali lagi!<BR>[Pilih kotamu di <FONT color=#a82424>Channel</FONT> tombol disebelah atas kanan untuk meninggalkan Colosseum]</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="20" link_target="sq08_304_victories_list_of_colosseum.xml"><![CDATA[<html>[Lv.10] <FONT color=#086171>Colosseum Records</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="21"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="16"><![CDATA[<html>$Colosseum Officer Joseph${action:Talk}<BR>Apa kabar?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_user_RequestEnterPVP( userObjID  );</exe>
+      </executions>
+      <conditions />
+      <exelink idx="gogogo">1</exelink>
+   </talk>

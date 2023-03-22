@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n1104_elf_guard</npcename>
+      <npcid>1104</npcid>
+      <startexe>4</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Elf Guard]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Elf Guard${action:Talk}<BR>Welcome, adventurer. This is the way to Anu Arendel.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="5"><![CDATA[<html>$Elf Guard${action:Talk}<BR>You can't go to Anu Arendel now.<BR>I can help you if you would like to travel to other areas.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="7"><![CDATA[<html>$Elf Guard$<BR>You heard a rumour that all Elf Guards are cowards?<BR>Well… I hope you don't get swayed by those groundless hearsays.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_question mid="9"><![CDATA[<html>$Elf Guard$<BR>You're asking how I keep fit?<BR>Well, I tried to go to the gym but gave up after a while.<BR>It seems impossible for me to make muscles like the humans.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="talk">003</exe>
+         <exe type="talk">004</exe>
+         <exe type="conexe" true="5" false="6">0</exe>
+         <exe type="conexe" true="0" false="1">0</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="custom">api_ui_OpenWarpListDlg(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="prob">500</chk>
+      </conditions>
+   </talk>

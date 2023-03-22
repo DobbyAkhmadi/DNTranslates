@@ -1,0 +1,678 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_286_argenta_slave</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>286</qid>
+      <designer>김인정</designer>
+      <qlevel>22</qlevel>
+      <qdesc>아르젠타 시작.
+데커드-> 베일리-> 루퍼트-> 메이-> 티아나-> 케빈
+기도하는 자의 안식처 보스전 클리어-> 데이비드 구출
+데이비드와 대화
+잿빛 폐허의 아르젠타와 대화
+요리를 구해온다(향긋한 와인맛 우유)
+아르젠타는 노예의 증거를 가져가고 데이비드를 치료한 후, 새 노예로 임명한다.
+아르젠타의 진정한 노예 타이틀 획득. 끝.
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Argenta's Slave]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타(잿빛폐허)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>203</npcid>
+         <npcename>n203_slave_david</npcename>
+         <npckname>아르젠타의 두번째 노예 데이비드(기도하는 자의 안식처)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>205</npcid>
+         <npcename>n205_slave_david</npcename>
+         <npckname>아르젠타의 두번째 노예 데이비드(잿빛 폐허2-부상버전)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>26</npcid>
+         <npcename>n026_trader_may</npcename>
+         <npckname>소모품 상인 메이   (캐더락 잡화상)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>29</npcid>
+         <npcename>n029_crew_kevin</npcename>
+         <npckname>자칭 승무원 케빈</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>323</npcid>
+         <npcename>n323_warehouse_lupert</npcename>
+         <npckname>창고지기 루퍼트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>35</npcid>
+         <npcename>n035_soceress_master_tiana</npcename>
+         <npckname>상급 소서리스 티아나 (캐더락 소서리 스킬)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n203_slave_david-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Adventurer David$<BR>Apa, apa yang kamu lihat?! Aku... Aku hanya menyimpan tenaga!<BR><FONT color=#7e12d2>(Kamu dapat mengambil quest dari Argenta di Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n205_slave_david-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Adventurer David$<BR>Apa, apa yang kamu lihat?! Aku... Aku hanya menyimpan tenaga!<BR><FONT color=#7e12d2>(Kamu dapat mengambil quest dari Argenta di Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Merchant May$<BR>Hmm... Kupikir aku ingin membicarakan sesuatu denganmu...<BR><FONT color=#7e12d2>(Kamu dapat mengambil quest dari Argenta di Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="38"><![CDATA[<html>$Kevin$<BR>Walau kamu ingin menaiki Airship itu, tidak sekarang!<BR><FONT color=#7e12d2>(Kamu dapat mengambil quest dari Argenta di Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="39"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Hmm... Bukankah kamu sedang sibuk dengan sesuatu saat ini?<BR><FONT color=#7e12d2>(Kamu dapat mengambil quest dari Argenta di Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="40"><![CDATA[<html>$Master Sorceress Tiana$<BR>Pergi dari hadapanku jika kamu tidak ada masalah<BR><FONT color=#7e12d2>(Quest dari Argenta di Calderock Village harus diselesaikan terlebih dahulu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="41"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Apakah kamu tidak memiliki benda untuk disimpan atau diambil? Kembalilah jika kamu memiliki benda yang ingin disimpan.<BR><FONT color=#7e12d2>(Kamu dapat mengambil quest dari Argenta di Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-questchk" mid="15" select_type="0"><![CDATA[<html>Ada yang ingin kamu katakan kepadaku?</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Argenta$<BR>... Bodoh.<BR><FONT color=#7e12d2>(Argenta memikirkan sesuatu hal, sepertinya dia ingin mengatakan sesuatu.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="16"><![CDATA[<html>$Argenta$<BR>Hmph. Tidak ada yang ingin kubicarakan saat ini, Ok? Pergi dan selesaikan masalahmu terlebih dahulu.<BR><FONT color=#7e12d2>(Quest ini hanya dapat diambil setelah kamu menyelesaikan Main Scenario di Calderock Village dan Argenta's Side Quest.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-b" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-c" mid="19" select_type="0"><![CDATA[<html>Mereka membicarakan aku? Apa yang mereka bicarakan?</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Argenta$<BR>Aku telah mendengar segala hal tentangmu dari penduduk kota. Apakah kamu menyadarinya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-d" mid="21" select_type="0"><![CDATA[<html>Seseorang yang sangat tahu permasalahan disekitarnya..?</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Argenta$<BR>Sebuah gosip tersebar, dan aku tak percaya kamu dengan santai berjalan - jalan seperti ini... Ini sangat menyedihkan. Sungguh bodoh. Kalau kamu penasaran, tanyalah <FONT color=#a82424>Seseorang yang sangat tahu permasalahan disekitarnya..</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-acceptted" mid="23" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Argenta's Slave$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="24"><![CDATA[<html>$Argenta$<BR>Ya. Aku membicarakan itu <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT> atau apapun, yang suaranya keras. Aku lapar sekarang dan semua ini sangat mengganggu, jadi jangan bicara kepadaku. Aku telah cukup memberimu informasi yang akurat, kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-a" mid="26" select_type="0"><![CDATA[<html>Dimana?</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Oh... Terima kasih telah datang. Ada yang ingin kuberitahu. Aku sangat berterima kasih kamu bekerja siang dan malam untuk Calderock Village. Tapi ada sesuatu yang... Cough. Ummph.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-b" mid="28" select_type="0"><![CDATA[<html>Apa? Perbincangan rahasia? Dengan siapa? Dimana? Kenapa?</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Tidak mudah bagiku mengatakan ini tapi... Terdapat <FONT color=#a82424>gosip</FONT> yang cukup parah tersebar mengenai kamu belakangan ini. Apa kamu baru menyadarinya? Menurut <FONT color=#a82424>gosip</FONT>, kamu... Umm... Kamu <FONT color=#a82424>berbicara secara rahasia</FONT> dengan seseorang, kamu percaya itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-b" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-c" mid="30" select_type="0"><![CDATA[<html>Aku tidak ada hubungannya dengan Dark Elf.</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Menurut... Menurut gosip, kamu diam - diam berbicara dengan <FONT color=#a82424>monster yang berpakaian warna merah</FONT>. Bukankah saat itu kamu mengatakan bahwa <FONT color=#a82424>Red</FONT> <FONT color=#a82424>Dark Elf</FONT> menyebarkan racun disekitar?  </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-c" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-d" mid="32" select_type="0"><![CDATA[<html>Apa? Sanctuary Flower Bouquet? (terdengar tidak asing...)</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Aku ingin percaya kamu, tapi gosip itu cukup jelas. Seseorang telah melihatmu meletakan <FONT color=#a82424>Sanctuary</FONT> <FONT color=#a82424>Flower Bouquet</FONT> dari Forest Sanctuary, dan memberikannya kepada <FONT color=#a82424>Monster merah</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-d" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="33"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Oh, aku dengar seseorang meninggalkan Sanctuary Flower Bouquet kepada <FONT color=#a82424>Warehouse</FONT> <FONT color=#a82424>Rupert</FONT>. Pergilah dan tanyakan kepadanya. Kupikir lebih baik kamu menangani permasalahan ini lebih dalam, untuk kehormatanmu. Aku juga akan bertanya sekeliling.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n203_slave_david-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="187"><![CDATA[<html>$ Adventurer David$<BR>Apa, apa yang kamu lihat?! Aku hanya... Menyimpang tenagaku! Aku... Aku sama sekali tidak takut!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n205_slave_david-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="188"><![CDATA[<html>$Adventurer David$<BR>Apa, apa yang kamu lihat?! Aku hanya... Menyimpang tenagaku! Aku... Aku sama sekali tidak takut!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="189"><![CDATA[<html>$Merchant May$<BR>Hmm... Kupikir ada yang ingin kubicarakan denganmu... Aku hampir mengingatnya... Atau tidak...<BR><FONT color=#7e12d2>(Kamu harus pergi menemui Adventurer's Guild Master Deckard.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="190"><![CDATA[<html>$Kevin$<BR>Walau kamu ingin menaiki Airship itu, tidak sekarang!<BR><FONT color=#7e12d2>(Kamu harus menemui Adventurer's Guild Master Deckard.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="191"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Sepertinya kamu punya waktu bebas hari ini. Adventurer yang bebas waktu tidak ada sesuatu yang perlu disimpan disini.<BR><FONT color=#7e12d2>(Kamu harus pergi menemui Adventurer's Guild Master Deckard.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="192"><![CDATA[<html>$Master Sorceress Tiana$<BR>Pergi dari hadapanku, jika tidak ada yang ingin kamu bicarakan.<BR><FONT color=#7e12d2>(Kamu harus pergi menemui Adventurer's Guild Master Deckard.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="43"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Pergi dan tanyakan <FONT color=#a82424>Warehouse Keeper Rupert</FONT> beberapa pertanyaan. Aku merasa bersalah dan malu terhadapmu karena tersebarnya gosip aneh ini. Oh bagaimana mungkin ini bisa terjadi...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="44"><![CDATA[<html>$Merchant May$<BR>Maafkan aku, tetapi mereka berkata dimana ada asap, maka akan ada api, benar? Hmm... kupikir kamu bukan orang seperti itu, tapi kurasa pasti selalu ada orang jahat.<BR>Maksudku, bukan berarti aku benar - benar percaya <FONT color=#a82424>gosip</FONT> itu. Hehehe.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Kevin$<BR>Hmm... Kupikir kamu orang yang baik. Bagaiman gosip itu tersebar? Tidakkah kamu pikir seseorang <FONT color=#a82424>iri</FONT> dan mengkambing hitamkan kamu? Yah, itu cuma imajinasiku saja.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="46"><![CDATA[<html>$Master Sorceress Tiana$<BR>Apa yang terjadi? Jangan bergumam, katakan saja.<BR>Lihat, itu sebabnya gosip aneh tersebar disekeliling kamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-2-a" mid="48" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Wow! Kamu <FONT color=#382000>{user_nick}</FONT>! Yang disebutkan di gosip! Kamu pasti agak khawatir dengan gosip yang aneh itu. Aku tak mempercayainya, jadi jangan khawatir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-2-a" image="QS_Default.dds" itemindex="300136" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-2-b" mid="50" select_type="0"><![CDATA[<html>Seperti apa orang ini?</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Oh! Jadi kamu datang atas perintah Adventurer's Guild Master Deckard. Hmm, tergantung seberapa banyak yang telah kamu dengar. Sementara ini aku memegang <FONT color=#a82424>Sanctuary Flower Bouquet</FONT>. Orang yang membawa ini kepadaku menceritakan gosip tentangmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-2-b" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="51"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Yah dengan mudah aku menemukannya di antara dokumen yang ada, tapi aku tidak akan membocorkan daftar pelangganku. Bagaima jika kamu bertanya para wanita di kota? <FONT color=#a82424>Merchant May</FONT> sepertinya cukup tahu tentang berita di sekitar ini, jadi mungkin dia tahu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-3" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="52"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Tapi jangan salahkan aku. Apa kamu pikir aku tidak mau memberitahu informasi tersebut? Aku hanya merasa ini tidak ada hubungannya dengan bisnisku jika aku melakukannya. Pergi dan tanyakan <FONT color=#a82424>Merchant May</FONT> mengenai hal tersebut.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-3-a" mid="54" select_type="0"><![CDATA[<html>(Kamu bertanya langsung kepada Merchant May mengenai hal tersebut.)</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Merchant May${action:talk}<BR>Huh! Gosip mengatakan kamu telah bergabung dengan <FONT color=#a82424>Monster</FONT> <FONT color=#a82424>Merah</FONT>, benarkah?<BR>Bohong, kan? Ya kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-3-a" image="QS_Default.dds" itemindex="300136" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-3-b" mid="56" select_type="0"><![CDATA[<html>Huh? Ancient Book? Aku tak pernah mendengar sebelumnya...</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Merchant May$<BR>Gosip mengenai <FONT color=#a82424>Sanctuary Flower Bouquet</FONT>, dan laporan bahwa kamu mencuri <FONT color=#a82424>Ancient Book</FONT> dari <FONT color=#a82424>Silent Monastery Cloister Main Hall</FONT>... Semua ini membuatmu sangat mencurigakan! Sungguh, <FONT color=#382000> {user_nick}</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-3-b" image="QS_Default.dds" itemindex="300119" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-3-c" mid="58" select_type="0"><![CDATA[<html>Novel tua? Sebuah Ancient Book? Terdengar tidak asing...</html>]]></talk_answer>
+      <talk_question mid="57"><![CDATA[<html>$Merchant May$<BR>Oh ayolah! Seseorang berpura-pura menghentikanmu mencuri buku itu, dan membawa Ancient Book kepadaku. Orang itu menawarkan untuk menjualnya kepadaku dengan harga murah. Kukatakan padamu, seseorang telah membawakan kepadaku seperti itu! Yah, aku agak kecewa karena ternyata itu hanyalah <FONT color=#a82424>novel tua</FONT>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-3-c" image="QN_Npc_SoceressTiana.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="59"><![CDATA[<html>$Merchant May$<BR><FONT color=#a82424>Master Sorceress Tiana</FONT> mengatakan dia juga mendengar sesuatu... Hmm... tapi aku tak ingat. Bagaimana kalau kamu menanyakannya sendiri? Tapi <FONT color=#a82424>Tiana</FONT> agak menyeramkan, jadi mungkin dia akan memukulmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4" image="QN_Npc_SoceressTiana.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="60"><![CDATA[<html>$Merchant May$<BR>Apa kamu sudah berbicara dengan <FONT color=#a82424>Master Sorceress Tiana</FONT>? Hehe. Kamu takut dipukul? Semua gosip aneh ini membuatku gila! Aku jadi tidak dapat berkonsentrasi bekerja. Hmm...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-4-a" mid="62" select_type="0"><![CDATA[<html>(Sorceress Tiana menatap dengan curiga.)</html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Master Sorceress Tiana$<BR>Oh, <FONT color=#a82424>gosip</FONT> itu! Apa yang sebenarnya terjadi?<BR>Sangat lucu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-4-a" image="QW_23.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-4-b" mid="64" select_type="0"><![CDATA[<html>Namun tidak ada yang dapat kita lakukan terhadap racun itu...</html>]]></talk_answer>
+      <talk_question mid="63"><![CDATA[<html>$Master Sorceress Tiana$<BR>Walau kamu telah cukup berusaha di <FONT color=#a82424>Road of No Return</FONT>, racunnya tidak tersebar penuh, kan? Monster tetap muncul, sepertinya kamu mengadakan <FONT color=#a82424>kontak rahasia</FONT> dengan musuh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-4-b" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-4-c" mid="66" select_type="0"><![CDATA[<html>Kukatakan padamu.. Itu, bukanlah monster...</html>]]></talk_answer>
+      <talk_question mid="65"><![CDATA[<html>$Master Sorceress Tiana$<BR>Juga ada masalah tentang penghentian <FONT color=#a82424>Red Dark Elf</FONT> juga gosip memberikan <FONT color=#a82424>Dark Elf's</FONT> <FONT color=#a82424>necklace</FONT> kepada <FONT color=#a82424>monster berpakaian warna merah</FONT> diluar kota.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-4-c" image="QS_Default.dds" itemindex="300115" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-4-d" mid="68" select_type="0"><![CDATA[<html>Huh? Dark Elf's Necklace?! </html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Master Sorceress Tiana$<BR>Terdapat banyak cerita seperti ini yang menjelaskan kenapa kamu harus melalui semua permasalahan untuk kembali ke <FONT color=#a82424>Road of No Return</FONT>, yang sekarang hanyalah reruntuhan, cukup ambillah <FONT color=#a82424>Dark Elf's Necklace</FONT>. Tidak masuk akal kan memberitahumu hal mencurigakan tersebut?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-4-e" mid="70" select_type="0"><![CDATA[<html>Adventurer David?</html>]]></talk_answer>
+      <talk_question mid="69"><![CDATA[<html>$Master Sorceress Tiana$<BR>Ini mengingatkanku. Orang yang membicarakan <FONT color=#a82424>Dark Elf's Necklace</FONT>... Kamu tahu orang itu, kan? Orang itu... Siapa ya...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-4-e" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="71"><![CDATA[<html>$Master Sorceress Tiana${action:talk}<BR>Ya, tentu. Nama dan bentuknya terlihat konyol. Dia berkata akan pergi dan mengunjungi <FONT color=#a82424>Kevin</FONT>. Dia mungkin masih disana, pergi dan periksalah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-5" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="72"><![CDATA[<html>$Master Sorceress Tiana$<BR>Apa? Ada apa? Bukankah kamu ingin menemui <FONT color=#a82424>Kevin</FONT>? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-5-a" mid="74" select_type="0"><![CDATA[<html>Aku bukan pengkhianat!</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Kevin$<BR>Huh! Inilah pengkhianat yang melakukan kontak dengan <FONT color=#a82424>monster berpakaian warna merah</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5-a" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-5-b" mid="76" select_type="0"><![CDATA[<html>Ya, ya. Aku bukan mata-mata maupun pengkhianat.</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Kevin$<BR>Aku tak percaya gosip aneh itu. Menurut <FONT color=#a82424>Airship Engineer Hubert</FONT>, kamu menolongnya mengembalikan airship agar dapat kembali terbang, benarkah? Adventurer seperti itu tidak akan menjadi pengkhianat, kan? Benar kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5-b" image="QS_Default.dds" itemindex="400091" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-5-c" mid="78" select_type="0"><![CDATA[<html>Seorang Adventurer...? Siapa namanya...?</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Kevin$<BR>Seorang <FONT color=#a82424>Adventurer</FONT> yang datang dan menjual beberapa <FONT color=#a82424>Poison Sac</FONT>, dan berkata kasar. Kurasa orang itu cukup mencurigakan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5-c" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-5-d" mid="80" select_type="0"><![CDATA[<html>... tepat dugaanku. (Kamu tunggulah, Adventurer David!)</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Kevin$<BR>Ya! Itu <FONT color=#a82424>Adventurer David</FONT>!<BR>Kalian saling mengenal?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5-d" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-5-e" mid="82" select_type="0"><![CDATA[<html>(Aku adalah pembantu Argenta, tapi bukan pengkhianat!... Ini membuatku sedih.)</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Kevin$<BR>Aku tak yakin, sepertinya kalian berdua dendam satu sama lain? Dia mengatakan kamu adalah <FONT color=#a82424>pembantu</FONT> monster berpakaian warna merah, bukan teman atau kontak rahasianya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5-e" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-5-f" mid="84" select_type="0"><![CDATA[<html>Ya... Baiklah... (Masih menggangguku!)</html>]]></talk_answer>
+      <talk_question mid="83"><![CDATA[<html>$Kevin$<BR>Menurut mereka Calderock tidak dapat sepenuhnya dibersihkan karena keberadaan <FONT color=#a82424>monster berpakaian warna merah</FONT>. Hehe. Aku tak percaya hal tersebut! Jadi, <FONT color=#382000>{user_nick}</FONT>, jangan terlalu khawatir terhadap gosip tersebut.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-5-g" mid="86" select_type="0"><![CDATA[<html>Aku tak tahu dimana dia.</html>]]></talk_answer>
+      <talk_question mid="85"><![CDATA[<html>$Kevin$<BR>Yah, kurasa kamu tetap harus membalaskan dendammu.<BR>benarkah? Hmm.. Layangkan saja pukulan hebat ke dia, atau berlutut dan minta maaf. Lakukan apa saja untuk menyelesaikan masalah itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5-g" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-5-h" mid="88" select_type="0"><![CDATA[<html>Apa permintaannya?</html>]]></talk_answer>
+      <talk_question mid="87"><![CDATA[<html>$Kevin$<BR>Aku tahu dimana dia! .<BR>Aku baru saja mendengarnya beberapa saat lalu, namun <FONT color=#a82424>Adventurer David</FONT> itu menerima permintaan besar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5-h" image="QW_26.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-5-i" mid="90" select_type="0"><![CDATA[<html>Uh... Hmm...  Sudah bagus dia tidak melarikan diri...</html>]]></talk_answer>
+      <talk_question mid="89"><![CDATA[<html>$Kevin$<BR>Berikan monster tersebut pelajaran di <FONT color=#a82424>Prayer's Refugee</FONT>! Dia sangat sombong, namun belum juga kembali. Mungkin.. dia melarikan diri? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="91"><![CDATA[<html>$Kevin$<BR>Oh ayolah! Dia bodoh mendatangi <FONT color=#a82424>Prayer's Refugee</FONT> sendirian. Mengapa kamu tidak pergi dan lihat sendiri.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-6" image="QW_26.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="92"><![CDATA[<html>$Kevin$<BR><FONT color=#a82424>Adventurer David</FONT>. Dia sebenarnya pengecut, kan? Kutebak dia melarikan diri dari <FONT color=#a82424>Prayer's Refugee</FONT>. Hehehe. Aku cukup yakin.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n203_slave_david-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="93"><![CDATA[<html>$Adventurer David$<BR>(Menggigil)... Aku, aku tidak menggigil karena takut! (Menggigil)...<BR>*Sniff sniff*. Mama... aku takut! *Sniff sniff*.<BR><FONT color=#7e12d2>(Sepertinya Adventurer David merindukan ibunya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n203_slave_david-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n203_slave_david-7-a" mid="95" select_type="0"><![CDATA[<html>Apa kau baik - baik saja?</html>]]></talk_answer>
+      <talk_question mid="94"><![CDATA[<html>$Adventurer David$<BR>Aku, aku tidak menggigil karena takut! (Menggigil)... Hanya.. Hanya saja tiba - tiba aku disergap! (Menggigil)...<BR>Kekuatan disini ini terasa berbeda.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n203_slave_david-7-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n203_slave_david-7-b" mid="97" select_type="0"><![CDATA[<html>sepertinya kamu terluka.</html>]]></talk_answer>
+      <talk_question mid="96"><![CDATA[<html>$Adventurer David$<BR>(Menggigil)... Jangan, jangan begitu sombong hanya karena kamu menyelamatkanku sekali! (Menggigil)... *Sniff sniff*. Aku merindukan ibuku. *Sniff*. <FONT color=#7e12d2>(Adventurer David terlihat pucat ketakutan. Dia tampak terluka.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n203_slave_david-7-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n203_slave_david-7-c" mid="99" select_type="0"><![CDATA[<html>(Aku tak percaya dia masih bicara omong kosong saat situasi seperti ini.)</html>]]></talk_answer>
+      <talk_question mid="98"><![CDATA[<html>$Adventurer David$<BR>Luka ini... Bukan apa-apa! (Menggigil)...<BR>Inikah caranya <FONT color=#a82424>Adventurer Hebat</FONT> <FONT color=#a82424>Adventurer David</FONT> akan meninggal? *Sniff sniff*.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n203_slave_david-7-c" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="100"><![CDATA[<html>$Adventurer David$<BR>Jika aku meninggal, kubur aku di tempat terbuka, dan wariskanlah turun temurun! ... <BR><FONT color=#7e12d2>(Kamu harus kembali ke Gray Ruins dan bicaralah kepada Argenta.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-8" image="QW_26.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="101"><![CDATA[<html>$Master Sorceress Tiana$<BR>Apa kamu telah pergi ke <FONT color=#a82424>Prayer's Refugee</FONT>? Aku cukup kaget mendengarmu pergi kesana lagi! <FONT color=#382000>{user_nick}</FONT>. Hehe. Karena kamu sangat berani, kamu dapat menghiraukan segala gosip konyol.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-8" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="102"><![CDATA[<html>$Kevin$<BR>Wow! Si <FONT color=#a82424>bodoh</FONT> itu pergi kesana?! Dia benar - benar <FONT color=#a82424>bodoh</FONT>, kan?<BR>Kamu tidak dapat mengalahkan orang bodoh, benar kan? Beruntung dia masih hidup.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-8" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="103"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Apa? Ada <FONT color=#a82424>gosip</FONT> mengenai seorang adventurer? Apa masalahnya?<BR>Aku telah melupakan semua hal tersebut. Hahaha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-8" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="104"><![CDATA[<html>$Merchant May$<BR>Bagaimanapun, apakah <FONT color=#a82424>Adventurer David</FONT> terluka berat? Kasihan.<BR>Aku tak mengerti mengapa dia menyebarkan gosip seperti itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-8" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-8-a" mid="106" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="105"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Aku dengar gosip. Adventurer bernama <FONT color=#a82424>Adventurer David</FONT> atau entahlah hampir mati, benarkah? Ini terjadi karena dia bertindak tanpa meMelapornya kepadaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-8-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="107"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Jangan mengkhawatirkan gosip tersebut. Aku akan menjelaskan semuanya. Sangat menggelikan jika orang seperti kamu menjadi pengkhianat atau <FONT color=#a82424>pembantu monster</FONT>... Sangat tidak masuk akal sama sekali. Hahaha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n205_slave_david-8" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n205_slave_david-8-a" mid="109" select_type="0"><![CDATA[<html>Kamu tidak akan mati hanya karena luka.. seperti ini.</html>]]></talk_answer>
+      <talk_question mid="108"><![CDATA[<html>$Adventurer David$<BR>Jika aku meninggal, kubur aku di tempat terbuka, dan wariskanlah turun temurun.<BR>That <FONT color=#a82424>Adventurer David</FONT> orang yang berani...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n205_slave_david-8-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="110"><![CDATA[<html>$Adventurer David$<BR>Langitnya... Langitnya sangat indah. Ha. Aku sangat beruntung, dapat beristirahat disebelah <FONT color=#a82424>Argenta</FONT>. Ha.<BR><FONT color=#7e12d2>(Adventurer David sepertinya kehilangan akal sehat.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-a" mid="112" select_type="0"><![CDATA[<html>Dia terluka, kurasa kamu dapat menyembuhkannya...</html>]]></talk_answer>
+      <talk_question mid="111"><![CDATA[<html>$Argenta$<BR>Hmm? Ada apa ini <BR>Bukankah ini si <FONT color=#a82424>bodoh</FONT> yang berada disampingku terakhir kali?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-b" mid="114" select_type="0"><![CDATA[<html>Tolong, anggaplah menolong hidup seseorang, bolehkah?</html>]]></talk_answer>
+      <talk_question mid="113"><![CDATA[<html>$Argenta$<BR>Menyembuhkan?... Ya, kupikir begitu.<BR>Tapi kenapa harus aku? Ini sangat mengganggu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-c" mid="116" select_type="0"><![CDATA[<html>Tapi.. Walau dia sangat menyedihkan.. Kamu tidak dapat membiarkannya mati.</html>]]></talk_answer>
+      <talk_question mid="115"><![CDATA[<html>$Argenta$<BR>Dia akan kembali sembuh dengan sendirinya. <BR>Oh... Sangat mengganggu. Dia terlalu menyedihkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-c" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-d" mid="118" select_type="0"><![CDATA[<html>Kalau begitu aku akan membawakan makanan untukmu.</html>]]></talk_answer>
+      <talk_question mid="117"><![CDATA[<html>$Argenta$<BR>Aku lapar. Kurasa aku bahkan tidak dapat menggerakkan jariku, dan kamu ingin aku menyembuhkan si <FONT color=#a82424>bodoh</FONT>?<BR>Tidak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-e" mid="120" select_type="0"><![CDATA[<html>Aku marah, tapi dia akan tetap hidup.</html>]]></talk_answer>
+      <talk_question mid="119"><![CDATA[<html>$Argenta$<BR>Apa? Kamu akan melakukannya? ...Hmm. Akan kupikirkan. Tapi, tunggu. Apa kamu bodoh? Si bodoh itu menyebarkan gosip tentang kamu. Kupikir kamu marah kepadanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-f" mid="122" select_type="0"><![CDATA[<html>Yah.. Bagaimanapun, aku akan membawakan makanan untukmu..</html>]]></talk_answer>
+      <talk_question mid="121"><![CDATA[<html>$Argenta$<BR>... Orang yang aneh..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-f" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="123"><![CDATA[<html>$Argenta$<BR>Bawakan aku <FONT color=#a82424>Fragrant Wine-Flavored Dark Priestess Miok</FONT> dari yang terakhir. Kamu dapat memperolehnya dari Supplies Merchant atau yang lain, kan?<BR><FONT color=#7e12d2>(Tolong pergilah menemui Merchant May.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="124"><![CDATA[<html>$Argenta$<BR>Apa kamu senang melalui segala permasalahan ini.. Mencoba menyelamatkan seseorang yang tidak kamu kenal dengan baik? <BR><FONT color=#7e12d2>(Tolong pergilah menemui Merchant May.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-9" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-9-a" mid="126" select_type="0"><![CDATA[<html>(May mengernyit.)</html>]]></talk_answer>
+      <talk_question mid="125"><![CDATA[<html>$Merchant May${action:talk}<BR>Hmm... Kudengar <FONT color=#a82424>Adventurer David</FONT> sungguh terluka, benarkah? Aku tak mengerti mengapa dia sangat pamer. Kamu pikir juga begitu kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-9-a" image="QW_26.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-9-b" mid="128" select_type="0"><![CDATA[<html>Dia akan membaik setelah disembuhkan.</html>]]></talk_answer>
+      <talk_question mid="127"><![CDATA[<html>$Merchant May$<BR>Aku tak percaya dia secara sembrono pergi ke <FONT color=#a82424>Prayer's Refugee</FONT> sendirian.  <BR>Apakah dia sangat terluka?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-9-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-9-c" mid="130" select_type="0"><![CDATA[<html>Minuman yang kubeli terakhir kali.</html>]]></talk_answer>
+      <talk_question mid="129"><![CDATA[<html>$Merchant May$<BR>Begitukah? Aku sangat terkejut mendengarnya.<BR>Oh, apa lagi yang ingin kamu beli dariku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-9-c" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-9-d" mid="132" select_type="0"><![CDATA[<html>Terima kasih.</html>]]></talk_answer>
+      <talk_question mid="131"><![CDATA[<html>$Merchant May$<BR>Oh... Kamu membicarakan tentang <FONT color=#a82424>Fragrant Wine-Flavored Dark Priestess Miok</FONT>, kan? Aku akan memberimu satu secara gratis. Aku minta maaf telah berbuat keributan dengan segala gosip yang ada.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-9-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="133"><![CDATA[<html>$Merchant May$<BR>Sejujurnya, aku berpikir akan menjualnya dengan harga yang didiskon, karena aku punya sisa beberapa. <FONT color=#382000>{user_nick}</FONT>, kamu pasti telah mengalami kesulitan, berhadapan dengan segala gosip di sekitar.<BR>Yah, sampai jumpa lain waktu!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-10" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="134"><![CDATA[<html>$Merchant May$<BR>Oh... Aku sungguh tak mengerti mengapa orang itu menyebarkan gosip seperti itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-10" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-10-a" mid="136" select_type="0"><![CDATA[<html>... Apa maksudmu kamu memerlukan satu? </html>]]></talk_answer>
+      <talk_question mid="135"><![CDATA[<html>$Argenta$<BR>Kamu mengerti?<BR>Bagus. Aku benar-benar butuh satu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-10-a" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-10-b" mid="138" select_type="0"><![CDATA[<html>(Argenta mengambil Proof of Slave tanpa ijin.)</html>]]></talk_answer>
+      <talk_question mid="137"><![CDATA[<html>$Argenta$<BR>Apanya apa? Si <FONT color=#a82424>pembantu baru</FONT> yang kubicarakan. Kamu sungguh mengganggu dan terlalu perhatian. Aku tahu kamu hanya ingin berkeliling di sekitar <FONT color=#a82424>Saint's Haven</FONT> sendirian begitu kamu sampai disana. Aku akan menyewa si bodoh sebagai pembantu baru.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-10-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-10-c" mid="140" select_type="0"><![CDATA[<html>Akhirnya. (Aku bebas!)</html>]]></talk_answer>
+      <talk_question mid="139"><![CDATA[<html>$Argenta$<BR>Kamu <FONT color=#a82424>dipecat</FONT> hari ini. Aku tak akan memintamu kembali walau kamu memohon. Mengerti?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-10-c" image="QS_Default.dds" itemindex="300003" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-10-d" mid="142" select_type="0"><![CDATA[<html>(Kamu merasa bersalah terhadap Adventurer David...)</html>]]></talk_answer>
+      <talk_question mid="141"><![CDATA[<html>$Argenta$<BR>Dan orang ini merupakan <FONT color=#a82424>pembantu baru</FONT>ku. Aku akan memanfaatkanmu dengan baik, orang lemah!<BR><FONT color=#7e12d2>(Argenta meletakan Proof of Slave pada Adventurer David.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-10-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-10-e" mid="144" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="143"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-10-e" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="145"><![CDATA[<html>$Argenta$<BR>Ok.. Sekarang aku akan membujuk si bodoh ini dan membuatnya menjadi pembantuku. Bersiaplah pergi ke <FONT color=#a82424>Saint's Haven</FONT>. Aku akan membawa ini bersamaku juga.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 265 ) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 267 ) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 268 ) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 217 ) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 236 ) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 199 ) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 9588 ) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="4">0</exe>
+         <exe type="conexe" true="2" false="4">1</exe>
+         <exe type="conexe" true="3" false="4">2</exe>
+         <exe type="conexe" true="5" false="9">3</exe>
+         <exe type="talk" npc="n164_argenta_wounded">a</exe>
+         <exe type="talk" npc="n164_argenta_wounded">b</exe>
+         <exe type="recompense_view">2867,2861,2862,2863,2864,2865,2866,2867,2868,2869</exe>
+         <exe type="setquest">286</exe>
+         <exe type="talk" npc="n164_argenta_wounded">1</exe>
+         <exe type="conexe" true="5" false="10">4</exe>
+         <exe type="conexe" true="5" false="11">5</exe>
+         <exe type="conexe" true="5" false="4">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">8</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">9</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="10">300137</exe>
+         <exe type="setstep">10</exe>
+         <exe type="setjornal">10</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="10">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300137</exe>
+         <exe type="delquestitem" num="-1">300003</exe>
+         <exe type="recompense">2867,2861,2862,2863,2864,2865,2866,2867,2868,2869</exe>
+         <exe type="complete" true="">286</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="questchk">3</exelink>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="d">6</exelink>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="acceptted">7,8</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="d">0,1</exelink>
+   <exelink qstep="2" npc="n323_warehouse_lupert" sub="b">0,1</exelink>
+   <exelink qstep="3" npc="n026_trader_may" sub="b" />
+   <exelink qstep="3" npc="n026_trader_may" sub="c">0,1</exelink>
+   <exelink qstep="4" npc="n035_soceress_master_tiana" sub="b" />
+   <exelink qstep="4" npc="n035_soceress_master_tiana" sub="c" />
+   <exelink qstep="4" npc="n035_soceress_master_tiana" sub="d" />
+   <exelink qstep="4" npc="n035_soceress_master_tiana" sub="e">0,1</exelink>
+   <exelink qstep="5" npc="n029_crew_kevin" sub="b" />
+   <exelink qstep="5" npc="n029_crew_kevin" sub="c" />
+   <exelink qstep="5" npc="n029_crew_kevin" sub="d" />
+   <exelink qstep="5" npc="n029_crew_kevin" sub="e" />
+   <exelink qstep="5" npc="n029_crew_kevin" sub="f" />
+   <exelink qstep="5" npc="n029_crew_kevin" sub="g" />
+   <exelink qstep="5" npc="n029_crew_kevin" sub="h" />
+   <exelink qstep="5" npc="n029_crew_kevin" sub="i">0,1</exelink>
+   <exelink qstep="7" npc="n203_slave_david" sub="b" />
+   <exelink qstep="7" npc="n203_slave_david" sub="c">0,1</exelink>
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="e" />
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="f">0,1</exelink>
+   <exelink qstep="9" npc="n026_trader_may" sub="b" />
+   <exelink qstep="9" npc="n026_trader_may" sub="c" />
+   <exelink qstep="9" npc="n026_trader_may" sub="d">0,1,2</exelink>
+   <exelink qstep="10" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="10" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="10" npc="n164_argenta_wounded" sub="d">2</exelink>
+   <exelink qstep="10" npc="n164_argenta_wounded" sub="e">0,1,3</exelink>
+   <journal_data recompense="1:2861,2:2862,3:2863,4:2864,5:2865,6:2866,7:2867,8:2868,9:2869" quest_title="아르젠타의 노예" chapterid="" quest_level="22" quest_mark_type="10" use_item_list="300137">
+      <journal index="1">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,-2954,-1891</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="147"><![CDATA[Strange Rumor]]></title>
+         <contents mid="148"><![CDATA[<html>Kamu mendengar bahwa terdapat gosip aneh tersebar di <FONT color=#a82424>Calderock Village</FONT>. Pergilah menemui <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT> dan cari tahu gosip yang ada.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="149"><![CDATA[Bicaralah kepada Adventurer's Guild Master Deckard di Calderock Village]]></destination>
+         <todo_msg mid="150"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Guilian.dds</contents_image>
+         <destination_pos>8,n323</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>323</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="151"><![CDATA[Tracing Strange Rumor I]]></title>
+         <contents mid="152"><![CDATA[<html>Sepertinya benar gosip yang tersebar. Pergilah menemui <FONT color=#a82424>Warehouse Keeper Rupert</FONT> dan tanyalah mengenai gosip tersebut.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Warehouse Keeper Rupert</FONT></html>]]></contents>
+         <destination mid="153"><![CDATA[Bicaralah kepada Warehouse Keeper Rupert]]></destination>
+         <todo_msg mid="154"><![CDATA[Tolong bicaralah kepada Warehouse Keeper Rupert]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,-4179,2192</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="155"><![CDATA[Tracing Strange Rumor II]]></title>
+         <contents mid="156"><![CDATA[<html>Since <FONT color=#a82424>Merchant May</FONT> tahu segalanya tentang kota ini, kamu dapat menanyakan permasalahan gosip tersebut.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="157"><![CDATA[Bicaralah kepada Merchant May]]></destination>
+         <todo_msg mid="158"><![CDATA[Tolong bicaralah kepada Merchant May]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_SoceressTiana.dds</contents_image>
+         <destination_pos>8,-2265,1121</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>35</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="159"><![CDATA[Tracing Strange Rumor III]]></title>
+         <contents mid="160"><![CDATA[<html>Tanyakan <FONT color=#a82424>Master Sorceress Tiana</FONT> mengenai gosip. Seseorang yang kamu kenal mungkin menyebarkan gosip tersebut.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Training Sorceress Tiana</FONT></html>]]></contents>
+         <destination mid="161"><![CDATA[Bicaralah kepada Master Sorceress Tiana]]></destination>
+         <todo_msg mid="162"><![CDATA[Tolong pergi bicara ke Master Sorceress Tiana.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_crew_kevin.dds</contents_image>
+         <destination_pos>8,2847,2315</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>29</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="163"><![CDATA[Tracing Strange Rumor IV]]></title>
+         <contents mid="164"><![CDATA[<html>Siapapun yang memulai gosip, terdapat beberapa hal tidak jelas..Kunjungi <FONT color=#a82424>Kevin</FONT>.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Kevin</FONT></html>]]></contents>
+         <destination mid="165"><![CDATA[Bicaralah kepada Kevin]]></destination>
+         <todo_msg mid="166"><![CDATA[Tolong bicaralah kepada Kevin]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QW_26.dds</contents_image>
+         <destination_pos>264,n203</destination_pos>
+         <destination_mode>custom:261@1,262@1,263@1,264@1</destination_mode>
+         <statemark_npcid>203</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="167"><![CDATA[Carilah Adventurer David]]></title>
+         <contents mid="168"><![CDATA[<html>Seperti dugaanmu, <FONT color=#a82424>Adventurer David</FONT> yang memulainya. Namun sepertinya Adventurer David telah pergi ke <FONT color=#a82424>Prayer's Refugee</FONT> sendirian. Pergilah kesana dan cari Adventurer David.<BR><BR><FONT color=#086171>Gray Ruins → Lower Ridge(Forgotten Temple Entrance)</FONT> <FONT color=#a82424>→ Prayer's Refugee</FONT></html>]]></contents>
+         <destination mid="169"><![CDATA[Selidiki Prayer's Refugee.]]></destination>
+         <todo_msg mid="170"><![CDATA[Tolong carilah Adventurer David di Prayer's Refugee.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image />
+         <destination_pos>264,n203</destination_pos>
+         <destination_mode>custom:264@1</destination_mode>
+         <statemark_npcid>203</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="171"><![CDATA[Selamatkan Adventurer David]]></title>
+         <contents mid="172"><![CDATA[<html>Kamu menyelamatkan <FONT color=#a82424>Adventurer David</FONT> dari situasi berbahaya. Bicaralah kepada Adventurer David yang terluka.<BR><BR><FONT color=#086171></FONT> Prayer's Refugee<FONT color=#a82424>→ Adventurer David</FONT></html>]]></contents>
+         <destination mid="173"><![CDATA[Bicaralah kepada Adventurer David.]]></destination>
+         <todo_msg mid="174"><![CDATA[Tolong bicaralah kepada Adventurer David yang gemetar.]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="175"><![CDATA[Adventurer David's rescue]]></title>
+         <contents mid="176"><![CDATA[<html>Sepertinya kamu harus menyembuhkan luka Adventurer David. Kembalilah ke <FONT color=#a82424>Argenta</FONT> di <FONT color=#a82424>Gray Ruins</FONT> dan minta bantuannya.<BR> <BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="177"><![CDATA[Bicaralah kepada Argenta di Calderock Village]]></destination>
+         <todo_msg mid="178"><![CDATA[Tolong Laporkan kepada Argenta di Calderock Village.]]></todo_msg>
+      </journal>
+      <journal index="9">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,-4179,2192</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="179"><![CDATA[Fragrant Wine-Flavor Dark Priestess Miok]]></title>
+         <contents mid="180"><![CDATA[<html>Pergilah temukan beberapa Fragrant Wine-Flavor Dark Priestess Miok dari <FONT color=#a82424>Merchant May</FONT>.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="181"><![CDATA[Bicaralah kepada Merchant May di Calderock Village]]></destination>
+         <todo_msg mid="182"><![CDATA[Tolong bicaralah kepada Merchant May]]></todo_msg>
+      </journal>
+      <journal index="10">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="183"><![CDATA[The Emancipation of Slaves]]></title>
+         <contents mid="184"><![CDATA[<html>Kembalilah ke <FONT color=#a82424>Argenta</FONT> di <FONT color=#a82424>Gray Ruins</FONT>.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="185"><![CDATA[Bicaralah kepada Argenta di Calderock Village]]></destination>
+         <todo_msg mid="186"><![CDATA[Tolong Laporkan kepada Argenta di Calderock Village.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>268</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

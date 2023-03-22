@@ -1,0 +1,110 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>eq_2445_crazy_bak</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2445</qid>
+      <designer>정진호</designer>
+      <qlevel>24</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></qkname>
+      <qnpc>
+         <npcid>1888</npcid>
+         <npcename>n1888_storyteller_kesey</npcename>
+         <npckname>이야기꾼 케시</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-accepting-acceptted" mid="6" select_type="0"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_answer>
+      <talk_question mid="5"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-1-changemap" mid="13" select_type="0"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_answer>
+      <talk_question mid="11"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-1-back_1" mid="15" select_type="0"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_answer>
+      <talk_question mid="14"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-1-back_2" mid="17" select_type="0"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_answer>
+      <talk_question mid="16"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">2445</exe>
+         <exe type="talk" npc="n1888_storyteller_kesey">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+         <chk type="custom">api_user_IsMatching(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="talk" npc="n1888_storyteller_kesey">a</exe>
+         <exe type="talk" npc="n1888_storyteller_kesey">b</exe>
+         <exe type="complete" true="5">2445</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13627,1);</exe>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "001", "n1888_storyteller_kesey.xml");</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1888_storyteller_kesey" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n1888_storyteller_kesey" sub="changemap">0</exelink>
+   <exelink qstep="1" npc="n1888_storyteller_kesey" sub="back_1">6</exelink>
+   <exelink qstep="1" npc="n1888_storyteller_kesey" sub="back_2">6</exelink>
+   <journal_data recompense="24450" quest_title="[이벤트] 크레이지 대박 (스테이지 입장)" chapterid="" quest_level="24" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n1888</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1888</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="47"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></title>
+         <contents mid="48"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></contents>
+         <destination mid="49"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></destination>
+         <todo_msg mid="50"><![CDATA[eq_2445_crazy_bak([이벤트] 크레이지 대박 (스테이지 입장)) GSP NOT USED]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>2444</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

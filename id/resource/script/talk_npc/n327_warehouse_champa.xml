@@ -1,0 +1,26 @@
+   <talk>
+      <npcename>n327_warehouse_champa</npcename>
+      <npcid>327</npcid>
+      <startexe>0</startexe>
+      <npckname mid="1"><![CDATA[Warehouse Keeper Chad]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="warehouse_001" mid="3"><![CDATA[<html>[Personal Storage]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="4"><![CDATA[<html>[Bicara] </html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Warehouse Keeper Chad${action:Talk}<BR>Inventory kamu tampak penuh, <BR>Kamu harus mengosongkan Inventory jika ingin menyimpan semua Loot yang kamu dapatkan dengan baik.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="6"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Warehouse Keeper Chad$<BR>Inventory yang kepenuhan merupakan hal biasa ketika kamu berpetualang. Pada saat seperti ini, simpanlah Item yang kamu miliki di Warehouse ku.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenWareHouse(userObjID);</exe>
+         <exe type="conexe" true="4" false="1">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_ui_OpenGuildWareHouse (userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_guild_HasGuildWare(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="warehouse_001">2</exelink>
+   </talk>

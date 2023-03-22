@@ -1,0 +1,63 @@
+   <talk>
+      <npcename>n2595_merca_guard_philippe</npcename>
+      <npcid>2595</npcid>
+      <startexe>13</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Guard Philip]]></npckname>
+      <talk_paragraph index="basic" image="" itemindex="">
+         <talk_answer link_index="quest" mid="6"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Guard Philip$<BR>
+What are you doing here?<BR>
+Don’t sneak around and just go.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="8" link_target="sqc18_4789_the_tragedy_of_frozen_desert.xml"><![CDATA[<html>[Nest] Tragedy of the Frozen Desert</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="22" link_target="mqc18_9834_remember_the_warmth.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>I Still Remember Their Warmth</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="mqc20_9835_rune_palace.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Mamon’s Palace</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="32" link_target="mqc01_9874_vandar_09.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Light of another world</FONT></html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Guard Philip$<BR>Every single news of Merca’s vicinity will come to our ears. Any information about Childs is especially important.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="ice-nest" image="" itemindex="">
+         <talk_answer link_index="go_icenest" mid="17"><![CDATA[<html>Yes, please.</html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="18"><![CDATA[<html>No, I will start with something else.</html>]]></talk_answer>
+         <talk_question mid="11"><![CDATA[<html>$Guard Philip$<BR>It is a difficult situation, but... Thanks to our president’s kindness, I will grant you the permission to pass through the Northern snowfields. Will you set off now?]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="rune-nest" image="" itemindex="">
+         <talk_answer link_index="go_runest" mid="19"><![CDATA[<html>Yes, please.</html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="20"><![CDATA[<html>No, I will start with something else.</html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Guard Philip$<BR>Hush, it is a top secret that we are sending troops to Mamon’s Palace. Are you setting off now?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">basic</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="conexe" true="5" false="0">2</exe>
+         <exe type="conexe" true="7" false="5">3</exe>
+         <exe type="talk">ice-nest</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,17012,1);</exe>
+         <exe type="conexe" true="8" false="0">4</exe>
+         <exe type="conexe" true="9" false="10">5</exe>
+         <exe type="conexe" true="11" false="0">6</exe>
+         <exe type="conexe" true="0" false="11">7</exe>
+         <exe type="talk">rune-nest</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,17013,1);</exe>
+         <exe type="conexe" true="0" false="14">8</exe>
+         <exe type="conexe" true="0" false="15">9</exe>
+         <exe type="conexe" true="0" false="1">10</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">9745</chk>
+         <chk type="hasquest">9746</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, (9746)) == 1</chk>
+         <chk type="hascomq">9746</chk>
+         <chk type="hascomq">9778</chk>
+         <chk type="hasquest">9779</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, (9779)) == 1</chk>
+         <chk type="hascomq">9779</chk>
+         <chk type="hasquest">9834</chk>
+         <chk type="hasquest">9835</chk>
+         <chk type="hasquest">9874</chk>
+      </conditions>
+      <exelink idx="go_icenest">6</exelink>
+      <exelink idx="go_runest">12</exelink>
+   </talk>

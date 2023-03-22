@@ -1,0 +1,115 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_guide_4994_crystal_02</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4994</qid>
+      <designer>안여옥</designer>
+      <qlevel>24</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Tentang Crystal Point yang berkilauan]]></qkname>
+      <qnpc>
+         <npcid>998</npcid>
+         <npcename>n998_experience_shop</npcename>
+         <npckname>크리스탈 상점 도우미 체르니</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-accepting-a" mid="6" select_type="0"><![CDATA[<html>Apa ada item yang bagus?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Crystal Merchant Cherni$<BR>Halo. Apakah kamu sudah pernah datang ke Crystal Shop?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html>(Terima Quest)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Tentang Crystal Point yang berkilauan$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-1-a" mid="10" select_type="0"><![CDATA[<html>Hmm, aku ingin membeli semuanya tapi kok mahal sekali ya.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Crystal Shop Helper Cherni$<BR>Selamat datang, <FONT color=#387206>{user_nick}</FONT>.<BR>Aku adalah <FONT color=#086171>Crystal Shop Helper Cherni</FONT>. Di sini banyak item yang hanya dapat dibeli dengan menggunakan <FONT color=#a82424>Crystal Point</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-1-b" mid="12" select_type="0"><![CDATA[<html>Apa hanya bisa didapatkan dari hadiah main quest?</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Crystal Shop Helper Cherni$<BR>Ah, benarkah? Waduh… tapi karena item-item di sini spesial jadi apa boleh buat. Jadi, dari <FONT color=#7e12d2>Main Quest reward</FONT> kamu dapat memperoleh <FONT color=#a82424>Crystal Point</FONT>, jadi kumpulkan sebanyak-banyaknya ya? Pasti cepat terkumpul kok!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-1-c" mid="22" select_type="0"><![CDATA[<html>Hmm, oke deh. Akan aku usahakan.</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Crystal Shop Helper Cherni$<BR>Bukan!! Bukan begitu. Setelah <FONT color=#7e12d2>Lv95</FONT>, kamu dapat menerima <FONT color=#7e12d2>daily mission reward</FONT> dan mendapatkan <FONT color=#a82424>Crystal Point</FONT>!! Sedikit-sedikit lama-lama menjadi bukit!! Ah, ini juga mungkin dapat membantumu? <FONT color=#387206>{user_nick}</FONT>, kamu pasti dapat membeli item yang kamu inginkan!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-1-d" mid="20" select_type="0"><![CDATA[<html>(Quest selesai)</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Crystal Merchant Cherni$<BR>Aku akan menunggumu di sini!! Semoga beruntung.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">49940,,,,,,,,,</exe>
+         <exe type="setquest">4994</exe>
+         <exe type="talk" npc="n998_experience_shop">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">49940,,,,,,,,,</exe>
+         <exe type="complete" true="">4994</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n998_experience_shop" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n998_experience_shop" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n998_experience_shop" sub="b" />
+   <exelink qstep="1" npc="n998_experience_shop" sub="c">0</exelink>
+   <exelink qstep="1" npc="n998_experience_shop" sub="d">1</exelink>
+   <journal_data recompense="49940" quest_title="크리스탈 포인트, 그 찬란함에 대하여" chapterid="" quest_level="24" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos>11,n998</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>998</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="15"><![CDATA[Crystal Shop]]></title>
+         <contents mid="16"><![CDATA[<html>Pergilah ke Saint's Haven dan temui Crystal Merchant Cherni.<BR><BR><FONT color=#086171>Saint's Haven -</FONT><FONT color=#a82424> Crystal Shop Helper Cherni</FONT></html>]]></contents>
+         <destination mid="17"><![CDATA[Bicara dengan Crystal Shop Cherni]]></destination>
+         <todo_msg mid="18"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>24:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,124 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq34_4364_guardian_nest_solo</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4364</qid>
+      <designer>김인정</designer>
+      <qlevel>70</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Nest] Meeting the Guardian Alone]]></qkname>
+      <qnpc>
+         <npcid>776</npcid>
+         <npcename>n776_darklair_mardlen</npcename>
+         <npckname>어둠의 여신관 마들렌</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>
+You've come, adventurer.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$[Nest] Meeting the Guardian Alone$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-a" mid="24" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>
+Do you remember what happened to the Guardian Nest last time?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-b" mid="36" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>The pure and noble Guardian of the Forest of New Moon has lost himself to the dark side...<BR>
+This is a tragedy. And this kind of things will continue to happen unless the Goddess wakes up from her nightmare.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-c" mid="38" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Please let the poor Guardian rest in the benevolence of the Goddess.<BR>I have prepared the Goddess's blessings to help you in your journey.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-d" mid="40" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Only one person can enter the special stage that can only be opened by the one blessed with the Goddess's powers.<BR>You would have to face the Guardian <FONT color=#a82424>alone</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-e" mid="42" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="43"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Please don't forget that this blessing is for one person only.<BR>I will open the gate for you now.<BR><FONT color=#7e12d2>(* You cannot enter the Guardian Nest (Solo Mode) in a party)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">4364</exe>
+         <exe type="recompense_view">43640,,,,,,,,,</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">43640,,,,,,,,,</exe>
+         <exe type="complete" true="">4364</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n776_darklair_mardlen" sub="a">1</exelink>
+   <exelink qstep="accepting" npc="n776_darklair_mardlen" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="c" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="d">0</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="e">1</exelink>
+   <journal_data recompense="43640" quest_title="[네스트] 혼자 만나는 가디언" chapterid="" quest_level="70" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_SaintHaven_NestWorldZone01.dds</contents_image>
+         <destination_pos>36,n776</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>776</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="20"><![CDATA[Meeting the Guardian Alone]]></title>
+         <contents mid="21"><![CDATA[<html>Priestess of Darkness Madeleine is looking for an adventurer who can give eternal peace to the corrupted Guardian of the Forest of New Moon.<BR>
+Meet Priestess of Darkness Madeleine for details.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- Garden of Time and Space(Lv70) - Priestess of Darkness Madeleine</FONT></html>]]></contents>
+         <destination mid="22"><![CDATA[Meet Priestess of Darkness Madeleine at the Garden of Time and Space.]]></destination>
+         <todo_msg mid="23"><![CDATA[Meet Priestess of Darkness Madeleine.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>70:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

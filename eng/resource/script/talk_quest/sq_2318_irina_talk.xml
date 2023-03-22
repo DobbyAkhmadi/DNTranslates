@@ -1,0 +1,91 @@
+﻿<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_2318_irina_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2318</qid>
+      <designer>이한나</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About Gifts]]></qkname>
+      <qnpc>
+         <npcid>1265</npcid>
+         <npcename>n1265_irina</npcename>
+         <npckname>알테이아 최고 미녀 이리나</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1265_irina-accepting-a" mid="6" select_type="0"><![CDATA[<html>(I like getting presents too)</html>]]></talk_answer>
+      <talk_answer link_index="n1265_irina-accepting-b" mid="7" select_type="0"><![CDATA[<html>(I like giving you presents)</html>]]></talk_answer>
+      <talk_answer link_index="n1265_irina-accepting-c" mid="8" select_type="0"><![CDATA[<html>(I want you to make lunch for me)</html>]]></talk_answer>
+      <talk_answer link_index="n1265_irina-accepting-d" mid="9" select_type="0"><![CDATA[<html>(I will get a Ch*nel bag for you)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>I love <FONT color=#7e12d2>presents~</FONT> I like receiving something I need too but any gifts are welcome! How about you, <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="10"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>Ah I see. But I have nothing to give you now.<BR>I'll make sure I prepare one next time........<BR><FONT color=#7e12d2>(Irina looks disappointed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>Actually everyone in Lagendia always wants to give me something. I don't know why.<BR>Haha! I'm just joking! <FONT color=#387206>{user_nick}</FONT> is such a <FONT color=#a94407>nice person</FONT> for giving me gifts!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>I’m sorry I can't cook very well. I don't like getting hurt when I cook, chopping my finger off and all that will hurt a lot.<BR>I prefer eating food prepared by other people.....<BR><FONT color=#387206>{user_nick}</FONT>, I will consider making lunch for you. <FONT color=#7e12d2>But don't expect much~!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>What!!! <FONT color=#086171>The shiny new authentic lambskin handbag from Ch*nel!??</FONT>You'd really give me that...?<BR>I'm <FONT color=#a94407>so</FONT><FONT color=#7e12d2>so</FONT><FONT color=#a82424>so</FONT> touched!! <FONT color=#387206>{user_nick}</FONT>, you really know how to make a girl happy!<BR>That must be why you are so popular with everyone~~~</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,2318, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 5 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 30 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 10 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1265_irina" sub="a">0,1</exelink>
+   <exelink qstep="accepting" npc="n1265_irina" sub="b">0,2</exelink>
+   <exelink qstep="accepting" npc="n1265_irina" sub="c">0,3</exelink>
+   <exelink qstep="accepting" npc="n1265_irina" sub="d">0,4</exelink>
+   <journal_data recompense="" quest_title="[대화] 선물에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>1265:3000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

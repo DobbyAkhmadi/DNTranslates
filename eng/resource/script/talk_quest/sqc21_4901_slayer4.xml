@@ -1,0 +1,122 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc21_4901_slayer4</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4901</qid>
+      <designer>이현진</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>4902</nextqid>
+      <nextqname>sqc21_4902_slayer5</nextqname>
+      <nextqnpc>n775_cleric_ilizer</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Conditions For Entering Slayer Mode]]></qkname>
+      <qnpc>
+         <npcid>775</npcid>
+         <npcename>n775_cleric_ilizer</npcename>
+         <npckname>신전기사 일라이저</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-accepting-a" mid="6" select_type="0"><![CDATA[<html>Yes.</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Temple Knight Elizer$<BR>Oh, you must be here because of <FONT color=#a82424>Slayer Mode</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Conditions For Entering Slayer Mode$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-1-a" mid="10" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Temple Knight Elizer$<BR>We hope the Slayer phenomenon will dwindle soon. But for now, there's nothing much we can do since we can't even enter that place. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-1-b" mid="12" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Temple Knight Elizer$<BR>However, I heard that the researches have recently found a way to enter Slayer Mode. <BR>All you need is to collect Slayer Shards to create an entry ticket. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-1-c" mid="14" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Temple Knight Elizer$<BR>You can exchange 10 Slayer Shards for one Entry Ticket. You can exchange them at the store I manage. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-1-d" mid="16" select_type="0"><![CDATA[<html>Thanks!</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Temple Knight Elizer$<BR>I'll give you one for free this time. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-1-e" mid="18" select_type="0"><![CDATA[<html><FONT color=#086171>Receive Reward</FONT> </html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Quest Completed $</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-1-!next" mid="24" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Temple Knight Elizer$<BR>Please enter Slayer Mode from the Garden of Time and Space and prevent darkness from taking over Saint Haven. </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">49010,,,,,,,,,</exe>
+         <exe type="setquest">4901</exe>
+         <exe type="talk" npc="n775_cleric_ilizer">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">49010,,,,,,,,,</exe>
+         <exe type="complete" true="">4901</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n775_cleric_ilizer" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n775_cleric_ilizer" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n775_cleric_ilizer" sub="b" />
+   <exelink qstep="1" npc="n775_cleric_ilizer" sub="c" />
+   <exelink qstep="1" npc="n775_cleric_ilizer" sub="d">0</exelink>
+   <exelink qstep="1" npc="n775_cleric_ilizer" sub="e">1</exelink>
+   <exelink qstep="1" npc="n775_cleric_ilizer" sub="!next" />
+   <journal_data recompense="49010" quest_title="슬레이어 모드에 들어가는 조건 " chapterid="" quest_level="95" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n775</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>775</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="20"><![CDATA[Talk to Temple Knight Elizer]]></title>
+         <contents mid="21"><![CDATA[<html>Ask Temple Knight Elizer about how you can enter Slayer Mode using Slayer Shard. <BR><BR><FONT color=#086171>Saint Haven</FONT><FONT color=#a82424> → Temple Knight Elizer</FONT></html>]]></contents>
+         <destination mid="22"><![CDATA[Talk to Temple Knight Elizer]]></destination>
+         <todo_msg mid="23"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest>4900</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

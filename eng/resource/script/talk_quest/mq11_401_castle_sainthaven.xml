@@ -1,0 +1,630 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_401_castle_sainthaven</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>4</qchapter>
+      <qid>401</qid>
+      <designer>김인정</designer>
+      <qlevel>24</qlevel>
+      <qdesc>300028 - 클레릭 메인퀘에서 지우지 못한 퀘스트 아이템(현자의 지팡이) 지우기</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>402</nextqid>
+      <nextqname>mq11_402_town_of_death</nextqname>
+      <nextqnpc>n039_bishop_ignasio</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Saint Haven Royal Castle]]></qkname>
+      <qnpc>
+         <npcid>209</npcid>
+         <npcename>n209_elite_soldier</npcename>
+         <npckname>정예병사 클림드(세인트헤이븐 왕성)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>252</npcid>
+         <npcename>n252_saint_guard</npcename>
+         <npckname>왕성 근위병 조이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>258</npcid>
+         <npcename>n258_slave_david</npcename>
+         <npckname>자칭 모험가 데이비드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>259</npcid>
+         <npcename>n259_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>260</npcid>
+         <npcename>n260_elite_soldier</npcename>
+         <npckname>정예병사 클림드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>35</npcid>
+         <npcename>n035_soceress_master_tiana</npcename>
+         <npckname>상급 소서리스 티아나</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>38</npcid>
+         <npcename>n038_royal_magician_kalaen</npcename>
+         <npckname>궁정 소서리스 칼라엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>39</npcid>
+         <npcename>n039_bishop_ignasio</npcename>
+         <npckname>주교 이그나시오</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>41</npcid>
+         <npcename>n041_duke_stwart</npcename>
+         <npckname>공작 스튜어트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>55</npcid>
+         <npcename>n055_elite_soldier</npcename>
+         <npckname>정예병사 클림드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>69</npcid>
+         <npcename>n069_plane_ticketer_arnene</npcename>
+         <npckname>매표원 아넨느</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>70</npcid>
+         <npcename>n070_plane_ticketer_sorene</npcename>
+         <npckname>매표원 소렌느</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>99</npcid>
+         <npcename>n099_engineer_hubert</npcename>
+         <npckname>비행선 엔지니어 휴버트     (캐더락 관문)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-accepting" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-accepting-acceptted" mid="208" select_type="3" />
+      <talk_question mid="193"><![CDATA[<html>$Airship Engineer Hubert$<BR>Did you get the <FONT color=#a82424>Airship Engine Battery</FONT>?<BR>Come on, quick.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-level_check" mid="210" select_type="2" />
+      <talk_question mid="6"><![CDATA[<html>$Airship Engineer Hubert$<BR>It's been tough on you. Now that we have our power source, <FONT color=#a82424>Nautilus</FONT> will be ready to take off soon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1-a" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-b" mid="287" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Airship Engineer Hubert$<BR>Uhh...this is odd...Huh? What is this? What happened to the <FONT color=#a82424>Airship Engine Battery</FONT>? Why is it so damaged?<BR>Hey, what did you do to this thing?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1-b" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-c" mid="214" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$Airship Engineer Hubert$<BR><FONT color=#7e12d2>(Tell him the truth that the device was in the ogre's mouth)</FONT><BR>What?? Why the hell would an ogre try to eat the <FONT color=#a82424>Airship Engine Battery</FONT>?<BR>Anyway, the surface corrosion is quite serious so I don't think I can use this straight away…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1-c" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-d" mid="216" select_type="2" />
+      <talk_question mid="215"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Do you need any other stuff?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-" mid="297" select_type="5" />
+      <talk_question mid="63"><![CDATA[<html>$Airship Engineer Hubert$<BR>Don't worry. I'll take care of it.<BR>You should busy yourself with other matters as I'll need time to fix this.<FONT color=#7e12d2>(You can move to Saint Haven once you have reached level 24.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1-e" image="QN_Npc_Woman_Tiketer_Arnene.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-" mid="211" select_type="5" />
+      <talk_question mid="64"><![CDATA[<html>$Airship Engineer Hubert$<BR>Alright, all set! Talk to <FONT color=#a82424>Ticket Agent Arnen</FONT> and she will guide you through the boarding process. The airship should be ready by the time you're back. <BR><BR><FONT color=#7e12d2>* You cannot proceed in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1-f" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-" mid="212" select_type="5" />
+      <talk_question mid="66"><![CDATA[<html>$Airship Engineer Hubert$<BR>You should busy yourself with other matters as I need some time to fix this.<BR><FONT color=#7e12d2>(You can go to Saint Haven once you have reached level 24.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-1" image="QN_Npc_Woman_Tiketer_Arnene.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressTiana.dds" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-1-" mid="213" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Master Sorceress Tiana$<BR>You didn't leave yet? I thought you were going to <FONT color=#a82424>Saint Haven</FONT>.<BR><FONT color=#7e12d2>(Talk to Ticket Agent Arnen to go to Saint Haven)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-1" image="QN_Npc_Woman_Tiketer_Arnene.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-1-" mid="219" select_type="5" />
+      <talk_question mid="8"><![CDATA[<html>$Elite Soldier Calrim$<BR>I need to report to the King at <FONT color=#a82424>Saint Haven</FONT>. <FONT color=#382000>{user_nick}</FONT>, as the person who saved Calderock Village, would you come with me?<BR><FONT color=#7e12d2>(Talk to Ticket Agent Arnen to go to Saint Haven)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_plane_ticketer.dds" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-" mid="220" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Ticket Agent Sorene$<BR>How can I help you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-1-" mid="221" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Hmph! You'll be sorry if you look down on the <FONT color=#a82424>Sorceresses</FONT>!<BR>…Who the heck is this? Go away if you're not here for me. I don't talk to shabbily-dressed people.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-" mid="222" select_type="5" />
+      <talk_question mid="22"><![CDATA[<html>$Bishop Ignacio$<BR>Hmm... This is bad...<BR>The fate of this kingdom is like a candle in the wind... I'm worried.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-" mid="223" select_type="5" />
+      <talk_question mid="23"><![CDATA[<html>$King Cassius$<BR>I can't just talk to anyone. I'm b-busy! Go away….<BR>…But you'll come back, won't you…?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-1-" mid="224" select_type="5" />
+      <talk_question mid="24"><![CDATA[<html>$Duke Stuart$<BR>I heard about you. Pretty awesome job you did at the other village.<BR>By right, you should be rewarded, but we're in a time of crisis. We'll leave that for later.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n252_saint_guard-1-" mid="225" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$Royal Guard Joey$<BR>I'm on my guard duty. I'm not allowed to talk to civilians.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n069_plane_ticketer_arnene-1" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_plane_ticketer.dds" center_image="">
+      <talk_answer link_index="n069_plane_ticketer_arnene-1-" mid="226" select_type="5" />
+      <talk_question mid="71"><![CDATA[<html>$Ticket Agent Arnen$<BR>Hello adventurer.<BR>Thanks to you, the repair of Airship <FONT color=#a82424>Nautilus</FONT> could be completed and it can fly again. I don't know how to thank you enough.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-1-" mid="227" select_type="5" />
+      <talk_question mid="111"><![CDATA[<html>$Elite Soldier Calrim$<BR>There are so many things to report about. I'm overwhelmed right now.<BR><FONT color=#7e12d2>(You have to finish the previous quest)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n259_argenta-1" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n259_argenta-1-a" mid="231" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>$Argenta$<BR>So you've arrived at Saint Haven. This place is still full of unnecessary stuff. Hmph, why do humans like to live in crowded places?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n259_argenta-1-a" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n259_argenta-1-b" mid="233" select_type="2" />
+      <talk_question mid="232"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm not sure….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n259_argenta-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n259_argenta-1-c" mid="234" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>$Argenta$<BR>You don't know anything, do you?<BR>Anyway, I got to go.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n259_argenta-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n259_argenta-1-d" mid="236" select_type="2" />
+      <talk_question mid="235"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Where are you going?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n259_argenta-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n259_argenta-1-e" mid="237" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>$Argenta$<BR>I am going to find <FONT color=#a82424>Geraint</FONT> of course. Where did you think I was going?<BR>Bye then… go your own way.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n259_argenta-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n259_argenta-1-f" mid="239" select_type="2" />
+      <talk_question mid="238"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>My own way?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n259_argenta-1-f" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n259_argenta-1-" mid="228" select_type="5" />
+      <talk_question mid="118"><![CDATA[<html>$Argenta$<BR>Well there's a guy who has been staring at you all this while.<BR>He'll tell you what to do.<FONT color=#7e12d2>(Argenta points at Elite Soldier Calrim.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n259_argenta-1-g" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n259_argenta-1-" mid="229" select_type="5" />
+      <talk_question mid="119"><![CDATA[<html>$Argenta$<BR>Why are you still here?<BR>Go and talk to that human soldier.<BR><FONT color=#7e12d2>(Argenta points to Elite Soldier Calrim)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n258_slave_david-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n258_slave_david-1-" mid="241" select_type="5" />
+      <talk_question mid="120"><![CDATA[<html>$Argenta's Slave David$<BR>Ha. Ha. Ha. You think you're fit to serve Master <FONT color=#a82424>Argenta</FONT>?<BR>I'm sorry but that's a job for <FONT color=#a82424>David</FONT>! Me! Ha! Ha! Ha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n260_elite_soldier-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n260_elite_soldier-1-" mid="242" select_type="5" />
+      <talk_question mid="121"><![CDATA[<html>$Elite Soldier Calrim$<BR><FONT color=#387206>{user_nick}</FONT>, isn't that beautiful lady over there your companion? I think she wants to bid you farewell. Go talk to her first.<BR><FONT color=#7e12d2>(Calrim is looking at Argenta.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n260_elite_soldier-1-a" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n260_elite_soldier-1-b" mid="288" select_type="2" />
+      <talk_question mid="122"><![CDATA[<html>$Elite Soldier Calrim$<BR>Well, like I told you, I need to report to <FONT color=#a82424>King</FONT> <FONT color=#a82424>Cassius</FONT>. I hope you haven't forgotten about my request...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n260_elite_soldier-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n260_elite_soldier-1-c" mid="290" select_type="2" />
+      <talk_question mid="289"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Should we go now?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n260_elite_soldier-1-c" image="QN_Npc_Woman_Tiketer_Sorene.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n260_elite_soldier-1-go_saint" mid="243" select_type="2" />
+      <talk_question mid="126"><![CDATA[<html>$Elite Soldier Calrim$<BR>Yes. However, I'll be going to the <FONT color=#a82424>Royal Castle</FONT> first, as the procedures are quite lengthy. You should get some rest first. When you're ready, please talk to <FONT color=#a82424>Ticket Agent Sorene</FONT>. She'll guide you through.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-2" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_plane_ticketer.dds" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-2-a" mid="245" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Ticket Seller Sorene$<BR>Oh, <FONT color=#382000>{user_class} {user_nick}</FONT>.<BR>You were with <FONT color=#a82424>Elite Soldier Calrim</FONT>.<BR><FONT color=#a82424>Elite Soldier Calrim</FONT> is already inside the Royal Castle.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-2-a" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_plane_ticketer.dds" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-2-b" mid="246" select_type="2" />
+      <talk_question mid="128"><![CDATA[<html>$Ticket Seller Sorene$<BR>Elite Soldier Calrim told me that you should join him in the Royal Castle as soon as the procedures are done. You will see <FONT color=#a82424>Royal Guard Joey</FONT> at the entrance of the <FONT color=#a82424>Royal Castle</FONT>. Speak with him, and he'll let you enter.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-2-b" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_plane_ticketer.dds" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-2-c" mid="248" select_type="2" />
+      <talk_question mid="247"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Thank you.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_plane_ticketer.dds" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-2-" mid="249" select_type="5" />
+      <talk_question mid="130"><![CDATA[<html>$Ticket Seller Sorene$<BR>Goodbye.<BR>I wish you a pleasant stay in Saint Haven.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_plane_ticketer.dds" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-2-" mid="250" select_type="5" />
+      <talk_question mid="131"><![CDATA[<html>$Ticket Seller Sorene$<BR><FONT color=#a82424>Elite Soldier Calrim</FONT> is already inside the Royal Castle. You should head inside as well. You will see <FONT color=#a82424>Royal Guard Joey</FONT> at the entrance of the <FONT color=#a82424>Royal Castle</FONT>. Speak with him, and he'll usher you in.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n252_saint_guard-2-a" mid="252" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Guardsman$<BR>Halt!<BR>You look suspicious. Under whose permission are you stepping into this territory?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n252_saint_guard-2-b" mid="254" select_type="2" />
+      <talk_question mid="253"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I am here to assist in a report to the King.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n252_saint_guard-2-c" mid="255" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Royal Guard Joey$<BR>Huh? Ah...oh, you must be <FONT color=#382000>{user_class} {user_nick}</FONT>.<BR><FONT color=#a82424>Elite Soldier Calrim</FONT> has informed me about you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n252_saint_guard-2-d" mid="257" select_type="2" />
+      <talk_question mid="256"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><BR><FONT color=#662500>So can I go in?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n252_saint_guard-2-" mid="258" select_type="5" />
+      <talk_question mid="39"><![CDATA[<html>$Royal Guard Joey$<BR>Yes, you may enter. <FONT color=#a82424>Elite Soldier Calrim</FONT> is waiting for your arrival. He told me to let you in right away.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n252_saint_guard-2-" mid="259" select_type="5" />
+      <talk_question mid="190"><![CDATA[<html>$Royal Guard Joey$<BR>I'm on guard duty. I'm not allowed to talk to civilians.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n252_saint_guard-3-" mid="261" select_type="5" />
+      <talk_question mid="40"><![CDATA[<html>$Royal Guard Joey$<BR>You should see <FONT color=#a82424>Elite Soldier Calrim</FONT> waiting for you upon entering.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-3" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-3-a" mid="292" select_type="2" />
+      <talk_question mid="98"><![CDATA[<html>$Elite Soldier Calrim$<BR>Ah, there you are. I have already reported to the King, and told him about you, <FONT color=#382000>{user_nick}</FONT>. Please go to  <FONT color=#a82424>His Highness</FONT> and report to him as well.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-3-b" mid="294" select_type="2" />
+      <talk_question mid="293"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I can speak directly to him?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-3-b" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-3-cutscene" mid="295" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>$Elite Soldier Calrim$<BR>Yes. I've explained to him almost everything that happened in <FONT color=#a82424>Calderock Village</FONT>. However, I was not directly involved with the incident regarding the <FONT color=#a82424>Prophet</FONT>. Thus I left most of that out. Kindly fill him about that in detail.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-3-" mid="263" select_type="6" />
+      <talk_question mid="188"><![CDATA[<html>$Elite Soldier Calrim$<BR>
+Yes, but it would be more appropriate if you go alone. This is a royal palace and there are rules to be observed...<BR>
+* <FONT color=#7e12d2>You cannot proceed in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-4" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-4-a" mid="265" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Elite Soldier Calrim$<BR>The Black Knight has attacked and wounded many of our troops, and we even lost track of the <FONT color=#a82424>Prophet</FONT>. I am really ashamed. However thanks to you, <FONT color=#382000>{user_nick}</FONT>, we know the location of the Prophet. The King should be at least comforted by that.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-4-a" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-4-b" mid="267" select_type="2" />
+      <talk_question mid="266"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well... He didn't seem pleased.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-4-b" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_question mid="82"><![CDATA[<html>$Elite Soldier Calrim$<BR>I don't think so. Since I made a report to His Highness, he will take care of this.<BR><FONT color=#7e12d2>(Talk to Bishop Ignacio.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-4" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-4-a" mid="269" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>$Lady Kayleen$<BR>I'll uncover what that conniving bishop is up to...<BR>Hmph. Does he take me for a fool who follows blindly?<BR>If he regards me as an ordinary sorceress, he's making a big mistake!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-4-a" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-4-b" mid="271" select_type="2" />
+      <talk_question mid="270"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But if we don't go and look for the Prophet now….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-4-" mid="272" select_type="5" />
+      <talk_question mid="85"><![CDATA[<html>$Lady Kayleen$<BR>Are you trying to order the Court Sorceress around?<BR>Who says that I'm not going to search for the Prophet?<BR>I simply find it unfair that I should act first, when the <FONT color=#a82424>General</FONT>, the <FONT color=#a82424>Duke</FONT>, and the <FONT color=#a82424>Bishop</FONT> are still idling here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-a" mid="183" select_type="0"><![CDATA[<html>Isn't there any other way?</html>]]></talk_answer>
+      <talk_question mid="182"><![CDATA[<html>$Duke Stuart$<BR>Hmm... We need to go after the Black Knight immediately. However, we are unable to use the Royal Guards... The Court Sorceress and the Bishop are wasting time trying to evade their assistance... This...this is a problem.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-b" mid="273" select_type="2" />
+      <talk_question mid="184"><![CDATA[<html>$Duke Stuart$<BR>The Court Sorceress and the Bishop are only concerned about their own affairs. They can act this way because the current King is easily intimidated.<BR>When the previous King was on the throne, this sort of nonsense was unheard of...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-" mid="274" select_type="5" />
+      <talk_question mid="187"><![CDATA[<html>$Duke Stuart$<BR>Anyway, with the given situation, it's not easy for me to make a decision now.<BR>Sorry I couldn't help.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-a" mid="275" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>$Bishop Ignacio$<BR>You really did an excellent job.<BR>If it weren't for you, we would never have known the prophet's location.<BR>Moreover, you have also displayed your great heroic strengh and saved <FONT color=#a82424>Calderock Village</FONT>. You are truly, truly a remarkable individual. You are definitely bound for greater things.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-b" mid="277" select_type="2" />
+      <talk_question mid="276"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But if we don't go and look for the Prophet now….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-b" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-c" mid="278" select_type="2" />
+      <talk_question mid="168"><![CDATA[<html>$Bishop Ignacio$<BR>Ah, yes. The Prophet!<BR>Are you sure it was the <FONT color=#a82424>Black Knight</FONT> who took the girl away?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-c" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-d" mid="280" select_type="2" />
+      <talk_question mid="279"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yes, I saw it with my own eyes.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-d" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-e" mid="281" select_type="2" />
+      <talk_question mid="170"><![CDATA[<html>$Bishop Ignacio$<BR>The Black Knight dared to destroy our airships and kill our soldiers… and he even had the nerve to kidnap the Prophet! Who does he think he is? Hmm...I fear that the <FONT color=#a82424>Prophet</FONT> is not safe with him.<BR>
+<FONT color=#7e12d2>(The Bishop sighs worryingly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-e" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-f" mid="282" select_type="2" />
+      <talk_question mid="172"><![CDATA[<html>$Bishop Ignacio$<BR>The <FONT color=#a82424>Prophet</FONT> must be found and rescued as soon as possible. However, there aren't any troops that we can send right now. I don't know what to do.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-f" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-g" mid="284" select_type="2" />
+      <talk_question mid="283"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'll help.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-!next" mid="285" select_type="4" />
+      <talk_question mid="174"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">401</exe>
+         <exe type="talk" npc="n099_engineer_hubert">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>메인 퀘에 레벨 없애기를 진행하면서 유저레벨 체크가 24레벨 이던 것을 1레벨로 변경.
+(복잡해서 레벨 체크 숫자를 변경함)</comment>
+      <conditions>
+         <chk type="lvl" op="]=">1</chk>
+         <chk type="custom">api_quest_GetQuestMemo(userObjID, questID, 1) >= 2</chk>
+         <chk type="custom">api_quest_GetQuestMemo(userObjID, questID, 1) == 2</chk>
+         <chk type="custom">api_quest_GetQuestMemo(userObjID, questID, 1) == 3</chk>
+         <chk type="custom">api_quest_GetQuestMemo(userObjID, questID, 2) == 1</chk>
+         <chk type="custom">api_quest_GetQuestMemo(userObjID, questID, 3) == 1</chk>
+         <chk type="custom">api_quest_GetQuestMemo(userObjID, questID, 3) == 2</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="conexe" true="3,7,8" false="4">0</exe>
+         <exe type="talk" npc="n099_engineer_hubert">e</exe>
+         <exe type="talk" npc="n099_engineer_hubert">a</exe>
+         <exe type="talk" npc="n099_engineer_hubert">f</exe>
+         <exe type="conexe" true="3,7,8" false="5">0</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="custom">api_quest_SetQuestMemo(userObjID, questID, 1, 2);</exe>
+         <exe type="conexe" true="3" false="6">1</exe>
+         <exe type="talk" npc="n069_plane_ticketer_arnene">1</exe>
+         <exe type="talk" npc="n069_plane_ticketer_arnene">c</exe>
+         <exe type="conexe" true="10" false="13">2</exe>
+         <exe type="conexe" true="11" false="10">3</exe>
+         <exe type="talk" npc="n069_plane_ticketer_arnene">d</exe>
+         <exe type="moneyDelete" num="500" onexe="18,20">16</exe>
+         <exe type="talk" npc="n069_plane_ticketer_arnene">e</exe>
+         <exe type="custom" />
+         <exe type="custom" />
+         <exe type="custom" />
+         <exe type="custom">api_user_ChangeMap(userObjID,11,1);</exe>
+         <exe type="custom">api_quest_SetQuestMemo(userObjID, questID, 1, 4);</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="custom">api_quest_SetQuestMemo(userObjID, questID, 2, 1);</exe>
+         <exe type="custom">api_quest_SetQuestMemo(userObjID, questID, 3, 1);</exe>
+         <exe type="custom">api_quest_SetQuestMemo(userObjID, questID, 3, 2);</exe>
+         <exe type="conexe" true="30,34" false="29">4</exe>
+         <exe type="conexe" true="32" false="28">5</exe>
+         <exe type="conexe" true="33" false="31">6</exe>
+         <exe type="talk" npc="n259_argenta">1</exe>
+         <exe type="talk" npc="n259_argenta">g</exe>
+         <exe type="talk" npc="n260_elite_soldier">1</exe>
+         <exe type="talk" npc="n260_elite_soldier">a</exe>
+         <exe type="talk" npc="n260_elite_soldier">b</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="custom">api_quest_GetQuestMemo(userObjID, questID, 3) == 2</chk>
+         <chk type="custom">api_quest_GetQuestMemo(userObjID, questID, 3) == 3</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">7</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="talk" npc="n070_plane_ticketer_sorene">2</exe>
+         <exe type="talk" npc="n070_plane_ticketer_sorene">d</exe>
+         <exe type="custom">api_quest_SetQuestMemo(userObjID, questID, 3, 3);</exe>
+         <exe type="conexe" true="8" false="9">1</exe>
+         <exe type="talk" npc="n252_saint_guard">2</exe>
+         <exe type="talk" npc="n252_saint_guard">e</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="custom">api_user_PlayCutScene(userObjID,npcObjID,119);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">8</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">4011,4011,4012,4013,4014,4014,4016,,,</exe>
+         <exe type="complete" true="">401</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n099_engineer_hubert" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n099_engineer_hubert">9</exelink>
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="level_check">2</exelink>
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="b" />
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="c" />
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="d" />
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="" />
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="" />
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="" />
+   <exelink qstep="1" npc="n259_argenta">26</exelink>
+   <exelink qstep="1" npc="n259_argenta" sub="b" />
+   <exelink qstep="1" npc="n259_argenta" sub="c" />
+   <exelink qstep="1" npc="n259_argenta" sub="d" />
+   <exelink qstep="1" npc="n259_argenta" sub="e" />
+   <exelink qstep="1" npc="n259_argenta" sub="f">23,24,34</exelink>
+   <exelink qstep="1" npc="n259_argenta" sub="" />
+   <exelink qstep="1" npc="n259_argenta" sub="" />
+   <exelink qstep="1" npc="n260_elite_soldier">27</exelink>
+   <exelink qstep="1" npc="n260_elite_soldier" sub="b" />
+   <exelink qstep="1" npc="n260_elite_soldier" sub="c" />
+   <exelink qstep="1" npc="n260_elite_soldier" sub="go_saint">25,0,1,20</exelink>
+   <exelink qstep="2" npc="n070_plane_ticketer_sorene">3</exelink>
+   <exelink qstep="2" npc="n070_plane_ticketer_sorene" sub="b" />
+   <exelink qstep="2" npc="n070_plane_ticketer_sorene" sub="c">2,6</exelink>
+   <exelink qstep="2" npc="n070_plane_ticketer_sorene" sub="" />
+   <exelink qstep="2" npc="n070_plane_ticketer_sorene" sub="" />
+   <exelink qstep="2" npc="n252_saint_guard">7</exelink>
+   <exelink qstep="2" npc="n252_saint_guard" sub="b" />
+   <exelink qstep="2" npc="n252_saint_guard" sub="c" />
+   <exelink qstep="2" npc="n252_saint_guard" sub="d">0,1</exelink>
+   <exelink qstep="2" npc="n252_saint_guard" sub="" />
+   <exelink qstep="2" npc="n252_saint_guard" sub="" />
+   <exelink qstep="3" npc="n209_elite_soldier" sub="b" />
+   <exelink qstep="3" npc="n209_elite_soldier" sub="cutscene">1,0</exelink>
+   <exelink qstep="3" npc="n209_elite_soldier" sub="" />
+   <exelink qstep="4" npc="n209_elite_soldier" sub="b">0,1</exelink>
+   <exelink qstep="4" npc="n038_royal_magician_kalaen" sub="b" />
+   <exelink qstep="4" npc="n038_royal_magician_kalaen" sub="" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="b" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="b" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="c" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="d" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="e" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="f" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="g">0</exelink>
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="!next">1</exelink>
+   <journal_data recompense="1:4011,2:4012,3:4013,4:4014,5:4014,6:4016" quest_title="왕성 세인트 헤이븐" chapterid="4" quest_level="24" quest_mark_type="1" use_item_list="300028">
+      <journal index="1">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="25"><![CDATA[Operation Airship Nautilus]]></title>
+         <contents mid="26"><![CDATA[<html>You have brought the Airship Engine Battery to Airship Engineer Hubert. Talk to Airship Engineer Hubert.<BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="27"><![CDATA[Talk to Airship Engineer Hubert]]></destination>
+         <todo_msg mid="28"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Woman_Tiketer_Arnene.dds</contents_image>
+         <destination_pos>8,n69</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>69</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="150"><![CDATA[Going to Saint Haven Royal Castle]]></title>
+         <contents mid="151"><![CDATA[<html>The Airship Nautilus is now fully operational. Talk to Ticket Agent Arnen for the boarding procedure.<BR><BR>
+<FONT color=#7e12d2>* You cannot proceed in a party.</FONT><BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Ticket Agent Arnen</FONT></html>]]></contents>
+         <destination mid="152"><![CDATA[(Solo) Talk to Ticket Agent Arnen]]></destination>
+         <todo_msg mid="153"><![CDATA[Talk to Ticket Agent Arnen to board the Airship Nautilus]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>13015,n259</destination_pos>
+         <destination_mode>custom:8@0</destination_mode>
+         <statemark_npcid>259</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="154"><![CDATA[Argenta's Farewell]]></title>
+         <contents mid="155"><![CDATA[<html>You have arrived in Saint Haven. It looks like Argenta will make her way alone from here. Bid her goodbye.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="156"><![CDATA[Speak with Argenta]]></destination>
+         <todo_msg mid="157"><![CDATA[Bid Argenta goodbye.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>13015,n260</destination_pos>
+         <destination_mode>custom:8@0</destination_mode>
+         <statemark_npcid>260</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="158"><![CDATA[Elite Soldier Calrim's Guide]]></title>
+         <contents mid="159"><![CDATA[<html>Since you came here on Calrim's request, you should speak with him to get an idea of what to do next.<BR><BR>
+<FONT color=#7e12d2>* You cannot proceed in a party.</FONT><BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Elite Soldier Calrim</FONT></html>]]></contents>
+         <destination mid="160"><![CDATA[(Solo) Talk to Elite Soldier Calrim]]></destination>
+         <todo_msg mid="161"><![CDATA[Talk to Elite Soldier Calrim.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Woman_Tiketer_Sorene.dds</contents_image>
+         <destination_pos>11,n70</destination_pos>
+         <destination_mode>custom:8@0</destination_mode>
+         <statemark_npcid>70</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="162"><![CDATA[Arrived]]></title>
+         <contents mid="163"><![CDATA[<html>You have agreed to go to the Royal Castle with Elite Soldier Calrim. Talk to Ticket Agent Sorene to find out where he is.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Ticket Agent Sorene</FONT></html>]]></contents>
+         <destination mid="164"><![CDATA[Talk to Ticket Agent Sorene]]></destination>
+         <todo_msg mid="165"><![CDATA[Make your way to Saint Haven and speak with Ticket Agent Sorene.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>11,n252</destination_pos>
+         <destination_mode>custom:8@0</destination_mode>
+         <statemark_npcid>252</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="29"><![CDATA[Front of the Royal Castle]]></title>
+         <contents mid="30"><![CDATA[<html>It seems like Elite Soldier Calrim has already went into the Royal Castle. Since Elite Soldier Calrim is handling the procedures for you, make your way directly to the Royal Castle. Elite Soldier Calrim said that if you speak with <FONT color=#a82424>Royal Guard</FONT> <FONT color=#a82424>Joey</FONT>, he will guide you straight in.<BR><BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ Royal Guard Joey</FONT></html>]]></contents>
+         <destination mid="31"><![CDATA[Talk to Royal Guard Joey]]></destination>
+         <todo_msg mid="32"><![CDATA[Meet Royal Guard Joey in front of Saint Haven Royal Castle.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>11,n209</destination_pos>
+         <destination_mode>custom:8@0</destination_mode>
+         <statemark_npcid>209</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="103"><![CDATA[Elite Soldier Calrim's Report]]></title>
+         <contents mid="104"><![CDATA[<html><FONT color=#a82424>Elite Soldier Calrim</FONT> should be waiting for you inside. Enter the Royal Castle and meet Elite Soldier Calrim.<BR><BR><FONT color=#7e12d2>* You cannot proceed in a party.</FONT><BR><BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ Elite Soldier Calrim</FONT></html>]]></contents>
+         <destination mid="105"><![CDATA[Talk to Elite Soldier Calrim inside Saint Haven Royal Castle]]></destination>
+         <todo_msg mid="106"><![CDATA[Enter Saint Haven Royal Castle and speak with Elite Soldier Calrim]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Npc_Bishop.dds</contents_image>
+         <destination_pos>11,n39</destination_pos>
+         <destination_mode>custom:21@4</destination_mode>
+         <statemark_npcid>39</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="107"><![CDATA[Royal Castle's Chaos]]></title>
+         <contents mid="108"><![CDATA[<html>The King cannot afford to assist with the Prophet, as it seems that his castle is under threat. Seek out other <FONT color=#a82424>nobles</FONT> and <FONT color=#a82424>officials</FONT>.<BR><BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ Bishop Ignacio</FONT></html>]]></contents>
+         <destination mid="109"><![CDATA[Speak with the nobles in Saint Haven Royal Castle]]></destination>
+         <todo_msg mid="110"><![CDATA[Appeal to other nobles and officials for help.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>218</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

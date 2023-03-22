@@ -1,0 +1,465 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq05_154_gurafinder2</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>154</qid>
+      <designer>곽노찬</designer>
+      <qlevel>6</qlevel>
+      <qdesc>300104 구라파인더</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Liar Liar, Pants On Fire]]></qkname>
+      <qnpc>
+         <npcid>11</npcid>
+         <npcename>n011_priest_leonardo</npcename>
+         <npckname>상급 클레릭 레오날드    (마나리지)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>12</npcid>
+         <npcename>n012_sorceress_master_cynthia</npcename>
+         <npckname>상급 소서리스 신시아 (마나리지 소서리 스킬)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>16</npcid>
+         <npcename>n016_trader_borin</npcename>
+         <npckname>대장장이 보린  (마나리 무기상)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>17</npcid>
+         <npcename>n017_trader_jeny</npcename>
+         <npckname>상인 제니  (마나리 잡화상)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-noquest" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="145"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Jangan pikir kamu bisa menghindar dengan membuang waktu bersama Blacksmith riki . Apapun yang kamu lakukan, tolong jangan memalukan trinity<BR><FONT color=#7e12d2>(Kamu harus mendapatkan quest dari Blacksmith Borin untuk melanjutkan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-noquest" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="146"><![CDATA[<html>$Master Cleric Leonard$<BR>I keep hearing Blacksmith Borin's blasted Hounds screeching at all hours. Is torturing them or something, please go and have a look.<BR><FONT color=#7e12d2>(You must obtain the quest from Blacksmith Borin to proceed.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-noquest" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="147"><![CDATA[<html>$Merchant Jenny$<BR>Puji Tuhan kamu ada di sini, Aku mulai merasa bosan<BR>Bisnis sangat buruk belakangan ini...begitu pula para Sorceress... (Dia menggumam sendiri.)<BR><FONT color=#7e12d2>(Kamu harus mendapatkan quest dari Blacksmith Borin untuk melanjutkan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-accepting" image="QM_dragonSycophant.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Blacksmith Borin$<BR>Akhirnya aku dapat menyatukan suara yang kamu dapat dengan alat ini.<BR>Jika kamu menggunakannya dengan benar, itu dapat membantu kamu dalam pencarian <FONT color=#a82424>Dragon Followers</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-accepting-a" image="QS_Default.dds" itemindex="300104" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-accepting-b" mid="8" select_type="0"><![CDATA[<html>(Kamu mengambil Lie Detector.)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Blacksmith Borin$<BR>Pertama, Lakukan sebuah <FONT color=#a82424>tes</FONT> untuk memastikan alat itu berfungsi. Bawa <FONT color=#a82424>Lie Detector</FONT> dan tanyakan <FONT color=#a82424>penduduk dari Mana Ridge</FONT> beberapa pertanyaan. Tanyakan pertanyaan yang sedikit panas! Hee hee.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-accepting-acceptted" mid="10" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$The Lie Detector$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-1" image="QS_Default.dds" itemindex="300105" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-2" mid="12" select_type="0"><![CDATA[<html>Itu tidak masuk akal.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Blacksmith Borin$<BR><FONT color=#a82424>Kejujuran</FONT> dan <FONT color=#a82424>kebohongan</FONT> akan diberi tanda suara dari <FONT color=#a82424>Lie Detector</FONT>. Jika seseorang <FONT color=#a82424>jujur</FONT>, kamu akan mendengar suara <FONT color=#a82424>anjing</FONT>. Jika dia bohong, kamu akan mendengar suara <FONT color=#a82424>babi</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-1" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="15"><![CDATA[<html>$Master Sorceress Cynthia$<BR>jangan pikir kamu bisa kabur dengan membuat waktu bersama Blacksmith. Apapun yang kamu lakukan, tolong jangan memalukan the trinity.<BR><FONT color=#7e12d2>(Bicara pada Blacksmith Borin.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="16"><![CDATA[<html>$Master Cleric Leonard$<BR>terus mendengar suara hound Blacksmith Borin's selama berjam-jam. Mungkin sedang di siksa atau lainnya, tolong pergi dan periksa.<BR><FONT color=#7e12d2>(Bicara pada Blacksmith Borin.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-1" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="17"><![CDATA[<html>$Merchant Jenny$<BR>Puji Tuhan kamu ada di sini, Aku mulai merasa bosan.<BR>Bisnis sangat tidak baik belakangan ini...dan para Sorceress... (Dia menggumam sendiri.)<BR><FONT color=#7e12d2>(Bicara pada Blacksmith Borin.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-2" image="QN_Cl_Leonardo.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Blacksmith Borin$<BR>Ayo kita coba!<BR>Mungkin kamu sudah pernah dengar, seseorang pernah bilang <FONT color=#a82424>Master Cleric Leonard</FONT> pernah menguasai <FONT color=#a82424>alleys of Saint's Haven</FONT> saat masih muda. Caritahu tentang kebenarannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-2-a" mid="20" select_type="0"><![CDATA[<html>Aku dengar kamu pernah menguasai alleys of Saint's Haven saat masih muda...</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Master Cleric Leonard$<BR>Apa maumu? Kamu terlihat seperti ingin menanyakan sesuatu?<BR>Baik, tanya saja. Aku tidak akan menjadi muda kembali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-2-a" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-2-b" mid="22" select_type="0"><![CDATA[<html>Wow kamu serius??</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Master Cleric Leonard$<BR>Hm? Oh, itu. Ha! Beberapa tahun lalu, sebelum aku bertemu <FONT color=#a82424>former Pontiff</FONT> <FONT color=#a82424>Benedict</FONT>. Aku sering berkeliaran di <FONT color=#a82424>back alleys of Saint's Haven</FONT> dengan gengku.<BR>Wew! Aku pasti masih berumur 17 atau 18 tahun. Dulu sangat mengasikan... (Leonard menatap jauh penuh kenangan.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-2-b" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-2-c" mid="24" select_type="0"><![CDATA[<html>Jadi begitu...</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Master Cleric Leonard$<BR>Oh, ya. Waktu itu, <FONT color=#a82424>the alleys</FONT> of <FONT color=#a82424>Saint  Haven</FONT> di dominasi preman <FONT color=#a82424>Bloody Burt</FONT>. Dia sangat terkenal karena kejam.  Banyak yang menyebutnya <FONT color=#a82424>back-alley dragon</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-2-c" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-2-d" mid="26" select_type="0"><![CDATA[<html>(Lie Detector mulai bersuara seperti babi.)</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Master Cleric Leonard${sound:Orc_Dead_a.wav}<BR>Di malam yang hujan, Aku menantangnya untuk duel. Dengan kekuatan Goddess aku jadi berani. Aku mengikutinya ke <FONT color=#a82424>Foothills of Black Mountain</FONT> di luar <FONT color=#a82424>Saint's Haven</FONT>, dan kita bertarung <FONT color=#a82424>selama sehari</FONT>. Aku memenangkan pertarungan hebat itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-2-d" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-2-e" mid="28" select_type="0"><![CDATA[<html>Hmm..  Keren sekali.. Haha haha..</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Master Cleric Leonard${sound:Orc_Dead_a.wav}<BR>Hei hormati aku saat aku menceritakan kenangan itu<BR>Menjadi pecundang, dia dan 17 anggotanya menyerangku saat aku pulang. Bayangkan! <FONT color=#a82424>17 vs 1</FONT>! Terlihat sangat buruk, namun aku mengalahkannya 1 per 1. dan akhirnya, karena aku, <FONT color=#a82424>Bloody Burt</FONT> pergi dari <FONT color=#a82424>Saint's Haven</FONT> demi kebaikannya!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-2-e" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-3" mid="30" select_type="0"><![CDATA[<html>hehe.. Bukan apa-apa.</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Master Cleric Leonard$<BR>Namun setelah menemui <FONT color=#a82424>Pope Benedict</FONT>, Aku meninggalkan masa lalu dan memenuhi panggilan sebagai <FONT color=#a82424>servant of the Goddess</FONT>.<BR>Sekarang, apa yang membuatmu bertanya padaku tentang itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="31"><![CDATA[<html>$Master Cleric Leonard$<BR>Tidak masalah.<BR>Aku masih punya banyak cerita menarik jika kamu mau</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-a" mid="35" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Blacksmith Borin$<BR>Apa? Hahahaha! <FONT color=#a82424>Bloody Burt</FONT> tidak terkenal. <BR>Tapi dia berdiri sendiri. Dia tidak pernah punya partner. Hahahaha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-b" mid="37" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Blacksmith Borin$<BR>Seingatku dulu... saat dia masih muda, dia memulai <FONT color=#a82424>Bloody Burt</FONT>, di hajar, juga mengumpulkan anggota geng untuk balas dendam. Huahaha pecundang. Ayo cari target berikutnya bagaimana?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-b" image="QN_Sonya.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-4" mid="39" select_type="0"><![CDATA[<html>Hmm kenapa tidak? Apa yang ingin kamu tanyakan padanya?</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Blacksmith Borin$<BR>Apa yang salah dengan itu? Hahaha!<BR>Ayo kita coba... <FONT color=#a82424>Merchant Jenny</FONT> selanjutnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-4" image="QN_Sonya.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="40"><![CDATA[<html>$Blacksmith Borin$<BR>Tidak banyak. Aku dengar rumor hanya dialah di Mana Ridge yang <FONT color=#a82424>suka Sorceress</FONT>. Ya, kamu tahu, tentang Sorceress. Mari kita cari tahu kebenarannya.<BR>Sebagai Merchant, informasi ini cukup penting!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n017_trader_jeny-4-b" mid="43" select_type="0"><![CDATA[<html>Jadi...ya. Kamu bersama para Sorceress Ok?</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Merchant Jenny${sound:Orc_Dead_a.wav}<BR>(Saat kamu mendekati Merchant Jenny, Lie Detector mulai berbunyi kencang.)<BR>Oh! Bukankah ini teman baikku, si <FONT color=#a82424>cleric tampan</FONT>! Hallo selamat datang. Maaf tempat ini agak kacau, aku ada sedikit masalah dengan teman Sorceress ku. Hee..<BR></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n017_trader_jeny-4-b" mid="45" select_type="0"><![CDATA[<html>Kamu fans berat Sorceress, lalu?</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Merchant Jenny${sound:Orc_Dead_a.wav}<BR>Oh! Hai teman baikku, <FONT color=#a82424>Sorceress yang cantik</FONT>! Kemarilah...aku selalu senang membantumu,  temanku Sorceress ! Hoho!<BR><FONT color=#a82424></FONT><FONT color=#a82424></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n017_trader_jeny-4-c" mid="47" select_type="0"><![CDATA[<html> (... ... ... ...) </html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Merchant Jenny${sound:Orc_Dead_a.wav}<BR>Oh, ya! Tentu saja! Maksudku, Aku tahu mereka akan lebih menuntut, terkadang. Tapi, aku yakin mereka tertekan karena terlalu tampan atau cantik...Jadi. Aku...tidak keberatan.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n017_trader_jeny-4-d" mid="49" select_type="0"><![CDATA[<html>Apa itu?</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Merchant Jenny${sound:Orc_Dead_a.wav}<BR>Maksudku, Aku tidak keberatan jika mereka berteriak karena parfum favorit mereka habis. Atau, atau, saat Cynthia melemparkan batu kepadaku karena tidak kuberi diskon...hehe...tidak apa-apa, kok!<BR><FONT color=#a82424></FONT><FONT color=#a82424><BR></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n017_trader_jeny-4-e" mid="51" select_type="0"><![CDATA[<html>Whoops ... ... ... ... </html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Merchant Jenny${sound:Orc_Dead_a.wav}<BR>Yap, meskipun mereka bersikap buruk padaku, tidak menghargaiku atau menyembunyikan kunciku di tumpukkan sampah.<BR>Yap, Aku hanya SUKA Sorceress.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n017_trader_jeny-4-f" mid="53" select_type="0"><![CDATA[<html> (bohong ... ... ... ... ... ...) </html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Merchant Jenny${sound:Orc_Dead_a.wav}<BR>Dan pastinya aku, PASTINYA tak pernah bermimpi untuk menyelinap, di badai, mengikat mereka semua, dan membakar semuanya hingga rata! Menertawakan dan mengolok mereka, hidup arogan hingga menjadi debu dan terbawa angin!<BR>Tidak, tak pernah aku ingin begitu!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-4-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n017_trader_jeny-4-g" mid="55" select_type="0"><![CDATA[<html> Oh... </html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Merchant Jenny${sound:Orc_Dead_a.wav}<BR>Hehe.<BR>Ya, Aku hanya mencintai semua orang di Mana Ridge!<BR> Lebihnya lagi karena ada BOX ini. Yang membuat SUARA MENGAGUMKAN . Alat apa itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-4-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n017_trader_jeny-4-h" mid="57" select_type="0"><![CDATA[<html>Tidak ... </html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Merchant Jenny${sound:Orc_Dead_a.wav}<BR>Oh...Ok. Tidak apa.<BR>Aku selalu percaya padamu.<BR>Kamu selalu baik, suka membantuku, tidak hanya menjual sampah dan tak pernah belanja di tempatku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-4-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n017_trader_jeny-5" mid="59" select_type="0"><![CDATA[<html>(errrrm...)</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Merchant Jenny${sound:Hound_Bark_Attack_a.wav}<BR>(The Lie Detector mulai bersuara tanpa henti.)<BR>Kelihatannya kamu berbeda dari yang lain.<BR>Sangat disayangkan jika kamu marah kepada orang lain..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n017_trader_jeny-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="60"><![CDATA[<html>$Merchant Jenny${sound:Orc_Dead_a.wav}<BR><FONT color=#7e12d2>(Merchant Jenny ekspresinya kembali senyum.)<BR></FONT>Hai! Silahkan di lihat-lihat tokonya~! Hoho~</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-5" image="QN_Sonya.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-6" mid="63" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Blacksmith Borin$<BR>Muahaha~ Seperti yang kubilang, <FONT color=#a82424>Merchant Jenny</FONT> punya suatu kesenangan yang aneh. Alat <FONT color=#a82424>Lie Detector</FONT> ku mendeteksinya.<BR>Tapi ayo kita coba pada 1 orang lagi! Heh heh heh...<BR>Sekarang, siapa korban berikutnya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-6" image="QN_SoceressCynthia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="64"><![CDATA[<html>$Blacksmith Borin$<BR>Aku tahu! <FONT color=#a82424>Master Sorceress Cynthia</FONT>. Semua orang tahu kalau dia sangat baik padamu, aku dengan dia punya perasaan khusus padamu. Gunakan ini untuk mencaritahu yang sesungguhnya ! Hahaha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-6-a" mid="70" select_type="0"><![CDATA[<html>Sebenarnya, ada yang ingin kutanyakan padamu.</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Kenapa kamu ke sini sekarang?<BR>Di waktu yang genting ini, kamu ke sini untuk buang waktu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-6-b" mid="72" select_type="0"><![CDATA[<html>Bagaimana aku menurutmu.. sejujurnya?</html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Master Sorceress Cynthia$<BR><FONT color=#7e12d2>(Dia menatapmu kemudian mengangguk.)</FONT><BR>Baiklah. Apa yang sangat penting sehingga kamu tanyakan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-6-c" mid="74" select_type="0"><![CDATA[<html>Apa yang terjadi...?</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Master Sorceress Cynthia${sound:Orc_Dead_a.wav}<BR>(Wajah Cynthia melembut, dan dia melihat matamu. Alat Lie Detector mulai berbunyi.)<BR>Sebenarnya...Aku selalu percaya kamu. Aku merasa bahwa kamulah <FONT color=#a82424> harapan</FONT> yang kami butuhkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-6-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-6-d" mid="76" select_type="0"><![CDATA[<html>Kamu...kamu tidak apa-apa?</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Kamu telah sangat <FONT color=#a82424>membantu</FONT> dan <FONT color=#a82424>gigih</FONT> dalam menolong sesama...meskipun aku meminta bantuanmu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-6-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-6-e" mid="78" select_type="0"><![CDATA[<html>(Alat Lie Detector berbunyi kencang, tanpa henti...)</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Master Sorceress Cynthia${sound:Orc_Dead_a.wav}<BR>Aku tidak bermaksud keras padamu. Hanya saja...itu caraku membantumu. Aku ingin kamu sukses, dan untuk itu, kamu harus tertantang. Dengan itu, kamu dapat membuka potensimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-6-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-6-f" mid="80" select_type="0"><![CDATA[<html>(Ini semakin aneh...)</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Master Sorceress Cynthia${sound:Orc_Dead_a.wav}<BR>(Dia tersenyum padamu )<BR>Aku...senang kamu ada di sini, di Mana Ridge.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-6-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-7" mid="82" select_type="0"><![CDATA[<html>B...Benarkah?</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Master Sorceress Cynthia${sound:Orc_Dead_a.wav}<BR>Jadi, sebenarnya, tidak peduli seberapa keras aku padamu, Aku tak tahu bisa apa tanpamu. Terima kasih karena sudah banyak membantu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="85"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Aku harap kamu mati, setiap waktu.<BR>Berhenti buang waktu dan Lakukan sesuatu yang berguna!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-a" mid="90" select_type="0"><![CDATA[<html>Kamu yakin tidak apa-apa?</html>]]></talk_answer>
+      <talk_question mid="89"><![CDATA[<html>$Blacksmith Borin$<BR>Apa?<BR>Bru... ak... akaka... kakaka... wakakak... akakaka!<BR><FONT color=#7e12d2>(Borin tertawa, hingga jatuh.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-b" mid="92" select_type="0"><![CDATA[<html>Aku senang melihatmu senang. Bisa aku pergi sekarang?</html>]]></talk_answer>
+      <talk_question mid="91"><![CDATA[<html>$Blacksmith Borin$<BR>HAhahahahahaHAHAHA!<BR>Oh...oh...heeheehee...oh!<BR>Oh...kamu membuatku tertawa sampai perut sakit! Hahaha...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-c" mid="95" select_type="0"><![CDATA[<html> Ya, Aku terkesan ... Aku mengagumimu. </html>]]></talk_answer>
+      <talk_question mid="94"><![CDATA[<html>$Blacksmith Borin$<BR>Aku hanya orang tua yang merasa senang. Tiga bukti tadi menunjukkan <FONT color=#a82424>Lie Detector</FONT> berfungsi dengan baik. Bagaimana menurutmu? Aku hebat bukan, ya kan? Ya, yaa, Aku tahu aku jenius.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-d" mid="99" select_type="0"><![CDATA[<html>Errr... Sepertinya rusak... </html>]]></talk_answer>
+      <talk_question mid="98"><![CDATA[<html>$Blacksmith Borin${sound:Orc_Dead_a.wav}<BR>(Alat Lie Detector mulai berbunyi... padamu!)<BR>Apa ini? Apa maksudmu ini?!<FONT color=#a82424></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-e" mid="103" select_type="0"><![CDATA[<html>Tidak penting apa yang kamu bilang... </html>]]></talk_answer>
+      <talk_question mid="100"><![CDATA[<html>$Blacksmith Borin$<BR><FONT color=#a82424>rusak</FONT>? Mustahil! My <FONT color=#a82424>Lie Detector</FONT>, adalah <FONT color=#a82424>teknologi tertinggi</FONT>, tidak mungkin <FONT color=#a82424>rusak</FONT>! Tak mungkin!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-f" mid="105" select_type="0"><![CDATA[<html>Ok.. Berapa saudara yang kamu punya?</html>]]></talk_answer>
+      <talk_question mid="104"><![CDATA[<html>$Blacksmith Borin$<BR>Kalau begitu, tanyakan aku sesuatu.<BR>Aku harus memastikan bahwa alat itu kalau rusak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-g" mid="107" select_type="0"><![CDATA[<html>Huff.. Mungkin itu benar....</html>]]></talk_answer>
+      <talk_question mid="106"><![CDATA[<html>$Blacksmith Borin${sound:Hound_Bark_Attack_a.wav}<BR>Apa? Meski aku tidak tahu...<BR>Karena setiap kota ada 1 saudaraku, kupikir kita bisa menebak dengan menghitung jumlah tempatnya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-h" mid="109" select_type="0"><![CDATA[<html>Apa kamu bujangan?</html>]]></talk_answer>
+      <talk_question mid="108"><![CDATA[<html>$Blacksmith Borin$<BR>Ini tidak benar! Pertanyaan harus yang serius untuk tes.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-i" mid="111" select_type="0"><![CDATA[<html> (... ... ... ...) </html>]]></talk_answer>
+      <talk_question mid="110"><![CDATA[<html>$Blacksmith Borin${sound:Orc_Dead_a.wav}<BR>Pertanyaan macam apa itu?! Aku punya banyak pacar! Kamu serius bertanya hal itu?<BR><FONT color=#7e12d2>(Lie Detector bersuara dengan keras.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n016_trader_borin-7-j" mid="113" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="112"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-7-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="114"><![CDATA[<html>$Blacksmith Borin${sound:Orc_Dead_a.wav}<BR>...<BR>...<BR>Berikan padaku, Kelihatannya memang rusak..</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">154</exe>
+         <exe type="recompense_view">1541,1541,1541,1541,1542,,,,,</exe>
+         <exe type="talk" npc="n016_trader_borin">1</exe>
+         <exe type="addquestitem" num="1">300104</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">3</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="talk" npc="n017_trader_jeny">4</exe>
+         <exe type="talk" npc="n017_trader_jeny">a</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">1541,1541,1541,1541,1542,,,,,</exe>
+         <exe type="complete" true="">154</exe>
+         <exe type="delquestitem" num="-1">300104</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n016_trader_borin" sub="b">1</exelink>
+   <exelink qstep="accepting" npc="n016_trader_borin" sub="acceptted">0,2,3</exelink>
+   <exelink qstep="1" npc="n016_trader_borin" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n011_priest_leonardo" sub="b" />
+   <exelink qstep="2" npc="n011_priest_leonardo" sub="c" />
+   <exelink qstep="2" npc="n011_priest_leonardo" sub="d" />
+   <exelink qstep="2" npc="n011_priest_leonardo" sub="e" />
+   <exelink qstep="2" npc="n011_priest_leonardo" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n016_trader_borin" sub="b" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n017_trader_jeny">0</exelink>
+   <exelink qstep="4" npc="n017_trader_jeny" sub="b" />
+   <exelink qstep="4" npc="n017_trader_jeny" sub="c" />
+   <exelink qstep="4" npc="n017_trader_jeny" sub="d" />
+   <exelink qstep="4" npc="n017_trader_jeny" sub="e" />
+   <exelink qstep="4" npc="n017_trader_jeny" sub="f" />
+   <exelink qstep="4" npc="n017_trader_jeny" sub="g" />
+   <exelink qstep="4" npc="n017_trader_jeny" sub="h" />
+   <exelink qstep="4" npc="n017_trader_jeny" sub="5">3,4</exelink>
+   <exelink qstep="5" npc="n016_trader_borin" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n012_sorceress_master_cynthia" sub="b" />
+   <exelink qstep="6" npc="n012_sorceress_master_cynthia" sub="c" />
+   <exelink qstep="6" npc="n012_sorceress_master_cynthia" sub="d" />
+   <exelink qstep="6" npc="n012_sorceress_master_cynthia" sub="e" />
+   <exelink qstep="6" npc="n012_sorceress_master_cynthia" sub="f" />
+   <exelink qstep="6" npc="n012_sorceress_master_cynthia" sub="7">0,1</exelink>
+   <exelink qstep="7" npc="n016_trader_borin" sub="b" />
+   <exelink qstep="7" npc="n016_trader_borin" sub="c" />
+   <exelink qstep="7" npc="n016_trader_borin" sub="d" />
+   <exelink qstep="7" npc="n016_trader_borin" sub="e" />
+   <exelink qstep="7" npc="n016_trader_borin" sub="f" />
+   <exelink qstep="7" npc="n016_trader_borin" sub="g" />
+   <exelink qstep="7" npc="n016_trader_borin" sub="h" />
+   <exelink qstep="7" npc="n016_trader_borin" sub="i">0</exelink>
+   <exelink qstep="7" npc="n016_trader_borin" sub="j">1,2</exelink>
+   <journal_data recompense="3:1541,4:1542" quest_title="구라파인더Ⅱ" chapterid="" quest_level="6" quest_mark_type="10" use_item_list="300104">
+      <journal index="1">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>5,538,3380</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>16</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="115"><![CDATA[Bicara pada Blacksmith Borin]]></title>
+         <contents mid="116"><![CDATA[<html>Blacksmith Borin memberikan kamu <FONT color=#a82424>Lie Detector</FONT>, sekarang dengan sound effect, dan meminta kamu untuk tes dengan penduduk Mana Ridge.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Blacksmith Borin</FONT></html>]]></contents>
+         <destination mid="117"><![CDATA[Bicara pada Blacksmith Borin]]></destination>
+         <todo_msg mid="118"><![CDATA[Quest telah di tambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Cl_Leonardo.dds</contents_image>
+         <destination_pos>5,-1194,3978</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>11</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="119"><![CDATA[Bicara pada Master Cleric Leonard]]></title>
+         <contents mid="120"><![CDATA[<html>Blacksmith Borin meminta kamu menggunakan <FONT color=#a82424>Lie Detector</FONT> untuk mencari tahu <FONT color=#a82424>Master Cleric Leonard</FONT> pernah menjadi anak geng <FONT color=#a82424>Saint's Haven</FONT> sewaktu muda.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Master Cleric Leonard</FONT></html>]]></contents>
+         <destination mid="121"><![CDATA[Bicara pada Master Cleric Leonard]]></destination>
+         <todo_msg mid="122"><![CDATA[Bicara pada Master Cleric Leonard]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>5,538,3380</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>16</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="123"><![CDATA[Bicara pada Blacksmith Borin]]></title>
+         <contents mid="124"><![CDATA[<html>Laporkan hasil <FONT color=#a82424>Lie Detector</FONT> dari Master Cleric Leonard ke <FONT color=#a82424>Blacksmith Borin</FONT>.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Blacksmith Borin</FONT></html>]]></contents>
+         <destination mid="125"><![CDATA[Bicara pada Blacksmith Borin]]></destination>
+         <todo_msg mid="126"><![CDATA[Bicara pada Blacksmith Borin]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Sonya.dds</contents_image>
+         <destination_pos>5,-1014,244</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>17</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="127"><![CDATA[Bicara pada Merchant Jenny]]></title>
+         <contents mid="128"><![CDATA[<html>Blacksmith Borin meminta kamu menggunakan <FONT color=#a82424>Lie Detector</FONT> pada <FONT color=#a82424>Merchant Jenny</FONT>, yang paling sabar terhadap <FONT color=#a82424>Sorceress</FONT>. Cari kebenarannya.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Merchant Jenny</FONT></html>]]></contents>
+         <destination mid="129"><![CDATA[Bicara pada Merchant Jenny]]></destination>
+         <todo_msg mid="130"><![CDATA[Bicara pada Merchant Jenny]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>5,538,3380</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>16</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="132"><![CDATA[Bicara pada Blacksmith Borin]]></title>
+         <contents mid="133"><![CDATA[<html>Laporkan hasil tes <FONT color=#a82424>Lie Detector</FONT> dari <FONT color=#a82424>Merchant Jenny</FONT> ke <FONT color=#a82424>Blacksmith Borin</FONT>.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Blacksmith Borin</FONT></html>]]></contents>
+         <destination mid="134"><![CDATA[Bicara pada Blacksmith Borin]]></destination>
+         <todo_msg mid="135"><![CDATA[Bicara pada Blacksmith Borin]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_SoceressCynthia.dds</contents_image>
+         <destination_pos>5,-456,4330</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>12</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="136"><![CDATA[Bicara pada Master Sorceress Cynthia]]></title>
+         <contents mid="137"><![CDATA[<html>Sebagai tes Final untuk <FONT color=#a82424>Lie Detector</FONT>, Blacksmith Borin meminta kamu mencari tahu apa yang <FONT color=#a82424>Master Sorceress Cynthia</FONT> pikirkan tentang kamu.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Master Sorceress Cynthia</FONT></html>]]></contents>
+         <destination mid="138"><![CDATA[Bicara pada Master Sorceress Cynthia.]]></destination>
+         <todo_msg mid="139"><![CDATA[Bicara pada Master Sorceress Cynthia.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>5,538,3380</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>16</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="141"><![CDATA[Talk to Blacksmith Borin]]></title>
+         <contents mid="142"><![CDATA[<html>Laporkan hasil tes <FONT color=#a82424>Lie Detector</FONT> dari <FONT color=#a82424>Master Sorceress Cynthia</FONT> ke <FONT color=#a82424>Blacksmith Borin</FONT>.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Blacksmith Borin</FONT></html>]]></contents>
+         <destination mid="143"><![CDATA[Bicara pada Blacksmith Borin]]></destination>
+         <todo_msg mid="144"><![CDATA[Bicara pada Blacksmith Borin]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>6:-1</user_level>
+      <user_class>3:4</user_class>
+      <prev_quest>153</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

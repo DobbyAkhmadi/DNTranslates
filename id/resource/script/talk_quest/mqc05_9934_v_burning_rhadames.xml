@@ -1,0 +1,657 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc05_9934_v_burning_rhadames</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>105</qchapter>
+      <qid>9934</qid>
+      <designer>유지은</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9935</nextqid>
+      <nextqname>mqc05_9935_v_frozen_nest</nextqname>
+      <nextqnpc>n3035_norphee</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Rhadames on Fire]]></qkname>
+      <qnpc>
+         <npcid>2064</npcid>
+         <npcename>n2064_gate_guard_prersen</npcename>
+         <npckname>문지기 페르센</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2067</npcid>
+         <npcename>n2067_nophee</npcename>
+         <npckname>노르페</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2995</npcid>
+         <npcename>n2995_kali</npcename>
+         <npckname>칼리</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3034</npcid>
+         <npcename>n3034_hiver</npcename>
+         <npckname>차일드 이베르</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3035</npcid>
+         <npcename>n3035_norphee</npcename>
+         <npckname>소년</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3037</npcid>
+         <npcename>n3037_grele</npcename>
+         <npckname>그렐</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3044</npcid>
+         <npcename>n3044_sylviana</npcename>
+         <npckname>검은 옷의 여자</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3045</npcid>
+         <npcename>n3045_quanos</npcename>
+         <npckname>대검을 든 남자</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3046</npcid>
+         <npcename>n3046_geraint</npcename>
+         <npckname>금발의 소년</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3047</npcid>
+         <npcename>n3047_norphee</npcename>
+         <npckname>노르페</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3035_norphee-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Nophee.dds" center_image="">
+      <talk_answer link_index="n3035_norphee-accepting-acceptted" mid="100" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Norfe$<BR>Go. Fersen will show you the way.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3035_norphee-1" image="QN_Answer.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Nophee.dds" center_image="">
+      <talk_answer link_index="n3035_norphee-1-" mid="102" select_type="5" />
+      <talk_question mid="6"><![CDATA[<html>$Norfe${action:Talk}<BR>Be careful not to be swept away by this storm...<BR>And remember… The <FONT color=#a82424>Childs</FONT> who know this location must not leave here alive!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-1" image="QW_13050.dds" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-1-a" mid="105" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Gatekeeper Fersen${action:Talk}<BR>This way! Wait!<BR>Do not rush headlong into this storm! Wait for the signal!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-1-a" image="QW_13050.dds" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-1-end" mid="106" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Gatekeeper Fersen$<BR>Now!<BR><FONT color=#7e12d2>※ Select [Continue] to move to the Western Secret Passage.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-1-b" image="" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-1-" mid="108" select_type="5" />
+      <talk_question mid="107"><![CDATA[<html>$Gatekeeper Fersen$<BR>Be careful!<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="200"><![CDATA[<html>$Kali$<BR>
+<FONT color=#7e12d2>(Looking conflicted.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-2" image="QW_13050.dds" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-2-end" mid="109" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Gatekeeper Fersen${action:Talk}<BR>You must be careful!<BR><FONT color=#7e12d2>※Select [Continue] to move to the Western Secret Passage.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-2-a" image="" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-2-" mid="115" select_type="5" />
+      <talk_question mid="103"><![CDATA[<html>$Gatekeeper Fersen$<BR>You must be careful!<BR>
+<FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-2" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-2-a" mid="142" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Child Hiver${action:Talk}{sound:npc_Childhiver_qu9934_sp_01.ogg}<BR>Oh, it's you, <FONT color=#387206>{user_nick}</FONT>.<BR>Hehehe… Good work. You did exactly as I hoped.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-2-a" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-2-b" mid="143" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>… What?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-2-b" image="QW_132.dds" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-2-c" mid="144" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>$Child Hiver$<BR>Since you told the residents of <FONT color=#086171>Blue Raven Territory</FONT> to flee,<BR>I was quite sure you would get the people of <FONT color=#086171>Rhadames</FONT> to move in an attempt to save them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-2-c" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-2-d" mid="145" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Damn… I was played!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-2-d" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-2-e" mid="146" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Child Hiver$<BR><FONT color=#a82424>Norfe</FONT> really outdid himself with these defenses. This has been quite entertaining.<BR>But in the end, I win no matter who dies. Good job, worm.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-2-e" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-2-f" mid="147" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Indeed… That makes sense. Rhadames in flames, and Childs dead in the process. It all works to her advantage<BR>Damn it… I was played like a fiddle.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-2-f" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-3" mid="148" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Child Hiver$<BR>Oh, I just love seeing your faces like that!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-3" image="QW_13050.dds" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-3-end" mid="116" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Gatekeeper Fersen${action:Talk}<BR>You must be careful!<BR><FONT color=#7e12d2>※Select [Continue] to move to the Western Secret Passage.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-3-a" image="" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-3-" mid="118" select_type="5" />
+      <talk_question mid="117"><![CDATA[<html>$Gatekeeper Fersen$<BR>You must be careful!<BR>
+<FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3" image="QN_Kali.dds" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-3-a" mid="149" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Child Hiver${action:Talk}{sound:npc_Childhiver_qu9934_sp_02.ogg}<BR>It's been too long, everyone. Hehehe… Are you still fighting for <FONT color=#a82424>good will</FONT> and all that nonsense?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-a" image="QW_Rhadames.dds" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-3-b" mid="151" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Grele${sound:npc_Grele_qu9934_sp_01.ogg}<BR>Sis-… You–how could you do this?!<BR>How could you do this to <FONT color=#086171>Rhadames</FONT>?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-b" image="QN_Hiver.dds" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-3-c" mid="152" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Child Hiver${sound:npc_Childhiver_qu9934_sp_03.ogg}<BR>So, you can't even bear to call me <FONT color=#a82424>sister</FONT> now, even after I died for you?<BR>I really should have just killed you long ago.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-c" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-3-d" mid="153" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Kali${sound:npc_Kali_qu9934_sp_01.ogg}<BR>Hiver, please wake up! There is still hope for you!<BR>We were together. You said you would always believe in us, no matter what.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-d" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_sylviana.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-3-e" mid="154" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Girl in Black Clothing$<BR>It was you? You're the one who attacked <FONT color=#086171>Aergal</FONT>?!<BR>… You won't get away with it!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-e" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-3-f" mid="155" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Child Hiver$<BR>Hehehe… Hahahaha... HAHAHAHAHAHA!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-f" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-3-g" mid="156" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Child Hiver${sound:npc_Childhiver_qu9934_sp_04.ogg}<BR>You guys sure know how to play the victim. I bet it would be nice to think that I'm the only villain in this story.<BR>All you have to do is get rid of the <FONT color=#a82424>evil Hiver</FONT> and everything will be okay, right?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-g" image="QN_DarkRubinat.dds" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-3-h" mid="157" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Child Hiver${sound:npc_Childhiver_qu9934_sp_05.ogg}<BR>You guys are all the same. But do you know who really destroyed <FONT color=#086171>Aergal</FONT>?<BR>It was the <FONT color=#a82424>Red Child</FONT>. That showoff <FONT color=#a82424>Rubinart</FONT>!<BR>He's killed more than I ever have!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-h" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-3-i" mid="158" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>……!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-i" image="QN_DarkRubinat.dds" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-3-j" mid="159" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Kali${sound:npc_Kali_qu9934_sp_02.ogg}<BR>What? No way. All that talk about the <FONT color=#a82424>Red Child</FONT> is just a rumor.<BR><FONT color=#a82424>Rubinart</FONT> would never do such a thing! What the refugees said about him…<BR>It… was just… No, it couldn't be… And yet… <FONT color=#a82424>Rubinart</FONT>…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-j" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_sylviana.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-3-k" mid="160" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Girl in Black Clothing${sound:npc_Sylviana_qu9934_sp_01.ogg}<BR>Stop it, <FONT color=#a82424>Bewitching Hiver!</FONT> <FONT color=#2b2723>Why are you doing this to Kali?</FONT><BR>I don't know who this Rubinart is, but I trust Kali way more than you!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-k" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-3-l" mid="161" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Child Hiver${sound:npc_Childhiver_qu9934_sp_06.ogg}<BR>Go see for yourself. I speak only the truth.<BR>Who else would be able to destroy the ceiling of an underground city so tightly fortified?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-l" image="QN_quanos.dds" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-3-m" mid="162" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Child Hiver$<BR>Do you really think there was a single Child in the Western Territory with that kind of power?<BR>Me? <FONT color=#a82424>Strong Blade Kaunos</FONT>? No matter how strong he is, he wouldn't even come close.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-m" image="QW_132.dds" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3034_hiver-3-n" mid="163" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No way… Just like with the Blue Clan…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-n" image="QS_Default.dds" itemindex="400725" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-3-o" mid="164" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Kali${sound:npc_Kali_qu9934_sp_03.ogg}<BR>Oh, if it isn't the Finest Stone Jade thief! What brings you here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-o" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-3-p" mid="165" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Ugh, damn it!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-3-p" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-4" mid="166" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Grele$<BR>What? Finest Stone Jade thief?! <FONT color=#387206>{user_nick}</FONT>, that was you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-4" image="QW_13050.dds" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-4-end" mid="120" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Gatekeeper Fersen${action:Talk}<BR>You must be careful!<BR><FONT color=#7e12d2>※Select [Continue] to move to the Western Secret Passage.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-4-a" image="" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-4-" mid="122" select_type="5" />
+      <talk_question mid="121"><![CDATA[<html>$Gatekeeper Fersen$<BR>You must be careful!<BR><FONT color=#7e12d2>
+</FONT><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><FONT color=#7e12d2><BR></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3034_hiver-4" image="" itemindex="" portrait_left="Npc_Left_hiver_child.dds" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3034_hiver-4-" mid="167" select_type="5" />
+      <talk_question mid="36"><![CDATA[<html>$Child Hiver${action:Talk}<BR>What's this? Grele knows you? Have you been doing some extracurricular activities?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3047_norphee-4" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3047_norphee-4-a" mid="168" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Norfe${action:Talk}<BR>It's true that he stole the <FONT color=#a82424>Finest Stone Jade</FONT> by order of <FONT color=#a82424>Commander Hwaran</FONT>,<BR>but <FONT color=#387206>{user_nick}</FONT> is also the one who warned us that the <FONT color=#a82424>Childs</FONT> were about to attack <FONT color=#086171>Rhadames</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3047_norphee-4-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3047_norphee-4-b" mid="169" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(… He knew everything this whole time? He may be a kid... But he sure is sharp.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3047_norphee-4-b" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3047_norphee-4-c" mid="170" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Kali$<BR>Norfe…<FONT color=#7e12d2>(As if trying to bite her tongue.)</FONT><BR>You knew that he was the thief, but you just let him be?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3047_norphee-4-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3047_norphee-4-d" mid="171" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9934_sp_01.ogg}<BR>I've been watching him and trying to figure out what Hwaran is planning.<BR>Even so, thanks to his warning, we were able to blow up the tunnel just in time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3047_norphee-4-d" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3047_norphee-4-e" mid="172" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Grele$<BR>I… I see. Then he helped us.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3047_norphee-4-e" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3047_norphee-4-f" mid="173" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(This sly little fox, he finds a way to insult me and compliment me at the same time.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3047_norphee-4-f" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3047_norphee-5" mid="174" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Child Hiver$<BR>I'm starting to get bored. Are we done talking?<BR>Hehe, shall we bring this to a crescendo?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-5" image="" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-5-end" mid="124" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Gatekeeper Fersen${action:Talk}<BR>You must be careful!<BR><FONT color=#7e12d2>※ Select [Continue] to move to the Western Secret Passage.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-5-a" image="" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-5-" mid="126" select_type="5" />
+      <talk_question mid="125"><![CDATA[<html>$Gatekeeper Fersen$<BR>You must be careful!<BR><FONT color=#7e12d2>
+</FONT><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><FONT color=#7e12d2><BR></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3047_norphee-5" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3047_norphee-5-" mid="175" select_type="5" />
+      <talk_question mid="45"><![CDATA[<html>$Norfe${action:Talk}<BR>Wait! Everyone watch out!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3045_quanos-5" image="" itemindex="" portrait_left="Npc_Left_quanos.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3045_quanos-5-a" mid="176" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Man Wielding a Greatsword${sound:npc_Quanos_qu9934_sp_01.ogg}<BR>Hiver! Die!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3045_quanos-5-a" image="" itemindex="" portrait_left="Npc_Left_quanos.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3045_quanos-5-b" mid="177" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Child Hiver$<BR><FONT color=#7e12d2>(Hiver's face stiffens. It seems she has met a tough opponent.)</FONT><BR>… So Kaunos, you yet live.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3045_quanos-5-b" image="" itemindex="" portrait_left="Npc_Left_quanos.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3045_quanos-5-c" mid="178" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(So this is the </FONT><FONT color=#a82424>Strong Blade Kaunos</FONT><FONT color=#662500> Hwaran spoke of.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3045_quanos-5-c" image="" itemindex="" portrait_left="Npc_Left_quanos.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3045_quanos-5-d" mid="179" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Kaunos${action:Talk}{sound:npc_Quanos_qu9934_sp_02.ogg}<BR>Did you really think that I would take your <FONT color=#a82424>bait</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3045_quanos-5-d" image="" itemindex="" portrait_left="Npc_Left_quanos.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3045_quanos-5-e" mid="180" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Child Hiver$<BR>Tsk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3045_quanos-5-e" image="" itemindex="" portrait_left="Npc_Left_quanos.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3045_quanos-5-f" mid="181" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Kaunos${sound:npc_Quanos_qu9934_sp_03.ogg}<BR>Sneaky little fox. You may have eliminated Nephrite, but I am not such easy meat!<BR>Your weakness was your undoing! Now die!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3045_quanos-5-f" image="" itemindex="" portrait_left="Npc_Left_quanos.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3045_quanos-6" mid="182" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>$Child Hiver$<BR>It's true you are strong.<BR>But you know, I've gotten pretty strong too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-6" image="QW_13050.dds" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-6-end" mid="127" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Gatekeeper Fersen${action:Talk}<BR>You must be careful!<BR><FONT color=#7e12d2>※Select [Continue] to move to the Western Secret Passage.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-6-a" image="" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2064_gate_guard_prersen-6-" mid="129" select_type="5" />
+      <talk_question mid="128"><![CDATA[<html>$Gatekeeper Fersen$<BR>You must be careful!<BR><FONT color=#7e12d2>
+</FONT><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><FONT color=#7e12d2><BR></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3045_quanos-6" image="" itemindex="" portrait_left="Npc_Left_quanos.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3045_quanos-6-" mid="183" select_type="5" />
+      <talk_question mid="54"><![CDATA[<html>$Kaunos$<BR>Is that so? Then show me your might.<BR>…!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3046_geraint-6-a" mid="184" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Blond-haired Boy${action:Talk}<BR>I came here after hearing the explosions... What's with you guys?<BR>Are you both <FONT color=#a82424>Childs</FONT> or something?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-a" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-6-b" mid="185" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Kali$<BR><FONT color=#a82424>Geraint!</FONT> Are you okay?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-b" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-6-c" mid="186" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Geraint$<BR>Thankfully, I'm just fine. But… What's going on here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-c" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-6-d" mid="187" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Child Hiver$<BR>What… Who the heck are you?<BR>
+<FONT color=#7e12d2>(Hiver's voice shakes, though she tries to put on a confident front.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-d" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-6-e" mid="188" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Geraint$<BR>Who the heck am I? Who are you to speak to me like that?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-e" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_hiver_child.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-6-f" mid="189" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Child Hiver$<BR><FONT color=#7e12d2>(Hiver glances at Kali, then flinches and steps backward.)</FONT><BR>Tsk, I was getting bored anyway. See you all later.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-f" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_quanos.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-6-g" mid="190" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$Kaunos${sound:npc_Quanos_qu9934_sp_04.ogg}<BR>Where are you going? Do you think you can just run from me?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-g" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3046_geraint-6-h" mid="191" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$Geraint$<BR>… Shouldn't we go after her?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-h" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-6-i" mid="192" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$Kali$<BR>After Hiver! Quickly!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-i" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_Nophee.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-6-j" mid="193" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$Norfe$<BR>Wait!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-j" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-6-k" mid="194" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$Kali$<BR>Norfe?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-6-k" image="QW_Rhadames.dds" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_Nophee.dds" center_image="">
+      <talk_answer link_index="n3046_geraint-7" mid="195" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>$Norfe$<BR>The ground is unstable because of the explosion earlier.<BR>We don't know when the cliff will collapse. Let's go back to <FONT color=#086171>Rhadames</FONT> for now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3046_geraint-7" image="QW_Rhadames.dds" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3046_geraint-7-end" mid="130" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Geraint$<BR>Okay then. Back to Rhadames it is.<BR>
+<FONT color=#7e12d2>※ Select [Continue] to return to Rhadames.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-7" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-7-a" mid="135" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>$Norfe${action:Talk}<BR>… Affairs have gotten more complicated.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-7-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-7-!next" mid="136" select_type="4" />
+      <talk_question mid="69"><![CDATA[<html>$Quest Complete$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2064_gate_guard_prersen-7" image="" itemindex="" portrait_left="Npc_Left_Guard_Presen.dds" portrait_right="" center_image="">
+      <talk_question mid="198"><![CDATA[<html>$Gatekeeper Fersen${action:Talk}<BR>Everyone is safe. That is the most important thing.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9934</exe>
+         <exe type="talk" npc="n3035_norphee">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>2-4, 페르센과 대화해 맵으로 넘겨주기</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="0,1,3" false="4">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13050,1);</exe>
+         <exe type="talk" npc="n2064_gate_guard_prersen">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment>2-5, 페르센과 대화해 맵으로 넘겨주기</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="conexe" true="3,4" false="5">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13050,1);</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="talk" npc="n2064_gate_guard_prersen">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment>2-5, 페르센과 대화해 맵으로 넘겨주기</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="conexe" true="3,4" false="5">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13050,1);</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="talk" npc="n2064_gate_guard_prersen">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>2-5, 페르센과 대화해 맵으로 넘겨주기</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="conexe" true="3,4" false="5">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13050,1);</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="talk" npc="n2064_gate_guard_prersen">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment>2-5, 페르센과 대화해 맵으로 넘겨주기</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="conexe" true="3,4" false="5">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13050,1);</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="talk" npc="n2064_gate_guard_prersen">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment>2-5, 페르센과 대화해 맵으로 넘겨주기</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+         <exe type="conexe" true="3,4" false="5">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13050,1);</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="talk" npc="n2064_gate_guard_prersen">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">99340,,,,,,,,,,</exe>
+         <exe type="complete" true="">9934</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,175,1);</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n3035_norphee" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n2064_gate_guard_prersen" sub="end">2</exelink>
+   <exelink qstep="1" npc="n2064_gate_guard_prersen" sub="" />
+   <exelink qstep="2" npc="n2064_gate_guard_prersen" sub="end">2</exelink>
+   <exelink qstep="2" npc="n2064_gate_guard_prersen" sub="" />
+   <exelink qstep="2" npc="n3034_hiver" sub="b" />
+   <exelink qstep="2" npc="n3034_hiver" sub="c" />
+   <exelink qstep="2" npc="n3034_hiver" sub="d" />
+   <exelink qstep="2" npc="n3034_hiver" sub="e" />
+   <exelink qstep="2" npc="n3034_hiver" sub="f" />
+   <exelink qstep="2" npc="n3034_hiver" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n2064_gate_guard_prersen" sub="end">2</exelink>
+   <exelink qstep="3" npc="n2064_gate_guard_prersen" sub="" />
+   <exelink qstep="3" npc="n3034_hiver" sub="b" />
+   <exelink qstep="3" npc="n3034_hiver" sub="c" />
+   <exelink qstep="3" npc="n3034_hiver" sub="d" />
+   <exelink qstep="3" npc="n3034_hiver" sub="e" />
+   <exelink qstep="3" npc="n3034_hiver" sub="f" />
+   <exelink qstep="3" npc="n3034_hiver" sub="g" />
+   <exelink qstep="3" npc="n3034_hiver" sub="h" />
+   <exelink qstep="3" npc="n3034_hiver" sub="i" />
+   <exelink qstep="3" npc="n3034_hiver" sub="j" />
+   <exelink qstep="3" npc="n3034_hiver" sub="k" />
+   <exelink qstep="3" npc="n3034_hiver" sub="l" />
+   <exelink qstep="3" npc="n3034_hiver" sub="m" />
+   <exelink qstep="3" npc="n3034_hiver" sub="n" />
+   <exelink qstep="3" npc="n3034_hiver" sub="o" />
+   <exelink qstep="3" npc="n3034_hiver" sub="p" />
+   <exelink qstep="3" npc="n3034_hiver" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n2064_gate_guard_prersen" sub="end">2</exelink>
+   <exelink qstep="4" npc="n2064_gate_guard_prersen" sub="" />
+   <exelink qstep="4" npc="n3047_norphee" sub="b" />
+   <exelink qstep="4" npc="n3047_norphee" sub="c" />
+   <exelink qstep="4" npc="n3047_norphee" sub="d" />
+   <exelink qstep="4" npc="n3047_norphee" sub="e" />
+   <exelink qstep="4" npc="n3047_norphee" sub="f" />
+   <exelink qstep="4" npc="n3047_norphee" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n2064_gate_guard_prersen" sub="end">2</exelink>
+   <exelink qstep="5" npc="n2064_gate_guard_prersen" sub="" />
+   <exelink qstep="5" npc="n3045_quanos" sub="b" />
+   <exelink qstep="5" npc="n3045_quanos" sub="c" />
+   <exelink qstep="5" npc="n3045_quanos" sub="d" />
+   <exelink qstep="5" npc="n3045_quanos" sub="e" />
+   <exelink qstep="5" npc="n3045_quanos" sub="f" />
+   <exelink qstep="5" npc="n3045_quanos" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n2064_gate_guard_prersen" sub="end">2</exelink>
+   <exelink qstep="6" npc="n2064_gate_guard_prersen" sub="" />
+   <exelink qstep="6" npc="n3046_geraint" sub="b" />
+   <exelink qstep="6" npc="n3046_geraint" sub="c" />
+   <exelink qstep="6" npc="n3046_geraint" sub="d" />
+   <exelink qstep="6" npc="n3046_geraint" sub="e" />
+   <exelink qstep="6" npc="n3046_geraint" sub="f" />
+   <exelink qstep="6" npc="n3046_geraint" sub="g" />
+   <exelink qstep="6" npc="n3046_geraint" sub="h" />
+   <exelink qstep="6" npc="n3046_geraint" sub="i" />
+   <exelink qstep="6" npc="n3046_geraint" sub="j" />
+   <exelink qstep="6" npc="n3046_geraint" sub="k" />
+   <exelink qstep="6" npc="n3046_geraint" sub="7">0,1</exelink>
+   <exelink qstep="7" npc="n3046_geraint" sub="end">2</exelink>
+   <exelink qstep="7" npc="n2067_nophee" sub="a">0</exelink>
+   <exelink qstep="7" npc="n2067_nophee" sub="!next">1</exelink>
+   <journal_data recompense="99340" quest_title="불꽃의 라다메스" chapterid="105" quest_level="95" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_13050.dds</contents_image>
+         <destination_pos>175,n2064</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2064</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="70"><![CDATA[Spur of the Moment]]></title>
+         <contents mid="71"><![CDATA[<html>There's no time to waste. Go to <FONT color=#a82424>Gatekeeper Fersen</FONT> like Norfe said.<BR>
+ <BR>
+<FONT color=#086171>Rhadames </FONT>- <FONT color=#a82424>Gatekeeper Fersen</FONT></html>]]></contents>
+         <destination mid="72"><![CDATA[Talk to Gatekeeper Fersen in Rhadames]]></destination>
+         <todo_msg mid="73"><![CDATA[Talk to Gatekeeper Fersen and head to the Secret Passage.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Child_hiver.dds</contents_image>
+         <destination_pos>175,n2064</destination_pos>
+         <destination_mode>custom:13050@4,175@1</destination_mode>
+         <statemark_npcid>3034</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="74"><![CDATA[Amidst the Ashes]]></title>
+         <contents mid="75"><![CDATA[<html>The Childs rushed in, but in the end <FONT color=#086171>Rhadames</FONT> was saved, and by a method even Norfe couldn't predict. <FONT color=#a82424>Hiver</FONT> walked toward you amid a pile of dead Childs on all sides.<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><BR><FONT color=#7e12d2>※Speak to Gatekeeper Fersen to go to the Western Secret Passage.</FONT><BR><BR>
+<FONT color=#086171>Rhadames</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Western Secret Passage (Hiver)</FONT></html>]]></contents>
+         <destination mid="76"><![CDATA[(Solo) Talk to Hiver in the Western Secret Passage]]></destination>
+         <todo_msg mid="77"><![CDATA[Talk to Hiver in the Western Secret Passage.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Kali.dds</contents_image>
+         <destination_pos>175,n2064</destination_pos>
+         <destination_mode>custom:13050@4,175@1</destination_mode>
+         <statemark_npcid>3034</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Confirmation of Despair]]></title>
+         <contents mid="79"><![CDATA[<html>Hiver already predicted what <FONT color=#387206>{user_nick}</FONT> would do. The party of Lagendian adventurers surrounds the chortling Hiver. All you can do is watch and see what happens next.<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><BR><FONT color=#7e12d2>※ Speak to Gatekeeper Fersen to go to the Western Secret Passage.</FONT><BR><BR><FONT color=#086171>
+</FONT><FONT color=#086171>Rhadames</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Western Secret Passage (Hiver)</FONT><FONT color=#086171><BR></FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[(Solo) Talk to Hiver in the Western Secret Passage]]></destination>
+         <todo_msg mid="81"><![CDATA[Kali seems to have something to say to Hiver.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Nophee.dds</contents_image>
+         <destination_pos>175,n2064</destination_pos>
+         <destination_mode>custom:13050@4,175@1</destination_mode>
+         <statemark_npcid>3047</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="82"><![CDATA[Unexpected Appearance]]></title>
+         <contents mid="83"><![CDATA[<html>Hiver says the <FONT color=#a82424>Red Child, Rubinart</FONT>, was the one who destroyed Aergal Kingdom. Everyone looks your way as they try to digest the shock of that statement. It seems <FONT color=#a82424>Norfe</FONT> has something to say.<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><BR><FONT color=#7e12d2>※Speak to Gatekeeper Fersen to go to the Western Secret Passage.</FONT><BR><BR><FONT color=#086171>
+</FONT><FONT color=#086171>Rhadames</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Western Secret Passage (Norfe)</FONT><FONT color=#086171><BR></FONT></html>]]></contents>
+         <destination mid="84"><![CDATA[(Solo) Talk to Norfe in the Western Secret Passage]]></destination>
+         <todo_msg mid="85"><![CDATA[Talk to Norfe in the Western Secret Passage.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_quanos.dds</contents_image>
+         <destination_pos>175,n2064</destination_pos>
+         <destination_mode>custom:13050@4,175@1</destination_mode>
+         <statemark_npcid>3045</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="86"><![CDATA[Meet the New Enemy]]></title>
+         <contents mid="87"><![CDATA[<html>Suddenly an armored man wielding a greatsword appears. Who is this man?<BR><FONT color=#7e12d2>※You cannot do this quest while in a party.</FONT><BR><FONT color=#7e12d2>※Speak to Gatekeeper Fersen to go to the Western Secret Passage.</FONT><BR><BR><FONT color=#086171>Rhadames</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Western Secret Passage (Man Wielding a Greatsword)</FONT></html>]]></contents>
+         <destination mid="88"><![CDATA[(Solo) Talk to Man Wielding a Greatsword in Western Secret Passage]]></destination>
+         <todo_msg mid="89"><![CDATA[Talk to the Man Wielding a Greatsword in the Western Secret Passage.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_geraint_Kid.dds</contents_image>
+         <destination_pos>175,n2064</destination_pos>
+         <destination_mode>custom:13050@4,175@1</destination_mode>
+         <statemark_npcid>3046</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="90"><![CDATA[A Third Development]]></title>
+         <contents mid="91"><![CDATA[<html>A <FONT color=#a82424>blond-haired boy</FONT> suddenly appears and the two Childs on the verge of battle stop in their tracks and stare. What is happening now?<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><BR><FONT color=#7e12d2>※ Speak to Gatekeeper Fersen to go to the Western Secret Passage.</FONT><BR><BR><FONT color=#086171>
+</FONT><FONT color=#086171>Rhadames</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Western Secret Passage (Blond-haired Boy)</FONT><FONT color=#086171><BR></FONT></html>]]></contents>
+         <destination mid="92"><![CDATA[(Solo) Talk to Blond-haired Boy in the Western Secret Passage]]></destination>
+         <todo_msg mid="93"><![CDATA[Talk to the Blond-haired Boy in the Western Secret Passage.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QW_Rhadames.dds</contents_image>
+         <destination_pos>175,n2067</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2067</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="94"><![CDATA[Back to Rhadames]]></title>
+         <contents mid="95"><![CDATA[<html>When Hiver saw the boy named <FONT color=#a82424>Geraint</FONT>, she immediately dropped everything and fled, with Strong Blade Kaunos chasing after her. Norfe stopped the party from trying to pursue the two because there was a risk the ground would collapse further. But surely a Child who knows the location of Rhadames shouldn't be left alive? Go back to Rhadames and speak with Norfe.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Norfe</FONT></html>]]></contents>
+         <destination mid="96"><![CDATA[Talk to Norfe in Rhadames]]></destination>
+         <todo_msg mid="97"><![CDATA[Talk to Norfe in Rhadames.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>9933</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

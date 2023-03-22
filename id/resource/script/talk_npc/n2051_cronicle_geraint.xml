@@ -1,0 +1,28 @@
+   <talk>
+      <npcename>n2051_cronicle_geraint</npcename>
+      <npcid>2051</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Gerraint (Chronicle Main)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="18"><![CDATA[<html>Anda...</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Gerraint${sound:npc_Gereint_2051_sp_02.ogg}<BR><FONT color=#387206>{user_nick}</FONT>. Kau rupanya.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="19" link_target="sq_cronicle_2901_01.xml"><![CDATA[<html>(Mendengar cerita)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="20" link_target="sq_cronicle_2902_02.xml"><![CDATA[<html>(Mendengar cerita)</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="21"><![CDATA[<html>(Berhentilah)</html>]]></talk_answer>
+         <talk_question mid="15"><![CDATA[<html>$Gerraint${sound:npc_Gereint_2051_sp_01.ogg}<BR>Cerita apa yang ingin anda dengarkan?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="0" false="2">0</exe>
+         <exe type="conexe" true="4" false="3">1</exe>
+         <exe type="enterquest">sq_cronicle_2901_01</exe>
+         <exe type="enterquest">sq_cronicle_2902_02</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">2902</chk>
+         <chk type="hascomq">2901</chk>
+      </conditions>
+   </talk>

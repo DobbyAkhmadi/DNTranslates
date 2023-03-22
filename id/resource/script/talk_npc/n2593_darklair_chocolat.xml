@@ -1,0 +1,69 @@
+   <talk>
+      <npcename>n2593_darklair_chocolat</npcename>
+      <npcid>2593</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Priestess of Darkness Chocolat]]></npckname>
+      <talk_paragraph index="basic" image="" itemindex="">
+         <talk_answer link_index="nest" mid="14"><![CDATA[<html>[Nest]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="17"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Priestess of Darkness Chocolat$<BR>Erm... I think the current situation looks really serious.<BR>But don’t be dejected.<BR>Have a cup of hot chocolate to cheer up!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="nest" image="" itemindex="">
+         <talk_answer link_index="shop_open" mid="15"><![CDATA[<html>[Desert Dragon Shop]</html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="41"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Priestess of Darkness Chocolat$<BR>You can find Riverwort Nests on the right.<BR>Follow the route to the west to go to Dragon Nests.<BR>It’s terrible that Nests have ended up in this place too.<BR>That’s making me sad so I’ll have some marshmallows to cheer myself up!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="19" link_target="sqc17_4728_return_news.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>[Nest] News of Return</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="22" link_target="sqc18_4780_one_who_wish_to_rest.xml"><![CDATA[<html><FONT color=#a82424>[Nest] Longing for Peace</FONT></html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="42"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="18"><![CDATA[<html>$Priestess of Darkness Chocolat$<BR>
+I’m craving sugar.<BR>
+Do you have anything to eat? Like a sweet pastry….<BR>
+ </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="gd-nest" image="" itemindex="">
+         <talk_answer link_index="go_gdnest" mid="26"><![CDATA[<html>Yes, please.</html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="27"><![CDATA[<html>No, I will start with something else.</html>]]></talk_answer>
+         <talk_question mid="25"><![CDATA[<html>$Dark Oracle Shokola$<BR>You're leaving to fight the <FONT color=#a82424>Green Dragon</FONT>, right? I'll prepare something sweet to eat and wait here. Shall I open the door now?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="dd-nest" image="" itemindex="">
+         <talk_answer link_index="go_ddnest" mid="31"><![CDATA[<html>Yes, please.</html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="32"><![CDATA[<html>No, I will start with something else.</html>]]></talk_answer>
+         <talk_question mid="30"><![CDATA[<html>$Dark Oracle Shokola$<BR>Thinking of the <FONT color=#a82424>Desert Dragon</FONT> makes me depressed... Shall I open the door for you?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="party" image="" itemindex="">
+         <talk_answer link_index="basic" mid="43"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="35"><![CDATA[<html>$Dark Oracle Shokola$<BR>I'm always here, so come talk to me when you're ready!<BR>
+<BR><FONT color=#7e12d2>※ This quest cannot be carried out while in a party.</FONT><BR>
+</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">basic</exe>
+         <exe type="conexe" true="7" false="6">2</exe>
+         <exe type="talk">gd-nest</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,17002,1);</exe>
+         <exe type="talk">dd-nest</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,17003,1);</exe>
+         <exe type="conexe" true="8" false="10">3 / 4 / 5</exe>
+         <exe type="conexe" true="2" false="9">6</exe>
+         <exe type="conexe" true="4" false="9">6</exe>
+         <exe type="talk">party</exe>
+         <exe type="conexe" true="4" false="0">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,215001,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9732</chk>
+         <chk type="hasquest">9735</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, (9732)) == 2</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, (9735)) == 1</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, (9735)) == 2</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, (9735)) == 3</chk>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+         <chk type="hasquest">4488</chk>
+      </conditions>
+      <exelink idx="shop_open">11</exelink>
+      <exelink idx="go_gdnest">3</exelink>
+      <exelink idx="go_ddnest">5</exelink>
+   </talk>

@@ -1,0 +1,410 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_609_foretell_compass</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>609</qid>
+      <designer>김인정</designer>
+      <qlevel>40</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>610</nextqid>
+      <nextqname>sq11_610_ensure_a_future</nextqname>
+      <nextqnpc>n112_wisp_kevin</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Nest] Prophetic Compass]]></qkname>
+      <qnpc>
+         <npcid>112</npcid>
+         <npcename>n112_wisp_kevin</npcename>
+         <npckname>이상한 승무원</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>29</npcid>
+         <npcename>n029_crew_kevin</npcename>
+         <npckname>자칭 승무원 케빈</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>45</npcid>
+         <npcename>n045_soceress_master_stella</npcename>
+         <npckname>상급 소서리스 스텔라</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>99</npcid>
+         <npcename>n099_engineer_hubert</npcename>
+         <npckname>비행선 엔지니어 휴버트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n112_wisp_kevin-noquest" image="QN_Npc_SoceressStella.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="102"><![CDATA[<html>$Weird Technician$<BR>Hurry~ you need to defeat the Apocalypse ship~ otherwise there will be disaster~!! Did you bring my drawing <FONT color=#a82424>to Master Sorceress Stella</FONT>?!<BR><FONT color=#7e12d2>(Sparkling even more anxiously.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="103"><![CDATA[<html>$Memory of Kevin$<BR>Hum~ I had a bad dream.<BR>
+So I am not happy at all~<BR><FONT color=#7e12d2>(Kevin frowns)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="104"><![CDATA[<html>$Airship Engineer Hubert$<BR>Um? Nice to see you again <FONT color=#387206>{user_nick}</FONT>!! Calderock Hero, I thought you went to<BR><FONT color=#a82424>Saint Haven</FONT>, when did you come back?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-accepting" image="QS_Default.dds" itemindex="300299" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-accepting-a" mid="106" select_type="0"><![CDATA[<html>(Taking her time while holding the drawing upside down.)</html>]]></talk_answer>
+      <talk_question mid="105"><![CDATA[<html>$Master Sorceress Stella$<BR>Humm... I am making a compass based on the drawing that you brought.<BR>I'm almost finished so wait a moment!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-accepting-b" mid="108" select_type="0"><![CDATA[<html>(Smoke rises up)</html>]]></talk_answer>
+      <talk_question mid="107"><![CDATA[<html>$Master Sorceress Stella$<BR>So if I put here and finish! Ahhh! I really made it!?<BR>
+Ohhohohohoho. I think I am intelligent!<BR><FONT color=#7e12d2>(When Stella puts up the machine she made, it makes a strange sound.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-accepting-c" mid="110" select_type="0"><![CDATA[<html>(Stella is lost and drops the machine)</html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html>$Master Sorceress Stella${sound:Kobold_Gun_Die_01_Broken.wav}<BR><FONT color=#7e12d2>(Boom!!!!)<BR>(Gas appears and the joints of the equipment starts breaking apart.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-accepting-acceppted" mid="112" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="111"><![CDATA[<html>$Prophetic Compass$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n112_wisp_kevin-1" image="QN_Npc_SoceressStella.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="113"><![CDATA[<html>$Weird Technician$<BR>Hurry~ you need to defeat the Apocalypse ship~ otherwise there will be disasters around here~!! Did you bring my drawing <FONT color=#a82424>to Master Sorceress Stella</FONT>?!<BR><FONT color=#7e12d2>(Sparkling even more anxiously.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-1" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="114"><![CDATA[<html>$Kevin$<BR>Umm~ I had a really strange dream last night!<BR>So now~ I am in a bad mood today~<BR><FONT color=#7e12d2>(Kevin grimaces.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="115"><![CDATA[<html>$Airship Engineer Hubert$<BR>Um? Nice to see you again <FONT color=#387206>{user_nick}</FONT>!! Calderock Hero, I thought you went to<BR><FONT color=#a82424>Saint Haven</FONT>, when did you come back?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-a" mid="117" select_type="0"><![CDATA[<html>So... are you ok?</html>]]></talk_answer>
+      <talk_question mid="116"><![CDATA[<html>$Master Sorceress Stella$<BR>..........<BR>............................</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-b" mid="121" select_type="0"><![CDATA[<html>What? Whe, where?</html>]]></talk_answer>
+      <talk_question mid="120"><![CDATA[<html>$Master Sorceress Stella$<BR>......No can do it.<BR>You, go there and come back fast!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-b" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-c" mid="123" select_type="0"><![CDATA[<html>(Say this from the start.)</html>]]></talk_answer>
+      <talk_question mid="122"><![CDATA[<html>$Master Sorceress Stella$<BR><FONT color=#a82424>At Calderock Gate</FONT>, there is really good<FONT color=#a82424>engineer</FONT> I heard that, he is one of the best so you can go to him.<BR>Well... Well it's not because I didn't manage to make it... it's just to get some <FONT color=#a82424>advice</FONT>. Hu, humm!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-c" image="QS_Default.dds" itemindex="300301" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-2" mid="125" select_type="0"><![CDATA[<html>I will come back.</html>]]></talk_answer>
+      <talk_question mid="124"><![CDATA[<html>$Master Sorceress Stella$<BR>Here, go to him with this unfinished compass, and ask him what the problem is.<BR>I think it's because I assembled some tiny thing wrongly because I am intelligent!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-2" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="126"><![CDATA[<html>$Master Sorceress Stella$<BR><FONT color=#a82424>Airship Engineer Hubert</FONT> , right? The engineer of Calderock.<BR>Go to him to show my completed product!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-a" mid="129" select_type="0"><![CDATA[<html>(Explain the situation)</html>]]></talk_answer>
+      <talk_question mid="128"><![CDATA[<html>$Airship Engineer Hubert$<BR>What's up? I thought you are in Saint Haven, doing some remarkable activities.<BR>...What is that in your hands?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-a" image="QS_Default.dds" itemindex="300301" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-b" mid="132" select_type="0"><![CDATA[<html>(Hubert is looking at the machine seriously.)</html>]]></talk_answer>
+      <talk_question mid="130"><![CDATA[<html>$Airship Engineer Hubert$<BR>New monster, that's a problem. Let's see the machine... Humm...<BR>This one goes to here... hummhumm....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-c" mid="134" select_type="0"><![CDATA[<html>(QA Team? Bug? wha, what is it?)</html>]]></talk_answer>
+      <talk_question mid="133"><![CDATA[<html>$Airship Engineer Hubert$<BR>What! Why did you make like this without checking?<BR>The QA Team could disapprove of this patch! Well, I think critical bugs could appear.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-d" mid="136" select_type="0"><![CDATA[<html>So... sorry....</html>]]></talk_answer>
+      <talk_question mid="135"><![CDATA[<html>$Airship Engineer Hubert$<BR>Did you test this? You need to test it out for bugs.<BR>Have you ever done a patch? You might realize it if you work on it for three or four nights straight! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-e" mid="207" select_type="0"><![CDATA[<html>Ye... Yes! I will try harder from now on!</html>]]></talk_answer>
+      <talk_question mid="206"><![CDATA[<html>$Airship Engineer Hubert$<BR>Well, never mind, I can fix this easily.<BR>
+But this is the last time. Action speaks louder than words. Do you understand?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-e" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3" mid="138" select_type="0"><![CDATA[<html>I will try.</html>]]></talk_answer>
+      <talk_question mid="137"><![CDATA[<html>$Airship Engineer Hubert$<BR>Hum.... Anyway, I will fix this, so meanwhile, go to <FONT color=#a82424>Kevin</FONT>. He is in a bad mood because of a bad dream, so talk to him about it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="139"><![CDATA[<html>$Airship Engineer Hubert$<BR><FONT color=#a82424>Kevin</FONT>is in a bad mood since morning because of bad dream. I heard from you that he is affected by the thing from the future.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-3" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-3-a" mid="142" select_type="0"><![CDATA[<html>What is the dream about?</html>]]></talk_answer>
+      <talk_question mid="141"><![CDATA[<html>$Kevin$<BR>Umm~ I had a really strange dream last night!~ I am in a bad mood today~~<BR><FONT color=#7e12d2>(Kevin grimaces.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-3-b" mid="144" select_type="0"><![CDATA[<html>(Kevin grumbles)</html>]]></talk_answer>
+      <talk_question mid="143"><![CDATA[<html>$Kevin$<BR>In the dream!! I finally became a crew!!<BR>
+I could take a huge airship to fly!<BR>But, I was not happy in my dream. I don't know why.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-3-c" mid="146" select_type="0"><![CDATA[<html>(What he saw in the future is mixed?)</html>]]></talk_answer>
+      <talk_question mid="145"><![CDATA[<html>$Kevin$<BR>And the sky I flew in my dream was~.<BR>
+not blue in colour but completely <FONT color=#a82424>gray</FONT>.<BR>Dust covered and bloody. Ah I don't want to fly in such a sky.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-3-c" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-4" mid="148" select_type="0"><![CDATA[<html>Yes. It's just a dream.</html>]]></talk_answer>
+      <talk_question mid="147"><![CDATA[<html>$Kevin$<BR>Hehe. It's just a dream. Well, I will someday fly in the blue sky~ phuuuu~<BR><FONT color=#7e12d2>(Kevin seems ok and smiles.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-4" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="149"><![CDATA[<html>$Kevin$<BR><FONT color=#a82424>Hubert</FONT> told me that he would give me air plane parts, but I guess he is busy? Guess I will ask him to teach me tomorrow~ phew~<FONT color=#7e12d2>(Kevin is pretending to fly in the sky.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-a" mid="152" select_type="0"><![CDATA[<html>Thank you.</html>]]></talk_answer>
+      <talk_question mid="151"><![CDATA[<html>$Airship Engineer Hubert$<BR>Here! I finished making the compass!<BR>Made a stronger magnetic field to cancel out the surrounding magnetic field!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-a" image="QN_Npc_SoceressStella.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-b" mid="210" select_type="0"><![CDATA[<html>Yes. Thank you very much.</html>]]></talk_answer>
+      <talk_question mid="209"><![CDATA[<html>$Airship Engineer Hubert$<BR>Please tell <FONT color=#a82424>Master Sorceress Stella</FONT>not to create any bugs again.<BR>
+Here, take it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-b" image="QS_Default.dds" itemindex="300302" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-5" mid="154" select_type="0"><![CDATA[<html>(Take finished compass)</html>]]></talk_answer>
+      <talk_question mid="153"><![CDATA[<html>$Airship Engineer Hubert$<BR>If it's useful to defeat the monsters, I will be happy be help.<BR>
+I believe you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-5" image="QN_Npc_SoceressStella.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="155"><![CDATA[<html>$Airship Engineer Hubert$<BR>Show <FONT color=#a82424>Master Sorceress Stella</FONT> the finished product.<BR>And go defeat the monsters!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-5" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="157"><![CDATA[<html>$Kevin$<BR>Shuuuu~ <FONT color=#7e12d2>(Kevin pretends to fly in the sky.)</FONT><BR>
+The day that I will be able to fly in this blue sky will come someday. Hehe.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-5-a" mid="160" select_type="0"><![CDATA[<html>Many bugs in....</html>]]></talk_answer>
+      <talk_answer link_index="n045_soceress_master_stella-5-a" mid="161" select_type="0"><![CDATA[<html>I think it's been re-made.</html>]]></talk_answer>
+      <talk_question mid="159"><![CDATA[<html>$Master Sorceress Stella$<BR>Hmm you came? So, what was everyone's reaction to my piece?<BR>Don't really need much fixing, right?<BR>
+Hoho. I knew it!! Ohohohohoho!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-5-b" mid="163" select_type="0"><![CDATA[<html>(Stella takes away Prophetic Compass)</html>]]></talk_answer>
+      <talk_question mid="162"><![CDATA[<html>$Master Sorceress Stella$<BR>What? A lot of fixing? No, no way!! It was just so perfect!!<BR>A dozen bugs were found?! No way, something is wrong!!<BR>
+That's delusion!! It was perfect!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-5-c" mid="165" select_type="0"><![CDATA[<html>Do you seriously think like that?</html>]]></talk_answer>
+      <talk_answer link_index="n045_soceress_master_stella-5-c" mid="166" select_type="0"><![CDATA[<html>(Totally different)</html>]]></talk_answer>
+      <talk_question mid="164"><![CDATA[<html>$Master Sorceress Stella$<BR>Hu... hum! What is this? It's not that~~different from what I made!<BR>Ohhohoho! Yes, this is almost the same as what I made! Isn't it?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-5-d" mid="212" select_type="0"><![CDATA[<html>Ah, yes.... (Let's just believe it.)</html>]]></talk_answer>
+      <talk_question mid="211"><![CDATA[<html>$Master Sorceress Stella$<BR>
+He said I must not create bugs!! I didn't' so you must believe me.<BR>
+Huh! I am intelligent, I will do well!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-5-d" image="QS_Default.dds" itemindex="300302" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-6" mid="168" select_type="0"><![CDATA[<html>Yes. You can.</html>]]></talk_answer>
+      <talk_question mid="167"><![CDATA[<html>$Master Sorceress Stella$<BR>Hummm, anyway!!<BR><FONT color=#7e12d2>(Stella changes the topic fast)</FONT><BR>The completed <FONT color=#a82424>prophetic compass</FONT>will help to enter the monster's nest, right?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-6" image="QW_SkirtOfBlackMountain.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-6-a" mid="170" select_type="0"><![CDATA[<html>I don't know.</html>]]></talk_answer>
+      <talk_question mid="169"><![CDATA[<html>$Master Sorceress Stella$<BR>So now you can go to <FONT color=#a82424>Foothills of Black Mountain</FONT> to meet <FONT color=#a82424>Weird Technician</FONT>.<BR>It may be difficult even for good adventurers. Is there anyone who is courageous?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="171"><![CDATA[<html>$Master Sorceress Stella$<BR>You do not believe <FONT color=#387206>{user_class}</FONT>is the right person?<BR>
+Hum... I think you will be all right, but also a little anxious~!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n112_wisp_kevin-6" image="QS_Default.dds" itemindex="300302" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n112_wisp_kevin-6-a" mid="174" select_type="0"><![CDATA[<html>I made it.</html>]]></talk_answer>
+      <talk_question mid="173"><![CDATA[<html>$Weird Technician$<BR>You came~<BR>
+So have you completed making a compass based on my drawing?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n112_wisp_kevin-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n112_wisp_kevin-6-b" mid="176" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="175"><![CDATA[<html>$Weird Technician$<BR>Yes, this is. This can possibly lead you to the <FONT color=#a82424>Apocalypse Nest </FONT>. Although the nest has a strong magnetic field, you can neutralize it with this compass!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n112_wisp_kevin-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n112_wisp_kevin-6-c" mid="178" select_type="0"><![CDATA[<html>(...?? Help?)</html>]]></talk_answer>
+      <talk_question mid="177"><![CDATA[<html>$Weird Technician$<BR>Ok!! We don't have much time. Before the monster transforms completely, you need to defeat it! Otherwise, I can't help you anymore if the monster is still alive and has transformed completely.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n112_wisp_kevin-6-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n112_wisp_kevin-6-!next" mid="180" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="179"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">6090,,,,,,,,,</exe>
+         <exe type="setquest">609</exe>
+         <exe type="custom">api_npc_NextTalk(userObjID, npcObjID, "n045_soceress_master_stella-1-a", npc_talk_target);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="addquestitem" num="1">300301</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="delquestitem" num="-1">300301</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="addquestitem" num="1">300302</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">6090,,,,,,,,,</exe>
+         <exe type="complete" true="">609</exe>
+         <exe type="delquestitem" num="-1">300302</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n045_soceress_master_stella" sub="c">0</exelink>
+   <exelink qstep="accepting" npc="n045_soceress_master_stella" sub="acceppted">1,2</exelink>
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="b" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="c" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="2">0,2,1</exelink>
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="b" />
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="c" />
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="d" />
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="e" />
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="3">0,1,2</exelink>
+   <exelink qstep="3" npc="n029_crew_kevin" sub="b" />
+   <exelink qstep="3" npc="n029_crew_kevin" sub="c" />
+   <exelink qstep="3" npc="n029_crew_kevin" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="b" />
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="5">0,2,1</exelink>
+   <exelink qstep="5" npc="n045_soceress_master_stella" sub="b" />
+   <exelink qstep="5" npc="n045_soceress_master_stella" sub="c" />
+   <exelink qstep="5" npc="n045_soceress_master_stella" sub="c" />
+   <exelink qstep="5" npc="n045_soceress_master_stella" sub="d" />
+   <exelink qstep="5" npc="n045_soceress_master_stella" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n112_wisp_kevin" sub="b" />
+   <exelink qstep="6" npc="n112_wisp_kevin" sub="c">0</exelink>
+   <exelink qstep="6" npc="n112_wisp_kevin" sub="!next">2,1</exelink>
+   <journal_data recompense="6090" quest_title="[네스트] 예언의 나침반" chapterid="" quest_level="40" quest_mark_type="10" use_item_list="300301,300302">
+      <journal index="1">
+         <contents_image>QN_Npc_SoceressStella.dds</contents_image>
+         <destination_pos>11,n45</destination_pos>
+         <destination_mode />
+         <statemark_npcid>45</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="182"><![CDATA[Depression of Master Sorceress Stella]]></title>
+         <contents mid="183"><![CDATA[<html>Let's talk with Master Sorceress Stella.<BR>
+<BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Master Sorceress Stella</FONT></html>]]></contents>
+         <destination mid="184"><![CDATA[Talk to Master Sorceress Stella]]></destination>
+         <todo_msg mid="185"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom:11@4,12@0,13@0,21@0,13014@0</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="186"><![CDATA[Advice from Airship Engineer Hubert]]></title>
+         <contents mid="187"><![CDATA[<html>Show Faulty Compass to Airship Engineer Hubert at Calderock Gate to ask for advice.<BR><BR><FONT color=#086171>Calderock Gate </FONT> <FONT color=#a82424>→ Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="188"><![CDATA[Talk to Airship Engineer Hubert]]></destination>
+         <todo_msg mid="189"><![CDATA[Show Faulty Compass to Airship Engineer Hubert]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_crew_kevin.dds</contents_image>
+         <destination_pos>8,n29</destination_pos>
+         <destination_mode>custom:11@4,12@0,13@0,21@0,13014@0</destination_mode>
+         <statemark_npcid>29</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="190"><![CDATA[Dream of Kevin]]></title>
+         <contents mid="191"><![CDATA[<html>While Hubert fixes the compass, let's talk to Kevin.<BR>
+<BR><FONT color=#086171>Calderock Gate</FONT> <FONT color=#a82424>→ Kevin</FONT></html>]]></contents>
+         <destination mid="192"><![CDATA[Talk to Kevin]]></destination>
+         <todo_msg mid="193"><![CDATA[Listen to Kevin's story]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom:11@4,12@0,13@0,21@0,13014@0</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="194"><![CDATA[Prophetic Compass]]></title>
+         <contents mid="195"><![CDATA[<html>Let's talk to Airship Engineer Hubert at Calderock Gate.<BR>
+<BR><FONT color=#086171>Calderock Gate</FONT> <FONT color=#a82424>→Airship Engineer Hubert </FONT></html>]]></contents>
+         <destination mid="196"><![CDATA[Talk to Airship Engineer Hubert]]></destination>
+         <todo_msg mid="197"><![CDATA[Get the finished compass from Airship Engineer Hubert]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_SoceressStella.dds</contents_image>
+         <destination_pos>11,n45</destination_pos>
+         <destination_mode>custom:8@4,1@4,5@4,2@0,3@0,6@0,7@0,4@0,9@0,10@0</destination_mode>
+         <statemark_npcid>45</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="198"><![CDATA[To Master Sorceress Stella]]></title>
+         <contents mid="199"><![CDATA[<html>Finished making the Prophetic Compass. Let's report this to Master Sorceress Stella.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Master Sorceress Stella</FONT></html>]]></contents>
+         <destination mid="200"><![CDATA[Talk to Master Sorceress Stella]]></destination>
+         <todo_msg mid="201"><![CDATA[Go to Master Sorceress Stella to show the completed Prophetic Compass]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QM_Wisp_Giant.dds</contents_image>
+         <destination_pos>13,n112</destination_pos>
+         <destination_mode />
+         <statemark_npcid>112</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="202"><![CDATA[Help from Weird Technician ]]></title>
+         <contents mid="203"><![CDATA[<html>Let's go to Foothills of Black Mountain to show Prophetic Compass to Weird Technician.<BR>
+<BR><FONT color=#086171>Foothills of Black Mountain</FONT> <FONT color=#a82424>→Weird Technician</FONT></html>]]></contents>
+         <destination mid="204"><![CDATA[Talk to Weird Technician at Foothills of Black Mountain ]]></destination>
+         <todo_msg mid="205"><![CDATA[Meet Weird Technician at Foothills of Black Mountain to show the Prophetic Compass ]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>38:-1</user_level>
+      <user_class />
+      <prev_quest>608</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

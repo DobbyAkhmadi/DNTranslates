@@ -1,0 +1,33 @@
+   <talk>
+      <npcename>n3049_hiver_grave</npcename>
+      <npcid>3049</npcid>
+      <startexe>2</startexe>
+      <comment>푸른 바람 영지의 이베르의 무덤</comment>
+      <npckname mid="1"><![CDATA[Hiver's Grave]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="35"><![CDATA[<html><FONT color=#7e12d2>(Try singing Hiver's song)</FONT></html>]]></talk_answer>
+         <talk_answer link_index="song" mid="42"><![CDATA[<html><FONT color=#7e12d2>(Try singing Hiver's song)</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Hiver's Grave$<BR>There's no beautifully engraved name, not a single flower,<BR>
+just a small tombstone standing alone against the sad, dry wind.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="song" image="" itemindex="">
+         <talk_answer link_index="001" mid="36"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="27"><![CDATA[<html>${user_nick}${sound:DRAGON NEST_BGM_Evt_Song of Hiver.ogg}<BR>I came with nothing and have nothing to eat or wear.<BR>
+Nothing to read, nothing to fear, nothing to leave behind.<BR>
+And after my death, not a soul will remember me.<BR>
+Not a soul will remember me.......</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="43" link_target="sq_3898_rip.xml"><![CDATA[<html>{quest_level} <FONT color=#086171> Asleep in the Plains </FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="44"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="39"><![CDATA[<html>$Hiver's Grave$<BR>The departed do not speak.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mqc05_9931_v_land_of_memories</exe>
+         <exe type="conexe" true="1" false="0">0</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9931</chk>
+      </conditions>
+   </talk>

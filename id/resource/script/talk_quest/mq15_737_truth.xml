@@ -1,0 +1,322 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq15_737_truth</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>6</qchapter>
+      <qid>737</qid>
+      <designer>곽노찬</designer>
+      <qlevel>43</qlevel>
+      <qdesc>해당 퀘스트는 퀘스트 완료시 레벨과 전직퀘 클리어 여부를 조회해서 다음 퀘스트를 지급함.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>738</nextqid>
+      <nextqname>mq15_738_tears</nextqname>
+      <nextqnpc />
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Truth]]></qkname>
+      <qnpc>
+         <npcid>394</npcid>
+         <npcename>n394_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>701</npcid>
+         <npcename>n701_oldkarakule</npcename>
+         <npckname>카라큘 페어리스타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>709</npcid>
+         <npcename>n709_trader_lucita</npcename>
+         <npckname>상인 루시타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>794</npcid>
+         <npcename>n794_angelica</npcename>
+         <npckname>소서리스 안젤리카</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-noquest" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Karacule Fairystar$<BR>Dan, <FONT color=#387206>{user_nick}</FONT>. <FONT color=#a82424>Angelica</FONT> bilang bahwa dia ingin bertemu denganmu.<BR>
+<BR>※ <FONT color=#7e12d3>Kamu dapat melanjutkan setelah mendapatkan Quest dari Tinkerer Station.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n394_academic_station-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n394_academic_station-accepting-acceptted" mid="96" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Tinkerer Station$<BR>▶ <FONT color=#086171>Network connection error.</FONT><BR>▷ <FONT color=#7e12d2>Mission Objective is being reset.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n394_academic_station-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n394_academic_station-1-" mid="98" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Tinkerer Station$<BR>▶ <FONT color=#086171>Mission Objective.</FONT><BR>▷ <FONT color=#7e12d2>Bicara dengan Karacule di Fairystar.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-1" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-1-a" mid="99" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Karacule$<BR><FONT color=#387206>{user_nick}, </FONT> <FONT color=#a82424>Angelica</FONT> sedang mencarimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-1-a" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-1-b" mid="101" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Angelica...? (Aku tidak mau melihat wajahnya...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-1-b" image="QW_55.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-1-" mid="102" select_type="5" />
+      <talk_question mid="10"><![CDATA[<html>$Karacule$<BR>Dia ada di <FONT color=#a82424>East Ancient Armory</FONT>.<BR>Andai Angelica serajin dirimu, dia pasti akan menjadi penerusku dengan bakatnya itu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-1" image="QN_Npc_OldKarakule.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-1-" mid="103" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Sorceress Angelica$<BR>Ngapain kesini lagi?<BR>Padahal barusan kamu pergi dengan cuek!<BR><BR>※ <FONT color=#7e12d2>Bicara pada Karacule.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-2" image="QW_55.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-2-" mid="105" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>$Karacule$<BR>Angelica ingin bertemu denganmu.<BR>Dia ada di <FONT color=#a82424>East Ancient Armory</FONT>. Aku harap dia tidak membuat masalah lagi...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-a" mid="107" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Lambat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-b" mid="109" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku datang setelah mendengar kabar dari Karacule.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-c" mid="110" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Sorceress Angelica$<BR>Aku bosan! Si bodoh <FONT color=#a82424>Ethan</FONT> pergi begitu saja dan aku tidak ada teman untuk mengobrol.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-d" mid="112" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Jadi kamu Cuma sedang bosan?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-e" mid="113" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Sorceress Angelica$<BR>Itu salah satunya. Karacule juga terus menggangguku!<BR>Dia ingin aku berlatih bersama Sidel. Ngapain aku belajar bersama anak kecil? Huh?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-f" mid="22" select_type="0"><![CDATA[<html>Yah...</html>]]></talk_answer>
+      <talk_answer link_index="n794_angelica-2-f" mid="114" select_type="0"><![CDATA[<html>(......)</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Sorceress Angelica$<BR>
+Apa, apa aku salah? Apa aku mengucapkan hal yang salah?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-g" mid="116" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Sorceress Angelica$<BR>Hei...Aku memanggilmu agar bisa sedikit tenang tapi kamu malah membuatku emosi!<BR><FONT color=#7e12d3>(Angelica merebut communicator lama mu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-h" mid="118" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa yang kamu lakukan?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-i" mid="26" select_type="0"><![CDATA[<html>(Merebut Communicator dari Angelica)</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Sorceress Angelica$<BR>
+Aku tidak akan mengembalikan benda ini padamu sebelum kamu mengerti.<BR>
+Ngomong-ngomong, benda ini... mirip dengan yang sebelumnya kulihat?<BR>
+<FONT color=#7e12d3>(Angelica menekan tombol-tombolnya secara sembarangan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-j" mid="119" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Sorceress Angelica$<BR>Hei, sepertinya rusak deh. Apa aku yang membuatnya rusak?<BR>Tapi aku kan nggak ngapa-ngapain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-k" mid="121" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu yang melakukannya!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-l" mid="122" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$XD-24's Record$<BR><FONT color=#7e12d2>(Tulisan muncul di layar Communicator)</FONT><BR><FONT color=#086171>Apa yang kamu tahu itu palsu. Datang dan temukan aku jika ingin tahu kebenarannya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-m" mid="123" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Sorceress Angelica$<BR>Benda ini masih berfungsi kok.<BR>Ngomong-ngomong, <FONT color=#387206>{user_nick}</FONT>, Apa kau tahu apa sebenarnya ini?<BR>Aku memungutnya di Ancient Library tapi aku tidak tahu ini apa.<BR><FONT color=#7e12d2>(Angelica mengeluarkan sesuatu dari kantongnya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-n" mid="125" select_type="2" />
+      <talk_question mid="124"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ini...? Sebuah memory token...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-n" image="QN_Npc_Lucita.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-o" mid="126" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Sorceress Angelica$<BR>Hmm? Apakah harganya mahal?<BR>Aku sendiri tidak tahu ini benda apa, jadi aku menjual beberapa ke <FONT color=#a82424>Lucita</FONT> dengan harga murah. Memangnya harganya bisa berapa!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-o" image="QN_Npc_Lucita.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-p" mid="128" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Cuma rongsokan. Berikan saja padaku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-q" mid="129" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Sorceress Angelica$<BR>Apa...? Tidak, ini pasti harganya mahal...<BR>
+<FONT color=#7e12d2>(Mengeluarkan token dari tangannya)</FONT><BR></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-r" mid="130" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Kembalikan!<BR><FONT color=#7e12d2>(Menghubungkan token ke communicator dan mengaktifkan sesuatu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-r" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n794_angelica-2-s" mid="131" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$XD-04's Record$<BR><FONT color=#086171>Melakukan pendaratan darurat karena masalah teknis. Untungnya aku berada tidak jauh dari waktu yang dituju.</FONT><BR><FONT color=#086171>Prophet akan terlahir. Aku akan menemukan jalan pulang setelah berhasil menemukannya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-s" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n794_angelica-2-t" mid="132" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$XD-04's Record$<BR><FONT color=#086171>Aku gagal mendapatkan sang Prophet.</FONT><BR><FONT color=#086171>Aku tidak boleh menyerah. Aku akan pergi ke Calderock Village.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-t" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n794_angelica-2-clear_check" mid="133" select_type="4" />
+      <talk_question mid="79"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-u" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="134" select_type="5" />
+      <talk_question mid="66"><![CDATA[<html>${user_nick}$<BR><FONT color=#387206>(Ini pasti adalah rekaman dari Investigator yang dikirim kemari. Jadi tugasnya bukanlah memeriksa Apocalypse, tapi menemukan Rose... Kenapa Jasmine berbohong? Ada berapa banyak jumlah mereka? Aku harus pergi menemui Lucita dan memeriksa memory token yang lainnya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-v" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="135" select_type="5" />
+      <talk_question mid="81"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Berikan kembali padaku!!<BR><BR>※ <FONT color=#7e12d2>Kamu harus menyelesaikan semua 2nd specialization quest untuk melanjutkan Main Quest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-w" image="QN_Npc_Sidel.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="136" select_type="5" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Ini adalah rekaman yang ditinggalkan oleh investigator pada masa lalu. Berhubung kamu tidak memiliki urusan dengannya lagi, rasanya tidak perlu memeriksa memory token miliknya juga.)</FONT><BR><BR>※ <FONT color=#7e12d2>Kamu sudah menyelesaikan 2nd specialization quest. Kembali ke Sidel dan lanjutkan main quest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-x" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="137" select_type="5" />
+      <talk_question mid="83"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Kembalikan padaku!!<BR><BR>※ <FONT color=#7e12d2>Kamu harus menyelesaikan 1st specialization quest untuk meneruskan ke 2nd specialization quest dan main quest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-y" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="138" select_type="5" />
+      <talk_question mid="84"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Kembalikan padaku!!<BR><BR>※ <FONT color=#7e12d2>Kamu bisa mengambil 2nd specialization quest saat mencapai Lv44. Kamu harus menyelesaikan specialization quest agar bisa melanjutkan.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-z" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="139" select_type="5" />
+      <talk_question mid="93"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Kembalikan padaku!!<BR><BR>※ <FONT color=#7e12d2>Kamu memiliki terlalu banyak Quest didalam daftarmu dan tidak bisa mengambil 2nd specialization quest. Selesaikan Questnya dan kemudian dapatkan 2nd specialization quest dari Tinkerer Station di Lotus Marsh.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">737</exe>
+         <exe type="talk" npc="n394_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 747) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 750) == 1</chk>
+         <chk type="lvl" op="]=">44</chk>
+         <chk type="custom">api_quest_IsPlayingQuestMaximum(userObjID) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 378) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="recompense">7370,,,,,,,,</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="conexe" true="9,13,14" false="10">1</exe>
+         <exe type="conexe" true="15" false="12">2</exe>
+         <exe type="setquest">738</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 747, 1);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 747, 1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 747, 1);</exe>
+         <exe type="complete" true="">737</exe>
+         <exe type="talk" npc="n794_angelica">w</exe>
+         <exe type="talk" npc="n794_angelica">v</exe>
+         <exe type="talk" npc="n794_angelica">u</exe>
+         <exe type="talk" npc="n794_angelica">y</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 738, 2);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 738, 2);</exe>
+         <exe type="conexe" true="16" false="17">4</exe>
+         <exe type="conexe" true="18" false="5,6,7,11">3</exe>
+         <exe type="talk" npc="n794_angelica">x</exe>
+         <exe type="talk" npc="n794_angelica">z</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n394_academic_station" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n701_oldkarakule" sub="b">0,1</exelink>
+   <exelink qstep="1" npc="n701_oldkarakule" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="b" />
+   <exelink qstep="2" npc="n794_angelica" sub="c" />
+   <exelink qstep="2" npc="n794_angelica" sub="d" />
+   <exelink qstep="2" npc="n794_angelica" sub="e" />
+   <exelink qstep="2" npc="n794_angelica" sub="f" />
+   <exelink qstep="2" npc="n794_angelica" sub="f" />
+   <exelink qstep="2" npc="n794_angelica" sub="g" />
+   <exelink qstep="2" npc="n794_angelica" sub="h" />
+   <exelink qstep="2" npc="n794_angelica" sub="i" />
+   <exelink qstep="2" npc="n794_angelica" sub="j" />
+   <exelink qstep="2" npc="n794_angelica" sub="k" />
+   <exelink qstep="2" npc="n794_angelica" sub="l" />
+   <exelink qstep="2" npc="n794_angelica" sub="m" />
+   <exelink qstep="2" npc="n794_angelica" sub="n" />
+   <exelink qstep="2" npc="n794_angelica" sub="o" />
+   <exelink qstep="2" npc="n794_angelica" sub="p" />
+   <exelink qstep="2" npc="n794_angelica" sub="q" />
+   <exelink qstep="2" npc="n794_angelica" sub="r" />
+   <exelink qstep="2" npc="n794_angelica" sub="s" />
+   <exelink qstep="2" npc="n794_angelica" sub="t">0</exelink>
+   <exelink qstep="2" npc="n794_angelica" sub="clear_check">8,1</exelink>
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <journal_data recompense="7370" quest_title="진실에 다가섭니다" chapterid="6" quest_level="43" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_OldKarakule.dds</contents_image>
+         <destination_pos>14,n701</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>701</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="85"><![CDATA[TruthⅠ]]></title>
+         <contents mid="86"><![CDATA[<html>Bicara dengan Karacule.<BR>
+<FONT color=#086171></FONT> <BR>
+<FONT color=#086171>Riverwort Wharf (Karacule's Hut)</FONT> <FONT color=#a82425>→ Karacule Fairystar</FONT></html>]]></contents>
+         <destination mid="87"><![CDATA[Bicara dengan Karacule]]></destination>
+         <todo_msg mid="88"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_55.dds</contents_image>
+         <destination_pos>551,n794</destination_pos>
+         <destination_mode>custom:551@1</destination_mode>
+         <statemark_npcid>794</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="89"><![CDATA[TruthⅡ]]></title>
+         <contents mid="90"><![CDATA[<html>Angelica menunggu di East Ancient Armory.<BR>
+Ayo pergi ke East Ancient Armory untuk bertemu Angelica.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Ancient Warehouse Entrance)</FONT> <FONT color=#a82425>→ East Ancient Armory</FONT></html>]]></contents>
+         <destination mid="91"><![CDATA[Bicara dengan Angelica di East Ancient Armory]]></destination>
+         <todo_msg mid="92"><![CDATA[Temui Angelica di East Ancient Armory]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>736</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,342 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_193_fortune_telling</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>3</qchapter>
+      <qid>193</qid>
+      <designer>김인정</designer>
+      <qlevel>16</qlevel>
+      <qdesc xml:space="preserve">
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>194</nextqid>
+      <nextqname>mq08_194_remotely_error</nextqname>
+      <nextqnpc>n1101_lunaria</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Tomorrow Comes Today]]></qkname>
+      <qnpc>
+         <npcid>1101</npcid>
+         <npcename>n1101_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1123</npcid>
+         <npcename>n1123_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1124</npcid>
+         <npcename>n1124_ranger_fugus</npcename>
+         <npckname>정찰병 퍼거스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-acceptted" mid="149" select_type="3" />
+      <talk_question mid="131"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Oh it's you!<BR>
+Welcome.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-a" mid="896" select_type="2" />
+      <talk_question mid="887"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>How are things going?<BR><FONT color=#a82424>Sorceress Angelica</FONT> returned safely...<BR>But she seems to have been through much trouble.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-a" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-b" mid="898" select_type="2" />
+      <talk_question mid="897"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Luckily I didn't jump too far.</FONT><BR>
+<FONT color=#662500>Sorceress Angelica seems alright too.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-b" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-chk_job" mid="900" select_type="2" />
+      <talk_question mid="899"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>She was shouting that she will take revenge on the <FONT color=#a82424>Dark Elf in Red Clothes</FONT.<BR>Were you after that Dark Elf too?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-c" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-" mid="906" select_type="5" />
+      <talk_question mid="905"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>We're currently investigating on the Dark Elf's whereabouts. I will notify you if I get any news.<BR>I just sent a search team out to a few places.<BR><BR><FONT color=#7e12d2>(* You can continue to the next stage when you become Level 16.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-d" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-e" mid="909" select_type="2" />
+      <talk_question mid="908"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>I have done some investigations, and the vigilante guards have reported spotting a red Dark Elf near Prairie Town.<BR>It is highly likely to be Elena. Dark Elf in red clothes are not so common.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-f" mid="911" select_type="2" />
+      <talk_question mid="910"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Other adventurers just went there to take a look.<BR>Why don't you go there too?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-f" image="QW_20.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-" mid="913" select_type="5" />
+      <talk_question mid="912"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Go to the Wind Forest and scout the <FONT color=#a82424>Catacombs Hall</FONT>.<BR>I was about to send a few guild members but I guess the adventurers will do the job.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-" mid="987" select_type="5" />
+      <talk_question mid="985"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>We're still investigating about the Dark Elf so I'll let you know if there's any news.<BR>I was about to send my men to a few places.<BR><BR><FONT color=#7e12d2>※ You have to complete the Specialization released at Lv15 to proceed.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1101_lunaria-1-" mid="890" select_type="5" />
+      <talk_question mid="889"><![CDATA[<html>$Lunaria$<BR>
+What are you doing?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1123_lunaria-1" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1123_lunaria-1-a" mid="892" select_type="2" />
+      <talk_question mid="891"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Go back to Calderock Village and find out how much you have jumped across time.<BR>I should also find a way to control the man inside me.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1123_lunaria-1-a" image="QN_NPC_Shadow_Meow.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1123_lunaria-1-" mid="894" select_type="5" />
+      <talk_question mid="893"><![CDATA[<html> <BR><FONT color=#7e12d2>※ You can specialise your job at Lv15 with the Remote Quest (U).</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-1-" mid="902" select_type="5" />
+      <talk_question mid="901"><![CDATA[<html>$Scout Fergus$<BR>Hi there.<BR>
+I'm currently on a mission.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="QW_20.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-" mid="916" select_type="5" />
+      <talk_question mid="915"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>According to my sources, the Dark Elf is nastier than what you imagine.<BR>
+Be careful.<BR>You should go to <FONT color=#a82424>Catacombs Hall</FONT>~ Don't forget that too!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-2-a" mid="920" select_type="0"><![CDATA[<html>What? What do you mean by that?</html>]]></talk_answer>
+      <talk_answer link_index="n1124_ranger_fugus-2-a" mid="921" select_type="0"><![CDATA[<html>(What does he mean?)</html>]]></talk_answer>
+      <talk_question mid="917"><![CDATA[<html>$Scout Fergus$<BR>Oh, <FONT color=#387206>{user_nick}</FONT>!<BR>
+Long time no see.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-2-a" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-2-b" mid="923" select_type="2" />
+      <talk_question mid="922"><![CDATA[<html>$Scout Fergus$<BR>I almost died of heart attack when the <FONT color=#a82424>poison</FONT> was about to cover the Calderock Village. That really scared me out.<BR>If not for you and the other adventurers, the town would no longer be standing.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-2-b" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-2-c" mid="925" select_type="2" />
+      <talk_question mid="924"><![CDATA[<html>$Scout Fergus$<BR>I thought everyone left for <FONT color=#a82424>Saint Haven</FONT> after that. I'm suprised to see you again here.<BR>Do you have anything up in Calderock Village?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-2-d" mid="927" select_type="2" />
+      <talk_question mid="926"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Poison? At Calderock??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-2-d" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-2-e" mid="929" select_type="2" />
+      <talk_question mid="928"><![CDATA[<html>$Scout Fergus$<BR>Don't you remember? That Dark Elf named <FONT color=#a82424>Elena</FONT> tried to flood Calderock Village with poison out of spite.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-2-e" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-2-f" mid="931" select_type="2" />
+      <talk_question mid="930"><![CDATA[<html>$Scout Fergus$<BR>Everyone was so busy chasing after Elena and <FONT color=#a82424>purifying Calderock</FONT>... It was a time of chaos.<BR>Haha. But looking back, it's all but a faded memory now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-3" mid="933" select_type="2" />
+      <talk_question mid="932"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(…It seems like I jumped quite a bit of time while coming here.</FONT><BR>
+<FONT color=#662500>to the future...!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-3" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-3-a" mid="935" select_type="2" />
+      <talk_question mid="934"><![CDATA[<html>$Scout Fergus$<BR>I need to scout around this area so please excuse me now.<BR>Please visit me in town sometime. Hahaha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1124_ranger_fugus-3-a" image="QN_NPC_Lunaria.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n1124_ranger_fugus-3-" mid="937" select_type="5" />
+      <talk_question mid="936"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Go back to Cristal Stream and talk to Lunaria.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-a" mid="940" select_type="2" />
+      <talk_question mid="939"><![CDATA[<html>$Lunaria$<BR>Erm yeah.<BR>We jumped across time again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-b" mid="943" select_type="2" />
+      <talk_question mid="942"><![CDATA[<html>$Lunaria$<BR>We have travelled a little to the past this time.<BR>…I think.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-c" mid="945" select_type="2" />
+      <talk_question mid="944"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You have to do something about your time warp.<BR>You really can't do anything to control it?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-d" mid="947" select_type="2" />
+      <talk_question mid="946"><![CDATA[<html>$Lunaria$<BR>.......<BR>
+Maybe there is a higher chance when I try to do something then doing nothing...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-e" mid="949" select_type="2" />
+      <talk_question mid="948"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>So put it simply, you can't really stop the time warp but you can force it to happen?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-f" mid="951" select_type="2" />
+      <talk_question mid="950"><![CDATA[<html>$Lunaria$<BR>There is a chance.<BR>I think.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-f" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-g" mid="954" select_type="0"><![CDATA[<html>Why were you with Illusion?</html>]]></talk_answer>
+      <talk_answer link_index="n1101_lunaria-3-g" mid="955" select_type="0"><![CDATA[<html>Where was Illusion taking you?</html>]]></talk_answer>
+      <talk_question mid="953"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I have another question, Lunaria.<BR>The moment Illusion appeared before my eyes and crashed into me......</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-h" mid="957" select_type="2" />
+      <talk_question mid="956"><![CDATA[<html>$Lunaria$<BR>
+…I don't know.<BR>
+But... I'm certain he was attacked.<BR>
+He was being chased.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-h" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-i" mid="959" select_type="2" />
+      <talk_question mid="958"><![CDATA[<html>$Lunaria$<BR>
+<FONT color=#a82424>Illusion</FONT> took me by force, and we were chased by monsters. He was dying from the injuries.<BR>
+And I warped the time. I warped it several times… and I saw you<BR>
+And you collided with him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-j" mid="961" select_type="2" />
+      <talk_question mid="960"><![CDATA[<html>$Lunaria$<BR>Maybe the reason why I'm warping across time more often is because I used too much energy that time.<BR>It seems like the <FONT color=#a82424>balance</FONT> has been broken.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-k" mid="963" select_type="2" />
+      <talk_question mid="962"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Then how can you restore the balance again...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-l" mid="967" select_type="4" />
+      <talk_question mid="966"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3-!next" mid="984" select_type="2" />
+      <talk_question mid="983"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(Lunaria looks at you with her crystal clear eyes)</FONT><BR>You want to restore the balance?<BR>…I see. I understand you now.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">193</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>레벨 조건 체크하는 스크립트 건너뛰도록 수정</comment>
+      <conditions>
+         <chk type="lvl" op="[">16</chk>
+         <chk type="hascomq">244</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="5">0</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">c</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">d</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="2" false="6">1</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">g</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">1930,,,,,,,,,</exe>
+         <exe type="complete" true="">193</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="chk_job">5</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="e" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="f">3,4</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="1" npc="n1123_lunaria" sub="" />
+   <exelink qstep="2" npc="n1124_ranger_fugus" sub="b" />
+   <exelink qstep="2" npc="n1124_ranger_fugus" sub="c" />
+   <exelink qstep="2" npc="n1124_ranger_fugus" sub="d" />
+   <exelink qstep="2" npc="n1124_ranger_fugus" sub="e" />
+   <exelink qstep="2" npc="n1124_ranger_fugus" sub="f" />
+   <exelink qstep="2" npc="n1124_ranger_fugus" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n1124_ranger_fugus" sub="" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="b" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="c" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="d" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="e" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="f" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="g" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="g" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="h" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="i" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="j" />
+   <exelink qstep="3" npc="n1101_lunaria" sub="k">0</exelink>
+   <exelink qstep="3" npc="n1101_lunaria" sub="l">1</exelink>
+   <exelink qstep="3" npc="n1101_lunaria" sub="!next" />
+   <journal_data recompense="1930" quest_title="미리 목격한 내일" chapterid="3" quest_level="16" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="971"><![CDATA[Tomorrow Comes Today I]]></title>
+         <contents mid="972"><![CDATA[<html>First, go back to Calderock Village and meet Adventurer's Guild Master Deckard to learn what is going on.<BR><BR><FONT color=#7e12d2>※ You can continue to the next stage when you have completed Specialization.</FONT><BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="973"><![CDATA[Talk to Adventurer's Guild Master Deckard in Calderock Village]]></destination>
+         <todo_msg mid="974"><![CDATA[Talk to Adventurer's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_20.dds</contents_image>
+         <destination_pos>149,n1124</destination_pos>
+         <destination_mode>custom:147@3,148@3,149@1</destination_mode>
+         <statemark_npcid>1124</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="975"><![CDATA[Tomorrow Comes Today II]]></title>
+         <contents mid="976"><![CDATA[<html>According to what Deckard said, Elena could be at the Catacombs Hall. Go there and find her.<BR>
+ <BR>
+<FONT color=#086171>Gray Ruins (Catacombs Entrance)</FONT> <FONT color=#a82424>- Catacombs Hall</FONT></html>]]></contents>
+         <destination mid="977"><![CDATA[Search Catacombs Hall]]></destination>
+         <todo_msg mid="978"><![CDATA[Find Elena at the Catacombs Hall.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_NPC_Lunaria.dds</contents_image>
+         <destination_pos>8,n1101</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1101</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="979"><![CDATA[Tomorrow Comes Today III]]></title>
+         <contents mid="980"><![CDATA[<html>It seems like you jumped across time again on your way to the Catacombs Hall.<BR>This seems to be the past...<BR>
+Go back to Calderock Village and talk to Lunaria.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Lunaria</FONT></html>]]></contents>
+         <destination mid="981"><![CDATA[Talk to Lunaria at Cristal Stream]]></destination>
+         <todo_msg mid="982"><![CDATA[Go back to Cristal Stream and talk to Lunaria.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>192</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

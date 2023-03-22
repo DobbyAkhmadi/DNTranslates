@@ -1,0 +1,20 @@
+   <talk>
+      <npcename>n220_elite_soldier_wounded</npcename>
+      <npcid>220</npcid>
+      <startexe>0</startexe>
+      <npckname mid="1"><![CDATA[Wounded Elite Soldier]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="2"><![CDATA[<html>$Wounded Elite Soldier$<BR><FONT color=#7e12d2>[His wounds look severe and he is trembling badly.]</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="3">0</exe>
+         <exe type="enterquest">mq11_428_revive_serpentra</exe>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="4" false="2">1</exe>
+         <exe type="enterquest">mq11_395_realize_foreboding</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">428</chk>
+         <chk type="hasquest">395</chk>
+      </conditions>
+   </talk>

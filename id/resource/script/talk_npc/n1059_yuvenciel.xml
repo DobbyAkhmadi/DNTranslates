@@ -1,0 +1,41 @@
+   <talk>
+      <npcename>n1059_yuvenciel</npcename>
+      <npcid>1059</npcid>
+      <startexe>0</startexe>
+      <npckname mid="1"><![CDATA[Archer Yuvenciel]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="10"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Archer Yuvenciel$<BR><FONT color=#7e12d2>(Yuvenciel menatap dalam - dalam matamu)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="4"><![CDATA[<html>$Archer Yuvenciel$<BR><FONT color=#7e12d2>(Dia diam saja)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="11" link_target="mq34_9273_seeking_the_teresia.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Seeking Telesia</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="12"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Archer Yuvenciel$<BR>Ada yang mau kamu katakan padaku..?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="3" false="2">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+         <exe type="enterquest">mq34_9272_night_of_conclave</exe>
+         <exe type="conexe" true="6" false="7">2</exe>
+         <exe type="enterquest">mq34_9273_seeking_the_teresia</exe>
+         <exe type="conexe" true="8" false="9">3</exe>
+         <exe type="enterquest">mq34_9274_disappeared_candidate</exe>
+         <exe type="conexe" true="10" false="11">4</exe>
+         <exe type="enterquest">mq34_9275_clue_that_she_left</exe>
+         <exe type="conexe" true="12" false="1">5</exe>
+         <exe type="enterquest">mq34_9278_dangerous_advice</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">2</chk>
+         <chk type="hasquest">9272</chk>
+         <chk type="hasquest">9273</chk>
+         <chk type="hasquest">9274</chk>
+         <chk type="hasquest">9275</chk>
+         <chk type="hasquest">9278</chk>
+      </conditions>
+   </talk>

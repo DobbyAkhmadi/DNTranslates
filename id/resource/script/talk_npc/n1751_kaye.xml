@@ -1,0 +1,25 @@
+   <talk>
+      <npcename>n1751_kaye</npcename>
+      <npcid>1751</npcid>
+      <startexe>2</startexe>
+      <comment>케이는 서브퀘가 엮이지 않기 때문에 스크립트로 바로 진입!
+아무 퀘스트 없는 렌시아 : 8번 002</comment>
+      <npckname mid="1"><![CDATA[Kay]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Kay${sound:npc_Kaye_1687_sp_12.ogg}<BR>Jadi bye-bye...<FONT color=#7e12d2>(Si anak muda langsung bangun dan mencoba lari)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="4"><![CDATA[<html>$Kay${sound:npc_Kaye_1751_sp_01.ogg}<BR>Aku tahu kamu akan menolah permintaanku lagi.<FONT color=#7e12d2>(Kay masih terlihat kesal)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="3" false="0">0</exe>
+         <exe type="conexe" true="4" false="1">1</exe>
+         <exe type="enterquest">mqc05_9496_blame</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">8</chk>
+         <chk type="hasquest">9496</chk>
+      </conditions>
+   </talk>

@@ -1,0 +1,47 @@
+   <talk>
+      <npcename>n1897_shaolong</npcename>
+      <npcid>1897</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Xiaolong (Lotus Marsh)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="15"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill" mid="16"><![CDATA[<html>[Learn Skill]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Xiaolong${action:Talk}<BR>So this is your hometown, <FONT color=#086171>{user_nick}</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Xiaolong${action:Talk}<BR>Krrang. I'm sick of catnips now… What? It's silvervine this time?<BR><FONT color=#7e12d2>(Xiaolong's nose twitches again.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="17" link_target="mqc06_9615_home_lotusmarsh.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Home, Lotus Marsh</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="18" link_target="mqc06_9616_witch_karakule.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Witch Karacule</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="50" link_target="mqc06_9618_unexpected_visitor.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Unexpected Visitor</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="20" link_target="mqc06_9624_another_power.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Another Power</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="mqc06_9626_testament.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Last Words</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="32" link_target="mqc07_9632_unwelcome_guest.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Unwelcome Guest</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="22" link_target="mqc07_9635_interpretation.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Deciphered Notes</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="24" link_target="mqc06_9622_epidemic.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Epidemic</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="mqc06_9623_sorceress_of_the_question.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Mysterious Sorceress</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="26" link_target="mqc06_9625_complex_heart.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Complicated Feelings</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="28" link_target="mqc06_9627_incorrect_convince.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Wrong Persuasion</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="46" link_target="mqc08_9638_end_of_an_era.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The End of an Era</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="43" link_target="mqc08_9642_analysis_completed.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Deciphered Notes</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="44" link_target="mqc08_9643_to_lead_nots.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Attracting Notes</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="38" link_target="sqc06_4724_the_meaning_of_strength.xml"><![CDATA[<html>[Specialization] <FONT color=#086171>The Meaning of Strength</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="39" link_target="sqc06_4725_basis_of_martial_arts.xml"><![CDATA[<html>[Specialization] <FONT color=#086171>Basics of Kung Fu</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="40" link_target="sqc06_4726_figth_with_strength.xml"><![CDATA[<html>[Specialization] <FONT color=#086171>Fight Against Strength</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back" mid="23"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Xiaolong$<BR>So what can I do for you? Kaka. Trust your master.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">9</chk>
+      </conditions>
+      <exelink idx="skill">3</exelink>
+      <exelink idx="back">0</exelink>
+   </talk>

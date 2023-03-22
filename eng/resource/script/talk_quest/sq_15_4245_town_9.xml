@@ -1,0 +1,113 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_15_4245_town_9</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4245</qid>
+      <designer>곽노찬</designer>
+      <qlevel>60</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Tel Rosa City Challenge 9]]></qkname>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="17"><![CDATA[<html></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">4245</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">42450,,,,,,,,,</exe>
+         <exe type="complete" true="">4245</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">0</exelink>
+   <remotecomplete qstep="2">0,1</remotecomplete>
+   <journal_data recompense="42450" quest_title="텔 로사 시가지 Challenge 9" chapterid="" quest_level="60" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_73.dds</contents_image>
+         <destination_pos>731,0,0</destination_pos>
+         <destination_mode>custom:731@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="8"><![CDATA[Tel Rosa City Challenge 9]]></title>
+         <contents mid="9"><![CDATA[<html>Please defeat the <FONT color=#a82424>Boss Strider Coupe</FONT> within 30 seconds.<BR><BR>
+* <FONT color=#7e12d2>You can take this challenge only at Abyss difficulty level.</FONT><BR>
+<BR><FONT color=#086171>Riverwort Wharf (Tel Rosa Gates)</FONT> <FONT color=#a82424>- Tel Rosa City</FONT></html>]]></contents>
+         <destination mid="10"><![CDATA[[Abyss] Defeat the boss Strider Coupe in 30 seconds]]></destination>
+         <todo_msg mid="11"><![CDATA[Please defeat the boss Strider Coupe in 30 seconds.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos />
+         <destination_mode />
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="13"><![CDATA[Goal achieved!]]></title>
+         <contents mid="14"><![CDATA[<html>Quest goal has been achieved. Open the Remote Quest window to complete the quest and receive the rewards.<BR><BR><FONT color=#7e12d2>* Remote quests can be completed immediately once the quest goals have been achieved.</FONT></html>]]></contents>
+         <destination mid="15"><![CDATA[Remote Quest Completed]]></destination>
+         <todo_msg mid="16"><![CDATA[Open the Remote Quest window to complete the quest.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

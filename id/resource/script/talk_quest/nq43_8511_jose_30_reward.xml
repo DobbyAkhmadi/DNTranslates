@@ -1,0 +1,102 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq43_8511_jose_30_reward</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>8511</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Jose's PresentⅠ]]></qkname>
+      <qnpc>
+         <npcid>715</npcid>
+         <npcename>n715_adventurer_guildmaster_hose</npcename>
+         <npckname>모험자 길드장 호세</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-acceppted" mid="7" select_type="0"><![CDATA[<html>(Jose begitu gembira melihatmu)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>
+Kamu disini lagi! Kamu adventurer yang rajin.<BR>
+Wakaka!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-1-a" mid="16" select_type="0"><![CDATA[<html>[Menerima gift]</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Adventurer's Guild Master Jose${action:Talk}<BR>Aku akan memberikan kamu hadiah atas semua jerih payahmu di Adventurer Guild.<BR>Ini ambillah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-1-b" mid="18" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>Sampai ketemu lagi. Haha.<BR>Aku amat bahagia jika banyak adventurer seperti kamu disini.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">8511</exe>
+         <exe type="talk" npc="n715_adventurer_guildmaster_hose">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">85110,,,,,,,,,</exe>
+         <exe type="complete" true="">8511</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n715_adventurer_guildmaster_hose" sub="acceppted">0,1</exelink>
+   <exelink qstep="1" npc="n715_adventurer_guildmaster_hose" sub="a">0</exelink>
+   <exelink qstep="1" npc="n715_adventurer_guildmaster_hose" sub="b">1</exelink>
+   <journal_data recompense="0:85110" quest_title="호세의 선물Ⅰ" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_npc_Master_Jose.dds</contents_image>
+         <destination_pos>15,n709</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>709</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="20"><![CDATA[Jose's Present]]></title>
+         <contents mid="21"><![CDATA[<html>Bicara dengan Adventurer's Guild Master Jose.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Jose</FONT></html>]]></contents>
+         <destination mid="22"><![CDATA[Bicara dengan Adventurer's Guild Master Jose]]></destination>
+         <todo_msg mid="23"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>715:6000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

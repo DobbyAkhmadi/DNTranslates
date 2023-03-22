@@ -1,0 +1,34 @@
+   <talk>
+      <npcename>n2228_vacation_ilyn</npcename>
+      <npcid>2228</npcid>
+      <startexe>3</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Irine on Holiday]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="present_ui" mid="11"><![CDATA[<html>[Gift]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Irine on Holiday${action:Talk}<BR>Hello, <FONT color=#387206>{user_class} {user_nick}</FONT><FONT color=#382000></FONT>!<BR>I've been rewarded a holiday after working for 6 years in a row and I'm enjoying myself at the hot spring now. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="present_ui" image="" itemindex="">
+         <talk_answer link_index="gift" mid="12"><![CDATA[<html>(Give gift)</html>]]></talk_answer>
+         <talk_answer link_index="back_present_ui" mid="13"><![CDATA[<html>(Don't give gift)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Gift$</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="gift" image="" itemindex="">
+         <talk_answer link_index="back_gift" mid="18"><![CDATA[<html>(Go to beginning)</html>]]></talk_answer>
+         <talk_question mid="16"><![CDATA[<html>$Irine on Holiday$<BR>
+Oh, I didn't expect to get gifts while I'm on holiday too.<BR>
+Thank you so much. </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="custom">api_ui_OpenGiveNpcPresent( userObjID, 2228 );</exe>
+         <exe type="talk">present_ui</exe>
+         <exe type="custom">api_npc_SendSelectedPresent( userObjID, 2228 );</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">gift</exe>
+      </executions>
+      <conditions />
+      <exelink idx="present_ui">0,1</exelink>
+      <exelink idx="gift">2,4</exelink>
+      <exelink idx="back_present_ui">3</exelink>
+      <exelink idx="back_gift">3</exelink>
+   </talk>

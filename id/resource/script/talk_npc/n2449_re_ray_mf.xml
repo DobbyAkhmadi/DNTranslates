@@ -1,0 +1,28 @@
+   <talk>
+      <npcename>n2449_re_ray_mf</npcename>
+      <npcid>2449</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[MF-1]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="002" mid="4"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>${user_nick}$<BR>
+Are you okay?<BR>
+ <BR>
+<FONT color=#086171>(I wanted to help but... these nightmare beings are nothing like the goblins I saw just now.</FONT><BR>
+<FONT color=#086171>I have a foreboding feeling that they are something terrible!)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="talk_check" mid="6"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$MF-1$<BR>
+No problemo, woof!<BR>
+You should stay away, master.<BR>
+It would be trouble if you get any more nightmares in you!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 997, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="talk_check">1</exelink>
+   </talk>

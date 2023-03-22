@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n1104_elf_guard</npcename>
+      <npcid>1104</npcid>
+      <startexe>4</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Elf Guard]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Elf Guard${action:Talk}<BR>Selamat datang Adventurer. Ini adalah jalan menuju Anu Arendel.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="5"><![CDATA[<html>$Elf Guard${action:Talk}<BR>Kamu tidak dapat memasuki Anu Arendel saat ini.<BR>Aku akan menolong kamu berpindah ke lain tempat kalau kamu mau.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="7"><![CDATA[<html>$Elf Guard$<BR>Kamu mendengar rumor kalau Elf Guard pengecut?<BR>Semoga saja kamu tidak terbawa oleh kabar angin seperti itu.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_question mid="9"><![CDATA[<html>$Elf Guard$<BR>Bagaimana aku tetap fit?<BR>Aku sudah mencoba pergi ke gym tapi tidak bertahan lama.<BR>Rasanya tidak mungkin aku bisa mendapatkan otot seperti manusia.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="talk">003</exe>
+         <exe type="talk">004</exe>
+         <exe type="conexe" true="5" false="6">0</exe>
+         <exe type="conexe" true="0" false="1">0</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="custom">api_ui_OpenWarpListDlg(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="prob">500</chk>
+      </conditions>
+   </talk>

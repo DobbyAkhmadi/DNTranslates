@@ -1,0 +1,35 @@
+   <talk>
+      <npcename>n2552_andrea</npcename>
+      <npcid>2552</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Hairdresser Andrea]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="18"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Hairdresser Andrea${action:Talk}<BR>Oh, welcome!<BR>I’m the hairdresser of this salon.<BR>Oh, call me Andrea!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="29" link_target="sqc22_3672_resort1.xml"><![CDATA[<html>[Event] <FONT color=#086171>Suspicious Resort</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="30" link_target="sqc22_3673_resort2.xml"><![CDATA[<html>[Daily] <FONT color=#086171>Alone at the Ghost Valley Inn</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="31" link_target="sqc22_3674_distrust.xml"><![CDATA[<html>[Event] <FONT color=#086171>Deepening Distrust</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="32" link_target="sqc22_3675_finale.xml"><![CDATA[<html>[Event] <FONT color=#086171>Ghost Valley Finale</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="37"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Hairdresser Andrea$<BR>Oh, there’s more to haircutting than holding a clipper!<BR>Remember the angle at which the blade touches the scalp!<BR>
+Oh, this angle is crucial!!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="be_quiet" image="" itemindex="">
+         <talk_answer link_index="be_quiet_2" mid="19"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>${user_nick}${action:Talk}<BR><FONT color=#662500>(Is, is that person Andrea……?</FONT><BR><FONT color=#662500>But she went missing and is being wanted.</FONT><BR><FONT color=#662500>Why did she appear again?!)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="be_quiet_2" image="" itemindex="">
+         <talk_question mid="13"><![CDATA[<html>$Hairdresser Andrea$<BR>Shh, quiet……<BR><BR><FONT color=#7e12d2>(Andrea is grinning.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk">be_quiet</exe>
+         <exe type="talk">001</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">3675</chk>
+      </conditions>
+   </talk>

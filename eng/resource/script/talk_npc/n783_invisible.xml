@@ -1,0 +1,25 @@
+   <talk>
+      <npcename>n783_invisible</npcename>
+      <npcid>783</npcid>
+      <startexe>2</startexe>
+      <npckname mid="1"><![CDATA[rock of energy]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(There is nothing special)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="QS_Default.dds" itemindex="300018">
+         <talk_answer link_index="changemap" mid="8"><![CDATA[<html>(grab rock of energy)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$rock of energy$<BR>
+<FONT color=#7e12d2>(rock of energy is dropped)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13016,1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 378, 3);</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">378</chk>
+      </conditions>
+      <exelink idx="changemap">4,3</exelink>
+   </talk>

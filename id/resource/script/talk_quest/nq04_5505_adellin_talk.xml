@@ -1,0 +1,91 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq04_5505_adellin_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>5505</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Master Cleric Jermain]]></qkname>
+      <qnpc>
+         <npcid>33</npcid>
+         <npcename>n033_archer_master_adellin</npcename>
+         <npckname>상급 아처 아델린</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-accepting-a" mid="7" select_type="0"><![CDATA[<html>Setiap orang memiliki bebannya masing-masing.</html>]]></talk_answer>
+      <talk_answer link_index="n033_archer_master_adellin-accepting-b" mid="8" select_type="0"><![CDATA[<html>Bukankah akan lebih baik seiring dengan berjalannya waktu?</html>]]></talk_answer>
+      <talk_answer link_index="n033_archer_master_adellin-accepting-c" mid="9" select_type="0"><![CDATA[<html>Selama ada keyakinan, bayangan tersebut dapat diatasi.</html>]]></talk_answer>
+      <talk_answer link_index="n033_archer_master_adellin-accepting-d" mid="10" select_type="0"><![CDATA[<html>Bagaimana kalau kata-kata simpatik yang menghangatkan?</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Master Archer Adelynn$ <BR>Aku selalu sedih ketika memikirkan gurunya, Priest William. Kurasa dia belum dapat melupakan kematiannya. Aku sangat ingin membantunya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Master Archer Adelynn$<BR>Menurutmu demikian? Tapi sepertinya kamu mengabaikannya karena itu adalah masalah orang lain. Bagiku itu terasa dingin. Maafkan aku... aku tahu kamu mengatakan kata-kata tersebut dengan berbagai pertimbangan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Master Archer Adelynn$<BR>Seiring berjalannya waktu, apakah kenangan lama akan tertimbun dengan kenangan baru? Mungkin hal itu berlaku padaku juga. Ah, su-sudahlah. Anggap saja aku tidak mengatakan apapun.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Master Archer Adelynn$<BR>Betul, dia adalah seorang Priest. Dia memiliki keyakinan dan kewajiban pada sang Goddess. Karena dia adalah laki-laki yang bertanggungjawab, kurasa dia tidak akan menyerah begitu saja dengan mudah. Mungkin kekhawatiranku terlalu berlebihan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Master Archer Adelynn$<BR>Kata-kata simpati yang hangat... karena tidak ada lagi yang dapat kulakukan, aku akan tetap menunjukkan minat dan mencoba mengucapkan kata-kata hangat kapanpun dia membutuhkan simpati. terima kasih atas saranmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 5505, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 33, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 33, 80 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 33, 160 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 33, 320 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n033_archer_master_adellin" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n033_archer_master_adellin" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n033_archer_master_adellin" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n033_archer_master_adellin" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 상급 클레릭 저메인에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>33:5600:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

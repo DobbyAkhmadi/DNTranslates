@@ -1,0 +1,40 @@
+   <talk>
+      <npcename>n1504_hound_ghost</npcename>
+      <npcid>1504</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Ghost Hound]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="16"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Ghost Hound$<BR>Woof! How did you end up like this, my friend! See if you have eyes, listen if you have ears!<BR>Your joy was my joy, how could the shadows of sorrow befall the both of us!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="39" link_target="sqc14_4578_call_of_hound.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>The Sound of Hound</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="40" link_target="sqc14_4579_find_the_loffy1.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Find Loffy I</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="41" link_target="sqc14_4580_path_seeker.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>The Walker of the Path</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="42" link_target="sqc14_4581_find_the_loffy2.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Find Loffy II</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="43" link_target="sqc14_4582_meet_and_greets.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Meet Again</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="44" link_target="sqc14_4583_two_intersecting.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Failed Reunion</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="45" link_target="sqc14_4584_shock_therapy.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Shock Therapy</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="46" link_target="sqc14_4586_stoker_excuse.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Stalker's Excuses</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="47" link_target="sqc14_4591_song_of_the_underdog.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Song of the Underdogs</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back" mid="48"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Ghost Hound${action:Talk}<BR>Grrrr….Woof woof!!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="not4578" image="" itemindex="">
+         <talk_question mid="50"><![CDATA[<html>$?????$<BR>
+<FONT color=#7e12d2>(A dog's barking somewhere)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="3">0</exe>
+         <exe type="enterquest">sqc14_4578_call_of_hound</exe>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="4">1</exe>
+         <exe type="talk">not4578</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">4578</chk>
+         <chk type="hascomq">4578</chk>
+      </conditions>
+      <exelink idx="back">0</exelink>
+   </talk>

@@ -1,0 +1,28 @@
+   <talk>
+      <npcename>n2035_cityhall_grele</npcename>
+      <npcid>2035</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Grele_Mutant (Headquarters)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Grele$<BR>
+I will protect my sister….</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Grele$<BR>I will protect everyone….</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="enterquest">mqc18_9745_take_care_of_sister</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="enterquest">mqc28_9946_blue_viper</exe>
+         <exe type="conexe" true="6" false="5">2</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9745</chk>
+         <chk type="hasquest">9946</chk>
+         <chk type="hascomq">9945</chk>
+      </conditions>
+   </talk>

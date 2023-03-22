@@ -1,0 +1,66 @@
+   <talk>
+      <npcename>n2775_hongryun_shaman_b</npcename>
+      <npcid>2775</npcid>
+      <startexe>7</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Ocean Pearl]]></npckname>
+      <talk_paragraph index="001" image="QW_SaintHaven.dds" itemindex="">
+         <talk_answer link_index="party_check" mid="21"><![CDATA[<html>Okay. Then let's get going.</html>]]></talk_answer>
+         <talk_answer link_index="someday" mid="22"><![CDATA[<html>I'll be back later.</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Ocean Pearl${action:Talk}<BR>
+There you are, <FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723>.</FONT><BR>I feel the fragment's energy over there, strong as ever.<BR>
+ <BR>
+<FONT color=#7e12d2>※ You can go to Saint Haven through the dimensional byway.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="someday" image="" itemindex="">
+         <talk_question mid="8"><![CDATA[<html>$Ocean Pearl$<BR>
+Looks like you have something urgent to do.<BR>
+I'll be waiting.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="clear" image="QW_SaintHaven.dds" itemindex="">
+         <talk_question mid="13"><![CDATA[<html>$Ocean Pearl$<BR>This energy…<BR><BR><FONT color=#7e12d2>※ You can only move using the byway after completing the [New Passageway] quest.</FONT><BR><FONT color=#7e12d2>Meet Red Lotus Palace Zephyros the Guide after completing Chapter 16 of the Main Quest.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="party" image="QW_SaintHaven.dds" itemindex="">
+         <talk_question mid="14"><![CDATA[<html>$Ocean Pearl$<BR>
+Did you forget something?<BR><BR><FONT color=#7e12d2>※ You can travel using the byway while in a party.</FONT><BR><FONT color=#7e12d2>Disband the party, then try talking again.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="party_check2" mid="28"><![CDATA[<html>Use Alley.</html>]]></talk_answer>
+         <talk_answer link_index="not_going" mid="29"><![CDATA[<html>Step Back.</html>]]></talk_answer>
+         <talk_question mid="24"><![CDATA[<html>$Ocean Pearl$<BR>
+Twist of Dimension is getting worse.<BR>
+Be careful when using the alley.<BR>
+<BR><FONT color=#7e12d2>※ Through Alley of Dimension, you can go to Saint Heaven.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="clear2" image="" itemindex="">
+         <talk_question mid="27"><![CDATA[<html>$Ocean Pearl$<BR>This Energy…….<BR><BR><FONT color=#7e12d2>※ You can only use the alley after completing quest [Suspicious Invitation].</FONT><BR><FONT color=#7e12d2>Complete Chapter 2 in Main quest and check remote quest from Journal [J]</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="32" link_target="sqc3_3817_shaman_talk.xml"><![CDATA[<html>Eh…….</html>]]></talk_answer>
+         <talk_question mid="31"><![CDATA[<html>$Ocean Pearl$<BR>
+<FONT color=#7e12d2>(She is staring this way)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="talk">clear</exe>
+         <exe type="talk">clear2</exe>
+         <exe type="talk">party</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,11,4);</exe>
+         <exe type="talk">003</exe>
+         <exe type="conexe" true="9" false="8">0</exe>
+         <exe type="conexe" true="0" false="2">1</exe>
+         <exe type="conexe" true="1" false="10">2</exe>
+         <exe type="conexe" true="6" false="3">3</exe>
+         <exe type="conexe" true="5" false="4">4</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">10</chk>
+         <chk type="hascomq">3756</chk>
+         <chk type="hascomq">3817</chk>
+         <chk type="hascomq">3816</chk>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="party_check">11</exelink>
+      <exelink idx="party_check2">11</exelink>
+   </talk>

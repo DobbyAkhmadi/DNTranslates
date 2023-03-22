@@ -1,0 +1,113 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq39_5603_zenya_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>5603</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] Tentang Queen Narcilia]]></qkname>
+      <qnpc>
+         <npcid>712</npcid>
+         <npcename>n712_archer_zenya</npcename>
+         <npckname>상급 아처 제냐</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n712_archer_zenya-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n712_archer_zenya-accepting-a" mid="8" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Archer Zenya$<BR>Jika kamu melihatnya pada hari Black Dragon Raid, kamu tidak akan pernah melupakannya.<BR>
+ Queen Narcilia kami, yang dipanggil Nerwin pada waktu itu, merupakan pahlawan yang paling cantik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n712_archer_zenya-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n712_archer_zenya-accepting-b" mid="18" select_type="0"><![CDATA[<html>Apakah sesuatu terjadi padanya?</html>]]></talk_answer>
+      <talk_answer link_index="n712_archer_zenya-accepting-c" mid="19" select_type="0"><![CDATA[<html>Pasti dia berubah banyak sekarang.</html>]]></talk_answer>
+      <talk_answer link_index="n712_archer_zenya-accepting-d" mid="20" select_type="0"><![CDATA[<html>Apakah dia sudah tua sekarang?</html>]]></talk_answer>
+      <talk_answer link_index="n712_archer_zenya-accepting-e" mid="21" select_type="0"><![CDATA[<html>Banyak orang yang akan ingat keindahannya.</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Master Archer Zenya$<BR>Tapi... Aku rasa kita tidak akan bisa melihatnya lagi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n712_archer_zenya-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="28"><![CDATA[<html>$Master Archer Zenya$<BR>
+Dia menjadi orang yang tidak lagi bisa meninggalkan Anu Arendel.<BR>
+Erm, Aku rasa itu bukan sesuatu yang bisa dibicarakan disini.<BR>
+Bicarakan diam-diam nanti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n712_archer_zenya-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="29"><![CDATA[<html>$Master Archer Zenya$<BR>
+Sayangnya, iya.<BR>
+Tapi seperti apapun rupanya, kecantikan dan kekuatannya tidak berubah sedikit pun.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n712_archer_zenya-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="31"><![CDATA[<html>$Master Archer Zenya$<BR>
+Bukan masalah waktu.<BR>
+Aku juga ikut serta dalam penyerangan Black Dragon dengannya tapi aku masih sehat dan kuat seperti ini.<BR>
+Hew, karena kamu hanya bisa berpikir sampai tingkat tersebut, Aku kecewa denganmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n712_archer_zenya-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n712_archer_zenya-accepting-f" mid="33" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Master Archer Zenya$<BR>
+Akan bagus jika seperti itu.<BR>
+hanya mukanya yang berubah dan inner beauty dan kekuatannya tidak berubah sama sekali.<BR>
+Tapi manusia cenderung terobsesi dengan wajah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n712_archer_zenya-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="34"><![CDATA[<html>$Master Archer Zenya$<BR>
+Setidaknya... di ingatan mereka, Aku berharap dia dikenang pada usia tuanya.<BR>
+ </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,5603, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 712, 500 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 712, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 712, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 712, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n712_archer_zenya" sub="b">0,2</exelink>
+   <exelink qstep="accepting" npc="n712_archer_zenya" sub="c">0,3</exelink>
+   <exelink qstep="accepting" npc="n712_archer_zenya" sub="d">0,4</exelink>
+   <exelink qstep="accepting" npc="n712_archer_zenya" sub="e">0,1</exelink>
+   <journal_data recompense="" quest_title="[대화] 여왕 나르실리아에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>712:3000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

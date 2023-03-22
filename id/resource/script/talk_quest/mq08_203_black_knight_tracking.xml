@@ -1,0 +1,457 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_203_black_knight_tracking</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>2</qchapter>
+      <qid>203</qid>
+      <designer>김주연</designer>
+      <qlevel>12</qlevel>
+      <qdesc>[퀘스트 플로우]
+1. 퍼거스와의 대화, 데커드에게 상황을 보고해달라고 함.
+2. 데커드와 대화, 검은 기사에 대한 추가정보 획득, 검은 기사가 숲의 성역으로 향했다는 정보를 입수.
+3. 숲의 성역에는 널부러진 모험자들만 있음. 보스를 물리치면 벨스커드가 로제를 이용해서 힘을 획득하고 사라짐.
+
+수행 레벨은 12, 퀘스트 표시가 끊기지 않게 하기 위해 11로 적음</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>204</nextqid>
+      <nextqname>mq08_204_swordwoman_with_siverblond</nextqname>
+      <nextqnpc>n027_argenta</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[The Black Knight]]></qkname>
+      <qnpc>
+         <npcid>108</npcid>
+         <npcename>n010_velskud</npcename>
+         <npckname>검은 기사 (벨스커드)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>23</npcid>
+         <npcename>n023_ranger_fugus</npcename>
+         <npckname>정찰병 퍼거스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>27</npcid>
+         <npcename>n027_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>31</npcid>
+         <npcename>n031_adventurer_wilber</npcename>
+         <npckname>숲의 성역에 쓰러진 모험자 길드원. 윌버</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>53</npcid>
+         <npcename>n053_adventurer_wounded</npcename>
+         <npckname>부상당한 모험자</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>6</npcid>
+         <npcename>n006_rose</npcename>
+         <npckname>로제</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n010_velskud-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_question mid="95"><![CDATA[<html>$Black Knight$<BR>Jangan menghalangi jalanku!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n006_rose-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Rose.dds" center_image="">
+      <talk_question mid="97"><![CDATA[<html>$Rose$<BR>(Dia tampak tidak menyadari keadaan sekitarnya.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_question mid="98"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Ugh...siapa...kamu?<BR>(Lukanya nampak buruk.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n053_adventurer_wounded-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_question mid="99"><![CDATA[<html>$Injured Adventurer$<BR>(Dia tidak sadarkan diri.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_question mid="100"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Temui Scout Fergus di Crystal Stream.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-accepting-a" mid="103" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>$Scout Fergus$<BR>Maksudmu Black Knight muncul di Sigh Canyon dan menculik gadis itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-accepting-acceptted" mid="105" select_type="3" />
+      <talk_question mid="104"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yeah....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-a" mid="106" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Scout Fergus$<BR>Black Knight pasti juga mengincar <FONT color=#a82424>kekuatan Ancient</FONT>...<BR>Kita harus menghentikannya. Aku akan memberitahu Adventurer Guild bahwa kita harus melacak <FONT color=#a82424>Black Knight</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-b" mid="108" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku akan membantu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1-b" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-" mid="109" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Scout Fergus$<BR>Terimakasih. Beritahu <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-" mid="110" select_type="5" />
+      <talk_question mid="93"><![CDATA[<html>$Scout Fergus$<BR>Terimakasih, tapi kurasa kamu belum siap untuk menghadapi para monster di area ini. Kamu harus berlatih lagi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QN_ranger_fugus.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-" mid="111" select_type="5" />
+      <talk_question mid="8"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Pergi dan temui <FONT color=#a82424>Scout Fergus</FONT> di Crystal Stream Entrance.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-1-" mid="112" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Umm...<BR>
+Si-siapa kamu?<BR><FONT color=#7e12d2>(Dia tidak terlihat sehat)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n053_adventurer_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n053_adventurer_wounded-1-" mid="113" select_type="5" />
+      <talk_question mid="10"><![CDATA[<html>$Injured Adventurer$<BR><FONT color=#7e12d2>(Hilang kesadaran)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n010_velskud-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n010_velskud-1-" mid="114" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>$Black Knight$<BR>Keluar dari hadapanku!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n006_rose-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Rose.dds" center_image="">
+      <talk_answer link_index="n006_rose-1-" mid="115" select_type="5" />
+      <talk_question mid="12"><![CDATA[<html>$Rose$<BR><FONT color=#7e12d2>(Dia tidak sadar dengan dunia sekitarnya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="153"><![CDATA[<html>$Argenta$<BR>Apaa?!<BR>
+<FONT color=#7e12d2>(Wanita berambut perak merasa terganggu denganmu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-2" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-2-" mid="116" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Scout Fergus$<BR>Beritahu <FONT color=#a82424>Adventurer Guild Master Deckard</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-a" mid="117" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Bagus kamu disini. <BR>Jadi <FONT color=#a82424>Black Knight</FONT> menculik gadis itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-n" mid="149" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>Hmm... Aku ingin menyelesaikan ini setenang mungkin dengan bantuan adventurer karena semua perhatian dari <FONT color=#a82424>Saint's Haven</FONT> dan <FONT color=#a82424>Mana Ridge</FONT> menuju ke kita... Aku rasa itu kesalahanku</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-c" mid="19" select_type="0"><![CDATA[<html>(Bertanya tentang Dragon Followers.)</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-e" mid="20" select_type="0"><![CDATA[<html>(Bertanya tentang Dragon Slaves.)</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-f" mid="21" select_type="0"><![CDATA[<html>(Bertanya lebih banyak tentang Black Knight.)</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Tidak banyak yang kita ketahui tentang Black Knight.<BR>Rumor mengatakan dia adalah seorang Dragon Follower, atau Dragon Slave. Apapun itu, dia adalah masalah besar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-c" image="QM_dragonSycophant.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-d" mid="118" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR><FONT color=#a82424>Dragon Follower</FONT>? Kelompok yang memuja dragon. Mereka yakin dengan menyerah pada dragon akan mendapatkan keselamatan sejati. Bagiku, itu semua hanyalah omong kosong. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-b" mid="25" select_type="0"><![CDATA[<html>(Bertanya hal lain.)</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Anehnya pengaruh mereka tersebar sangat jauh dan luas, lebih kuat dari keluarga kerajaan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-b" mid="27" select_type="0"><![CDATA[<html>(Bertanya hal lain.)</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Aku tidak tahu banyak tentang <FONT color=#a82424>Dragon Followers</FONT>. Nampaknya para naga yang jahat mencuci otak dan menyalah gunakan baik manusia maupun monster sesuka mereka. Aku dengar pendiri Dragon Followers adalah seekor Dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-f" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-g" mid="119" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Belakangan ini pertempuran antara tentara kita dengan para monster di Black Mountain semakin sering. Black Knight seting terlihat saat keadaan bertambah tegang, jadi dia dianggap sebagai orang yang berbahaya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-g" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-h" mid="120" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Untuk beberapa alasan, dia juga menghancurkan dua pesawat yang datang ke Calderock Village dari Saint's Haven. Tujuannya tidak diketahui... tapi aku yakin dia berbahaya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-b" mid="31" select_type="0"><![CDATA[<html>(Bertanya hal lain.)</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-i" mid="32" select_type="0"><![CDATA[<html>Dimana Black Knight sekarang?</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Dia menginginkan kekuatan Ancients... Hmm...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-i" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-j" mid="121" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>Mata-mata guildku melihatnya pergi ke <FONT color=#a82424>Forest Sanctuary</FONT>.<BR>Aku sudah mengirim beberapa orang untuk mencegatnya. Kita lihat saja...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-j" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-m" mid="122" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Hmm...baiklah. Saat ini, mungkin mereka sudah menangkapnya dan menyelematkan gadis itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-k" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-" mid="123" select_type="5" />
+      <talk_question mid="37"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Please. <BR>Kamu bisa mencapai <FONT color=#a82424>Forest Sanctuary</FONT> dengan menyebrangi jembatan di Crystal Stream dan masuki <FONT color=#a82424>Forgotten Temple Entrance</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-l" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-" mid="124" select_type="5" />
+      <talk_question mid="83"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Aku rasa kamu belum siap untuk <FONT color=#a82424>Forest Sanctuary</FONT>.<BR>Berlatihlah lagi, kemudian kembali padaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-k" mid="126" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>${user_nick}$<BR>...Aku harus melihat ke <FONT color=#a82424>Forest Sanctuary</FONT><FONT color=#662500>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-b" mid="151" select_type="2" />
+      <talk_question mid="150"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Siapa Black Knight?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-" mid="127" select_type="5" />
+      <talk_question mid="38"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Black Knight akan berjalan menuju hutan. <BR>Kamu bisa mencapai <FONT color=#a82424>Forest Sanctuary</FONT> dengan menyebrangi jembatan di Crystal Stream dan masuki <FONT color=#a82424>Forgotten Temple Entrance</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-a" mid="128" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Scout Fergus$<BR>Aku diberitahu bahwa Black Knight dalam perjalanan ke <FONT color=#a82424>Forest Sanctuary</FONT><BR>anggota Adventurer Guild menyergap di Forest Sanctuary, tapi aku khawatir. <BR><FONT color=#387206>{user_nick}</FONT, pergilah kesana dan lihat situasinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-a" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-" mid="129" select_type="5" />
+      <talk_question mid="41"><![CDATA[<html>$Scout Fergus$<BR>kamu tidak tahu cari pergi ke <FONT color=#a82424>Forest Sanctuary</FONT><FONT color=#2b2723>? Leawati jembatan di Crystal Stream dan pergi melalui </FONT><FONT color=#a82424>Forgotten Temple Entrance</FONT><FONT color=#2b2723> untuk kesana.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-4-a" mid="130" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Umm...<BR>
+Si-siapa kamu?<BR><FONT color=#7e12d2>(Dia tidak terlihat sehat)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-4-b" mid="132" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku dari Calderock Village. Apa yang terjadi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-4-b" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-4-c" mid="133" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Apa kamu dari Guild? Ah... Kami menyerang Black Knight tapi dia mengalahkan kami.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-4-d" mid="135" select_type="2" />
+      <talk_question mid="134"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dimana gadis itu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-4-d" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-4-e" mid="136" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Kamu membicarakan gadis berambut merah dengan Black Knight? <BR>Black Knight membawanya masuk kedalam kuil... Aku tidak tahu apa yang terjadi selanjutnya... Rrrgh (kesakitan)...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-4-f" mid="138" select_type="2" />
+      <talk_question mid="137"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>kamu baik-baik saja?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-4-" mid="139" select_type="5" />
+      <talk_question mid="48"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Aku tidak apa-apa... Bantulah anggota guild lain didalam....<BR><FONT color=#7e12d2>(Dia sulit bicara lagi karena kesakitan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n053_adventurer_wounded-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n053_adventurer_wounded-4-" mid="140" select_type="5" />
+      <talk_question mid="49"><![CDATA[<html>$Injured Adventurer$<BR>Aku tidak apa-apa jadi bantulah anggota guild lain didalam....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-5-" mid="141" select_type="5" />
+      <talk_question mid="50"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Aku tidak apa-apa jadi bantulah anggota guild lain didalam....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-6" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-6-a" mid="154" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Argenta$<BR>Kenapa kamu disini nak?<BR><FONT color=#7e12d2>(Wanita berambut perak kesal denganmu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-6-b" mid="156" select_type="2" />
+      <talk_question mid="155"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku mengikuti Black Knight.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-6-c" mid="159" select_type="4" />
+      <talk_question mid="157"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-6-!next" mid="160" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Argenta$<BR>Black Knight? Hah... Kamu masih terlalu lemah untuk mencemaskan <FONT color=#a82424>Black Knight</FONT>.<BR>Sepertinya kamu kehilangan rasa takutmu. Kembali sana!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">203</exe>
+         <exe type="talk" npc="n023_ranger_fugus">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="]=">12</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">j</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">l</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="msg" msg_type="" substring="" />
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="huntmon" num="30001" party="1" exe="" onexe="6,4">395</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="delcount">.</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="8">200395</exe>
+         <exe type="custom">api_quest_IncCounting(userObjID, 2, 395);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">203</exe>
+         <exe type="recompense">2031,2031,2032,2033,2034,2036,2036,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n023_ranger_fugus" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n023_ranger_fugus" sub="b">0,1</exelink>
+   <exelink qstep="1" npc="n023_ranger_fugus" sub="" />
+   <exelink qstep="1" npc="n023_ranger_fugus" sub="" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="n" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="e" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="f" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="g" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="h" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="i" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="j" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="m" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="k">0,1</exelink>
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="" />
+   <exelink qstep="4" npc="n031_adventurer_wilber" sub="b" />
+   <exelink qstep="4" npc="n031_adventurer_wilber" sub="c" />
+   <exelink qstep="4" npc="n031_adventurer_wilber" sub="d" />
+   <exelink qstep="4" npc="n031_adventurer_wilber" sub="e" />
+   <exelink qstep="4" npc="n031_adventurer_wilber" sub="f">3,7,1,2</exelink>
+   <exelink qstep="4" npc="n031_adventurer_wilber" sub="" />
+   <exelink qstep="6" npc="n027_argenta" sub="b">1</exelink>
+   <exelink qstep="6" npc="n027_argenta" sub="c">0</exelink>
+   <exelink qstep="6" npc="n027_argenta" sub="!next" />
+   <journal_data recompense="1:2031,2:2032,3:2033,4:2034,6:2036" quest_title="검은 기사 추적" chapterid="2" quest_level="12" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_ranger_fugus.dds</contents_image>
+         <destination_pos>8,n23</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>23</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="57"><![CDATA[Bicara dengan Scout Fergus.]]></title>
+         <contents mid="58"><![CDATA[<html>Beritakan <FONT color=#a82424>Scout Fergus</FONT> di Crystal Stream tentang kemunculan Black Knight. <BR><FONT color=#086171></FONT><BR><FONT color=#086171>Crystal Stream </FONT><FONT color=#a82424>→ Scout Fergus</FONT></html>]]></contents>
+         <destination mid="59"><![CDATA[Bicara dengan Scout Fergus.]]></destination>
+         <todo_msg mid="60"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,-2954,-1891</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="61"><![CDATA[Bicara dengan Adventurer's Guild Master Deckard]]></title>
+         <contents mid="62"><![CDATA[<html>Ceritakan <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT> di Calderock Village tentang kemunculan Black Knight. <BR><BR><FONT color=#086171>Calderock Village </FONT><FONT color=#a82424>→ Deckard</FONT></html>]]></contents>
+         <destination mid="63"><![CDATA[Bicara dengan Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="64"><![CDATA[Temui Adventurer's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_15.dds</contents_image>
+         <destination_pos>121,-1240.67,-1940.76</destination_pos>
+         <destination_mode>custom:121@1</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="65"><![CDATA[Masuki Forest Sanctuary]]></title>
+         <contents mid="66"><![CDATA[<html>Black Knight telah memindahkan gadis itu ke Forest Sanctuary.<BR>Pergi ke gerbang utara Calderock Village untuk mencapai <FONT color=#a82424>Gray Ruins</FONT>. Dari sana, lanjutkan ke <FONT color=#a82424>Forest Sanctuary</FONT>.<BR><BR><FONT color=#086171>Gray Ruins (Sanctuary Entrance) </FONT> <FONT color=#a82424>→ Forest Sanctuary</FONT></html>]]></contents>
+         <destination mid="67"><![CDATA[Masuki Forest Sanctuary]]></destination>
+         <todo_msg mid="68"><![CDATA[Ikuti Black Knight kedalam Forest Sanctuary.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Adventure_Wilber.dds</contents_image>
+         <destination_pos>121,27,3133</destination_pos>
+         <destination_mode>custom:121@1</destination_mode>
+         <statemark_npcid>31</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="69"><![CDATA[Bicara dengan Adventurer's Guild Member Wilber di Forest Sanctuary]]></title>
+         <contents mid="70"><![CDATA[<html>Bicara dengan <FONT color=#a82424>Adventurer's Guild Member Wilber</FONT>. Dia ditugaskan ke <FONT color=#a82424>Forest Sanctuary</FONT>, untuk menyergap Black Knight. Temui dia untuk mengetahui lokasi Black Knight. <BR><BR><FONT color=#086171>Gray Ruins</FONT><FONT color=#a82424> → Forest Sanctuary</FONT></html>]]></contents>
+         <destination mid="71"><![CDATA[Bicara dengan Adventurer's Guild Member Wilber di Forest Sanctuary]]></destination>
+         <todo_msg mid="72"><![CDATA[Bicara dengan Adventurer's Guild Member Wilber.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QM_GargoyleGray.dds</contents_image>
+         <destination_pos>124,-142.62,767.80</destination_pos>
+         <destination_mode>custom:121@1,122@1,123@1,124@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="73"><![CDATA[Kejar Black Knight kedalam Forest Sanctuary.]]></title>
+         <contents mid="74"><![CDATA[<html>Black Knight telah memindahkan gadis itu ke Forest Sanctuary. <BR>Pergi ke gerbang utara Calderock Village untuk mencapai <FONT color=#a82424>Forest Sanctuary</FONT>.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Forest Sanctuary</FONT></html>]]></contents>
+         <destination mid="75"><![CDATA[Kejar Black Knight kedalam Forest Sanctuary.]]></destination>
+         <todo_msg mid="76"><![CDATA[Lanjutkan pengejaran Black Knight ke dalam Forest Sanctuary.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>124,n27</destination_pos>
+         <destination_mode>custom:121@1,122@1,123@1,124@4</destination_mode>
+         <statemark_npcid>27</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="77"><![CDATA[Laporkan ke Adventurer's Guild Master Deckard]]></title>
+         <contents mid="78"><![CDATA[<html>Kamu bertemu lagi dengan Black Knight, setelah kamu di buat pingsan. Kamu dibawa kembali ke Calderock.<BR>Tanya <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT> apa yang terjadi. <BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424>→  Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="79"><![CDATA[Lapor ke Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="80"><![CDATA[Lapor ke Adventurer's Guild Master Deckard]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>202</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

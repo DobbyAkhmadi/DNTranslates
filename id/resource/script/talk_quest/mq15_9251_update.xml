@@ -1,0 +1,266 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq15_9251_update</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>11</qchapter>
+      <qid>9251</qid>
+      <designer>곽노찬</designer>
+      <qlevel>60</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9252</nextqid>
+      <nextqname>mq15_9252_find_out_zero</nextqname>
+      <nextqnpc>n393_academic_station</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Update akan dilakukan]]></qkname>
+      <qnpc>
+         <npcid>393</npcid>
+         <npcename>n393_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-accepting-a" mid="71" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Tinkerer Station$<BR>- <FONT color=#a82424>ERROR</FONT><BR>- <FONT color=#7e12d2>Fatal error.</FONT><BR>- <FONT color=#7e12d2>System tidak bekerja dengan baik.</FONT><BR>- <FONT color=#7e12d2>Hubungi customer service untuk informasi lebih lanjut.</FONT><FONT color=#7e12d2><FONT color=#7e12d2><BR></FONT></FONT><FONT color=#086171>- Berlin Corporation. Telp : 1800 -xxx-xxxx (Buka 24 Jam)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-accepting-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-accepting-acceptted" mid="73" select_type="3" />
+      <talk_question mid="72"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dih...? Kok gini?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-a" mid="11" select_type="0"><![CDATA[<html>(Pukul dengan Spaner)</html>]]></talk_answer>
+      <talk_answer link_index="n393_academic_station-1-b" mid="12" select_type="0"><![CDATA[<html>(masukkan mechaduck dan ledakkan)</html>]]></talk_answer>
+      <talk_answer link_index="n393_academic_station-1-c" mid="13" select_type="0"><![CDATA[<html>(bakar dengan alfredo beam)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Tinkerer Station$<BR><FONT color=#7e12d2>(Tinkerer Station tidak beroperasi.</FONT><BR>
+<FONT color=#7e12d2>Apa yang mau dilakukan?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-m" mid="75" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Tinkerer Station$<BR><FONT color=#7e12d2>(Ada percikan besar dari Tinkerer Station!</FONT><BR><FONT color=#7e12d2>Tapi kelihatannya tidak ada efek yang lain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-b" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-m" mid="76" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Tinkerer Station$<BR><FONT color=#7e12d2>(Ada asap yang keluar dari Tinkerer Station.</FONT><BR>
+<FONT color=#7e12d2>>Tapi kelihatannya tidak ada efek lain)</FONT></html>]]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-d" mid="19" select_type="0"><![CDATA[<html>(sambungkan alat komunikasi XD-28)</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Tinkerer Station$<BR>
+<FONT color=#7e12d2>(Tinkerer Station yang kena Alfredo beam keberatan!</FONT><BR>
+<FONT color=#7e12d2>system reboot)</FONT><BR>
+- <FONT color=#a82424>Tidak bisa menjalankan system.</FONT><BR>
+- <FONT color=#086171>Perlu update ke versi terbaru.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-e" mid="77" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Tinkerer Station$<BR>
+- <FONT color=#a82424>Update sEthang dalam proses.</FONT><BR>
+- <FONT color=#086171>Mohon jangan matikan saat update sEthang berjalan.</FONT><BR>
+- tiut...<BR>
+- tiut...<BR>
+- ...tiut</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-f" mid="78" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Tinkerer Station$<BR>
+- <FONT color=#a82424>Sistem sEthang di update.</FONT><BR>
+<FONT color=#7e12d2>(Sebuah folder tersembunyi muncul dari dalam communicator XD-28!)</FONT><BR>
+ <BR>
+- <FONT color=#086171>(Hidden Folder)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-g" mid="27" select_type="0"><![CDATA[<html>Althea Ecosystem report.txt</html>]]></talk_answer>
+      <talk_answer link_index="n393_academic_station-1-h" mid="28" select_type="0"><![CDATA[<html>SOS test tutorial.avi</html>]]></talk_answer>
+      <talk_answer link_index="n393_academic_station-1-i" mid="29" select_type="0"><![CDATA[<html>Berlin's dirty truth.mkv</html>]]></talk_answer>
+      <talk_answer link_index="n393_academic_station-1-j" mid="30" select_type="0"><![CDATA[<html>Project Valkyrie.ppt</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Gamauzi Folder$<BR>
+- <FONT color=#086171>Laporan ekosistem Althea.txt</FONT> (1,210,898KB)<BR>
+- <FONT color=#086171>SOS exam tutorial.avi</FONT> (420,7258KB)<BR>
+- <FONT color=#086171>Berlin's truth.mkv</FONT> (699,547KB)<BR>
+- <FONT color=#086171>project valkyrie.ppt</FONT> (5,823KB)<BR>
+<FONT color=#7e12d2>(lihat yang mana?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-n" mid="79" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Tinkerer Station$<BR>
+- <FONT color=#a82424>File ini tidak dapat dibuka.</FONT><BR>
+- <FONT color=#7e12d2>File telah rusak atau ekstensi file salah.</FONT><BR>
+- <FONT color=#7e12d2>Harap hubungi service center untuk informasi lebih lanjut.</FONT><FONT color=#7e12d2><FONT color=#7e12d2><BR></FONT></FONT><FONT color=#086171>- Berlin Corporation. Service Center : 1800-xxx-xxxx (Buka 24 Jam)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-n" mid="80" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Tinkerer Station$<BR>
+<FONT color=#7e12d2>(Kamu melihat White Walkers melawan para drones)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-n" mid="81" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Tinkerer Station$<BR><FONT color=#7e12d2>(Sebuah dokumentasi mengenai korupsi dan konspirasi dalam Berlin Corporation dimainkan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-j" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-k" mid="82" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Tinkerer Station$<BR>
+<FONT color=#7e12d2>(Rencana invasi Jasmine telah disimpulkan)</FONT><BR>
+Stage 1. <FONT color=#a82424>Project Desert Storm</FONT><BR>
+- <FONT color=#086171>Gunakan Eksperimen Professor K untuk membangunkan Desert Dragon.</FONT><BR>
+Stage 2. <FONT color=#a82424>Project Valkyrie</FONT><BR>
+- <FONT color=#086171>Gunakan dragon jewel buatan Professor K untuk menciptakan Valkyrie Army.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-k" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-l" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Valkyrie...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-l" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-2" mid="85" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Seekor naga buatan Professor K.</FONT><BR><FONT color=#7e12d2>Sepertinya aku pernah melihat hal seperti ini dalam diary nya.</FONT><BR><FONT color=#7e12d2>Tapi... Menggunakan jewel untuk membuat... APA?!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1" mid="87" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Coba yang lain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-n" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-f" mid="89" select_type="2" />
+      <talk_question mid="88"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Periksa yang lain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2" image="QW_73.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-2-" mid="91" select_type="5" />
+      <talk_question mid="52"><![CDATA[<html>$Tinkerer Station$<BR><FONT color=#7e12d2>(Aku harus mencari tau soal ini.</FONT><BR><FONT color=#7e12d2>Jasmine, Aku tidak akan membiarkan rencanamu berhasil!)</FONT><BR><BR>* <FONT color=#7e12d2>Pergi ke Tel Rosa City.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3" image="QN_Npc_Daisy.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-a" mid="92" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Gadis kecil yang diculik Jasmine adalah...<BR>...<BR>...<BR>Chickie... Ya, Daisy!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-!next" mid="93" select_type="4" />
+      <talk_question mid="55"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9251</exe>
+         <exe type="talk" npc="n393_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="custom">api_npc_Disappoint(userObjID, 393 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">92510,,,,,,,,,</exe>
+         <exe type="complete" true="">9251</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n393_academic_station" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n393_academic_station" sub="a">2</exelink>
+   <exelink qstep="1" npc="n393_academic_station" sub="b">2</exelink>
+   <exelink qstep="1" npc="n393_academic_station" sub="m" />
+   <exelink qstep="1" npc="n393_academic_station" sub="m" />
+   <exelink qstep="1" npc="n393_academic_station" sub="d" />
+   <exelink qstep="1" npc="n393_academic_station" sub="e" />
+   <exelink qstep="1" npc="n393_academic_station" sub="f" />
+   <exelink qstep="1" npc="n393_academic_station" sub="g" />
+   <exelink qstep="1" npc="n393_academic_station" sub="h" />
+   <exelink qstep="1" npc="n393_academic_station" sub="i" />
+   <exelink qstep="1" npc="n393_academic_station" sub="j" />
+   <exelink qstep="1" npc="n393_academic_station" sub="n" />
+   <exelink qstep="1" npc="n393_academic_station" sub="n" />
+   <exelink qstep="1" npc="n393_academic_station" sub="n" />
+   <exelink qstep="1" npc="n393_academic_station" sub="k" />
+   <exelink qstep="1" npc="n393_academic_station" sub="l" />
+   <exelink qstep="1" npc="n393_academic_station" sub="2">0,1</exelink>
+   <exelink qstep="1" npc="n393_academic_station" sub="1" />
+   <exelink qstep="1" npc="n393_academic_station" sub="f" />
+   <exelink qstep="3" npc="n393_academic_station" sub="a">0</exelink>
+   <exelink qstep="3" npc="n393_academic_station" sub="!next">1</exelink>
+   <journal_data recompense="92510" quest_title="업데이트를 실행합니다" chapterid="11" quest_level="60" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="58"><![CDATA[Update akan dilakukan1]]></title>
+         <contents mid="59"><![CDATA[<html>Tinkerer Station error.<BR>
+Periksa apa yang salah.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>- Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="60"><![CDATA[Koneksi ke Tinkerer Station]]></destination>
+         <todo_msg mid="61"><![CDATA[Quest telah ditambah.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_73.dds</contents_image>
+         <destination_pos>731,0,0</destination_pos>
+         <destination_mode>custom:731@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="62"><![CDATA[Update akan dilakukan2]]></title>
+         <contents mid="63"><![CDATA[<html>Jasmine melakukan rencana kedua. Pergi ke Tel Rosa City untuk menghentikan rencana dia.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf(Tel Rosa Gates)</FONT> <FONT color=#a82424>- Tel Rosa City</FONT></html>]]></contents>
+         <destination mid="64"><![CDATA[Jelajah Tel Rosa City]]></destination>
+         <todo_msg mid="65"><![CDATA[Pergi ke Tel Rosa City.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="66"><![CDATA[Update akan dilakukan3]]></title>
+         <contents mid="67"><![CDATA[<html>Tel Rosa City sudah kebakaran saat sampai.<BR>
+Jasmine menghilang membawa seorang gadis ke Arnute Canyon.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="68"><![CDATA[Koneksi ke Tinkerer Station]]></destination>
+         <todo_msg mid="69"><![CDATA[Kembali ke Saint's Haven untuk Koneksi ke Tinkerer Station.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>5</user_class>
+      <prev_quest>9245</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,53 @@
+   <talk>
+      <npcename>n358_farm</npcename>
+      <npcid>358</npcid>
+      <startexe>6</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Farm Manager Tory]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="farmarea" mid="169"><![CDATA[<html>[Masuk Farm]</html>]]></talk_answer>
+         <talk_answer link_index="buy" mid="15"><![CDATA[<html>[Beli/Perbaiki Items]</html>]]></talk_answer>
+         <talk_answer link_index="farm_warehouse" mid="178"><![CDATA[<html>[Farm Warehouse]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="101"><![CDATA[<html>[Bicara]</html>]]></talk_answer>
+         <talk_answer link_index="back_farm" mid="181"><![CDATA[<html>[Return Farm Shop]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Farm Manager Tory${action:Talk}<BR>Memproduksi dengan tenang juga merupakan pengalaman yang bagus selain pertempuran.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="33"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Farm Manager Tory${action:Talk}<BR>Kamu dapat melakukan hal seperti nabur benih di tanah kosong untuk manen dan mancing ikan yang besar hanya di Farm Land. Jika kamu sudah memiliki ikan atau hasil panen, kamu dapat membuat masakan yang lezat.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="buy" image="" itemindex="">
+         <talk_answer link_index="farmshop" mid="164"><![CDATA[<html>Equipment/Farming shop</html>]]></talk_answer>
+         <talk_answer link_index="cookshop" mid="165"><![CDATA[<html>Cooking Shop</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="166"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="145"><![CDATA[<html>$Farm Manager Tory$<BR>Hahaha! Pilih sesuka hatimu.<BR>Hari ini banyak barang bagus~</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="party" image="" itemindex="">
+         <talk_answer link_index="001" mid="171"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="170"><![CDATA[<html>$Farm Manager Tory$<BR>Jika kamu mau masuk ke Farm, kamu harus keluar dari Party.<BR><BR>※ <FONT color=#7e12d2>Tidak dapat masuk ke Farm jika kamu sedang Party.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="farm" image="" itemindex="">
+         <talk_question mid="174"><![CDATA[<html>$Farm Manager Tory$<BR>※ <FONT color=#7e12d2>[Lv24] Setelah kamu menyelesaikan Farm District Grand Open Quest, kamu dapat memasuki farm district melalui NPC.</FONT><BR>※ <FONT color=#7e12d2>[Lv24] Kamu dapat menerima Farm District Grand Open Quest dari NPC Event Planner Irine.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,45001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,45002,100);</exe>
+         <exe type="conexe" true="5" false="4">0</exe>
+         <exe type="talk">party</exe>
+         <exe type="custom">api_quest_OpenFarmAreaList (userObjID);</exe>
+         <exe type="conexe" true="0" false="7">1</exe>
+         <exe type="talk">farm</exe>
+         <exe type="custom">api_ui_OpenFarmWareHouse( userObjID );</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,45005,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 664) == 1</chk>
+      </conditions>
+      <exelink idx="farmarea">3</exelink>
+      <exelink idx="farm_warehouse">8</exelink>
+      <exelink idx="back_farm">9</exelink>
+      <exelink idx="farmshop">1</exelink>
+      <exelink idx="cookshop">2</exelink>
+   </talk>

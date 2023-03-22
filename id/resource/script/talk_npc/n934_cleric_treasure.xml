@@ -1,0 +1,46 @@
+   <talk>
+      <npcename>n934_cleric_treasure</npcename>
+      <npcid>934</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Temple Knight Tresor]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="shop" mid="7"><![CDATA[<html>[Buka Treasure Stage Special Shop]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Temple Knight Tresor$<BR>
+Saya diperintahkan untuk menyediakan berbagai macam item untuk <FONT color=#387206>{user_nick}</FONT> yang sedang melaksanakan misi yang sulit.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="5"><![CDATA[<html>$Temple Knight Tresor$<BR>
+Tempat ini dilarang masuk.<BR>Hanya untuk pihak yang bersangkutan.<BR>
+ <BR>
+<FONT color=#7e12d2>※Bisa menggunakan special shop jika mencapai level 60.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="9" false="4">1</exe>
+         <exe type="conexe" true="10" false="5">2</exe>
+         <exe type="conexe" true="11" false="6">3</exe>
+         <exe type="conexe" true="12" false="7">4</exe>
+         <exe type="conexe" true="13" false="8">5</exe>
+         <exe type="conexe" true="14" false="15">6</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,60001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,60002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,60003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,60004,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,60005,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,60006,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,60007,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="lvl" op=">=">60</chk>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+      </conditions>
+      <exelink idx="shop">3</exelink>
+   </talk>

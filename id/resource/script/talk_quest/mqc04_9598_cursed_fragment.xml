@@ -1,0 +1,380 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc04_9598_cursed_fragment</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>4</qchapter>
+      <qid>9598</qid>
+      <designer>이현진</designer>
+      <qlevel>30</qlevel>
+      <qdesc>1. 아르젠타와 대화
+2. 말라버린 마리사의 샘에서 룬의 파편 수집
+3. 아르젠타에게 보고
+4. 주교에게 돌아가 보고.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>407</nextqid>
+      <nextqname>mq11_407_the_zero_hour</nextqname>
+      <nextqnpc>n039_bishop_ignasio</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Cursed Fragments]]></qkname>
+      <qnpc>
+         <npcid>212</npcid>
+         <npcename>n212_argenta</npcename>
+         <npckname>아르젠타(검은 산자락)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>39</npcid>
+         <npcename>n039_bishop_ignasio</npcename>
+         <npckname>주교 이그나시오</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-noquest" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="68"><![CDATA[<html>$Bishop Ignasio$<BR>Bagaimana? Aku sedang mengusahakan kamu untuk bisa masuk istana.<BR><FONT color=#7e12d2>(Harus bertemu dengan Argenta di Foothill of Black Mountain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-accepting-a" mid="75" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Argenta$<BR>Black Dragon bangkita lagi dan telah membuat Nest.<BR><FONT color=#a82424>50 tahun lalu</FONT> membutuhkan <FONT color=#a82424>Ancient Priest</FONT> <FONT color=#a82424>Nest</FONT> untuk membuka Nest itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-accepting-b" mid="77" select_type="2" />
+      <talk_question mid="76"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Jadi kali ini juga…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-accepting-c" mid="78" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Argenta$<BR>그Kita harus membuat  <FONT color=#a82424>Ancient Priest Rune</FONT> kecuali Gerraint ada ide lain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-accepting-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-accepting-acceptted" mid="80" select_type="3" />
+      <talk_question mid="79"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku akan lakukan!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-a" mid="82" select_type="2" />
+      <talk_question mid="6"><![CDATA[<html>$Argenta$<BR><FONT color=#a82424>Ancient Priest Rune</FONT> bisa dibuat dengan Rune's Fragment. Selain itu perlu core yang akan dimasukkan.<BR>kamu tahu apa yang harus kamu lakukan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-b" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Sekarang… kumpulkan Rune's Fragment dulu?.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-b" image="QS_Default.dds" itemindex="300020" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-c" mid="85" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Argenta$<BR>kamu semanagat sekali. Satu langkah lagi untuk mendapatkan Prophet.<BR>Kalau begitu dapatkan <FONT color=#a82424>Rune</FONT> <FONT color=#a82424>Fragment</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-c" image="QS_Default.dds" itemindex="300020" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-d" mid="87" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>aku harus kemana?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-d" image="QW_35.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-e" mid="88" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Argenta$<BR>Kamu tidak tahu apa-apa ya.  Kamu tahu <FONT color=#a82424>Dried Marisa's Well</FONT>? Disana pasti ada Rune fragment.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-e" image="QW_35.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-f" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Baiklah, aku akan kembali secepatnya!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-f" image="QW_35.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-" mid="91" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Argenta$<BR>kamu pasti bisa menemukannya.<BR>Dapatkan sekitar <FONT color=#a82424>10 buah</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-" mid="92" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Bishop Ignasio$<BR>Bagaimana? Aku sedang mengusahakan kamu untuk bisa masuk istana.<BR><FONT color=#7e12d2>(Harus bertemu dengan Argenta di Foothill of Black Mountain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-2" image="QW_35.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-2-" mid="93" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Argenta$<BR>Cari di <FONT color=#a82424>Dried Marisa's Well</FONT> untuk mendapatkan Rune. Harus cari dengan teliti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-a" mid="17" select_type="0"><![CDATA[<html>(berikan Rune's Fragment)</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Argenta$<BR>Hmm, hebat. Ternyata kalau dikasih tahu bisa juga ya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-a" image="QS_Default.dds" itemindex="300020" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-b" mid="94" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Argenta$<BR>Manusia tidak pernah berubah. Ancient juga. Sama saja. <FONT color=#7e12d2>(Argenta memegang Rune)</FONT> Rune ini juga sebenarnya satu wujud… tapi dijadikan seperti ini oleh ulah manusia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-b" image="QS_Default.dds" itemindex="300020" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-c" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa yang terjadi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-d" mid="97" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Argenta$<BR>Mungkin para Ancient ada yang merencanakan sesuatu. <FONT color=#a82424>sesuatu yang tidak boleh dilakukan</FONT> <FONT color=#a82424>seperti penilitian</FONT>. Manusia selalu melakukan hal terlarang dan tidak bisa tanggung jawab jika ada masalah.<BR><FONT color=#7e12d2>(Argenta kelihatan marah)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-e" mid="98" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Argenta$<BR>Pokoknya kita akan membuat <FONT color=#a82424>Ancient Priest Rune</FONT> dari ini. Tidak terlalu sulit untuk menyatakukan ini kembali. Tapi kamu tidak bisa kan? makanya aku yang membantu. Berterimakasihlah pada aku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-f" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Iya, terimakasih.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-g" mid="101" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Argenta$<BR>Huh, bicara sih mudah. Tapi aku tidak bisa selesaikan cepat..<BR>Aku akan beri kamu tugas selama ini jadi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-h" mid="103" select_type="2" />
+      <talk_question mid="102"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku harus lapor ke Ignasio.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-h" image="QW_SaintHaven_Inside.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-i" mid="104" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Argenta$<BR>Lapor? Terserah kamu.<BR>Sepertinya kamu masih menaruh harapan kepada manusia. Kamu akan baru tahu rasa setelah ditipu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-i" image="QW_SaintHaven_Inside.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-j" mid="106" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tapi tidak bisa juga karena manusia tidak bisa ke palace.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-k" mid="107" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Argenta$<BR>Tidak bisa? Kamu didiskriminasi karena beda ras?<BR>Kamu bodoh juga masih mau disuruh-suruh oleh manusia yang sudah mendiskriminasikan kamu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-l" mid="109" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tidak begitu... Aku…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-m" mid="137" select_type="2" />
+      <talk_question mid="136"><![CDATA[<html>$Argenta$<BR>Aku tidak peduli kamu direndahkan oleh manusia. <BR>Tapi kalau aku jadi kamu, pasti aku sudah membelakangi mereka. Apalagi tidak akan ada lapor-lapor ke mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-n" mid="141" select_type="2" />
+      <talk_question mid="140"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Waktu itu diusir… kali ini lakukan hal yang sama?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-n" image="QW_SaintHaven_Inside.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-" mid="110" select_type="5" />
+      <talk_question mid="30"><![CDATA[<html>$Argenta$<BR>Terserah kamu. Membosankan bicara sama kamu. <BR>aku akan fokus pada kerjaan. Lakukanlah tugasmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-4" image="QW_SaintHaven_Inside.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-4-" mid="111" select_type="5" />
+      <talk_question mid="31"><![CDATA[<html>$Argenta$<BR>…Aku harus fokus kerjaan aku. Membosankan bicara dengan kamu.<BR>Lakukanlah tugasmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-a" mid="112" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Bishop Ignasio$<BR>Aku sudah tahu Nest terbentuk Nest. Aku sudah menyebarkan berita itu supaya kamu bisa masuk ke palacae.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-b" mid="135" select_type="2" />
+      <talk_question mid="134"><![CDATA[<html>$Bishop Ignasio$<BR>Nest tidak bisa kita lihat pakai mata kita. Tapi aku ada <FONT color=#a82424>Sage</FONT> <FONT color=#a82424>eyes</FONT>. <FONT color=#7e12d2>(Ignasio memperlihatkan Orb yang unik)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-c" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Sage Eyes?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-d" mid="115" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Bishop Ignasio$<BR>Barang berharga yang pernah digunakan 50 tahun lalu saat dragon raid. Orb ini memancarkan kekuatan besar dan memasang <FONT color=#a82424>pelindung</FONT>. Orb ini membuat bisa melihat pelindung nest.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-e" mid="117" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Barang yang ajaib.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-e" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-f" mid="118" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Bishop Ignasio$<BR>Siapa yang membuat <FONT color=#a82424>Nest</FONT>?<BR>Apakah <FONT color=#a82424>Black Knight</FONT> yang menculik prophet?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-f" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-g" mid="120" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500> Black Dragon bangkit lagi.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-h" mid="121" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Bishop Ignasio$<BR>Apa?! B… <FONT color=#a82424>Black Dragon</FONT> bangkit lagi?!<BR>Wah... Benarkah? Gawat… Semoga tuhan melindungi Saint's Haven...<BR>
+<FONT color=#7e12d2>(Bishop kelihatan berdoa)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-i" mid="122" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Bishop Ignasio$<BR>situasi semakin parah. Tapi untungnya Argenta membantu untuk membuat <FONT color=#a82424>Ancient Priest Rune</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-j" mid="124" select_type="2" />
+      <talk_question mid="123"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu tahu Ancient Priest Rune?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-j" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-k" mid="125" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Bishop Ignasio$<BR>Tentu saja. Barang yang digunakan untuk membuka<FONT color=#a82424>Black Dragon Nest 50 tahun lalu</FONT>.<BR>Semoga prophet juga aman.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-k" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-l" mid="127" select_type="2" />
+      <talk_question mid="126"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>harus diselamatkan secepat mungkin...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-m" mid="128" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Bishop Ignasio$<BR>Saint's Haven bisa diserang monster-monster akibat bangkitnya Black Dragon. kita harus selamatkan prophet sebelum itu.<BR><FONT color=#7e12d2>(Bishop kelihatan berpikir)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-n" mid="129" select_type="4" />
+      <talk_question mid="47"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-n" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-o" mid="130" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Bishop Ignasio$<BR>Harus membuat raja setuju untuk mempersiapkan pasukan tambahan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-o" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-!next" mid="132" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Pasukan dari istana jadi mau diberangkatkan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9598</exe>
+         <exe type="talk" npc="n212_argenta">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="]=">30</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="talk" npc="n212_argenta">a</exe>
+         <exe type="talk" npc="n212_argenta">b</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntitem" num="10" exe="6,7,8" onexe="">300020</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="delquestitem" num="-1">300020</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">95980,,,,,,,,,</exe>
+         <exe type="complete" true="">9598</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n212_argenta" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n212_argenta" sub="b" />
+   <exelink qstep="1" npc="n212_argenta" sub="c" />
+   <exelink qstep="1" npc="n212_argenta" sub="d" />
+   <exelink qstep="1" npc="n212_argenta" sub="e" />
+   <exelink qstep="1" npc="n212_argenta" sub="f">3,4,5</exelink>
+   <exelink qstep="1" npc="n212_argenta" sub="" />
+   <exelink qstep="3" npc="n212_argenta" sub="b" />
+   <exelink qstep="3" npc="n212_argenta" sub="c" />
+   <exelink qstep="3" npc="n212_argenta" sub="d" />
+   <exelink qstep="3" npc="n212_argenta" sub="e" />
+   <exelink qstep="3" npc="n212_argenta" sub="f" />
+   <exelink qstep="3" npc="n212_argenta" sub="g" />
+   <exelink qstep="3" npc="n212_argenta" sub="h" />
+   <exelink qstep="3" npc="n212_argenta" sub="i" />
+   <exelink qstep="3" npc="n212_argenta" sub="j" />
+   <exelink qstep="3" npc="n212_argenta" sub="k" />
+   <exelink qstep="3" npc="n212_argenta" sub="l" />
+   <exelink qstep="3" npc="n212_argenta" sub="m" />
+   <exelink qstep="3" npc="n212_argenta" sub="n">2,0,1</exelink>
+   <exelink qstep="3" npc="n212_argenta" sub="" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="b" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="c" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="d" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="e" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="f" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="g" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="h" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="i" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="j" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="k" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="l" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="m">0</exelink>
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="n">1</exelink>
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="o" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="!next" />
+   <journal_data recompense="95980" quest_title="저주받은 파편들" chapterid="4" quest_level="30" quest_mark_type="1" use_item_list="300020">
+      <journal index="1">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>13,n212</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>212</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="52"><![CDATA[Ancient Priest Rune]]></title>
+         <contents mid="53"><![CDATA[<html>Dibutuhkan Ancient Priest Rune untuk masuk ke Nest. Bicara dengan <FONT color=#a82424>Argenta</FONT> mengenai cara membuatnya.<BR><BR><FONT color=#086171>Foothill of Black Mountain</FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="54"><![CDATA[Bicara dengan Argenta di Foothill of Black Mountain]]></destination>
+         <todo_msg mid="55"><![CDATA[Quest telah ditambahkan]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_35.dds</contents_image>
+         <destination_pos>354,0,0</destination_pos>
+         <destination_mode>custom:351@4,352@4,353@4,354@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="56"><![CDATA[Rune's Fragment]]></title>
+         <contents mid="57"><![CDATA[<html>Keliling di Dried Marisa's Well untuk mencari <FONT color=#a82424>Rune's Fragment</FONT>.<BR><BR><FONT color=#086171>Foothill of Black Mountain(Lonely Forest Path)</FONT> <FONT color=#a82424>- Dried Marisa's Well</FONT></html>]]></contents>
+         <destination mid="58"><![CDATA[Rune's Fragment collect]]></destination>
+         <todo_msg mid="59"><![CDATA[Cari Rune's Fragment di Dried Marisa's Well.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>13,n212</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>212</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="60"><![CDATA[Selesai collect]]></title>
+         <contents mid="61"><![CDATA[<html><FONT color=#a82424>Rune's Fragment</FONT> collect selesai. Lapor ke Argenta.<BR><BR><FONT color=#086171>Foothill of Black Mountain</FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="62"><![CDATA[Bicara dengan Argenta di Foothill of Black Mountain]]></destination>
+         <todo_msg mid="63"><![CDATA[Selesai mengumpulkan item. Lapor ke Argenta di Foothill of Black Mountain.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Bishop.dds</contents_image>
+         <destination_pos>11,n39</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>39</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[lapor situasi]]></title>
+         <contents mid="65"><![CDATA[<html>Saat Argenta menyatukan Rune's Fragment, pergi ke Saint's Haven Palace untuk bicara dengan <FONT color=#a82424>Bishop Ignasio</FONT>.<BR><BR><FONT color=#086171>Saint's Haven Palace</FONT> <FONT color=#a82424>- Bishop Ignasio</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Bicara dengan Bishop Ignasio]]></destination>
+         <todo_msg mid="67"><![CDATA[Lapor situasi ke Bishop Ignasio.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9597</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

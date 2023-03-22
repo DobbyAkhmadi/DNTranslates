@@ -1,0 +1,250 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq15_706_elders_amulet</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>6</qchapter>
+      <qid>706</qid>
+      <designer>박정민</designer>
+      <qlevel>40</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>707</nextqid>
+      <nextqname>mq15_707_unkind_reunion</nextqname>
+      <nextqnpc>n707_sidel</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Chief's Amulet]]></qkname>
+      <qnpc>
+         <npcid>471</npcid>
+         <npcename>n471_charty</npcename>
+         <npckname>차티</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>707</npcid>
+         <npcename>n707_sidel</npcename>
+         <npckname>시델</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Charty$<BR>Aku tidak dapat menemukan bukti apapun di sini...<BR>Bagaimana kalau kamu mencari di tempat lain?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-accepting" image="QW_52.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-accepting-a" mid="73" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Sidel$<BR>Did you find anything at the <FONT color=#a82424>Riverwort Ruins?</FONT> I didn't find a thing. I bet <FONT color=#a82424>Charti's</FONT> still in the <FONT color=#a82424>Ancient Library.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-accepting-a" image="QW_52.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-accepting-b" mid="75" select_type="3" />
+      <talk_question mid="74"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'll see if I can find her.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-accepting-b" image="QW_52.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-accepting-" mid="76" select_type="5" />
+      <talk_question mid="54"><![CDATA[<html>$Sidel$<BR><FONT color=#7e12d2>(Meet Charti in the Ancient Library.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-1-a" mid="78" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Charti$<BR>No! I'm finding nothing. Nothing! What tentang you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-1-b" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Same here. Though I did get this from someone.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-1-b" image="QS_Default.dds" itemindex="300381" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-1-c" mid="81" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Charti${action:Talk}<BR><FONT color=#7e12d2>(Charti snatches the talisman from you.)</FONT><BR>This is grandpa's! Why do YOU have it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-1-c" image="QS_Default.dds" itemindex="300381" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-2" mid="83" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It really is his? Wow.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1" image="QW_52.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-" mid="84" select_type="5" />
+      <talk_question mid="22"><![CDATA[<html>$Sidel$<BR>Did you find anything at the <FONT color=#a82424>Riverwort Ruins?</FONT> I didn't find a thing. I bet <FONT color=#a82424>Charti's</FONT> still in the <FONT color=#a82424>Ancient Library.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-2-a" mid="28" select_type="0"><![CDATA[<html>(Beritahu dia tentang Mysterious Man)</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Charty$<BR>Cepat beritahu aku?!<BR>Bagaimana kamu mendapatkan ini?!<BR><FONT color=#7e12d2>(Charty menarik kerah bajuku)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-2-b" mid="85" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Charti${action:Talk2}<BR>This isn't a trick, is it? Are you telling the truth?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-2-c" mid="87" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>${user_nick}$<BR><FONT color=#003366>Why would I lie?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-2-c" image="QN_Npc_Sidel.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-2-d" mid="88" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Charti$<BR>I don't know...yet. Shoo. Go tell <FONT color=#a82424>Sidel</FONT> not to worry tentang me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-3" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What are you going to do?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n471_charty-3" image="QN_Npc_Sidel.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n471_charty-3-" mid="91" select_type="5" />
+      <talk_question mid="37"><![CDATA[<html>$Charti$<BR>It is no concern of yours! And <FONT color=#a82424>Sidel</FONT> doesn't need to worry tentang it. I can trust you to tell him what I said, can't I?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-a" mid="92" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Sidel$<BR>Spit it out, you miserable pile of spider droppings! Ugh, I'm sorry. I didn't really mean it!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-b" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Charti</FONT><FONT color=#662500> wanted me to tell you she's okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-c" mid="95" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Sidel${action:Talk}<BR>That just makes me worry more. You don't think she's seeing her informant friend, do you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-d" mid="97" select_type="2" />
+      <talk_question mid="96"><![CDATA[<html>${user_nick}$<BR><FONT color=#003366>I honestly don't know what she's planning.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-e" mid="98" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Sidel$<BR>She didn't even give you a hint of where she's going?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-f" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Nope. Not even a little clue.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-g" mid="101" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Sidel$<BR>First the Master, now <FONT color=#7e12d2>Charti...</FONT> They never tell me anything!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-h" mid="103" select_type="2" />
+      <talk_question mid="102"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Say, where is Lady Karacule anyway?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-i" mid="104" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Sidel$<BR>I think I saw her head towards the marina. Oh, I have a bad feeling tentang this.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-j" mid="106" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Why didn't you follow her?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-k" mid="107" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Sidel${action:Talk}<BR>Are you kidding? The Master didn't say I could follow her! I don't think you understand. If I step out of line, she'll shrink me down to the size of a mouse and let her poochum play with me!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-l" mid="109" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I say we check it out. Especially if you're worried.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-3-!next" mid="110" select_type="4" />
+      <talk_question mid="45"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">706</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="delquestitem" num="-1">300381</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">7061,7061,7062,7063,7064,7065,7066,,</exe>
+         <exe type="complete" true="">706</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n707_sidel" sub="b">0</exelink>
+   <exelink qstep="1" npc="n471_charty" sub="b" />
+   <exelink qstep="1" npc="n471_charty" sub="c" />
+   <exelink qstep="1" npc="n471_charty" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n471_charty" sub="b" />
+   <exelink qstep="2" npc="n471_charty" sub="c" />
+   <exelink qstep="2" npc="n471_charty" sub="d" />
+   <exelink qstep="2" npc="n471_charty" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n707_sidel" sub="b" />
+   <exelink qstep="3" npc="n707_sidel" sub="c" />
+   <exelink qstep="3" npc="n707_sidel" sub="d" />
+   <exelink qstep="3" npc="n707_sidel" sub="e" />
+   <exelink qstep="3" npc="n707_sidel" sub="f" />
+   <exelink qstep="3" npc="n707_sidel" sub="g" />
+   <exelink qstep="3" npc="n707_sidel" sub="h" />
+   <exelink qstep="3" npc="n707_sidel" sub="i" />
+   <exelink qstep="3" npc="n707_sidel" sub="j" />
+   <exelink qstep="3" npc="n707_sidel" sub="k" />
+   <exelink qstep="3" npc="n707_sidel" sub="l">0</exelink>
+   <exelink qstep="3" npc="n707_sidel" sub="!next">1</exelink>
+   <journal_data recompense="1:7061,2:7062,3:7063,4:7064,5:7065,6:7066" quest_title="족장의 부적목걸이" chapterid="6" quest_level="40" quest_mark_type="1" use_item_list="300381">
+      <journal index="1">
+         <contents_image>QN_Npc_Charty.dds</contents_image>
+         <destination_pos>521,n471</destination_pos>
+         <destination_mode>custom:521@1</destination_mode>
+         <statemark_npcid>471</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="65"><![CDATA[Chief's amuletⅠ]]></title>
+         <contents mid="66"><![CDATA[<html>Charty masih menyelidiki Riverwort Ruins. Temui Charty dan cari tahu apakah Chief's Amulet yang diberikan oleh Mysterious Man itu asli.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Riverwort Ruins)</FONT> <FONT color=#a82424>→ Riverwort Ruins(Charty)</FONT></html>]]></contents>
+         <destination mid="67"><![CDATA[Bicara pada Charty di Riverwort Ruins]]></destination>
+         <todo_msg mid="68"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Sidel.dds</contents_image>
+         <destination_pos>14,n707</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>707</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="69"><![CDATA[Chief's amulet Ⅱ]]></title>
+         <contents mid="70"><![CDATA[<html>Charty berkata bahwa dia harus pergi. Kembalilah ke Karacule's Hut dan temui Sidel.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Karacule's Hut)</FONT> <FONT color=#a82424>→ Sidel</FONT></html>]]></contents>
+         <destination mid="71"><![CDATA[(Solo) Bicara pada Sidel]]></destination>
+         <todo_msg mid="72"><![CDATA[Kembalilah ke Karacule's Hut dan temui Sidel.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>705</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

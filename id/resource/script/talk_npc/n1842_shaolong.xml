@@ -1,0 +1,44 @@
+   <talk>
+      <npcename>n1842_shaolong</npcename>
+      <npcid>1842</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Shaolong (Prologue Map)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Shaolong$<BR>
+? Kenapa kamu disini?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina01" image="" itemindex="">
+         <talk_answer link_index="prologue_makina02" mid="37"><![CDATA[<html>Siapa kamu? Dimana ini?</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Mysterious Prisoner$<BR>Hebat! Hebat sekali! <BR>Aku menemukan penerus jurus-jurus aku! </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina02" image="" itemindex="">
+         <talk_answer link_index="prologue_makina03" mid="38"><![CDATA[<html><FONT color=#2b2723>Kenapa harus begitu?</FONT></html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Mysterious Prisoner$<BR>Kamu harus sopan dengan orang tua. Disini dekat Prairie Town. <BR><FONT color=#7e12d2>(Shaolong melihat sekitar)</FONT><BR>Emm... mari kita lanjut bicara di Prairie Town.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina03" image="" itemindex="">
+         <talk_answer link_index="prologue_makina04" mid="39"><![CDATA[<html><FONT color=#2b2723>Pass? </FONT></html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Shaolong$<BR>Kenapa? <FONT color=#7e12d2>(kelihatan panik)</FONT><BR>Tidak ada gunanya berada disini. Kamu tidak ada pass ya? </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina04" image="" itemindex="">
+         <talk_answer link_index="prologue_makina05" mid="40"><![CDATA[<html>Ba, baiklah.</html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Shaolong$<BR>Kita, prisoner harus ada pass kalau mau ke kota lain.<BR>Sepertinya kamu tidak ada ya. <BR>Diam-diam saja! Jangan sampai ketahuan!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina05" image="" itemindex="">
+         <talk_answer link_index="next" mid="41"><![CDATA[<html><FONT color=#2b2723>(Shaolong menghilang dengan cepat)</FONT></html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Shaolong$<BR>Mari kita bicarakan sisanya di Prairie Town!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0 or 1</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">prologue_makina01</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,9571, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 9571, 1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 9571, 1);</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">9571</chk>
+         <chk type="hasquest">9571</chk>
+      </conditions>
+      <exelink idx="next">3,4,5</exelink>
+   </talk>

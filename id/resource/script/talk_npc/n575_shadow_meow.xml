@@ -1,0 +1,42 @@
+﻿   <talk>
+      <npcename>n575_shadow_meow</npcename>
+      <npcid>575</npcid>
+      <startexe>2</startexe>
+      <npckname mid="1"><![CDATA[Shadow Nyang
+(Lotus Marsh)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="3"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill_open" mid="4"><![CDATA[ <html>[Learn Skill]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Shadow Nyang${action:Stand2}<BR>Yang terganteng Shadow Nyang semakin hebat setiap hari!<BR>Hasil dari latihan keras setiap hari~! Meong~!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="quest" mid="7"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Shadow Nyang${action:Talk}<BR>Meong? Kamu begitu merindukan aku?<BR>Lama-lama aku bisa tenggelam di lautan kasih sayang yang aku terima~</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="191" link_target="mq15_9331_old_fellowship.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Old Fate</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="192" link_target="mq15_9345_where_back.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Where To Go Back To</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="193" link_target="mq15_9346_incomplete_sutura.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Incomplete Seal</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="196" link_target="mq15_9347_not_repeat.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Unrepeatable Time</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="197" link_target="mq15_9348_extinction_of_illusion.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Illusion's Disintegration</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="198" link_target="mq15_9349_abruptly_farewell.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Abrupt Farewell</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="199" link_target="mq15_9350_finding_lunaria.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Finding Lunaria</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="200" link_target="mq15_9351_stray_sheep.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Lost in Time</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="201" link_target="mq15_9352_i_need_you.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>I Need You</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="205" link_target="sq15_4357_cryptogram_of_doctor.xml"><![CDATA[<html>[Specialization] <FONT color=#086171>Doctor's Cipher</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="206" link_target="sq15_4360_shadow_in_mirror.xml"><![CDATA[ <html>[Specialization] <FONT color=#086171>Shadow in the Mirror</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_quest" mid="194"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="174"><![CDATA[<html>$Shadow Nyang$<BR>Senang melihatmu bekerja begitu giat. Tetap semangat~</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="0" false="1">0</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">7</chk>
+      </conditions>
+      <exelink idx="skill_open">3</exelink>
+      <exelink idx="back_quest">2</exelink>
+   </talk>

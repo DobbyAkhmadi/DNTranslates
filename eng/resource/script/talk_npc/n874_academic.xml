@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n874_academic</npcename>
+      <npcid>874</npcid>
+      <startexe>5</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Academic Comelina]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#7e12d2>She's busily playing with something. </FONT><BR>
+<FONT color=#7e12d2>It's a small device that makes machine sounds which has never been seen before. </FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Academic Comelina$<BR><FONT color=#7e12d2>(She seems to be looking for something)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mq15_9227_dejavu</exe>
+         <exe type="conexe" true="1" false="3">0</exe>
+         <exe type="conexe" true="4" false="0">2</exe>
+         <exe type="enterquest">mq15_9380_but_not_equal</exe>
+         <exe type="conexe" true="7" false="2">4</exe>
+         <exe type="enterquest">mqc10_9548_unanswered</exe>
+         <exe type="conexe" true="6" false="8">3</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9227</chk>
+         <chk type="hasquest">9228</chk>
+         <chk type="hasquest">9380</chk>
+         <chk type="hasquest">9548</chk>
+         <chk type="class" op="=">8</chk>
+      </conditions>
+   </talk>

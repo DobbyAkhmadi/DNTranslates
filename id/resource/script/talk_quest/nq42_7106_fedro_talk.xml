@@ -1,0 +1,105 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq42_7106_fedro_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>7106</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] Mengenai makanan yang tidak disukai]]></qkname>
+      <qnpc>
+         <npcid>711</npcid>
+         <npcename>n711_warrior_fedro</npcename>
+         <npckname>상급 워리어 페드로</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-a" mid="8" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Warrior Pedro$<BR>
+Aku pikir  tidak ada makanan yang tidak aku suka. Tapi aku pernah menemukan beberapa makanan yang tidak dapat dimakan<BR>
+Belakangan ini, Tamara memberiku beberapa pudding.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-b" mid="18" select_type="0"><![CDATA[<html>Kamu pasti terkejut</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-accepting-c" mid="19" select_type="0"><![CDATA[<html>Dan kamu pasti menghabiskan monster jelly itu dalam satu lahap?</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-accepting-d" mid="20" select_type="0"><![CDATA[<html>Bagaimana rasa monster jelly itu?</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-accepting-e" mid="21" select_type="0"><![CDATA[<html>Bohong...kamu pasti membaca terlalu banyak?</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Master Warrior Pedro$<BR>Kamu tahu, pudding itu berubah menjadi monster jelly?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Master Warrior Pedro$<BR>
+Hmm, Aku sedikit terkejut. Tapi jelly monster itu langsung terbelah dalam sekali tebasan pedangku!!<BR>
+Phew, Jika aku membiarkan Jelly itu, Lotush Marsh pasti sudah dipenuhi monster jelly.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Master Warrior Pedro$<BR>
+Hahaha!! Sekarang sudah mengenal siapa aku ini!!<BR>
+Benar sekali. Jelly monster itu hancur dalam sekali tebasan pedangku yang dashyat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Master Warrior Pedro$<BR>
+Huh?! Jika dipikir, Aku sudah lupa mengenai itu! Aku tidak menyicipi monster jelly itu?!<BR>
+Aku tidak bisa memikirkan bagaimana caramu berpikir, itu membuatku gila!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="38"><![CDATA[<html>$Master Warrior Pedro$<BR>
+Apa? Kamu pikir ceritaku hanya karangan belaka?<BR>
+Hmm, kenyataan memang tidak akan bisa dimengerti oleh orang bodoh!!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,7106, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 500 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="b">0,2</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="c">0,1</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="d">0,3</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="e">0,4</exelink>
+   <journal_data recompense="" quest_title="[대화] 싫어하는 음식에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>711:9000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

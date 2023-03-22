@@ -1,0 +1,373 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc23_3691_case2_suspect</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>23</qchapter>
+      <qid>3691</qid>
+      <designer>노지혜</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>3692</nextqid>
+      <nextqname>sqc23_3692_case3_crime</nextqname>
+      <nextqnpc>n2517_fruitdealer_linda</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Case Log 2. The Culprit's Trail]]></qkname>
+      <qnpc>
+         <npcid>2510</npcid>
+         <npcename>n2510_fishmonger_mona</npcename>
+         <npckname>생선장수 모나</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2519</npcid>
+         <npcename>n2519_waiter_miya</npcename>
+         <npckname>웨이터 미야</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2520</npcid>
+         <npcename>n2520_rossa</npcename>
+         <npckname>마담 로사</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2599</npcid>
+         <npcename>n2599_fishshop_goodlook</npcename>
+         <npckname>생선가게가 잘 보이는 곳</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2517</npcid>
+         <npcename>n2517_fruitdealer_linda</npcename>
+         <npckname>과일장수 린다</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2510_fishmonger_mona-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2510_fishmonger_mona-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Accept)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Fish Seller Mona$<BR>I don't know who this thief is, but I will beat the person… into a pulp!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2510_fishmonger_mona-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2510_fishmonger_mona-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#387206>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Case Log 2. The Culprit's Trail$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2510_fishmonger_mona-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Fish Seller Mona$<BR>Did you find the suspect?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="10"><![CDATA[<html>$Waiter Mia$<BR>Welcomeeow!<BR>Please order at least one drink per person. Meow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Madam Rosa$<BR>Well, what brought a busy champion like you here?<BR>Did you miss me, honey?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Fruit Seller Linda$<BR>Sweet and juicy fruits!<BR><FONT color=#7e12d2>(Linda looks disappointed.)</FONT>I wonder why I have so little customers today.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2599_fishshop_goodlook-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2599_fishshop_goodlook-1-a" mid="73" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Observe Mona's shop and its surrounding areas.)</FONT></html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR>An investigation should start by inspecting the scene of crime.<BR>Now, if we look in the direction of Mona's shop…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2599_fishshop_goodlook-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2599_fishshop_goodlook-1-b" mid="74" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Think carefully.)</FONT></html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>${user_nick}$<BR>I was watching Mona's shop until I met Grele here...<BR>So the thief must be someone who was in this area and is <FONT color=#a82424>swift</FONT>.<BR>With <FONT color=#a82424>unnoticeable looks</FONT>…<BR>Argh… Who is this thief…?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2599_fishshop_goodlook-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2599_fishshop_goodlook-1-c" mid="75" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Turn around and peer at someone in the bar.)</FONT></html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>${user_nick}$<BR>Maybe there was a blind spot?<BR>No, no, no. I'm sure it happened while I was talking with Grele.<BR>Which means… It must be someone in Merca's Port who is swift enough for that!<BR>Could it be…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2599_fishshop_goodlook-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2599_fishshop_goodlook-2" mid="76" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Find the suspects and question them.)</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>${user_nick}$<BR>Yes, that's right! That kid can see whether I'm watching Mona's shop or not.<BR>Then the kid would have escaped my eyes, got to the opposite side and reached the fish!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2510_fishmonger_mona-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="17"><![CDATA[<html>$Fish Seller Mona$<BR>Did you find out who's the suspect?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2599_fishshop_goodlook-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$A Place With a Good View of the Fish Shop$<BR>You have found a <FONT color=#a82424>suspect</FONT>.<BR>Go and question the suspect.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>$Madam Rosa$<BR>Well, what's brought a busy champion like you here?<BR>Did you miss me? Huh?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Fruit Seller Linda$<BR>Sweet, sweet fruits!<BR><FONT color=#7e12d2>(Disappointed)</FONT>I wonder why there's so few people today.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-2-a" mid="77" select_type="0"><![CDATA[<html>No, no. I've come to meet you.</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Waiter Mia$<BR>Welcomeow.<BR>You're lucky, since we've got only one table left. Meow.<BR>Have a sit and I'll bring you the menu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-2-b" mid="78" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Show him the document requesting assistance in criminal investigation.)</FONT></html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Waiter Mia$<BR>I'm working at this meowment.<BR>If you have any business with me, wait until my work is done. Meow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-2-c" mid="79" select_type="0"><![CDATA[<html>Have you left your workplace during your working hours today?</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Waiter Mia$<BR>Wh-what is this? Hm… A request of assistance for a criminal investigation?<BR>Meow-- If you have any questions, ask meow.<BR>But you must not disrupt my work. Meow!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-2-d" mid="80" select_type="0"><![CDATA[<html>Private space? And where's that space?</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Waiter Mia$<BR>I have my breaks.<BR>During break time, I rest in my private space. Meow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-2-e" mid="81" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Something feels suspicious!)</FONT> Are you not going to assist in this investigation or what?!!!!</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Waiter Mia$<BR><FONT color=#7e12d2>(Startled)</FONT>It won't be private anymore if I tell you that!<BR>I won't tell yeow. It's a secret. Meow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-2-f" mid="82" select_type="0"><![CDATA[<html>You just need to prove your alibi. Tell me now.</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Waiter Mia$<BR>Grrr. Grrr. Why are you doing this?<BR>Are you suspecting me-meow?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-2-g" mid="83" select_type="0"><![CDATA[<html>If you keep your mouth shut, you'll become the suspect.</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Waiter Mia$<BR>I can't tell you, since it's a private space. Meow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-2-h" mid="84" select_type="0"><![CDATA[<html>Will you keep being stubborn?</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Waiter Mia$<BR>Ugh. Ugh. <FONT color=#7e12d2>(Mia grunts and suddenly loses his temper.)</FONT><BR>Hiss! I've done nothing wrong. Meow!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2-h" image="QN_Npc_Sarasa.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-2-i" mid="85" select_type="0"><![CDATA[<html>Madam Rosa?</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Madam Rosa$<BR>Hey, darling.<BR>How about leaving my poor Mia alone and play with me instead?<BR>I can prove Mia's alibi if that's what you want.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-2-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2519_waiter_miya-3" mid="86" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Although Mia looks suspicious…)</FONT></html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Waiter Mia$<BR>Did you hear that, meow? I'm inneowcent!<BR>I'm just a hardworking cat! Meow...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="31"><![CDATA[<html>$Waiter Mia$<BR>I'm an innocent cat. Meow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2510_fishmonger_mona-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="32"><![CDATA[<html>$Fish Seller Mona$<BR>Did you find the suspect?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2599_fishshop_goodlook-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="33"><![CDATA[<html>$A Place With a Good View of the Fish Shop$<BR>…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="34"><![CDATA[<html>$Fruit Seller Linda$<BR>Sweet, sweet fruits!<BR><FONT color=#7e12d2>(Disappointed)</FONT>I wonder why there's so few people today.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-3-a" mid="87" select_type="0"><![CDATA[<html>He wouldn't tell me where he rests. That makes me suspicious.</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Madam Rosa$<BR>Did my Mia do something wrong?<BR>Questioning him with such a scary face is just… You’re being too harsh, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-3-b" mid="88" select_type="0"><![CDATA[<html>Eh? What do you mean by "butler"?</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Madam Rosa$<BR>Huh? Then you've failed as a butler, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-3-c" mid="89" select_type="0"><![CDATA[<html>Does that mean you know Mia's secret hiding place?</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Madam Rosa$<BR>I'm not telling you.<BR>Forget about butlers, and remember that Mia is a cat. Cats won't tell anyone about their <FONT color=#a82424>secret hiding places</FONT>.<BR>Though it's easy to figure out where they are……</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-3-d" mid="90" select_type="0"><![CDATA[<html>Then why would you call them "secret hiding places" at all? And why won't he tell me?</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Madam Rosa$<BR>But anyone would know!<BR>He’s always curled up <FONT color=#a82424>in between the boxes</FONT> stacked next to the shop wall.<BR>It is so cute to watch him run to that spot during breaks… I'm sure you'll fall in love with him too if you see that.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-3-e" mid="91" select_type="0"><![CDATA[<html>I’m not interested in falling in love with cats. I’m still suspicious of him.</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Madam Rosa$<BR>You can't be loved by a cat if you say something like that.<BR>I see, you won't be a good butler. Ha ha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-3-f" mid="92" select_type="0"><![CDATA[<html>It's an <FONT color=#a82424>investigation</FONT>! AN INVESTIGATION.</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Madam Rosa$<BR>There’s nothing to be suspicious about. Cats are always like that.<BR>It's hard to understand them, but they are still lovable. Like my Mia.<BR>But why do you need Mia's <FONT color=#a82424>alibi</FONT>?<BR>In most cases, people ask for my schedule… You've got some unusual taste.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-3-g" mid="93" select_type="0"><![CDATA[<html>Sigh... Don't make fun of me. I need to start the investigation from zero again.</html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Madam Rosa$<BR>How cute that you’re so easily agitated by such jokes.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-3-h" mid="94" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Let's change the course of investigation and think again.)</FONT></html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Madam Rosa$<BR>Your situation is regrettable, but don't suspect my Mia again.<BR>Do you understand? <FONT color=#7e12d2>(*Wink*♡)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-3-i" mid="95" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>${user_nick}$<BR>Someone who can walk around Merca's Port freely, who can move swiftly enough to steal fish within the brief moment I was talking with Grele, who's near the fish shop...<BR>Argh…<BR><FONT color=#7e12d2>(A seagull in the sky suddenly catches your attention.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-3-i" image="QN_Npc_Woman_Trader_Doris.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2520_rossa-4" mid="96" select_type="0"><![CDATA[<html>Could it be seagulls?!!</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Fruit Seller Linda$<BR>Shoo- Shoo-<BR>I can't stand these seagulls!!! Go away!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2519_waiter_miya-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Waiter Mia$<BR>I'm an innocent cat. Meow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2510_fishmonger_mona-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="46"><![CDATA[<html>$Fish Seller Mona$<BR>Did you find the suspect?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2599_fishshop_goodlook-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="47"><![CDATA[<html>$Spot from where you can see the fish shop$<BR>…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2520_rossa-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="48"><![CDATA[<html>$Madam Rosa$<BR>
+Now stay away from my Mia, understand?<BR>If you bully him again, I will #@!! and !^*#@ you. DO NOT FORGET IT!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2517_fruitdealer_linda-4-a" mid="98" select_type="0"><![CDATA[<html>No, thank you. I just wanted to ask you some questions about that seagull.</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Fruit Seller Linda$<BR>Welcome. You’ll have the honour of being my first customer today if you buy something from my store!<BR>I’ll give you these apples for free.<BR>Which fruit do you want to buy?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2517_fruitdealer_linda-4-b" mid="99" select_type="0"><![CDATA[<html>You just shooed a seagull away. Did it cause you any trouble?</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Fruit Seller Linda$<BR>Oh… <FONT color=#7e12d2>(She sighs after finding out that you're not a customer.)</FONT><BR>That seagull just flies around this place. I don't sell seagulls.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2517_fruitdealer_linda-4-c" mid="100" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(It must be that seagull!)</FONT> Does the seagull eat fruits?</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Fruit Seller Linda$<BR>Oh. That's <FONT color=#a82424>Captain Hector</FONT>'s new <FONT color=#a82424>pet bird</FONT>.<BR>It’s name was Alex or something. I don't remember it exactly.<BR>Anyway, the bird keeps coming to my shop and harms my fruits.<BR>I even caught it pecking at my apples a few times.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2517_fruitdealer_linda-4-d" mid="101" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(I knew it!)</FONT> Thank you, Linda. I think I found the <FONT color=#a82424>thief</FONT>.</html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Fruit Seller Linda$<BR>I don't know about other shops, but the seagull keeps coming back about twice a day and snatches my fruits.<BR>Whenever I leave the shop empty, some of my fruits always go missing.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2517_fruitdealer_linda-4-e" mid="102" select_type="0"><![CDATA[<html>It's solved now! Don't worry.</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Fruit Seller Linda$<BR>What? A thief?<BR>Did something happen?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2517_fruitdealer_linda-4-!next" mid="103" select_type="0"><![CDATA[<html><FONT color=#387206>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Quest Completed$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2517_fruitdealer_linda-4-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="55"><![CDATA[<html>$Fruit Seller Linda$<BR>So what is it that you've solved…?<BR>Wait a minute, I haven't sold anything yet for today. Sigh...</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">36910,,,,,,,,,</exe>
+         <exe type="setquest">3691</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">36910,,,,,,,,,</exe>
+         <exe type="complete" true="">3691</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2510_fishmonger_mona" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n2510_fishmonger_mona" sub="acceptted">1</exelink>
+   <exelink qstep="1" npc="n2599_fishshop_goodlook" sub="b" />
+   <exelink qstep="1" npc="n2599_fishshop_goodlook" sub="c" />
+   <exelink qstep="1" npc="n2599_fishshop_goodlook" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n2519_waiter_miya" sub="b" />
+   <exelink qstep="2" npc="n2519_waiter_miya" sub="c" />
+   <exelink qstep="2" npc="n2519_waiter_miya" sub="d" />
+   <exelink qstep="2" npc="n2519_waiter_miya" sub="e" />
+   <exelink qstep="2" npc="n2519_waiter_miya" sub="f" />
+   <exelink qstep="2" npc="n2519_waiter_miya" sub="g" />
+   <exelink qstep="2" npc="n2519_waiter_miya" sub="h" />
+   <exelink qstep="2" npc="n2519_waiter_miya" sub="i" />
+   <exelink qstep="2" npc="n2519_waiter_miya" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n2520_rossa" sub="b" />
+   <exelink qstep="3" npc="n2520_rossa" sub="c" />
+   <exelink qstep="3" npc="n2520_rossa" sub="d" />
+   <exelink qstep="3" npc="n2520_rossa" sub="e" />
+   <exelink qstep="3" npc="n2520_rossa" sub="f" />
+   <exelink qstep="3" npc="n2520_rossa" sub="g" />
+   <exelink qstep="3" npc="n2520_rossa" sub="h" />
+   <exelink qstep="3" npc="n2520_rossa" sub="i" />
+   <exelink qstep="3" npc="n2520_rossa" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n2517_fruitdealer_linda" sub="b" />
+   <exelink qstep="4" npc="n2517_fruitdealer_linda" sub="c" />
+   <exelink qstep="4" npc="n2517_fruitdealer_linda" sub="d" />
+   <exelink qstep="4" npc="n2517_fruitdealer_linda" sub="e">0</exelink>
+   <exelink qstep="4" npc="n2517_fruitdealer_linda" sub="!next">1</exelink>
+   <journal_data recompense="36910" quest_title="사건일지2. 범인의 흔적" chapterid="" quest_level="95" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_MercaPort.dds</contents_image>
+         <destination_pos>13043,n2599</destination_pos>
+         <destination_mode>custom:13043@1</destination_mode>
+         <statemark_npcid>2599</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="56"><![CDATA[Proof Secured]]></title>
+         <contents mid="57"><![CDATA[<html>Investigate the crime scene carefully.<BR><BR><FONT color=#086171>Merca's Port</FONT> <FONT color=#a82424>- ??</FONT></html>]]></contents>
+         <destination mid="58"><![CDATA[Visit the scene of crime]]></destination>
+         <todo_msg mid="59"><![CDATA[Investigate the scene of crime]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos>13043,n2519</destination_pos>
+         <destination_mode>custom:13043@1</destination_mode>
+         <statemark_npcid>2519</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="60"><![CDATA[The Suspect]]></title>
+         <contents mid="61"><![CDATA[<html>Find Waiter Mia and question him.<BR><BR><FONT color=#086171>Merca's Port</FONT> <FONT color=#a82424>- Waiter Mia</FONT></html>]]></contents>
+         <destination mid="62"><![CDATA[Question Waiter Mia]]></destination>
+         <todo_msg mid="63"><![CDATA[Talk to Waiter Mia at Merca's Port.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Sarasa.dds</contents_image>
+         <destination_pos>13043,n2520</destination_pos>
+         <destination_mode>custom:13043@1</destination_mode>
+         <statemark_npcid>2520</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Rosa's Testimony]]></title>
+         <contents mid="65"><![CDATA[<html>Talk to Madam Rosa about Waiter Mia's alibi.<BR><BR><FONT color=#086171>Merca's Port</FONT> <FONT color=#a82424>- Madam Rosa</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Talk to Madam Rosa]]></destination>
+         <todo_msg mid="67"><![CDATA[Talk to Madam Rosa at Merca's Port.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Woman_Trader_Doris.dds</contents_image>
+         <destination_pos>13043,n2517</destination_pos>
+         <destination_mode>custom:13043@1</destination_mode>
+         <statemark_npcid>2517</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="68"><![CDATA[A New Suspect]]></title>
+         <contents mid="69"><![CDATA[<html>Talk with Fruit Seller Linda about the suspicious seagull and secure the proof.<BR><BR><FONT color=#086171>Merca's Port</FONT> <FONT color=#a82424>- Fruit Seller Linda</FONT></html>]]></contents>
+         <destination mid="70"><![CDATA[Talk to Fruit Seller Linda]]></destination>
+         <todo_msg mid="71"><![CDATA[Talk to Fruit Seller Linda at Merca's Port.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>3690</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

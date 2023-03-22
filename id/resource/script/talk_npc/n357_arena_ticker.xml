@@ -1,0 +1,134 @@
+﻿   <talk>
+      <npcename>n357_arena_ticker</npcename>
+      <npcid>357</npcid>
+      <startexe>0</startexe>
+      <comment>[콜로세움 상점 (Lv70)] 사용안함 참조 (148778 ) 실행번호 45,46,47 안씀 
+</comment>
+      <npckname mid="1"><![CDATA[Colosseum Soldier Royen]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="gogogo" mid="4"><![CDATA[<html>[Masuki Colosseum]</html>]]></talk_answer>
+         <talk_answer link_index="trade" mid="33"><![CDATA[<html>[Shop]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="24"><![CDATA[<html>[Bicara]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Colosseum Soldier Royen${action:Talk}<BR>Selamat datang, Adventurers.<BR><FONT color=#a82424>Colosseum</FONT> adalah untuk orang dari <FONT color=#a82424>Verathea </FONT> untuk menguji skill seseorang.<BR> Apakah kamu kesini juga untuk menguji dirimu?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="9"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Colosseum Soldier Royen${action:Talk}<BR><FONT color=#a82424>Coloseum</FONT> bangunan mewah yang berfungsi sebagai  <FONT color=#a82424>PvP arena</FONT>. Untuk masuk, ambil [<FONT color=#086171>Enter coloseum</FONT>] dari menu chat, atau ambil [<FONT color=#086171>Change channel</FONT>] dari pojok atas kanan UI.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="trade" image="QS_Default.dds" itemindex="374341682">
+         <talk_answer link_index="trade_1" mid="34"><![CDATA[<html>[Colosseum Shop]</html>]]></talk_answer>
+         <talk_answer link_index="trade_2" mid="35"><![CDATA[<html>[Ladder Shop]</html>]]></talk_answer>
+         <talk_answer link_index="elite" mid="50"><![CDATA[<html>[Colosseum Elite Store]</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="37"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="28"><![CDATA[<html>$Colosseum soldier Royen$<BR>Kamu dapat menggunakan <FONT color=#a82424>Goddess''s Medal</FONT> dan Ladder Point untuk membeli  item.<BR><BR>※ <FONT color=#7e12d2>Pada season terakhir Ladder Shop, kamu dapat membeli season terakhir Ladder Equipments dengan Goddess''s Medal.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="colosseum" image="" itemindex="">
+         <talk_question mid="40"><![CDATA[<html>$Colosseum soldier Royen$<BR><FONT color=#a82424>Colosseum</FONT> merupakan <FONT color=#a82424>PvP Arena</FONT> yang dibangun oleh kerajaan agar pertualang dapat menguji kemampuan mereka. Kamu dapat masuk ke Colosseum Lobby menggunakan [<FONT color=#086171>Move Channel</FONT>] dengan melewati UI bagian atas Kota.<BR>※ <FONT color=#7e12d2>Jika kamu pernah masuk ke Colosseum Lobby menggunakan Move Channel lebih dari 1 kali, kamu dapat langsung masuk ke Colosseum melalui NPC tanpa melewati Lobby.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="party" image="" itemindex="">
+         <talk_question mid="43"><![CDATA[<html>$Colosseum supply soldier Ray$<BR>Harus keluar dari party untuk masuk ke Colosseum.<BR>
+ <BR>
+※ <FONT color=#7e12d2>Tidak bisa masuk ke Colosseum dalam keadaan sedang party.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="not70" image="" itemindex="">
+         <talk_answer link_index="back_not70" mid="48"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="47"><![CDATA[<html>$Colosseum Shopkeeper Levan$<BR><FONT color=#387206>{user_nick}</FONT>, Kamu belum dapat menggunakan Colosseum Store (Lv70).<BR><BR>※ <FONT color=#7e12d2>Kembali saat kamu mencapai Lv70.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_user_ChangeChannel( userObjID, 1 );</exe>
+         <exe type="conexe" true="6" false="3">0</exe>
+         <exe type="conexe" true="7" false="4">1</exe>
+         <exe type="conexe" true="8" false="5">2</exe>
+         <exe type="conexe" true="9" false="31">3</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5004,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5005,100);</exe>
+         <exe type="conexe" true="15" false="12">0</exe>
+         <exe type="conexe" true="16" false="13">1</exe>
+         <exe type="conexe" true="17" false="14">2</exe>
+         <exe type="conexe" true="18" false="34">3</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5101,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5102,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5103,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5104,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5105,101);</exe>
+         <exe type="conexe" true="24" false="21">0</exe>
+         <exe type="conexe" true="25" false="22">1</exe>
+         <exe type="conexe" true="26" false="23">2</exe>
+         <exe type="conexe" true="27" false="37">3</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5201,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5202,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5203,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5204,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5205,100);</exe>
+         <exe type="conexe" true="0" false="30">4</exe>
+         <exe type="talk">colosseum</exe>
+         <exe type="conexe" true="10" false="32">5</exe>
+         <exe type="conexe" true="33" false="48">6</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5006,100);</exe>
+         <exe type="conexe" true="19" false="35">5</exe>
+         <exe type="conexe" true="36" false="52">6</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5106,101);</exe>
+         <exe type="conexe" true="28" false="38">5</exe>
+         <exe type="conexe" true="39" false="56">6</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5206,100);</exe>
+         <exe type="conexe" true="1" false="41">7</exe>
+         <exe type="talk">party</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5007,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5107,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5207,100);</exe>
+         <exe type="conexe" true="46" false="47">8</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5051,100);</exe>
+         <exe type="talk">not70</exe>
+         <exe type="conexe" true="42" false="49">9</exe>
+         <exe type="conexe" true="50" false="51">10</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5008,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5009,100);</exe>
+         <exe type="conexe" true="43" false="53">9</exe>
+         <exe type="conexe" true="54" false="55">10</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5108,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5109,101);</exe>
+         <exe type="conexe" true="44" false="57">9</exe>
+         <exe type="conexe" true="58" false="59">10</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5208,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5209,100);</exe>
+         <exe type="conexe" true="68" false="61">0</exe>
+         <exe type="conexe" true="69" false="62">1</exe>
+         <exe type="conexe" true="70" false="63">2</exe>
+         <exe type="conexe" true="71" false="64">3</exe>
+         <exe type="conexe" true="72" false="65">5</exe>
+         <exe type="conexe" true="73" false="66">6</exe>
+         <exe type="conexe" true="74" false="67">9</exe>
+         <exe type="conexe" true="75" false="76">10</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5501,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5502,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5503,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5504,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5505,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5506,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5507,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5508,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5509,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="custom">api_user_IsMissionAchieved(userObjID, 728) == 1</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+         <chk type="lvl" op=">=">70</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+      </conditions>
+      <exelink idx="gogogo">40</exelink>
+      <exelink idx="trade_1">2</exelink>
+      <exelink idx="trade_2">11</exelink>
+      <exelink idx="elite">60</exelink>
+      <exelink idx="back_not70">0</exelink>
+   </talk>

@@ -1,0 +1,142 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dq15_1093_from_center</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1093</qid>
+      <designer>김인정</designer>
+      <qlevel>51</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Daily] Meteor Crash Site Core]]></qkname>
+      <qnpc>
+         <npcid>87</npcid>
+         <npcename>n087_beggar</npcename>
+         <npckname>걸인 로피</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Loffy the Beggar$<BR>Everything should have ended the day when the meteor crashed. Kuehehe.<BR>
+If it did, everyone didn't have to walk towards despair... Now it's too late. Too late!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-accepting-b" mid="71" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Loffy the Beggar$<BR>I know, and even my hound knows, but how come nobody else knows? Foolish clerics!<BR>
+The Goddess abandoned us. She'll never wake up again. Heehee.<BR>
+So you go and clear one round. Since today may be your last day. Kuehehehehe!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-accepting-acceptted" mid="11" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$[Daily] Meteor Crash Site Core$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-1" image="QW_63.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="73"><![CDATA[<html>$Loffy the Beggar${action:Talk}<BR>Run before everything ends, run! Woofwoof!<BR>Why don't you go and run until you're out of breath at <FONT color=#a82424>Meteor Crash Site Core</FONT>? Uehehe, kuehehehe!<BR><FONT color=#7e12d2>(Loffy laughs madly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-2-a" mid="76" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Loffy the Beggar$<BR>Everyday we're heading towards the end of the world.<BR>
+When the light flashes one day, you will then know what the goddess's will is.<BR>
+Am I right, Houndy? Uehehehe....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-2-b" mid="78" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="79"><![CDATA[<html>$Loffy the Beggar$<BR>I can't give you my hound in my head! He is all that's left for me.<BR>
+But you're different. You still have future....<BR>
+Future? Is there such things left!? Except for running and running today and tomorrow as well? Kuehehe!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">10930,,,,,,,,,</exe>
+         <exe type="setquest">1093</exe>
+         <exe type="talk" npc="n087_beggar">1</exe>
+         <exe type="checkStageClearRank" rand="6" num="632" onexe="4,5,6" true="[=" xsi:nil="true" />
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">10930,,,,,,,,,</exe>
+         <exe type="complete" true="">1093</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n087_beggar" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n087_beggar" sub="acceptted">1,2,3</exelink>
+   <exelink qstep="2" npc="n087_beggar" sub="a">0</exelink>
+   <exelink qstep="2" npc="n087_beggar" sub="b">1</exelink>
+   <journal_data recompense="10930" quest_title="[일일] 운석 낙하지 중심부" chapterid="" quest_level="51" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_63.dds</contents_image>
+         <destination_pos>632,0,0</destination_pos>
+         <destination_mode>custom:631@3,632@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>24</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="42"><![CDATA[Meteor Crash Site Core Patrol]]></title>
+         <contents mid="43"><![CDATA[<html>Patrol Meteor Crash Site Core.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance) </FONT><FONT color=#a82424>→ Meteor Crash Site Core</FONT></html>]]></contents>
+         <destination mid="44"><![CDATA[Meteor Crash Site Core]]></destination>
+         <todo_msg mid="45"><![CDATA[Defeat monsters at Meteor Crash Site Core.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Beggar.dds</contents_image>
+         <destination_pos>11,n87</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>87</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="46"><![CDATA[Report to Loffy the Beggar]]></title>
+         <contents mid="47"><![CDATA[<html>Report to Saint Haven's Loffy the Beggar.<BR><BR><FONT color=#086171>Saint Haven </FONT><FONT color=#a82424>→ Loffy the Beggar</FONT></html>]]></contents>
+         <destination mid="48"><![CDATA[Report to Loffy the Beggar]]></destination>
+         <todo_msg mid="49"><![CDATA[Go back and report to Loffy the Beggar.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>50:59</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,79 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc24_3742_promise_buff2</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>3742</qid>
+      <designer>노지혜</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[New Year Return Oath Buff]]></qkname>
+      <qnpc>
+         <npcid>2695</npcid>
+         <npcename>n2695_officiant_teramai</npcename>
+         <npckname>주례 테렌스 테라마이</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2695_officiant_teramai-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2695_officiant_teramai-accepting-ok" mid="7" select_type="0"><![CDATA[<html>[OK]</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Officiator Terrence Terramai$<BR>You want to share this happiness with everyone instead of just the people here, right? Haha, that’s a good heart to have.<BR>I have a <FONT color=#a82424>gift</FONT> for you. Take a look at it later.<BR>
+<FONT color=#7e12d2>※ Click [OK] and Terrence Terramai will give you a special quest.</FONT><BR>
+<FONT color=#7e12d2>※ Open the Quest screen (U) and check it out.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2695_officiant_teramai-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Officiator Terramai$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="talk" npc="n2695_officiant_teramai">1</exe>
+         <exe type="additem" num="1">268484097</exe>
+         <exe type="setquest">3741</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2695_officiant_teramai" sub="ok">2</exelink>
+   <journal_data recompense="" quest_title="언약 세헤 답례용 버프" chapterid="-1" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

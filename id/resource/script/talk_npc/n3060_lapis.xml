@@ -1,0 +1,35 @@
+   <talk>
+      <npcename>n3060_lapis</npcename>
+      <npcid>3060</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Lapis (Red Waste)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="6"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Lapis$<BR>My old friend. It's been a long time.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="8" link_target="mqc27_9923_the_coming_threat.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>Approaching Danger</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="9"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Lapis$<BR>It's a pleasure to see you again.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="van" image="" itemindex="">
+         <talk_answer link_index="quest_van" mid="12"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="11"><![CDATA[<html>$Lapis$<BR>
+I never thought I'd see you here…</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest_van" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="14" link_target="sq_3889_quietly_hiding.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Person Living in Silence</FONT></html>]]></talk_answer>
+         <talk_answer link_index="van" mid="15"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="13"><![CDATA[<html>$Lapis$<BR>
+What's going on?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="talk">van</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">10</chk>
+      </conditions>
+   </talk>

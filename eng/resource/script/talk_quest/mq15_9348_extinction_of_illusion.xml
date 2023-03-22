@@ -1,0 +1,256 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq15_9348_extinction_of_illusion</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>7</qchapter>
+      <qid>9348</qid>
+      <designer>정진호</designer>
+      <qlevel>45</qlevel>
+      <qdesc>루나와 일루전을 쫓아 '용추종자 점거지'로 가는 유저.
+일루전과 대치하고, 마지막으로 제압한다.
+(몹 처리)
+
+일루전과 대화.(투명 npc 등으로 처리) 그는 '몇 번이고 말했지. 저 여자는 너를 속이고 있다'고 말한다. '나도 속았지. 놓아줄 수 없었기 때문에 나는 시간을...' 중얼거림을 끝으로 목소리가 잦아든다. 유저는 자신이 그를 완전히 제압했음을 깨닫는다.
+
+루나는 '이번에는 누구지? 일루전인가 아니면...' 하고 묻는다. 유저가 자신임을 밝히자, 루나는 그에게 '이제 당신이 계속 살아가는 수밖에 없어.' 하고 중얼거린다.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9349</nextqid>
+      <nextqname>mq15_9349_abruptly_farewell</nextqname>
+      <nextqnpc>n1177_lunaria</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Illusion's Disintegration]]></qkname>
+      <qnpc>
+         <npcid>1015</npcid>
+         <npcename>n1015_academic</npcename>
+         <npckname>아카데믹 코멜리나</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1207</npcid>
+         <npcename>n1207_illusion</npcename>
+         <npckname>일루전</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1208</npcid>
+         <npcename>n1208_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>575</npcid>
+         <npcename>n575_shadow_meow</npcename>
+         <npckname>그림자 냥</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n575_shadow_meow-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n575_shadow_meow-accepting-acceptted" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Shadow Neko$<BR>Nya? You're back to my good disciple?!!<BR>Welcome back! Nyay! …Wait… It's weird.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n575_shadow_meow-1" image="QW_54.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n575_shadow_meow-1-" mid="10" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Shadow Neko$<BR>Why are you going to the Dragon Follower Base?<BR>I don't know what's happening but I wish you all the best, my disciple.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1015_academic-1" image="QW_54.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1015_academic-1-a" mid="12" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Academic Comelina$<BR>The man was running towards <FONT color=#a82424>Dragon Follower Base</FONT>.<BR>I'm certain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1015_academic-1-a" image="QW_54.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1015_academic-1-" mid="14" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Illusion must have been separated from me.<BR>If he ran there, Lunaria is probably there too.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-1-" mid="17" select_type="5" />
+      <talk_question mid="16"><![CDATA[<html>$Lunaria$<BR>Your choice is your destiny.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1207_illusion-1-a" mid="19" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Illusion$<BR>Stupid fool.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1207_illusion-1-b" mid="21" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Illusion$<BR>I've told you time and again.<BR>I am YOU. A more complete you who has realized which path I should take after being stupidly dragged along for a while.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1207_illusion-1-c" mid="23" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I will decide whether you are the more complete version of me or not.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1207_illusion-1-d" mid="25" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Illusion$<BR>I've already told you that woman is deceiving you.<BR>I've warned you time and again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1207_illusion-1-e" mid="27" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Illusion$<BR>I was deceived too.<BR>When I realized that I should let go, everything was swept by time and disappeared.<BR>When I realized that I should let go, I also realized that I shouldn't have held onto her from the beginning.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1207_illusion-1-f" mid="29" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Illusion$<BR>Like how that woman is, time will never return for us.<BR>…Did I just say "us"? We're like brothers. Small branches growing from the main branch.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1207_illusion-1-g" mid="31" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I still don't understand what you're talking about.<BR>Why do you keep saying Lunaria is deceiving me? You were the one who brought her and appeared in front of me!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1207_illusion-1-h" mid="33" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Illusion$<BR>Kekek… since you've successfully erased me off, you will soon realize it too.<BR>It must be time. The time when you are unable to let go as well…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1207_illusion-1-i" mid="35" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Illusion$<BR>Hey, Lunaria.<BR>You have made the wrong choice from the beginning. You made the wrong choice to hold on.<BR>I couldn't let you go, and you… deceived…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1207_illusion-1-j" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Illusion$<BR>You're just…… deceiving yourself too……!<BR>Lunaria……!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-1-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1207_illusion-2" mid="37" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Illusion?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1207_illusion-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1207_illusion-2-" mid="40" select_type="5" />
+      <talk_question mid="39"><![CDATA[<html><FONT color=#7e12d2>(Illusion has become completely transparent and disappeared into {user_nick}.<BR>Nothing can be heard anymore)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-a" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Lunaria$<BR>…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-b" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Lunaria.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-c" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Lunaria$<BR>…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-d" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Lunaria?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-e" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Lunaria$<BR>Who are you?<BR>Illusion or……</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-f" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Or?<BR>I'm me, Lunaria.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-g" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Lunaria$<BR>…….<BR>Yes. You are you. Your choice will be your fate.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-h" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Lunaria$<BR><FONT color=#387206>{user_nick},</FONT> it's finally you.<BR><FONT color=#7e12d2>(Lunaria smiles vaguely)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-i" mid="58" select_type="4" />
+      <talk_question mid="57"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1208_lunaria-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1208_lunaria-2-!next" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Lunaria$<BR>Now you have no choice but to live as yourself.<BR>You are standing here as yourself right now, not as anyone else.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9348</exe>
+         <exe type="talk" npc="n575_shadow_meow">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">93480,,,,,,,,,</exe>
+         <exe type="complete" true="">9348</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n575_shadow_meow" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n1015_academic" sub="" />
+   <exelink qstep="1" npc="n1207_illusion" sub="b" />
+   <exelink qstep="1" npc="n1207_illusion" sub="c" />
+   <exelink qstep="1" npc="n1207_illusion" sub="d" />
+   <exelink qstep="1" npc="n1207_illusion" sub="e" />
+   <exelink qstep="1" npc="n1207_illusion" sub="f" />
+   <exelink qstep="1" npc="n1207_illusion" sub="g" />
+   <exelink qstep="1" npc="n1207_illusion" sub="h" />
+   <exelink qstep="1" npc="n1207_illusion" sub="i" />
+   <exelink qstep="1" npc="n1207_illusion" sub="j" />
+   <exelink qstep="1" npc="n1207_illusion" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n1208_lunaria" sub="b" />
+   <exelink qstep="2" npc="n1208_lunaria" sub="c" />
+   <exelink qstep="2" npc="n1208_lunaria" sub="d" />
+   <exelink qstep="2" npc="n1208_lunaria" sub="e" />
+   <exelink qstep="2" npc="n1208_lunaria" sub="f" />
+   <exelink qstep="2" npc="n1208_lunaria" sub="g" />
+   <exelink qstep="2" npc="n1208_lunaria" sub="h">0</exelink>
+   <exelink qstep="2" npc="n1208_lunaria" sub="i">1</exelink>
+   <exelink qstep="2" npc="n1208_lunaria" sub="!next" />
+   <journal_data recompense="93480" quest_title="일루전의 소멸" chapterid="7" quest_level="45" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_54.dds</contents_image>
+         <destination_pos>541,0,0</destination_pos>
+         <destination_mode>custom:541@3</destination_mode>
+         <statemark_npcid>1207</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="63"><![CDATA[Illusion's Disintegration I]]></title>
+         <contents mid="64"><![CDATA[<html>Illusion seems to have been separated from you.<BR>
+He must be chasing after Lunaria. Try going to Dragon Follower Base.<BR><BR><FONT color=#086171>Riverwort Wharf (Riverwort Ruins)</FONT> <FONT color=#a82424>- Dragon Follower Base</FONT></html>]]></contents>
+         <destination mid="65"><![CDATA[Dragon Follower Base]]></destination>
+         <todo_msg mid="66"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Lunaria.dds</contents_image>
+         <destination_pos>541,0,0</destination_pos>
+         <destination_mode>custom:541@4</destination_mode>
+         <statemark_npcid>1208</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="67"><![CDATA[Illusion's Disintegration II]]></title>
+         <contents mid="68"><![CDATA[<html>Illusion is gone. It seems like he was completely integrated into you. Talk to Lunaria.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Riverwort Ruins)</FONT> <FONT color=#a82424>- Dragon Follower Base (Lunaria)</FONT></html>]]></contents>
+         <destination mid="69"><![CDATA[Talk to Lunaria at Dragon Follower Base]]></destination>
+         <todo_msg mid="70"><![CDATA[Talk to Lunaria.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>7</user_class>
+      <prev_quest>9347</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

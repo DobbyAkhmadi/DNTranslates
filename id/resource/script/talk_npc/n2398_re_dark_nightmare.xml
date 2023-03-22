@@ -1,0 +1,21 @@
+   <talk>
+      <npcename>n2398_re_dark_nightmare</npcename>
+      <npcid>2398</npcid>
+      <startexe>0</startexe>
+      <comment>998 퀘스트 완료해주는 NPC임다 꺄르르
+프레리타운 근처에서 998 먼저 완료 시켜주면,
+전직 체험 맵 진입했다가 전투 없이 그냥 나와도 프레리타운으로 이동해 버리는 버그가 생겨서 나눠주었음!</comment>
+      <npckname mid="1"><![CDATA[Nightmare Being]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest_end" mid="5"><![CDATA[<html><FONT color=#7e12d2>(The monster disappears.)</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html><FONT color=#2b2723>$Nightmare Being$<BR></FONT><FONT color=#a82424>It could have been mine……</FONT><BR>
+<FONT color=#a82424>Grrrrgh……</FONT><BR>
+<FONT color=#a82424>……Human…… body……</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 998, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="quest_end">1</exelink>
+   </talk>

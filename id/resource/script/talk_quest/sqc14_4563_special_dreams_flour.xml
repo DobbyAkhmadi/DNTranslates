@@ -1,0 +1,160 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc14_4563_special_dreams_flour</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4563</qid>
+      <designer>이세정</designer>
+      <qlevel>73</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>4564</nextqid>
+      <nextqname>sqc14_4564_harassment_rights</nextqname>
+      <nextqnpc>n1609_sorceress_pochetel</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Special Secret Dream Powder]]></qkname>
+      <qnpc>
+         <npcid>1609</npcid>
+         <npcename>n1609_sorceress_pochetel</npcename>
+         <npckname>소서리스 포슈텔</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1609_sorceress_pochetel-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1609_sorceress_pochetel-accepting-a" mid="21" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Sorceress Posh$<BR>Kayleen tidak akan sadar walaupun kamu sedang berada di dalam mimpinya jika kamu menggunakan ini <FONT color=#7e12d2> Powerful dream powder</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1609_sorceress_pochetel-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1609_sorceress_pochetel-accepting-acceptted" mid="22" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Special Secret Dream Powder$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1609_sorceress_pochetel-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1609_sorceress_pochetel-2" mid="53" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Sorceress Posh$<BR>Aku butuh <FONT color=#a82424>Forgetfulness Crystal</FONT> yang digunakan oleh hantu yang berkeliaran di Monolith untuk menyembunyikan diri mereka sendiri.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1609_sorceress_pochetel-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="10"><![CDATA[<html>$Sorceress Posh$<BR>Aku akan mempersiapkan bahan lainnya untuk mulai membuat Dream Powder secepat mungkin saat kamu kembali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1609_sorceress_pochetel-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1609_sorceress_pochetel-3-a" mid="48" select_type="0"><![CDATA[<html>(Dia mengingatkanku pada Karahan...)</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Sorceress Posh$<BR>Seperti yang kuduga! <FONT color=#a94407>Forgetfulness Crystal</FONT> ada di dalam Monolith. <BR>Aku Jenius bangettt.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1609_sorceress_pochetel-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1609_sorceress_pochetel-3-b" mid="50" select_type="0"><![CDATA[<html><FONT color=#086171>Menerima Reward</FONT></html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Quest Reward$ </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1609_sorceress_pochetel-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1609_sorceress_pochetel-3-!next" mid="61" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Sorceress Posh$<BR>Sekarang, aku akan membuat  dream powder!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">45630,,,,,,,,,</exe>
+         <exe type="setquest">4563</exe>
+         <exe type="talk" npc="n1609_sorceress_pochetel">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="huntitem" num="1" exe="" onexe="5,3,4">400434</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="delcount">.</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">45630,,,,,,,,,</exe>
+         <exe type="complete" true="">4563</exe>
+         <exe type="delquestitem" num="-1">400434</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1609_sorceress_pochetel" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n1609_sorceress_pochetel" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n1609_sorceress_pochetel" sub="2">0,1,2</exelink>
+   <exelink qstep="3" npc="n1609_sorceress_pochetel" sub="a">0,2</exelink>
+   <exelink qstep="3" npc="n1609_sorceress_pochetel" sub="b">1</exelink>
+   <exelink qstep="3" npc="n1609_sorceress_pochetel" sub="!next" />
+   <journal_data recompense="45630" quest_title="스페셜 비밀의 꿈가루" chapterid="" quest_level="73" quest_mark_type="10" use_item_list="400434">
+      <journal index="1">
+         <contents_image>QN_Npc_pochetel.dds</contents_image>
+         <destination_pos>34,n1609</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="13"><![CDATA[Posh's Request]]></title>
+         <contents mid="14"><![CDATA[<html>Posh meminta bantuanmu dalam pembuatan dream powder yang lebih kuat.<BR><BR><FONT color=#086171>Anu Arendel </FONT><FONT color=#a82424>→ Posh</FONT></html>]]></contents>
+         <destination mid="15"><![CDATA[Berbicara kepada Posh]]></destination>
+         <todo_msg mid="16"><![CDATA[Quest ditambahkan]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_92.dds</contents_image>
+         <destination_pos>1021,0,0</destination_pos>
+         <destination_mode>custom:1021@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="17"><![CDATA[Cari Forgetfulness Crystal]]></title>
+         <contents mid="18"><![CDATA[<html>Pergilah ke Flame Canyon dan cari Forgetfulness Crystal.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance) </FONT><FONT color=#a82424> → Flame Canyon (Forgetfulness Crystal)</FONT></html>]]></contents>
+         <destination mid="19"><![CDATA[Flame Canyon]]></destination>
+         <todo_msg mid="20"><![CDATA[Menuju ke Flame Canyon untuk mencari Forgetfulness Crystal.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_AnuarendelGateway.dds</contents_image>
+         <destination_pos>34,n1609</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1609</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="57"><![CDATA[Berbicara kepada Posh]]></title>
+         <contents mid="58"><![CDATA[<html>Kamu telah mendapatkan Forgetfulness Crystal. Kembali ke Anu Arendel dan berikan ke Posh.<BR><BR><FONT color=#086171>Anu Arendel </FONT><FONT color=#a82424>→ Posh</FONT></html>]]></contents>
+         <destination mid="59"><![CDATA[Berbicara kepada Posh]]></destination>
+         <todo_msg mid="60"><![CDATA[Kembali ke Anu Arendel dan berbicara pada Posh.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>73:-1</user_level>
+      <user_class />
+      <prev_quest>4562</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

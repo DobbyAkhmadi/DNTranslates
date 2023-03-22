@@ -1,0 +1,198 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_870_call_or_create</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>870</qid>
+      <designer>김인정</designer>
+      <qlevel>52</qlevel>
+      <qdesc>이상한 껍질 표본	300508
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>871</nextqid>
+      <nextqname>sq15_871_models_knowhow</nextqname>
+      <nextqnpc>n045_soceress_master_stella</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Call or Make]]></qkname>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>45</npcid>
+         <npcename>n045_soceress_master_stella</npcename>
+         <npckname>상급 소서리스 스텔라</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-noquest" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="72"><![CDATA[<html>$Master Sorceress Stella$<BR>What? I'm busy writing the Karacule Chronicles now.<BR>
+You should go to Adventurer's Guild Master if you're free.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting" image="QS_Default.dds" itemindex="300507" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>What was found at <FONT color=#a82424>Mutant's Habitat</FONT> was the handicraft of the natives of Lotus Marsh.<BR>Since they have lived there long time ago, maybe they created the monsters using some spells.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Call or Make$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="QN_Npc_SoceressStella.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Adventurer's Guild Master Jose${action:Talk}<BR>Hmm… I'm not sure.<BR>We shouldn't rely on the Order alone. I'm thinking of asking some advice from <FONT color=#a82424>Master Sorceress Stella</FONT> too. Can you go and ask her?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-a" mid="76" select_type="0"><![CDATA[<html>(Explain the situation)</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Master Sorceress Stella${action:Talk}<BR>
+Ah~ What should I write for the next part of the Karacule chronicles? Karacule flew away on a leaf? Uhhh~<BR>
+<FONT color=#7e12d2>(Stella suddenly lifts her head)</FONT><BR>
+…What? What is it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-a" image="QS_Default.dds" itemindex="300506" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-b" mid="78" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Master Sorceress Stella$<BR>Oh that. I received some of those beetle egg shells that you collected last time.<BR>After investigating, I found out that it had a different outcome from the mutations due to the Lotus Marsh natives' totem.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-c" mid="80" select_type="0"><![CDATA[<html>(Stella doesn't look pleased)</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Master Sorceress Stella$<BR>I may be biased but… I think the natives are good people.<BR>
+That's what I learnt from Tamara too, and we know well about their village too.<BR>
+I don't think they called the monsters without a special reason.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-2" mid="82" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Master Sorceress Stella$<BR>If they really summoned the monsters, there must be a summoning device but have you seen such a thing there? No, am I right?<BR>I haven't seen one too. So I have another hypothesis….<BR>And I want to check it one more time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-2" image="QW_59.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="83"><![CDATA[<html>$Master Sorceress Stella${action:Talk}<BR><FONT color=#387206>{user_nick}</FONT>, won't you go to <FONT color=#a82424>Mutant's Habitat</FONT> and collect monster specimen from there?<BR>A strong monster's specimen will do.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-3-a" mid="86" select_type="0"><![CDATA[<html>Here it is.</html>]]></talk_answer>
+      <talk_question mid="85"><![CDATA[<html>$Master Sorceress Stella${action:Talk}<BR>Indeed, you're quick.<BR>Show me what you've brought.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-3-a" image="QS_Default.dds" itemindex="300508" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-3-b" mid="88" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="87"><![CDATA[<html>$Master Sorceress Stella$<BR>Hmm….<BR><FONT color=#7e12d2>(Stella observes the specimen deep in thought)<BR></FONT>Indeed, I don't feel any sorcery of the natives.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-3-b" image="QS_Default.dds" itemindex="300508" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-3-c" mid="90" select_type="0"><![CDATA[<html>An external factor?</html>]]></talk_answer>
+      <talk_question mid="89"><![CDATA[<html>$Master Sorceress Stella$<BR>According to my genius insticts! …This must be the result of a natural mutation.<BR>Something that is not related to an evil spell or the curse of a totem, but due to an <FONT color=#a82424>external factor</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-3-!next" mid="92" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="91"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">870</exe>
+         <exe type="talk" npc="n036_adventurer_guildmaster_gunter">1</exe>
+         <exe type="recompense_view">8700,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">600061</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">700061</exe>
+         <exe type="addquestitem" num="1">300508</exe>
+         <exe type="huntitem" num="1" exe="" onexe="6,7,8">300508</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">8700,,,,,,,,,</exe>
+         <exe type="complete" true="">870</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="a">2</exelink>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="b" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="c" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="2">0,2,3,5,1</exelink>
+   <exelink qstep="3" npc="n045_soceress_master_stella" sub="b" />
+   <exelink qstep="3" npc="n045_soceress_master_stella" sub="c">0</exelink>
+   <exelink qstep="3" npc="n045_soceress_master_stella" sub="!next">1</exelink>
+   <journal_data recompense="8700" quest_title="부르거나 만들거나" chapterid="" quest_level="52" quest_mark_type="10" use_item_list="300508">
+      <journal index="1">
+         <contents_image>QN_Npc_SoceressStella.dds</contents_image>
+         <destination_pos>11,n45</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>45</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="93"><![CDATA[Talk to Master Sorceress]]></title>
+         <contents mid="94"><![CDATA[<html>Go to Master Sorceress Stella and get some advice about the object.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Master Sorceress Stella</FONT></html>]]></contents>
+         <destination mid="95"><![CDATA[Talk to Master Sorceress Stella]]></destination>
+         <todo_msg mid="96"><![CDATA[Talk to Master Sorceress Stella.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_59.dds</contents_image>
+         <destination_pos>591,0,0</destination_pos>
+         <destination_mode>custom:591@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="97"><![CDATA[To Mutant's Habitat]]></title>
+         <contents mid="98"><![CDATA[<html>Collect monster specimen at Mutant's Habitat.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> <FONT color=#a82424>→ Mutant's Habitat</FONT></html>]]></contents>
+         <destination mid="99"><![CDATA[Mutant's Habitat]]></destination>
+         <todo_msg mid="100"><![CDATA[Collect monster specimen at Mutant's Habitat.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_SoceressStella.dds</contents_image>
+         <destination_pos>11,n45</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>45</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="101"><![CDATA[Give the specimen to Master Sorceress Stella]]></title>
+         <contents mid="102"><![CDATA[<html>Give the monster specimen to Saint Haven's Master Sorceress Stella.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Master Sorceress Stella</FONT></html>]]></contents>
+         <destination mid="103"><![CDATA[Talk to Master Sorceress Stella]]></destination>
+         <todo_msg mid="104"><![CDATA[Report to Master Sorceress Stella.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>51:-1</user_level>
+      <user_class />
+      <prev_quest>869</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

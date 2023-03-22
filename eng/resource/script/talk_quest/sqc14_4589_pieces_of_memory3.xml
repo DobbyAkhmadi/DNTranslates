@@ -1,0 +1,162 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc14_4589_pieces_of_memory3</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4589</qid>
+      <designer>이세정</designer>
+      <qlevel>79</qlevel>
+      <qdesc>바카에프의 럼주통 (400446)</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>4590</nextqid>
+      <nextqname>sqc14_4590_pieces_of_memory4</nextqname>
+      <nextqnpc>n1629_smith</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Fragments of Memories III]]></qkname>
+      <qnpc>
+         <npcid>1629</npcid>
+         <npcename>n1629_smith</npcename>
+         <npckname>해적 스미스</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1629_smith-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1629_smith-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Pirate Smith$<BR>Maybe Lipius is right. The past may be past but...<BR>I'm not giving up!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1629_smith-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1629_smith-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Fragments of Memories III$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1629_smith-1" image="QS_Default.dds" itemindex="400446" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1629_smith-2" mid="10" select_type="0"><![CDATA[<html>Okay.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Pirate Smith$<BR>Now all we can count on is Captain Loffy...<BR>Please go and get some things that might bring back memories for Loffy this time.<BR>Thank you...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1629_smith-2" image="QW_97.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Pirate Smith$<BR>Common pirate stuff will do. Things like rum barrel... or something like that.<BR><FONT color=#7e12d2>(Go to the Praying Heart.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1629_smith-3" image="QN_Npc_ghost_hound.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1629_smith-3-a" mid="13" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Pirate Smith$<BR>Yes... this is a rum barrel... and the toy "Hound" used to play with... This should work.<BR>He used to say that rum flows in our veins, not blood... He can go and die if he can't remember that too. Hahaha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1629_smith-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1629_smith-3-b" mid="15" select_type="0"><![CDATA[<html><FONT color=#086171>Receive Reward</FONT></html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1629_smith-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1629_smith-3-!next" mid="17" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Pirate Smith$<BR>But... but what if he really can't remember...</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">45890,,,,,,,,,</exe>
+         <exe type="setquest">4589</exe>
+         <exe type="talk" npc="n1629_smith">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>바카에프의 럼주통</comment>
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">602120</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">702120</exe>
+         <exe type="huntitem" num="1" exe="" onexe="6,7,8">400446</exe>
+         <exe type="addquestitem" num="1">400446</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">45890,,,,,,,,,</exe>
+         <exe type="complete" true="">4589</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1629_smith" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n1629_smith" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n1629_smith" sub="2">0,1,2,3,4</exelink>
+   <exelink qstep="3" npc="n1629_smith" sub="a">0</exelink>
+   <exelink qstep="3" npc="n1629_smith" sub="b">1</exelink>
+   <exelink qstep="3" npc="n1629_smith" sub="!next" />
+   <journal_data recompense="0:45890" quest_title="기억의 조각들 III" chapterid="" quest_level="79" quest_mark_type="10" use_item_list="400446">
+      <journal index="1">
+         <contents_image>QW_AnuarendelGateway.dds</contents_image>
+         <destination_pos>34,n1629</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1629</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="18"><![CDATA[Of Course He Can't Be Trusted...]]></title>
+         <contents mid="19"><![CDATA[<html>Pirate Smith is now betting on Loffy. Go and talk to him.<BR><BR><FONT color=#086171>Anu Arendel Gateway</FONT><FONT color=#a82424> - Pirate Smith</FONT></html>]]></contents>
+         <destination mid="20"><![CDATA[Talk to Pirate Smith]]></destination>
+         <todo_msg mid="21"><![CDATA[Quest has been added. ]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_97.dds</contents_image>
+         <destination_pos>1072,0,0</destination_pos>
+         <destination_mode>custom:1071@1,1072@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="22"><![CDATA[Collect the pirate items]]></title>
+         <contents mid="23"><![CDATA[<html>Pirate Smith asked you to collect pirate items that might bring Loffy's memories back. Go to the Praying Heart.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT><FONT color=#a82424> - Praying Heart</FONT></html>]]></contents>
+         <destination mid="24"><![CDATA[Praying Heart]]></destination>
+         <todo_msg mid="25"><![CDATA[Collect old pirate items.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_AnuarendelGateway.dds</contents_image>
+         <destination_pos>34,n1629</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1629</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="26"><![CDATA[Remember This?]]></title>
+         <contents mid="27"><![CDATA[<html>You've collected the items. Give them to Pirate Smith.<BR><BR><FONT color=#086171>Anu Arendel</FONT><FONT color=#a82424> - Pirate Smith</FONT></html>]]></contents>
+         <destination mid="28"><![CDATA[Talk to Pirate Smith]]></destination>
+         <todo_msg mid="29"><![CDATA[Return to Pirate Smith in Anu Arendel.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>4588</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

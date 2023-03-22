@@ -1,0 +1,418 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_3821_dream_catcher</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter />
+      <qid>3821</qid>
+      <designer>양희주</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>3822</nextqid>
+      <nextqname>sq_3822_catch_you</nextqname>
+      <nextqnpc>n2944_wisp_butler</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Hero] Dreamcatcher]]></qkname>
+      <qnpc>
+         <npcid>2872</npcid>
+         <npcename>n2872_kanna</npcename>
+         <npckname>치유사 칸나</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2903</npcid>
+         <npcename>n2903_rubinat</npcename>
+         <npckname>타락한 루비나트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2944</npcid>
+         <npcename>n2944_wisp_butler</npcename>
+         <npckname>집사A</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2946</npcid>
+         <npcename>n2946_iris</npcename>
+         <npckname>이리스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2948</npcid>
+         <npcename>n2948_overhear</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-accepting-check" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I feel like someone's calling me...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-accepting-b" mid="8" select_type="0"><![CDATA[<html>Well, I had something on my mind that was distracting me...</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Kanna$<BR>You finally made it, <FONT color=#387206>{user_nick}</FONT>? If you were going to be this late, you might as well have waited until my entire stock of medicine was rotten.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-accepting-c" mid="10" select_type="0"><![CDATA[<html>I just feel like someone's calling me.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Kanna$<BR>What's bothering you?<BR>If you waste all your energy wandering around, you'll end up having even more to worry about. What the heck is it this time?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-accepting-d" mid="12" select_type="0"><![CDATA[<html>It's not like that! It's just…</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Kanna$<BR>Someone calling you? Are you bragging about all the people asking for the ace of the renowned Pymon Mercenaries?<BR>Then why don't you do something about all those mission requests piling up over there?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-accepting-e" mid="14" select_type="0"><![CDATA[<html>(Tells about what is bothering him while drinking tea.)</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Kanna$<BR>Just what? Drink this first. It'll help with your fatigue.<BR><FONT color=#7e12d2>(Kanna hands over a cup of tea.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-accepting-f" mid="113" select_type="0"><![CDATA[<html>It, it's not like that!</html>]]></talk_answer>
+      <talk_question mid="112"><![CDATA[<html>$Kanna$<BR>What? You feel like there's somewhere you should be? ... If you're so concerned, why not just go there directly instead of worrying about it here?<BR>Since when have you been so lazy? Please don't tell me you're sticking around because of me. I'll smack you silly.<BR><FONT color=#7e12d2>(Kanna raises her fist.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-accepting-acceptted" mid="18" select_type="0"><![CDATA[<html><FONT color=#086171>(Accept quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Dreamcatcher$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-accepting-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(I don't think it's time yet.)</FONT><BR><BR><FONT color=#7e12d2>※ You need to reach </FONT><FONT color=#a82424>Hero Level 2000 </FONT><FONT color=#7e12d2>and obtain your </FONT><FONT color=#a82424>2nd Specialization</FONT><FONT color=#7e12d2>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-1" image="QW_Rhadames.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Kanna$<BR>If that's not the case, why are you standing their like an old sloth? Come on! Move!<BR><BR><FONT color=#7e12d2>※ Go to </FONT><FONT color=#a82424>Rhadames.</FONT><FONT color=#7e12d2> (If you ask </FONT><FONT color=#a82424>Ticket Agent Itahyang </FONT><FONT color=#7e12d2>you can get there quickly.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2903_rubinat-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2903_rubinat-1-a" mid="29" select_type="0"><![CDATA[<html>That dragon? Isn't that the Red Dragon from before? No, something's different...</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Red Dragon Lookalike$<BR>……….<BR><FONT color=#7e12d2>(Someone who looks just like the Red Dragon...?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2903_rubinat-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2903_rubinat-1-talk1" mid="31" select_type="0"><![CDATA[<html>Wings!? Hey, wait up!</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Red Dragon Lookalike$<FONT color=#2b2723><BR></FONT><FONT color=#7e12d2>(He takes off in the direction of </FONT><FONT color=#a82424>Foggy Black Lake</FONT><FONT color=#7e12d2> as soon as your eyes meet.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="32"><![CDATA[<html>$Butler A$<BR>Missed it again!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="33"><![CDATA[<html>$Iris$<BR>You're holding something important.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2948_overhear-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="110"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Butler A$<BR>
+Missed it again!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2948_overhear-2" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2948_overhear-2-a" mid="37" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I just saw someone very similar to the Red Dragon... But, was he really someone else?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2948_overhear-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2948_overhear-2-b" mid="39" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But something's still bothering me that I can't get over...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2948_overhear-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2948_overhear-2-talk2" mid="115" select_type="0"><![CDATA[<html>(Let's check)</html>]]></talk_answer>
+      <talk_question mid="114"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(It feels like something is approaching.)</FONT><BR><FONT color=#662500>Who is that?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2942_geraint-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(It feels like something is approaching.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-3-a" mid="44" select_type="0"><![CDATA[<html>That's... A wisp?</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Butler A$<BR>Missed it again! <FONT color=#7e12d2>(It pops up out of nowhere.)</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3-a" image="QS_Default.dds" itemindex="400696" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-3-b" mid="118" select_type="0"><![CDATA[<html>That hologram old man, how the heck is he managing security?</html>]]></talk_answer>
+      <talk_question mid="117"><![CDATA[<html>$Butler A$<BR>I'm sure I'll be hearing it from Master later...<BR><FONT color=#7e12d2>(Throws the broken net on the floor.)</FONT><BR><FONT color=#2b2723>What are we going to do with this useless junk?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-3-c" mid="46" select_type="0"><![CDATA[<html>That wisp can talk…? But more importantly, are you saying we've met before?</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Butler A$<BR>Huh? You are… Wait, put that weapon away! Have you already forgotten our last meeting?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-3-d" mid="120" select_type="0"><![CDATA[<html>The guest must look like me, right?</html>]]></talk_answer>
+      <talk_question mid="119"><![CDATA[<html>$Butler A$<BR>Yes, yes, you are the guest I saw at the nest… Aren't you?<BR><FONT color=#7e12d2>(The wisp is sweating.)</FONT><BR>But you still have a very similar vibe to that guest. I'm not an enemy, so please put away your weapon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-3-e" mid="48" select_type="0"><![CDATA[<html>A wisp butler... Anyway, what are you looking for?</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Butler A$<BR>Yes, your energy is somewhat similar to him. Anyway, nice to meet you.<BR>I'm <FONT color=#a82424>Butler A/FONT>, who slaves away under the yoke of <FONT color=#a82424>overtime</FONT>, <FONT color=#a82424>night shifts</FONT>, <FONT color=#a82424>menial chores</FONT>, and<FONT color=#a82424>low wages</FONT>… Oh, now's not time for chatter. We must catch him quickly!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3-e" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-3-f" mid="50" select_type="0"><![CDATA[<html>(The Red Dragon I saw earlier?) Are you talking about Rubinart, the Red Dragon?</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Butler A$<BR>A conceptual apparition has escaped... Did you happen to see him recently?<BR>He has red hair and emits a sort of dark energy...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3-f" image="QS_Default.dds" itemindex="400696" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-3-g" mid="52" select_type="0"><![CDATA[<html>What is that net anyway?</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Butler A$<BR>Yes, that's him. I tried so hard to catch him with this net...<BR>Could you fix this net for me? I have to find him. He must be somewhere around here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3-g" image="QS_Default.dds" itemindex="400696" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-3-h" mid="54" select_type="0"><![CDATA[<html>But why do you need to catch the Red Dragon with it?</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Butler A$<BR>This was left by him during an experiment. He called it a <FONT color=#a82424>Dreamcatcher</FONT>.<BR>He told me that he could use it to catch intentions or dreams or something...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-3-i" mid="56" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Butler A throws the net at you.)</FONT></html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Butler A$<BR>Well, all of a sudden he was just wandering around the Black Lake, so I grabbed anything I could use to catch him as soon as possible... Anyway, I don't have time to stand around chatting.<BR>If I don't catch it soon, I'll definitely hear it from Master later. Please help me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-3-i" image="QW_Merca_Heart.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="57"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>How could he expect me to fix something made by a dragon...</FONT><BR><FONT color=#662500>Maybe I'll find some clues in Merca.</FONT><BR><BR><FONT color=#7e12d2>※ </FONT>Go to<FONT color=#a82424>Merca's Heart</FONT><FONT color=#7e12d2>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="59"><![CDATA[<html>$Butler A$<BR>We really need to catch him soon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2946_iris-4-a" mid="61" select_type="0"><![CDATA[<html>What is it, kid?</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Iris$<BR>You seem to possess an object of great importance. I, Iris, can be of assistance to you. Shall I lend you a hand?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-4-a" image="QS_Default.dds" itemindex="400696" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2946_iris-4-b" mid="63" select_type="0"><![CDATA[<html>Catching something that does not exist?<FONT color=#7e12d2> (Come to think of it, wasn't it supposed to catch dreams?)</FONT></html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Iris$<BR>I'm not a kid. I, Iris know what <FONT color=#387206>{user_nick}</FONT> possesses. It's an object used for catching something that does not exist.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2946_iris-4-c" mid="65" select_type="0"><![CDATA[<html>I don't fully understand, but are you at least saying it can be fixed?</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>$Iris$<BR>However, the object in your possession is in bad shape, <FONT color=#387206>{user_nick}</FONT>. If you do carefully not reweave the net, you may never be able to use it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2946_iris-4-talk4" mid="67" select_type="0"><![CDATA[u<html><FONT color=#7e12d2>(Birds and mice?)</FONT> So you want me to wait, right?</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Iris$<BR>Iris can do that. But perhaps there are birds and mice flitting about nearby...<BR>If the birds and mice go to sleep, I'll reweave the net.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="68"><![CDATA[<html>$Butler A$<BR>We really need to catch him soon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-5" image="QS_Default.dds" itemindex="400698" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2946_iris-5-a" mid="70" select_type="0"><![CDATA[<html>Oh, thanks. But why are you helping me?</html>]]></talk_answer>
+      <talk_question mid="69"><![CDATA[<html>$Iris$<BR>Now that the birds and mice have gone to sleep, I, Iris, will help you. That which is clean is better than that which is dirty.<BR><FONT color=#7e12d2>(When Iris touches the net, it seems to improve in appearance.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2946_iris-5-b" mid="72" select_type="0"><![CDATA[<html>This netting...? It can help me?</html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Iris$<BR>Well... It's because Rubinart wants me to. And I'm sure this will help you, FONT color=#387206>{user_nick}</FONT>. The woven thread may also harden. Wouldn't that be a good thing?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2946_iris-5-c" mid="74" select_type="0"><![CDATA[<html>You're saying he summoned me?</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Iris$<BR>It will be good for you, <FONT color=#387206>{user_nick}</FONT>, if the thread hardens. When something hardens,it becomes more durable. Isn't that why you went to see Rubinart?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2946_iris-5-d" mid="108" select_type="0"><![CDATA[<html>(She speaks in riddles.)</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Iris$<BR>To be exact, you were attracted to each other. You and Rubinart are connected, <FONT color=#387206>{user_nick}</FONT>. That's why Rubinart called himself, and why he now calls you, too.]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-5-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2946_iris-5-talk6" mid="123" select_type="0"><![CDATA[<html>I'm not sure, but... I'll learn more when I go there.</html>]]></talk_answer>
+      <talk_question mid="122"><![CDATA[<html>$Iris$<BR>Does that mean Rubinart's waiting for you, <FONT color=#387206>{user_nick}</FONT>?<BR>Or, are you looking for Rubinart, <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2946_iris-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="76"><![CDATA[<html>$Iris$<BR>Rubinart will still be there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-6-a" mid="78" select_type="0"><![CDATA[<html>Of course. <FONT color=#7e12d2>(Shows the repaired net.)</FONT></html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Butler A$<BR>Just where did he disappear to…<BR>Oh, you're back. Did you repair the net?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-6-a" image="QS_Default.dds" itemindex="400698" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-6-b" mid="80" select_type="0"><![CDATA[<html>Speaking of which, can I come with you to catch the Red Dragon?</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Butler A$<BR>Oh, what a fine item. This looks completely different from that hole-riddled piece of junk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-6-c" mid="82" select_type="0"><![CDATA[<html>Sure, why not? (I could at least speak with him then.)</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Butler A$<BR>To catch him? Hmm… Of course. Then may I ask you to grab hold of him with this net?<BR>All you have to do is catch him with it.<BR>I've tried and failed many times already.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-6-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-6-d" mid="84" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="83"><![CDATA[<html>$Butler A$<BR>Thank you. Then I will return to <FONT color=#a82424>Foggy Black Lake</FONT> immediately. If you have anything to prepare, please do so quickly and join me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2944_wisp_butler-6-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2944_wisp_butler-6-end1" mid="86" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="85"><![CDATA[<html>$Quest Completed$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="missionAchieved">5232</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">3821</exe>
+         <exe type="recompense_view">38210,,,,,,,,,,</exe>
+         <exe type="talk" npc="n2872_kanna">1</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="talk" npc="n2872_kanna">a</exe>
+         <exe type="talk" npc="n2872_kanna">g</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="addquestitem" num="1">400696</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="1">400698</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="delquestitem" num="-1">400696</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">3821</exe>
+         <exe type="recompense">38210,,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2872_kanna" sub="check">3</exelink>
+   <exelink qstep="accepting" npc="n2872_kanna" sub="f">1</exelink>
+   <exelink qstep="accepting" npc="n2872_kanna" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n2903_rubinat" sub="talk1">0,1</exelink>
+   <exelink qstep="2" npc="n2948_overhear" sub="b" />
+   <exelink qstep="2" npc="n2948_overhear" sub="talk2">0,1</exelink>
+   <exelink qstep="3" npc="n2944_wisp_butler" sub="b" />
+   <exelink qstep="3" npc="n2944_wisp_butler" sub="c" />
+   <exelink qstep="3" npc="n2944_wisp_butler" sub="d" />
+   <exelink qstep="3" npc="n2944_wisp_butler" sub="e" />
+   <exelink qstep="3" npc="n2944_wisp_butler" sub="f" />
+   <exelink qstep="3" npc="n2944_wisp_butler" sub="g" />
+   <exelink qstep="3" npc="n2944_wisp_butler" sub="h" />
+   <exelink qstep="3" npc="n2944_wisp_butler" sub="i">0,1,2</exelink>
+   <exelink qstep="4" npc="n2946_iris" sub="b" />
+   <exelink qstep="4" npc="n2946_iris" sub="c" />
+   <exelink qstep="4" npc="n2946_iris" sub="talk4">0,1</exelink>
+   <exelink qstep="5" npc="n2946_iris" sub="b" />
+   <exelink qstep="5" npc="n2946_iris" sub="c" />
+   <exelink qstep="5" npc="n2946_iris" sub="d" />
+   <exelink qstep="5" npc="n2946_iris" sub="talk6">0,1,2,3</exelink>
+   <exelink qstep="6" npc="n2944_wisp_butler" sub="b" />
+   <exelink qstep="6" npc="n2944_wisp_butler" sub="c" />
+   <exelink qstep="6" npc="n2944_wisp_butler" sub="d">1</exelink>
+   <exelink qstep="6" npc="n2944_wisp_butler" sub="end1">0</exelink>
+   <journal_data recompense="38210" quest_title="[영웅] 꿈을 잡는 그물" chapterid="-1" quest_level="95" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_Rhadames.dds</contents_image>
+         <destination_pos>175,n2903</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2903</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="23"><![CDATA[[Hero] Dreamcatcher Ⅰ]]></title>
+         <contents mid="24"><![CDATA[<html><FONT color=#2b2723>It is as if someone is calling you. For whatever reason, it seems you should go to them.</FONT><BR><FONT color=#2b2723><BR></FONT><FONT color=#086171>Rhadames</FONT> -<FONT color=#a82424> ???</FONT></html>]]></contents>
+         <destination mid="25"><![CDATA[Meet Someone in Rhadames]]></destination>
+         <todo_msg mid="26"><![CDATA[Let's go to Rhadames.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos>175,n2948</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2948</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="88"><![CDATA[[Hero] Dreamcatcher Ⅱ]]></title>
+         <contents mid="89"><![CDATA[<html><FONT color=#2b2723>The Red Dragon that departed looks quite different from the one you've seen before. Could it be a different person? You should give this some thought.<BR><BR></FONT><FONT color=#086171>Rhadames</FONT> -<FONT color=#a82424> ???</FONT></html>]]></contents>
+         <destination mid="90"><![CDATA[Organize your thoughts in a corner of Rhadames.]]></destination>
+         <todo_msg mid="91"><![CDATA[Spend some time alone organizing your thoughts.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image />
+         <destination_pos>175,n2944</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2944</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="92"><![CDATA[[Hero] Dreamcatcher ⅡI]]></title>
+         <contents mid="93"><![CDATA[<html><FONT color=#2b2723>While you were organizing your thoughts, you felt someone approaching. It's a wisp. It looks like he's trying to catch something. Ask him what he's doing.<BR><BR></FONT><FONT color=#086171>Rhadames</FONT> -<FONT color=#a82424> Butler A</FONT></html>]]></contents>
+         <destination mid="94"><![CDATA[Ask Butler A in Rhadames what he is doing]]></destination>
+         <todo_msg mid="95"><![CDATA[Let's speak with Butler A.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image />
+         <destination_pos>54,n2946</destination_pos>
+         <destination_mode>custom:54@1</destination_mode>
+         <statemark_npcid>2946</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="96"><![CDATA[[Hero] Dreamcatcher IV]]></title>
+         <contents mid="97"><![CDATA[<html>Butler A asked you to repair the Dreamcatcher that Red Dragon Rubinart left behind. <FONT color=#2b2723> You should be able to find a way to fix the net if you go to Merca's Heart, right?</FONT><BR><BR><FONT color=#086171>Merca's Heart</FONT> -<FONT color=#a82424> ???</FONT></html>]]></contents>
+         <destination mid="98"><![CDATA[Talk to someone in Merca]]></destination>
+         <todo_msg mid="99"><![CDATA[Let's go to Merca's Heart.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image />
+         <destination_pos>54,n2946</destination_pos>
+         <destination_mode>custom:54@1</destination_mode>
+         <statemark_npcid>2946</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="100"><![CDATA[[Hero] Dreamcatcher Ⅴ]]></title>
+         <contents mid="101"><![CDATA[<html><FONT color=#2b2723>Iris told you to wait for a while because the birds and mice are still around, </FONT><FONT color=#2b2723>but now she seems to have something to say. Show Iris the net and get it fixed.<BR><BR></FONT><FONT color=#086171>Merca's Heart</FONT> -<FONT color=#a82424> Iris</FONT></html>]]></contents>
+         <destination mid="102"><![CDATA[Talk to Iris in Merca]]></destination>
+         <todo_msg mid="103"><![CDATA[Let's talk to Iris again.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image />
+         <destination_pos>175,n2944</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2944</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="104"><![CDATA[[Hero] Dreamcatcher Ⅵ]]></title>
+         <contents mid="105"><![CDATA[<html>Visit Butler A in Rhadames with the Dreamcatcher that Iris repaired.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Butler A</FONT></html>]]></contents>
+         <destination mid="106"><![CDATA[Give the net to Butler A in Rhadames]]></destination>
+         <todo_msg mid="107"><![CDATA[Let's give the net to Butler A.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class>10</user_class>
+      <prev_quest>3816</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission>5233</complete_mission>
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

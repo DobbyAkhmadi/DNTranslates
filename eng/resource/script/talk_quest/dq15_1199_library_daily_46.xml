@@ -1,0 +1,150 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dq15_1199_library_daily_46</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1199</qid>
+      <designer>김인정</designer>
+      <qlevel>46</qlevel>
+      <qdesc xml:space="preserve">
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Daily] Ancient Library]]></qkname>
+      <qnpc>
+         <npcid>709</npcid>
+         <npcename>n709_trader_lucita</npcename>
+         <npckname>상인 루시타</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-accepting-a" mid="6" select_type="0"><![CDATA[<html>You're really doing the Adventurer's Guild stuff now, huh?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Merchant Lucita$<BR>
+Oh, adventurer. Hello.<BR>
+Actually I need your help. I need to get a book from the Ancient Library for Pedro…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-accepting-a" image="QW_52.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-accepting-b" mid="15" select_type="0"><![CDATA[<html>I'll try.</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Merchant Lucita$<BR>
+Oh really? Erm….<BR>
+But I have already received money, so I need to get the book by any means.<BR>
+Could you help me out?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$[Daily] Ancient Library$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-1" image="QW_52.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="86"><![CDATA[<html>$Merchant Lucita$<BR>
+Quickly go to <FONT color=#a82424>Ancient Library</FONT> and defeat the monsters.<BR>
+While you're doing that, I'll sneak in and get a book.<BR>
+<FONT color=#7e12d2>(Lucita is trembling but she shows you her tightly clenched fist of determination)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2" image="QS_Default.dds" itemindex="300482" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-a" mid="89" select_type="0"><![CDATA[<html>That's a relief.</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Merchant Lucita$<BR>
+Ah, adventurer! I could easily find the book when I followed behind you.<BR>
+There were books everywhere.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-b" mid="93" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="94"><![CDATA[<html>$Merchant Lucita$<BR>
+But can Pedro read this book?<BR>
+Hmm…. It's full of weird characters.<BR>
+<FONT color=#7e12d2>(Lucita seems skeptical)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">1199</exe>
+         <exe type="talk" npc="n709_trader_lucita">1</exe>
+         <exe type="recompense_view">11990,,,,,,,,,</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5,6,7">1417</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5,6,7">201417</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">11990,,,,,,,,,</exe>
+         <exe type="complete" true="">1199</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n709_trader_lucita" sub="b">2</exelink>
+   <exelink qstep="accepting" npc="n709_trader_lucita" sub="acceptted">0,3,4,1</exelink>
+   <exelink qstep="2" npc="n709_trader_lucita" sub="a">0</exelink>
+   <exelink qstep="2" npc="n709_trader_lucita" sub="b">1</exelink>
+   <journal_data recompense="11990" quest_title="[일일] 고대의 도서관" chapterid="" quest_level="46" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_52.dds</contents_image>
+         <destination_pos>523,0,0</destination_pos>
+         <destination_mode>custom:521@1,522@4,523@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="103"><![CDATA[Ancient's book]]></title>
+         <contents mid="104"><![CDATA[<html>Go to Ancient Library and defeat the monsters so that Lucita can get the book.<BR><BR><FONT color=#086171>Riverwort Wharf (Ancient Warehouse Entrance)</FONT> <FONT color=#a82424>→ Ancient Library</FONT></html>]]></contents>
+         <destination mid="105"><![CDATA[Ancient Library]]></destination>
+         <todo_msg mid="106"><![CDATA[Defeat monsters at Ancient Library.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Lucita.dds</contents_image>
+         <destination_pos>15,n709</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>709</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="107"><![CDATA[Talk with Merchant Lucita]]></title>
+         <contents mid="108"><![CDATA[<html>Talk with Merchant Lucita and check whether she got the book safely.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→ Merchant Lucita</FONT></html>]]></contents>
+         <destination mid="109"><![CDATA[Talk with Merchant Lucita]]></destination>
+         <todo_msg mid="110"><![CDATA[Talk with Merchant Lucita.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>43:46</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

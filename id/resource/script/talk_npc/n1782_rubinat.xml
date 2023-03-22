@@ -1,0 +1,38 @@
+   <talk>
+      <npcename>n1782_rubinat</npcename>
+      <npcid>1782</npcid>
+      <startexe>6</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Red Dragon Rubinart]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="35"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="15"><![CDATA[<html><FONT color=#2b2723>$Red Dragon Rubinart$</FONT><BR><FONT color=#2b2723> ugh, badanku... lebih baik tidak usah memberikan wujud ke buku lagi.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="36" link_target="mqc16_9567_mind_of_dragon.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Dragon's heart</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="37" link_target="mqc16_9569_penitent_man.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The one who penance</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="38" link_target="mqc16_9570_penitent_man.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The one who penance</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="43"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="19"><![CDATA[<html><FONT color=#2b2723>$Red Dragon Rubinart$</FONT><BR><FONT color=#2b2723>Haha, kamu ada yang ingin dibicarakan?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mqc16_9566_twisted_fate</exe>
+         <exe type="enterquest">mqc16_9567_mind_of_dragon</exe>
+         <exe type="enterquest">mqc16_9568_belated_reconciliation</exe>
+         <exe type="enterquest">mqc16_9569_penitent_man</exe>
+         <exe type="enterquest">mqc16_9570_penitent_man</exe>
+         <exe type="conexe" true="1" false="7">0</exe>
+         <exe type="conexe" true="2" false="8">1</exe>
+         <exe type="conexe" true="3" false="9">2</exe>
+         <exe type="conexe" true="4" false="10">3</exe>
+         <exe type="conexe" true="5" false="0">4</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9566</chk>
+         <chk type="hasquest">9567</chk>
+         <chk type="hasquest">9568</chk>
+         <chk type="hasquest">9569</chk>
+         <chk type="hasquest">9570</chk>
+      </conditions>
+   </talk>

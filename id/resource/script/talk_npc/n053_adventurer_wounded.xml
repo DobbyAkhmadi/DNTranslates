@@ -1,0 +1,30 @@
+   <talk>
+      <npcename>n053_adventurer_wounded</npcename>
+      <npcid>53</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Injured Adventurer]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Wounded Adventurer$<BR>Jangan khawatir terhadapku. Tolonglah kawan-kawanku! </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="enterquest">mq08_203_black_knight_tracking</exe>
+         <exe type="conexe" true="0" false="3">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+         <exe type="enterquest">mq08_223_work_of_someone</exe>
+         <exe type="conexe" true="6" false="7">2</exe>
+         <exe type="enterquest">mq08_188_clue_out</exe>
+         <exe type="conexe" true="8" false="9">3</exe>
+         <exe type="enterquest">mqc02_9470_black_knight</exe>
+         <exe type="conexe" true="10" false="2">4</exe>
+         <exe type="enterquest">mqc02_9579_mysterious_silver_hair</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">203</chk>
+         <chk type="hasquest">223</chk>
+         <chk type="hasquest">188</chk>
+         <chk type="hasquest">9470</chk>
+         <chk type="hasquest">9579</chk>
+      </conditions>
+   </talk>

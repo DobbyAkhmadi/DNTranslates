@@ -1,0 +1,105 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq41_8312_yohan_30_reward</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>8312</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[John's PresentⅠ]]></qkname>
+      <qnpc>
+         <npcid>714</npcid>
+         <npcename>n714_cleric_yohan</npcename>
+         <npckname>상급 클레릭 요한</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-accepting-acceppted" mid="7" select_type="0"><![CDATA[<html>(John terlihat senang bersamamu)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Master Cleric John$<BR>
+Senang bertemu denganmu.<BR>
+Aku sangat senang kita bertemu lagi dibawah petunjuk Goddess.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-1-a" mid="16" select_type="0"><![CDATA[<html>[Terima hadiah]</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Master Cleric John$<BR>
+Sebagai bukti aku akan memperlakukan teman dengan baik, aku sudah mempersiapkan sesuatu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-1-b" mid="18" select_type="0"><![CDATA[<html><FONT color=#086171>(Terima reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>$Master Cleric John${action:Talk}<BR>
+Dear <FONT color=#387206>{user_nick}</FONT>, semoga Goddess memberkatimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">8312</exe>
+         <exe type="talk" npc="n714_cleric_yohan">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">83120,,,,,,,,,</exe>
+         <exe type="complete" true="">8312</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="acceppted">0,1</exelink>
+   <exelink qstep="1" npc="n714_cleric_yohan" sub="a">0</exelink>
+   <exelink qstep="1" npc="n714_cleric_yohan" sub="b">1</exelink>
+   <journal_data recompense="0:83120" quest_title="요한의 선물Ⅰ" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_lotus_yohan.dds</contents_image>
+         <destination_pos>15,n714</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>714</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="20"><![CDATA[John's Present]]></title>
+         <contents mid="21"><![CDATA[<html>Bicara dengan Master Cleric John.<BR>
+<BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→ Master Cleric John</FONT></html>]]></contents>
+         <destination mid="22"><![CDATA[Bicara dengan Master Cleric John]]></destination>
+         <todo_msg mid="23"><![CDATA[Quest ditambahkan.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>714:6000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

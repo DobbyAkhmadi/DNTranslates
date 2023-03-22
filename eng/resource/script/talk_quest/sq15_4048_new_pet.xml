@@ -1,0 +1,190 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_4048_new_pet</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4048</qid>
+      <designer>나은하</designer>
+      <qlevel>57</qlevel>
+      <qdesc>데이지가 무서운 걸 참고 전에 검은 새가 사라졌던 장소에 가보니 피묻은 노란 깃털이 있었다고 함. 또다른 다친 새가 있는 것 같으니 그 새를 주우러 간다고 함. 그 깃털이 익숙해 보이는 것을 기분탓으로 돌림.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[New Pet]]></qkname>
+      <qnpc>
+         <npcid>100</npcid>
+         <npcename>n100_event_ilyn</npcename>
+         <npckname>이벤트 도우미 아이린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>853</npcid>
+         <npcename>n853_daisy</npcename>
+         <npckname>데이지</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n853_daisy-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Daisy$<BR>I'm still looking for Chickie.<BR>My Chickie must be crying for mommy now. *Sob*<BR><FONT color=#7e12d2>(* You can get the quest from Events Planner Irine)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Irine seemed to have something important to ask you.<BR>Go and take a look.<BR>
+<FONT color=#7e12d2>(* You can get the quest from Events Planner Irine)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-accepting-a" mid="12" select_type="0"><![CDATA[<html>What is it?</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Events Planner Irine$<BR>Oh dear! <FONT color=#387206>{user_nick}</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-a" image="QW_62.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-accepting-b" mid="14" select_type="0"><![CDATA[<html>Huh?</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Events Planner Irine$<BR>Daisy went to <FONT color=#a82424>Encroached Temple Ruins</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-accepting-c" mid="16" select_type="0"><![CDATA[<html>Oh ok.</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Events Planner Irine$<BR>Please go to <FONT color=#a82424>Encroached Temple Ruins</FONT> and bring Daisy back.<BR>It's a very dangerous place.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-accepting-acceptted" mid="18" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$New Pet$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1" image="QW_62.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Events Planner Irine$<BR>Please do me a favour.<BR>
+Daisy went to <FONT color=#a82424>Encroached Temple Ruins</FONT> saying that her bird flew there. Please bring Daisy back.<BR>I hope Daisy is fine until you find her there, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="22"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>I should investigate more about that girl's grandfather.<BR>
+Please ask Irine if she has found out anything.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n853_daisy-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n853_daisy-1-a" mid="24" select_type="0"><![CDATA[<html>Daisy! What are you doing here?</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Daisy$<BR>I'm sure there was a bird here. Why is there no one?<BR><FONT color=#7e12d2>(Daisy is holding something in her hands)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n853_daisy-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n853_daisy-1-b" mid="26" select_type="0"><![CDATA[<html>There's nothing here.</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Daisy$<BR>I was looking for a baby bird. But I don't think the baby bird who was here was Chickie.<BR><FONT color=#7e12d2>(Daisy shows you gold feathers with blood on them)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n853_daisy-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n853_daisy-1-c" mid="28" select_type="0"><![CDATA[<html>Oh really? Anyway, let's get out of here.</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Daisy$<BR>I think the yellow bird is hurt. Poor thing.<BR>He seems more hurt than Chickie so Daisy will go and follow the yellow bird.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n853_daisy-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n853_daisy-2" mid="30" select_type="0"><![CDATA[<html>……oh, okay.</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Daisy$<BR>Yes. I need to find the yellow bird.<BR>Daisy already thought of a name for the yellow bird.<BR>I'm going to call him Chirpy.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n853_daisy-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="32"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#7e12d2>(The gold feathers in Daisy's hands look familiar. I must be imagining things.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-2-a" mid="35" select_type="0"><![CDATA[<html>What? To where?</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Events Planner Irine$<BR>Thanks to you, Daisy returned safely.<BR>But she said she'll leave soon.<BR>She told me to say goodbye to you on her behalf.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-2-b" mid="37" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Events Planner Irine$<BR>She said she's going to a place with many elves to find Chirpy. <BR>I thought maybe she's going to <FONT color=#a94407>Anu Arendel</FONT> or something.<BR>I'm going to miss her a lot.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-2-c" mid="39" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="40"><![CDATA[<html>$Events Planner Irine$<BR>I will miss Daisy.<BR>Anyway, I hope she gets along well with the <FONT color=#a82424>new pet</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">40480,,,,,,,,,</exe>
+         <exe type="setquest">4048</exe>
+         <exe type="talk" npc="n100_event_ilyn">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">40480,,,,,,,,,</exe>
+         <exe type="complete" true="">4048</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n100_event_ilyn" sub="c">0</exelink>
+   <exelink qstep="accepting" npc="n100_event_ilyn" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n853_daisy" sub="b" />
+   <exelink qstep="1" npc="n853_daisy" sub="c" />
+   <exelink qstep="1" npc="n853_daisy" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n100_event_ilyn" sub="b">0</exelink>
+   <exelink qstep="2" npc="n100_event_ilyn" sub="c">1</exelink>
+   <journal_data recompense="40480" quest_title="새로운 애완동물" chapterid="" quest_level="57" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_62.dds</contents_image>
+         <destination_pos>622,n853</destination_pos>
+         <destination_mode>custom:621@1,622@4</destination_mode>
+         <statemark_npcid>853</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="42"><![CDATA[Irine's request]]></title>
+         <contents mid="43"><![CDATA[<html>Events Planner Irine is worried that Daisy went to Encroached Temple Ruins. Go to Encroached Temple Ruins and look for Daisy.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> <FONT color=#a82424>→ Encroached Temple Ruins</FONT></html>]]></contents>
+         <destination mid="44"><![CDATA[Search Encroached Temple Ruins]]></destination>
+         <todo_msg mid="45"><![CDATA[New quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Event_Red.dds</contents_image>
+         <destination_pos />
+         <destination_mode>custom:1@4,5@4,8@4,11@4,15@4</destination_mode>
+         <statemark_npcid>100</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="48"><![CDATA[Talk to Events Planner Irine]]></title>
+         <contents mid="49"><![CDATA[<html>Daisy promised to come to Encroached Temple Ruins. Tell this to Events Planner Irine.<BR>
+ <BR>
+<FONT color=#086171>Prairie Town</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><FONT color=#086171><BR></FONT><FONT color=#086171>Mana Ridge</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><FONT color=#086171><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><BR><FONT color=#086171>Saint Haven</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT></FONT><BR>
+<FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→ Events Planner Irine</FONT></html>]]></contents>
+         <destination mid="50"><![CDATA[Talk to Events Planner Irine]]></destination>
+         <todo_msg mid="51"><![CDATA[Go back to Events Planner Irine.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>57:-1</user_level>
+      <user_class />
+      <prev_quest>4047</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

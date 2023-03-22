@@ -1,0 +1,50 @@
+   <talk>
+      <npcename>n382_magician_frederik</npcename>
+      <npcid>382</npcid>
+      <startexe>0</startexe>
+      <comment>이전 테마파크 상점 40011
+#169351 관련 테마파크 상점 - 전직업 40011 으로 통합
+
+#193890 테마파크 상점 - 직업별 아이템 수령가능하도록 교체</comment>
+      <npckname mid="1"><![CDATA[Magician Frederick]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="trader_001" mid="5"><![CDATA[<html><FONT face=Arial size=2>[Exchange Item]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="6"><![CDATA[<html>[Bicara] <FONT color=#086171>Wonderful Theme Park</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Magician Frederick$<BR>Hmm? Ada yang dapat kubantu?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="12"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Magician Frederick$<BR>Dunia ini sangat indah namun menyimpan banyak misteri, dipenuhi dengan kesenangan dan ancaman yang berbahaya. Hampir mirip dengan taman bermain yang menakjubkan ini, kan? Aku penasaran apa yang kira-kira akan kamu temui di sini...</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40111,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40112,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40113,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40114,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40115,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40116,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40117,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40118,100);</exe>
+         <exe type="conexe" true="1" false="10">0</exe>
+         <exe type="conexe" true="2" false="11">1</exe>
+         <exe type="conexe" true="3" false="12">2</exe>
+         <exe type="conexe" true="4" false="13">3</exe>
+         <exe type="conexe" true="5" false="14">4</exe>
+         <exe type="conexe" true="6" false="15">5</exe>
+         <exe type="conexe" true="7" false="16">6</exe>
+         <exe type="conexe" true="8" false="17">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40119,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+      </conditions>
+      <exelink idx="trader_001">9</exelink>
+   </talk>

@@ -1,0 +1,91 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_2317_irina_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2317</qid>
+      <designer>이한나</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About Irina]]></qkname>
+      <qnpc>
+         <npcid>1265</npcid>
+         <npcename>n1265_irina</npcename>
+         <npckname>알테이아 최고 미녀 이리나</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1265_irina-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Ask about her complex)</html>]]></talk_answer>
+      <talk_answer link_index="n1265_irina-accepting-b" mid="7" select_type="0"><![CDATA[<html>(Ask about her age)</html>]]></talk_answer>
+      <talk_answer link_index="n1265_irina-accepting-c" mid="8" select_type="0"><![CDATA[<html>(Ask from when she was so beautiful)</html>]]></talk_answer>
+      <talk_answer link_index="n1265_irina-accepting-d" mid="9" select_type="0"><![CDATA[<html>(Ask about her favourite food)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>*Yawn* You want to know more about me? Ask me anything.<BR>I will answer all your questions!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="10"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>What? My complex? I never expected that kind of question. <BR>Well, my complex is <FONT color=#086171>N</FONT><FONT color=#387206>O</FONT><FONT color=#a94407>N</FONT><FONT color=#a82424>E</FONT>!<BR><FONT color=#7e12d2>(Irina looks disappointed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>What?! My age…? I am...! <FONT color=#a82424>That's none of your business!</FONT><BR>Don't you know that it is rude to ask a lady about her age?<BR><FONT color=#7e12d2>(Irina looks disappointed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>Hmm, ever since I was born, everyone called me <FONT color=#a94407>‘Lagendia's Number One Beauty’</FONT>! I heard it too often so I'm a little sick of it now... But I feel good when I hear that! Honestly, I'm prettier than Irine... <FONT color=#7e12d2>Oh!</FONT> Please forget about what I said~<BR>I will always be a <FONT color=#7e12d2>shining star</FONT> by <FONT color=#387206>{user_nick}</FONT>'s side!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>Umm... I love fresh fruits~ <BR>Fried stuff makes me get fat~<BR><FONT color=#387206>{user_nick}</FONT>, stop eating fried stuff too~ <FONT color=#7e12d2>Promise!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,2317, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 8 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 5 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 30 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 20 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1265_irina" sub="a">0,1</exelink>
+   <exelink qstep="accepting" npc="n1265_irina" sub="b">0,2</exelink>
+   <exelink qstep="accepting" npc="n1265_irina" sub="c">0,3</exelink>
+   <exelink qstep="accepting" npc="n1265_irina" sub="d">0,4</exelink>
+   <journal_data recompense="" quest_title="[대화] 이리나에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>1265:1000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

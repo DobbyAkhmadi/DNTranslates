@@ -1,0 +1,40 @@
+   <talk>
+      <npcename>n2359_bleed_death</npcename>
+      <npcid>2359</npcid>
+      <startexe>1</startexe>
+      <comment>- 3 : 다크 직업 구분을 위한 공용 퀘스트
+- 4,6,7,8,9,10 : 어쌔신 15레벨 45레벨 전직 퀘스트 완료 
+- 5: 팬텀에서 블리드 팬텀으로 강제 2차 전직
+- (팬텀: 90, 팬텀: 91)
+
+이 다음에 트리거로 맵이동(튜토리얼 공간)</comment>
+      <npckname mid="1"><![CDATA[Spirit of Death]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#2b2723>$Spirit of Death$</FONT><FONT color=#7e12d2><BR></FONT><FONT color=#7e12d2>(Death is facing another direction.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="qu_01" mid="9"><![CDATA[<html><FONT color=#7e12d2>(It seems like another person's memory.)</FONT></html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Spirit of Death$<BR><FONT color=#2b2723>……</FONT><FONT color=#a82424>Illusion</FONT><FONT color=#2b2723>?</FONT><BR><FONT color=#2b2723>You must be in a dire situation for an Apostle like you to come all the way here.</FONT><BR><FONT color=#2b2723><BR></FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_01" image="" itemindex="">
+         <talk_answer link_index="quest_end" mid="14"><![CDATA[<html><FONT color=#7e12d2>(You're sucked into the darkness.)</FONT></html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Spirit of Death$<BR><FONT color=#2b2723>Very well. I'll help you.</FONT><BR><FONT color=#2b2723>All you need is to do is to pay a price……</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,5" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 998, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 244, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 91 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 248, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4357, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4358, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4359, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4360, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 90</chk>
+      </conditions>
+      <exelink idx="quest_end">4,6,7,8,9,10</exelink>
+   </talk>

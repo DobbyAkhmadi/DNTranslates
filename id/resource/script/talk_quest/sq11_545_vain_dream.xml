@@ -1,0 +1,230 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_545_vain_dream</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>545</qid>
+      <designer>나은하</designer>
+      <qlevel>24</qlevel>
+      <qdesc>매표원 소렌느는 상급 소서리스 스텔라가 소서리스가 도착하는대로 자신을 찾아오라고 말했다고 한다. 상급 소서리스 스텔라는 소서리스가 도박에 빠졌던 과거에 대해서 수치플을 시키면서 왜 그랬는지를 묻는다. 소서리스는 가난한 가족을 돕기 위해서였음을 자백한다.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Vain Dream]]></qkname>
+      <qnpc>
+         <npcid>45</npcid>
+         <npcename>n045_soceress_master_stella</npcename>
+         <npckname>상급 소서리스 스텔라</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>70</npcid>
+         <npcename>n070_plane_ticketer_sorene</npcename>
+         <npckname>매표원 소렌느</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Ticket Seller Sorene$<BR>Aku senang orang yang mengunjungi <FONT color=#a82424>Saint's Haven</FONT> bertambah banyak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Aku sangat sibuk, sayang.<BR>Kalau kamu butuh sesuatu kembalilah nanti. <BR><FONT color=#7e12d2>(Harus menyelesaikan percakapan dengan Ticket Seller Sorene. )</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-a" mid="9" select_type="0"><![CDATA[<html>Stop! Stop disana.</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Ticket Seller Sorene$<BR>Selamat datang di Saint's Haven.<BR>......Huh? Kamu terlihat tidak asing. <BR>Apa kamu pernah bersekolah keluar negeri dan lari di tengah malam karena kalah berjudi...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-b" mid="11" select_type="0"><![CDATA[<html>Apa kamu sekarang sudah senang?</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Ticket Seller Sorene$<BR>Hahaha, Jadi kamu adalah <FONT color=#382000>{user_nick}</FONT> yang terkenal itu.<BR>Maaf. Orang-orang yang datang dari Calderock Village selalu membicarakan mengenai <FONT color=#382000>{user_nick}</FONT> jadi aku ingin tahu apa mereka membicarakan orang yang sama. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-c" mid="13" select_type="0"><![CDATA[<html>(Ok, silahkan kamu berpikir sesuka mu)</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Ticket Seller Sorene$<BR>Tidak. Aku terkejut sekali ternyata <FONT color=#382000>{user_nick}</FONT> <FONT color=#a82424>Casino Princess</FONT> dan  <FONT color=#382000>{user_nick}</FONT> <FONT color=#a82424>Calderock Village Hero</FONT> adalah orang yang sama. Kamu benar-benar sukses yah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting-c" image="QN_Npc_SoceressStella.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-d" mid="15" select_type="0"><![CDATA[<html>Sorceress Trainer Stella ?</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Ticket Seller Sorene$<BR>Aku lupa!<BR><FONT color=#a82424>Sorceress Trainer Stella</FONT> mengatakan agar kamu mencarinya kalau kamu sudah tiba <FONT color=#382000>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Vain Dream$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1" image="QN_Npc_SoceressStella.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-a" mid="25" select_type="0"><![CDATA[<html>Aku ingat.</html>]]></talk_answer>
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-a" mid="26" select_type="0"><![CDATA[<html>Hmmm, sudah cukup lama aku tidak dapat mengingat.</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Ticket Seller Sorene$<BR>Kamu tahu kan di mana kamu harus mencari <FONT color=#a82424>Sorceress Trainer Stella</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1-a" image="QN_Npc_SoceressStella.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="27"><![CDATA[<html>$Ticket Seller Sorene$<BR>Mungkin otakku tidak dapat mengingatnya tapi tubuhku akan selalu mengingatnya.<BR>Aku selalu dimarahi oleh <FONT color=#a82424>Sorceress Trainer Stella</FONT>, dari dulu sampai sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-a" mid="29" select_type="0"><![CDATA[<html>Benar.</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Oh, lihat siapa ini?<BR>Bukankah ini <FONT color=#382000>{user_nick}</FONT>, yang menggunakan semua uang untuk belajar keluar negerinya di meja judi, dan lebih penting lagi menggunakan semua uang yang dipinjam dariku untuk berjudi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-b" mid="31" select_type="0"><![CDATA[<html>Tidak, kalau aku berkerja sebagai Sorceress sepertinya aku dapat memperoleh uang dengan mudah dan menjadi sukses. </html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Ok, apa kamu sudah ada semua uang yang kamu butuhkan untuk membayar hutang-hutang mu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-c" mid="33" select_type="0"><![CDATA[<html>Tidak mungkin ada Sorceress sebanyak itu.</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Sukses... Sukses itu bukanlah hal yang mudah. Sekarang <FONT color=#a82424>924547594 murid</FONT> bekerja untuk menjadi Sorceress terbaik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-d" mid="35" select_type="0"><![CDATA[<html>Apa kamu sudah selesai mengoceh?</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Kamu tidak boleh melawan kata-kata orang dewasa. Apa yang ingin ku katakan adalah kalau kamu harus bekerja keras untuk dapat mengejar murid lain. Jangan berhenti belajar, berlatih, dan bekerja lebih keras.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-e" mid="37" select_type="0"><![CDATA[<html>Ti, Tidak. Good bodied Stella. </html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Sorceress Trainer Stella$<BR>Haha,karena aku bertanya baik-baik, kenapa kamu malah bersandiwara?<BR> Sepertinya kamu harus berubah menjadi <FONT color=#a82424>seekor kodok atau berdansa di atas lava</FONT> agar kamu dapat bertindak normal.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-f" mid="39" select_type="0"><![CDATA[<html>Sesuatu yang membuat penasaran?</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Ya, tubuhku sangat indah. <BR>Tapi ada satu hal. Hal yang membuatku penasaran.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-g" mid="41" select_type="0"><![CDATA[<html>Aku tidak dapat memberitahumu.</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Kenapa kamu berjudi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-h" mid="43" select_type="0"><![CDATA[<html>u... Uang?</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Oh, kalau kamu mau bicara aku akan memberikan mu sejumlah <FONT color=#a82424>uang</FONT>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-i" mid="45" select_type="0"><![CDATA[<html>Hmm... Janji kamu tidak akan memberitahu siapa-siapa?</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Ya, <FONT color=#a82424>Uang</FONT>. <BR><FONT color=#7e12d2>(Sorceress Trainer Stella menyentuh kantong sutranya yang bergemerincing.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-2" mid="47" select_type="0"><![CDATA[<html>Sebenarnya, rumah tempat aku terlahir sangatlah buruk.</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Ok, apa yang akan ku lakukan pada rahasia anak kecil sepertimu. Aku akan menyimpan rahasiamu, beritahu aku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-2-a" mid="49" select_type="0"><![CDATA[<html>Ya, tapi aku kurang beruntung.</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Jadi kamu ingin menghasilkan banyak uang untuk dikirim ke rumah mu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-2-b" mid="51" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Ini bukanlah kesialan. Tidak semua orang berhasil dalam judi. Bahkan kalau kamu memenangkan banyak uang dari judi, kamu akan menghabiskannya dengan cepat juga. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-2-c" mid="53" select_type="0"><![CDATA[<html>Apa itu Dragon ball?</html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Kamu memimpikan impian kosong. Daripada berjudi, lebih baik kamu mematahkan leher Dragon dan ambil 7 Dragon Balls.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-2-d" mid="55" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Yah, ada juga yang seperti itu. Latih terus kekuatan magic mu agar suatu hari nanti kamu dapat memasak seekor Dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-2-e" mid="57" select_type="0"><![CDATA[<html>Wow! Terima kasih.</html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Sorceress Trainer Stella$<BR>
+Dan setelah itu kamu dapat hidup bebas dari masalah ekonomi seperti ku.<BR>
+<FONT color=#7e12d2>(Accessories mahal Sorceress Trainer Stella berkilauan.)</FONT><BR>Kamu terang-terangan memberitahukannya padaku, jadi aku akan memberikan kamu kantong uang yang aku janjikan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-3" mid="59" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-3-a" mid="61" select_type="0"><![CDATA[<html>Oh, Ini saja?</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Oh jam berapa ini, ini sudah hampir waktunya untuk bertemu dengan penata rambutku. <BR> Aku harus dandan, jadi silahkan pergi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-3-b" mid="64" select_type="0"><![CDATA[<html>Tidak! Tidak!!</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Sorceress Trainer Stella $<BR>Sebanyak ini? <BR>hahaha, sepertinya kamu ingin <FONT color=#a82424> ribbit inside the glass bottle</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="65"><![CDATA[<html>$Sorceress Trainer Stella $<BR><FONT color=#7e12d2>(Stella merapikan dandanannya dengan menggunakan cermin tangan.)</FONT><BR>Oh, kalau aku marah maka kerutan akan muncul.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">5450,,,,,,,,,</exe>
+         <exe type="setquest">545</exe>
+         <exe type="talk" npc="n070_plane_ticketer_sorene">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">5450,,,,,,,,,</exe>
+         <exe type="complete" true="">545</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n070_plane_ticketer_sorene" sub="d">0</exelink>
+   <exelink qstep="accepting" npc="n070_plane_ticketer_sorene" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="b" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="c" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="d" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="e" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="f" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="g" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="h" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="i" />
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="2">0</exelink>
+   <exelink qstep="2" npc="n045_soceress_master_stella" sub="b" />
+   <exelink qstep="2" npc="n045_soceress_master_stella" sub="c" />
+   <exelink qstep="2" npc="n045_soceress_master_stella" sub="d" />
+   <exelink qstep="2" npc="n045_soceress_master_stella" sub="e">0</exelink>
+   <exelink qstep="2" npc="n045_soceress_master_stella" sub="3">1</exelink>
+   <exelink qstep="3" npc="n045_soceress_master_stella" sub="b" />
+   <journal_data recompense="5450" quest_title="헛된 꿈" chapterid="" quest_level="24" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_SoceressStella.dds</contents_image>
+         <destination_pos>11,n45</destination_pos>
+         <destination_mode />
+         <statemark_npcid>45</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="19"><![CDATA[Meet Sorceress Trainer Stella]]></title>
+         <contents mid="20"><![CDATA[<html><FONT color=#a82424>Let's find</FONT>Sorceress Trainer Stella.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Sorceress Trainer Stella</FONT></html>]]></contents>
+         <destination mid="21"><![CDATA[Meet Sorceress Trainer Stella]]></destination>
+         <todo_msg mid="22"><![CDATA[Talk with Sorceress Trainer Stella]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>24:-1</user_level>
+      <user_class>3</user_class>
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

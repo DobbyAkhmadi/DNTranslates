@@ -1,0 +1,143 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc14_4541_control_chaos_eye</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>REPEAT</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4541</qid>
+      <designer>정진호</designer>
+      <qlevel>79</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Chaos Control : Eye of the Goddess]]></qkname>
+      <qnpc>
+         <npcid>1502</npcid>
+         <npcename>n1502_ifuture3</npcename>
+         <npckname>미래정보 수집기 아이퓨처3</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1502_ifuture3-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1502_ifuture3-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Future Information Collector iFuture3$<BR><FONT color=#086171>▶You have a message from Priestess of Darkness Rosetta.<BR></FONT><FONT color=#2b2723>As the seal on the Monolith is getting weaker, we have detected chaos flowing out from the gaps.<BR>Since you have the blessing of a dragon, I believe you can stop the chaos from disrupting our world.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1502_ifuture3-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1502_ifuture3-accepting-b" mid="10" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Future Information Collector iFuture3$<BR><FONT color=#2b2723>You've always been such a great help to us. Please help us this time too.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1502_ifuture3-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1502_ifuture3-accepting-acceptted" mid="12" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Chaos Control : Eye of the Goddess$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1502_ifuture3-1" image="QW_96.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Future Information Collector iFuture3$<BR>Please clear the chaos from the <FONT color=#a82424>Eye of the Goddess</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1502_ifuture3-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1502_ifuture3-2-a" mid="18" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Future Information Collector iFuture3$<BR><FONT color=#086171>▶You have a message from Priestess of Darkness Rosetta.</FONT><BR>
+<FONT color=#2b2723>Well done. But remember, chaos will continue to flow out from the Monolith.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1502_ifuture3-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1502_ifuture3-2-b" mid="20" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Future Information Collector iFuture3$<BR>I'm sorry to keep asking help from you but please help us keep the chaos under control in the future as well.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1502_ifuture3-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1502_ifuture3-2-c" mid="24" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1502_ifuture3-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="25"><![CDATA[<html>$Future Information Collector iFuture3$<BR>I hope this chaos will die out soon so that everyone can sleep in peace....</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="stageConstructionLevel" op="]=">1</chk>
+      </conditions>
+      <executions>
+         <exe type="recompense_view">45410,,,,,,,,,</exe>
+         <exe type="setquest">4541</exe>
+         <exe type="talk" npc="n1502_ifuture3">1</exe>
+         <exe type="checkStageClearRank" rand="6" num="1061" onexe="4" true="[=" xsi:nil="true" />
+         <exe type="conexe" true="5,6,7" false="">0</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">45410,,,,,,,,,</exe>
+         <exe type="complete" true="">4541</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1502_ifuture3" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n1502_ifuture3" sub="acceptted">1,2,3</exelink>
+   <exelink qstep="2" npc="n1502_ifuture3" sub="b">0</exelink>
+   <exelink qstep="2" npc="n1502_ifuture3" sub="c">1</exelink>
+   <journal_data recompense="45410" quest_title="혼돈 제어 : 여신의 눈동자" chapterid="" quest_level="79" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_96.dds</contents_image>
+         <destination_pos>1061,0,0</destination_pos>
+         <destination_mode>custom:1061@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="27"><![CDATA[Control the Chaos!]]></title>
+         <contents mid="28"><![CDATA[<html>Chaos continues to flow out of the Monolith into this world. Clear the <FONT color=#a82424>Eye of the Goddess</FONT> to stop the chaos.<BR><BR><FONT color=#086171>Anu Arendel (Lava River) </FONT><FONT color=#a82424> → Eye of the Goddess</FONT></html>]]></contents>
+         <destination mid="29"><![CDATA[Clear the Wailing Wall]]></destination>
+         <todo_msg mid="30"><![CDATA[Clear the Eye of the Goddess.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n1502</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1502</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="31"><![CDATA[Mission Complete]]></title>
+         <contents mid="32"><![CDATA[<html>You have cleared the <FONT color=#a82424>Eye of the Goddess.</FONT> Log on to iFuture3 and wait for the next message.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Future Information Collector iFuture3</FONT></html>]]></contents>
+         <destination mid="33"><![CDATA[Log on to the Future Information Collector iFuture3]]></destination>
+         <todo_msg mid="34"><![CDATA[Log on to the Future Information Collector iFuture3.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>79:-1</user_level>
+      <user_class />
+      <prev_quest>4540</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

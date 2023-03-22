@@ -1,0 +1,95 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq34_5154_kelly_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>5154</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Mengenai Master Archer Eithain]]></qkname>
+      <qnpc>
+         <npcid>92</npcid>
+         <npcename>n092_trader_kelly</npcename>
+         <npckname>상인 켈리</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n092_trader_kelly-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n092_trader_kelly-accepting-a" mid="9" select_type="0"><![CDATA[<html> Tidak apa apa selama dia suka. </html>]]></talk_answer>
+      <talk_answer link_index="n092_trader_kelly-accepting-b" mid="10" select_type="0"><![CDATA[<html> Kamu harus merekomendasi salon yang cocok. </html>]]></talk_answer>
+      <talk_answer link_index="n092_trader_kelly-accepting-c" mid="11" select_type="0"><![CDATA[<html> Dia harus mengubah gaya rambutnya. </html>]]></talk_answer>
+      <talk_answer link_index="n092_trader_kelly-accepting-d" mid="12" select_type="0"><![CDATA[<html> Rambutnya mirip rambutmu.</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Merchant Kelly$<BR>Eithain wanita yang hebat di nilai oleh wanita lain. Namun kupikir dia harus ikuti trend. Eithain tidak mengubah gaya rambutnya sejak 50 lalu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n092_trader_kelly-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Merchant Kelly$<BR>
+Tentu, style pribadi dia lebih penting. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n092_trader_kelly-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Merchant Kelly$<BR>
+Haruskah? Aku akan mengajaknya ke salonku. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n092_trader_kelly-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="15"><![CDATA[<html>$Merchant Kelly$<BR>
+Menurutmu gaya rambutku jadul? Kuharap bukan itu maksudmu. <FONT color=#7e12d2>(Kelly terlihat marah.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n092_trader_kelly-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="16"><![CDATA[<html>$Merchant Kelly$<BR>
+Masa sih? Itu berbeda! Kamu tidak mengerti tentang styling!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 5154, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 92, 200 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 92, 400 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 92, 400 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 92, 200 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n092_trader_kelly" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n092_trader_kelly" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n092_trader_kelly" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n092_trader_kelly" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 상급 아처 이실리엔에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>92:7000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

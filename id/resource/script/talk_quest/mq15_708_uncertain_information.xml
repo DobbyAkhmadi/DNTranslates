@@ -1,0 +1,338 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq15_708_uncertain_information</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>6</qchapter>
+      <qid>708</qid>
+      <designer>곽노찬</designer>
+      <qlevel>40</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>709</nextqid>
+      <nextqname>mq15_709_rescue_natives</nextqname>
+      <nextqnpc />
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Uncertain Information]]></qkname>
+      <qnpc>
+         <npcid>474</npcid>
+         <npcename>n474_karahan</npcename>
+         <npckname>카라한 </npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>480</npcid>
+         <npcename>n480_overhear</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>707</npcid>
+         <npcename>n707_sidel</npcename>
+         <npckname>시델</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>720</npcid>
+         <npcename>n720_charty</npcename>
+         <npckname>차티</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Charty$<BR>Apa? Mengapa kamu ada di sini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n720_charty-noquest" image="" itemindex="" portrait_left="NPC_Left_Charty.dds" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_question mid="143"><![CDATA[<html></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n474_karahan-noquest" image="" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="NPC_Right_karahan.dds" center_image="">
+      <talk_question mid="144"><![CDATA[<html></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-accepting-a" mid="139" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Sidel$<BR><FONT color=#7e12d2>(Sidel is deep in thought.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-accepting-acceptted" mid="141" select_type="3" />
+      <talk_question mid="140"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A copper for your thoughts.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1" image="QN_Npc_karahan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-a" mid="145" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Sidel$<BR>I never knew the Master had a brother. But doesn't he seem a little young to you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-a" image="QN_Npc_karahan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-b" mid="147" select_type="2" />
+      <talk_question mid="146"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Magic.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-c" mid="148" select_type="2" />
+      <talk_question mid="80"><![CDATA[<html>$Sidel${action:Talk}<BR><FONT color=#7e12d2>(Sidel whispers)</FONT><BR>I have heard of it... but it's impossible that he can get that kind of results by making use of space and time control magic. Most of time magic is dependant by force...<BR>
+<FONT color=#7e12d2>(Sidel explains tentang the time magic theory with much detail)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-d" mid="149" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#003366>I bet he reversed...the polarity...to do the time warp.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-e" mid="151" select_type="2" />
+      <talk_question mid="150"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What do you think...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-f" mid="152" select_type="2" />
+      <talk_question mid="84"><![CDATA[<html>${user_nick}$<BR><FONT color=#003366>Uh... Some other time. What's your theory?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-g" mid="154" select_type="2" />
+      <talk_question mid="153"><![CDATA[<html>$Sidel$<BR>I think he's expanded beyond using the ancient magic of the Fairystar. Maybe he's dabbled in holy magic...or forgotten magic.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-h" mid="155" select_type="2" />
+      <talk_question mid="88"><![CDATA[<html>$Sidel${action:Talk}<BR>Forgotten magic is forgotten for a reason! Sorceresses are forbidden from learning it, even though it's the foundation of both our magic and the Order's magic...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-i" mid="157" select_type="2" />
+      <talk_question mid="156"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You know so much. You must have a big brain.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-i" image="QN_Npc_Charty.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-j" mid="158" select_type="2" />
+      <talk_question mid="90"><![CDATA[<html>$Sidel$<BR>Or maybe you just have a small brain! Oops, sorry! I didn't mean that. Anyway, we should try to find <FONT color=#a82424>Charti,</FONT> shouldn't we?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-j" image="QN_Npc_Charty.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-k" mid="160" select_type="2" />
+      <talk_question mid="159"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You really like her, don't you?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-l" mid="161" select_type="2" />
+      <talk_question mid="92"><![CDATA[<html>$Sidel$<BR><FONT color=#7e12d2>(Sidel blushes.)</FONT><BR>Is it that obvious?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-m" mid="163" select_type="2" />
+      <talk_question mid="162"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(It's harder not to know tentang it)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-m" image="QN_Npc_Charty.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-n" mid="164" select_type="2" />
+      <talk_question mid="94"><![CDATA[<html>$Sidel$<BR>What? No! <FONT color=#a82424>Charti's</FONT> the kindest, sweetest person I've ever met.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-n" image="QN_Npc_Charty.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-o" mid="166" select_type="2" />
+      <talk_question mid="165"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I don't think we're talking tentang the same person.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-o" image="QN_Npc_Charty.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-p" mid="167" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>$Sidel${action:Talk}<BR>You just don't know her like I do! When I was having those nightmares, it was <FONT color=#a82424>Charti</FONT> who came and comforted me and gave me herbs to help me sleep. None of the sorceresses were ever that nice to me!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-p" image="QN_Npc_Charty.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-q" mid="169" select_type="2" />
+      <talk_question mid="168"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Nightmares?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-r" mid="170" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>$Sidel$<BR>Oh, they're just these stupid dreams I've had since I was little. They're always tentang this giant green monster going on a rampage.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-r" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-s" mid="172" select_type="2" />
+      <talk_question mid="171"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>That sounds like fun.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-s" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-t" mid="173" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$Sidel$<BR>Maybe for you, but I'd rather spend my time with a good book than fighting monsters. Anyway, with <FONT color=#a82424>Charti's</FONT> herbs, I don't get the nightmares anymore. I'm just grateful I don't have to fight any REAL monsters, like you do.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-1-u" mid="175" select_type="2" />
+      <talk_question mid="174"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It's nothing. I'm fine.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-1-u" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-2" mid="176" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>$Sidel$<BR>You really are strong, aren't you? The dragon's blood doesn't seem to be having much of an effect on you, either.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-1" image="QN_Npc_Sidel.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n480_overhear-1-" mid="177" select_type="5" />
+      <talk_question mid="20"><![CDATA[<html>$Charti$<BR>There's nothing for you here, grotsani. Why don't you Kembali ke <FONT color=#a82424>Sidel?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n707_sidel-2" image="QN_Npc_karahan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sidel.dds" center_image="">
+      <talk_answer link_index="n707_sidel-2-" mid="178" select_type="5" />
+      <talk_question mid="36"><![CDATA[<html>$Sidel${action:Talk}<BR>I-I didn't forget! I've just been busy, that's all. Anyway, you seem to be okay. Why don't you Pergilah ke <FONT color=#a82424>Ruined Village</FONT> and track down the Master's brother? I'll see what I can do in the meantime.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n480_overhear-2-a" mid="179" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Charti$<BR>And why are YOU here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n480_overhear-2-b" mid="181" select_type="2" />
+      <talk_question mid="180"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Your friend here promised to tell me tentang the missing Natives.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n480_overhear-2-c" mid="182" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>$Charti$<BR>You grotsani are so slow! He already told me everything.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n480_overhear-2-d" mid="184" select_type="2" />
+      <talk_question mid="183"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n480_overhear-2-e" mid="185" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>$Charti$<BR>You two know each other? That makes sense. I guess all northerners know each other!<BR><FONT color=#7e12d2>(She looks up at Karahan with dreamy eyes.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n480_overhear-2-f" mid="187" select_type="2" />
+      <talk_question mid="186"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(.........)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-f" image="" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-g" mid="188" select_type="2" />
+      <talk_question mid="118"><![CDATA[<html>$Karahan$<BR>If it isn't my adoring fan! Did my little sister tell you tentang my tragic past? Did she tell you the tale of how the Fairystar turned its back on me? Don't cry for me, friend! My rugged good looks carried me through those difficult times.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-g" image="" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-h" mid="190" select_type="2" />
+      <talk_question mid="189"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What are you talking about?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-h" image="" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-i" mid="191" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Karahan$<BR>It's okay! You don't have to play dumb! Let it all out. You can cry on my big, manly shoulder if it makes you feel better.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-i" image="" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-j" mid="193" select_type="2" />
+      <talk_question mid="192"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Anyway, you promised me some information.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-j" image="" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-k" mid="194" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Karahan$<BR>You're right; this isn't the time or place. When we're alone, then. Would you like a hug to tide you over until then?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-k" image="" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-l" mid="196" select_type="2" />
+      <talk_question mid="195"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Uh... I think I'll manage.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-l" image="QW_55.dds" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-m" mid="197" select_type="2" />
+      <talk_question mid="122"><![CDATA[<html>$Karahan$<BR>Your loss. As for our missing Natives friends, I've traced them to the <FONT color=#a82424>East Armory.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-m" image="QW_55.dds" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-n" mid="199" select_type="2" />
+      <talk_question mid="198"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Armory? What armory?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-n" image="QW_55.dds" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-o" mid="200" select_type="2" />
+      <talk_question mid="124"><![CDATA[<html>$Karahan$<BR>There's an ancient armory not far from here. It's filled with powerful artifacts and weapons left behind by the Ancients. It's all pretty amazing, really. Not as amazing as ME, of course. But then again, what is?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-o" image="" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-p" mid="201" select_type="4" />
+      <talk_question mid="126"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n480_overhear-2-p" image="QN_Npc_Sidel.dds" itemindex="" portrait_left="NPC_Left_karahan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n480_overhear-2-" mid="202" select_type="5" />
+      <talk_question mid="128"><![CDATA[<html>$Karahan$<BR>You'd better make sure you're ready. the Ancients may be gone, but their toys are still kicking.<BR><FONT color=#7e12d2>(Return to Sidel.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">708</exe>
+         <exe type="talk" npc="n707_sidel">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">7081,7081,7082,7083,7084,7085,7086,,</exe>
+         <exe type="complete" true="">708</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n707_sidel" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n707_sidel" sub="b" />
+   <exelink qstep="1" npc="n707_sidel" sub="c" />
+   <exelink qstep="1" npc="n707_sidel" sub="d" />
+   <exelink qstep="1" npc="n707_sidel" sub="e" />
+   <exelink qstep="1" npc="n707_sidel" sub="f" />
+   <exelink qstep="1" npc="n707_sidel" sub="g" />
+   <exelink qstep="1" npc="n707_sidel" sub="h" />
+   <exelink qstep="1" npc="n707_sidel" sub="i" />
+   <exelink qstep="1" npc="n707_sidel" sub="j" />
+   <exelink qstep="1" npc="n707_sidel" sub="k" />
+   <exelink qstep="1" npc="n707_sidel" sub="l" />
+   <exelink qstep="1" npc="n707_sidel" sub="m" />
+   <exelink qstep="1" npc="n707_sidel" sub="n" />
+   <exelink qstep="1" npc="n707_sidel" sub="o" />
+   <exelink qstep="1" npc="n707_sidel" sub="p" />
+   <exelink qstep="1" npc="n707_sidel" sub="q" />
+   <exelink qstep="1" npc="n707_sidel" sub="r" />
+   <exelink qstep="1" npc="n707_sidel" sub="s" />
+   <exelink qstep="1" npc="n707_sidel" sub="t" />
+   <exelink qstep="1" npc="n707_sidel" sub="u" />
+   <exelink qstep="1" npc="n707_sidel" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n480_overhear" sub="b" />
+   <exelink qstep="2" npc="n480_overhear" sub="c" />
+   <exelink qstep="2" npc="n480_overhear" sub="d" />
+   <exelink qstep="2" npc="n480_overhear" sub="e" />
+   <exelink qstep="2" npc="n480_overhear" sub="f" />
+   <exelink qstep="2" npc="n480_overhear" sub="g" />
+   <exelink qstep="2" npc="n480_overhear" sub="h" />
+   <exelink qstep="2" npc="n480_overhear" sub="i" />
+   <exelink qstep="2" npc="n480_overhear" sub="j" />
+   <exelink qstep="2" npc="n480_overhear" sub="k" />
+   <exelink qstep="2" npc="n480_overhear" sub="l" />
+   <exelink qstep="2" npc="n480_overhear" sub="m" />
+   <exelink qstep="2" npc="n480_overhear" sub="n" />
+   <exelink qstep="2" npc="n480_overhear" sub="o">0</exelink>
+   <exelink qstep="2" npc="n480_overhear" sub="p">1</exelink>
+   <exelink qstep="2" npc="n480_overhear" sub="" />
+   <journal_data recompense="1:7081,2:7082,3:7083,4:7084,5:7085,6:7086" quest_title="의심스러운 제보" chapterid="6" quest_level="40" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Sidel.dds</contents_image>
+         <destination_pos>14,n707</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>707</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="130"><![CDATA[Uncertain informationⅠ]]></title>
+         <contents mid="131"><![CDATA[<html>Bicara pada Sidel sebelum bertemu Karahan di Riverwort Ruins.<BR> <BR><FONT color=#086171>Riverwort Wharf (Karacule's Hut)</FONT> <FONT color=#a82424>→ Sidel</FONT></html>]]></contents>
+         <destination mid="132"><![CDATA[Bicara pada Sidel]]></destination>
+         <todo_msg mid="133"><![CDATA[Bicara pada Sidel]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_karahan.dds</contents_image>
+         <destination_pos>511,n480</destination_pos>
+         <destination_mode>custom:511@1</destination_mode>
+         <statemark_npcid>480</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="135"><![CDATA[Uncertain information Ⅱ]]></title>
+         <contents mid="136"><![CDATA[<html>Cari informasi tentang para Native yang menghilang dari Karahan di Riverwort Ruins.<BR> <BR><FONT color=#086171>Riverwort Wharf (Riverwort Ruins)</FONT> <FONT color=#a82424>→ Riverwort Ruins</FONT></html>]]></contents>
+         <destination mid="137"><![CDATA[Bicara pada Karahan di Riverwort Ruins]]></destination>
+         <todo_msg mid="138"><![CDATA[Temui Karahan di Riverwort Ruins.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>707</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

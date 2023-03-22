@@ -1,0 +1,375 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_382_second_step</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>382</qid>
+      <designer>김인정</designer>
+      <qlevel>30</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>383</nextqid>
+      <nextqname>mq11_383_riskful_meet</nextqname>
+      <nextqnpc>n040_king_casius</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Misi telah dimulai]]></qkname>
+      <qnpc>
+         <npcid>216</npcid>
+         <npcename>n216_geraint_wounded</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>393</npcid>
+         <npcename>n393_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>519</npcid>
+         <npcename>n519_cian</npcename>
+         <npckname>워리어 시안</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>528</npcid>
+         <npcename>n528_acamedic_jasmin</npcename>
+         <npckname>아카데믹 자스민</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-noquest" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$General Douglas$<BR>aku banyak pekerjaan, jadi jika tidak penting, silahkan kembali nanti.<BR><FONT color=#7e12d2>(Bicara pada Jasmine di Tinkerer Station di Saint's Haven)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Gerraint$<BR>aku akan melindungi Descendent of the Ancient, pergilah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$King Cassius$<BR>Orang yang ramah.<BR>
+Begitu muda tapi begitu pemberani...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Warrior Xian$<BR>...Waktu berlalu begitu cepat?<BR>Sekarang, <FONT color=#387206>{user_nick}</FONT>, cobalah berkeliling di Saint's Haven dan manjakan dirimu~</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-accepting-acceptted" mid="75" select_type="3" />
+      <talk_question mid="9"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_02.ogg}<BR>Kamu kembali.<BR>Aku menunggu laporanmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-a" mid="13" select_type="0"><![CDATA[<html>(Laporan tentang apa yang telah dilakukan)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Tinkerer Jasmine$<BR>Jadi apa yang terjadi?<BR>Apakah kamu menyelamatkan Prophet?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-b" mid="77" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Tinkerer Jasmine$<BR>...Aku mengerti. Aku tidak tahu Gerraint mempunyai cedera tetap, itu tidak ada dicatatan.<BR>Jika <FONT color=#a82424>Prophet</FONT> ada di tengah Nest, kamu tidak akan bisa langsung membawanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-c" mid="78" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Tinkerer Jasmine$<BR>Berdasarkan catatan, <FONT color=#a82424>Nest akan menjadi tidak aktif</FONT>. Aku kira Gerraint akan menonaktifkan nest di Saint's Haven dan pergi ketempat lain, atau memindahkan Prophet ke tempat lain....<BR>
+Kurasa baiknya kamu menunggu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-d" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay aku akan melakukannya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-e" mid="81" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Tinkerer Jasmine$<BR>Akan lebih baik jika kita bisa menemukan <FONT color=#a82424>lokasi Monolith</FONT>.... Kukira itu tidak akan mudah.<BR>Argenta tidak terlalu ramah pada manusia dan dia sudah pergi ke Lotus Marsh.<BR>
+Jadi, bagaimana keadaan Gerraint?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-f" mid="83" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dia tidak bicara banyak jadi aku tidak yakin.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-g" mid="84" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Tinkerer Jasmine$<BR>Dragon memang sulit. Mereka ingin melindungi dunia, tapi mereka tidak peduli dengan manusia.<BR>...Jika Velskud disana seperti yang ada didunia kita, keadaan akan lebih baik. Kamu tahu apa yang terjadi pada <FONT color=#a82424>Velskud</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-h" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Untuk saat ini hilang...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-i" mid="134" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Tinkerer Jasmine$<BR>Umm.... Bukankah in kesempatan yang bagus untuk merayunya?<BR>Mungkin dia sembunyi disuatu tempat, jadi kamu harus mencarinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-j" mid="136" select_type="2" />
+      <talk_question mid="135"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay. Kemana aku harus pergi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-j" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-" mid="87" select_type="5" />
+      <talk_question mid="24"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_07.ogg}<BR>Bukannya kamu bilang  kamu melihatnya jatuh? Coba pikirkan tentang kira-kira dimana dia akan berada setelah menerima luka seperti itu.<BR>Pertama... mungkin lebih baik untuk melihat apakah ada orang lain yang tahu di <FONT color=#a82424>Royal Palace</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-1-" mid="88" select_type="5" />
+      <talk_question mid="25"><![CDATA[<html>$Gerraint$<BR>Aku akan melindungi keturunan Ancient. Kamu pergilah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-" mid="89" select_type="5" />
+      <talk_question mid="26"><![CDATA[<html>$King Cassius$<BR>Kamu sudah membuat bangsa kami bangga. Masih muda tapi sangat berani...<BR><FONT color=#7e12d2>(Lapor ke Jasmine di Tinkerer Station)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="90" select_type="5" />
+      <talk_question mid="27"><![CDATA[<html>$General Douglas$<BR>Saat ini aku sedang banyak kerjaan. Jika tidak penting kembali lagi nanti.<BR><FONT color=#7e12d2>(Bicara dengan Jasmine di Tinkerer Station dalam Saint's Haven)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-1-a" mid="138" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Warrior Xian$<BR>...Aku tidak menyangka waktu sudah berlalu.<BR>Aku akan bergerak sekarang, <FONT color=#387206>{user_nick}</FONT>.<BR>Sampai ketemu lagi nanti! Haha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-1-b" mid="92" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ya, sampai ketemu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-1-b" image="QN_Npc_Triana.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-1-" mid="93" select_type="5" />
+      <talk_question mid="30"><![CDATA[<html>$Warrior Xian$<BR>Anyway, kemana Triana pergi?<BR>Apa dia sedang dalam misi lain? Hmm~<BR><FONT color=#7e12d2>(Xian menggerutu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-2-" mid="94" select_type="5" />
+      <talk_question mid="31"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_07.ogg}<BR>Akan lebih baik kalau kamu bertemu Velskud.... Dimana dia?<BR>Pertama... lebih baik mencari orang lain yang mempunyai informasi itu di <FONT color=#a82424>Royal Palace</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-a" mid="95" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$King Cassius$<BR>Aku sudah menerima laporannya, <FONT color=#387206>{user_nick}</FONT>yang setia.<BR>Aku bangga kamu sangat setia terhadap negerimu di usia semua ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-a" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-b" mid="96" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$King Cassius$<BR>Dan adventurer lain....<BR>
+sepertinya melalukan perintah Bishop.<BR>Aku cemas, karena banyak orang kita tewas selama perang ini dan <FONT color=#a82424>General</FONT> marah....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-b" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-c" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Mereka bekerja dibawah perintah Bishop?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-c" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-d" mid="38" select_type="0"><![CDATA[<html>seharusnya kamu tidak terlalu mempercayai Bishop.</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-2-e" mid="39" select_type="0"><![CDATA[<html>(Kata-kataku tidak akan berpengaruh saat ini.)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$King Cassius$<BR>Pamanku sedang sibuk di Royal Palace dan General sedang sibuk dengan perawatan prajurit-prajuritnya.<BR>Syukurlah Bishop sedang melakukan pekerjaan lain. Dia adalah pejabat istana yang baik, bukan begitu...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-e" mid="99" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$King Cassius$<BR>...Aku sangat lelah orang memfitnah yang lain....<BR>
+Semoga kamu tidak melakukannya.<BR><FONT color=#7e12d2>(Cassius melambaikan tangannya. Sepertinya dia tidak ingin mendengarnya lagi.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-e" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-f" mid="100" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$King Cassius$<BR>Jika kamu ingin melakukan sesuatu untuk kerajaanmu, pergi dan temui Bishop.<BR>...Tidak, sudah banyak yang membantunya, jadi lebih baik kamu melakukan sesuatu yang lain.<BR>
+Ada Adventurers' Guild atau <FONT color=#a82424>General</FONT>... atau.... masih banyak yang lain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-g" mid="101" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$King Cassius$<BR>My dear <FONT color=#387206>{user_nick}</FONT>.<BR>Ada yang ingin kamu tanyakan?<BR>Kamu terlihat aneh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-h" mid="103" select_type="3" />
+      <talk_question mid="102"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu tahu keberadaan Black Dragon?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-h" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3" mid="104" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$King Cassius$<BR>Black Dragon? ...Bukannya Black Dragon mati?!<BR>Aku dengar dia sudah mati...?<BR><FONT color=#7e12d2>(Cassius mulai gemetaran setelah mendengarnya dan memanggil General.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-a" mid="107" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$King Cassius$<BR><FONT color=#a82424>General</FONT>!! General~ Black Dragon mati, kan? Bener kan?<BR>Disini aman... kan...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-a" image="QN_Rose.dds" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-b" mid="109" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>$General Douglas${action:Talk}<BR>Hmm...Kita sudah melewatkan banyak hal untuk menyelamatkan Prophet, tapi dia masih tidur. Kita sudah melakukan semampunya jadi serahkan pada Yang Mulia.<BR>
+Tapi, kerja yang bagus.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-b" image="QN_Rose.dds" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-c" mid="111" select_type="2" />
+      <talk_question mid="110"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Kamu menemukan jejak Black Dragon?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-c" image="QM_black_Dragon.dds" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-d" mid="113" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>$General Douglas$<BR>Hmm? Black Dragon? ...Aku menerima laporan bahwa dia terluka dan terjatuh setelah bertempur dengan <FONT color=#a82424>Gold Dragon</FONT>....<BR>Kita tidak menemukan jejak apapun di Dark Overlord Keep.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-d" image="QW_SkirtOfBlackMountain.dds" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-e" mid="115" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>$General Douglas$<BR>Anyway, mungkin karena darah Black Dragon tumpah dari angkasa diatas Dark Overlord Keep, pencemaran di <FONT color=#a82424>Foothills of Black Mountain</FONT> semakin buruk.<BR>
+Ini tidak baik karena kita kekurangan tenaga untuk memikirkan hal itu sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-e" image="QW_SkirtOfBlackMountain.dds" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-f" mid="117" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Pencemaran di Foothills of Black Mountain?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-f" image="" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-g" mid="119" select_type="2" />
+      <talk_question mid="118"><![CDATA[<html>$General Douglas$<BR>Yah, <FONT color=#a82424>Lonely Forest Path</FONT> area. Dried Marissa Spring sudah menjadi tanah tandus... dan hal ini tidak pernah berhenti. Tanah akan beracun dengan darah monster dan tidak akan ada tanaman yang tumbuh disana....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-g" image="" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-h" mid="121" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apakah disana akan berpengaruh juga?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-h" image="QW_28.dds" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-i" mid="123" select_type="2" />
+      <talk_question mid="122"><![CDATA[<html>$General Douglas$<BR>Ya, <FONT color=#a82424>Dark Overlord Gate</FONT> ada di posisi yang tinggi.<BR>
+Secara geografis, <FONT color=#a82424>Lonely Forest Path</FONT>, yang ada dibawah gunung, tidak akan bisa menghindari dari pencemaran.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-i" image="QW_28.dds" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-j" mid="125" select_type="2" />
+      <talk_question mid="124"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(lalu mungkin...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-j" image="" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-k" mid="127" select_type="2" />
+      <talk_question mid="126"><![CDATA[<html>$General Douglas$<BR>Situasi yang rumit untuk meraba akhir perang dan memeriksa status para tentara.<BR>
+Kalau kamu bebas, tolong bantu kami.<BR><FONT color=#7e12d2>(Douglas jalan mondar-mandir.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-k" image="" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-!next" mid="129" select_type="4" />
+      <talk_question mid="128"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-3" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_question mid="130"><![CDATA[<html>$General Douglas$<BR>Aku sedang banyak tugas sekarang. Jika tidak penting kembali lagi nanti.<BR><FONT color=#7e12d2>(Bicara dengan King Cassius)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">382</exe>
+         <exe type="talk" npc="n393_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">3820,,,,,,,,</exe>
+         <exe type="complete" true="">382</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n393_academic_station" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n393_academic_station" sub="b" />
+   <exelink qstep="1" npc="n393_academic_station" sub="c" />
+   <exelink qstep="1" npc="n393_academic_station" sub="d" />
+   <exelink qstep="1" npc="n393_academic_station" sub="e" />
+   <exelink qstep="1" npc="n393_academic_station" sub="f" />
+   <exelink qstep="1" npc="n393_academic_station" sub="g" />
+   <exelink qstep="1" npc="n393_academic_station" sub="h" />
+   <exelink qstep="1" npc="n393_academic_station" sub="i" />
+   <exelink qstep="1" npc="n393_academic_station" sub="j">0,1</exelink>
+   <exelink qstep="1" npc="n393_academic_station" sub="" />
+   <exelink qstep="1" npc="n519_cian" sub="b" />
+   <exelink qstep="1" npc="n519_cian" sub="" />
+   <exelink qstep="2" npc="n040_king_casius" sub="b" />
+   <exelink qstep="2" npc="n040_king_casius" sub="c" />
+   <exelink qstep="2" npc="n040_king_casius" sub="d" />
+   <exelink qstep="2" npc="n040_king_casius" sub="e" />
+   <exelink qstep="2" npc="n040_king_casius" sub="e" />
+   <exelink qstep="2" npc="n040_king_casius" sub="f" />
+   <exelink qstep="2" npc="n040_king_casius" sub="g" />
+   <exelink qstep="2" npc="n040_king_casius" sub="h" />
+   <exelink qstep="2" npc="n040_king_casius" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n040_king_casius" sub="b" />
+   <exelink qstep="3" npc="n040_king_casius" sub="c" />
+   <exelink qstep="3" npc="n040_king_casius" sub="d" />
+   <exelink qstep="3" npc="n040_king_casius" sub="e" />
+   <exelink qstep="3" npc="n040_king_casius" sub="f" />
+   <exelink qstep="3" npc="n040_king_casius" sub="g" />
+   <exelink qstep="3" npc="n040_king_casius" sub="h" />
+   <exelink qstep="3" npc="n040_king_casius" sub="i" />
+   <exelink qstep="3" npc="n040_king_casius" sub="j" />
+   <exelink qstep="3" npc="n040_king_casius" sub="k">0</exelink>
+   <exelink qstep="3" npc="n040_king_casius" sub="!next">1</exelink>
+   <journal_data recompense="3820" quest_title="할 일은 지금부터" chapterid="5" quest_level="30" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="63"><![CDATA[Misi dimulai sekarang I]]></title>
+         <contents mid="64"><![CDATA[<html>hubungi Tinkerer Station dan bicara pada Jasmine tentang aktivitas yang telah dilakukan.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="65"><![CDATA[Terhubung ke Tinkerer Station]]></destination>
+         <todo_msg mid="66"><![CDATA[Terhubung ke Tinkerer Stationdan melapor ke Jasmine.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>11,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="67"><![CDATA[Misi dimulai sekarang II]]></title>
+         <contents mid="68"><![CDATA[<html>Pergi ke Saint's Haven Royal Palace dan temui seseorang yang memiliki informasi.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven Royal Palace</FONT> <FONT color=#a82424>→ King Cassius</FONT></html>]]></contents>
+         <destination mid="69"><![CDATA[Berbicara pada King Cassius]]></destination>
+         <todo_msg mid="70"><![CDATA[Pergi ke Saint's Haven Royal Palace untuk mencari informasi.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>11,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="71"><![CDATA[Misi dimulai sekarang III]]></title>
+         <contents mid="72"><![CDATA[<html>King Cassius menghadap General. Perlu berbicara dengan General untuk mengetahui apa yang sedang terjadi.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven Royal Palace</FONT> <FONT color=#a82424>→ General Douglas</FONT></html>]]></contents>
+         <destination mid="73"><![CDATA[berbicara kepada General Douglas]]></destination>
+         <todo_msg mid="74"><![CDATA[Berbicara kepada General Douglas.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>443</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

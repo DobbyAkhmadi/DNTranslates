@@ -1,0 +1,104 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_2320_irina_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2320</qid>
+      <designer>이한나</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About Dating Style]]></qkname>
+      <qnpc>
+         <npcid>1265</npcid>
+         <npcename>n1265_irina</npcename>
+         <npckname>알테이아 최고 미녀 이리나</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1265_irina-accepting-a" mid="16" select_type="0"><![CDATA[<html>(I like doing things together)</html>]]></talk_answer>
+      <talk_answer link_index="n1265_irina-accepting-b" mid="17" select_type="0"><![CDATA[<html>(I like making each other comfortable)</html>]]></talk_answer>
+      <talk_answer link_index="n1265_irina-accepting-c" mid="18" select_type="0"><![CDATA[<html>(What more do I need if I have you)</html>]]></talk_answer>
+      <talk_answer link_index="n1265_irina-accepting-d" mid="19" select_type="0"><![CDATA[<html>(I'm sick of dating. It's better to be alone)</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>
+I'm kind of shy when I'm in love. Really!<BR>
+<FONT color=#7e12d2>I can't really express my love well.</FONT> My head goes blank when I'm in front of someone I like~<BR>
+<FONT color=#387206>{user_nick}</FONT>, how about you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>
+I knew it! <FONT color=#387206>{user_nick}</FONT>, you sound so mature!<BR>
+I agree~ <FONT color=#7e12d2>Doing things together</FONT> is sweet~<BR>
+Just thinking about it makes my heart pound~</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>
+Comfort… Being comfortable is good but don't forget that a certain amount of <FONT color=#7e12d2>tension</FONT> makes you closer!<BR>
+I wish all the best for you, <FONT color=#387206>{user_nick}</FONT>~</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="22"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>
+………………….<FONT color=#7e12d2> (Irina blushes.)</FONT><BR>
+<FONT color=#387206>{user_nick}</FONT>~~~ I don't know what to say....<BR>
+I also think…. <FONT color=#387206>{user_nick}</FONT>…… erm… umm… I mean… I <FONT color=#a82424>l</FONT>…<FONT color=#7e12d2>i</FONT>k<FONT color=#a94407>e</FONT>… you!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1265_irina-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="23"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>
+Really? I expected you to be a romantic and sweet person…….<BR>
+<FONT color=#7e12d2>(Irina looks disappointed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,2320, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 60 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 30 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1265, 10 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1265_irina" sub="a">0,1</exelink>
+   <exelink qstep="accepting" npc="n1265_irina" sub="b">0,2</exelink>
+   <exelink qstep="accepting" npc="n1265_irina" sub="c">0,3</exelink>
+   <exelink qstep="accepting" npc="n1265_irina" sub="d">0,4</exelink>
+   <journal_data recompense="" quest_title="[대화] 연애스타일에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>1265:7000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

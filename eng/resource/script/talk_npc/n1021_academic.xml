@@ -1,0 +1,29 @@
+   <talk>
+      <npcename>n1021_academic</npcename>
+      <npcid>1021</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Academic Comelina]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#387206>${user_nick}$<BR></FONT><FONT color=#7e12d2>You see a mirage…</FONT><BR><FONT color=#7e12d2>You try talking to it but it doesn't say anything.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="4"><![CDATA[<html>$Academic Comelina$<BR>
+Why... Why did this happen...?<BR>
+Did Jasmine really want this...?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="enterquest">mq15_9246_portent_of_disaster</exe>
+         <exe type="conexe" true="3" false="5">1</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="6" false="4">2</exe>
+         <exe type="enterquest">mq15_9383_feeling_of_disaster</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9246</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="hasquest">9383</chk>
+      </conditions>
+   </talk>

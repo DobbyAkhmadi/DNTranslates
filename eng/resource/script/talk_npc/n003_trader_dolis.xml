@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n003_trader_dolis</npcename>
+      <npcid>3</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Merchant Doris]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="buy" mid="4"><![CDATA[<html>[Purchase/Repair Items]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="3"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="43"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Hello there! How can I help you?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="34" link_target="sq01_060_dorins_amazing_box2.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Dorin's Request II</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="29" link_target="sq01_061_lets_party.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Mushroom Couple’s Tears</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="15" link_target="sq01_053_hound_digester.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Hound Digestant</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="12" link_target="sq01_064_healthy_doris.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Doris’ Adventure Package</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="9" link_target="sq01_052_find_the_perfume.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Heavenly Scent</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="6" link_target="sq01_051_nourishing_meal.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Hound's Nutrition</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="40"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Hello there! How can I help you?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,10,100);</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,3);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="buy">1</exelink>
+      <exelink idx="guildms">2</exelink>
+   </talk>

@@ -1,0 +1,28 @@
+   <talk>
+      <npcename>n996_guild_quest_helper</npcename>
+      <npcid>996</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Elite Guild Member Gilmour]]></npckname>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="4" link_target="dq_guild_1287_key.xml"><![CDATA[<html>[Guild] <FONT color=#086171>Begin the Guild Leader Quest</FONT></FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="5" link_target="dq_guild_1288_take_like.xml"><![CDATA[<html>[Guild] <FONT color=#086171>Receive Likes</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="6" link_target="dq_guild_1289_give_like.xml"><![CDATA[<html>[Guild] <FONT color=#086171>Give Likes</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="7" link_target="dq_guild_1290_clear_with_member.xml"><![CDATA[<html>[Guild] <FONT color=#086171>With Guild Members</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="8" link_target="dq_guild_1291_present_npc.xml"><![CDATA[<html>[Guild] <FONT color=#086171>Give Gift to NPC</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="13"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Elite Guild Member Gilmour$<BR>
+Try out the new quests prepared for you if you're in a Guild.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="14"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="17"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="11"><![CDATA[<html>$Elite Guild Member Gilmour$<BR>What a nice day for a quest!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,996);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="guildms">1</exelink>
+   </talk>

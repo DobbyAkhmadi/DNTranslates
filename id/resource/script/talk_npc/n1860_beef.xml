@@ -1,0 +1,61 @@
+   <talk>
+      <npcename>n1860_beef</npcename>
+      <npcid>1860</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[VIP Helper Biff]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="get_pc_item" mid="17"><![CDATA[<html>[Sewa Item]</html>]]></talk_answer>
+         <talk_answer link_index="shop" mid="22"><![CDATA[<html>[VIP Shop]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$VIP Helper Biph$<BR>Halo? Saya adalah VIP Helper Biph.<BR>Saya akan memberikan Service Mount yang sebanding dengan Adventurers VVIP.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="novip" image="" itemindex="">
+         <talk_answer link_index="shop" mid="30"><![CDATA[<html>[VIP Shop]</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$VIP Helper Biph$<BR>Bukan VVIP saat ini.<BR>Tidak dapat menerima service Rental jika bukan VVIP. Namun Shop masih dapat digunakan.<BR>
+Aku bukan orang yang pelit.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="noplayer" image="" itemindex="">
+         <talk_question mid="5"><![CDATA[<html>$VIP Helper Biph$<BR>Adventurer tidak dapat menggunakan VVIP Service saat ini.<BR>Hubungi CS DragonNest untuk keterangan lebih lanjut.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_vip_0" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$VIP Helper Biph$<BR>Rental Mount telah berhasil.<FONT color=#a82424>Item akan diambil kembali</FONT> saat Logout dari Game.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_vip_2" image="" itemindex="">
+         <talk_question mid="7"><![CDATA[<html>$VIP Helper Biph$<BR>Tidak ada Item yang dapat diberikan kepada Kamu pada saat ini.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_vip_3" image="" itemindex="">
+         <talk_question mid="8"><![CDATA[<html>$VIP Helper Biph$<BR>Sudah memiliki rental item VVIP. Tidak dapat melakukan rental.<BR>Jika menginginkan item  <FONT color=#a82424></FONT>Baru, <FONT color=#a82424>Kembali ke layar pemilihan karakter</FONT> login kembali.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_vip_4" image="" itemindex="">
+         <talk_question mid="9"><![CDATA[<html>$VIP Helper Biph$<BR>Terjadi Error. Mohon laporkan kepada Game Master.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">novip</exe>
+         <exe type="conexe" true="0" false="3">0</exe>
+         <exe type="conexe" true="1" false="4">1</exe>
+         <exe type="talk">noplayer</exe>
+         <exe type="conexe" true="6" false="7">2</exe>
+         <exe type="talk">set_vip_0</exe>
+         <exe type="conexe" true="1" false="8">3</exe>
+         <exe type="conexe" true="11" false="9">4</exe>
+         <exe type="conexe" true="12" false="10">5</exe>
+         <exe type="conexe" true="13" false="4">6</exe>
+         <exe type="talk">set_vip_2</exe>
+         <exe type="talk">set_vip_3</exe>
+         <exe type="talk">set_vip_4</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200001,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetVVIPLevel(userObjID) >= 1</chk>
+         <chk type="custom">api_user_GetVVIPLevel(userObjID) == 0</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 0</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 1</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 2</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 3</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 4</chk>
+      </conditions>
+      <exelink idx="get_pc_item">5</exelink>
+      <exelink idx="shop">14</exelink>
+      <exelink idx="shop">14</exelink>
+   </talk>

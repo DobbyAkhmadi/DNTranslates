@@ -1,0 +1,302 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq01_030_fatality_and_fate</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>30</qid>
+      <designer>김인정</designer>
+      <qlevel>9</qlevel>
+      <qdesc>로제를 찾아가지만 로제는 납치, 닭 쫓던 개를 보게 됨. 죽어가던 티모시는 로제를 구해달라 부탁함.
+스승은 선지자의 운명이 크게 흔들리고 있다며 칼리의 운명도 덩달아 흔들리고 있다고 말한다. 스승은 칼리를 걱정하며, 너와 나는 속한 세계가 달라 계속 너에 곁에 머무르며 널 도와줄 순 없다면 안타까워한다. 스승은 혼자 힘으로라도 운명을 결정지어야 한다며 캐더락 관문으로 선지자를 쫓아가라 한다.
+마을에 가서 티모시의 사망을 알리고, 로제를 찾아 캐더락관문으로 간다 하면 캐더락관문의 모험자 길드의 도움을 받을 수 있는 소개장을 줌.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>201</nextqid>
+      <nextqname>mq08_201_secret_melody</nextqname>
+      <nextqnpc />
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Death and Fate]]></qkname>
+      <qnpc>
+         <npcid>1</npcid>
+         <npcename>n001_elder_harold</npcename>
+         <npckname>촌장 해롤드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>4</npcid>
+         <npcename>n004_guard_steave</npcename>
+         <npckname>자경단장 스티브</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-accepting" image="QW_5.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-accepting-acceptted" mid="75" select_type="3" />
+      <talk_question mid="8"><![CDATA[<html>$Mayor Harold$<BR>I'm glad you're here. Vigilante Leader Steve said that Rose and Timothy seem to have gone towards the <FONT color=#a82424>Ancient Temple Excavation Site</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-a" mid="76" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Mayor Harold$<BR>Rose… My poor girl.<BR>
+Adventurer, please help me look for Rose one more time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1-a" image="QW_5.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-" mid="78" select_type="5" />
+      <talk_question mid="77"><![CDATA[<html>$Mayor Harold$<BR>The Vigilantes last saw Rose and Timothy at <FONT color=#a82424>Ancient Temple Excavation Site</FONT>.<BR>
+Please bring them back.<BR><FONT color=#7e12d2>(The mayor's eyes are filled with tears)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-1" image="QW_5.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-1-" mid="79" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Vigilante Leader Steve$<BR>Rose and Timothy seem to have ran away to the <FONT color=#a82424>Ancient Temple Excavation Site</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-2-a" mid="81" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Vigilante Leader Steve$<BR>I see. Timothy….<BR>
+<FONT color=#7e12d2>(Steve looks down like he is lost for words)</FONT><BR>
+ </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-2-b" mid="83" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>$Vigilante Leader Steve$<BR>So Timothy died for the girl he loved.<BR>Though it was foolish like what he used to be, it was a brave death. Since he died for Rose… He would have no regrets.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-2-b" image="QN_Elder_Harold.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-2-" mid="85" select_type="5" />
+      <talk_question mid="84"><![CDATA[<html>$Vigilante Leader Steve$<BR>Please tell <FONT color=#a82424>Mayor Harold</FONT> about it.<BR>
+I will retrieve Timothy's body and prepare a funeral for him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-2-a" mid="87" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>$Mayor Harold$<BR>Do you have any news about Rose?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3" mid="89" select_type="2" />
+      <talk_question mid="88"><![CDATA[<html>$Mayor Harold$<BR>What did you say?! Timothy, he…!!<BR>
+H-how could that h-happen…. This is all because of this old man's greed.<BR>And the life of an innocent young man has been….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-3" image="QN_Elder_Harold.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-3-" mid="90" select_type="5" />
+      <talk_question mid="25"><![CDATA[<html>$Vigilante Leader Steve$<BR>Please tell <FONT color=#a82424>Mayor Harold</FONT> about it.<BR>
+I will retrieve Timothy's body and prepare a funeral for him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-a" mid="91" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Mayor Harold$<BR>Rose is a special child. She is the descendant of <FONT color=#a94407>The Ancients</FONT> and has prophetic powers. I should have sent her to <FONT color=#a94407>Saint Haven</FONT> to protect her. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-b" mid="92" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Mayor Harold$<BR>But I hoped she could live like a normal girl and have a happy ordinary life.<BR>But it must have been just an old man's wish.<BR>Fate can't be avoided like that….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-c" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>$Mayor Harold$<BR>But I must have been asking for too much.<BR>Fate is not something that can be avoided so easily….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-d" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(An ordinary life….)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-e" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(When I heard those words, I was a little envious of that Prophet girl.</FONT><BR>
+<FONT color=#662500>I never had the chance even to think about such a life.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-f" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(…But Rose is just a country girl.</FONT><BR>
+<FONT color=#662500>Is it right that such a girl gets to be the Prophet just because of fate?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-g" mid="102" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(…Perhaps the only way to find the answer is to follow Rose and see where my fate leads to.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-g" image="QN_Guard_Steave.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-4" mid="103" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Mayor Harold$<BR>Please tell me if you hear anything about Rose in your journey.<BR>And <FONT color=#387206>{user_nick}</FONT>, I have something for you. I left it with Steve so please go and find it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-4" image="QN_Guard_Steve.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-4-" mid="104" select_type="5" />
+      <talk_question mid="41"><![CDATA[<html>$Mayor Harold$<BR>First, go and meet <FONT color=#a82424>Vigilante Leader Steve</FONT>.<BR>He will fill you in with the details.<BR>
+Though things didn't end up well… I'm grateful for all the help you've given us.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-4" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-4-a" mid="106" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Vigilante Leader Steve$<BR>The thing that mayor left with me?<BR>Oh, I had forgotten about it.<BR>In <FONT color=#a94407>Calderock Village</FONT>, there's something called the <FONT color=#a94407>Adventurer's Guild</FONT>. Have you heard of it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-4-a" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-4-b" mid="108" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Vigilante Leader Steve$<BR>Hmm, looks like you've never heard of it before.<BR>I guessed you must have come from very far….….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-4-b" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n004_guard_steave-4-c" mid="109" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Vigilante Leader Steve$<BR>You will need help from others when you travel.<BR>
+You can ask for help from the Adventurer's Guild at Calderock Village.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-4-c" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n004_guard_steave-4-d" mid="111" select_type="2" />
+      <talk_question mid="110"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Can they help me with finding Rose?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-4-e" mid="112" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Vigilante Leader Steve$<BR><FONT color=#7e12d2>(Vigilante Leader Steve looks suprised)</FONT><BR>I thought you were going to stop looking for her.<BR>
+We would be really grateful if you can continue looking for her.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-4-e" image="QM_HarpyRed.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-4-f" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>$Vigilante Leader Steve$<BR>Actually I got a report that the <FONT color=#a82424>Red Harpy</FONT> that took Rose was sighted.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-4-f" image="QN_ranger_fugus.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-4-g" mid="115" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Vigilante Leader Steve$<BR>A guard named <FONT color=#a82424>Fergus</FONT> would know more about that harpy.<BR>He is an earnest man who is a <FONT color=#a82424>Calderock Village's scout</FONT>.<BR>Please take this pass and show it to him. He will help you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-4-h" mid="116" select_type="4" />
+      <talk_question mid="51"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-4-h" image="QW_CristalStream.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-4-" mid="118" select_type="5" />
+      <talk_question mid="53"><![CDATA[<html>$Vigilante Leader Steve$<BR>The Goddess will always protect good people like you.<BR>
+Farewell, adventurer.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">30</exe>
+         <exe type="talk" npc="n001_elder_harold">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">300,,,,,,,,</exe>
+         <exe type="complete" true="">30</exe>
+         <exe type="addquestitem" num="1">300012</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n001_elder_harold" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n001_elder_harold" sub="" />
+   <exelink qstep="2" npc="n004_guard_steave" sub="b" />
+   <exelink qstep="2" npc="n004_guard_steave" sub="" />
+   <exelink qstep="2" npc="n001_elder_harold" sub="3">0</exelink>
+   <exelink qstep="3" npc="n001_elder_harold" sub="b" />
+   <exelink qstep="3" npc="n001_elder_harold" sub="c" />
+   <exelink qstep="3" npc="n001_elder_harold" sub="d" />
+   <exelink qstep="3" npc="n001_elder_harold" sub="e" />
+   <exelink qstep="3" npc="n001_elder_harold" sub="f" />
+   <exelink qstep="3" npc="n001_elder_harold" sub="g" />
+   <exelink qstep="3" npc="n001_elder_harold" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n004_guard_steave" sub="b" />
+   <exelink qstep="4" npc="n004_guard_steave" sub="c" />
+   <exelink qstep="4" npc="n004_guard_steave" sub="d" />
+   <exelink qstep="4" npc="n004_guard_steave" sub="e" />
+   <exelink qstep="4" npc="n004_guard_steave" sub="f" />
+   <exelink qstep="4" npc="n004_guard_steave" sub="g">0,2</exelink>
+   <exelink qstep="4" npc="n004_guard_steave" sub="h">1</exelink>
+   <exelink qstep="4" npc="n004_guard_steave" sub="" />
+   <journal_data recompense="6:300" quest_title="죽음과 숙명" chapterid="1" quest_level="9" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_5.dds</contents_image>
+         <destination_pos>73,0,0</destination_pos>
+         <destination_mode>custom:71@1,72@1,73@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="55"><![CDATA[To Ancient Temple Excavation Site]]></title>
+         <contents mid="56"><![CDATA[<html>Look for Rose and Timothy at Ancient Temple Excavation Site.<BR>
+ <BR>
+<FONT color=#086171>Wind Forest (Wind Forest Temple) </FONT> <FONT color=#a82424>→ Ancient Temple Excavation Site </FONT></html>]]></contents>
+         <destination mid="57"><![CDATA[Search Ancient Temple Excavation Site]]></destination>
+         <todo_msg mid="58"><![CDATA[Look for Rose at the Ancient Temple Excavation Site.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Elder_Harold.dds</contents_image>
+         <destination_pos>1,n1</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="59"><![CDATA[Timothy's Death]]></title>
+         <contents mid="60"><![CDATA[<html>Timothy died while trying to save Rose. First, go and tell Mayor Harold what you've heard.<BR><BR><FONT color=#086171>Prairie Town</FONT><FONT color=#a82424> → Mayor Harold</FONT></html>]]></contents>
+         <destination mid="61"><![CDATA[Talk to Mayor Harold at Prairie Town]]></destination>
+         <todo_msg mid="62"><![CDATA[Talk to Mayor Harold at Prairie Town.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Elder_Harold.dds</contents_image>
+         <destination_pos>1,n1</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Special Girl]]></title>
+         <contents mid="65"><![CDATA[<html>Tell Mayor Harold about Rose's news.<BR><BR><FONT color=#086171>Prairie Town</FONT><FONT color=#a82424> → Mayor Harold</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Talk to Mayor Harold]]></destination>
+         <todo_msg mid="67"><![CDATA[Talk to Mayor Harold.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Guard_Steave.dds</contents_image>
+         <destination_pos>1,n4</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>4</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="69"><![CDATA[Vigilante Steve's Information]]></title>
+         <contents mid="70"><![CDATA[<html>Mayor Harold must have left something with Vigilante Guard Steve. Receive the object from Vigilante Guard Steve and find out where you have to go next.<BR><BR><FONT color=#086171>Prairie Town</FONT><FONT color=#a82424> → Vigilante Guard Steve</FONT></html>]]></contents>
+         <destination mid="71"><![CDATA[Talk to Vigilante Guard Steve]]></destination>
+         <todo_msg mid="72"><![CDATA[Talk to Vigilante Guard Steve.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>29</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

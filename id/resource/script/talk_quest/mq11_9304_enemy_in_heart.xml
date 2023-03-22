@@ -1,0 +1,454 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_9304_enemy_in_heart</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>4</qchapter>
+      <qid>9304</qid>
+      <designer>김인정</designer>
+      <qlevel>26</qlevel>
+      <qdesc>코볼트 화약	300479</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9305</nextqid>
+      <nextqname>mq11_9305_girl_alone</nextqname>
+      <nextqnpc>n520_angelica</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[The Enemy Within]]></qkname>
+      <qnpc>
+         <npcid>1146</npcid>
+         <npcename>n1146_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1147</npcid>
+         <npcename>n1147_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>520</npcid>
+         <npcename>n520_angelica</npcename>
+         <npckname>소서리스 안젤리카</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-accepting-a" mid="359" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>$General Douglas$<BR>Laporan juga menyebutkan bahwa knight berambut pirang mengejar Black Knight ke Dark Overlord Army.<BR>Kita tidak mempunyai cukup informasi untuk mengirimkan pasukan kesana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-accepting-acceptted" mid="361" select_type="3" />
+      <talk_question mid="360"><![CDATA[<html>$General Douglas$<BR>Tapi dengan bantuan Adventurer's Guild, sekarang kita punya sebagian peta area tersebut dan telah mengirimkan tim observasi. Secepatnya kita akan bisa memasuki benteng.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-a" mid="364" select_type="2" />
+      <talk_question mid="362"><![CDATA[<html>$General Douglas$<BR>Teruslah berlatih sambil menunggu mereka.<BR>Para adventurer lain telah pergi ke <FONT color=#a82424>Hermalte Port</FONT> untuk menyelesaikan misi guild.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="366" select_type="5" />
+      <talk_question mid="365"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Lalu...</FONT><BR>
+<FONT color=#662500>Mungkin aku juga harus pergi ke Hermalte Port)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1147_lunaria-1" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1147_lunaria-1-" mid="368" select_type="5" />
+      <talk_question mid="367"><![CDATA[<html>$Lunaria$<BR>Ngapain kamu disini?<BR>Bukannya kamu seharusnya bicara dengan sorceress itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-1-" mid="370" select_type="5" />
+      <talk_question mid="369"><![CDATA[<html>$Lunaria$<BR>Apa yang kamu lakukan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-a" mid="372" select_type="2" />
+      <talk_question mid="371"><![CDATA[<html>$Sorceress Angelica$<BR>Oh!! <FONT color=#387206>{user_nick}</FONT>!!<BR>Tidak disangka kita bertemu disini! Woooow~!!<BR>
+Senang sekali bertemu denganmu~</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-b" mid="374" select_type="0"><![CDATA[<html>......Apa?!</html>]]></talk_answer>
+      <talk_answer link_index="n520_angelica-1-b" mid="375" select_type="0"><![CDATA[<html>(Dia bicara apa...?)</html>]]></talk_answer>
+      <talk_answer link_index="n520_angelica-1-b" mid="376" select_type="0"><![CDATA[<html>(...saran apa?)</html>]]></talk_answer>
+      <talk_question mid="373"><![CDATA[<html>$Sorceress Angelica$<BR>Jadi kamu tidak mengikuti orang aneh manapun, atau tidak dicurangi, atau tidak kecanduan judi?<BR>Heheh saranku berguna kan untukmu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-b" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-c" mid="378" select_type="2" />
+      <talk_question mid="377"><![CDATA[<html>$Sorceress Angelica$<BR>Hey~ kenapa mukamu seperti itu.<BR>Kamu membosankan.<BR>Omong-omong, kamu juga mencari kerjaan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-c" image="GQ_normal.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-d" mid="380" select_type="0"><![CDATA[<html>Tidak juga...</html>]]></talk_answer>
+      <talk_answer link_index="n520_angelica-1-e" mid="381" select_type="0"><![CDATA[<html>Apa ada sesuatu  yang menarik?</html>]]></talk_answer>
+      <talk_question mid="379"><![CDATA[<html>$Sorceress Angelica$<BR>Aku bisa lihat dari jauh kamu mengamati guild bulleting board itu.<BR>Heheh. Kamu tidak bisa membodohi Sorceress Angelica! Kamu pasti mencari misi untuk diambil, kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-e" mid="383" select_type="2" />
+      <talk_question mid="382"><![CDATA[<html>$Sorceress Angelica$<BR>Jangan malu.<BR>...Dan dengarkan aku sampai habis oke?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-f" mid="385" select_type="2" />
+      <talk_question mid="384"><![CDATA[<html>$Sorceress Angelica$<BR>Heheh. Aku punya cerita menarik.<BR>Dengarkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-g" mid="388" select_type="2" />
+      <talk_question mid="387"><![CDATA[<html>$Sorceress Angelica$<BR>Kamu tahu saat ini Black Knight mengendalikan seluruh Saint's Haven. Kamu juga harus tahu bahwa perang memerlukan banyak sumber daya.<BR>Saat ini aku bertanggungjawab untuk menyiapkan sumber daya tersebut.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-g" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-h" mid="391" select_type="2" />
+      <talk_question mid="390"><![CDATA[<html>$Sorceress Angelica$<BR>Sebenarnya, aku ingin memindahkan tanggungjawab itu ke Edan, tapi dia sudah pergi atas perintah Bishop.<BR>Para cleric itu...<BR><FONT color=#7e12d2>(Angelica menggerutu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-h" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-i" mid="394" select_type="2" />
+      <talk_question mid="393"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>...Bisakah Bishop itu dipercaya?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-i" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-j" mid="397" select_type="2" />
+      <talk_question mid="396"><![CDATA[<html>$Sorceress Angelica$<BR>Huh? Aku tidak pernah mempercayai satu cleric pun dalam hidupku!<BR>
+Edan benar-benar keras kepala jadi sepertinya dia cukup tangguh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-j" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-k" mid="399" select_type="2" />
+      <talk_question mid="398"><![CDATA[<html>$Sorceress Angelica$<BR>Aku mengikuti perintah Bishop karena memberiku banyak uang.<BR>
+Dan juga tujuannya sama yaitu mengalahkan Black Knight.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-k" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-l" mid="404" select_type="0"><![CDATA[<html>Baiklah.</html>]]></talk_answer>
+      <talk_answer link_index="n520_angelica-1-l" mid="405" select_type="0"><![CDATA[<html>Kamu benar.</html>]]></talk_answer>
+      <talk_question mid="401"><![CDATA[<html>$Sorceress Angelica$<BR>Pengaruh Bishop di Royal Palace lebih kuat dari yang kamu bayangkan. Berkata salah, dan kamu bisa dilarang masuk ke istana.<BR>Akan sangat merugikan. Tidak ada tempat lain kamu bisa mendapatkan informasi lebih cepat selain Royal Palace.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-m" mid="407" select_type="2" />
+      <talk_question mid="406"><![CDATA[<html>$Sorceress Angelica$<BR>Sekarang kamu mengerti. Jadi gunakan kesempatan mendapatkan sebanyak mungkin yang kamu bisa.<BR>...Lakukan jika kamu sudah mengerti!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-m" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-1-n" mid="409" select_type="2" />
+      <talk_question mid="408"><![CDATA[<html>$$Sorceress Angelica$$<BR>Aku dalam misi dari Kayleen jadi itu prioritasku~ <FONT color=#a82424>General장군</FONT>mengatakan siapapun dapat melakukan tugas ini.<BR>Jadi bantulah aku ya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-1-n" image="QW_30.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-2" mid="413" select_type="2" />
+      <talk_question mid="410"><![CDATA[<html>$Sorceress Angelica$<BR>Huh? Kamu menanyakan misinya tentang apa? Tugasnya mengumpulkan peledak Kobold di <BR>
+<FONT color=#a82424>Forsaken Islet</FONT>. Para tentara membutuhkan amunisi yang cukup.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-2" image="QW_30.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-2-a" mid="415" select_type="2" />
+      <talk_question mid="414"><![CDATA[<html>$Sorceress Angelica$<BR>Kamu bisa mendapatkannya dari {monster:863} di <FONT color=#a82424>Forsaken Islet</FONT>~<BR>
+Thanks~</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-2-a" image="QW_30.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-2-" mid="417" select_type="5" />
+      <talk_question mid="416"><![CDATA[<html>$Sorceress Angelica$<BR>Temukan dan bawa mereka <FONT color=#a82424>kesini</FONT>.<BR>Mengerti? Huhuhu~<BR>
+</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-3" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-3-" mid="420" select_type="5" />
+      <talk_question mid="419"><![CDATA[<html>$General Douglas$<BR>
+Hmm? Mengumpulkan peledak?<BR>
+Aku membiarkan <FONT color=#a82424>Sorceress Angelica</FONT> menyelesaikan itu.<BR>
+Kurasa dia pergi  ke Hermalte Port...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-3-a" mid="422" select_type="2" />
+      <talk_question mid="421"><![CDATA[<html>$Sorceress Angelica$<BR>Kenapa Edan lama sekali?<BR>
+Apakah dia terlalu takut bergerak setelah bertemu monster menakutkan atau yang lainnya?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-3-" mid="424" select_type="5" />
+      <talk_question mid="423"><![CDATA[<html>$Sorceress Angelica$<BR>Huh? Peledak?<BR>Erm... Sepertinya bukan yang ini.<BR>
+Kamu yakin membawa yang benar?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1147_lunaria-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1147_lunaria-3-" mid="427" select_type="5" />
+      <talk_question mid="426"><![CDATA[<html>$Lunaria$<BR>Kamu ingat...<BR>
+apa yang terjadi di Forsaken Islet...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-a" mid="431" select_type="2" />
+      <talk_question mid="430"><![CDATA[<html>$Lunaria$<BR><FONT color=#387206>{user_nick}</FONT> ...?<BR><FONT color=#7e12d2>(Lunaria terlihat sedikit marah)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-b" mid="433" select_type="2" />
+      <talk_question mid="432"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apakah terjadi sesuatu, Lunaria?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-c" mid="435" select_type="2" />
+      <talk_question mid="434"><![CDATA[<html>$Lunaria$<BR><FONT color=#387206>{user_nick}</FONT> ...itu kamu.<BR>...Huft.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-c" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-d" mid="437" select_type="2" />
+      <talk_question mid="436"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Illusion muncul lagi?<BR>Jadi bukan aku tapi Illusion yang...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-d" image="QM_dragonSycophant.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-e" mid="440" select_type="2" />
+      <talk_question mid="439"><![CDATA[<html>$Lunaria$<BR>Illusion membunuh semua orang bertopeng.<BR><FONT color=#7e12d2>(Lunaria menunjuk ke beberapa orang bertopeng merah)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-e" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-f" mid="442" select_type="2" />
+      <talk_question mid="441"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>......<BR>Aku rasa orang yang ada didalam diriku sudah terlalu sering mengambil kesadaranku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-g" mid="444" select_type="0"><![CDATA[<html>Kamu mengkhawatirkanku?</html>]]></talk_answer>
+      <talk_answer link_index="n1146_lunaria-4-h" mid="445" select_type="0"><![CDATA[<html>Kamu takut?</html>]]></talk_answer>
+      <talk_question mid="443"><![CDATA[<html>$Lunaria$<BR>Mungkin iya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-i" mid="447" select_type="2" />
+      <talk_question mid="446"><![CDATA[<html>$Lunaria$<BR>Khawatir?<BR>...hmm... aku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-i" mid="449" select_type="2" />
+      <talk_question mid="448"><![CDATA[<html>$Lunaria$<BR>Takut?<BR>Sama apa?<BR>
+...Kamu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-j" mid="451" select_type="2" />
+      <talk_question mid="450"><![CDATA[<html>$Lunaria$<BR>Tapi kalau ini dibiarkan, sesuatu akan terjadi padamu.<BR>...Kayaknya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-k" mid="454" select_type="2" />
+      <talk_question mid="453"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>White Purity Orb fragment tidak cukup.<BR>Semoga secepatnya kita bisa mendapatkan solusi...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-l" mid="456" select_type="2" />
+      <talk_question mid="455"><![CDATA[<html>$Lunaria$<BR>Astaga. Semoga berhasil.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-m" mid="458" select_type="2" />
+      <talk_question mid="457"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu berkata seolah itu bukan urusanmu lagi.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-m" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-n" mid="460" select_type="2" />
+      <talk_question mid="459"><![CDATA[<html>$Lunaria$<BR>Kurasa ini bukan urusanku...<BR>Tapi jika aku bisa membantu <FONT color=#a82424>dia</FONT>... Jika aku bisa menghentikannya...<BR>Aku akan bisa menyelesaikannya lebih cepat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-o" mid="462" select_type="2" />
+      <talk_question mid="461"><![CDATA[<html>$Lunaria$<BR>Tapi tidak ada yang bisa kulakukan... karena aku tidak mengetahui apapun......<BR><FONT color=#7e12d2>(Suara Lunaria semakin lembut)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-4-o" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-4-" mid="464" select_type="5" />
+      <talk_question mid="463"><![CDATA[<html>$Lunaria$<BR>......<BR>
+Kita harus kembali dulu ke <FONT color=#a82424>Hermalte Port</FONT>.<BR>Sorceress mengharapkanmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1146_lunaria-5" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1146_lunaria-5-" mid="468" select_type="5" />
+      <talk_question mid="467"><![CDATA[<html>$Lunaria$<BR>......<BR>
+Kita harus kembali dulu ke <FONT color=#a82424>Hermalte Port</FONT>.<BR>Sorceress mengharapkanmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1147_lunaria-5" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1147_lunaria-5-" mid="470" select_type="5" />
+      <talk_question mid="469"><![CDATA[<html>$Lunaria$<BR>Maksudmu Sorceress Angelica?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-5" image="QS_Default.dds" itemindex="300479" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-5-a" mid="472" select_type="2" />
+      <talk_question mid="471"><![CDATA[<html>$Sorceress Angelica$<BR>Hey kamu membawa benda yang aku minta?<BR>
+Yay! Luar biasa!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-5-a" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-5-b" mid="474" select_type="2" />
+      <talk_question mid="473"><![CDATA[<html>$Sorceress Angelica$<BR>Apa yang sekarang dilakukan Edan bodoh itu?<BR>Dia... Terlalu lamban.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-5-!next" mid="476" select_type="4" />
+      <talk_question mid="475"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n520_angelica-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n520_angelica-5-!next" mid="496" select_type="2" />
+      <talk_question mid="495"><![CDATA[<html>$Sorceress Angelica$<BR>Mengkhawatirkan cleric yang lamban itu membuatku keriput.<BR>
+Aku harus melakukan sesuatu.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9304</exe>
+         <exe type="talk" npc="n042_general_duglars">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">863</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">200863</exe>
+         <exe type="addquestitem" num="1">300479</exe>
+         <exe type="huntitem" num="5" exe="8,6,7" onexe="">300479</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="delcount">.</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300479</exe>
+         <exe type="recompense">93040,,,,,,,,</exe>
+         <exe type="complete" true="">9304</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n042_general_duglars" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n042_general_duglars" sub="" />
+   <exelink qstep="1" npc="n520_angelica" sub="b" />
+   <exelink qstep="1" npc="n520_angelica" sub="b" />
+   <exelink qstep="1" npc="n520_angelica" sub="b" />
+   <exelink qstep="1" npc="n520_angelica" sub="c" />
+   <exelink qstep="1" npc="n520_angelica" sub="d" />
+   <exelink qstep="1" npc="n520_angelica" sub="e" />
+   <exelink qstep="1" npc="n520_angelica" sub="e" />
+   <exelink qstep="1" npc="n520_angelica" sub="f" />
+   <exelink qstep="1" npc="n520_angelica" sub="g" />
+   <exelink qstep="1" npc="n520_angelica" sub="h" />
+   <exelink qstep="1" npc="n520_angelica" sub="i" />
+   <exelink qstep="1" npc="n520_angelica" sub="j" />
+   <exelink qstep="1" npc="n520_angelica" sub="k" />
+   <exelink qstep="1" npc="n520_angelica" sub="l" />
+   <exelink qstep="1" npc="n520_angelica" sub="l" />
+   <exelink qstep="1" npc="n520_angelica" sub="m" />
+   <exelink qstep="1" npc="n520_angelica" sub="n" />
+   <exelink qstep="1" npc="n520_angelica" sub="2">0,1,2,3,5</exelink>
+   <exelink qstep="2" npc="n520_angelica" sub="" />
+   <exelink qstep="3" npc="n520_angelica" sub="" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="b" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="c" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="d" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="e" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="f" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="g" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="h" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="i" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="i" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="j" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="k" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="l" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="m" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="n" />
+   <exelink qstep="4" npc="n1146_lunaria" sub="o">0,1</exelink>
+   <exelink qstep="4" npc="n1146_lunaria" sub="" />
+   <exelink qstep="5" npc="n520_angelica" sub="b">1</exelink>
+   <exelink qstep="5" npc="n520_angelica" sub="!next">0,2</exelink>
+   <exelink qstep="5" npc="n520_angelica" sub="!next">0,2</exelink>
+   <journal_data recompense="93040" quest_title="자기 안의 적" chapterid="4" quest_level="26" quest_mark_type="1" use_item_list="300479">
+      <journal index="1">
+         <contents_image>QW_HermaltePort.dds</contents_image>
+         <destination_pos>12,n520</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>520</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="342"><![CDATA[The Enemy Within I]]></title>
+         <contents mid="343"><![CDATA[<html>Sementara General bersiap berperang dengan bantuan Adventurer's Guild, pergilah ke Hermalte Port.<BR>
+ <BR>
+<FONT color=#086171>Hermalte Port</FONT> <FONT color=#a82424>- ???</FONT></html>]]></contents>
+         <destination mid="344"><![CDATA[Temui adventurer di Hermalte Port]]></destination>
+         <todo_msg mid="345"><![CDATA[Pergilah ke Hermalte Port.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_30.dds</contents_image>
+         <destination_pos>301,0,0</destination_pos>
+         <destination_mode>custom:301@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="479"><![CDATA[The Enemy Within II]]></title>
+         <contents mid="480"><![CDATA[<html>Pergi ke Forsaken Islet demi Sorceress Angelica untuk mengumpulkan alat peledak Kobold.<BR>
+ <BR>
+<FONT color=#086171>Hermalte Port (Charter Ship)</FONT> <FONT color=#a82424>- Forsaken Islet</FONT></html>]]></contents>
+         <destination mid="481"><![CDATA[Forsaken Islet]]></destination>
+         <todo_msg mid="482"><![CDATA[Kumpulkan alat peledak Kobold di Forsaken Islet.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_30.dds</contents_image>
+         <destination_pos>301,0,0</destination_pos>
+         <destination_mode>custom:301@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="483"><![CDATA[The Enemy Within III]]></title>
+         <contents mid="484"><![CDATA[<html>Telah mengumpulkan semua alat peledak Kobold.<BR>
+ <BR>
+<FONT color=#086171>Hermalte Port (Charter Ship)</FONT> <FONT color=#a82424>- Forsaken Islet</FONT></html>]]></contents>
+         <destination mid="485"><![CDATA[Forsaken Islet]]></destination>
+         <todo_msg mid="486"><![CDATA[Telah mengumpulkan semua alat peledak Kobold di Forsaken Islet.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_30.dds</contents_image>
+         <destination_pos>301,n1146</destination_pos>
+         <destination_mode>custom:301@1</destination_mode>
+         <statemark_npcid>1146</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="487"><![CDATA[The Enemy Within IV]]></title>
+         <contents mid="488"><![CDATA[<html>Sepertinya Illusion mengambil alih lagi badanmu.<BR>
+Apa yang terjadi?  Bicara dengan Lunaria.<BR>
+ <BR>
+<FONT color=#086171>Hermalte Port(Charter Ship)</FONT> <FONT color=#a82424>- Forsaken Islet (Lunaria)</FONT></html>]]></contents>
+         <destination mid="489"><![CDATA[Bicara dengan Lunaria di Forsaken Islet]]></destination>
+         <todo_msg mid="490"><![CDATA[Cari tahu apa yang terjadi dari Lunaria.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Angelica.dds</contents_image>
+         <destination_pos>12,n520</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>520</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="491"><![CDATA[The Enemy Within V]]></title>
+         <contents mid="492"><![CDATA[<html>Illusion menguasai lagi badanmu.<BR>Tapi kembalilah dulu melapor ke Hermalte Port.<BR>
+ <BR>
+<FONT color=#086171>Hermalte Port</FONT> <FONT color=#a82424>- Sorceress Angelica</FONT></html>]]></contents>
+         <destination mid="493"><![CDATA[Bicara dengan Sorceress Angelica di Hermalte Port]]></destination>
+         <todo_msg mid="494"><![CDATA[Kembali ke Hermalte Port dan bicara dengan Sorceress Angelica.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>9303</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

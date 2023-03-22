@@ -1,0 +1,572 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_466_endless_dream2</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>466</qid>
+      <designer>손원호</designer>
+      <qlevel>27</qlevel>
+      <qdesc>꿈 가루를 이용해서 엘로이즈의 꿈 속으로 들어가지만 결국 깨우지 못하고, 대신 길리안의 이야기를 듣는다. 길리안에게 찾아가면 그는 소녀를 모른다고 하는데…
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>467</nextqid>
+      <nextqname>sq11_467_endless_dream3</nextqname>
+      <nextqnpc>n237_sylock</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Unwakeable Dream II]]></qkname>
+      <qnpc>
+         <npcid>237</npcid>
+         <npcename>n237_sylock</npcename>
+         <npckname>거상 샤일록</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>238</npcid>
+         <npcename>n238_elloise</npcename>
+         <npckname>엘로이즈</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>239</npcid>
+         <npcename>n239_elloise</npcename>
+         <npckname>엘로이즈</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>241</npcid>
+         <npcename>n241_guilian</npcename>
+         <npckname>길리안</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>45</npcid>
+         <npcename>n045_soceress_master_stella</npcename>
+         <npckname>상급 소서리스 스텔라</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Merchant Milo$<BR>Jika kamu ingin menolongku, pergilah ke Master Sorceress Stella di Saint's Haven.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n238_elloise-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Eloise$<BR>
+... ...<BR>
+ <BR>
+<FONT color=#7e12d2>(Kamu dapat memperoleh quest dari Master Sorceress Stella di Saint's Haven)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Gillian$<BR>
+Jika kamu ingin menolongku, pergilah ke Master Sorceress Stella di Saint's Haven.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-accepting-a" mid="10" select_type="0"><![CDATA[<html>Apa itu...Mengerikan....</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Master Sorceress Stella$<BR>Cakep. Cantik. Hebat! <BR>Dengan kekuatan magic poop poop!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-accepting-b" mid="12" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Master Sorceress Stella$<BR>Apa? Aku menolongmu dan itu yang kamu katakan padaku? Pergilah sebelum aku mengubahmu menjadi kodok.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-accepting-c" mid="14" select_type="0"><![CDATA[<html>Eh? T....Tidak tolong...</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Master Sorceress Stella$<BR>Jika kamu bicara seperti itu lagi, aku akan mengirimmu ke bulan dan membuatmu tinggal sendirian disana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-accepting-acceptted" mid="16" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Unwakeable Dream Ⅱ$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1" image="QS_Default.dds" itemindex="300083" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n045_soceress_master_stella-1-a" mid="19" select_type="0"><![CDATA[<html>Terima kasih.</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Master Sorceress Stella$<BR>Ya,itulah seharusnya sikap kamu. Bagaimanapun jika kamu menabur <FONT color=#a82424>Dream Powder</FONT> di gadis itu kamu akan dapat memasuki mimpinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Master Sorceree Stella$<BR>Ingat, jika kamu di dalam mimpinya, mimpi itu juga dapat melihatmu...Pastikan kamu tidak terbawa oleh mimpi tersebut.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n238_elloise-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="152"><![CDATA[<html>$Eloise$<BR>... ...<BR><BR><FONT color=#7e12d2>(Dia sedang tidur yang sangat dalam)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n045_soceress_master_stella-2" image="QW_HermaltePort.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Master Sorceress Stella$<BR>Kembalilah ke <FONT color=#a82424>Hermalte Port</FONT> dimana orang menunggumu.<BR>Jika kamu menaburkan Dream Powder di gadis tersebut kamu akan dapat memasuki mimpinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-2" image="QS_Default.dds" itemindex="300083" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-2-a" mid="23" select_type="0"><![CDATA[<html>Aku telah membawa Dream Powder.</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Merchant Milo$<BR>Jadi, bagaimana? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-2-a" image="QS_Default.dds" itemindex="300083" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-2-b" mid="25" select_type="0"><![CDATA[<html>Aku akan mencoba.</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Merchant Milo$<BR>Dapatkah putriku bangun sekarang?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="26"><![CDATA[<html>$Merchant Milo$<BR>Cepat, tolong bangunkan putriku. Aku akan berbuat apapun agar dia bangun!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-3" image="QS_Default.dds" itemindex="300083" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="27"><![CDATA[<html>$Merchant Milo$<BR>
+Cepat, gunakan <FONT color=#a82424>Dream Powder</FONT> di putriku sekarang!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n238_elloise-3" image="QS_Default.dds" itemindex="300083" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n238_elloise-3-member1" mid="29" select_type="0"><![CDATA[<html>(Menggunakan Dream Powder)</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Eloise$<BR>... ...<BR><BR><FONT color=#7e12d2>(Masih tertidur yang dalam)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n238_elloise-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n238_elloise-3-into_dream" mid="158" select_type="0"><![CDATA[<html>(Memasuki mimpi)</html>]]></talk_answer>
+      <talk_question mid="157"><![CDATA[<html>$Eloise$<BR>... ...<BR><BR><FONT color=#7e12d2>(Cahaya gemerlap yang lembut disekitar Eloise)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n238_elloise-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="159"><![CDATA[<html>$System$<BR>
+<FONT color=#7e12d2><FONT color=#a82424>Kamu tak dapat masuk dalam mode party. Jika kamu dalam mode party, cobalah kembali setelah kamu keluar dari party.</FONT> </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n239_elloise-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n239_elloise-4-a" mid="31" select_type="0"><![CDATA[<html>Apa kamu baik-baik saja?</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Eloise in the dream$<BR>Tidak... Aku tak ingin bangun...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n239_elloise-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n239_elloise-4-b" mid="33" select_type="0"><![CDATA[<html>Aku datang untuk membangunkanmu atas permintaan ayahmu.</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Eloise in the dream$<BR>Siapa kau?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n239_elloise-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n239_elloise-4-c" mid="35" select_type="0"><![CDATA[<html>Namamu Eloise.</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Eloise in the dream$<BR>Ayah? <BR>
+Dimana aku? <BR>
+Aku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n239_elloise-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n239_elloise-4-d" mid="37" select_type="0"><![CDATA[<html>Apa kamu baik-baik saja?</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Eloise in the dream$<BR>Eloise, nama yang cantik...Eloise. <BR>
+Ya. <FONT color=#a82424>Gillian</FONT> mengatakan bahwa namaku cantik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n239_elloise-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n239_elloise-4-e" mid="39" select_type="0"><![CDATA[<html>Ini hanya mimpi dan kamu harus bangun sekarang.</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Eloise in the dream$<BR>Tidak... aku tak ingin bertemu siapapun.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n239_elloise-4-e" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n239_elloise-4-f" mid="41" select_type="0"><![CDATA[<html>Tolong dengarkan aku.</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Eloise in the dream$<BR>Tidak, aku senang dilukai. Ayahku...<FONT color=#a82424>Gillian</FONT>...<BR>Oh... <FONT color=#a82424>Gillian</FONT>. Oh <FONT color=#a82424>Gillian</FONT>ku ...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n239_elloise-4-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n239_elloise-4-out_dream" mid="43" select_type="0"><![CDATA[<html>(Disekitar menjadi kabur)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Eloise in the dream$<BR>Tidak! Pergi!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n238_elloise-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Eloise$<BR>... ...<BR>
+<BR><FONT color=#7e12d2>(Dia tertidur pulas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-5-a" mid="47" select_type="0"><![CDATA[<html>Dia menolak bangun. </html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Merchant Milo$<BR>Apa yang terjadi? Mengapa hanya kamu yang kembali? <BR> Dimana putriku? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-5-b" mid="50" select_type="0"><![CDATA[<html>Apakah kamu mengenal orang bernama Gillian?</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Merchant Milo$<BR>Apa maksudmu dia menolak bangun... Aku sangat menyayanginya... <BR>
+Bagaimana...Bagaimana mungkin!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5-b" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-5-c" mid="52" select_type="0"><![CDATA[<html>Pria nakal?</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Merchant Milo$<BR>Gillian? Bagaimana kamu tahu tentang pria nakal itu? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-5-d" mid="54" select_type="0"><![CDATA[<html>Menurutku, Eloise menyukai Gillian juga.</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Merchant Milo$<BR>
+Dia seharusnya dihajar! Aku menyewanya untuk bekerja tapi dia malah jatuh cinta pada putriku! Beraninya dia mencintai putriku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-5-e" mid="56" select_type="0"><![CDATA[<html>Yah, cinta dapat melebihi segalanya.</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Merchant Milo$<BR>Apa? Omong kosong. Tidak mungkin putriku mencintai pria yang tidak mengenal fashion itu!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-5-f" mid="58" select_type="0"><![CDATA[<html>Kurasa ini berhubungan dengan beberapa aspek.</html>]]></talk_answer>
+      <talk_question mid="57"><![CDATA[<html>$Merchant Milo$<BR>
+Jadi apakah itu alasannya Eloise tidak ingin bangun?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-5-g" mid="60" select_type="0"><![CDATA[<html>Apakah kamu menyetujui hubungan mereka?</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Merchant Milo$<BR>
+Jika memang begitu, carilah orang sialan itu. Jika aku membiarkannya dia akan mati kelaparan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-5-h" mid="62" select_type="0"><![CDATA[<html>Kamu tidak akan menyelesaikan masalah kalau begitu.</html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Merchant Milo$<BR>
+Apa! Tentu saja tidak! Dia harus meninggalkan rumahku tepat setelah putriku bangun.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-5-i" mid="64" select_type="0"><![CDATA[<html>...Ok. </html>]]></talk_answer>
+      <talk_question mid="63"><![CDATA[<html>$Merchant Milo$<BR>Bangunkan dahulu putriku. Aku harus menyelamatkan putriku dahulu sebelum menentukan apa yang akan terjadi selanjutnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-5-i" image="QW_SkirtOfBlackMountain.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="65"><![CDATA[<html>$Merchant Milo$<BR>Kudengar Gillian berada di <FONT color=#a82424>Foothills of Black Mountain</FONT>. Aku tak tahu mengapa dia pergi ke tempat berbahaya itu tapi kurasa untuk alasan yang aneh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-6" image="QW_SkirtOfBlackMountain.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="67"><![CDATA[<html>$Merchant Milo$<BR>
+Beritahu Gillian untuk cepat datang dari <FONT color=#a82424>Foothills of Black Mountain</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-6-a" mid="69" select_type="0"><![CDATA[<html>Maaf.</html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Gillian$<BR>Eloise. <BR>
+Jika aku melihatmu sekali lagi...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-6-b" mid="71" select_type="0"><![CDATA[<html>Aku baik. Apakah kamu Gillian?</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Gillian$<BR>Siapa kamu? <BR>
+Tempat ini berbahaya dan penuh monster. <BR>
+Keluar dari sini sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-6-c" mid="73" select_type="0"><![CDATA[<html>(Menceritakan mengenai Eloise yang tidur)</html>]]></talk_answer>
+      <talk_question mid="72"><![CDATA[<html>$Gillian$<BR>Apakah kamu mengenalku? <BR>
+Apa yang membawamu kemari?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-6-d" mid="75" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="74"><![CDATA[<html>$Gillian$<BR>Eloise... Dia tidak bangun?  <BR>
+Bagaimana mungkin? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-6-e" mid="156" select_type="0"><![CDATA[<html>Bagaimana mungkin?</html>]]></talk_answer>
+      <talk_question mid="155"><![CDATA[<html>$Gillian$<BR>Tapi aku tak dapat kembali sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-6-f" mid="77" select_type="0"><![CDATA[<html>Itu agak memalukan.</html>]]></talk_answer>
+      <talk_question mid="76"><![CDATA[<html>$Gillian$<BR>Setelah aku ditendang dari rumahnya, aku ingin kembali kepadanya sebagai knight yang hebat. Aku bertarung melawan monster dengan pasukanku...tapi monster di Foothills of Black Mountain tampak terlalu kuat untuk kami.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6-f" image="QS_Default.dds" itemindex="300074" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-6-g" mid="79" select_type="0"><![CDATA[<html>Kalung?</html>]]></talk_answer>
+      <talk_question mid="78"><![CDATA[<html>$Gillian$<BR>Itu satu-satunya cara untuk membuat ayahnya menerimaku. Aku tidak berhasil mengalahkan monster apapun tapi aku malah kehilangan <FONT color=#a82424>kalung berharga</FONT> yang Eloise berikan padaku, lari dari monster. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6-g" image="QS_Default.dds" itemindex="300074" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-6-h" mid="81" select_type="0"><![CDATA[<html>Aku akan mencarinya untukmu.</html>]]></talk_answer>
+      <talk_question mid="80"><![CDATA[<html>$Gillian$<BR>Itu adalah kalung yang dia berikan ketika kami mengikat janji. Bagaimana aku kembali setelah menghilangkannya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6-h" image="QW_28.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-6-i" mid="83" select_type="0"><![CDATA[<html>Serahkan padaku!</html>]]></talk_answer>
+      <talk_question mid="82"><![CDATA[<html>$Gillian$<BR>Dapatkah kamu melakukannya untukku? Aku kehilangan kalung itu di tempat terdalam di <FONT color=#a82424>Dark Overlord Keep</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-6-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="84"><![CDATA[<html>$Gillian$<BR>Aku menunggumu disana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-7" image="QW_28.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="87"><![CDATA[<html>$Gillian$<BR>Aku tak dapat kehilangan <FONT color=#a82424>Pendant of Promise</FONT>. Tolong pergilah ke <FONT color=#a82424>Dark Overlord Keep</FONT> dan carikan untukku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-8" image="QS_Default.dds" itemindex="300074" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-8-a" mid="89" select_type="0"><![CDATA[<html>(Menunjukkan padanya kalung itu)</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Gillian$<BR>Oh! Inilah kalung yang dia berikan untukku. Inilah <FONT color=#a82424>Pendant of Promise</FONT>. Terima kasih!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-8-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-8-b" mid="91" select_type="0"><![CDATA[<html>Ayo pergi temui dia.</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Gillian$<BR>Terima kasih. Terima kasih banyak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-8-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-8-c" mid="93" select_type="0"><![CDATA[<html>Mengapa tidak?</html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Gillian$<BR>Tidak. Aku telah memikirkannya ketika kamu mencari kalung itu... Bukan waktu yang tepat untukku. Belum...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-8-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-8-d" mid="95" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="94"><![CDATA[<html>$Gillian$<BR>Sejujurnya alasanku ingin menjadi knight... Aku hanya malu kepada diriku. Aku tahu cinta kami takkan berlanjut karena perbedaan status kami.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-8-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-8-e" mid="97" select_type="0"><![CDATA[<html>Bagaimana dengan Eloise yang tidur?</html>]]></talk_answer>
+      <talk_question mid="96"><![CDATA[<html>$Gillian$<BR>Namun, Hal yang paling penting adalah mental pikiranku. Aku akan melakukan yang terbaik menjadi Merchant terbaik di dunia! Aku akan berusaha 100% dan bangga terhadap diriku. Lalu aku akan pergi menemuinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-8-e" image="QS_Default.dds" itemindex="300074" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n241_guilian-8-f" mid="99" select_type="0"><![CDATA[<html>Aku tak tahu apa itu akan bekerja... Tapi baiklah...</html>]]></talk_answer>
+      <talk_question mid="98"><![CDATA[<html>$Gillian$<BR>Aku tak terlalu yakin, tapi alasan dia tidak bangun adalah sama seperti aku yang tak dapat kembali. Tolong <FONT color=#a82424>berikan kepadanya kalung ini</FONT>. Juga beritahu dia aku akan memegang janjiku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-8-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="100"><![CDATA[<html>$Gillian$<BR>Mungkin cinta bukanlah mengenai menginginkan sesuatu dari seseorang tapi proses menuju kedewasaan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n241_guilian-9" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="101"><![CDATA[<html>$Gillian$<BR>Pergilah ke <FONT color=#a82424>Hermalte Port</FONT> dan berikan <FONT color=#2b2723>pendant</FONT> kepadanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-9" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-9-a" mid="104" select_type="0"><![CDATA[<html>(Katakan padanya cerita mengenai Gillian)</html>]]></talk_answer>
+      <talk_question mid="103"><![CDATA[<html>$Merchant Milo$<BR>
+Apa yang terjadi? Mengapa Gillian tidak kemari?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-9-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-9-b" mid="106" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="105"><![CDATA[<html>$Merchant Milo$<BR>Ok... jadi itu yang terjadi. <BR>
+Dia sepertinya lebih baik dari dugaanku. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n237_sylock-9-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n237_sylock-9-!next" mid="108" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="107"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">4667,4661,4662,4663,4664,4665,4666,4667,4668,4669</exe>
+         <exe type="setquest">466</exe>
+         <exe type="talk" npc="n045_soceress_master_stella">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>퀘스트 아이템을 얻고 466 퀘스트를 취소했을 경우 퀘스트 아이템을 삭제해줌
+다음 퀘스트에서 사용하기 때문에 퀘스트 완료, 포기 부분에서 삭제할 수 없음 </comment>
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="delquestitem" num="-1">300074</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13013,1);</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="talk" npc="n238_elloise">a</exe>
+         <exe type="talk" npc="n238_elloise">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,12,7);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">827</exe>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">8</exe>
+         <exe type="addquestitem" num="1">300074</exe>
+         <exe type="delcount">.</exe>
+         <exe type="huntitem" num="1" exe="" onexe="3,4,6">300074</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">200827</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">9</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">4667,4661,4662,4663,4664,4665,4666,4667,4668,4669</exe>
+         <exe type="complete" true="">466</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n045_soceress_master_stella" sub="a">3</exelink>
+   <exelink qstep="accepting" npc="n045_soceress_master_stella" sub="c">0</exelink>
+   <exelink qstep="accepting" npc="n045_soceress_master_stella" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n045_soceress_master_stella" sub="a">0,1,2</exelink>
+   <exelink qstep="2" npc="n237_sylock" sub="b">0,1</exelink>
+   <exelink qstep="3" npc="n238_elloise" sub="member1">3</exelink>
+   <exelink qstep="3" npc="n238_elloise" sub="into_dream">0,1,2</exelink>
+   <exelink qstep="4" npc="n239_elloise" sub="b" />
+   <exelink qstep="4" npc="n239_elloise" sub="c" />
+   <exelink qstep="4" npc="n239_elloise" sub="d" />
+   <exelink qstep="4" npc="n239_elloise" sub="e" />
+   <exelink qstep="4" npc="n239_elloise" sub="f" />
+   <exelink qstep="4" npc="n239_elloise" sub="out_dream">0,1,2</exelink>
+   <exelink qstep="5" npc="n237_sylock" sub="b" />
+   <exelink qstep="5" npc="n237_sylock" sub="c" />
+   <exelink qstep="5" npc="n237_sylock" sub="d" />
+   <exelink qstep="5" npc="n237_sylock" sub="e" />
+   <exelink qstep="5" npc="n237_sylock" sub="f" />
+   <exelink qstep="5" npc="n237_sylock" sub="g" />
+   <exelink qstep="5" npc="n237_sylock" sub="h" />
+   <exelink qstep="5" npc="n237_sylock" sub="i">0,1</exelink>
+   <exelink qstep="6" npc="n241_guilian" sub="b" />
+   <exelink qstep="6" npc="n241_guilian" sub="c" />
+   <exelink qstep="6" npc="n241_guilian" sub="d" />
+   <exelink qstep="6" npc="n241_guilian" sub="e" />
+   <exelink qstep="6" npc="n241_guilian" sub="f" />
+   <exelink qstep="6" npc="n241_guilian" sub="g" />
+   <exelink qstep="6" npc="n241_guilian" sub="h" />
+   <exelink qstep="6" npc="n241_guilian" sub="i">0,7,2,8,1</exelink>
+   <exelink qstep="8" npc="n241_guilian" sub="b" />
+   <exelink qstep="8" npc="n241_guilian" sub="c" />
+   <exelink qstep="8" npc="n241_guilian" sub="d" />
+   <exelink qstep="8" npc="n241_guilian" sub="e" />
+   <exelink qstep="8" npc="n241_guilian" sub="f">0,1</exelink>
+   <exelink qstep="9" npc="n237_sylock" sub="b">0</exelink>
+   <exelink qstep="9" npc="n237_sylock" sub="!next">1</exelink>
+   <journal_data recompense="1:4661,2:4662,3:4663,4:4664,5:4665,6:4666,7:4667,8:4668,9:4669" quest_title="깨지 않는 꿈 Ⅱ" chapterid="" quest_level="27" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_SoceressStella.dds</contents_image>
+         <destination_pos>11,n45</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>45</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="110"><![CDATA[Berbicara dengan Master Sorceress Stella]]></title>
+         <contents mid="111"><![CDATA[<html>Bicaralah kepada Master Sorceress Stella untuk mendapatkan Dream Powder dan memasuki mimpi gadis itu.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Sorceress Stella</FONT><BR>
+ </html>]]></contents>
+         <destination mid="112"><![CDATA[Berbicara dengan Master Sorceress Stella]]></destination>
+         <todo_msg mid="113"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_shylock.dds</contents_image>
+         <destination_pos>12,n237</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>237</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="114"><![CDATA[Berbicara dengan Merchant Milo]]></title>
+         <contents mid="115"><![CDATA[<html>Mendapatkan Dream Powder. Kembalilah ke Hermalte Port dan bicara kepada Milo.<BR><BR><FONT color=#086171>Hermalte Port</FONT> <FONT color=#a82424>→ Merchant Milo</FONT></html>]]></contents>
+         <destination mid="116"><![CDATA[Berbicara dengan Merchant Milo]]></destination>
+         <todo_msg mid="117"><![CDATA[Kembalilah ke Hermalte Port dan gunakan Dream Powder]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_elloise.dds</contents_image>
+         <destination_pos>12,n238</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>238</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="119"><![CDATA[Menuju mimpi Eloise]]></title>
+         <contents mid="120"><![CDATA[<html>Gunakan Dream Powder dan memasuki mimpi Eloise.<BR><BR><FONT color=#086171>Hermalte Port</FONT> <FONT color=#a82424>→ Sleeping Eloise</FONT></html>]]></contents>
+         <destination mid="121"><![CDATA[Menuju mimpi Eloise]]></destination>
+         <todo_msg mid="122"><![CDATA[Enter the dream of Eloise]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_elloise.dds</contents_image>
+         <destination_pos>13013,n239</destination_pos>
+         <destination_mode>custom:13013@1</destination_mode>
+         <statemark_npcid>239</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="124"><![CDATA[Berbicara dengan Eloise in the dream]]></title>
+         <contents mid="125"><![CDATA[<html>Masuki mimpi dan bujuk dia.<BR><BR><FONT color=#086171>Dream of Eloise</FONT> <FONT color=#a82424>→ Eloise</FONT></html>]]></contents>
+         <destination mid="126"><![CDATA[Berbicara dengan Eloise in the dream]]></destination>
+         <todo_msg mid="127"><![CDATA[Bujuk Eloise in the dream]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_shylock.dds</contents_image>
+         <destination_pos>12,n237</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>237</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="128"><![CDATA[Berbicara dengan Merchant Milo]]></title>
+         <contents mid="129"><![CDATA[<html>Gagal membujuk Eloise. Tanyakan Merchant Milo siapa Gillian.<BR><BR><FONT color=#086171>Hermalte Port</FONT> <FONT color=#a82424>→ Merchant</FONT><FONT color=#a82424> Milo</FONT></html>]]></contents>
+         <destination mid="130"><![CDATA[Berbicara dengan Merchant Milo]]></destination>
+         <todo_msg mid="131"><![CDATA[Gagal membujuk. Bicaralah kepada Merchant Milo]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Guilian.dds</contents_image>
+         <destination_pos>13,n241</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>241</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="132"><![CDATA[Berbicara dengan Gillian]]></title>
+         <contents mid="133"><![CDATA[<html>Cari dan bicaralah kepada Gillian bahwa, Eloise in the dream mencarinya.<BR>
+ <BR>
+<FONT color=#086171>Foothills of Black Mountain</FONT> <FONT color=#a82424>→ Gillian</FONT><BR>
+ </html>]]></contents>
+         <destination mid="134"><![CDATA[Berbicara dengan Gillian]]></destination>
+         <todo_msg mid="135"><![CDATA[Pergilah ke Foothills of Black Mountain dan bicara dengan Gillian]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QW_28.dds</contents_image>
+         <destination_pos>284,0,0</destination_pos>
+         <destination_mode>custom:281@1,282@1,283@1,284@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="139"><![CDATA[Carilah Pendant of Promise]]></title>
+         <contents mid="140"><![CDATA[<html>Bunuh boss Dark Overlord Keep, Flamewing Gargoyle dan carilah kalung yang Gillian hilangkan. <BR><BR><FONT color=#086171>Foothills of Black Mountain (Dark Overlord Gates)</FONT> <FONT color=#a82424>→ Dark Overlord Keep</FONT></html>]]></contents>
+         <destination mid="141"><![CDATA[Carilah Pendant of Promise]]></destination>
+         <todo_msg mid="142"><![CDATA[Pergilah ke Dark Overlord Keep dan carilah Pendant of Promise]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Npc_Guilian.dds</contents_image>
+         <destination_pos>13,n241</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>241</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="143"><![CDATA[Berbicara dengan Gillian]]></title>
+         <contents mid="144"><![CDATA[<html>Menemukan Pendant of Promise. Kembalilah ke Gillian di Foothills of Black Mountain.<BR>
+ <BR>
+<FONT color=#086171>Foothills of Black Mountain</FONT> <FONT color=#a82424>→ Gillian</FONT></html>]]></contents>
+         <destination mid="145"><![CDATA[Berbicara dengan Gillian]]></destination>
+         <todo_msg mid="146"><![CDATA[Kembalilah ke Gillian di Foothills of Black Mountain]]></todo_msg>
+      </journal>
+      <journal index="9">
+         <contents_image>QN_shylock.dds</contents_image>
+         <destination_pos>12,n237</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>237</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="147"><![CDATA[Berbicara dengan Merchant Milo]]></title>
+         <contents mid="148"><![CDATA[<html>Kembalilah ke Hermalte Port dengan Pendant of Promise. <BR><BR><FONT color=#086171>Hermalte Port</FONT> <FONT color=#a82424>→ Merchant Milio</FONT></html>]]></contents>
+         <destination mid="149"><![CDATA[Berbicara dengan Merchant Milo]]></destination>
+         <todo_msg mid="150"><![CDATA[Kembalilah ke Hermalte Port ]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>465</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

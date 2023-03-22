@@ -1,0 +1,660 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc14_9416_memory</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>14</qchapter>
+      <qid>9416</qid>
+      <designer>최지은</designer>
+      <qlevel>70</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9417</nextqid>
+      <nextqname>mqc14_9417_hope</nextqname>
+      <nextqnpc>n1523_aruno</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Memory]]></qkname>
+      <qnpc>
+         <npcid>1508</npcid>
+         <npcename>n1508_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1515</npcid>
+         <npcename>n1515_for_memory</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1519</npcid>
+         <npcename>n1519_aruno</npcename>
+         <npckname>아르노</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1522</npcid>
+         <npcename>n1522_for_memory</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1523</npcid>
+         <npcename>n1523_aruno</npcename>
+         <npckname>아르노</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1515_for_memory-accepting" image="QW_90.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1515_for_memory-accepting-acceptted" mid="6" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Cahaya batu menunjuk ke Mist Ruins.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1515_for_memory-1" image="QW_90.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1515_for_memory-1-" mid="10" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh hmm, tidak ada yang bisa aku lakukan walau tetap disini. Sebaiknya aku pergi ke Mist Ruins.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1519_aruno-1" image="QW_90.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1519_aruno-1-" mid="12" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Cahaya batu menunjuk ke Mist Ruins.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-a" mid="14" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Argenta$<BR>Mungkin seharusnya aku bunuh semua Ancient saat aku bertemu dengan mereka...<BR>Aku lengah karena mereka bisa melihat mimpi Goddess.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-b" mid="16" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Argenta$<BR>Goddess mirip dengan itu. Aku juga tahu bagaimana cara berubah seperti ini...<BR>Jadi aku kira mereka teman. Bagaimana aku bisa menyangka mereka akan menusuk aku dari belakang?!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-c" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Argenta$<BR>Argh... Hei, kamu! Roh atau sesuatu yang ada disana!<BR><FONT color=#7e12d2>(Sepertinya dia melihat ke arahmu.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-d" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Roh? Dia menyangka kamu roh? Tunggu, berarti dia bisa melihatmu?!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-e" mid="210" select_type="0"><![CDATA[<html>Tunggu... Aku bukan asap... (Dia tidak bisa mendengarmu)</html>]]></talk_answer>
+      <talk_answer link_index="n1508_argenta-1-e" mid="211" select_type="0"><![CDATA[<html>Er... apa??? (Dia tidak bisa mendengarmu)</html>]]></talk_answer>
+      <talk_answer link_index="n1508_argenta-1-e" mid="212" select_type="0"><![CDATA[<html>Untung kamu tidak memanggilku pengecut. (Dia tidak bisa mendengarmu)</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Argenta$<BR>Aku lihat sudah lama kamu berkeliaran disini. Kamu pasti roh yang bosan. Apalagi sebutan manusia untuk yang seperti kamu? Asap? ...yah sepertinya itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-f" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Argenta$<BR>Hai asap kecil. Menurut kamu lucu gak? Kenapa Ancient Dragon tidak memperingatiku tentang Ancient menjijikkan itu? Bukannya dia tahu mereka itu apa? Dia memberiku banyak informasi tentang pedang atau heraldry, tapi aku tidak tahu banyak tentang manusia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-g" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Argenta${sound:npc_Argenta_9416_qu_01.ogg}<BR>Misi yang dia berikan padaku adalah melindungi Verathea. Aku kira mereka bagian dari yang harus aku lindungi... salah kah? Jika mereka bukan bagian dari Verathea, aku pasti sudah memakan mereka untuk memulihkan tenagaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-h" mid="28" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Argenta${sound:npc_Argenta_9416_qu_02.ogg}<BR>Walaupun aku belum pernah bicara langsung dengan Ancient Dragon, kurasa dia memberiku semua informasi penting yang aku perlukan untuk  melindungi dunia ini. Jika demikian, itulah alasan kenapa aku masih muramThough I've never talked to the Ancient Dragon directly before, I guess he gave me all the necessary information needed for me to protect this world. If that's so, then the reason why I'm still brooding over this must be... because Ancient Dragon is a shitty dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-i" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Argenta${action:Hwww}<BR>berantakan sekali! Berdasarkan ilmu dari Ancient Dragon, "saudara" ku seharusnya sudah lahir sekarang. Dimana sih dia?? Apa aku harus merasakan kekacauan ini sendirian selamanya? Menyebalkan!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-j" mid="32" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Argenta$<BR>Setidaknya manusia bisa  menyalahkan orang tua mereka. Apa yang bisa aku lakukan? Bahkan aku tidak bisa bertemu dengan Ancient Dragon...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-1-k" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Argenta${sound:npc_Argenta_9416_qu_03.ogg}<BR><FONT color=#7e12d2>(Wajah Argenta ketakutan)</FONT><BR>...Aku benar-benar penasaran dia seperti apa. Kalau aku sempat bertemu dengannya, aku akan pastikan dia mendapat balasannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-1-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-2" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku merasa kasihan dengan Ancient Dragon walaupun aku belum pernah bertemu dengannya...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-2-" mid="38" select_type="5" />
+      <talk_question mid="37"><![CDATA[<html>$Argenta$<BR>Kenapa aku mulai mengkhawatirkan hal tidak berguna ini?<BR><FONT color=#7e12d2>(Argenta tersenyum ketus)</FONT><BR>Pasti sejak aku bertemu dengan Arno...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-3-a" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Arno${action:Talk}<BR>Goddess minum racun dan Beyond Dragon menyerang dunia kita.<BR>Tidak ada harapan untuk kita?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-3-b" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Arno$<BR>Apakah Ancient Dragon yang melindungi dunia ini berhasil membunuh Chaos Dragon?<BR>Sebarapa rusaknya Chaos Dragon become, dan berapa banyak makhluk Mistland yang sudah terbentuk?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-3-c" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Arno$<BR>Mimpi Goddess menentukan takdir dunia ini, dan kita pembaca mimpinya.<BR>Orang lain menyebut kami Prophet dan memuja kami.<BR>Kemampuanku membaca mimpi Goddess sangatlah kuat dan aku punya Rose untuk menjadi pemimpin bangsaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-3-d" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Arno$<BR>Tapi kenapa  mimpi yang aku lihat sangat sedih dan penuh tragedi?<BR>Berapa banyak mimpi Goddess yang bahagia?<BR>Kebahagiaan jenis apa yang diharapkan oleh Goddess?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-4" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Arno$<BR>Kita sudah mendukung dunia ini sebagai Prophet, dan kita sangat tahu di dunia ini ada hal lain selain sisi kesedihan dan kegelapan.<BR>Ada harapan, dan harapanlah yang menjaga dunia ini. Tapi... apakah Goddess tidak percaya harapannya sendiri?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-4-" mid="50" select_type="5" />
+      <talk_question mid="49"><![CDATA[<html>$Arno${sound:npc_Arno_9416_qu_01.ogg}<BR>...Betul. Aku harus percaya hal yang aku lihat di mimpiku.<BR>Aku akan bertemu dengannya suatu saat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-a" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Silver-haired Woman$<BR><FONT color=#7e12d2>(Diam-diam dia mengawasi Arno.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-a" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-b" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Arno${sound:npc_Arno_9416_qu_02.ogg}<BR>Selamat datang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-c" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Silver-haired Woman${sound:npc_Argenta_9416_qu_04.ogg}<BR>Kamu kenal aku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-c" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-d" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Arno${sound:npc_Arno_9416_qu_03.ogg}<BR>Tentu. Kamu Silver Dragon, salah satu pecahan Ancient Dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-e" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Silver-haired Woman${sound:npc_Argenta_9416_qu_05.ogg}<BR>Hmm... Apa kamu salah satu makhluk yang bisa melihat mimpi Goddess?<BR>Kenapa kamu disini? Aku sibuk. Aku  harus pergi dan membunuh monster-monster perusak itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-e" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-f" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$Arno$<BR>Monster perusak? Bantulah kami.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-g" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$Silver-haired Woman$<BR>Kamu? Kamu hanya menjadi gangguan. Racun perusak cukup kuat membuat naga menjadi marah.<BR>Aku dengar awalnya ancestormu yang membuat racun masuk ke dunia ini. Jangan sampai kamu berakhir sama seperti mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-g" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-h" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$Arno$<BR>...Aku mengerti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-i" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Silver-haired Woman$<BR>Aku lahir dengan misi untuk melindungi dunia ini.<BR>Hanya itulah satu-satunya alasan aku ada... Jadi jalan kita tidak akan bertabrakan, Reader of Dreams.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-i" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-j" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Arno$<BR>Dear Silver Dragon, bukan begitu  maksudku. Alasan kenapa kita bisa melihat mimpi Goddess pasti karena kita bertanggung jawab mengatur dan melindungi dunia ini. Pendahulu kita sudah berdosa dan ini jalan yang harus kita ambil... Jadi aku yakin kita akan bertemu lagi. Boleh aku tahu namamu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-k" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Silver-haired Woman${sound:npc_Argenta_9416_qu_06.ogg}<BR>Namaku? Aku tidak punya nama.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-k" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-l" mid="74" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Arno${sound:npc_Arno_9416_qu_04.ogg}<BR>Kamu... Tidak punya nama?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-m" mid="76" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>$Silver-haired Woman${sound:npc_Argenta_9416_qu_07.ogg}<BR>Hmm... Aku rasa manusia saling mengenal dengan nama.<BR>Akan lebih baik jika punya nama. Berikan aku nama yang bagus.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-m" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-n" mid="78" select_type="2" />
+      <talk_question mid="77"><![CDATA[<html>$Arno$<BR>Kamu ingin aku memberimu nama?<BR><FONT color=#7e12d2>(Arno kaget)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-o" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Silver-haired Woman$<BR>Kamu tidak berharap aku menamaiku sendiri kan?Aku tidak biasa dengan hal begitu.<BR>Beri saja yang kira-kira cocok.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-o" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-p" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Arno${sound:npc_Arno_9416_qu_05.ogg}<BR>Hmm... begitu...<BR><FONT color=#7e12d2>(Arno memikirkan nama)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-p" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-q" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>$Arno$<BR>...<FONT color=#7e12d2>(Arno masih  berpikir)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-q" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-r" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Arno$<BR>...<FONT color=#7e12d2>(Arno masih berpikir)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-r" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-s" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Arno${sound:npc_Arno_9416_qu_06.ogg}<BR><FONT color=#7e12d2>(Arno masih terus berpikir...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-s" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-t" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>$Arno$<BR>...<FONT color=#7e12d2>(Proses berpikir Arno masuk ke alam bawah sadar)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-u" mid="92" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>$Silver-haired Woman${sound:npc_Argenta_9416_qu_08.ogg}<BR>Kamu tidur?! Jangan bikin aku berdiri disini seharian!<BR><FONT color=#7e12d2>(Argenta terlihat kesal)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-u" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-v" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>$Arno${sound:npc_Arno_9416_qu_07.ogg}<BR>...T-tidak aku masih bangun. Bagaimana dengan nama... Argenta?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-v" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-5-w" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>$Silver-haired Woman${sound:npc_Argenta_9416_qu_09.ogg}<BR><FONT color=#a82424>Argenta</FONT>...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-5-w" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-6" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>$Arno${action:Talk}<BR>Itu nama buyutku. Artinya yang terkuat dan bijak.<BR>Nama belakangku juga darinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-a" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>$Silver-haired Woman${sound:npc_Argenta_9416_qu_10.ogg}<BR>Argenta... Bagus juga. Okay, mulai sekarang panggil aku Argenta. Sampai ketemu lagi atau idak, terserahlah. Siapa namamu, manusia?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-a" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-b" mid="102" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>$Arno$<BR>Namaku Bishas Arnobius. Nama panggilku Arno.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-c" mid="104" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$Argenta$<BR>Baiklah, Arno. Sampai ketemu nanti. Hati-hati dengan racun perusak.<BR>Tidak ada yang didunia ini tahan dengan racun itu.<BR>Seharusnya kamu tahu itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-c" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-d" mid="106" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>$Arno$<BR>Apa racun Goddess Vestinel sekuat itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-e" mid="108" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Argenta$<BR>Racun itu buatan goddess. Darkness murni yang tidak bisa dipulihkan.<BR>Walaupun Goddess Altea tidak bisa bangun setelah meminum racun, akan seperti apa dampaknya terhadap kita? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-e" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-f" mid="110" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>$Arno$<BR>...Aku mengerti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-g" mid="112" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>$Argenta$<BR>Tapi karena racun tidak membunuhnya hanya membuatnya tidur pulas,<BR>masih ada harapan untuk kita.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-g" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-h" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>$Arno$<BR>Ah Argenta, kamu memang bijak!<BR>Kamu benar. Masih ada harapan untuk kita. Kamu memang pecahan Ancient Dragon yang hebat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-i" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>$Argenta$<BR>Hei, aku jelaskan bahwa aku tidak mengingat apapun tentang Ancient Dragon.<BR>Kalau aku punya ingatan sepertinya, If I had the same memory as he had, we'd be having a much more meaningful conversation now.<BR>...well I can't say that for sure too since I've never met him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-j" mid="118" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>$Argenta$<BR>Lagipula, aku baru lahir jadi jangan berharap aku menjadi bijak. Seharusnya kamu lebih mengetahuinya.<BR>Sebenarnya, aku tidak tahu apa yang aku bicarakan sekarang. <BR>Untungnya, aku baru saja lahir. Kenapa aku harus bicara dengan pemimpin manusia sekarang?<BR><FONT color=#7e12d2>(Argenta terlihat lelah)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-j" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-k" mid="120" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>$Arno$<BR>Percakapan yang menyenangkan.<BR>Bicara denganmu langsung membuatku sadar betapa kuat dan bijaknya kamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-l" mid="122" select_type="2" />
+      <talk_question mid="121"><![CDATA[<html>$Argenta$<BR>Hahaha! Lucu.<BR>Apa itu yang manusia sebut "menjilat"?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-l" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-m" mid="124" select_type="2" />
+      <talk_question mid="123"><![CDATA[<html>$Arno${action:Talk}<BR>Tidak, aku bersungguh-sungguh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-n" mid="126" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>$Argenta$<BR>Huhu. Manusia cukup menarik.<BR>Aku suka kamu. Pantas kita bisa berubah menjadi tubuh kecil ini.<BR>baiklah, Arno. Sampai nanti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-n" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-o" mid="128" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>$Arno$<BR>Hati-hati Argenta. Sampai ketemu nanti setelah kamu menyelesaikan misimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-p" mid="130" select_type="2" />
+      <talk_question mid="129"><![CDATA[<html>$Argenta${sound:npc_Argenta_9416_qu_11.ogg}<BR>Menyelesaikan misiku? Haha... Itu tidak akan pernah terjadi.<BR>Misiku adalah melindungi dunia ini, dan itu tidak akan berahir sampai menghilang dari dunia ini...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1522_for_memory-6-q" mid="132" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>$Argenta$<BR>Tapi... Kurasa aku paham maksudmu.<BR><FONT color=#7e12d2>(Argenta tersenyum.)</FONT><BR>Kamu hati-hati juga.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-6-q" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-7" mid="134" select_type="2" />
+      <talk_question mid="133"><![CDATA[<html>$Arno$<BR>Terimakasih. Hati-hati.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1522_for_memory-7" image="" itemindex="" portrait_left="NPC_Left_Arno.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1522_for_memory-7-" mid="136" select_type="5" />
+      <talk_question mid="135"><![CDATA[<html>$Arno${sound:npc_Arno_9416_qu_08.ogg}<BR>Silver Dragon... Misi mulianya benar-benar mencirikan kebesaran naga.<BR>Sayangnya, kita tidak akan pernah bisa  menjadi sepertinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-8" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-8-a" mid="138" select_type="2" />
+      <talk_question mid="137"><![CDATA[<html>$Argenta$<BR>Arno adalah orang pertama yang aku temui di dunia ini dan bahkan dia memberiku nama.<BR>Dia sangat tulus dan sopan, siapa yang tidak percaya padanya?<BR>Apalagi untuk seorang gadis kecil yang baru saja lahir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-8-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-8-b" mid="140" select_type="2" />
+      <talk_question mid="139"><![CDATA[<html>$Argenta$<BR>...Aku tidak pernah menyangka dia akan menjadi makhluk seperti itu...<BR><FONT color=#7e12d2>(Dia melihat ke langit sambil menahan emosinya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-8-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-8-c" mid="142" select_type="2" />
+      <talk_question mid="141"><![CDATA[<html>$Argenta$<BR>...perusakan, diskriminasi, penghinaan, pembunuhan, kegilaan, pengabaian, pengacuhan... Bahkan kalau semua racun di dunia ini di jadikan satu, tidak akan mampu menciptakan monster sepertinya. Aku tidak pernah menyangka makhluk jahat seperti itu akan ada...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-8-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-9" mid="144" select_type="2" />
+      <talk_question mid="143"><![CDATA[<html>$Argenta$<BR>...roh kecil, setelah kamu besar dan menjadi berguna, manusia akan datang dan mencarimu.<BR>Jangan sampai tertangkap. Jangan dekat dengan mereka dan akhirnya menjadi kecewa...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1508_argenta-9" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1508_argenta-9-" mid="146" select_type="5" />
+      <talk_question mid="145"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Argenta jalan menjauh. Dia terlihat sangat sedih...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-a" mid="148" select_type="2" />
+      <talk_question mid="147"><![CDATA[<html>$Arno$<BR>...Argenta! Argenta!<BR>Ah... Aku kira dia disini barusan. Aku meridukannya...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-b" mid="150" select_type="2" />
+      <talk_question mid="149"><![CDATA[<html>$Arno$<BR>...apa kamu roh? Atau makhluk yang gagal?<BR>Pasti kamu yang tadi berbicara dengan Argenta tadi...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-c" mid="152" select_type="2" />
+      <talk_question mid="151"><![CDATA[<html>$Arno${action:Sad}<BR>Apa katanya? Bagaimana menurutnya? Apa dia kecewa? Marah? Apa dia... membenci kami? Aku rasa pasti semuanya.<BR>Lebih menyakitkanku karena aku tidak tahu apa yang dia lalui.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-d" mid="154" select_type="2" />
+      <talk_question mid="153"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Arno...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-e" mid="156" select_type="2" />
+      <talk_question mid="155"><![CDATA[<html>$Arno$<BR>Kita pasti sudah dimakan oleh Black Dragon yang kita ciptakan. Yang seharusnya melayani kita. Lucunya, yang kita anggap keberuntungan pada saat itu sebenarnya awal dari kehancuran... Yah, jika kita menghilang, mungkin naga akan sadar dan menyelamatkan dunia!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-f" mid="158" select_type="2" />
+      <talk_question mid="157"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Naga...?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-g" mid="160" select_type="2" />
+      <talk_question mid="159"><![CDATA[<html>$Arno$<BR>Ah... Penyesalan tidak pernah berakhir. Aku tidak tahu perusakan menyebabkan kamu melakukan banyak dosa...dan aku... yang paling dekat dengan Goddess. Tapi, aku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-h" mid="162" select_type="2" />
+      <talk_question mid="161"><![CDATA[<html>$Arno$<BR>Tidak, bukan saatnya aku tenggelam dalam kesalahan. Aku harus cepat...sebelum ada yang tahu dengan rencanaku. Kita harus membayar atas dosa kita. Kita harus menyelamatkan dunia sebelum benar-benar hancur!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-i" mid="164" select_type="2" />
+      <talk_question mid="163"><![CDATA[<html>$Arno$<BR>Monolith akan tutup! Hehehe...<BR><FONT color=#7e12d2>(Dia seperti tertawa dan nangis di saat bersamaan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-j" mid="166" select_type="2" />
+      <talk_question mid="165"><![CDATA[<html>$Arno$<BR>Hanya ada satu cara aku bisa mengikuti harapan Argenta dan menyelamatkan semua orang...<BR>Hahahaha....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-k" mid="168" select_type="2" />
+      <talk_question mid="167"><![CDATA[<html>$Arno$<BR>Hahaha.... Hahahaha....!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-l" mid="170" select_type="2" />
+      <talk_question mid="169"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Tertawa Arno membuatmu merinding.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-m" mid="172" select_type="2" />
+      <talk_question mid="171"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Apa yang di rencanakan Arno?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-n" mid="174" select_type="2" />
+      <talk_question mid="173"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(...cahaya dari batu menuju ke...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-o" mid="176" select_type="4" />
+      <talk_question mid="175"><![CDATA[<html>$Quest Complete$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1523_aruno-10-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Arno.dds" center_image="">
+      <talk_answer link_index="n1523_aruno-10-!next" mid="178" select_type="2" />
+      <talk_question mid="177"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(...! Flame Canyon!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9416</exe>
+         <exe type="talk" npc="n1515_for_memory">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment>트리거로 10스텝 7저널로 변경</comment>
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="10">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">94160,,,,,,,,,</exe>
+         <exe type="complete" true="">9416</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1515_for_memory" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n1508_argenta" sub="b" />
+   <exelink qstep="1" npc="n1508_argenta" sub="c" />
+   <exelink qstep="1" npc="n1508_argenta" sub="d" />
+   <exelink qstep="1" npc="n1508_argenta" sub="e" />
+   <exelink qstep="1" npc="n1508_argenta" sub="e" />
+   <exelink qstep="1" npc="n1508_argenta" sub="e" />
+   <exelink qstep="1" npc="n1508_argenta" sub="f" />
+   <exelink qstep="1" npc="n1508_argenta" sub="g" />
+   <exelink qstep="1" npc="n1508_argenta" sub="h" />
+   <exelink qstep="1" npc="n1508_argenta" sub="i" />
+   <exelink qstep="1" npc="n1508_argenta" sub="j" />
+   <exelink qstep="1" npc="n1508_argenta" sub="k" />
+   <exelink qstep="1" npc="n1508_argenta" sub="2">0,1</exelink>
+   <exelink qstep="3" npc="n1523_aruno" sub="b" />
+   <exelink qstep="3" npc="n1523_aruno" sub="c" />
+   <exelink qstep="3" npc="n1523_aruno" sub="d" />
+   <exelink qstep="3" npc="n1523_aruno" sub="4">0</exelink>
+   <exelink qstep="5" npc="n1522_for_memory" sub="b" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="c" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="d" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="e" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="f" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="g" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="h" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="i" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="j" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="k" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="l" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="m" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="n" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="o" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="p" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="q" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="r" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="s" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="t" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="u" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="v" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="w" />
+   <exelink qstep="5" npc="n1522_for_memory" sub="6">0</exelink>
+   <exelink qstep="6" npc="n1522_for_memory" sub="b" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="c" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="d" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="e" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="f" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="g" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="h" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="i" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="j" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="k" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="l" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="m" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="n" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="o" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="p" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="q" />
+   <exelink qstep="6" npc="n1522_for_memory" sub="7">0,1</exelink>
+   <exelink qstep="8" npc="n1508_argenta" sub="b" />
+   <exelink qstep="8" npc="n1508_argenta" sub="c" />
+   <exelink qstep="8" npc="n1508_argenta" sub="9">0,1</exelink>
+   <exelink qstep="10" npc="n1523_aruno" sub="b" />
+   <exelink qstep="10" npc="n1523_aruno" sub="c" />
+   <exelink qstep="10" npc="n1523_aruno" sub="d" />
+   <exelink qstep="10" npc="n1523_aruno" sub="e" />
+   <exelink qstep="10" npc="n1523_aruno" sub="f" />
+   <exelink qstep="10" npc="n1523_aruno" sub="g" />
+   <exelink qstep="10" npc="n1523_aruno" sub="h" />
+   <exelink qstep="10" npc="n1523_aruno" sub="i" />
+   <exelink qstep="10" npc="n1523_aruno" sub="j" />
+   <exelink qstep="10" npc="n1523_aruno" sub="k" />
+   <exelink qstep="10" npc="n1523_aruno" sub="l" />
+   <exelink qstep="10" npc="n1523_aruno" sub="m" />
+   <exelink qstep="10" npc="n1523_aruno" sub="n">0</exelink>
+   <exelink qstep="10" npc="n1523_aruno" sub="o">1</exelink>
+   <exelink qstep="10" npc="n1523_aruno" sub="!next" />
+   <journal_data recompense="94160" quest_title="기억" chapterid="14" quest_level="70" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_90.dds</contents_image>
+         <destination_pos>1001,n1508</destination_pos>
+         <destination_mode>custom:1001@4</destination_mode>
+         <statemark_npcid>1508</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="179"><![CDATA[Memory 1]]></title>
+         <contents mid="180"><![CDATA[<html>Cahaya ringan menuntunmu ke Mist Ruins.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT> <FONT color=#a82424>→ Mist Ruins</FONT></html>]]></contents>
+         <destination mid="181"><![CDATA[Selidiki Mist Ruins]]></destination>
+         <todo_msg mid="182"><![CDATA[Quest ditambahkan. Pergilah ke Mist Ruins.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Arno.dds</contents_image>
+         <destination_pos>1001,n1523</destination_pos>
+         <destination_mode>custom:1001@1</destination_mode>
+         <statemark_npcid>1523</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="183"><![CDATA[Memory 2]]></title>
+         <contents mid="184"><![CDATA[<html>Arno telah hilang. Coba bicara dengannya.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT> <FONT color=#a82424>→ Mist Ruins (Arno)</FONT></html>]]></contents>
+         <destination mid="185"><![CDATA[Bicara dengan Arno]]></destination>
+         <todo_msg mid="186"><![CDATA[Arno muncul. Bicara dengannya.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>1001,n1522</destination_pos>
+         <destination_mode>custom:1001@1</destination_mode>
+         <statemark_npcid>1522</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="187"><![CDATA[Memory 3]]></title>
+         <contents mid="188"><![CDATA[<html>Argenta muncul di depan Arno. Coba bicara dengannya.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT> <FONT color=#a82424>→ Mist Ruins (Argenta)</FONT></html>]]></contents>
+         <destination mid="189"><![CDATA[Bicara dengan Argenta]]></destination>
+         <todo_msg mid="190"><![CDATA[Bicara dengan Argenta.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>1001,n1522</destination_pos>
+         <destination_mode>custom:1001@1</destination_mode>
+         <statemark_npcid>1522</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="191"><![CDATA[Memory 4]]></title>
+         <contents mid="192"><![CDATA[<html>Argenta muncul di depan Arno. Coba bicara dengannya.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT> <FONT color=#a82424>→ Mist Ruins (Argenta)</FONT></html>]]></contents>
+         <destination mid="193"><![CDATA[Bicara dengan Argenta]]></destination>
+         <todo_msg mid="194"><![CDATA[Bicara dengan Argenta.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>1001,n1508</destination_pos>
+         <destination_mode>custom:1001@1</destination_mode>
+         <statemark_npcid>1508</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="195"><![CDATA[Memory 5]]></title>
+         <contents mid="196"><![CDATA[<html>Arno menghilang. Sepertinya kamu baru saja melihat ingatan Argenta berhadapan dengan Arno. Bicara dengan Argenta.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT> <FONT color=#a82424>→ Mist Ruins (Argenta)</FONT></html>]]></contents>
+         <destination mid="197"><![CDATA[Bicara dengan Argenta]]></destination>
+         <todo_msg mid="198"><![CDATA[Bicara dengan Argenta.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>1001,n1508</destination_pos>
+         <destination_mode>custom:1001@1</destination_mode>
+         <statemark_npcid>1508</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="199"><![CDATA[Memory 6]]></title>
+         <contents mid="200"><![CDATA[<html>Arno menghilang. Sepertinya kamu baru saja melihat ingatan Argenta berhadapan dengan Arno. Bicara dengan Argenta.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT> <FONT color=#a82424>→ Mist Ruins (Argenta)</FONT></html>]]></contents>
+         <destination mid="201"><![CDATA[Bicara dengan Argenta]]></destination>
+         <todo_msg mid="202"><![CDATA[Bicara dengan Argenta.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Arno.dds</contents_image>
+         <destination_pos>1001,n1523</destination_pos>
+         <destination_mode>custom:1001@1</destination_mode>
+         <statemark_npcid>1523</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="203"><![CDATA[Memory 7]]></title>
+         <contents mid="204"><![CDATA[<html>Arno menghilang. Coba bicara dengannya.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT> <FONT color=#a82424>→ Mist Ruins (Arno)</FONT></html>]]></contents>
+         <destination mid="205"><![CDATA[Bicara dengan Arno]]></destination>
+         <todo_msg mid="206"><![CDATA[Arno muncul kembali. Coba bicara dengannya.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9415</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,91 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq17_6705_stewart_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>6705</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Mengenai Dragon Followers]]></qkname>
+      <qnpc>
+         <npcid>41</npcid>
+         <npcename>n041_duke_stwart</npcename>
+         <npckname>공작 스튜어트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n041_duke_stwart-accepting-a" mid="6" select_type="0"><![CDATA[<html>Orang-orang bodoh itu membutuhkan kepemimpinan yang lebih baik.</html>]]></talk_answer>
+      <talk_answer link_index="n041_duke_stwart-accepting-b" mid="7" select_type="0"><![CDATA[<html>Orang-orang yang ketakuan terbukti berperilaku tidak rasional.</html>]]></talk_answer>
+      <talk_answer link_index="n041_duke_stwart-accepting-c" mid="8" select_type="0"><![CDATA[<html>Bodoh sekali mereka mengagumi para naga.</html>]]></talk_answer>
+      <talk_answer link_index="n041_duke_stwart-accepting-d" mid="9" select_type="0"><![CDATA[<html>Memang benar bahwa naga tersebut adalah makhluk yang kuat.</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Duke Stuart$<BR>Mereka adalah Monster yang ganas dan kejam. Mungkin mereka terlihat lamban dan bodoh karena badannya yang besar. Aku tidak percaya ada orang yang mengagumi Monster tersebut. Terkadang mereka yang ketakutan dapat berbuat nekat. Orang-orang bodoh memang tidak berguna sama sekali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="10"><![CDATA[<html>$Duke Stuart$<BR>Betul, untuk memberikan pencerahan pada orang-orang tersebut, maka kekuasaan dan kepemimpinan sang raja akan sangat penting. Mereka memiliki cara berpikir sendiri. Bahkan jika kita memerintah dengan baik, mereka tidak menuruti kita. Menemukan keseimbangan sangat sulit. Aku ingin Yang Mulia mengetahui hal ini dengan bijak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Duke Stuart$<BR>Betul, seperti serangga yang bergegas melompat ke jurang. Tapi orang-orang yang tidak memiliki rasa takut juga dapat menimbulkan masalah. Mereka tidak menaati peraturan. Mencari keseimbangan di antara hal tersebut menjadi penting.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Duke Stuart$<BR>Bodoh sekali mereka. Tapi kita tidak dapat mengatur sebuah kerajaan jika kamu menyerah hanya karena mereka bodoh. Sebagian orang hanya tidak tahu saja. Sang raja harus pandai-pandai membuat mereka nyaman dan mengendalikan mereka. Kuharap Yang Mulia dapat menjadi raja seperti ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Duke Stuart$<BR>Jika kamu dapat menguasai dunia ini hanya dengan kekuatan fisik semata, lalu menurutmu mengapa Black Dragon Karas dikalahkan oleh seorang Sage atau para Dragon Slayer tersebut pada kejadian 50 tahun yang lalu ? Siapapun yang memiliki kekuatan dapat menghancurkan dan menaklukkan. Namun ada hal yang lebih penting dari sekedar kekuatan dalam memerintah.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 6705, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 41, 300 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 41, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 41, 70 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 41, 150 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n041_duke_stwart" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n041_duke_stwart" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n041_duke_stwart" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n041_duke_stwart" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 드래곤에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>41:5250:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

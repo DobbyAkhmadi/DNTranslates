@@ -1,0 +1,128 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_1332_cook_skill</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1332</qid>
+      <designer>이현진</designer>
+      <qlevel>24</qlevel>
+      <qdesc>
+1.요리시스템 개편으로 인해서 습득되는 작물이 달라지고 도구가 사라지게 된다. 이에 대한 간단한 안내.
+
+2.횟수제한 레시피를 줌으로 이에 대한 안내 필요.
+
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Old Mori's Recipe Research 1]]></qkname>
+      <qnpc>
+         <npcid>351</npcid>
+         <npcename>n351_farm</npcename>
+         <npckname>농장 관리인 모리 영감</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n351_farm-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n351_farm-accepting-a" mid="10" select_type="0"><![CDATA[<html>I agree.</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Farm Manager Mori$<BR><FONT color=#a82424>Recipes</FONT> are like blueprints in cooking. Cooking without a <FONT color=#a82424>recipe</FONT> would be like being lost in a maze without a map! What do you think?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n351_farm-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n351_farm-accepting-acceptted" mid="12" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$New Recipe$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n351_farm-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n351_farm-1-a" mid="18" select_type="0"><![CDATA[<html>Please teach me.</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Farm Manager Mori$<BR>You have realised that <FONT color=#a82424>[Recipes]</FONT> are the key to cooking.... <BR>It seems like the effort I put into you was not in vain! <BR>Maybe I should tell you about the new <FONT color=#a82424>recipe</FONT> that I've invented recently!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n351_farm-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n351_farm-1-b" mid="32" select_type="0"><![CDATA[<html>Yes! I want to learn! </html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Farm Manager Mori$<BR>Are you sure you want to learn? This <FONT color=#a82424>recipe</FONT> is a little tedious... <BR>Are you sure you're not going to regret it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n351_farm-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n351_farm-1-c" mid="33" select_type="0"><![CDATA[<html><FONT color=#a82424>Limited number of usages</FONT>?</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Farm Manager Mori$<BR>Excellent! The <FONT color=#a82424>recipe</FONT> I'm going to teach you is...<FONT color=#a82424> [Beginner Health Elixir]</FONT> recipe!<BR>This recipe is special because it has a <FONT color=#a82424>limited number of usages</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n351_farm-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n351_farm-1-d" mid="34" select_type="0"><![CDATA[<html>Yes, I'm ready! </html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Farm Manager Mori$<BR>That's right. A special <FONT color=#a82424>recipe</FONT> tends to have various restrictions. <BR>So be careful when you use it. <BR>Are you ready to learn the new <FONT color=#a82424>recipe</FONT> now? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n351_farm-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n351_farm-1-e" mid="35" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n351_farm-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="23"><![CDATA[<html>$Farm Manager Mori$<BR>This time, I will give you the <FONT color=#a82424>[Beginner Health Elixir] </FONT> recipe for free.<BR>Try following the recipe. <BR>Some things just need to be learnt by trying it out yourself. </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">13320,,,,,,,,,,</exe>
+         <exe type="setquest">1332</exe>
+         <exe type="talk" npc="n351_farm">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">13320,,,,,,,,,,</exe>
+         <exe type="complete" true="">1332</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n351_farm" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n351_farm" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n351_farm" sub="b" />
+   <exelink qstep="1" npc="n351_farm" sub="c" />
+   <exelink qstep="1" npc="n351_farm" sub="d">0</exelink>
+   <exelink qstep="1" npc="n351_farm" sub="e">1</exelink>
+   <journal_data recompense="13320" quest_title="모리 영감의 레시피 연구 1" chapterid="-1" quest_level="24" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos>11,n351</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>351</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="38"><![CDATA[Learn the recipe from Old Mori]]></title>
+         <contents mid="39"><![CDATA[<html>Learn the new recipe from Old Mori<BR><BR><FONT color=#086171>Saint Haven </FONT><FONT color=#a82424>→ Old Mori</FONT></html>]]></contents>
+         <destination mid="40"><![CDATA[Learn to cook]]></destination>
+         <todo_msg mid="41"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>24:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>672</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

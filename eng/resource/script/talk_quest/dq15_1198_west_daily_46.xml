@@ -1,0 +1,140 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dq15_1198_west_daily_46</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1198</qid>
+      <designer>김인정</designer>
+      <qlevel>46</qlevel>
+      <qdesc xml:space="preserve">
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Daily] West Ancient armoury]]></qkname>
+      <qnpc>
+         <npcid>709</npcid>
+         <npcename>n709_trader_lucita</npcename>
+         <npckname>상인 루시타</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-accepting-a" mid="6" select_type="0"><![CDATA[<html>Okay. What is it?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Merchant Lucita$<BR>
+Oh adventurer, You're here again.<BR>
+If it's ok with you, can you help me with something?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$[Daily] West Ancient armoury$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-1" image="QW_56.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="86"><![CDATA[<html>$Merchant Lucita$<BR>I hope you can go to <FONT color=#a82424>West Ancient armoury</FONT> and defeat the monsters there.<BR>
+I think people think I'm Jose, they keep on asking me for such things. Why is that?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2" image="QW_56.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-a" mid="89" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Merchant Lucita$<BR>
+You're back. I was worried you might get hurt.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-b" mid="93" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="94"><![CDATA[<html>$Merchant Lucita$<BR>
+But you're strong so that will never happen right?<BR>
+You'll always come back. Right?!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">1198</exe>
+         <exe type="talk" npc="n709_trader_lucita">1</exe>
+         <exe type="recompense_view">11980,,,,,,,,,</exe>
+         <exe type="checkStageClearRank" rand="6" num="563" onexe="4,5,6" true="[=" xsi:nil="true" />
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">11980,,,,,,,,,</exe>
+         <exe type="complete" true="">1198</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n709_trader_lucita" sub="a">2</exelink>
+   <exelink qstep="accepting" npc="n709_trader_lucita" sub="acceptted">0,3,1</exelink>
+   <exelink qstep="2" npc="n709_trader_lucita" sub="a">0</exelink>
+   <exelink qstep="2" npc="n709_trader_lucita" sub="b">1</exelink>
+   <journal_data recompense="11980" quest_title="[일일] 고대의 무기고 서쪽" chapterid="" quest_level="46" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_56.dds</contents_image>
+         <destination_pos>563,0,0</destination_pos>
+         <destination_mode>custom:561@1,562@1,563@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="97"><![CDATA[Lucita's request]]></title>
+         <contents mid="98"><![CDATA[<html>Scout West Ancient armoury.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Ancient Warehouse Entrance)</FONT> <FONT color=#a82424>→ West Ancient armoury</FONT></html>]]></contents>
+         <destination mid="99"><![CDATA[Scout West Ancient armoury]]></destination>
+         <todo_msg mid="100"><![CDATA[Scout West Ancient armoury.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Lucita.dds</contents_image>
+         <destination_pos>15,n709</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>709</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="101"><![CDATA[Talk with Merchant Lucita]]></title>
+         <contents mid="102"><![CDATA[<html>You have completed scouting West Ancient armoury. Report to Merchant Lucita.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→ Merchant Lucita</FONT></html>]]></contents>
+         <destination mid="103"><![CDATA[Talk with Merchant Lucita]]></destination>
+         <todo_msg mid="104"><![CDATA[Completed scouting. Report to Merchant Lucita.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>43:46</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

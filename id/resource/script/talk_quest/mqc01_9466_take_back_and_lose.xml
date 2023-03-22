@@ -1,0 +1,337 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc01_9466_take_back_and_lose</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>9466</qid>
+      <designer>강지영</designer>
+      <qlevel>8</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9467</nextqid>
+      <nextqname>mqc01_9467_cant_go_back</nextqname>
+      <nextqnpc>n1686_eltia</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Found and Lost]]></qkname>
+      <qnpc>
+         <npcid>12</npcid>
+         <npcename>n012_sorceress_master_cynthia</npcename>
+         <npckname>상급 소서리스 신시아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>165</npcid>
+         <npcename>n165_cleric_jake</npcename>
+         <npckname>클레릭 제이크</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1686</npcid>
+         <npcename>n1686_eltia</npcename>
+         <npckname>엘티아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>11</npcid>
+         <npcename>n011_priest_leonardo</npcename>
+         <npckname>상급 클레릭 레오날드</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Master Sorceress Cynthia${action:Talk}<BR>Oh...! Aku pernah mendengar kalau ada pintu yang mengarah ke Hall Of Marian. Tapi aku tidak tau apakah pintu itu ada atau tidak... <BR>ternyata mereka bisa juga menemukan pintu itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-accepting-b" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dimana letak percisnya pintu itu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-accepting-b" image="QW_11.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-accepting-acceptted" mid="10" select_type="3" />
+      <talk_question mid="9"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Ada di bagian terdalam Hall of Marian, tapi jalan disitu sangat sempit dan sudah lama tidak digunakan, jadi Dragon Follower pasti akan kesusahan mencari jalan keluar.<BR>Pergilah ke <FONT color=#a82424>Hall Of Marian</FONT> sekarang dan mungkin kamu dapat menyusul mereka. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-1" image="QW_11.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-1-" mid="12" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>$Master Sorceress Cynthia${action:Talk}<BR>Sebaiknya kamu pergi sekarang.<BR>Apabila Dragon Follower bisa mendapatkan jalan keluar dari <FONT color=#a82424>Hall Of Marian</FONT>, mereka tidak akan dapat ditemukan karena tempat itu tembus ke dekat Mana Ridge!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1" image="QW_11.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-" mid="14" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Eltia$<BR>Jangan pergi begitu saja saat aku ingin memberitahukan dimana Dragon Follower itu pergi, mereka menuju ke <FONT color=#a82424>Hall Of Marian</FONT>!!<BR>Aku akan marah jika kamu terus melakukan itu!<BR><FONT color=#7e12d2>(Eltia menggerutu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-1-" mid="16" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Cleric Jake$<BR>Huff huff...<BR><FONT color=#7e12d2>(Terbatuk dan tergesa-gesa)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-" mid="18" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$Master Cleric Leonard${action:Talk}<BR>Kamu mau membantu kami mencari Staff? Kamu baik sekali.<BR><FONT color=#7e12d2>(Pergilah ke Hall of Marian untuk mengejar Dragon Follower)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-2" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-2-a" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Cleric Jake$<BR>Apakah kamu kaget ternyata aku ada seorang Dragon Follower? (batuk)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-2-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-2-b" mid="22" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Huh...?! Kamu...!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-2-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-2-c" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Cleric Jake$<BR>Aku kita kamu mengincar Vision Orb itu juga... <BR>Jika aku tau lebih awal kalau kamu Cuma petualang biasa, Seharusnya aku suda...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-2-c" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-2-d" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Mengapa Cleric seperti dirimu?<BR>Kamu tidak malu dengan Ethan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-2-d" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-2-e" mid="28" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Cleric Jake$<BR>Ethan....<BR>Suatu hari... Kamu akan... berkorban... Untuk memenuhi impianmu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-2-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-2-f" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Impian menjadi jahat??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-2-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-2-g" mid="32" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Cleric Jake$<BR>Baik dan Jahat.... Sama seperti dua sisi... Sebuah koin... Apapun keyakinanmu kembali ke dirimu sendiri.....<BR><FONT color=#7e12d2>(Suara jake semakin menghilang)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-2-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-2-h" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Jake..? Jake!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-2-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-3" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Cleric Jake$<BR>.........<BR><FONT color=#7e12d2>(Jake berhenti bernafas. Tatapann menerawang dikejauhan tanpa fokus. Dengan segera, Semua tanda kehidupan dari dirinya menghilang)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-3" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-3-a" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Master Cleric Leonard${action:Talk}<BR>Kamu menemukan kembali Staff itu! Bagimana cara untuk berterima kasih padamu. <BR>Sangat melegakan sekali, Staff sudah kembali ke kita...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-3-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-3-b" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Katakan tentang kematian Jake)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-3-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-3-c" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Master Cleric Leonard$<BR>Apa? Jake adalah seorang Dragon Follower...?<BR>Tak dapat kubayangkan Jake akan melakukan perbuatan seperti itu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-3-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-3-d" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kenapa kamu mengira Dragon Follower mengincar Relic?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-3-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-3-e" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Master Cleric Leonard$<BR>Mungkin karena <FONT color=#a82424>Sage Prophecy</FONT>. <BR>Beberapa ratus tahun yang lalu, Para Sage meramalkan akan akhir dari dunia sudah dekat, 2 tanda akan muncul. Star of Birth akan menjadi pertanda kelahiran sang Prophet dan Star of Awakening akan menjadi pertanda kebangkitan Prophet.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-3-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-3-f" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Master Cleric Leonard${action:Talk}<BR>Ramalan itu benar. Sage telah mengungkapkan kalau Prophet yang yang akan menyelamatkan dunia akan lahir.<BR>Star of Birth telah muncul kurang lebih 10 tahun yang lalu... Dan baru-baru ini, Star of Awakening telah muncul.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-3-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-3-g" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Master Cleric Leonard$<BR>Terramai telah melihat Star of Awakening dan mempercayakan Sage Staff kepadaku. Sesuai dengan ramalan, dia menyuruhku untuk menggabung Staff dan Orb di Hill of great mana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-3-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-3-cutscene" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Master Cleric Leonard$<BR>Oh, <FONT color=#a82424>Cynthia</FONT> sudah ada disini. <BR>Kalau begitu mari kita mulai ritualnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n165_cleric_jake-3" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake_Down.dds" center_image="">
+      <talk_answer link_index="n165_cleric_jake-3-" mid="94" select_type="5" />
+      <talk_question mid="93"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Ambil kembali Sage Staff)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-4-" mid="56" select_type="5" />
+      <talk_question mid="55"><![CDATA[<html>$Master Sorceress Cynthia$<BR>A <FONT color=#a82424>Wanita berambut merah</FONT>... <BR>Apakah dia yang akan memegang nasib dunia ini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-a" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Master Cleric Leonard$<BR>Prophet sekarang sedang dalam bahaya... Ini tidak baik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-b" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Prophet... Jadi Dragonn Follower mengincar Sang Prophet.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-5" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$Master Cleric Leonard$<BR>Kemungkinan itu benar. Harusnya dia berada disini bersama dengan Relic yang kita kumpulkan, tapi para monster pasti akan kembali menculiknya.<BR>Siapa yang akan kukirim untuk menjaganya... Templar Knights...? Hmm....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-5" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-5-" mid="64" select_type="5" />
+      <talk_question mid="63"><![CDATA[<html>$Master Cleric Leonard$<BR><FONT color=#7e12d2>(Banyak yang harus dipikirkan oleh Master Cleric Leonard . Kembali ke Eltia terlebih dahulu untuk menceritakan apa yang telah terjadi)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-5-a" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$Eltia${sound:npc_Eltia_9467_qu_01.ogg}<BR>Aku yakin pasti kakak akan menemukan kembali Staff Sage!<BR>Hmm tapi tentang ramalan itu....<BR><FONT color=#7e12d2>(Eltia menjadi serius saat mendengar apa yang terjadi)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-5-b" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tapi aneh sekali ya. Aku tidak bisa membayangkan kalau Jake adalah seorang Dragon Follower...<BR>Hei, Apa yang kamu pegang itu?<BR>(Eltia memegang satu bouquet bunga)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-5-b" image="QN_Kaye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-5-c" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Eltia${sound:npc_Eltia_9467_qu_02.ogg}<BR>Oh ini dari Kay...<BR>Tapi, ada yang harus aku beritahukan kepadamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-5-!next" mid="72" select_type="4" />
+      <talk_question mid="71"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9466</exe>
+         <exe type="talk" npc="n012_sorceress_master_cynthia">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="1">300028</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="custom">api_user_PlayCutScene(userObjID,npcObjID,60);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">94660,,,,,,,,</exe>
+         <exe type="complete" true="">9466</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n012_sorceress_master_cynthia" sub="acceptted">0,1</exelink>
+   <exelink qstep="2" npc="n165_cleric_jake" sub="b" />
+   <exelink qstep="2" npc="n165_cleric_jake" sub="c" />
+   <exelink qstep="2" npc="n165_cleric_jake" sub="d" />
+   <exelink qstep="2" npc="n165_cleric_jake" sub="e" />
+   <exelink qstep="2" npc="n165_cleric_jake" sub="f" />
+   <exelink qstep="2" npc="n165_cleric_jake" sub="g" />
+   <exelink qstep="2" npc="n165_cleric_jake" sub="h" />
+   <exelink qstep="2" npc="n165_cleric_jake" sub="3">0,1,2</exelink>
+   <exelink qstep="3" npc="n011_priest_leonardo" sub="b" />
+   <exelink qstep="3" npc="n011_priest_leonardo" sub="c" />
+   <exelink qstep="3" npc="n011_priest_leonardo" sub="d" />
+   <exelink qstep="3" npc="n011_priest_leonardo" sub="e" />
+   <exelink qstep="3" npc="n011_priest_leonardo" sub="f" />
+   <exelink qstep="3" npc="n011_priest_leonardo" sub="g" />
+   <exelink qstep="3" npc="n011_priest_leonardo" sub="cutscene">0,1,2</exelink>
+   <exelink qstep="4" npc="n011_priest_leonardo" sub="b" />
+   <exelink qstep="4" npc="n011_priest_leonardo" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n1686_eltia" sub="b" />
+   <exelink qstep="5" npc="n1686_eltia" sub="c">0</exelink>
+   <exelink qstep="5" npc="n1686_eltia" sub="!next">1</exelink>
+   <journal_data recompense="94660" quest_title="되찾고 잃어버린 것" chapterid="1" quest_level="8" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_11.dds</contents_image>
+         <destination_pos>103,0,0</destination_pos>
+         <destination_mode>custom:101@1,102@1,103@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="73"><![CDATA[Chase the Dragon Follower]]></title>
+         <contents mid="74"><![CDATA[<html>Master Sorceress Cynthia memberitahukan pintu yang ada di Frost Wind Forest mengarah ke Hall of Marian.<BR>Segera kejar Dragon Follower sebelum mereka menuju ke Hall Of Marian.<BR><BR><FONT color=#086171>Blizzard Plain (Monastery Gate)</FONT><FONT color=#a82424> - Hall Of Marian</FONT></html>]]></contents>
+         <destination mid="75"><![CDATA[Chase the Dragon Follower at Marian's Shrine]]></destination>
+         <todo_msg mid="76"><![CDATA[Pergilah ke Hall of Marian.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Jake_Down.dds</contents_image>
+         <destination_pos>103,n165</destination_pos>
+         <destination_mode>custom:101@1,102@1,103@1</destination_mode>
+         <statemark_npcid>165</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="77"><![CDATA[Dragon Follower's Identity]]></title>
+         <contents mid="78"><![CDATA[<html>Dragon Follower yang bertemu denganmu di Hall of Marian adalah saudara dari Ethan, Cleric Jake. <BR>Talk to him.<BR><BR><FONT color=#086171>Blizzard Plain (Monastery Gate)</FONT><FONT color=#a82424> - Hall Of Marian (Cleric Jake)</FONT></html>]]></contents>
+         <destination mid="79"><![CDATA[Berbicara dengan Jake di Hall of Marian]]></destination>
+         <todo_msg mid="80"><![CDATA[Berbicara kepada Cleric Jake.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Cl_Leonardo.dds</contents_image>
+         <destination_pos>5,n011</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>11</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="81"><![CDATA[Staff Recovered]]></title>
+         <contents mid="82"><![CDATA[<html>Kamu telah mendapatkan kembali Staff dan menyaksikan kematian dari Cleric Jake.<BR>Berikan Staff itu ke  Master Cleric Leonard dan beritahukan apa yang terjadi.<BR><BR><FONT color=#086171>Mana Ridge</FONT><FONT color=#a82424> - Master Cleric Leonard</FONT></html>]]></contents>
+         <destination mid="83"><![CDATA[Lapor ke Master Cleric Leonard]]></destination>
+         <todo_msg mid="84"><![CDATA[Kembali ke Master Cleric Leonard di Mana Ridge.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Cl_Leonardo.dds</contents_image>
+         <destination_pos>5,n011</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>11</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="85"><![CDATA[Sage's Prophecy]]></title>
+         <contents mid="86"><![CDATA[<html>Sebuah ramalan dari Sage bisa terlihat setelah Staff Sage dan Vision Orb digabungkan.<BR>Berbicara ke Master Cleric Leonard tentang Prophet sedang dalam bahaya.<BR><BR><FONT color=#086171>Mana Ridge</FONT><FONT color=#a82424> - Master Cleric Leonard</FONT></html>]]></contents>
+         <destination mid="87"><![CDATA[Berbicara ke Master Cleric Leonard]]></destination>
+         <todo_msg mid="88"><![CDATA[Berbicara ke Master Cleric Leonard di Mana Ridge.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Eltia.dds</contents_image>
+         <destination_pos>5,n1686</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1686</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="89"><![CDATA[Sad Success]]></title>
+         <contents mid="90"><![CDATA[<html>Kamu telah sukses mengembalikan Relic Sage dan melihat ramalan, tapi kamu masih sedikit marah tentang apa yang telah terjadi.<BR>Ceritakan kepada Eltia tentang apa yang terjadi.<BR><BR><FONT color=#086171>Mana Ridge</FONT><FONT color=#a82424> - Eltia</FONT></html>]]></contents>
+         <destination mid="91"><![CDATA[Berbicara ke Eltia]]></destination>
+         <todo_msg mid="92"><![CDATA[Berbicara ke Eltia di Mana Ridge]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9465</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

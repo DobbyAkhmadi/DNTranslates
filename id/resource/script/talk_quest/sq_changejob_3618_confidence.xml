@@ -1,0 +1,455 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_changejob_3618_confidence</qename>
+      <qtype>changejobquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>3618</qid>
+      <designer>조설빈</designer>
+      <qlevel>50</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>3619</nextqid>
+      <nextqname>sq_changejob_3619_master_find</nextqname>
+      <nextqnpc>n091_trader_bellin</nextqnpc>
+      <custommark>40,41,42</custommark>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Spinoff] A Born Mechanic]]></qkname>
+      <qnpc>
+         <npcid>2457</npcid>
+         <npcename>n2457_re_ray_part</npcename>
+         <npckname>제어장치 부품</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2458</npcid>
+         <npcename>n2458_re_ray_lost_article</npcename>
+         <npckname>떨어진 리본</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>393</npcid>
+         <npcename>n393_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>91</npcid>
+         <npcename>n091_trader_bellin</npcename>
+         <npckname>대장장이 벨린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="6" select_type="0"><![CDATA[<html>Accept Quest</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Remote quest$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-class_check" mid="107" select_type="0"><![CDATA[<html>What’s the matter?</html>]]></talk_answer>
+      <talk_question mid="106"><![CDATA[<html>$Blacksmith Berlin$<BR>I heard you have great knowledge of mechanical devices…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-complete_quest" mid="108" select_type="0"><![CDATA[<html>(End Conversation)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html><FONT color=#2b2723>$Blacksmith Berlin$</FONT><FONT color=#7e12d2><BR></FONT><FONT color=#2b2723>I’m sorry, I must have mistaken you for someone else.</FONT><BR><FONT color=#2b2723>You can carry on with whatever you were doing.</FONT><BR><BR><FONT color=#7e12d2>※ Only </FONT><FONT color=#a82424>Mechanic</FONT><FONT color=#7e12d2> characters can take this quest.</FONT><BR><FONT color=#7e12d2></FONT><FONT color=#a82424>Ray Mechanic</FONT><FONT color=#7e12d2> characters who have already completed Specialization cannot take this quest.</FONT></html> ]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="112"><![CDATA[<html><FONT color=#2b2723>$Blacksmith Berlin$</FONT><FONT color=#2b2723>Oh, my! I mistook you for someone else.</FONT><BR><FONT color=#2b2723>I’m sorry I stopped you.</FONT><BR>
+<BR>
+<FONT color=#7e12d2>※ This quest cannot be taken if you have accepted </FONT><FONT color=#a82424>Specialization Quest before the revamp</FONT><FONT color=#7e12d2>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-e" mid="9" select_type="0"><![CDATA[<html>Sure.</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Blacksmith Berlin$<BR>My cousin Merlin got this broken machine from somewhere<BR>and it seems beyond my abilities to fix it... Care to take a look?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="11" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$A Born Mechanic$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Academic Station$<BR>▶ Network error.<BR>▷ Reconnecting to server…….<BR><BR><FONT color=#7e12d2>(Static can be heard in between the beeps. Looks like it can’t be used for a while.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-check_class" mid="14" select_type="0"><![CDATA[<html>Sure.</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Blacksmith Berlin$<BR>My cousin Merlin got this broken machine from somewhere<BR>and it seems beyond my abilities to fix it... Care to take a look?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-b" mid="105" select_type="0"><![CDATA[<html><FONT color=#086171>(It looks familiar...)</FONT></html>]]></talk_answer>
+      <talk_question mid="104"><![CDATA[<html>$Blacksmith Berlin$<BR>This is the machine that’s giving me a headache.<BR><BR><FONT color=#7e12d2>(Berlin lifts a thick cloth covered with oil stains<BR>and a piece of metal in the shape of a hound comes into view.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-c" mid="16" select_type="0"><![CDATA[<html><FONT color=#086171>(Where have I seen this hound before?)</FONT></html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Blacksmith Berlin$<BR>I’ve never seen such a mechanical structure at all in my life.<BR>I wonder who made it…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-d" mid="18" select_type="0"><![CDATA[<html><FONT color=#086171>(Oh! When I first arrived in this time period...)</FONT></html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Blacksmith Berlin$<BR>I was hoping I had a hound that could keep my forges alight day and night without tiring out...<BR><BR><FONT color=#7e12d2>(Two hounds that were jumping on the bellows behind<BR>perk up their ears and suddenly start to jump harder.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-e" mid="20" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Blacksmith Berlin$<BR>Oh, you seem to have noticed something.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-f" mid="22" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Let me take a closer look.<BR><BR></FONT><FONT color=#086171>(It’s the same robot hound I met when I crash landed in Mana Ridge.<BR>Is he still being chased by the weird people?<BR>I don’t think the damage is that severe…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-g" mid="24" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I don’t think there’s a major problem…<BR>It’s just that there’s an empty slot over here. A missing part, maybe? Hmm?<BR><BR></FONT><FONT color=#7e12d2>(Press the small button hidden behind its thigh.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-h" mid="26" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$MF-1$<BR>▶ MF-1 System Reboot.<BR>▷ [System Error] Code : 000X801</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-i" mid="28" select_type="0"><![CDATA[<html>I think that was the reboot button...</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Blacksmith Berlin$<BR>What’s that noise?<BR>What did you just do?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-j" mid="30" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$MF-1$<BR>▶ Failed to activate emergency recovery system.<BR>▷ Converting to manual mode.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-k" mid="32" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$MF-1$<BR>▶ B-109032622<BR>▷ …<BR>▶ B-109032622<BR>▷ … …</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-l" mid="34" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#086171>(It’s repeating the same code over and over again.<BR>It’s like... a signal.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-m" mid="36" select_type="0"><![CDATA[<html>Maybe I can fix it.</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Blacksmith Berlin$<BR>I hope you didn’t press the wrong button.<BR><BR><FONT color=#7e12d2>(Berlin gently touches the robot hound like he’s afraid it might break into pieces.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-n" mid="38" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Blacksmith Berlin$<BR>Are you sure?<BR>Then what was the problem? How can we fix it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-n" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-q" mid="40" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I’m not entirely sure yet but I think I can investigate on the issue.<BR>Please wait awhile.</FONT><BR>
+<FONT color=#662500><BR></FONT><FONT color=#7e12d2>(If I search the code it keeps repeating on </FONT><FONT color=#086171>Academic Station</FONT><FONT color=#7e12d2>,<BR>maybe I can find some clues.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-1-complete_quest" mid="110" select_type="0"><![CDATA[<html>(End Conversation)</html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html><FONT color=#2b2723>$Blacksmith Berlin$</FONT><FONT color=#2b2723>Oh, my! I mistook you for someone else.</FONT><BR><FONT color=#2b2723>I’m sorry I stopped you.</FONT><BR><BR><FONT color=#7e12d2>※ Only </FONT><FONT color=#a82424>Mechanic</FONT><FONT color=#7e12d2> class characters can take this quest.</FONT><BR><FONT color=#a82424>Ray Mechanic </FONT><FONT color=#7e12d2>characters who have already completed Specialization cannot take this quest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-p" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="114"><![CDATA[<html><FONT color=#2b2723>$Blacksmith Berlin$</FONT><FONT color=#2b2723>Oh, my! I mistook you for someone else.</FONT><BR><FONT color=#2b2723>I’m sorry I stopped you.</FONT><BR>
+<BR>
+<FONT color=#7e12d2>※ This quest cannot be taken if you have accepted </FONT><FONT color=#a82424>Specialization Quest before the revamp</FONT><FONT color=#7e12d2>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1-q" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-2" mid="42" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Blacksmith Berlin$<BR>That’s great!<BR>Don’t worry about the robot hound. It’ll be safe here with me so you can concentrate on finding more information.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="43"><![CDATA[<html>$Blacksmith Berlin$<BR>Pooches! Don’t be lazy!<BR>No dinner for you if the forge fire dies out!<BR><BR><FONT color=#7e12d2>(The hounds on the bellows seem to be jumping slower.<BR>On the floor are pools of what appears to be either sweat or saliva.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n393_academic_station-2-a" mid="45" select_type="0"><![CDATA[<html>Yes.</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Academic Station$<BR>▶ Activating search engine... Please enter a keyword.<BR>▷ Searching [B-109032622]…….<BR>▶ Your search has returned [1] result.<BR>▷ Do you want to view it now?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n393_academic_station-2-b" mid="47" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Academic Station$<BR>▶ Encryption code activated…….<BR>▷ Retrieving [B-109032622]’s record.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n393_academic_station-2-c" mid="49" select_type="0"><![CDATA[<html><FONT color=#086171>(There is someone who came to the past other than me?)</FONT></html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$[B-109032622]’s Record$<BR>My first time travel was a success. But the problem is...<BR>I am 10 years off the target date.<BR>My mission has failed.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n393_academic_station-2-d" mid="51" select_type="0"><![CDATA[<html><FONT color=#086171>(Who is this person?)</FONT></html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$[B-109032622]’s Record$<BR>She abandoned me as soon as my mission failed.<BR>But the people here took me in.<BR>This place shall be my new home and I’ll carry on with my life here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n393_academic_station-2-e" mid="53" select_type="0"><![CDATA[<html>Oh! This is...!!</html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$[B-109032622]’s Record$<BR>I even made a new friend to keep me company. <BR>My first true friend, My Friend #001, or MF-1 for short.<BR><BR><FONT color=#7e12d2>(Blueprint and manual of Robot Hound can be found below.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n393_academic_station-2-f" mid="55" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>According to the manual, there seems to be a problem in the control device.<BR>I wonder if I can find the replacement parts.<BR><BR></FONT><FONT color=#7e12d2>(A search window appears when the error code on the manual is clicked.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2-f" image="QW_63.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n393_academic_station-3" mid="57" select_type="0"><![CDATA[<html>What a surprise. It’s actually nearby.</html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Academic Station$<BR>▶ [CODE : 000X801] has been registered. Searching nearest location.<BR>▷ You can get the required parts at [<FONT color=#a82424>Meteor Crash Site Core</FONT>].</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="58"><![CDATA[<html>$Blacksmith Berlin$<BR>The forge fire isn’t hot to my satisfaction.<BR>I wish I had a robot hound that can pump the bellows like blowing dragon’s breath…<BR><BR><FONT color=#7e12d2>(Berlin is staring at his hounds on the bellows.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="59"><![CDATA[<html>$Academic Station$<BR>▶ Network error.<BR>▷ Server is under maintenance…….<BR><BR><FONT color=#7e12d2>(Find the parts at Meteor Crash Site Core until the server is up again.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2457_re_ray_part-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2457_re_ray_part-3-a" mid="61" select_type="0"><![CDATA[<html>(Collect the parts)</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Control Device Parts$<BR><FONT color=#7e12d2>(Why are there mechanical parts lying on the floor?<BR>They look perfectly fine so they probably can be used...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2457_re_ray_part-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2457_re_ray_part-3-b" mid="63" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I didn’t expect them to be really here…!<BR>How come there are device parts around this place?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2457_re_ray_part-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2457_re_ray_part-4" mid="65" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The girl I saw just now seemed strange too.<BR>Maybe I should go deeper inside and investigate.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2458_re_ray_lost_article-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2458_re_ray_lost_article-4-a" mid="67" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Pick up the ribbon)</FONT></html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Detached Ribbon$<BR><FONT color=#7e12d2>(A red ribbon that has been untied can be seen on the floor.<BR>Lightly dusting the dirt off will make it as good as new.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2458_re_ray_lost_article-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2458_re_ray_lost_article-4-b" mid="69" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It still feels warm.<BR>Could it be the girl I saw who dropped this?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2458_re_ray_lost_article-4-b" image="QN_Npc_Saint_BlackSmith_Dwarf.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2458_re_ray_lost_article-5" mid="71" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I should go back to Blacksmith Berlin first.<BR>I’ll repair Robot Hound and ask him what happened.<BR><BR></FONT><FONT color=#7e12d2>※ Return to </FONT><FONT color=#086171>Blacksmith Berlin</FONT><FONT color=#7e12d2> in Saint Haven.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-5-a" mid="73" select_type="0"><![CDATA[<html>Where is Robot Hound?</html>]]></talk_answer>
+      <talk_question mid="72"><![CDATA[<html>$Blacksmith Berlin$<BR>You’re back!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-5-b" mid="75" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="74"><![CDATA[<html>$Blacksmith Berlin$<BR>I’ve been keeping him safe until you came back.<BR>Here he is.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-5-c" mid="77" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="76"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The control device was somewhere here on the blueprint.<BR>I’ll unscrew this and… Found it! That’s the control device!<BR>Now I just have to replace it with the parts I found…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-5-d" mid="79" select_type="0"><![CDATA[<html>Oh! Power is on!</html>]]></talk_answer>
+      <talk_question mid="78"><![CDATA[<html>$MF-1$<BR>▶ MF-1 System reboot.<BR>▷ Checking memory.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-5-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-5-e" mid="81" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="80"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-5-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-5-!next" mid="83" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="82"><![CDATA[<html>$MF-1$<BR>(Talking in sleep)<BR>Master... Can you scratch my nose…</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 86</chk>
+         <chk type="hasquest">4894</chk>
+         <chk type="hasquest">4895</chk>
+         <chk type="hasquest">4896</chk>
+         <chk type="hasquest">4897</chk>
+         <chk type="hascomq">4897</chk>
+      </conditions>
+      <executions>
+         <exe type="recompense_view">36180,,,,,,,,,</exe>
+         <exe type="setquest">3618</exe>
+         <exe type="talk" npc="n091_trader_bellin">1</exe>
+         <exe type="conexe" true="4" false="5">5</exe>
+         <exe type="talk" npc="n091_trader_bellin">b</exe>
+         <exe type="talk" npc="n091_trader_bellin">d</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3618, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3619, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3620, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3621, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="14" false="11">1</exe>
+         <exe type="conexe" true="14" false="12">2</exe>
+         <exe type="conexe" true="14" false="13">3</exe>
+         <exe type="conexe" true="14" false="3">4</exe>
+         <exe type="talk" npc="n091_trader_bellin">c</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 86</chk>
+         <chk type="hasquest">4894</chk>
+         <chk type="hasquest">4895</chk>
+         <chk type="hasquest">4896</chk>
+         <chk type="hasquest">4897</chk>
+         <chk type="hascomq">4897</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="4" false="3">5</exe>
+         <exe type="talk" npc="n091_trader_bellin">a</exe>
+         <exe type="talk" npc="n091_trader_bellin">o</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3618, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3619, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3620, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3621, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="13" false="10">1</exe>
+         <exe type="conexe" true="13" false="11">2</exe>
+         <exe type="conexe" true="13" false="12">3</exe>
+         <exe type="conexe" true="13" false="2">4</exe>
+         <exe type="talk" npc="n091_trader_bellin">p</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="1">400599</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">36180,,,,,,,,,</exe>
+         <exe type="complete" true="">3618</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">1</exelink>
+   <exelink qstep="accepting" npc="n999_remote" sub="class_check">10</exelink>
+   <exelink qstep="accepting" npc="n999_remote" sub="complete_quest">6,7,8,9</exelink>
+   <exelink qstep="accepting" npc="n999_remote" sub="e">0</exelink>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">1</exelink>
+   <exelink qstep="1" npc="n091_trader_bellin" sub="check_class">9</exelink>
+   <exelink qstep="1" npc="n091_trader_bellin" sub="b" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="c" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="d" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="e" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="f" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="g" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="h" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="i" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="j" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="k" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="l" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="m" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="n" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="q" />
+   <exelink qstep="1" npc="n091_trader_bellin" sub="complete_quest">5,6,7,8</exelink>
+   <exelink qstep="1" npc="n091_trader_bellin" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n393_academic_station" sub="b" />
+   <exelink qstep="2" npc="n393_academic_station" sub="c" />
+   <exelink qstep="2" npc="n393_academic_station" sub="d" />
+   <exelink qstep="2" npc="n393_academic_station" sub="e" />
+   <exelink qstep="2" npc="n393_academic_station" sub="f" />
+   <exelink qstep="2" npc="n393_academic_station" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n2457_re_ray_part" sub="b" />
+   <exelink qstep="3" npc="n2457_re_ray_part" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n2458_re_ray_lost_article" sub="a">0</exelink>
+   <exelink qstep="4" npc="n2458_re_ray_lost_article" sub="b" />
+   <exelink qstep="4" npc="n2458_re_ray_lost_article" sub="5">1,2</exelink>
+   <exelink qstep="5" npc="n091_trader_bellin" sub="b" />
+   <exelink qstep="5" npc="n091_trader_bellin" sub="c" />
+   <exelink qstep="5" npc="n091_trader_bellin" sub="d">0</exelink>
+   <exelink qstep="5" npc="n091_trader_bellin" sub="e">1</exelink>
+   <exelink qstep="5" npc="n091_trader_bellin" sub="!next" />
+   <journal_data recompense="36180" quest_title="[외전] 수리는 자신 있습니다" chapterid="-1" quest_level="50" quest_mark_type="40" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Saint_BlackSmith_Dwarf.dds</contents_image>
+         <destination_pos>11,n91</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>91</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Berlin’s Request]]></title>
+         <contents mid="85"><![CDATA[<html>Blacksmith Berlin is having a hard time fixing a broken machine his cousin Merlin has found.<BR><BR><FONT color=#086171>Saint Haven</FONT> - <FONT color=#a82424>Blacksmith Berlin</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Talk to Blacksmith Berlin]]></destination>
+         <todo_msg mid="87"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="88"><![CDATA[Strange Code]]></title>
+         <contents mid="89"><![CDATA[<html>The same code keeps being repeated on the broken Robot Hound. Maybe searching the code on Academic Station can reveal some clues.<BR><BR><FONT color=#086171>Saint Haven</FONT> - <FONT color=#a82424>Academic Station</FONT></html>]]></contents>
+         <destination mid="90"><![CDATA[Connect to the Academic Station]]></destination>
+         <todo_msg mid="91"><![CDATA[Search for the code on Academic Station.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_63.dds</contents_image>
+         <destination_pos>631,0,0</destination_pos>
+         <destination_mode>custom:631@4</destination_mode>
+         <statemark_npcid>2457</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="92"><![CDATA[Finding Parts]]></title>
+         <contents mid="93"><![CDATA[<html>You have found out what is wrong with Robot Hound. Find the control device parts.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> - <FONT color=#a82424>Meteor Crash Site Core</FONT></html>]]></contents>
+         <destination mid="94"><![CDATA[Find the parts at Meteor Crash Site Core]]></destination>
+         <todo_msg mid="95"><![CDATA[Find the parts at Meteor Crash Site Core.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_63.dds</contents_image>
+         <destination_pos>632,0,0</destination_pos>
+         <destination_mode>custom:631@4,632@4</destination_mode>
+         <statemark_npcid>2458</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="96"><![CDATA[Black Girl]]></title>
+         <contents mid="97"><![CDATA[<html>You saw a girl with strange aura at the entrance. She seems familiar... Have you seen her before?... Follow her to find out.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> - <FONT color=#a82424>Meteor Crash Site Core</FONT></html>]]></contents>
+         <destination mid="98"><![CDATA[Go further inside Meteor Crash Site Core]]></destination>
+         <todo_msg mid="99"><![CDATA[Go further inside Meteor Crash Site Core.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Saint_BlackSmith_Dwarf.dds</contents_image>
+         <destination_pos>11,n91</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>91</statemark_npcid>
+         <statemark_type>42</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="100"><![CDATA[Power On]]></title>
+         <contents mid="101"><![CDATA[<html>You lost the girl but found a ribbon that seems to belong to the girl. Return to town and fix Robot Hound first.<BR><BR><FONT color=#086171>Saint Haven</FONT> - <FONT color=#a82424>Blacksmith Berlin</FONT></html>]]></contents>
+         <destination mid="102"><![CDATA[Talk to Blacksmith Berlin]]></destination>
+         <todo_msg mid="103"><![CDATA[Return to Blacksmith Berlin]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>50:-1</user_level>
+      <user_class>5</user_class>
+      <prev_quest>997</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

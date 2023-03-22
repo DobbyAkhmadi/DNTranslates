@@ -1,0 +1,109 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq40_6101_friendly_adventurer</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>6101</qid>
+      <designer>김인정</designer>
+      <qlevel>40</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Friendship] Friendly Adventurer]]></qkname>
+      <qnpc>
+         <npcid>709</npcid>
+         <npcename>n709_trader_lucita</npcename>
+         <npckname>상인 루시타</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-accepting-a" mid="10" select_type="0"><![CDATA[<html>Huh? Me? Why?!</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Merchant Lucita$<BR>W-welcome! <FONT color=#387206>{user_nick}</FONT>.<BR><FONT color=#7e12d2>(Lucita is happy to see you)</FONT><BR>I was waiting for you to come.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-accepting-acceptted" mid="16" select_type="0"><![CDATA[<html>Greet?</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Merchant Lucita$<BR>Well... er that's because...!<BR>You...helped me... and erm... Treated me kindly... so...<BR>I-I wanted to s-say... hello! I want to greet you!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-1-a" mid="84" select_type="0"><![CDATA[<html>I don't hate this~</html>]]></talk_answer>
+      <talk_answer link_index="n709_trader_lucita-1-a" mid="85" select_type="0"><![CDATA[<html>No! I'm happy!</html>]]></talk_answer>
+      <talk_question mid="82"><![CDATA[<html>$Merchant Lucita$<BR>Yes! I learnt that I should politely greet people who are kind.<BR>From my brother when I was young.<BR>Er... If I greet you, is it inconvenient for you? You... don't like it...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-1-b" mid="87" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="86"><![CDATA[<html>$Merchant Lucita$<BR>I see! What a relief!<BR><FONT color=#7e12d2>(Lucita's face brightens up)</FONT><BR><FONT color=#387206>{user_nick}</FONT>, you have been good to me so I feel happy when I wake up every morning these days.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n709_trader_lucita-1-c" mid="89" select_type="0"><![CDATA[<html>Of course~</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Merchant Lucita$<BR>S-so, in the future too, I want to be close to... I mean know each other well... I mean kindly....<BR>I want to be like that to you. Greet you and chat together sometimes. Would that be alright?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-1-c" image="QN_Npc_Lucita.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="90"><![CDATA[<html>$Merchant Lucita$<BR>Th-Thank you! I'm very very happy today!<BR>Hope to see you often, <FONT color=#387206>{user_nick}</FONT>!<BR><FONT color=#7e12d2>(You seem to have gotten closer to Merchant Lucita)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">6101</exe>
+         <exe type="talk" npc="n709_trader_lucita">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="1">6101</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 709, 300 );</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n709_trader_lucita" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n709_trader_lucita" sub="b" />
+   <exelink qstep="1" npc="n709_trader_lucita" sub="c">0</exelink>
+   <journal_data recompense="" quest_title="친절한 모험자님" chapterid="" quest_level="40" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Lucita.dds</contents_image>
+         <destination_pos>15,n709</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>709</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="53"><![CDATA[Talk to Lucita]]></title>
+         <contents mid="54"><![CDATA[<html>Talk to <FONT color=#a82424>Merchant Lucita</FONT>.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→ Merchant Lucita</FONT></html>]]></contents>
+         <destination mid="55"><![CDATA[Talk to Merchant Lucita]]></destination>
+         <todo_msg mid="56"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>40:-1</user_level>
+      <user_class />
+      <prev_quest>796</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

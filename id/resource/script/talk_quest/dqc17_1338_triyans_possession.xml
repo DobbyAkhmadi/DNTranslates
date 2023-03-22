@@ -1,0 +1,141 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dqc17_1338_triyans_possession</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1338</qid>
+      <designer>정진호</designer>
+      <qlevel>81</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Daily] Tryan Abysmal Estate : Crack Research]]></qkname>
+      <qnpc>
+         <npcid>735</npcid>
+         <npcename>n735_darklair_mocha</npcename>
+         <npckname>어둠의 여신관 모카</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-accepting" image="QW_109.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Dark Priestess Mocca$<BR>ruang antara Mist Land dan dunia adalah ruang miterius buat kita. Maka kita harus selalu mengawasinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>Menerima Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Tryan Abysmal Estate : Crack Research$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-1" image="QW_109.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-1-back_npc" mid="25" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Dark Priestess Mocca$<BR>hanya kamu yang bisa pergi ke Mist Land. Tolong meneliti tentang perubahan di  <FONT color=#a82424>Tryan Abysmal Estate</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-2-a" mid="12" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Dark Priestess Mocca$<BR>kamu sudah kembali. Sepertinya semuanya aman ya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-2-b" mid="14" select_type="0"><![CDATA[<html><FONT color=#086171>(terima reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-2-back_end" mid="27" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Dark Priestess Mocca$<BR>terimakasih. Perubahan akan selalu datang. Aku akan percayakan lagi besok.<BR><BR><FONT color=#7e12d2>*daily quest hanya bisa dilaksanakan satu kali per hari.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="stageConstructionLevel" op="]=">0</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">1338</exe>
+         <exe type="recompense_view">13380,,,,,,,,,</exe>
+         <exe type="talk" npc="n735_darklair_mocha">1</exe>
+         <exe type="checkStageClearRank" rand="6" num="1094" onexe="4" true="[=" xsi:nil="true" />
+         <exe type="conexe" true="5,6,7" false="">0</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n735_darklair_mocha.xml");</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">13380,,,,,,,,,</exe>
+         <exe type="complete" true="">1338</exe>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n735_darklair_mocha.xml");</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n735_darklair_mocha" sub="a">1</exelink>
+   <exelink qstep="accepting" npc="n735_darklair_mocha" sub="acceptted">0,2,3</exelink>
+   <exelink qstep="1" npc="n735_darklair_mocha" sub="back_npc">0</exelink>
+   <exelink qstep="2" npc="n735_darklair_mocha" sub="a">0</exelink>
+   <exelink qstep="2" npc="n735_darklair_mocha" sub="b">1</exelink>
+   <exelink qstep="2" npc="n735_darklair_mocha" sub="back_end">2</exelink>
+   <journal_data recompense="13380" quest_title="[일일] 트리얀의 영지 : 균열 조사" chapterid="" quest_level="81" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_109.dds</contents_image>
+         <destination_pos>1094,0,0</destination_pos>
+         <destination_mode>custom:1094@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>24</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="15"><![CDATA[periksa Tryan Abysmal Estate]]></title>
+         <contents mid="16"><![CDATA[<html>Tryan Abysmal Estate diselesaikan dengan tingkat kesulitan apa saja.<BR><BR><FONT color=#7e12d2>*daily quest hanya bisa dilaksanakan satu kali per hari.</FONT><BR><BR><FONT color=#086171>Heart of Merkha(Blue Sand Trade Route)</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>- Tryan Abysmal Estate</FONT></html>]]></contents>
+         <destination mid="17"><![CDATA[Tryan Abysmal Estate clear]]></destination>
+         <todo_msg mid="18"><![CDATA[Tryan Abysmal Estate diselesaikan dengan tingkat kesulitan apa saja.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n735</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>735</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="19"><![CDATA[Dark Priestess Mocca - lapor]]></title>
+         <contents mid="20"><![CDATA[<html>Lapor ke Saint's Haven Dark Priestess Mocca.<BR><BR><FONT color=#7e12d2>*daily quest hanya bisa dilaksanakan satu kali per hari.</FONT><BR><BR><FONT color=#086171>Saint's Haven </FONT><FONT color=#a82424>- Dark Priestess Mocca</FONT></html>]]></contents>
+         <destination mid="21"><![CDATA[Dark Priestess Mocca - lapor]]></destination>
+         <todo_msg mid="22"><![CDATA[Dark Priestess Mocca - kembali untuk bertemu.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>80:89</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

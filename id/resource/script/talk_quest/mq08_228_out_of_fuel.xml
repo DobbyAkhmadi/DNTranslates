@@ -1,0 +1,502 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_228_out_of_fuel</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>3</qchapter>
+      <qid>228</qid>
+      <designer>김인정</designer>
+      <qlevel>14</qlevel>
+      <qdesc xml:space="preserve">
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>229</nextqid>
+      <nextqname>mq08_229_go_see</nextqname>
+      <nextqnpc>n164_argenta_wounded</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Lack of Power]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>392</npcid>
+         <npcename>n392_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>545</npcid>
+         <npcename>n545_edan</npcename>
+         <npckname>클레릭 에단</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>99</npcid>
+         <npcename>n099_engineer_hubert</npcename>
+         <npckname>비행선 엔지니어 휴버트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-noquest-" mid="327" select_type="5" />
+      <talk_question mid="5"><![CDATA[<html>$Argenta$<BR>Gadis kecil.<BR>Kenapa kamu mondar mandir disini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-noquest-" mid="328" select_type="5" />
+      <talk_question mid="6"><![CDATA[<html>$Cleric Ethan$<BR>Tidak gampang seperti yg dipikirkan.<BR>
+Aku merasa tak berdaya dengan kemampuanku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-noquest-" mid="329" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Airship Engineer Hubert$<BR>Apa? Aku sangat sibuk dengan pesawat aku. Pergi saja, jangan ganggu aku!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-accepting" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-accepting-a" mid="246" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_CG_Jasmin_sp_01.ogg}<BR>Sekarang, kamu tidak akan bisa mencari data di waktu sebenarnya dengan communicator, aku akan memberitahu informasi sehubungan dengan situasi saat ini.<BR>Dengarkan baik-baik dan bertindaklah sendiri. Ingat itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-accepting-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-accepting-acceptted" mid="248" select_type="3" />
+      <talk_question mid="247"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay, Jasmine.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-a" mid="249" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Tinkerer Jasmine$<BR>
+Jadi, kesimpulannya, Velskud menghancurkan airship, jadi tidak ada cara untuk ke Saint's Haven... dan airship akan diperbaiki oleh... umm...<BR>
+<FONT color=#7e12d2>(Jasmine mencari data)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-a" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-b" mid="250" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>$Tinkerer Jasmine$<BR>Perlu waktu lebih lama dari dugaanku. Dan ada masalah lain....<BR>Racun yang <FONT color=#a82424>Elena</FONT> sebarkan mencapai Calderock... huh?<BR>TUnggu, <FONT color=#a82424>Elena</FONT>...? <FONT color=#a82424>Elena</FONT>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-c" mid="252" select_type="2" />
+      <talk_question mid="251"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Elena? Tidak mungkin...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-c" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-d" mid="253" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>$Tinkerer Jasmine$<BR>Itu benar. Kamu bertemu <FONT color=#a82424>Teleju</FONT>, Dark Elf Queen, jadi kamu pasti ingat nama Elena.<BR>Berdasarkan catatan, Dark Elf Elena akan muncul sebentar lagi dan menempatkan Calderock Village dalam bahaya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-e" mid="255" select_type="2" />
+      <talk_question mid="254"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Elena..., aku ingin bertemu dengannya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-e" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-f" mid="256" select_type="2" />
+      <talk_question mid="238"><![CDATA[<html>$Tinkerer Jasmine$<BR>
+<FONT color=#387206>{user_nick}</FONT>, Elena bukan Dark Elf yang baik seperti Teleju.<BR>
+Dia adalah pelayan <FONT color=#a82424>Red Dragon</FONT> dan musuh bagi kita. Ingat itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-g" mid="258" select_type="2" />
+      <talk_question mid="257"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Oke. Tapi dimana Elena sekarang?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-g" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-h" mid="259" select_type="2" />
+      <talk_question mid="160"><![CDATA[<html>$Tinkerer Jasmine$<BR>Aku tidak tahu karena catatan tidak menyebutkan lokasi pasti Elena.<BR>Kalau kamu mengikuti Ethan atau Angelica, kamu akan bertemu dengannya, jadi tunggulah dengan sabar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-h" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-" mid="260" select_type="5" />
+      <talk_question mid="241"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_CG_Jasmin_sp_07.ogg}<BR>Sebelum itu, kuharap kamu bisa cepat dan pergi ke Saint's Haven.<BR>Velskud pasti sudah sampai di Saint's Haven dengan Prophet saat ini....<BR><FONT color=#387206>{user_nick}</FONT>, periksa status airship dari <FONT color=#a82424>Airship Engineer Hubert</FONT> dan tanyakan apa yang bisa kamu bantu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-" mid="261" select_type="5" />
+      <talk_question mid="93"><![CDATA[<html>$Argenta$<BR>Kenapa kamu masih ada disini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-1-" mid="262" select_type="5" />
+      <talk_question mid="94"><![CDATA[<html>$Cleric Ethan$<BR>Tidak semuanya kekurangan seperti yang aku bayangkan.<BR>
+Aku merasa sangat lemah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-" mid="263" select_type="5" />
+      <talk_question mid="95"><![CDATA[<html>$Airship Engineer Hubert$<BR>Apa?!<BR>Aku sibuk dengan bagian airship ini, jadi pergilah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-2" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-2-" mid="264" select_type="5" />
+      <talk_question mid="162"><![CDATA[<html>$Tinkerer Station$<BR>※ Mission Objective.<BR>※ <FONT color=#7e12d2>Temui Airship Engineer Hubert dan periksa status airship.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-a" mid="265" select_type="2" />
+      <talk_question mid="163"><![CDATA[<html>$Airship Engineer Hubert$<BR>Oh, gadis kecil itu disini juga!<BR>Selamat datang! Aku baru  mau mencoba tes terbang <FONT color=#a82424>Nautilus</FONT> setelah perbaikan!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-b" mid="267" select_type="2" />
+      <talk_question mid="266"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Huh? Benarkah? Sudah...? (Tidakkah terlalu cepat...?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-b" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-cutscene228" mid="268" select_type="2" />
+      <talk_question mid="165"><![CDATA[<html>$Airship Engineer Hubert$<BR>Okay semuanya, mundur. <BR>Nyalakan mesin!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3-a" mid="269" select_type="2" />
+      <talk_question mid="167"><![CDATA[<html>$Airship Engineer Hubert$<BR>Ahh!! Apa yang terjadi?!<BR>
+Pasti ada sesuatu yang salah jika mesinnya meledak!!<BR>Apa? Apa yang salah?<BR>
+<FONT color=#7e12d2>(Hubert terus menggelengkan kepalanya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3-b" mid="271" select_type="2" />
+      <talk_question mid="270"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Boleh aku lihat?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3-b" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3-c" mid="272" select_type="2" />
+      <talk_question mid="170"><![CDATA[<html>$Airship Engineer Hubert$<BR>Huh? Untuk apa gadis kecil tahu...<BR>
+Well, lihat tidak menyakitkan, jadi silahkan.<BR>
+<FONT color=#7e12d2>(Hubert menggaruk kepalanya setelah melihat seluruh airship)</FONT><BR>
+Hmm.... Apa  masalahnya...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3-d" mid="274" select_type="2" />
+      <talk_question mid="273"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Tenaga masalahnya. Mesinnya terlalu panas karena tidak ada sumber daya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3-e" mid="275" select_type="2" />
+      <talk_question mid="173"><![CDATA[<html>$Airship Engineer Hubert$<BR>Apa? Begitukah...? Well.... <BR>HUH?! Energi untuk mesin kosong....<BR>Oh tidak, alat ini buatan Saint's Haven, jadi kita tidak bisa menggunakan bahan bakar dari Calderock...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3-f" mid="276" select_type="2" />
+      <talk_question mid="175"><![CDATA[<html>$Airship Engineer Hubert$<BR>Aku harus mencari cara lain untuk mengisi ulang mesin.<BR>Hei gadis kecil, perlu beberapa hari lagi untuk menyalakan airship. Maaf mengecewakanmu....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4" mid="278" select_type="2" />
+      <talk_question mid="277"><![CDATA[<html>${user_nick}$<BR>
+Kemana pergi adventurer lain?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4" image="QW_GrayRuin.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-" mid="279" select_type="5" />
+      <talk_question mid="177"><![CDATA[<html>$Airship Engineer Hubert$<BR>...Hmm? Adventurer lain? Well...<BR><FONT color=#7e12d2>(Hubert menggaruk kepalanya)<BR></FONT>Mereka bilang akan menemui seseorang di <FONT color=#a82424>Gray Ruins</FONT>....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-4" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-4-" mid="280" select_type="5" />
+      <talk_question mid="178"><![CDATA[<html>$Tinkerer Jasmine$<BR>Airship jatuh lagi? Oh tidak....<BR>Lalu, bagaimana kalau kamu pergi ke <FONT color=#a82424>Gray Ruins</FONT> dan temui <FONT color=#a82424>Argenta</FONT>?<BR>Mungkin dia punya informasi lain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-a" mid="281" select_type="2" />
+      <talk_question mid="179"><![CDATA[<html>$Argenta$<BR>Ada urusan apa kamu disini?<BR>Kamu disini bukan untuk bicara tentang masa depan lagi atau semacamnya kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-b" mid="283" select_type="2" />
+      <talk_question mid="282"><![CDATA[<html>${user_nick}$<BR>
+Airship jatuh lagi jadi aku tidak bisa pergi ke Saint's Haven.<BR>Padahal Elena pergi ke...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4-b" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-c" mid="284" select_type="2" />
+      <talk_question mid="181"><![CDATA[<html>$Argenta$<BR>Apa? <FONT color=#a82424>Elena</FONT>? ...Dark Elf menyebalkan itu kembali?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4-c" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-d" mid="285" select_type="2" />
+      <talk_question mid="184"><![CDATA[<html>$Argenta$<BR>Aku tidak percaya kata-kata yang kamu ucapkan, tapi sedikit menggangguku.<BR>
+Tentu, hanya sedikit.<BR>Jika <FONT color=#a82424>Elena</FONT> muncul, akan sangat menyusahkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-e" mid="287" select_type="2" />
+      <talk_question mid="286"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Dia akan menyebarkan semua racun diseluruh Calderock.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-f" mid="288" select_type="2" />
+      <talk_question mid="187"><![CDATA[<html>$Argenta$<BR>Racun? Elena selalu mengacau dengan hal yang sama.<BR>
+Ada beberapa tempat yang aku perkirakan. Akan sangat menyulitkan bagiku jika pergi kesana sendirian. Aku akan memanfaatkan saja anak-anak muda sekitar sini. Dan juga menguji apakah mereka memenuhi syarat untuk menjadi <FONT color=#a82424>budak</FONT>ku. Haha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-g" mid="290" select_type="2" />
+      <talk_question mid="289"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Budak??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4-g" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-h" mid="291" select_type="2" />
+      <talk_question mid="189"><![CDATA[<html>$Argenta$<BR>Aku sudah mengirim <FONT color=#a82424>Angelica</FONT> dan <FONT color=#a82424>Ethan</FONT> ke <FONT color=#a82424>Sleepers' Temple</FONT>.<BR>Aku dengar mereka membutuhkan bahan bakar airship, jadi aku memberitahu mereka untuk mengisi ulang bahan bakar disana.<BR>Kalau kamu tidak sibuk, pergi kesana dan dapatkan kembali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-i" mid="293" select_type="2" />
+      <talk_question mid="292"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Kamu bilang Sleepers' Temple?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4-i" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-" mid="294" select_type="5" />
+      <talk_question mid="192"><![CDATA[<html>$Argenta$<BR>Ya. Aku tidak ingin mengulang terus!<BR>
+Aku pasien terluka, jadi cepatlah pergi ke <FONT color=#a82424>Sleepers' Temple</FONT>.<BR>Pergi  kesana dan beritahu bahwa master mereka ingin bertemu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-5" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-5-" mid="295" select_type="5" />
+      <talk_question mid="194"><![CDATA[<html>$Argenta$<BR>Cepatlah pergi ke <FONT color=#a82424>Sleepers' Temple</FONT>!<BR>Angelica dan <FONT color=#a82424>Ethan</FONT> pasti disana. Beritahu mereka untuk kembali padaku saat sudah selesai.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-" mid="296" select_type="5" />
+      <talk_question mid="195"><![CDATA[<html>$Tinkerer Station$<BR>▶ Mission Objective.<BR><FONT color=#7e12d2>▷ Pergi ke Sleepers' Temple.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-5" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-5-a" mid="297" select_type="2" />
+      <talk_question mid="196"><![CDATA[<html>$Cleric Ethan$<BR>Oh... Kamu <FONT color=#387206>{user_nick}</FONT>.<BR><FONT color=#7e12d2>(Ethan tidak terlihat sehat. Sepertinya dia terluka)<BR></FONT>Ngapain kamu disini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-5-b" mid="299" select_type="2" />
+      <talk_question mid="298"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Argenta menyuruhku kesini.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-5-b" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-5-c" mid="300" select_type="2" />
+      <talk_question mid="199"><![CDATA[<html>$Cleric Ethan$<BR>Aku mengerti. <FONT color=#a82424>Argenta</FONT> ingin kita kembali...<BR>Tapi, sepertinya kita terlambat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-5-d" mid="302" select_type="2" />
+      <talk_question mid="301"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Apa yang terjadi?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-5-d" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-5-e" mid="303" select_type="2" />
+      <talk_question mid="201"><![CDATA[<html>$Cleric Ethan$<BR>Saat kami sedang mengisi ulang battery airship, kami bertemu dengan Dark Elf bersama Ogre yang besar.<BR>Dia <FONT color=#a82424>Dark Elf berpakaian serba  merah</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-5-e" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-5-f" mid="305" select_type="2" />
+      <talk_question mid="304"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Dark Elf Elena!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-5-f" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-5-g" mid="306" select_type="2" />
+      <talk_question mid="204"><![CDATA[<html>$Cleric Ethan$<BR>Aku tidak tahu siapa dia.<BR>
+Tapi, Dark Elf itu menculik <FONT color=#a82424>Angelica</FONT>.<BR>Orge besar itu membawa <FONT color=#a82424>airship engine battery</FONT>... Dan aku kehilangan kesadaran.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-5-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-6" mid="308" select_type="2" />
+      <talk_question mid="307"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Kasih tahu Argenta dulu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n545_edan-6" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n545_edan-6-" mid="309" select_type="5" />
+      <talk_question mid="206"><![CDATA[<html>$Cleric Ethan${action:Talk}<BR>
+Itu lebih baik. Aku malu kita berakhir seperti ini.<BR>Seharusnya aku melindungi Angelica....<BR>
+Aku akan pergi ke <FONT color=#a82424>Argenta</FONT> sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-6" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-6-a" mid="310" select_type="2" />
+      <talk_question mid="207"><![CDATA[<html>$Argenta$<BR>Aku baru saja mendengar kabarnya.<BR>
+Ogre besar itu mengambil fuel device dan menculik Angelica.<BR>Menyedihkan sekali....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-6-a" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-6-b" mid="311" select_type="2" />
+      <talk_question mid="209"><![CDATA[<html>$Argenta$<BR>Ethan bilang dia akan mencari tahu kemana dia dibawa dan budak-budak lainnya.<BR>Ada petunjuk?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-6-c" mid="313" select_type="2" />
+      <talk_question mid="312"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Well....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-6-!next" mid="314" select_type="4" />
+      <talk_question mid="211"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">228</exe>
+         <exe type="talk" npc="n392_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_user_PlayCutScene(userObjID,npcObjID,61);</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">2280,,,,,,,,</exe>
+         <exe type="complete" true="">228</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n392_academic_station" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n392_academic_station" sub="b" />
+   <exelink qstep="1" npc="n392_academic_station" sub="c" />
+   <exelink qstep="1" npc="n392_academic_station" sub="d" />
+   <exelink qstep="1" npc="n392_academic_station" sub="e" />
+   <exelink qstep="1" npc="n392_academic_station" sub="f" />
+   <exelink qstep="1" npc="n392_academic_station" sub="g" />
+   <exelink qstep="1" npc="n392_academic_station" sub="h">0,1</exelink>
+   <exelink qstep="1" npc="n392_academic_station" sub="" />
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="b" />
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="cutscene228">0,1,2</exelink>
+   <exelink qstep="3" npc="n099_engineer_hubert" sub="b" />
+   <exelink qstep="3" npc="n099_engineer_hubert" sub="c" />
+   <exelink qstep="3" npc="n099_engineer_hubert" sub="d" />
+   <exelink qstep="3" npc="n099_engineer_hubert" sub="e" />
+   <exelink qstep="3" npc="n099_engineer_hubert" sub="f" />
+   <exelink qstep="3" npc="n099_engineer_hubert" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="4" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="4" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="4" npc="n164_argenta_wounded" sub="e" />
+   <exelink qstep="4" npc="n164_argenta_wounded" sub="f" />
+   <exelink qstep="4" npc="n164_argenta_wounded" sub="g" />
+   <exelink qstep="4" npc="n164_argenta_wounded" sub="h" />
+   <exelink qstep="4" npc="n164_argenta_wounded" sub="i">0,1</exelink>
+   <exelink qstep="4" npc="n164_argenta_wounded" sub="" />
+   <exelink qstep="5" npc="n545_edan" sub="b" />
+   <exelink qstep="5" npc="n545_edan" sub="c" />
+   <exelink qstep="5" npc="n545_edan" sub="d" />
+   <exelink qstep="5" npc="n545_edan" sub="e" />
+   <exelink qstep="5" npc="n545_edan" sub="f" />
+   <exelink qstep="5" npc="n545_edan" sub="g" />
+   <exelink qstep="5" npc="n545_edan" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="6" npc="n164_argenta_wounded" sub="c">0</exelink>
+   <exelink qstep="6" npc="n164_argenta_wounded" sub="!next">1</exelink>
+   <journal_data recompense="2280" quest_title="출력 부족입니다" chapterid="3" quest_level="14" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>8,n392</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>392</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="214"><![CDATA[Lack of Power I]]></title>
+         <contents mid="215"><![CDATA[<html>Tidak mungkin untuk memperbaiki communicator sepenuhnya. Hubungkan ke Tinkerer Station dan dengarkan instruksi Jasmine.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="216"><![CDATA[Hubungkan ke Tinkerer Station]]></destination>
+         <todo_msg mid="217"><![CDATA[Quest telah di tambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="218"><![CDATA[Lack of Power II]]></title>
+         <contents mid="219"><![CDATA[<html>Ada kabar saat ini, Dark Elf Elena muncul di Calderock Village. Jika bisa, Aku ingin bertemu dengannya... Tapi pertama-tama, pergi ke Airship Engineer Hubert dan lihat apakah dia sudah memperbaiki airship.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="220"><![CDATA[Bicara pada Airship Engineer Hubert]]></destination>
+         <todo_msg mid="221"><![CDATA[Temui Airship Engineer Hubert.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="222"><![CDATA[Lack of Power III]]></title>
+         <contents mid="223"><![CDATA[<html>Airship rusak. Apa ya masalahnya? Untuk mengecek airship, tanya Hubert.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="224"><![CDATA[Bicara pada Airship Engineer Hubert]]></destination>
+         <todo_msg mid="225"><![CDATA[Airship rusak. Bicara pada Hubert lagi.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="226"><![CDATA[Lack of Power IV]]></title>
+         <contents mid="227"><![CDATA[<html>Mungkin itu alasannya hanya Albatross, satu-satunya cara mencapai Saint's Haven, rusak karena kekurangan tenaga. Argenta ada di Gray Ruins, jadi pergi temui dia dan tanyakan apa yang ingin kamu tahu.<BR>
+ <BR>
+<FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="228"><![CDATA[Bicara pada Argenta di Calderock Village]]></destination>
+         <todo_msg mid="229"><![CDATA[Bicara pada Argenta di Calderock Village.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_16.dds</contents_image>
+         <destination_pos>129,n545</destination_pos>
+         <destination_mode>custom:126@1,127@1,128@1,129@1</destination_mode>
+         <statemark_npcid>545</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="230"><![CDATA[Lack of Power V]]></title>
+         <contents mid="231"><![CDATA[<html>Angelica dan Ethan pergi ke Sleepers' Temple. Ikuti mereka dan beritahu pesan Argenta.<BR><BR><FONT color=#086171>Lower Ridge(Forgotten Temple Entrance)</FONT> <FONT color=#a82424>→ Sleepers' Temple(Cleric Ethan)</FONT></html>]]></contents>
+         <destination mid="232"><![CDATA[Bicara pada Ethan di Sleepers' Temple]]></destination>
+         <todo_msg mid="233"><![CDATA[Pergi ke Sleepers' Temple dan berikan pesan dari Argenta pada para Adventurers.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode />
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="234"><![CDATA[Lack of Power VI]]></title>
+         <contents mid="235"><![CDATA[<html>Elena muncul dan menculik Angelica. Dia juga mengambil floating device, pergi ke Gray Ruins dan laporkan pada Argenta.<BR>
+ <BR>
+<FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="236"><![CDATA[Bicara pada Argenta di Calderock Village]]></destination>
+         <todo_msg mid="237"><![CDATA[Kembalilah ke Gray Ruins dan bicara pada Argenta.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>227</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

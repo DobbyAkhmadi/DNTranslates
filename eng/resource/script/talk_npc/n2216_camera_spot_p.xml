@@ -1,0 +1,36 @@
+   <talk>
+      <npcename>n2216_camera_spot_p</npcename>
+      <npcid>2216</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Prairie Town Photo]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="photo" mid="23"><![CDATA[<html>[View Picture]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Scenic Spot$<BR><FONT color=#7e12d2> (This is a spot in front of the charming Christmas tree in Prairie Town.</FONT><FONT color=#7e12d2>)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="photo" image="" itemindex="">
+         <talk_answer link_index="view" mid="24"><![CDATA[<html> (View pictures)</html>]]></talk_answer>
+         <talk_answer link_index="back_quest" mid="25"><![CDATA[<html> (Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Scenic Spot$<BR><FONT color=#7e12d2>※</FONT><FONT color=#7e12d2>You can look at the pictures you've taken during the </FONT><FONT color=#a82424>Event Quest</FONT> <FONT color=#7e12d2>again.</FONT><FONT color=#7e12d2><BR>If you don't want to see the pictures anymore, please press </FONT><FONT color=#086171>ESC</FONT><FONT color=#7e12d2>.<BR></FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="13"><![CDATA[<html>$Scenic Spot$<BR><FONT color=#7e12d2> (This is a spot in front of the charming Christmas tree in Prairie Town.</FONT><FONT color=#7e12d2>)</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>※</FONT><FONT color=#7e12d2>When you complete the</FONT> <FONT color=#a82424>Christmas</FONT> <FONT color=#a82424>Event Quest</FONT><BR>
+<FONT color=#7e12d2>, you can view the pictures you've taken.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="4">0</exe>
+         <exe type="enterquest">eq_2454_2016_christmas1</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenTextureDialog(userObjID, 49029, 0.5, 0.5, 8, 10, 1);</exe>
+         <exe type="conexe" true="2" false="5">1</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">2454</chk>
+         <chk type="hascomq">2454</chk>
+      </conditions>
+      <exelink idx="view">3</exelink>
+      <exelink idx="back_quest">001</exelink>
+   </talk>

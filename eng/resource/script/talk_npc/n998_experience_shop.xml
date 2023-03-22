@@ -1,0 +1,63 @@
+   <talk>
+      <npcename>n998_experience_shop</npcename>
+      <npcid>998</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Crystal Shop Cherry]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="pandora" mid="16"><![CDATA[<html>[Pandora Point Shop]</html>]]></talk_answer>
+         <talk_answer link_index="crystal" mid="6"><![CDATA[<html>[Crystal Point Shop]</html>]]></talk_answer>
+         <talk_answer link_index="season" mid="12"><![CDATA[<html>[Season Special Armor]</html>]]></talk_answer>
+         <talk_answer link_index="imprint" mid="20"><![CDATA[<html>[Magic Engraving]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="34"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Crystal Shop Cherry$<BR>Hello, <FONT color=#387206>{user_nick}</FONT>.<BR>I am here to help you try out the new items.<BR>
+<FONT color=#7e12d2>*Please take note that you can get the trial item only once.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="13" link_target="sq_guide_4994_crystal_02.xml"><![CDATA[<html>[Guide] <FONT color=#086171>Crystal Point, The Beautiful Brightness.</FONT></html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html><FONT color=#2b2723>$Cherry$</FONT><BR>
+Are you interest in Crystal Shop?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="imprint" image="" itemindex="">
+         <talk_answer link_index="make_imprint" mid="35"><![CDATA[<html>[Craft Engraving Scroll]</html>]]></talk_answer>
+         <talk_answer link_index="shop" mid="36"><![CDATA[<html>[Engraving Shop]</html>]]></talk_answer>
+         <talk_question mid="23"><![CDATA[<html>$General Store Helper Cherry$<BR>Welcome. Is this your first new Engraving?<BR>If you own an <FONT color=#086171>Empty Scroll</FONT><FONT color=#2b2723>and</FONT> <FONT color=#086171>Engraving Potion</FONT>, you can make an <FONT color=#a82424>Engraving Scroll</FONT>. Click the Craft Menu below and make an <FONT color=#a82424>Engraving Scroll</FONT>!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_imprint" image="" itemindex="">
+         <talk_answer link_index="shop" mid="37"><![CDATA[<html>[Engraving Shop]</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="38"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="26"><![CDATA[<html>$General Store Helper Cherry$<BR>You must own an <FONT color=#086171>Engraving Potion</FONT><FONT color=#a82424><FONT color=#2b2723> to craft an </FONT> <FONT color=#a82424>Engraving Scroll</FONT><FONT color=#2b2723>. </FONT></FONT>Get an <FONT color=#a82424>Engraving Potion</FONT> first!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,96001,100);</exe>
+         <exe type="conexe" true="3" false="0">9</exe>
+         <exe type="enterquest">sq_guide_4994_crystal_02</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,96002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,96003,100);</exe>
+         <exe type="custom">api_ui_OpenNewImprint(userObjID, 1073925594);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,400000,100);</exe>
+         <exe type="talk">no_imprint</exe>
+         <exe type="talk">imprint</exe>
+         <exe type="conexe" true="6" false="8">10</exe>
+      </executions>
+      <conditions>
+         <chk type="lvl" op=">=">1</chk>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="hasquest">4994</chk>
+         <chk type="custom">api_user_HasCashItem(userObjID, 1073925594) >= 1</chk>
+      </conditions>
+      <exelink idx="pandora">4</exelink>
+      <exelink idx="crystal">1</exelink>
+      <exelink idx="season">5</exelink>
+      <exelink idx="make_imprint">10</exelink>
+      <exelink idx="shop">7</exelink>
+      <exelink idx="shop">7</exelink>
+   </talk>

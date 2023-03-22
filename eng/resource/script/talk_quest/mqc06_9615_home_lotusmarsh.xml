@@ -1,0 +1,395 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc06_9615_home_lotusmarsh</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>6</qchapter>
+      <qid>9615</qid>
+      <designer>이현진</designer>
+      <qlevel>40</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9616</nextqid>
+      <nextqname>mqc06_9616_witch_karakule</nextqname>
+      <nextqnpc>n1897_shaolong</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Home, Lotus Marsh]]></qkname>
+      <qnpc>
+         <npcid>1861</npcid>
+         <npcename>n1861_shaolong</npcename>
+         <npckname>샤오룽 </npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1897</npcid>
+         <npcename>n1897_shaolong</npcename>
+         <npckname>샤오룽 </npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>213</npcid>
+         <npcename>n213_slave_david</npcename>
+         <npckname>아르젠타의 노예 데이비드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>465</npcid>
+         <npcename>n465_charty</npcename>
+         <npckname>차티</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>720</npcid>
+         <npcename>n720_charty</npcename>
+         <npckname>차티</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-accepting-lv_ck" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Xiaolong$<BR>So you're going to Lotus Marsh?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-accepting-b" mid="112" select_type="5" />
+      <talk_question mid="111"><![CDATA[<html>$Xiaolong$<BR>
+But can you leave in such a state?<BR>
+I think you should get a bit stronger before you leave.<BR>
+ <BR>
+<FONT color=#7e12d2>※ You need to be above Level 40 to take the quest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-accepting-acceptted" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yes. I think now is the time to leave.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-1-b" mid="69" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$David${action:Stand01}<BR>Good, that's a deal!<BR>I, <FONT color=#a82424>David</FONT>, the great slave of Argenta, will kindly lead you to her. Be honoured.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-1-b" mid="70" select_type="5" />
+      <talk_question mid="10"><![CDATA[<html>$David$<BR><FONT color=#7e12d2>* You must be at least Lv40 to go to Lotus Marsh.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-1-b" image="QW_Karakule_House.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-1-c" mid="71" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$David$<BR>Argenta is at <FONT color=#a82424>Karacule</FONT>'s house. You know, one of the Six Heroes.<BR>Go to <FONT color=#a82424>Riverwort Wharf</FONT> and come to Karacule's Hut.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-1-d" mid="72" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'll go there since you are begging me like this, but I need to go to Lotus Marsh and met my master first.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-1-e" mid="73" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$David$<BR><FONT color=#387206>{user_nick}</FONT>!! How can you not put <FONT color=#a82424>Argenta</FONT> at the top of your priority list! That's disappointing. <BR>But since you're begging me like this, I'll let you off just this time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-1-" mid="74" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$David$<BR>But go straight to Argenta when you're done talking with your master! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n464_empty_place-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n464_empty_place-1-" mid="75" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Charti$<BR>What's taking Cidel so long?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-1-" mid="76" select_type="5" />
+      <talk_question mid="16"><![CDATA[<html>$Xiaolong$<BR>So this is Lotus Marsh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-1-" mid="110" select_type="5" />
+      <talk_question mid="109"><![CDATA[<html>$Xiaolong$<BR>
+Then I should get ready to leave too.<BR>
+<FONT color=#7e12d2>(Go to Hermalte Port and meet David.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="117"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Now... let’s head to… Lotus Marsh.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-2-" mid="77" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$David$<BR>But go straight to <FONT color=#a82424>Argenta</FONT> when you're done talking with your master! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-2-a" mid="78" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Xiaolong$<BR>This place is so dark and gloomy that I'm getting depression. It's almost a miracle that you grew up to be such a bright kid when you were raised in such an environment.<BR>But I like how friendly the townspeople are! No one calls us hybrids now, but they call us Natives instead!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-2-b" mid="79" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>This place is not gloomy at all! It's so cosy and comfortable.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-2-c" mid="80" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9615_qu_01.ogg}<BR>Well, of course. Even though we're all in the same continent, our lives look so different. Wakakaka! <BR>Oh by the way, I heard an interesting story on the ship on our way here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-2-d" mid="81" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9615_qu_02.ogg}<BR>A genius scientist ran away from Saint Haven to Lotus Marsh a long time ago. Not long after that, the meteor crashed... Could it be him who treated you and gave you your arm?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-2-e" mid="82" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It was a lady who treated us. She wears a long black dress and has something like a tatoo under her eye...<BR>(Draw her and show it to Xiaolong.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-2-f" mid="83" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9615_qu_03.ogg}<BR>Eh? Then I guess it's not him. I heard that the scientist is a short man!!<BR>Didn't you say there still are quite a number of your villagers in the treatment facility? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-2-g" mid="84" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Xiaolong$<BR>We need to know where it is if we want to go and help them... Do you remember its location?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-2-h" mid="85" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>When we got out of the center to take the airship, it was night and our eyes were covered so I didn't see clearly... Oh! Before we reached the dock, we passed by a place with a lot of books.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-2-h" image="QW_52.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-3" mid="86" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Xiaolong$<BR>A lot of books? <FONT color=#7e12d2>(Xiaolong takes a map out.)</FONT> <BR>I heard there's a place called <FONT color=#a82424>Ancient Library</FONT> at Riverwort Wharf….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-3" image="QW_52.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-3-" mid="87" select_type="5" />
+      <talk_question mid="27"><![CDATA[<html>$Xiaolong$<BR>You should go to the <FONT color=#a82424>Ancient Library</FONT> first and see if you can find the treatment center.<BR>In the meanwhile, I'll make friends in town and ask about the lady who treated you!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-3-" mid="88" select_type="5" />
+      <talk_question mid="28"><![CDATA[<html>$David$<BR>Ah... I can't let Argenta know that Geraint died...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-3-a" mid="89" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Charti$<BR>Who are you? Why are you loitering around here? <FONT color=#7e12d2>(Charti sniffs)</FONT><BR>I can smell that you're from another place….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-3-b" mid="90" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>That's because I used to be in Saint Haven until recently. Do you live nearby? Then do you...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-3-c" mid="91" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Charti$<BR>Saint Haven? For what? Not everyone can go to Saint Haven….<BR>Are you a spy from the north?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-3-d" mid="92" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No! I ended up there when I was trying to find a way to fix my arm.<BR>(Show her your prosthetic arm.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-3-e" mid="93" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Charti$<BR><FONT color=#7e12d2>(Charti turns soft.)</FONT><BR>I see. I'm looking for my grandfather now because he suddenly went missing. Anyway, what are you doing all the way here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-3-f" mid="94" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm... I'm from Krita Village.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-3-g" mid="95" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Charti$<BR>Krita Village? It has been about two or three years since they were last seen.<BR>I was curious because all we heard about them were rumours. So what happened exactly?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-3-h" mid="96" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A meteor crashed into our village and killed most of the people. The survivors were treated in a laboratory and a few of us including me were sent far away to be cured completely but the airship we were on crashed on the way...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-3-i" mid="97" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Charti$<BR>I didn't know about this at all. You know, your villagers hated contacting the outsiders. Not even the other villages knew where your village was.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-4" mid="98" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Charti$<BR>So even though the Krita people suddenly disappeared, we didn't think much about it.<BR>But your village was where the meteor crashed…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n465_charty-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n465_charty-4-" mid="99" select_type="5" />
+      <talk_question mid="39"><![CDATA[<html>$Charti$<BR>My grandpa might know the way to <FONT color=#a82424>Krita Village</FONT>…. <BR><FONT color=#387206>{user_nick}</FONT>, I'll tell you when I find him. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-4-a" mid="100" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Xiaolong$<BR>You couldn't find the lab? Well, it wouldn't be easy to find a place where they secretly experimented... I mean treated people. Hey, don't look at me like that just because my tongue slipped.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-4-b" mid="101" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Xiaolong$<BR>I asked around the town. I didn't hear anything about the scientist from Saint Haven but I heard something interesting from Blacksmith Molin. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-4-c" mid="102" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Xiaolong$<BR>An <FONT color=#a82424>unidentified sorceress</FONT> with a mask on her face comes to him to make orders sometimes. She gave him extra gold to keep Molin's mouth sealed. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-4-d" mid="103" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Xiaolong$<BR>Molin asked me over and over again not to tell anyone about this, but he said the lady in the mask looks exactly like what you drew for me. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-4-e" mid="104" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Really? We need to let her know that Suriya is going to attack the medical center! </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-4-f" mid="105" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Xiaolong$<BR>If you talk to Molin about this, he might become angry that I leaked secret information so leave this to me. I'll wait for that sorceress to come back to Molin.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-4-g" mid="106" select_type="4" />
+      <talk_question mid="46"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1897_shaolong-4-g" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1897_shaolong-4-!next" mid="107" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Xiaolong$<BR>Anyway, a weird guy who's calling himself a <FONT color=#a82424>slave</FONT> was grumbling that you don't keep your promises.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="]=">40</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">9615</exe>
+         <exe type="talk" npc="n1861_shaolong">1</exe>
+         <exe type="conexe" true="4" false="3">0</exe>
+         <exe type="talk" npc="n1861_shaolong">a</exe>
+         <exe type="talk" npc="n1861_shaolong">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="]=">40</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="talk" npc="n213_slave_david">b</exe>
+         <exe type="talk" npc="n213_slave_david">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">96150,,,,,,,,,</exe>
+         <exe type="complete" true="">9615</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1861_shaolong" sub="lv_ck">2</exelink>
+   <exelink qstep="accepting" npc="n1861_shaolong" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n213_slave_david" sub="b" />
+   <exelink qstep="1" npc="n213_slave_david" sub="c" />
+   <exelink qstep="1" npc="n213_slave_david" sub="d" />
+   <exelink qstep="1" npc="n213_slave_david" sub="e">1,2</exelink>
+   <exelink qstep="1" npc="n213_slave_david" sub="" />
+   <exelink qstep="2" npc="n1897_shaolong" sub="b" />
+   <exelink qstep="2" npc="n1897_shaolong" sub="c" />
+   <exelink qstep="2" npc="n1897_shaolong" sub="d" />
+   <exelink qstep="2" npc="n1897_shaolong" sub="e" />
+   <exelink qstep="2" npc="n1897_shaolong" sub="f" />
+   <exelink qstep="2" npc="n1897_shaolong" sub="g" />
+   <exelink qstep="2" npc="n1897_shaolong" sub="h" />
+   <exelink qstep="2" npc="n1897_shaolong" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n465_charty" sub="b" />
+   <exelink qstep="3" npc="n465_charty" sub="c" />
+   <exelink qstep="3" npc="n465_charty" sub="d" />
+   <exelink qstep="3" npc="n465_charty" sub="e" />
+   <exelink qstep="3" npc="n465_charty" sub="f" />
+   <exelink qstep="3" npc="n465_charty" sub="g" />
+   <exelink qstep="3" npc="n465_charty" sub="h" />
+   <exelink qstep="3" npc="n465_charty" sub="i" />
+   <exelink qstep="3" npc="n465_charty" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n1897_shaolong" sub="b" />
+   <exelink qstep="4" npc="n1897_shaolong" sub="c" />
+   <exelink qstep="4" npc="n1897_shaolong" sub="d" />
+   <exelink qstep="4" npc="n1897_shaolong" sub="e" />
+   <exelink qstep="4" npc="n1897_shaolong" sub="f">0</exelink>
+   <exelink qstep="4" npc="n1897_shaolong" sub="g">1</exelink>
+   <exelink qstep="4" npc="n1897_shaolong" sub="!next" />
+   <journal_data recompense="96150" quest_title="고향, 로터스마쉬" chapterid="6" quest_level="40" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Slave_David.dds</contents_image>
+         <destination_pos>12,n213</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>213</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="48"><![CDATA[Lotus Marsh]]></title>
+         <contents mid="49"><![CDATA[<html>You can find David, who was sent on an errand for Argenta, at Hermalte Port. Go to Lotus Marsh with him.<BR><BR><FONT color=#086171>Hermalte Port</FONT><FONT color=#a82424> - David</FONT></html>]]></contents>
+         <destination mid="50"><![CDATA[Talk to David at Hermalte Port]]></destination>
+         <todo_msg mid="51"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Shaolong.dds</contents_image>
+         <destination_pos>15,n1897</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1897</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="52"><![CDATA[Talk to Xiaolong]]></title>
+         <contents mid="53"><![CDATA[<html>Xiaolong has something to say. Talk to Xiaolong. <BR><BR><FONT color=#086171>Lotus Marsh </FONT><FONT color=#a82424>- Xiaolong</FONT></html>]]></contents>
+         <destination mid="54"><![CDATA[Talk to Xiaolong at Lotus Marsh]]></destination>
+         <todo_msg mid="55"><![CDATA[Talk to Xiaolong at Lotus Marsh.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_52.dds</contents_image>
+         <destination_pos>521,n465</destination_pos>
+         <destination_mode>custom:521@4,522@4</destination_mode>
+         <statemark_npcid>465</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="56"><![CDATA[To Ancient Library]]></title>
+         <contents mid="57"><![CDATA[<html>Following Xiaolong's advise, go to Ancient Library and find a way to the lab.<BR><BR><FONT color=#086171>Riverwort Wharf (Entrance to Ancient Warehouse)</FONT><FONT color=#a82424> - Ancient Library</FONT></html>]]></contents>
+         <destination mid="58"><![CDATA[Search Ancient Library]]></destination>
+         <todo_msg mid="59"><![CDATA[Search Ancient Library for the entrance to the lab.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Shaolong.dds</contents_image>
+         <destination_pos>15,n1897</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1897</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="60"><![CDATA[Entrance Not Found]]></title>
+         <contents mid="61"><![CDATA[<html>You couldn't find the lab entrance at Ancient Library but you met a native girl called Charti who might know about your town. Let Xiaolong know. <BR><BR><FONT color=#086171>Lotus Marsh </FONT><FONT color=#a82424>- Xiaolong</FONT></html>]]></contents>
+         <destination mid="62"><![CDATA[Talk to Xiaolong]]></destination>
+         <todo_msg mid="63"><![CDATA[Let Xiaolong know about your conversation with Charti.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>9</user_class>
+      <prev_quest>9614</prev_quest>
+      <have_quest>9729</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,543 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc02_9468_cataract</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>2</qchapter>
+      <qid>9468</qid>
+      <designer>강지영</designer>
+      <qlevel>9</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9469</nextqid>
+      <nextqname>mqc02_9469_for_her</nextqname>
+      <nextqnpc>n023_ranger_fugus</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Calderock Village]]></qkname>
+      <qnpc>
+         <npcid>1686</npcid>
+         <npcename>n1686_eltia</npcename>
+         <npckname>엘티아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1687</npcid>
+         <npcename>n1687_kaye</npcename>
+         <npckname>케이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>23</npcid>
+         <npcename>n023_ranger_fugus</npcename>
+         <npckname>정찰병 퍼거스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-accepting" image="QW_CataractGateway.dd" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Eltia$<BR>Jadi kita harus pergi ke  <FONT color=#a82424>Calderock Village</FONT>? Ok.<BR><FONT color=#7e12d2>(Eltia berdiri perlahan sambil menahan sakit)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-accepting-a" image="QW_CataractGateway.dd" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-accepting-acceptted" mid="8" select_type="3" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu bisa jalan? Aku janji akan melindungimu dalam perjalanan ke Calderock Village. <BR>Percayalah padaku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1" image="QW_CataractGateway.dd" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-" mid="10" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Eltia$<BR>Peta menunjukkan kalau <FONT color=#a82424> Calderock Village</FONT> ada disana. Diseberang Blizzard Plain ke arah Crystal Stream.<BR>Haruskah kita pergi sekarang?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-a" mid="12" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Kay$<BR><FONT color=#387206>{user_nick}</FONT>...<BR><FONT color=#7e12d2>(Kay kelihatannya merasa bersalah padamu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-b" mid="14" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Kay$<BR>Kamu bisa pergi sekarang. Eltia, apa kamu sudah mengabari dia?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-b" image="QW_CataractGateway.dd" itemindex="" portrait_left="NPC_Left_Eltia.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1687_kaye-1-c" mid="16" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Eltia$<BR>I did.<BR>Kita tidak menuju rumah. Kita akan pergi ke <FONT color=#a82424>Calderock Village</FONT> sekarang. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-c" image="QW_CataractGateway.dd" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-d" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Kay$<BR>Calderock Village?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-d" image="" itemindex="" portrait_left="NPC_Left_Eltia.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1687_kaye-1-e" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Eltia$<BR>Kita baru saja mengetahui kalau orang yang mencuri Sage's relics sedang mengincar seorang gadis.<BR>Kalau kita tetap bersama gadis itu, Mungkin kita akan bertemu lagi dengan Dragon Followers.<BR>Apakah kamu menunggu disini karena mencemaskan kami?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-f" mid="22" select_type="0"><![CDATA[<html>Seperti mengantar surat cinta?</html>]]></talk_answer>
+      <talk_answer link_index="n1687_kaye-1-f" mid="23" select_type="0"><![CDATA[<html>Seperti mencari burung peliharaan yang hilang?</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Kay$<BR>Ehem. Tentu saja bukan...<BR>Ehem. Aku juga punya misi!<BR><FONT color=#7e12d2>(Kay berusaha terlihat sibuk)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-g" mid="25" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Kay$<BR>Tidaak! Ini penting sekali sampai-sampai aku tidak punya waktu untuk meladeni kamu!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-h" mid="27" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa? KAMU mengerjakan sesuatu yang penting? Haha. Pembohong!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-i" mid="29" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Kay$<BR>Itu....!! <FONT color=#7e12d2>(Kay berhenti)</FONT><BR>Kamu tau kan kalau misi kita harus dirahasiakan. Bahkan kepada kamu berdua.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-j" mid="31" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Kay$<BR>Calderock Village jauh lebih besar dibanding Mana Ridge. Akan lebih sulit bagiku sekarang untuk bertemu kalian berdua.<BR>Aku akan mengabari kalian nanti.<BR>Kamu tau kan kalau Ras juga sudah seperti ayah bagiku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-j" image="QN_Eltia.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-k" mid="33" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hey~~ Aku tau kamu bilang begitu karena ada Eltia!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-k" image="QN_Eltia.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-l" mid="35" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Kay$<BR><FONT color=#7e12d2>(Kay tertawa ketika dia melihatmu mencoba melindungi Eltia)</FONT><BR>HAHA! Aku tidak bermaksud seperti itu. Jangan bercanda!<BR><FONT color=#387206>Eltia</FONT> terlihat lelah setelah berjalan cukup jauh. Pergilah beristirahat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-m" mid="37" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Kay$<BR>Jangan pergi ke tempat yang berbahaya dan jaga dirimu! Demi Brotherhood!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-2" mid="39" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Terima kasih. Demi Brotherhood!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1" image="QW_CristalStream.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-" mid="41" select_type="5" />
+      <talk_question mid="40"><![CDATA[<html>$Scout Fergus$<BR>Aku belum pernah melihatmu sebelumnya. Boleh aku lihat tanda pengenalmu?<BR><FONT color=#7e12d2>(Kay terlihat di Crystal Stream. Bicara pada Kay lebih dulu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QW_CristalStream.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-" mid="43" select_type="5" />
+      <talk_question mid="42"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Aku belum pernah melihat kamu sebelumnya. Apa yang membawamu ke Calderock?<BR><FONT color=#7e12d2>(Kay terlihat ada di Crystal Stream. Bicara dengan Kay lebih dulu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-2" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-2-" mid="45" select_type="5" />
+      <talk_question mid="44"><![CDATA[<html>$Kay$<BR>Kudengar kamu ingin mencari Adventurer's Guild di Calderock Village.<BR>Lihatlah betapa lelahnya Eltia. Ayo bawa dia istirahat di Calderock Village!<BR><FONT color=#7e12d2>(Pergi ke Calderock Village)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-" mid="47" select_type="5" />
+      <talk_question mid="46"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Aku belum pernah melihatmu sebelumnya. Apa yang membawamu ke Calderock?<BR><FONT color=#7e12d2>(Kembali setelah kamu selesai menyelesaikan tugasmu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-2" image="QS_Default.dds" itemindex="300012" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-2-a" mid="49" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Scout Fergus$<BR>Aku belum pernah melihatmu sebelumnya. Boleh aku melihat tanda pengenalmu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-2-b" mid="116" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Oh, kamu <FONT color=#387206>{user_class}</FONT> <FONT color=#387206>{user_nick}</FONT> dari Mana Ridge. Aku Scout Fergus dari Calderock's Adventurer's Guild. <BR>Aku sudah menunggu kamu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-2-b" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-2-" mid="117" select_type="5" />
+      <talk_question mid="51"><![CDATA[<html>$Scout Fergus$<BR>Pertama-tama, Bicaralah kepada <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT>. Dia ada di dekat jembatan Calderock Village.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-" mid="118" select_type="5" />
+      <talk_question mid="52"><![CDATA[<html>$Scout Fergus$<BR>Pertama-tama, Bicaralah kepada <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT>. Dia ada di dekat jembatan Calderock Village.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-a" mid="119" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>Aku belum pernah melihatmu sebelumnya. Apa yang membawa kamu ke Calderock?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-b" mid="120" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku datang untuk mencari seorang gadis.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-c" mid="121" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Oh kamu yang dari Mana Ridge itu, eh?<BR>Aku sudah menunggumu. Aku adalah Calderock's Adventurer's Guild Master Deckard. Hmm... tapi...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-d" mid="122" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa ada yang salah?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-e" mid="123" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Aku dapat kabar dari Mana Ridge kalau <FONT color=#387206>seorang cleric yang diusir dan seorang sorceress manja</FONT> sEthang menuju kesini. Kelihatannya kamu bukan salah satu dari mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-f" mid="124" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku kebetulan saja terlibat hal ini ketika sedang lewat.<BR>Lihat, Cynthia memberikanku surat izin.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-g" mid="125" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Aku sudah lihat itu, tapi kamu mengerti kan kalau dalam masa berbahaya seperti ini kami tidak boleh percaya begitu saja dengan seseorang yang bermodal selembar kertas.<BR>Kamu pasti cukup hebat karena <FONT color=#a82424>Cynthia</FONT> mau memberikanmu surat itu. Apa tujuanmu memulai perjalanan ini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-h" mid="126" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Sudah berapa kali kita mendengar pertanyaan yang sama? Tapi baiklah, Sekarang aku sudah bisa menjawab dengan lebih baik hingga tidak akan ada yang curiga!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-h" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-i" mid="127" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku senang berkelana dengan adikku.<BR>Kami diajarkan oleh ayah kami untuk tidak membiarkan kejahatan mengalahkan keadilan jadi kami tidak bisa membiarkan kejadian ini.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-j" mid="128" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Kamu punya ayah yang hebat! <BR>Tapi kamu kelihatan seperti berasal dari keluarga bangsawan. Kenapa kamu tidak bergabung dengan tentara saja tapi kamu malah membahayakan diri seperti ini? Itu juga akan membantu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-j" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-k" mid="129" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tidak, Aku tidak bisa! Aku harus menyelamatkan gadis itu! Kenapa kamu tidak percaya sama aku?<BR>Kalian memang penuh curiga!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-l" mid="130" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Akulah yang berhasil mendaparkan Staff Sage dan Vision Orb waktu di Mana Ridge!<BR>Kenapa semuanya begitu kejam...*hiks*</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-m" mid="131" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Hey tenang! Aku tidak curiga denganmu. Aku hanya memberikanmu saran demi keselamatanmu sendiri...<BR>Kalau kamu benar-benar orang yang tepat untuk tugas ini, Aku tidak punya alasan untuk menghentikanmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-m" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-n" mid="132" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Permintaan untuk menyelamatkan gadis itu pertama-tama bermula dari <FONT color=#a82424>Prairie Town</FONT>  sebelum Mana Ridge. Aku dengar cucu dari walikota Prairie <FONT color=#a82424>Rose</FONT> diculik oleh para monster. Kata orang-orang cucunya itu diadopsi...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-n" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-o" mid="133" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>Aku tidak tau kenapa tapi Mana Ridge berpikir kalau dia itu <FONT color=#a82424>Prophet</FONT> dan meminta bantuan untuk mencarinya. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-p" mid="134" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Saat ini kabarnya belum jelas. Tapi <FONT color=#a82424>Ramalan Sage</FONT> bukan sesuatu yang bisa dilewatkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-p" image="QW_14.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-q" mid="135" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Maaf untuk kabar yang belum jelas ini. Pertama, Kita harus menyelamatkan gadis yang terjebak di <FONT color=#a82424>Sigh Canyon</FONT>. Entah dia itu keturunan Ancient atau bukan, Kita harus tetap menyelamatkan dia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-q" image="QW_14.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-r" mid="136" select_type="2" />
+      <talk_question mid="70"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dimana Sigh Canyon?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-r" image="QN_ranger_fugus.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-" mid="137" select_type="5" />
+      <talk_question mid="71"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Scout Fergus akan menunjukkan jalannya padamu. Tanyakan padanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4" image="QN_ranger_fugus.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4-" mid="139" select_type="5" />
+      <talk_question mid="72"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Pergi ke Scout Fergus. Dia akan membantu kamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-a" mid="140" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Scout Fergus${action:Talk}<BR><FONT color=#387206>{user_class}</FONT> <FONT color=#387206>{user_nick}</FONT>. Apakah kamu sudah ketemu Deckard?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-b" mid="141" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ya, dia menyuruhku untuk meminta bantuanmu. </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-b" image="QM_HarpyRed.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-c" mid="142" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>$Scout Fergus$<BR>Begitu ya.<BR>Beberapa hari sebelum kedatanganmu, Mata-mata dari Adventurer's Guild melihat <FONT color=#a82424>Red-feathered Harpy Mystique</FONT> menggendong seorang gadis ke arah <FONT color=#a82424>Sigh Canyon</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-c" image="QM_HarpyRed.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-d" mid="143" select_type="2" />
+      <talk_question mid="76"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Saat itu aku sedang bertugas, jadi aku mengejar <FONT color=#a82424>Red Harpy Mystique</FONT> itu ke dalam <FONT color=#a82424>Sigh Canyon</FONT>, Namun aku kehilangan jejak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-d" image="QM_HarpyRed.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-e" mid="144" select_type="2" />
+      <talk_question mid="77"><![CDATA[<html>$Scout Fergus$<BR>Sejak saat itu kami terus melakukan pengintaian di daerah <FONT color=#a82424>Sigh Canyon</FONT> namun <FONT color=#a82424>Red Harpy Mystique</FONT> tidak pernah terlihat lagi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-f" mid="145" select_type="2" />
+      <talk_question mid="78"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Lalu... dia sudah menghilang?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-f" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-g" mid="146" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Masih ada harapan! Aku menduga kalau <FONT color=#a82424>Dark Elf</FONT> di <FONT color=#a82424>Raider's Den</FONT> ada hubungannya dengan <FONT color=#a82424>Red Harpy Mystique</FONT>. Dark Elf beberapa kali terlihat disekitar <FONT color=#a82424>Sigh Canyon</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-h" mid="147" select_type="2" />
+      <talk_question mid="80"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hmm...?<BR>Mungkin Dark Elf itu lagi jalan-jalan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-i" mid="148" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Scout Fergus$<BR><FONT color=#2b2723>…Tidak aku menduga kalau ada sesuatu.</FONT>/html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-j" mid="150" select_type="2" />
+      <talk_question mid="149"><![CDATA[<html>$Scout Fergus$<BR>Sudah beberapa kali aku melihat Dark Elf bermain <FONT color=#a82424>harpa</FONT> di canyon. Lalu setelah itu tiba-tiba <FONT color=#a82424>Red Harpy</FONT> muncul. Mungkin itu semacam kode.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-j" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-k" mid="151" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ok... Lalu apa yang akan kita lakukan? Haruskah kita mendatangi Dark Elf untuk membantu kita?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-k" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-l" mid="153" select_type="2" />
+      <talk_question mid="152"><![CDATA[<html>$Scout Fergus$<BR>Dark Elves memusuhi manusia jadi mereka tidak akan membantu.<BR>Kalau kamu bisa mendapatkan harpa dari tangan <FONT color=#a82424>Dark Elf Assassin Lydia</FONT>, mungkin kita bisa menggunakannya di canyon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-m" mid="154" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Baiklah aku akan pergi mencarinya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4-m" image="QW_13.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-" mid="155" select_type="5" />
+      <talk_question mid="84"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Dark Elves di <FONT color=#a82424>Raider's Den</FONT> lincah dan kuat. <BR>Jangan sampai terpana oleh tarian mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-5" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-5-" mid="157" select_type="5" />
+      <talk_question mid="85"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Dark Elves di <FONT color=#a82424>Raider's Den</FONT> lincah dan kuat. <BR>Jangan sampai terpana oleh tarian mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-6" image="QS_203.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-6-a" mid="158" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Oh... Kamu berhasil mendapatkan harpanya! Bagus. <BR><FONT color=#7e12d2>(Scout Fergus terkejut karena kamu berhasil mendapatkan harpa itu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-6-a" image="QS_Default.dds" itemindex="300089" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-6-b" mid="159" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dan aku juga menemukan ini. Mungkin ini akan berguna.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-6-b" image="QS_Default.dds" itemindex="300089" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-6-c" mid="160" select_type="2" />
+      <talk_question mid="88"><![CDATA[<html>$Scout Fergus$<BR>Ini adalah scroll para monster. <BR>Coba kubaca dulu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-6-c" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-6-d" mid="161" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Hmm jadi <FONT color=#a82424>Dark Elf </FONT><FONT color=#a82424>Assassin Lydia</FONT> berusaha menculik gadis itu dari tangan Red Harpy dan membawanya ke tempat lain. Baguslah, Kita bisa menggunakan harpa ini untuk menyelamatkan si gadis. <FONT color=#a82424>Oh! Tapi....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-6-d" image="QN_Npc_Archer_Adellin.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-6-e" mid="162" select_type="2" />
+      <talk_question mid="90"><![CDATA[<html>$Scout Fergus$<BR>Salah satu <FONT color=#a82424>senarnya</FONT> putus! Kalau saja ada adikku dekat sini, dia bisa membetulkan harpa ini... Sekarang hanya <FONT color=#a82424>Adelynn</FONT> yang dapat membetulkan harpa ini. Dia sering memainkan harpa bersama adikku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-6-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-6-f" mid="163" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Adelynn? Ok, Aku akan mencari dia.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-6-f" image="QW_14.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-6-g" mid="164" select_type="2" />
+      <talk_question mid="92"><![CDATA[<html>$Scout Fergus$<BR>Adelynn ada di dekat sini ketika kita mengejar Red Harpy jadi dia pasti sudah mendengar melodi yang dimainkan saat itu. Pelajari melodinya dari dia lalu mainkan di <FONT color=#a82424>Sigh Canyon</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-6-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-6-h" mid="165" select_type="4" />
+      <talk_question mid="93"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-6-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-6-!next" mid="166" select_type="2" />
+      <talk_question mid="94"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Main harpa?? Emm... Baiklah, Akan kucoba...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9468</exe>
+         <exe type="talk" npc="n1686_eltia">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment>300012 : 수정 개울 통행증</comment>
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300012</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4,5,6,7">350</exe>
+         <exe type="huntitem" num="1" exe="" onexe="">300015</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="addquestitem" num="1,1">300089,300015</exe>
+         <exe type="delcount">.</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">9468</exe>
+         <exe type="recompense">94680,,,,,,,,,</exe>
+         <exe type="delquestitem" num="-1">300089</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1686_eltia" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n1687_kaye" sub="b" />
+   <exelink qstep="1" npc="n1687_kaye" sub="c" />
+   <exelink qstep="1" npc="n1687_kaye" sub="d" />
+   <exelink qstep="1" npc="n1687_kaye" sub="e" />
+   <exelink qstep="1" npc="n1687_kaye" sub="f" />
+   <exelink qstep="1" npc="n1687_kaye" sub="f" />
+   <exelink qstep="1" npc="n1687_kaye" sub="g" />
+   <exelink qstep="1" npc="n1687_kaye" sub="h" />
+   <exelink qstep="1" npc="n1687_kaye" sub="i" />
+   <exelink qstep="1" npc="n1687_kaye" sub="j" />
+   <exelink qstep="1" npc="n1687_kaye" sub="k" />
+   <exelink qstep="1" npc="n1687_kaye" sub="l" />
+   <exelink qstep="1" npc="n1687_kaye" sub="m" />
+   <exelink qstep="1" npc="n1687_kaye" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n023_ranger_fugus" sub="a">0</exelink>
+   <exelink qstep="2" npc="n023_ranger_fugus" sub="b">1,2</exelink>
+   <exelink qstep="2" npc="n023_ranger_fugus" sub="" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="e" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="f" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="g" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="h" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="i" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="j" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="k" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="l" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="m" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="n" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="o" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="p" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="q" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="r">0,1</exelink>
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="b" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="c" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="d" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="e" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="f" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="g" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="h" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="i" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="j" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="k" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="l" />
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="m">2,3,0,1</exelink>
+   <exelink qstep="4" npc="n023_ranger_fugus" sub="" />
+   <exelink qstep="6" npc="n023_ranger_fugus" sub="b" />
+   <exelink qstep="6" npc="n023_ranger_fugus" sub="c" />
+   <exelink qstep="6" npc="n023_ranger_fugus" sub="d" />
+   <exelink qstep="6" npc="n023_ranger_fugus" sub="e" />
+   <exelink qstep="6" npc="n023_ranger_fugus" sub="f" />
+   <exelink qstep="6" npc="n023_ranger_fugus" sub="g">1</exelink>
+   <exelink qstep="6" npc="n023_ranger_fugus" sub="h">0,2</exelink>
+   <exelink qstep="6" npc="n023_ranger_fugus" sub="!next" />
+   <journal_data recompense="94680" quest_title="캐더락 관문" chapterid="2" quest_level="9" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_CristalStream.dds</contents_image>
+         <destination_pos>4,n1687</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1687</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="95"><![CDATA[Mulai]]></title>
+         <contents mid="96"><![CDATA[<html>Tinggalkan Mana Ridge dan pergi ke Calderock Village. Pergi ke Crystal Stream diseberang Blizzard Plain.<BR><BR><FONT color=#086171>Mana Ridge - Blizzard Plain - Cristal Stream</FONT><FONT color=#a82424> - ????</FONT></html>]]></contents>
+         <destination mid="97"><![CDATA[Pergi ke Crystal Stream]]></destination>
+         <todo_msg mid="98"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_ranger_fugus.dds</contents_image>
+         <destination_pos>8,n23</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>23</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="99"><![CDATA[Calderock Village]]></title>
+         <contents mid="100"><![CDATA[<html>Tinggalkan Mana Ridge dan pergi ke Calderock Village. Pergi ke Crystal Stream diseberang Blizzard Plain.<BR><BR><FONT color=#086171>Mana Ridge - Blizzard Plain - Crystal Stream</FONT><FONT color=#a82424> - Calderock Village (Scout Fergus)</FONT></html>]]></contents>
+         <destination mid="101"><![CDATA[Bicara dengan Scout Fergus]]></destination>
+         <todo_msg mid="102"><![CDATA[Bicara dengan Scout Fergus dekat Calderock Village]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="103"><![CDATA[Adventurer's Guild Master Deckard]]></title>
+         <contents mid="104"><![CDATA[<html><FONT color=#2b2723>Adventurer's Guild Master Deckard menunggu kamu di Calderock Village. Pergilah kunjungi dia.<BR><BR></FONT><FONT color=#086171>Calderock Village </FONT><FONT color=#a82424>- Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="105"><![CDATA[Bicara dengan Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="106"><![CDATA[Kunjungi Adventurer's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_ranger_fugus.dds</contents_image>
+         <destination_pos>8,n23</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>23</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="107"><![CDATA[Scout Fergus's Guide]]></title>
+         <contents mid="108"><![CDATA[<html><FONT color=#2b2723>Gadis itu terjebak di Sigh Canyon. Minta saran dari Scout Fergus.</FONT> <BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Scout Fergus </FONT></html>]]></contents>
+         <destination mid="109"><![CDATA[Bicara dengan Scout Fergus]]></destination>
+         <todo_msg mid="110"><![CDATA[Kembali ke Scout Fergus]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QM_DarkelfGray.dds</contents_image>
+         <destination_pos>114,0,0</destination_pos>
+         <destination_mode>custom:111@1,112@1,113@1,114@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="111"><![CDATA[Dark Elf's Harp]]></title>
+         <contents mid="112"><![CDATA[<html><FONT color=#2b2723>Untuk melewati penghalang yang dibuat di Sigh Canyon, Kamu harus mendapatkan magic harp dari Dark Elf Assassin Lydia yang ada di Raider's Den.</FONT> <BR><BR><FONT color=#086171>Crystal Stream (Raider's Den Entrance)</FONT> <FONT color=#a82424>- Raider's Den</FONT></html>]]></contents>
+         <destination mid="113"><![CDATA[Habisi Dark Elf di Raider's Den]]></destination>
+         <todo_msg mid="114"><![CDATA[Mencari Dark Elf's Harp di Raider's Den.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_ranger_fugus.dds</contents_image>
+         <destination_pos>8,n23</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>23</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="172"><![CDATA[Dark Elf's Scroll]]></title>
+         <contents mid="173"><![CDATA[<html>Kamu berhasil mengalahkan Dark Elf Assassin Lydia dan mendapatkan Dark Elf's harp dan sebuah order scroll. <BR>Kembali ke Scout Fergus. <BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> -  Scout Fergus</FONT> </html>]]></contents>
+         <destination mid="174"><![CDATA[Bicara dengan Scout Fergus]]></destination>
+         <todo_msg mid="175"><![CDATA[Kamu telah mendapatkan Dark Elf's harp dan order scroll. Kembali kepada Scout Fergus.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>9:-1</user_level>
+      <user_class />
+      <prev_quest>9467</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,30 @@
+   <talk>
+      <npcename>n2397_re_dark_lily</npcename>
+      <npcid>2397</npcid>
+      <startexe>8</startexe>
+      <comment>보내버리고 가서 998 퀘스트 완수 해 오게</comment>
+      <npckname mid="1"><![CDATA[Lily]]></npckname>
+      <talk_paragraph index="001" image="QW_PrairieTown.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Lily$<BR><FONT color=#7e12d2>(The little girl is terrified. </FONT><FONT color=#7e12d2>Take her to town.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="4"><![CDATA[<html>$Lily$<BR><FONT color=#7e12d2>(The moment you try to help her get up,</FONT><BR>
+<FONT color=#7e12d2>you sense danger.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="0" false="3">2</exe>
+         <exe type="conexe" true="1" false="0">0</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 12, 2);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 12, 1);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID,12, 1);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 24, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="0,4,5,6,7" false="2">1</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 75</chk>
+         <chk type="hascomq">998</chk>
+         <chk type="hascomq">12</chk>
+      </conditions>
+   </talk>

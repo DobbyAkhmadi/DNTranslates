@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n303_auction_manger_shylock</npcename>
+      <npcid>303</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Exchange Deacon Shylock]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="auction" mid="3"><![CDATA[<html>[Trading House]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="12"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="4"><![CDATA[<html>[Talk]What is this place?</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="20"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Exchange Deacon Shylock$<BR>Buy or Sell items right here in the Trading House.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="6"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Exchange Deacon Shylock$<BR>Adventurers are busy people so leave the selling of your unwanted goods to us. You may also buy things that others have for sale.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="13" link_target="nq10_8401_basic_of_deal.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Trading Basics</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="17" link_target="sq08_313_seal_of_sealed.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>The Seal Stamp and the Seal</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="14"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Exchange Deacon Shylock$<BR>Can I help you?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenMarket(userObjID);</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,303);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="auction">1</exelink>
+      <exelink idx="guildms">2</exelink>
+   </talk>

@@ -1,0 +1,405 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_239_change1_archer</qename>
+      <qtype>changejobquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>239</qid>
+      <designer>강지영</designer>
+      <qlevel>15</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <custommark>40,41,42</custommark>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Specialization] Telesia]]></qkname>
+      <qnpc>
+         <npcid>1215</npcid>
+         <npcename>n1215_spirit_stone</npcename>
+         <npckname>정령의 돌</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>33</npcid>
+         <npcename>n033_archer_master_adellin</npcename>
+         <npckname>상급 아처 아델린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Remote quest$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Telesia$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-a" mid="10" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Master Archer Adelynn${action:Talk}<BR>All elves set out on a long journey before their twentieth birthday, to realise their own <FONT color=#a82424>fate</FONT>. Humans refer to this elven tradition as a coming-of-age ceremony, but we call it '<FONT color=#a82424>Telezia</FONT>’, that is, the journey of fate.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-complete_check1" mid="98" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="97"><![CDATA[<html>$Master Archer Adelynn$<BR><FONT color=#387206>{user_nick}</FONT>. It’s been almost a year since you have set out on a journey. I, too, am curious to find out what kind of fate awaits you. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-c" mid="12" select_type="0"><![CDATA[<html>How do I realise what my fate is?</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Master Archer Adelynn$<BR>What I heard from the winds was that my fate would be to guide Elves who have left home. Afterwards, I settled down here at Calderock Village and I'm helping the young Elves.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-d" mid="14" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Master Archer Adelynn$<BR>It might be a little vague for you to understand what it means by "realizing your fate". An Elf realizing her fate can be said to have obtained a new name. All the Elves get their names differently so it is hard for me to tell you how you can get one.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-d" image="QN_archer_nerwin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-e" mid="16" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Master Archer Adelynn$<BR><FONT color=#a82424>Nerwin</FONT> took part in the Black Dragon Raid 50 years ago and gained the name <FONT color=#a82424>Narcilia</FONT> and became the Queen. I also got my name <FONT color=#a82424>Adelyde</FONT> during the Monster Struggle at Calderock 10 years ago and took on the path of a guide.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-f" mid="18" select_type="0"><![CDATA[<html>Thank you.</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Master Archer Adelynn$<BR><FONT color=#387206>{user_nick}</FONT>. I can sense that the time is near for you to unlock your first step to your <FONT color=#a82424>Telesia</FONT>. I hope to give you a little help in your journey.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-g" mid="20" select_type="0"><![CDATA[<html>Haven't all the Spirits disappeared?</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Master Archer Adelynn$<BR>I will take you to a place where the memories of the Spirits remain. The memory will become the guide to your Telesia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-h" mid="22" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Master Archer Adelynn$<BR>Sadly, yes. However, the souls of the Spirits that still linger in this world can connect to us Elves. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-party_check1" mid="24" select_type="0"><![CDATA[<html>Please guide me.</html>]]></talk_answer>
+      <talk_answer link_index="n033_archer_master_adellin-1-k" mid="25" select_type="0"><![CDATA[<html>I… don't know yet.</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Master Archer Adelynn$<BR>Do you want to proceed to the Selection Room to be one step closer to your <FONT color=#a82424>Telesia</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-1-go_to_2" mid="27" select_type="0"><![CDATA[<html>(Go to Selection Room)</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Master Archer Adelynn$<BR>It might be dark and scary. Please don't lose yourself among the voices of the Spirits and I hope you will find your Telesia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="28"><![CDATA[<html>$Master Archer Adelynn$<BR>You cannot enter the Selection Room with friends.<BR>Finding your Telesia is something that you have to do alone.<BR>
+<BR><FONT color=#7e12d2>*You cannot take this quest in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="29"><![CDATA[<html>$Master Archer Adelynn$<BR>All paths behold fear. <BR>If you have managed to control your fear, please come and talk to me again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-1-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-4" mid="96" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="95"><![CDATA[<html>$Master Archer Adelynn$<BR>It looks like my advice at least helped you a little in your journey to find your Telesia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-2-party_check_2" mid="31" select_type="0"><![CDATA[<html>(Go to the Selection Room)</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Master Archer Adelynn$<BR>Do you want to proceed to the Selection Room to be one step closer to your <FONT color=#a82424>Telesia</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="32"><![CDATA[<html>$Master Archer Adelynn$<BR>You cannot enter the Selection Room with friends.<BR>Finding your Telesia is something that you have to do alone.<BR>
+<BR><FONT color=#7e12d2>*You cannot take this quest in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-a" mid="71" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html> <BR>
+<FONT color=#7e12d2>This place is full of relics made of stone. There is a place that is particularly shining.</FONT><BR>
+<FONT color=#7e12d2>When you got close, you could feel a tremour and a voice could be heard.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-b" mid="72" select_type="0"><![CDATA[<html>Are you a… Spirit?</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Spirit Stone$<BR>You are a child of the forest who can hear my voice.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-c" mid="73" select_type="0"><![CDATA[<html>Then who are you?</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Spirit Stone$<BR>All the Spirits have disappeared from this world.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-d" mid="74" select_type="0"><![CDATA[<html>What do I have to do here?</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Spirit Stone$<BR>I don't know. I'm just a nobody who only holds the memories.<BR>You will be able to understand it one day, like how Telesia comes to you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-e" mid="75" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Spirit Stone$<BR>I can feel fear, confusion, and hesitation from you. What is it that you are looking for?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-f" mid="76" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Spirit Stone$<BR>Many Elves come to us and say that they are looking for their Telesia.<BR>However, Telesia will come to them naturally when the time is right. It is not something that can be taught to them by someone.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-g" mid="77" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Spirit Stone$<BR>But I can still help to lessen the confusion in your journey.<BR>Answer the questions from the memory of the Spirit with the first answer that appears in your mind.<BR><FONT color=#7e12d2>(Spirit Stone is vaguely lit up)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-h" mid="78" select_type="0"><![CDATA[<html>I will carry all his bags.</html>]]></talk_answer>
+      <talk_answer link_index="n1215_spirit_stone-2-h" mid="79" select_type="0"><![CDATA[<html>I will carry some of his bags.</html>]]></talk_answer>
+      <talk_answer link_index="n1215_spirit_stone-2-h" mid="80" select_type="0"><![CDATA[<html>I will throw away the bags and carry him.</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Spirit Stone$<BR>Your companion has been injured. If you take his bags, you will lessen his pain but the two of you will also become vulnerable as it will be difficult for you to counter any attacks. Will you help to carry your companion's bags?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-i" mid="81" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Spirit Stone$<BR>Okay. I will continue with the next question.<BR><FONT color=#7e12d2>(The Spirit Stone shines brightly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-j" mid="82" select_type="0"><![CDATA[<html>I will keep a distance from the monster and look out for chances to strike the monster.</html>]]></talk_answer>
+      <talk_answer link_index="n1215_spirit_stone-2-j" mid="83" select_type="0"><![CDATA[<html>I will get close to the monster and make it confused.</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Spirit Stone$<BR>If you encounter a huge monster on your way alone, how will you defeat the monster?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-k" mid="84" select_type="0"><![CDATA[<html>(My path?)</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Spirit Stone$<BR>I can vaguely see the path you are going to take.<BR><FONT color=#7e12d2>(The Spirit Stone shines brightly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-2-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-2-open_ui_2" mid="85" select_type="0"><![CDATA[<html>Take a look at the jobs you can specialize into.</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Spirit Stone$<BR>The choice is yours.<BR>Whatever choice you make, it will help you in finding your Telesia…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1215_spirit_stone-3-a" mid="87" select_type="0"><![CDATA[<html>Take a look at the jobs you can specialize into.</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Spirit Stone$<BR>The choice is yours.<BR>Whatever choice you make, it will help you in finding your Telesia…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="100"><![CDATA[<html>$Spirit Stone$<BR>The choice is yours.<BR>Whatever choice you make, it will help you in finding your Telesia…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-3-party_check2" mid="103" select_type="0"><![CDATA[<html>[Enter]</html>]]></talk_answer>
+      <talk_question mid="102"><![CDATA[<html>$Master Archer Adelynn$<BR>Do you want to go to the Selection Room to be one step closer to your <FONT color=#a82424>Telesia</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="104"><![CDATA[<html>$Master Archer Adelynn$<BR>You cannot enter the Selection Room with companions.<BR>You need to find your Telesia alone.<BR><BR><FONT color=#7e12d2>※You cannot do this quest while in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1215_spirit_stone-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="46"><![CDATA[<html><BR><FONT color=#7e12d2>You can't see the bright light anymore.<BR>It seems almost as if you were if your dream, but you have realised that you had turned into a </FONT><FONT color=#387206>{user_class}</FONT><FONT color=#7e12d2>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-4-a" mid="91" select_type="0"><![CDATA[<html>It was not Telesia.</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Master Archer Adelynn$<BR>You have gaine a new power.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-4-b" mid="92" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Master Archer Adelynn$<BR>You don't have to be impatient. You will become closer to your destiny depending on how you use that power.<BR>Your Telesia will find you someday.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n033_archer_master_adellin-4-c" mid="93" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n033_archer_master_adellin-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="50"><![CDATA[<html><FONT color=#387206>${user_class}$</FONT><BR><BR><FONT color=#7e12d2>* 1차 Specialization has been completed.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">239</exe>
+         <exe type="recompense_view">2390,,,,,,,,,</exe>
+         <exe type="talk" npc="n033_archer_master_adellin">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>8~11 전직 완료 시 처리</comment>
+      <conditions>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 14</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 15</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 29</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 30</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 31</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 32</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13520,1);</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="talk" npc="n033_archer_master_adellin">i</exe>
+         <exe type="talk" npc="n033_archer_master_adellin">j</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="conexe" true="11" false="9">1</exe>
+         <exe type="conexe" true="11" false="12">2</exe>
+         <exe type="talk" npc="n033_archer_master_adellin">b</exe>
+         <exe type="talk" npc="n033_archer_master_adellin">l</exe>
+         <exe type="conexe" true="11" false="13">3</exe>
+         <exe type="conexe" true="11" false="14">4</exe>
+         <exe type="conexe" true="11" false="15">5</exe>
+         <exe type="conexe" true="11" false="10">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="custom">api_ui_OpenJobChange(userObjID,1)</exe>
+         <exe type="conexe" true="5" false="4">0</exe>
+         <exe type="talk" npc="n033_archer_master_adellin">a</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13520,1);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13520,1);</exe>
+         <exe type="talk" npc="n033_archer_master_adellin">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 14</chk>
+      </conditions>
+      <executions>
+         <exe type="recompense">2391,,,,,,,,,</exe>
+         <exe type="complete" true="">239</exe>
+         <exe type="recompense">2392,,,,,,,,,</exe>
+         <exe type="conexe" true="0" false="2">0</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="a">1</exelink>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="a">8</exelink>
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="complete_check1">8</exelink>
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="c" />
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="d" />
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="e" />
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="f" />
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="g" />
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="h" />
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="party_check1">3</exelink>
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="k" />
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="go_to_2">0,1,2</exelink>
+   <exelink qstep="1" npc="n033_archer_master_adellin" sub="4">6,7</exelink>
+   <exelink qstep="2" npc="n033_archer_master_adellin" sub="party_check_2">3</exelink>
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="b" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="c" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="d" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="e" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="f" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="g" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="h" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="h" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="h" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="i" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="j" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="j" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="k" />
+   <exelink qstep="2" npc="n1215_spirit_stone" sub="open_ui_2">2</exelink>
+   <exelink qstep="3" npc="n1215_spirit_stone" sub="a">0,1</exelink>
+   <exelink qstep="4" npc="n033_archer_master_adellin" sub="b">3</exelink>
+   <exelink qstep="4" npc="n033_archer_master_adellin" sub="c">1</exelink>
+   <journal_data recompense="0:2390" quest_title="[전직] 텔레지아" chapterid="-1" quest_level="15" quest_mark_type="40" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Archer_Adellin.dds</contents_image>
+         <destination_pos>8,n33</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>33</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="51"><![CDATA[Traveller's Stage]]></title>
+         <contents mid="52"><![CDATA[<html>Master Archer Adelynn guides young Elves who are on their journey.<BR>Talk to Master Archer Adelynn.<BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Master Archer Adelynn</FONT></html>]]></contents>
+         <destination mid="53"><![CDATA[(Solo) Talk to Master Archer Adelynn]]></destination>
+         <todo_msg mid="54"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos>13520,n1215</destination_pos>
+         <destination_mode>custom:13520@4</destination_mode>
+         <statemark_npcid>1215</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="55"><![CDATA[Spirit's Voice]]></title>
+         <contents mid="56"><![CDATA[<html>Master Archer Adelynn told you to find your path from the Spirit's voice.<BR>Look for the Spirit Stone at the Selection Room.<BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Master Archer Adelynn</FONT><FONT color=#a82424> - Selection Room(???)</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>(* You cannot take a Specialization Quest in a party.)<BR>(* You can go to the Selection Room by talking to Master Archer Adelynn)</FONT></html>]]></contents>
+         <destination mid="57"><![CDATA[(Solo) Talk to the Spirit Stone]]></destination>
+         <todo_msg mid="58"><![CDATA[Find and talk to the Spirit Stone at the Selection Room.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image />
+         <destination_pos>13520,n1215</destination_pos>
+         <destination_mode>custom:13520@4</destination_mode>
+         <statemark_npcid>1215</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="59"><![CDATA[Follow Your Heart]]></title>
+         <contents mid="60"><![CDATA[<html>Spirit Stone told you to take the path you wish to take.<BR>Try out the new powers and take the path.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Master Archer Adelynn - Selection Room(Spirit Stone)</FONT><BR>
+ <BR>
+<BR>
+<FONT color=#7e12d2>(* You cannot take a Specialization Quest in a party.)<BR>(* You can go to the Selection Room by talking to Master Archer Adelynn)</FONT></html>]]></contents>
+         <destination mid="61"><![CDATA[(Solo) Specialization Skill Trial]]></destination>
+         <todo_msg mid="62"><![CDATA[Try out the new skills and select the job you want to specialize into.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image />
+         <destination_pos>13520,n1215</destination_pos>
+         <destination_mode>custom:13520@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="63"><![CDATA[Selection]]></title>
+         <contents mid="64"><![CDATA[<html>You have tried out the new powers. Now you have to choose which job you are going to specialize into.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Master Archer Adelynn - Selection Room(Spirit Stone)</FONT><BR>
+ <BR>
+<BR>
+<BR>
+<FONT color=#7e12d2>(* You cannot take a Specialization Quest in a party.)<BR>(* You can go to the Selection Room by talking to Master Archer Adelynn)</FONT></html>]]></contents>
+         <destination mid="65"><![CDATA[(Solo) Specialization]]></destination>
+         <todo_msg mid="66"><![CDATA[You have completed the trial. Now please select the job you want to specialize into.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image />
+         <destination_pos>8,n33</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>33</statemark_npcid>
+         <statemark_type>42</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="67"><![CDATA[Telesia]]></title>
+         <contents mid="68"><![CDATA[<html>You have obtained new powers. Talk to Master Archer Adelynn.<BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Master Archer Adelynn</FONT></html>]]></contents>
+         <destination mid="69"><![CDATA[Talk to Master Archer Adelynn]]></destination>
+         <todo_msg mid="70"><![CDATA[Specialization completed! Talk to Master Archer Adelynn.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>15:-1</user_level>
+      <user_class>2</user_class>
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

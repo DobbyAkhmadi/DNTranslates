@@ -1,0 +1,44 @@
+   <talk>
+      <npcename>n392_academic_station</npcename>
+      <npcid>392</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Tinkerer Station]]></npckname>
+      <talk_paragraph index="001" image="QN_Npc_Academic_station.dds" itemindex="">
+         <talk_answer link_index="quest" mid="6"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill" mid="39"><![CDATA[<html>[Belajar Skill]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Tinkerer Station$<BR>▶ <FONT color=#086171>>Sistem berjalan dalam interface lokal.</FONT><BR>▷ <FONT color=#7e12d2>Untuk aktivasi jaringan diperlukan identifikasi pengguna.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="QN_Npc_Academic_station.dds" itemindex="">
+         <talk_answer link_index="q_enter" mid="42" link_target="sq08_377_test_academic1.xml"><![CDATA[<html>[Specialization] <FONT color=#086171>well-deservedⅠ</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="43" link_target="sq08_378_test_academic2.xml"><![CDATA[<html>[Specialization] <FONT color=#086171>well-deserved Ⅱ</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="49" link_target="sq08_242_change1_aca.xml"><![CDATA[<html>[Class Specialization] <FONT color=#086171>Believe yourself</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="7" link_target="mq08_225_get_back.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Get back the thing</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="8" link_target="mq08_226_unexpected_situation.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Unexpected situation</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="9" link_target="mq08_227_lack_of_data.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Lack of Data</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="14" link_target="mq08_228_out_of_fuel.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Shortage of Output</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="17" link_target="mq08_229_go_see.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Now go to meet</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="20" link_target="mq08_230_cant_change.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Can't change easily</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="29" link_target="mq08_231_destroy_the_target.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Destroy the object</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="30" link_target="mq08_232_ucan_be_strong.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Can be strong</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="31" link_target="mq08_235_how_to_find.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Find a way to solve</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="32" link_target="mq08_236_ending.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Conclusion is decided.</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="33" link_target="mq08_237_rouse.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Open one's eyes</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="45" link_target="sq08_379_change_job5.xml"><![CDATA[<html>{quest_level}<FONT color=#086171>Irine's previous gift</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="34"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Tinkerer Station${action:Talk}<BR><FONT color=#086171>Connect.............<BR>Wellcome Tinkerer Station. ver.2.1.1.</FONT><BR><FONT color=#086171></FONT><BR><FONT color=#086171>ⓒ Bellin Corporation. All Right Reserved.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="QN_Npc_Academic_station.dds" itemindex="">
+         <talk_question mid="36"><![CDATA[<html>$Strange construction$<BR><FONT color=#7e12d2>(Sesuatu yang aneh tampaknya berdiri tegak<BR>Ternyata gunanya untuk menyandarkan dagu pada tangan atau untuk tempat beristirahat seekor burung)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="0" false="2">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">5</chk>
+      </conditions>
+      <exelink idx="skill">3</exelink>
+   </talk>

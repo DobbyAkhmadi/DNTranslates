@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n1048_academic</npcename>
+      <npcid>1048</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Academic Comelina]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Academic Comelina$<BR>
+Velskud...<BR>
+<FONT color=#7e12d2>(She is looking at Velskud with eyes full of concern)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="enterquest">mq15_9257_turning_point_of_history</exe>
+         <exe type="conexe" true="0" false="3">0</exe>
+         <exe type="enterquest">mq15_9387_choice_of_history</exe>
+         <exe type="conexe" true="2" false="7">1</exe>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mqc09_9539_he_was_not</exe>
+         <exe type="enterquest">mqc10_9555_terminus_of_the_future</exe>
+         <exe type="conexe" true="5" false="8">2</exe>
+         <exe type="conexe" true="6" false="9">3</exe>
+         <exe type="conexe" true="10" false="4">4</exe>
+         <exe type="enterquest">mqc05_9501_meaning_of_the_letter</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9257</chk>
+         <chk type="hasquest">9387</chk>
+         <chk type="hasquest">9539</chk>
+         <chk type="hasquest">9555</chk>
+         <chk type="hasquest">9501</chk>
+      </conditions>
+   </talk>

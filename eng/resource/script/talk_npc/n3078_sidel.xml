@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n3078_sidel</npcename>
+      <npcid>3078</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Cidel (Prairie Town)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Cidel$<BR>
+Some frozen regions are being discovered throughout the Wind Forest. The Fairystars are beginning to investigate at the behest of the palace.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="9"><![CDATA[<html>$Cidel$<BR>The Fairystars are investigating the Wind Forest at the behest of the palace. They're concerned that the number of frozen spots is increasing rapidly.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="enterquest">sq_3890_alteia01</exe>
+         <exe type="conexe" true="3" false="6">1</exe>
+         <exe type="enterquest">sq_3891_alteia02</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="8" false="7">3</exe>
+         <exe type="conexe" true="5" false="4">2</exe>
+         <exe type="enterquest">sq_3893_vandar02</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">3890</chk>
+         <chk type="hasquest">3891</chk>
+         <chk type="class" op="=">10</chk>
+         <chk type="hasquest">3893</chk>
+      </conditions>
+   </talk>

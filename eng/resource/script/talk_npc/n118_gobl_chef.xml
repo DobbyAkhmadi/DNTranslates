@@ -1,0 +1,69 @@
+   <talk>
+      <npcename>n118_gobl_chef</npcename>
+      <npcid>118</npcid>
+      <startexe>2</startexe>
+      <comment>커스텀 코드 1번 원본 : api_ui_OpenCompoundItem(userObjID, 3001);</comment>
+      <npckname mid="1"><![CDATA[Mr. GobChef]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="changemap_001" mid="32"><![CDATA[<html>[Enter the Orc Chef's Secret Kitchen]</html>]]></talk_answer>
+         <talk_answer link_index="opencompounditem_001" mid="68"><![CDATA[<html>[Craft Rice Cake]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Mr. GobChef$<BR>Another Rice Cake for the one you hate.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="changemap_002" mid="69"><![CDATA[<html>[Enter the Orc Chef's Secret Kitchen]</html>]]></talk_answer>
+         <talk_answer link_index="opencompounditem_002" mid="70"><![CDATA[<html>[Craft Rice Cake]</html>]]></talk_answer>
+         <talk_question mid="36"><![CDATA[<html>$Mr. GobChef$<BR>Bigger the rice cake that goeth, the bigger the rice cake that cometh.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="changemap_003" mid="71"><![CDATA[<html>[Enter the Orc Chef's Secret Kitchen]</html>]]></talk_answer>
+         <talk_answer link_index="opencompounditem_003" mid="72"><![CDATA[<html>[Craft Rice Cake]</html>]]></talk_answer>
+         <talk_question mid="39"><![CDATA[<html>$Mr. GobChef$<BR>Eat some rice cakes and watch the exorcism.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_answer link_index="changemap_004" mid="73"><![CDATA[<html>[Enter the Orc Chef's Secret Kitchen]</html>]]></talk_answer>
+         <talk_answer link_index="opencompounditem_004" mid="74"><![CDATA[<html>[Craft Rice Cake]</html>]]></talk_answer>
+         <talk_question mid="42"><![CDATA[<html>$Mr. GobChef$<BR>Rice Cakes, what a nice suprise in the middle of the night.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="item" image="QS_Default.dds" itemindex="872418233">
+         <talk_question mid="52"><![CDATA[<html>$Mr. GobChef$<BR>I need a <FONT color=#a82424>Steamer</FONT>.<BR>I can't make any rice cakes without a Steamer.<BR> <BR>? <FONT color=#7e12d2>You can obtain a steamer by hunting Crazy Duck.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="party" image="" itemindex="">
+         <talk_question mid="60"><![CDATA[<html>$Mr. GobChef$<BR>I think you and I will be able to handle this by ourselves.<BR><BR>? <FONT color=#7e12d2>You cannot enter while in a party.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="000" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="82" link_target="sq_924_gobl_chef.xml"><![CDATA[<html>[Event] <FONT color=#086171>Legendary Rice Cake</FONT></html>]]></talk_answer>
+         <talk_question mid="80"><![CDATA[<html>$Mr.GobChef$<BR>Gobble, Gobble?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom" />
+         <exe type="conexe" true="4" false="3">0</exe>
+         <exe type="talk">000</exe>
+         <exe type="conexe" true="5" false="6">1</exe>
+         <exe type="conexe" true="0" false="7">1</exe>
+         <exe type="conexe" true="8" false="9">1</exe>
+         <exe type="talk">002</exe>
+         <exe type="talk">003</exe>
+         <exe type="talk">004</exe>
+         <exe type="conexe" true="12" false="11">2</exe>
+         <exe type="talk">item</exe>
+         <exe type="conexe" true="14,15" false="13">3</exe>
+         <exe type="talk">party</exe>
+         <exe type="custom">api_user_DelItem(userObjID,872418233,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13604,1);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 924) == 1</chk>
+         <chk type="prob">500</chk>
+         <chk type="item" num="1" op=">=">872418233</chk>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="changemap_001">10</exelink>
+      <exelink idx="opencompounditem_001">1</exelink>
+      <exelink idx="changemap_002">10</exelink>
+      <exelink idx="opencompounditem_002">1</exelink>
+      <exelink idx="changemap_003">10</exelink>
+      <exelink idx="opencompounditem_003">1</exelink>
+      <exelink idx="changemap_004">10</exelink>
+      <exelink idx="opencompounditem_004">1</exelink>
+   </talk>

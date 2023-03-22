@@ -1,0 +1,57 @@
+   <talk>
+      <npcename>n2785_v_eltia</npcename>
+      <npcid>2785</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Eltia Justitia]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="002" mid="16"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Those horrible goblins are after the Orb!</FONT><BR>
+<FONT color=#662500>I'm sorry to leave, Eltia……</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="003" mid="17"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Eltia$<BR>I'm fine, Sis...<BR>Um... Is Mana Ridge far from here?<BR>My ankle hurts. I think I sprained it during the fall.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="end_talk" mid="20"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Your ankle? We've still got a ways to go……</FONT><BR><FONT color=#662500>Eltia, let's rest here for a while before we go!</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="clear_quest" image="" itemindex="">
+         <talk_answer link_index="clear1" mid="37"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Eltia… Are you feeling better?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="clear1" image="" itemindex="">
+         <talk_answer link_index="clear2" mid="38"><![CDATA[<html>(Sure, maybe it would be better to forget.)</html>]]></talk_answer>
+         <talk_question mid="24"><![CDATA[<html>$Eltia$<BR>……Sis? Just a moment ago, I'm sure I saw……<BR>
+ <BR>
+<FONT color=#7e12d2>(Eltia doesn't seem to remember</FONT><BR>
+<FONT color=#7e12d2>being with the Spirit of Death.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="clear2" image="" itemindex="">
+         <talk_answer link_index="end_talk" mid="39"><![CDATA[<html><FONT color=#086171>[Go to Mana Ridge]</FONT></html>]]></talk_answer>
+         <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Hehe……</FONT><BR>
+<FONT color=#662500>What on earth was I dreaming of to sweat like this?</FONT><BR>
+<FONT color=#662500>I'm fine, Eltia, I'm fine.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="2,4,5,6" false="7">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">clear_quest</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3764, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,9460, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 9460,1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 9460, 1);</exe>
+         <exe type="conexe" true="2" false="8">1</exe>
+         <exe type="conexe" true="1" false="2">2</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">998</chk>
+         <chk type="hascomq">9460</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 98</chk>
+      </conditions>
+      <exelink idx="end_talk">3</exelink>
+      <exelink idx="end_talk">3</exelink>
+   </talk>

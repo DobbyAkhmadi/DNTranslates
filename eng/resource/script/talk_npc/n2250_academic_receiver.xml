@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n2250_academic_receiver</npcename>
+      <npcid>2250</npcid>
+      <startexe>8</startexe>
+      <comment>듀얼 캐릭터 때문에 메인퀘 완료 여부를 체크함
+외전캐릭터용 더미퀘스트 40번이 완료되었는지 체크 (본래는 997번 또는 998번 더미퀘스트 하나만 사용하여 체크 가능. 블랙마라 또는 아크헤러틱 참조)</comment>
+      <npckname mid="1"><![CDATA[Academic's Communicator (Ray Mechanic)]]></npckname>
+      <talk_paragraph index="001" image="QN_Npc_Academic_station.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Academic's Communicator$<BR><FONT color=#7e12d2>(Communicator is now back to normal. Go to Mana Ridge and log on to the Academic Station.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Academic's Communicator$<BR><FONT color=#7e12d2>(The communicator keeps having errors.</FONT><BR>
+<FONT color=#7e12d2>It seems like intercepting waves are being sent from a nearby place.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="0" false="3">2</exe>
+         <exe type="conexe" true="1" false="0">0</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 124, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,91, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 91,1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 91, 1);</exe>
+         <exe type="conexe" true="0,5,6,7" false="2">1</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 101, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 86</chk>
+         <chk type="hascomq">40</chk>
+         <chk type="hascomq">91</chk>
+      </conditions>
+   </talk>

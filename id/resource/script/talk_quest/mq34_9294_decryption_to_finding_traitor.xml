@@ -1,0 +1,302 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq34_9294_decryption_to_finding_traitor</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>12</qchapter>
+      <qid>9294</qid>
+      <designer>강지영</designer>
+      <qlevel>67</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9295</nextqid>
+      <nextqname>mq34_9295_imperfect_information</nextqname>
+      <nextqnpc>n1047_argenta</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Decryption]]></qkname>
+      <qnpc>
+         <npcid>1047</npcid>
+         <npcename>n1047_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>88</npcid>
+         <npcename>n088_scholar_starshy</npcename>
+         <npckname>문장학자 스타쉬</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-accepting-acceptted" mid="6" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Argenta$<BR>Mungkin. Tapi gimana caranya membaca ini?<BR>Ini bukan bahasa Ancient. Aku tak pernah melihat huruf-huruf ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-" mid="8" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Kudengar kamu pergi ke <FONT color=#a82424>Anu Arendel</FONT>. Apa yang kamu lakukan di sana?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-a" mid="10" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Argenta$<BR>Karena kamu yang membawa surat ini, kamu harus menjaganya.<BR>Temukan cara untuk membacanya. Lakukan apapun untuk bisa memahaminya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-b" mid="12" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Perlukah aku membawanya ke Heraldry Scholar?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1-b" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-" mid="14" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Argenta$<BR><FONT color=#a82424>Heraldry Scholar</FONT><FONT color=#2b2723>?</FONT> Oke, suka-suka kamu saja.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-" mid="16" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Argenta$<BR>Apa kamu tidak pergi ke <FONT color=#a82424>Heraldry Scholar di Saint's Haven</FONT>?<BR>Aku sih tak peduli kemana kamu pergi tapi jangan lupa untuk menterjemahkan suratnya, oke?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-a" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Ini bukanlah surat. Dan strukturnya terlalu rapih untuk dikatakan sebagai gambar....<BR>Ini pastilah kode.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-b" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oke. Bisakah kamu memecahkan ini?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-c" mid="22" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Pasti ada petunjuk bagaimana membaca pola dari kode ini... di suatu tempat...<BR><FONT color=#7e12d2>(Angkat suratnya kearah cahaya untuk memastikan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-d" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apakah ada jalan bagaimana kita bisa memecahkan ini?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-e" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Tulisan ini dibuat dengan tinta khusus. <BR>Tintanya akan hilang setelah beberapa saat.<BR>Aku sudah lama tidak melihat yang seperti ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-f" mid="28" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Karena ini adalah trik lama, cara untuk memecahkan kodenya juga mudah.<BR>kita Cuma butuh bahan yang sederhana. Tapi pertama-tama, kamu harus membantuku mendapatkannya di gurun.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-g" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Serahkan padaku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2-g" image="QS_Default.dds" itemindex="400397" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-" mid="32" select_type="5" />
+      <talk_question mid="31"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Haha. Anak muda memang selalu penuh semangat.<BR>Sekarang pergilah ke <FONT color=#a82424>Sea of Sand Dust</FONT> dan dapatkan juice of a desert plant. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3" image="QW_76.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-" mid="34" select_type="5" />
+      <talk_question mid="33"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Haha. Anak muda memang selalu penuh semangat.<BR>Sekarang pergilah ke <FONT color=#a82424>Sea of Sand Dust</FONT> dan dapatkan juice of a desert plant. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-a" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Ini seperti magic. Jika aku menyemprotkannya kesini~ <BR><FONT color=#7e12d2>(Stas menyemprotkan cairan dan tanda mulai muncul di surat)<BR></FONT>lihat? Sekarang kamu sudah bisa membacanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-b" mid="38" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku masih tidak mengerti.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-c" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Oh... kamu tidak mengenal Elvish?<BR>Elvish dan Goblish adalah dua bahasa populer yang banyak dipelajari pada masa kini. Harusnya kamu mempelajarinya selagi muda.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-d" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Terjemahkanlah untukku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-d" image="QN_Npc_yubaensiael.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-e" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Oke. Lagipula isinya juga tidak banyak. Sepertinya informasi mengenai suatu acara yang akan berlangsung...<BR>Waktu, lokasi... Oh yang ini juga kebaca... Juven... Bukan, <FONT color=#a82424>Yuvenciel</FONT> adalah nama penulis surat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-" mid="46" select_type="5" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yuvenciel?<BR>Oke, terima kasih.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-5-" mid="48" select_type="5" />
+      <talk_question mid="47"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Tapi dimana kamu mendapatkan surat ini? Huh?? Kamu harus kembali ke <FONT color=#a82424>Anu Arendel</FONT> secepatnya??</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-5" image="QN_Npc_yubaensiael.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-5-a" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Argenta$<BR><FONT color=#a82424>Yuvenciel</FONT> Menulis surat? <BR>Sepertinya, Yuvenciel adalah salah satu dari apostles. Tidak mengejutkan. <BR><FONT color=#7e12d2>(Argenta melihat surat tersebut)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-5-b" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Argenta${sound:npc_AN_Argenta_qu_9295_02.ogg}<BR>Ini... Lokasi dari Origin of the Forest dan waktunya bagi Candidate queen untuk berangkat.<BR>Yuvenciel diam-diam memberikan informasi mengenai Conclave kepada Rozalinde. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-5-!next" mid="54" select_type="4" />
+      <talk_question mid="53"><![CDATA[<html>$Quest rewards$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9294</exe>
+         <exe type="talk" npc="n1047_argenta">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntitem" num="1" exe="6,7,8" onexe="">400397</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">601011</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">701011</exe>
+         <exe type="addquestitem" num="1">400397</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">92941,92941,,92943,92944,92945,92946,92947,92948,92949</exe>
+         <exe type="complete" true="">9294</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1047_argenta" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n1047_argenta" sub="b">0,1</exelink>
+   <exelink qstep="1" npc="n1047_argenta" sub="" />
+   <exelink qstep="2" npc="n088_scholar_starshy" sub="b" />
+   <exelink qstep="2" npc="n088_scholar_starshy" sub="c" />
+   <exelink qstep="2" npc="n088_scholar_starshy" sub="d" />
+   <exelink qstep="2" npc="n088_scholar_starshy" sub="e" />
+   <exelink qstep="2" npc="n088_scholar_starshy" sub="f" />
+   <exelink qstep="2" npc="n088_scholar_starshy" sub="g">0,1,2,3,4</exelink>
+   <exelink qstep="2" npc="n088_scholar_starshy" sub="" />
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="b" />
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="c" />
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="d" />
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="e">0,1</exelink>
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="" />
+   <exelink qstep="5" npc="n1047_argenta" sub="b">0</exelink>
+   <exelink qstep="5" npc="n1047_argenta" sub="!next">1</exelink>
+   <journal_data recompense="1:92941,3:92943,4:92944,5:92945,6:92946,7:92947,8:92948,9:92949" quest_title="암호 해독" chapterid="12" quest_level="67" quest_mark_type="1" use_item_list="400397,400321">
+      <journal index="1">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>34,n1047</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1047</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="55"><![CDATA[Decryption I]]></title>
+         <contents mid="56"><![CDATA[<html>Tulisan tidak terlihat kini muncul di surat yang dijatuhkan oleh Rozalinde.<BR>Bicara pada Argenta.<BR>
+ <BR>
+<FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="57"><![CDATA[Bicara pada Argenta di Anu Arendel]]></destination>
+         <todo_msg mid="58"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>11,n088</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>88</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="59"><![CDATA[Decryption II]]></title>
+         <contents mid="60"><![CDATA[<html>Kamu memutuskan untuk menemui Heraldry Scholar agar bisa memecahkan kode suratnya. Temui dia dan tunjukanlah suratnya.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>- Heraldry Scholar Stas</FONT></html>]]></contents>
+         <destination mid="61"><![CDATA[Bicara pada Heraldry Scholar Stas di Saint's Haven]]></destination>
+         <todo_msg mid="62"><![CDATA[Kembali ke Saint's Haven dan temui Heraldry Scholar.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_76.dds</contents_image>
+         <destination_pos>761,0,0</destination_pos>
+         <destination_mode>custom:761@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="63"><![CDATA[Decryption III]]></title>
+         <contents mid="64"><![CDATA[<html>Stas memberi tahu padamu bahan yang dibutuhkan untuk memecahkan kodenya.<BR>Pergi ke Sea of Sand Dust dan buru Spitflowers untuk mendapatkannya.<BR>
+ <BR>
+<FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Sea of Sand Dust</FONT></html>]]></contents>
+         <destination mid="65"><![CDATA[Dapatkan Desert Spitflower Juice di Sea of Sand Dust]]></destination>
+         <todo_msg mid="66"><![CDATA[Buru Spitflowers di Sea of Sand Dust.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>11,n088</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>88</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="67"><![CDATA[Decryption IV]]></title>
+         <contents mid="68"><![CDATA[<html>Telah mendapatkan bahan yang diperlukan untuk mengetahui isi surat.<BR>Kembali ke Scholar Stas di Saint's Haven.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>- Heraldry Scholar Stas</FONT></html>]]></contents>
+         <destination mid="69"><![CDATA[Bicara pada Heraldry Scholar Stas di Saint's Haven]]></destination>
+         <todo_msg mid="70"><![CDATA[Temui Heraldry Scholar di Saint's Haven.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>34,n1047</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1047</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="71"><![CDATA[Decryption V]]></title>
+         <contents mid="72"><![CDATA[<html>Yuvenciel adalah orang yang mengirim suratnya ke Rozalinde. <BR>Kembali ke Anu Arendel dan beritahu Argenta mengenai ini.<BR>
+ <BR>
+<FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="73"><![CDATA[Bicara pada Argenta di Anu Arendel]]></destination>
+         <todo_msg mid="74"><![CDATA[Kembali ke Anu Arendel.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9293</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

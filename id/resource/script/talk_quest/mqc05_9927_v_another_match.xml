@@ -1,0 +1,510 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc05_9927_v_another_match</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>105</qchapter>
+      <qid>9927</qid>
+      <designer>유지은</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9928</nextqid>
+      <nextqname>mqc05_9928_v_chaotic_wind</nextqname>
+      <nextqnpc>n3027_refugee</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Another Match]]></qkname>
+      <qnpc>
+         <npcid>2978</npcid>
+         <npcename>n2978_hwaran</npcename>
+         <npckname>사령관 화란</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2872</npcid>
+         <npcename>n2872_kanna</npcename>
+         <npckname>치유사 칸나</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1816</npcid>
+         <npcename>n1816_vernicka</npcename>
+         <npckname>시국수장 베르니카</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3027</npcid>
+         <npcename>n3027_refugee</npcename>
+         <npckname>걱정 가득한 난민</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-accepting" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-accepting-acceptted" mid="92" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Commander Hwaran${action:Talk}{sound:npc_Hwaran_qu9927_sp_01.ogg}<BR>The wind has finally begun to blow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-accepting" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-accepting-acceptted" mid="168" select_type="3" />
+      <talk_question mid="167"><![CDATA[<html>$Healer Kanna$<BR>
+Someone paid a visit to the Taeryeong Shrine earlier.<BR>
+What did she say again? "The wind has finally begun to blow," or something.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-1" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Healer Kanna$<BR>You better go to Taeryeong Shrine. But please don't get involved in whatever she's doing this time, okay?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-a" mid="94" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Commander Hwaran${sound:npc_Hwaran_qu9927_sp_02.ogg}<BR>The storm is starting to pick up.<BR>It's like a wild dog and a lynx are fighting to take over the wolf's den.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-a" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-b" mid="95" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Is this some kind of internal power struggle?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-b" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-c" mid="96" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Commander Hwaran${sound:npc_Hwaran_qu9927_sp_03.ogg}<BR>Indeed, and I'm going to have to jump in.<BR>I can't let my servant go without knowing anything, so I'll fill you in on the details.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-c" image="QN_quanos.dds" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-d" mid="97" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Commander Hwaran$<BR>First, there's the wild dog, <FONT color=#a82424>Strong Blade Kaunos</FONT>. He claims to be a natural successor of the wolf with his stubborn and tough nature.<BR>He's going it alone just like Sirius and showing off his strength.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-d" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-e" mid="98" select_type="0"><![CDATA[<html>Do what Hwaran wants.</html>]]></talk_answer>
+      <talk_answer link_index="n2978_hwaran-1-g" mid="99" select_type="0"><![CDATA[<html>Help Kaunos.</html>]]></talk_answer>
+      <talk_answer link_index="n2978_hwaran-1-i" mid="100" select_type="0"><![CDATA[<html>Help Nephrite.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Commander Hwaran$<BR>Then there's the lynx, <FONT color=#a82424>Domineering Nephrite</FONT>. Though weaker than Kaunos in terms of raw strength, Nephrite is skilled at dominating others.<BR>By that I mean she actually takes over her opponents' minds and steals their souls. Knowing all this, who would you like to help?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-e" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-f" mid="101" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>You're asking the obvious. I should help whoever you want to help, Hwaran.<BR>You said no one can win this scramble for jewels outright.</FONT></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-f" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-k" mid="102" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Commander Hwaran$<BR>Hehehe... This is why I like you.<BR>Indeed, those two are strong enough already.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-g" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-h" mid="103" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>In Mistland, strength is all.<BR>Whoever I choose, the strongest one will win anyway.</FONT></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-h" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-k" mid="104" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Commander Hwaran$<BR>A practical choice befitting a mercenary who values strength above all.<BR>As you say, if we stand on the sidelines, Kaunos, the stronger of the two, will win anyway. So...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-i" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-j" mid="105" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>He who can control others stands above others.<BR>Even if Kaunos is strong now, wouldn't Nephrite win out eventually?</FONT></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-j" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-k" mid="106" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Commander Hwaran$<BR>Taking the side of the current leader is the safest play.<BR>But I tend to be a bit more forward-thinking, so...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-k" image="QN_Child_hiver.dds" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-l" mid="107" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Commander Hwaran${sound:npc_Hwaran_qu9927_sp_04.ogg}<BR>I want you to assist <FONT color=#a82424>Bewitching Hiver</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-l" image="QN_Vernicka.dds" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-m" mid="109" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(</FONT><FONT color=#a82424>Hiver</FONT><FONT color=#662500>... That's a name I'm sure I've heard before. Ah yes, </FONT><FONT color=#a82424>Vernicka</FONT><FONT color=#662500> mentioned her once.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-m" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-n" mid="110" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Commander Hwaran$<BR>Bring it here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-n" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="Npc_Right_HongRyun_red_maid.dds" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-o" mid="111" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Palace Attendant Hongseolmae$<BR>I am at your service.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-o" image="400737" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-p" mid="112" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What do we have here? A box... and a letter, huh?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-p" image="QW_116.dds" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-q" mid="113" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Commander Hwaran${sound:npc_Hwaran_qu9927_sp_05.ogg}<BR>If you bring this to the <FONT color=#086171>Red Waste</FONT> and open it, <FONT color=#a82424>Hiver</FONT> will appear when you call her.<BR>But do not open the box before then by any means.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-q" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-r" mid="114" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Be sure not to open it, huh... There must be something nasty inside.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-r" image="QN_Child_hiver.dds" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-s" mid="115" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Commander Hwaran${sound:npc_Hwaran_qu9927_sp_06.ogg}<BR>Give Hiver my letter and help her out for the time being.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-s" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-t" mid="116" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Is that all?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-t" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-u" mid="117" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Commander Hwaran${sound:npc_Hwaran_qu9927_sp_07.ogg}<BR>The sandstorms in the desert are... truly spectacular.<BR>I would like to enjoy that spectacle for quite some time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-u" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-2" mid="118" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Commander Hwaran$<BR>Then, off you go.<BR>Hehe… I'm counting on you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-2" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_question mid="29"><![CDATA[<html>$President Vernicka$<BR>………………………………………………….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-2" image="QN_Kanna.dds" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-2-" mid="121" select_type="5" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(It seems I'll have to be gone for a while, so I better go talk to Kanna first.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-a" mid="122" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Healer Kanna${action:Talk}{sound:npc_Kanna_qu9927_sp_01.ogg}<BR><FONT color=#7e12d2>(Looking pensive, her face brightens.)</FONT><BR><FONT color=#387206>{user_nick}</FONT>! …Why are you so late? I was worried!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-a" image="QN_hwaran.dds" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-b" mid="123" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Worried? Don't tell me... Because of Hwaran?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-b" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-c" mid="124" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Healer Kanna${sound:npc_Kanna_qu9927_sp_02.ogg}<BR>Whatever! When did you ever care if someone was waiting for you?<BR>So, it's really over now, right? You have to think about your own health first.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-c" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-d" mid="125" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well… Actually. Hehe, I'm going on a business trip for a while… To the Western Region.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-d" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-e" mid="126" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Healer Kanna${sound:npc_Kanna_qu9927_sp_03.ogg}<BR>What? The Western Region? What about the Cup of Healing? And the treasure? I thought we were finally done with Hwaran!<BR>Don't tell me you're getting mixed up in her affairs again? You were supposed to get paid and get out!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-e" image="400737" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-f" mid="127" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Ugh… I'm gonna get it some more if I tell her that Kyle and Hwaran are connected, right?)</FONT><FONT color=#662500><BR>I'm a mercenary! What, am I supposed to just turn down a job offer? I want to take a break more than anyone.<BR>Check it out, this is the box I am supposed to deliver.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-f" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-g" mid="128" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Healer Kanna${sound:npc_Kanna_qu9927_sp_04.ogg}<BR>Cut the crap! Am I honestly supposed to believe you are simply working as an errand boy, and it just happens to be for the same <FONT color=#a82424>power broker</FONT> every time?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-g" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-h" mid="129" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No, I'm serious! My mission is just to deliver this box!<BR>She says I can just deliver it and come right back!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-h" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-i" mid="130" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Healer Kanna${sound:npc_Kanna_qu9927_sp_05.ogg}<BR>………… Seriously... Ugh, what am I going to do with you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-i" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-j" mid="131" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(She's pissed!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-j" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-k" mid="132" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Healer Kanna$<BR>……………………………</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-k" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-l" mid="133" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hey... Kanna? Look, I…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-l" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-m" mid="134" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Healer Kanna${sound:npc_Kanna_qu9927_sp_06.ogg}<BR>You idiot! You better come back safe. Got it? Take care of yourself!<BR>Ugh, why is this place so dusty! Cough! Cough!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-m" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-2-n" mid="135" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(I'm pretty sure those are fake coughs… Well, this is my window to get out of here.)</FONT><FONT color=#662500><BR>Don't worry Kanna, I'll just do the job and be back before you know it.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-2-n" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-3" mid="136" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Healer Kanna${sound:npc_Kanna_qu9927_sp_07.ogg}<BR>I knew you would say that... Just make sure you do!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-3" image="QN_Vernicka.dds" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-3-" mid="137" select_type="5" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Wait a minute… No, I need to concentrate on my work. For now, I should go to </FONT><FONT color=#086171>Merca</FONT><FONT color=#662500>.<BR>I have to tell </FONT><FONT color=#a82424>Vernicka</FONT><FONT color=#662500> about Hwaran's plans.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-a" mid="139" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$President Vernicka${action:Talk}{sound:npc_Vernicka_qu9927_sp_01.ogg}<BR>You've been coming here a lot lately... Judging by your expression, it isn't serious this time at least.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-a" image="QN_hwaran.dds" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-b" mid="140" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yeah, at least not as serious as last time. But…<BR>There's something you should know. It seems the commander of Red Lotus Palace has taken an interest in the Western Region.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-b" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-c" mid="141" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$President Vernicka${sound:npc_Vernicka_qu9927_sp_02.ogg}<BR>That's Hwaran for you. Now is the perfect time to intervene when things are finally beginning to find a semblance of order.<BR>So, who is Hwaran playing now? Nephrite or Kaunos?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-c" image="QN_Child_hiver.dds" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-d" mid="142" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>… Hiver. Bewitching Hiver.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-d" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-e" mid="143" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$President Vernicka${sound:npc_Vernicka_qu9927_sp_03.ogg}<BR>…I, I had a feeling you'd mention that name.<BR><FONT color=#7e12d2>(His face looks conflicted.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-e" image="QN_Child_Grele.dds" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-f" mid="144" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Right? She's the one you told me about before.<BR>She drove the Child named Grele into the grasp of Mamon and escaped.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-f" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-g" mid="145" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$President Vernicka${sound:npc_Vernicka_qu9927_sp_04.ogg}<BR>Right, the very same <FONT color=#a82424>Hiver</FONT>. She's <FONT color=#a82424>Grele</FONT>'s older sister.<BR>I was right about her all along. I knew I should've dealt with her before she became a bigger problem.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-g" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-h" mid="146" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>$President Vernicka${sound:npc_Vernicka_qu9927_sp_05.ogg}<BR>Well, at least I know what Hwaran is planning.<BR>She intends to back the weakest player and use her as she pleases.<BR>Or… Maybe she wants the Western Territory to be a complete power vacuum.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-h" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-i" mid="147" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>She said she wants the sandstorm to rage for a long time. Does that mean she wants to enjoy the chaos there for a while?<BR>She also said there won't be a victor in the scramble for jewels.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-i" image="QN_Salica.dds" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-j" mid="148" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$President Vernicka${sound:npc_Vernicka_qu9927_sp_06.ogg}<BR>Well then, it seems our intentions just happen to align this time.<BR>As long as the West is in disarray... <FONT color=#a82424>Shalica</FONT> will be safe.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-j" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-k" mid="149" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$President Vernicka${sound:npc_Vernicka_qu9927_sp_07.ogg}<BR>The presence of a new commander in the Western Territory... It will mean that most of the Childs have been swept away.<BR><FONT color=#7e12d2>(He stops talking and has a conflicted expression on his face.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-k" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-l" mid="150" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(It seems there's been no word about Shalica.) </FONT><FONT color=#662500>Don't worry. No news is good news in a situation like this.<BR>And if I hear anything on my journey about </FONT><FONT color=#a82424>Shalica</FONT><FONT color=#662500>, I'll be sure to let you know.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-l" image="QW_Rhadames.dds" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-m" mid="151" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$President Vernicka$<BR>I'd appreciate that. But before you go, it seems <FONT color=#086171>Rhadames</FONT> is about to become a problem again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-m" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-n" mid="152" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh? What's this about Rhadames? That's the Southern Territory.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-n" image="QN_Child_hiver.dds" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-o" mid="153" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$President Vernicka$<BR>Come now, isn't it obvious?<BR>If <FONT color=#a82424>Hiver</FONT> becomes the strongest Child in the West, what do you think her plans will be? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-o" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-p" mid="154" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>To become a commander? What does that have to do with Rhadames?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-p" image="QN_pythia.dds" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-q" mid="155" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$President Vernicka$<BR>Then how else would she be able to attract the eyes of the Goddess?<BR>Consider the possibility that no other Child but <FONT color=#a82424>Hiver</FONT> could pull it off.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-q" image="QN_Hologram.dds" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-r" mid="156" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>… Is she after Rhadames, or perhaps the head of the Anti-Goddess Faction leader?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-r" image="QN_Hologram.dds" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-3-s" mid="157" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$President Vernicka${sound:npc_Vernicka_qu9927_sp_08.ogg}<BR>Look at you acting all dumb while knowing the whole time.<BR><FONT color=#a82424>Norfe</FONT> must know too. He's probably quite worried.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-3-s" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-4" mid="158" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But Norfe is safely hidden away.<BR></FONT><FONT color=#7e12d2>(Rhadames… Will it soon end up like the Blue Clan Territory?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1816_vernicka-4" image="" itemindex="" portrait_left="Npc_Left_vernicka.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1816_vernicka-4-" mid="159" select_type="5" />
+      <talk_question mid="67"><![CDATA[<html>$President Vernicka${sound:npc_Vernicka_qu9927_sp_09.ogg}<BR>Right, and he better not poke his head above ground.<BR>Well, let's leave it at that for now. Have a safe journey.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3027_refugee-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n3027_refugee-4-a" mid="160" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Wh-... What is this...? What has happened?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3027_refugee-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n3027_refugee-4-b" mid="161" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Uh, excuse me. Was there… a battle somewhere, or something?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3027_refugee-4-b" image="" itemindex="" portrait_left="Npc_Left_Old_Woman.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3027_refugee-4-c" mid="162" select_type="2" />
+      <talk_question mid="70"><![CDATA[<html>$Worried Refugee${action:Talk}<BR>You didn't hear? <FONT color=#086171>Aergal</FONT>… <FONT color=#086171>Aergal</FONT> has fallen.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3027_refugee-4-c" image="" itemindex="" portrait_left="Npc_Left_Old_Woman.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3027_refugee-4-!next" mid="163" select_type="4" />
+      <talk_question mid="71"><![CDATA[<html>$Quest Complete$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9927</exe>
+         <exe type="talk" npc="n2978_hwaran">1</exe>
+         <exe type="talk" npc="n2872_kanna">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="addquestitem" num="1">400737</exe>
+         <exe type="addquestitem" num="1">400738</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">99270,,,,,,,,,,</exe>
+         <exe type="complete" true="">9927</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2978_hwaran" sub="acceptted">0,1</exelink>
+   <exelink qstep="accepting" npc="n2872_kanna" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n2978_hwaran" sub="b" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="c" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="d" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="e" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="g" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="i" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="f" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="k" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="h" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="k" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="j" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="k" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="l" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="m" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="n" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="o" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="p" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="q" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="r" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="s" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="t" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="u" />
+   <exelink qstep="1" npc="n2978_hwaran" sub="2">0,1,2,3</exelink>
+   <exelink qstep="2" npc="n2872_kanna" sub="b" />
+   <exelink qstep="2" npc="n2872_kanna" sub="c" />
+   <exelink qstep="2" npc="n2872_kanna" sub="d" />
+   <exelink qstep="2" npc="n2872_kanna" sub="e" />
+   <exelink qstep="2" npc="n2872_kanna" sub="f" />
+   <exelink qstep="2" npc="n2872_kanna" sub="g" />
+   <exelink qstep="2" npc="n2872_kanna" sub="h" />
+   <exelink qstep="2" npc="n2872_kanna" sub="i" />
+   <exelink qstep="2" npc="n2872_kanna" sub="j" />
+   <exelink qstep="2" npc="n2872_kanna" sub="k" />
+   <exelink qstep="2" npc="n2872_kanna" sub="l" />
+   <exelink qstep="2" npc="n2872_kanna" sub="m" />
+   <exelink qstep="2" npc="n2872_kanna" sub="n" />
+   <exelink qstep="2" npc="n2872_kanna" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n1816_vernicka" sub="b" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="c" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="d" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="e" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="f" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="g" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="h" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="i" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="j" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="k" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="l" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="m" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="n" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="o" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="p" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="q" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="r" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="s" />
+   <exelink qstep="3" npc="n1816_vernicka" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n3027_refugee" sub="b" />
+   <exelink qstep="4" npc="n3027_refugee" sub="c">0</exelink>
+   <exelink qstep="4" npc="n3027_refugee" sub="!next">1</exelink>
+   <journal_data recompense="99270" quest_title="또 다른 대국" chapterid="105" quest_level="95" quest_mark_type="1" use_item_list="400737,400738">
+      <journal index="1">
+         <contents_image>QN_hwaran.dds</contents_image>
+         <destination_pos>193,n2978</destination_pos>
+         <destination_mode>custom:193@1</destination_mode>
+         <statemark_npcid>2978</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="72"><![CDATA[Calm Before the Storm]]></title>
+         <contents mid="73"><![CDATA[<html>The time to travel to the Western Territory has finally come. From within <FONT color=#086171>Taeryeong Shrine</FONT>, Commander Hwaran flashes a smile filled with hidden meaning.<BR><BR>
+<FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT> - <FONT color=#a82424>Commander Hwaran</FONT></html>]]></contents>
+         <destination mid="74"><![CDATA[Speak with Hwaran in Red Lotus Palace Taeryeong Shrine]]></destination>
+         <todo_msg mid="75"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Kanna.dds</contents_image>
+         <destination_pos>187,n2872</destination_pos>
+         <destination_mode>custom:187@1</destination_mode>
+         <statemark_npcid>2872</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="76"><![CDATA[Dust and Excuses]]></title>
+         <contents mid="77"><![CDATA[<html>You were given a letter and a box sealed so tightly as to be suspicious. Hwaran has instructed you to take this to the <FONT color=#2b2723>Red Waste</FONT> and summon Hiver... But first you better go back to <FONT color=#a82424>Kanna</FONT> on <FONT color=#086171>Red Lotus Palace Main Street</FONT> and tell her that you have to go to the Western Territory.<BR>
+ <BR>
+<FONT color=#086171>Red Lotus Palace Main Street</FONT>-<FONT color=#a82424>Healer Kanna</FONT></html>]]></contents>
+         <destination mid="78"><![CDATA[Talk to Kanna at Red Lotus Palace Main Street]]></destination>
+         <todo_msg mid="79"><![CDATA[Talk to Kanna at Red Lotus Palace Main Street.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Vernicka.dds</contents_image>
+         <destination_pos>54,n1816</destination_pos>
+         <destination_mode>custom:54@1</destination_mode>
+         <statemark_npcid>1816</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="80"><![CDATA[A Message and a Package]]></title>
+         <contents mid="81"><![CDATA[<html>Though you just left the place, it seems you'll have to head back. Before heading to the Red Waste, return to <FONT color=#086171>Merca</FONT>. You have to inform a certain someone that <FONT color=#a82424>Hwaran</FONT> plans on intervening in the Western Territory.<BR><FONT color=#7e12d2>※ Speak with Ticket Agent Itahyang and climb aboard [SS Flying Sea Turtle]. It will take you on a convenient trip to Merca's Heart.</FONT><BR>
+<BR><FONT color=#086171>Red Lotus Palace Main Street (Merca's Port)</FONT> - <FONT color=#a82424>Merca's Heart (President Vernicka)</FONT></html>]]></contents>
+         <destination mid="82"><![CDATA[Talk to Vernicka at Merca's Heart]]></destination>
+         <todo_msg mid="83"><![CDATA[Talk to President Vernicka at Merca's Heart.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_Rhadames.dds</contents_image>
+         <destination_pos>175,n3027</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3027</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Into the Storm]]></title>
+         <contents mid="85"><![CDATA[<html>You informed Vernicka about Hwaran's plan to intervene. It seems he is as worried about Shalica as ever. Now, to continue your mission, the fastest way to meet Hiver in the Red Waste is through <FONT color=#086171>Rhadames</FONT>.<BR>
+ <BR>
+<FONT color=#086171>Rhadames </FONT>- <FONT color=#a82424>???</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Talk to ??? in Rhadames]]></destination>
+         <todo_msg mid="87"><![CDATA[Go to Rhadames.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class>10</user_class>
+      <prev_quest />
+      <have_quest>9916</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

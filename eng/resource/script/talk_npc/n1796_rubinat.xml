@@ -1,0 +1,38 @@
+   <talk>
+      <npcename>n1796_rubinat</npcename>
+      <npcid>1796</npcid>
+      <startexe>6</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Red Dragon Rubinart]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest_1" mid="31"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="15"><![CDATA[<html>$Red Dragon Rubinart$<BR>Ah, this place is too bright...<BR>How did Iona stay here?<BR><FONT color=#7e12d2>(Rubinart grumbles)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest_1" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="32" link_target="sqc16_4659_he_has_no_friend_1.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>He Has No Friends 1</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="33" link_target="sqc16_4660_he_has_no_friend_2.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>He Has No Friends 2</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="34" link_target="sqc16_4661_clumsy_reconciliation.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Clumsy Reconciliation</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="42"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="19"><![CDATA[<html>$Red Dragon Rubinart$<BR>You have something to tell me, don't you?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mqc16_9569_penitent_man</exe>
+         <exe type="enterquest">mqc16_9570_penitent_man</exe>
+         <exe type="enterquest">sqc16_4659_he_has_no_friend_1</exe>
+         <exe type="enterquest">sqc16_4660_he_has_no_friend_2</exe>
+         <exe type="enterquest">sqc16_4661_clumsy_reconciliation</exe>
+         <exe type="conexe" true="1" false="7">0</exe>
+         <exe type="conexe" true="2" false="8">1</exe>
+         <exe type="conexe" true="3" false="9">2</exe>
+         <exe type="conexe" true="4" false="10">3</exe>
+         <exe type="conexe" true="5" false="0">4</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9569</chk>
+         <chk type="hasquest">9570</chk>
+         <chk type="hasquest">4659</chk>
+         <chk type="hasquest">4660</chk>
+         <chk type="hasquest">4661</chk>
+      </conditions>
+   </talk>

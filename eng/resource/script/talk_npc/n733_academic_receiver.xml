@@ -1,0 +1,22 @@
+   <talk>
+      <npcename>n733_academic_receiver</npcename>
+      <npcid>733</npcid>
+      <startexe>5</startexe>
+      <comment>듀얼 캐릭터 때문에 메인퀘 완료 여부를 체크함</comment>
+      <npckname mid="1"><![CDATA[Academic Receiver]]></npckname>
+      <talk_paragraph index="001" image="QN_Npc_Academic_station.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Academic Receiver$<BR><FONT color=#7e12d2>(Got communication receiver. Let's move to Mana Ridge to enter Academic Station)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,91, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 91,1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 91, 1);</exe>
+         <exe type="conexe" true="0,1,2,3" false="0">0</exe>
+         <exe type="conexe" true="0" false="4">1</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">5</chk>
+         <chk type="hascomq">91</chk>
+      </conditions>
+   </talk>

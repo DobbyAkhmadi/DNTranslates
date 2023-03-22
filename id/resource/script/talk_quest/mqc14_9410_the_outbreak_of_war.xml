@@ -1,0 +1,612 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc14_9410_the_outbreak_of_war</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>14</qchapter>
+      <qid>9410</qid>
+      <designer>최지은</designer>
+      <qlevel>70</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9411</nextqid>
+      <nextqname>mqc14_9411_entrance_of_monolith</nextqname>
+      <nextqnpc>n1047_argenta</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[The War Begins]]></qkname>
+      <qnpc>
+         <npcid>1047</npcid>
+         <npcename>n1047_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1065</npcid>
+         <npcename>n1065_geraint_kid</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1067</npcid>
+         <npcename>n1067_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1505</npcid>
+         <npcename>n1505_elf_king</npcename>
+         <npckname>엘프 왕 페르데레스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1506</npcid>
+         <npcename>n1506_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1507</npcid>
+         <npcename>n1507_gereint_kid</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1551</npcid>
+         <npcename>n1551_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>249</npcid>
+         <npcename>n249_saint_guard</npcename>
+         <npckname>왕성 근위병 로이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>38</npcid>
+         <npcename>n038_royal_magician_kalaen</npcename>
+         <npckname>궁정 소서리스 칼라엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>41</npcid>
+         <npcename>n041_duke_stwart</npcename>
+         <npckname>공작 스튜어트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>822</npcid>
+         <npcename>n822_teramai</npcename>
+         <npckname>테렌스 테라마이</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Royal Guard Roy$<BR><FONT color=#387206>{user_nick}</FONT>, ada pesan dari Royal Palace. Kamu dipanggil ke istana sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-b" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Royal Palace?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-c" mid="10" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Royal Guard Roy$<BR>Ya, aku tidak tahu detailnya tapi aku dengar sesuatu tentang pesan Anu Arendel.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-acceptted" mid="12" select_type="3" />
+      <talk_question mid="11"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Anu Arendel...! <BR>(Apa itu artinya...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-1-" mid="62" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Royal Guard Roy$<BR>Yang Mulia menunggumu.<BR>Pergilah kesana.<FONT color=#7e12d2>(Roy menunduk dan pergi. Pergilah ke Royal Palace)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-" mid="63" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Elf Elder$<BR>Beritanya pasti sudah sampai sekarang.<BR><FONT color=#7e12d2>(Temui King Cassius)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-a" mid="64" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Duke Stuart$<BR>Sudah lama sejak terakhir kamu datang. Kenapa kamu baru ada disini sekarang?<BR>Semua, tidakkah menurut kalian kita terlalu mempercayai adventurer ini?<BR>Orang ini mungkin tidak tahu apa yang telah terjadi.<BR><FONT color=#7e12d2>(Stuart tidak terlihat senang)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-a" image="" itemindex="" portrait_left="NPC_Left_Teramai.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-b" mid="65" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Terrence Terramai$<BR>Senang bertemu denganmu, <FONT color=#387206>{user_nick}</FONT>. Kami baru saja menerima pesan dari Elf Elder.<BR>Ada penyusup di depan pintu masuk Monolith.<BR>Pergerakan Dragon Follower juga harus diawasi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-c" mid="66" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Aku juga menerima laporan bahwa penyusup Monolith menggunakan topeng Dragon Follower.<BR>
+Jadi ini semua karena Dragon Follower. <BR>
+Gunakan kesempatan ini untuk membakar mereka! Selamatkan dunia dan bunuh Dragon Follower!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-d" mid="67" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Sayangnya kami tidak bisa masuk ke Monolith, tapi tidak ada pilihan.<BR>Kita tidak tahu apa yang bisa terjadi jika pergi kesana, dan para Elf melindungi tempat itu sejak awal dunia ini...<BR>Kita harus mempercayai mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-e" mid="68" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Duke Stuart$<BR><FONT color=#7e12d2>(Stuart masih terlihat tidak senang)</FONT><BR>Aku katakan sekali lagi, tidak akan ada bantuan dariku.<BR>Aku hanya akan menggunakan pasukanku untuk melindungi Saint's Haven.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-e" image="" itemindex="" portrait_left="NPC_Left_Duglars.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-f" mid="70" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$General Douglas$<BR>Aku juga tidak bisa mengirimkan bantuan karena para tentaraku sibuk melawan para monster.<BR>
+Mungkin  Templar Knight Terramai dan Royal Sorceresses Kayleen yang akan pergi  ke Anu Arendel, <BR>
+tapi aku akan tetap menyiapkan pasukan untuk keadaan darurat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-f" image="" itemindex="" portrait_left="NPC_Left_Teramai.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-g" mid="71" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Terrence Terramai$<BR>Itu cukup. Anu Arendel tidak besar jadi tidak membutuhkan banyak tentara.<BR>
+Selain melawan Dragon Follower, kita harus selalu ingat untuk melindungi Anu Arendel.<BR>
+Lalu <FONT color=#387206>{user_nick}</FONT>... karena kamu yang diberitahu Royal Palace tentang masalah ini, King sudah memerintahkan perintah kerajaan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-g" image="" itemindex="" portrait_left="NPC_Left_Teramai.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-h" mid="72" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-i" mid="73" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$King Cassius$<BR>E-ehem! Urrhem! Eeeehhkkkehm!<BR><FONT color=#7e12d2>(Cassius berdehem-dehem.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-j" mid="74" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$King Cassius$<BR>K-kita d-d-d-dalam situasi berbahaya...<BR><FONT color=#7e12d2>(Cassius membaca kata dalam scroll yang ada di tangannya dengan tangan gemetar. Stuart menatap King muda dengan cemas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-k" mid="75" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$King Cassius$<BR>M-monolith dalam b-b-bahaya artinya d-d-dunia ini dalam bahaya. Mengingat pentingnya masalah ini, aku meminta bantuan Elf Elder dan para Elf. <FONT color=#387206>{user_nick}</FONT>, bantuanmu sangat di -h-hargai.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-l" mid="122" select_type="0"><![CDATA[<html>(Dia membuatku tersedak)</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-1-l" mid="123" select_type="0"><![CDATA[<html>(Kamu bisa melakukannya, Cassius...) </html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-1-l" mid="124" select_type="0"><![CDATA[<html>(Apa yang dia katakan?)</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$King Cassius$<BR>S-saat ini! Adalah w-waktu yang s-s-sangat berharga. Kita akan be-be-bergabung dengan para Elf. Dan...kita...kita... kita akan membangkitkan kembali  k-ke-kejayaan para h-hero masa lalu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-m" mid="77" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$King Cassius$<BR>Kita sia m-m-melawan tantangan..!<BR><FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723>,</FONT> s-sampaikan pesan ini ke Elf Elder.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-n" mid="78" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$King Cassius$<BR><FONT color=#662500>(Cassius menyerahkan scroll dengan muka pucat seperti akan mati. Cepat ambil)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-n" image="" itemindex="" portrait_left="NPC_Left_Stwart.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-o" mid="79" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Duke Stuart$<BR>Yang Mulia tidak membawa semua isi scroll.<BR>
+Jumlah tentara dan rencana selanjutnya  juga ada didalam scroll itu jadi sampaikan dengan aman.<BR>
+Kamu yang bertanggungjawab jika terjadi sesuatu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-o" image="" itemindex="" portrait_left="NPC_Left_Stwart.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-p" mid="80" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oke.<BR>(Sepertinya scrool basah karena tangan yang berkeringat...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-" mid="81" select_type="5" />
+      <talk_question mid="31"><![CDATA[<html>$Terrence Terramai$<BR>Kami akan mengirimkan tentara kami secepatnya jadi jangan khawatir.<BR>
+<FONT color=#7e12d2>(Terramai menepuk bahu untuk menenangkanmu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-1-" mid="82" select_type="5" />
+      <talk_question mid="32"><![CDATA[<html>$Terrence Terramai$<BR>...Kami tidak akan melepas tanggungjawab seperti yang lalu. <BR>
+Ada batasan untuk orang yang tidak menyetujui apapun yang terjadi jadi jangan terlalu mencemaskan hal itu.<BR><FONT color=#7e12d2>(Terramai bicara sambil menatap Stuart)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-1-" mid="83" select_type="5" />
+      <talk_question mid="33"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Jadi, para cleric akan bekerja lebih keras dari menyilangkan jarinya. Aku hargai usaha <FONT color=#a82424>Terrence Terramai...</FONT>. Tidak sama sekali mencerminkan  kesombongan Ignacio.<BR><FONT color=#7e12d2>(Kayleen menatap Terramai)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-1-" mid="84" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$Duke Stuart$<BR>Aku yakin aku tidak perlu meningatkanmu apa yang akan terjadi kalau kamu mengkhianati kami...<BR><FONT color=#7e12d2>(Kantung mata Duke menghitam.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="85" select_type="5" />
+      <talk_question mid="35"><![CDATA[<html>$General Douglas$<BR>Keberanianmu menginspirasi kami semua.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-" mid="185" select_type="5" />
+      <talk_question mid="184"><![CDATA[<html>$Argenta$<BR>Lakukan tugasmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1065_geraint_kid-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1065_geraint_kid-1-" mid="187" select_type="5" />
+      <talk_question mid="186"><![CDATA[<html><FONT color=#2b2723>$Gerraint$</FONT><BR><FONT color=#7e12d2>(Dia tidak terlihat senang)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-" mid="223" select_type="5" />
+      <talk_question mid="36"><![CDATA[<html>$King Cassius$<BR>H-hatilah, temanku...<BR><FONT color=#7e12d2>(Cassius berbisik. Pergilah ke Elf Elder.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-a" mid="86" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Elf Elder$<BR>Selamat datang. Kamu sudah menyampaikan pesanku ke Royal Palace?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-b" mid="87" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well, tentu. Ini balasannya.<BR>(Menyerahhkan scroll Cassius)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-c" mid="88" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Elf Elder${action:Talk}<BR>Hmm.<FONT color=#7e12d2>(Elf Elder membuka scroll dan membacanya)</FONT> <BR>... Sepertinya Terrence berbuat yang tepat.<BR>Menurut ini, kita akan bekerjasama, benarkah itu, <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-d" mid="89" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hmm? Ada yang bisa aku lakukan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-e" mid="90" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Elf Elder$<BR><FONT color=#7e12d2>(Elf Elder mengerutkan dahi.)</FONT><BR>King baru kami ingin bicara denganmu. Teman naga kami juga menunggu. Kamu mau ikut aku ke <FONT color=#a82424>Tree of Life?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-f" mid="91" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>King yang baru...!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-3" mid="92" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Elf Elder$<BR><FONT color=#7e12d2>(Elf Elder tersenyum ketus)</FONT><BR>Ya. <FONT color=#387206>{user_nick}</FONT>, kamu juga mengenalnya.<BR>Kamu akan mengenalinya saat kamu masuk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-3-" mid="93" select_type="5" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay. (Masuk ke Tree of Life)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-a" mid="125" select_type="2" />
+      <talk_question mid="94"><![CDATA[<html>$Elf King Federeth${action:See}<BR>Selamat datang. Kita bertemu untuk pertama kalinya sejak aku berubah.<BR><FONT color=#7e12d2>(Elf King menggerakan tubuhnya karena merasa tidak nyaman)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-b" mid="126" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yuvenciel...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-c" mid="127" select_type="0"><![CDATA[<html>Oh iya...</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-c" mid="128" select_type="0"><![CDATA[<html>Senang bertemu denganmu lagi.</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-c" mid="129" select_type="0"><![CDATA[<html>(Dia banyak berubah...)</html>]]></talk_answer>
+      <talk_question mid="96"><![CDATA[<html>$Elf King Federeth${sound:npc_ElfKing_9410_qu_01.ogg}<BR>Panggil saja aku Feder. Seperti Queen sebelumnya, aku mendapatkan nama baru saat aku menerima tahta.<BR><FONT color=#7e12d2>(Feder tersenyum)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-c" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-d" mid="130" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>$Argenta$<BR>Berhenti bermain dan selesaikan tujuan utama.<BR>Aku tidak punya banyak waktu untuk melihat kalian berdua mengobrol disini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-e" mid="131" select_type="2" />
+      <talk_question mid="98"><![CDATA[<html>$Elf King Federeth${action:Smile}<BR>... Semua hal baik ada waktunya, Silver Dragon. Lebih baik sedikit bersabar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-e" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-f" mid="132" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>$Argenta${action:Hwww}<BR>Kamu yang membuatku kehilangan kesabaran!!<BR>Tapi...<FONT color=#7e12d2>(Argenta menoleh)</FONT> sepertinya yang kamu katakan benar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-g" mid="133" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>$Elf King Federeth$<BR>Aku tidak berani bohong ke Silver Dragon! Aku sudah periksa bahwa kekuatan Chaos Dragon sudah menyebar ke seluruh Anu Arendel. Dan salah satunya bersinar dari <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-g" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-h" mid="134" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>$Argenta$<BR><FONT color=#387206>{user_nick}</FONT>, kamu membunuh Chaos Dragon? Tapi sepertinya kamu tidak menyerap jewel itu. Apa yang terjadi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-h" image="QN_Npc_White_dragon.dds" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-i" mid="135" select_type="2" />
+      <talk_question mid="102"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku tidak membunuhnya... well, Iona...<BR>(Ceritakan apa yang terjadi)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-i" image="QN_Npc_White_dragon.dds" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-j" mid="136" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$Argenta${sound:npc_Argenta_9410_qu_01.ogg}<BR>White Dragon Iona?! Kamu membicarakan bola energi itu... Sudah lama sekali terakhir aku melihatnya, bagaimana masih bisa ada? Dan kamu mendapatkan kekuatan darinya lalu menghilang? Kebohonganmu sangat mudah ditebak. Kalian pasti sangat akur.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-k" mid="137" select_type="2" />
+      <talk_question mid="104"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9410_qu_01.ogg}<BR>Kamu mengampuni Chaos Dragon?<BR>Aku belum pernah mendengar itu.<BR><FONT color=#7e12d2>(Gerraint menjadi marah)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-k" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-l" mid="138" select_type="0"><![CDATA[<html>menjalankan tugas?! </html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-l" mid="139" select_type="0"><![CDATA[<html>(Yuvenciel! Kamu menjadikan aku pelayan?!)</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-l" mid="140" select_type="0"><![CDATA[<html>(Jantungmu berdebar) Suatu kehormatan.</html>]]></talk_answer>
+      <talk_question mid="105"><![CDATA[<html>$Argenta$<BR>Ceritanya panjang. Apapun masalahnya, kalau kamu mempunyai  kekuatan Chaos Dragon kamu pasti bisa melewatinya walaupun sampai Monolith. Yuvenciel, sepertinya kami mempunyai pelayan yang seperti kamu katakan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-l" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-m" mid="141" select_type="0"><![CDATA[<html>(YAY~) Okay!</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-m" mid="142" select_type="0"><![CDATA[<html>Aku akan lakukan sebaiknya.</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-m" mid="143" select_type="0"><![CDATA[<html>Aku tidak akan membebanimu.</html>]]></talk_answer>
+      <talk_question mid="106"><![CDATA[<html>$Argenta$<BR>Hmph.<FONT color=#7e12d2>(Tidak mendengarkan)</FONT><BR>Jadi kami bertiga - Gerraint, aku, dan pelayan itu - bisa pergi ke dekat pintu masuk Monolith sekarang.<BR>
+Tapi kalau kamu berbuat bodoh, aku pastikan kamu akan dikejar jadi ingat itu baik-baik!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-m" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-n" mid="144" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Argenta$<BR>...Pahami kedudukanmu.<BR>Jangan lakukan selain yang aku perintahkan.<BR>Bahkan perintah dari King atau Elf Elder sekalipun.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-n" image="" itemindex="" portrait_left="NPC_Left_Argenta.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-o" mid="145" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>$Argenta${action:Talk_Angry}<BR>
+Sebenarnya aku juga tidak suka kalian.<BR>Kalau kalian membiarkan Dragon Follower mendekati Monolith seperti apa yang terjadi selama Conclave, aku yang akan memukulimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-p" mid="146" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>$Elf King Federeth$<BR>Tentu saja, ratuku. Kami tidak akan membiarkan seperti apa yang terjadi di Conclave.<BR>Kami akan melakukan sebaik mungkin untuk m engentikan mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-p" image="" itemindex="" portrait_left="NPC_Left_Elder_elf.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-q" mid="147" select_type="2" />
+      <talk_question mid="110"><![CDATA[<html>$Elf Elder$<BR><FONT color=#7e12d2>(Dia menatap King dengan tajam)</FONT><BR>..Tidak ada pengkhianat diantara kita. Para manusia juga berjanji akan bergabung dengan pasukan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-r" mid="148" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>$Argenta$<BR>Apa?<FONT color=#7e12d2>(Argenta terkejut.)</FONT><BR>Para manusia? Akhirnya mereka sadar bahwa bukan tanah mereka yang diserang kan??<BR>Dragon Follower dan Black Dragon pasti sudah memberika mereka pelajaran.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-r" image="" itemindex="" portrait_left="NPC_Left_Elder_elf.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-s" mid="149" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>$Elf Elder${sound:npc_ElfElder_9427_qu_08.ogg}<BR><FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723> disini sudah berusaha keras untuk </FONT>membujuk mereka bertindak.<BR>Seperti itulah semuanya berjalan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-s" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-t" mid="211" select_type="0"><![CDATA[<html>Kukira akan lebih baik jika kita bergabung dengan pasukan.</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-t" mid="212" select_type="0"><![CDATA[<html>Aku ingin belajar dari Gerraint.</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-t" mid="213" select_type="0"><![CDATA[<html>Aku bukan anak kecil yang menganggap ini mainan.</html>]]></talk_answer>
+      <talk_question mid="113"><![CDATA[<html>$Argenta$<BR>Apa? Kamu?<FONT color=#7e12d2>(Argenta terkejut)</FONT><BR>Hah! Kamu mau meniru Gerraint?<BR>Atau kamu mau bermain sebagai "hero", huh?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-u" mid="151" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>$Argenta$<BR>Hahaha! Kamu membuatnya terdengar mewah.<BR>Mengejutkan manusia mempercayaimu! Haha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-u" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-v" mid="152" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Itu pujian atau bukan...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-v" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-w" mid="153" select_type="0"><![CDATA[<html>Hei ,kenapa kamu berkata begitu!</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-w" mid="154" select_type="0"><![CDATA[<html>Kamu benar-benar lupa semuanya.</html>]]></talk_answer>
+      <talk_answer link_index="n1505_elf_king-3-w" mid="155" select_type="0"><![CDATA[<html>Semua hal selalu ada hikmahnya.</html>]]></talk_answer>
+      <talk_question mid="116"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9410_qu_02.ogg}<BR>Ngomongin tentang masa laluku lagi? Gerraint yang dulu penakut, kan? Kenapa kamu mau meniru itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-w" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-x" mid="156" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>$Gerraint$<BR>Hmph! Apa aku harus memberimu selamat telah mengumpulkan geromblan penakut untuk melawan naga? Kalau kita beruntung, mereka semua akan mati sebelum mengganggu jalanku!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-x" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-y" mid="157" select_type="2" />
+      <talk_question mid="118"><![CDATA[<html>$Argenta$<BR>Mereka akan mengampuni kita dari membuang waktu untuk Dragon Follower bodoh itu dan kita bisa fokus pada <FONT color=#a82424>Monolith.</FONT> Tapi obrolan ini membosankan. Aku pergi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-y" image="" itemindex="" portrait_left="NPC_Left_King_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-3-z" mid="158" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>$Elf King Federeth$<BR>Hati-hatilah, Silver Dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-3-z" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-4" mid="159" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>$Elf Elder$<BR>Aku juga akan  pergi.<BR>Istirahatlah, Rajaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1506_argenta-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1506_argenta-3-" mid="176" select_type="5" />
+      <talk_question mid="175"><![CDATA[<html>$Argenta$<BR>Kamu lihatin apa? Kerjakan tugasmu.<BR><FONT color=#7e12d2>(Bicara dengan Elf King Federeth)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1507_gereint_kid-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1507_gereint_kid-3-" mid="178" select_type="5" />
+      <talk_question mid="177"><![CDATA[<html>$Gerraint${action:Talk}<BR>Mereka berdua baik-baik saja?<BR>Bukan urusanku.<BR><FONT color=#7e12d2>(Bicara dengan Elf King Federeth)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1551_elder_elf-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1551_elder_elf-3-" mid="180" select_type="5" />
+      <talk_question mid="179"><![CDATA[<html>$Elf Elder$<BR>Aku tidak menyangka Yuvenciel menjadi raja tapi...<BR>Aku hanya melakukan tugasku. Jika dia cukup bijak untuk menjadi Raja.<BR><FONT color=#7e12d2>(Bicara dengan Elf King Federeth)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-4" image="" itemindex="" portrait_left="NPC_Left_King_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1505_elf_king-4-" mid="161" select_type="5" />
+      <talk_question mid="160"><![CDATA[<html>$Elf King Federeth${action:See}<BR>...Jangan melihatku seperti itu. Kita sekutu sekarang, ingat?<BR><FONT color=#7e12d2>(Federeth membungkuk. Pergi keluar dan bicara pada Argenta.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-4-a" mid="163" select_type="2" />
+      <talk_question mid="162"><![CDATA[<html>$Argenta$<BR>Aku akan memberitahumu apa yang dilakukan sekarang. Perhatikan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-4-b" mid="165" select_type="2" />
+      <talk_question mid="164"><![CDATA[<html>$Argenta$<BR>Kalau kamu tidak bisa mengikuti, aku akan meninggalkanmu. Aku tidak peduli jika kamu meyakinkan ribuan kerajaan untuk bertempur denganmu. Pasukan manusia tidak berarti dalam <FONT color=#a82424>Monolith,</FONT> dan yang bisa kamu andalkan hanyalah dirimu sendiri.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-4-c" mid="167" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku siap.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-c" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1047_argenta-4-d" mid="169" select_type="2" />
+      <talk_question mid="168"><![CDATA[<html>$Gerraint$<BR>...Apa yang telah aku lakukan dimasa lalu?<BR><FONT color=#7e12d2>(Dia terlihat kesal)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-d" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1047_argenta-4-e" mid="171" select_type="4" />
+      <talk_question mid="170"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-4-!next" mid="215" select_type="2" />
+      <talk_question mid="172"><![CDATA[<html>$Argenta$<BR><FONT color=#7e12d2>(Argenta mengacuhkan Gerraint)</FONT><BR>Hmph, <FONT color=#387206>{user_nick}</FONT>... Kamu menjawabnya lebih yakin sekarang. Itu lebih baik.<BR>Bagus. Banyak hal yang harus dijelaskan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1065_geraint_kid-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1065_geraint_kid-4-" mid="188" select_type="5" />
+      <talk_question mid="182"><![CDATA[<html>$Gerraint$<BR><FONT color=#7e12d2>(Dia terlihat kesal)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1506_argenta-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1506_argenta-4-" mid="218" select_type="5" />
+      <talk_question mid="217"><![CDATA[<html>$Argenta$<BR>Beneran.... Semua itu karena menjadi raja...<BR><FONT color=#7e12d2>(Argenta ngedumel sendirian karena kesal. Pergi keluar dan bicara pada her)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1551_elder_elf-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1551_elder_elf-4-" mid="222" select_type="5" />
+      <talk_question mid="221"><![CDATA[<html>$Elf Elder$<BR>Aku akan pergi juga.<BR>
+<FONT color=#7e12d2>(Pergi keluar dan bicara pada Argenta)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9410</exe>
+         <exe type="talk" npc="n249_saint_guard">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="hascomq">9459</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 9459, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="" false="2">0</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">94100,,,,,,,,,</exe>
+         <exe type="complete" true="">9410</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n249_saint_guard" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n040_king_casius" sub="b" />
+   <exelink qstep="1" npc="n040_king_casius" sub="c" />
+   <exelink qstep="1" npc="n040_king_casius" sub="d" />
+   <exelink qstep="1" npc="n040_king_casius" sub="e" />
+   <exelink qstep="1" npc="n040_king_casius" sub="f" />
+   <exelink qstep="1" npc="n040_king_casius" sub="g" />
+   <exelink qstep="1" npc="n040_king_casius" sub="h" />
+   <exelink qstep="1" npc="n040_king_casius" sub="i" />
+   <exelink qstep="1" npc="n040_king_casius" sub="j" />
+   <exelink qstep="1" npc="n040_king_casius" sub="k" />
+   <exelink qstep="1" npc="n040_king_casius" sub="l" />
+   <exelink qstep="1" npc="n040_king_casius" sub="l" />
+   <exelink qstep="1" npc="n040_king_casius" sub="l" />
+   <exelink qstep="1" npc="n040_king_casius" sub="m" />
+   <exelink qstep="1" npc="n040_king_casius" sub="n" />
+   <exelink qstep="1" npc="n040_king_casius" sub="o" />
+   <exelink qstep="1" npc="n040_king_casius" sub="p">0,1</exelink>
+   <exelink qstep="1" npc="n040_king_casius" sub="" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="b" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="c" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="d" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="e" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="f" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="3">0,1,3</exelink>
+   <exelink qstep="3" npc="n1505_elf_king" sub="b" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="c" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="c" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="c" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="d" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="e" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="f" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="g" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="h" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="i" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="j" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="k" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="l" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="l" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="l" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="m" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="m" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="m" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="n" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="o" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="p" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="q" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="r" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="s" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="t" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="t" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="t" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="u" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="v" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="w" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="w" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="w" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="x" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="y" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="z" />
+   <exelink qstep="3" npc="n1505_elf_king" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n1047_argenta" sub="b" />
+   <exelink qstep="4" npc="n1047_argenta" sub="c" />
+   <exelink qstep="4" npc="n1047_argenta" sub="d">0</exelink>
+   <exelink qstep="4" npc="n1047_argenta" sub="e">1</exelink>
+   <exelink qstep="4" npc="n1047_argenta" sub="!next" />
+   <journal_data recompense="94100" quest_title="개전" chapterid="14" quest_level="70" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>11,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="45"><![CDATA[The War Begins 1]]></title>
+         <contents mid="46"><![CDATA[<html>Royal Guard Roy memberi pesan dari King Cassius.<BR>Pergilah ke Saint's Haven Royal Palace untuk menemui Cassius.<BR><BR><FONT color=#086171>Saint's Haven Royal Palace</FONT> <FONT color=#a82424>- King Cassius</FONT></html>]]></contents>
+         <destination mid="47"><![CDATA[Bicara dengan King Cassius]]></destination>
+         <todo_msg mid="48"><![CDATA[Quest ditambahkan]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Elder_elf.dds</contents_image>
+         <destination_pos>34,n1067</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1067</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="49"><![CDATA[The War Begins 2]]></title>
+         <contents mid="50"><![CDATA[<html>Kamu sudah menerima scroll dari King Cassius.<BR>Berikan ke Elf Elder di Anu Arendel.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life Entrance)</FONT> <FONT color=#a82424>- Elf Elder</FONT></html>]]></contents>
+         <destination mid="51"><![CDATA[Bicara dengan Elf Elder]]></destination>
+         <todo_msg mid="52"><![CDATA[Berikan scroll ke Elf Elder di Anu Arendel.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>34,n1505</destination_pos>
+         <destination_mode>custom:34@2</destination_mode>
+         <statemark_npcid>1505</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="53"><![CDATA[The War Begins 3]]></title>
+         <contents mid="54"><![CDATA[<html>Pergi kedalam Tree of Life dan temui Yuvenciel yang sudah menjadi Elf King.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life Entrance)</FONT> <FONT color=#a82424>- Inside the Tree of Life (Elf King Federeth)</FONT></html>]]></contents>
+         <destination mid="55"><![CDATA[Bicara dengan Elf King Federeth]]></destination>
+         <todo_msg mid="56"><![CDATA[Pergi kedalam Tree of Life dan temui Elf King Federeth.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>34,n1047</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1047</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="57"><![CDATA[The War Begins 4]]></title>
+         <contents mid="58"><![CDATA[<html>Kamu bertemu dengan Elf King Federeth. Karena dia kamu akan terus mengikuti Argenta mulai dari sekarang.<BR>Bicara dengan Argenta langkah selanjutnya.<BR><BR><FONT color=#086171>Anu Arendel </FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="59"><![CDATA[Bicara dengan Argenta]]></destination>
+         <todo_msg mid="60"><![CDATA[Pergi keluar Tree of Life dan bicara pada Argenta.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>70:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>9737</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

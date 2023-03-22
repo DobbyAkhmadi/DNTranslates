@@ -1,0 +1,95 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq07_9109_decud_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>9109</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] A bet]]></qkname>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-a" mid="6" select_type="0"><![CDATA[<html>Tantangan apa yang ada dalam ketidakpastian?</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-b" mid="7" select_type="0"><![CDATA[<html>Aku tidak mengerti ucapanmu.</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-c" mid="8" select_type="0"><![CDATA[<html>Jadi, apakah kamu mendapatkan penghasilan dari berjudi?</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-d" mid="9" select_type="0"><![CDATA[<html>Sebuah penghargaan tidak selalu berupa benda.</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Berjudi? Apa kamu kira bahwa aku kecanduan berjudi? Ada alasan penting tentang mengapa aku menyukai judi atau taruhan. Itu adalah permainan yang memberiku penghargaan nyata karena menantang ketidakpastian.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="10"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Beberapa orang percaya bahwa semuanya sudah diatur. Walaupun hasilnya keluar dari aturan tertentu, jarang sekali kami peduli pada hal itu. Inilah esensi perjudian. Memilih satu dari sekian banyak hal yang tidak pasti dan menghargai hal tersebut. Aku mungkin menang atau kalah... Aku tidak dapat menemukan hal selain taruhan yang dapat kuhargai.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Huh, kamu belum juga menyadari hidup yang dipenuhi kesenangan. Kamu akan mengerti maksudku lain kali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>
+Sebenarnya sampai sekarang belum membaik. Terutama karena aku telah kehilangan setengah dari aset milikku karena dirimu. Jadi aku ingin kamu berusaha lebih keras lagi untuk mendapatkan kembali aset-asetku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>
+Hmm, kamu sepertinya seorang idealis. Kamu kira kamu dapat menyelamatkan dunia hanya dengan keadilan? Aku menyesal mengatakan ini tapi kamu tidak akan mungkin mampu mengusahakan hal tersebut selama hidupmu. Kamu harus memikirkan hari tuamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 9109, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 24, 400 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 24, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 24, 100 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 24, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 24, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 24, 400 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="b">2,3,0</exelink>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="c">4,5,0</exelink>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="d">6,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 내기에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>24:15000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

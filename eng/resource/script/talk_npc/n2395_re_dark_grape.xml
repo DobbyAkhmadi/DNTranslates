@@ -1,0 +1,28 @@
+   <talk>
+      <npcename>n2395_re_dark_grape</npcename>
+      <npcid>2395</npcid>
+      <startexe>0</startexe>
+      <comment>잠든 포도</comment>
+      <npckname mid="1"><![CDATA[Wisp Grape]]></npckname>
+      <talk_paragraph index="talk_1" image="" itemindex="">
+         <talk_answer link_index="talk_2" mid="12"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Wisp Grape$<BR><FONT color=#387206>Zzz……</FONT><BR><FONT color=#387206><BR></FONT><FONT color=#7e12d2>(Grape is sleeping)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_2" image="" itemindex="">
+         <talk_answer link_index="talk_3" mid="13"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><BR>
+Haha, you dozed off so soon!<BR>What a nice weather……<BR>Sweet dreams, Grape.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_3" image="" itemindex="">
+         <talk_answer link_index="quest_end" mid="16"><![CDATA[<html><FONT color=#7e12d2>(Go for a walk)</FONT></html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><BR>
+<FONT color=#7e12d2>(I shouldn't waste a day like this in the shade.</FONT><BR>
+<FONT color=#7e12d2>Maybe I should take a walk while Grape takes his nap.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">talk_1</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 40, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="quest_end">1</exelink>
+   </talk>

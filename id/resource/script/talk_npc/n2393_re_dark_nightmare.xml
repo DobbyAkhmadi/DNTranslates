@@ -1,0 +1,73 @@
+   <talk>
+      <npcename>n2393_re_dark_nightmare</npcename>
+      <npcid>2393</npcid>
+      <startexe>1</startexe>
+      <comment>3 : 다크 직업 구분을 위한 공용 퀘스트
+4,6,7,8,9,10 : 워리어 15레벨 45레벨 전직 퀘스트 완료 
+(238,340,755,756,757,758 )</comment>
+      <npckname mid="1"><![CDATA[Nightmare Being]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Nightmare Being$<BR><FONT color=#a82424>……Grrrgh……</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="003" mid="26"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Nightmare Being$<BR><FONT color=#a82424>……Grrrgh……</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="004" mid="27"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Wisp Grape$<BR><FONT color=#387206>Hmm……</FONT><BR>
+<FONT color=#387206>Who are you?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_answer link_index="005" mid="28"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Nightmare Being$<BR>
+<FONT color=#a82424>Guuurgh…… Grrgh……</FONT><BR>
+<FONT color=#a82424>Rrrrrrgh……</FONT><BR>
+<BR><FONT color=#7e12d2>(Black foam starts to bubble out of its mouth.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="005" image="" itemindex="">
+         <talk_answer link_index="006" mid="29"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><BR>
+Grape! Run!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="006" image="" itemindex="">
+         <talk_answer link_index="007" mid="30"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Nightmare Being$<BR>
+<FONT color=#a82424>Grrrgh……</FONT><BR>
+<FONT color=#a82424>A…… body…… Grrrr……<BR>Human…… body…… Grrgh…… Guuurgh……</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="007" image="" itemindex="">
+         <talk_answer link_index="008" mid="31"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Wisp Grape$<BR>
+<FONT color=#387206>What did you just say?</FONT><BR>
+<FONT color=#387206>{user_nick}!</FONT><BR>
+<FONT color=#387206>I think it wants to be friends with us!</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="008" image="" itemindex="">
+         <talk_answer link_index="009" mid="32"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="16"><![CDATA[<html>$Nightmare Being$<BR>
+<FONT color=#a82424>Grrgh…… Grrrr…… Gaaaah……</FONT><BR><BR>
+<FONT color=#7e12d2>(Its jaw suddenly drops<BR>and reveals nightmare that shoots out like spikes.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="009" image="" itemindex="">
+         <talk_question mid="18"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><BR>
+Watch out!!!!!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,5" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 998, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 238, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 76 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 340, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 755, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 756, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 757, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 758, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 75</chk>
+      </conditions>
+      <exelink idx="009">4,6,7,8,9,10</exelink>
+   </talk>

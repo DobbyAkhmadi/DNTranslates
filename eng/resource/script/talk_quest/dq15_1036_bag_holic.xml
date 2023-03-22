@@ -1,0 +1,137 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dq15_1036_bag_holic</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1036</qid>
+      <designer>김인정</designer>
+      <qlevel>46</qlevel>
+      <qdesc xml:space="preserve">
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <qkname mid="1"><![CDATA[Bag Holic]]></qkname>
+      <qnpc>
+         <npcid>715</npcid>
+         <npcename>n715_adventurer_guildmaster_hose</npcename>
+         <npckname>모험자 길드장 호세</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting" image="" itemindex="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-a" mid="6"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Guildmaster Jose${action:Talk}<BR>My wife has been gathering bags made by<FONT color=#a82425>Dreik's eggshell</FONT>....<BR>I don't understand her. For how many bags does she need?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting-a" image="QS_Default.dds" itemindex="300483">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-b" mid="15"><![CDATA[<html>Okay.</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Guildmaster Jose$<BR>I trust you.<BR>I always asked you to help me..but could you do that again for me? Can you get eggshells to make handbags?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting-b" image="" itemindex="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-acceptted" mid="17"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Bag Holic$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1" image="QW_54.dds" itemindex="">
+      <talk_question mid="86"><![CDATA[<html>$Guildmaster Jose$<BR>I heard that in <FONT color=#a82424>Dragon Followers' Base</FONT> there are <FONT color=#a82425>Dreik's egg</FONT>.<BR>
+It looks like a green fruit...<BR>You should break it and get several tough eggshells.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-2" image="QS_Default.dds" itemindex="300483">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-2-a" mid="89"><![CDATA[<html>(Jose's preparing sewing)</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Guildmaster Jose${action:Talk}<BR>Oh, you brought them?<BR>See... yeah it looks good. I can make handbags with these materials.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-2-a" image="" itemindex="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-2-b" mid="93"><![CDATA[<html><FONT color=#086172>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-2-b" image="" itemindex="">
+      <talk_question mid="94"><![CDATA[<html>$Guildmaster Jose$<BR>Hu... I should make a hundred of handbags...<BR>I can't imagine that I should do this everyday until she gets interests in other things.<BR><FONT color=#7e12d3>(Jose looks so tired)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">1036</exe>
+         <exe type="talk" npc="n715_adventurer_guildmaster_hose">1</exe>
+         <exe type="recompense_view">10360,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">10360,,,,,,</exe>
+         <exe type="complete">1036</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n715_adventurer_guildmaster_hose" sub="b">2</exelink>
+   <exelink qstep="accepting" npc="n715_adventurer_guildmaster_hose" sub="acceptted">0,1</exelink>
+   <exelink qstep="2" npc="n715_adventurer_guildmaster_hose" sub="a">0</exelink>
+   <exelink qstep="2" npc="n715_adventurer_guildmaster_hose" sub="b">1</exelink>
+   <journal_data recompense="10360" quest_title="[일일] 용추종자 점거지" chapterid="" quest_level="46" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_54.dds</contents_image>
+         <destination_pos>542,0,0</destination_pos>
+         <destination_mode>custom:541@4,542@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="97"><![CDATA[Dreik's Egg]]></title>
+         <contents mid="98"><![CDATA[<html>In Dragon Followers' Base, break Dreik's egg and get the shell.<BR>
+<BR>
+<FONT color=#086171>Riverwort Wharf (Riverwort Ruins)</FONT> <FONT color=#a82425>→ Dragon Followers' Base</FONT></html>]]></contents>
+         <destination mid="99"><![CDATA[Dragon Followers' Base]]></destination>
+         <todo_msg mid="100"><![CDATA[Collect Dreik's eggshells in Dragon Followers' Base.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_npc_Master_Jose.dds</contents_image>
+         <destination_pos>15,n715</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>715</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="101"><![CDATA[Guildmaster Jose]]></title>
+         <contents mid="102"><![CDATA[<html>Deliver them to Lotus Marsh's Guildmaster Jose.<BR><BR><FONT color=#086171>Lotus Marsh</FONT><FONT color=#a82425> → Guildmaster Jose</FONT></html>]]></contents>
+         <destination mid="103"><![CDATA[Report to Guildmaster Jose]]></destination>
+         <todo_msg mid="104"><![CDATA[Go back to Guildmaster Jose and deliver them to him.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>46:49</user_level>
+      <user_worldzone_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <have_symbol_item />
+      <quest_date />
+      <quest_day />
+      <npc_favor />
+      <npc_malice />
+   </condition_data>
+</quest>

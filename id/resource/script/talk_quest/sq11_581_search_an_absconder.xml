@@ -1,0 +1,188 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_581_search_an_absconder</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>581</qid>
+      <designer>나은하</designer>
+      <qlevel>32</qlevel>
+      <qdesc>군터는 앞서 정령들의 무덤을 수색하던 제프리란 모험자의 행적을 찾아달란 부탁을 한다. 노략꾼 포이즌 스켈레톤을 잡으면 30%쯤의 확률로 제프리의 가방을 얻을 수 있다. 제프리의 가방을 통해서 정령들의 무덤 유적지를 탐사하던 사람들의 최후에 대해서 들을 수 있다.
+
+(길을 잃고 헤매다가 독초를 먹어서 죽었다던가, 녹시어스에게 죽임을 당해서 포이즌 스켈레톤이 되었다던가 등등)</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Search for Missing People]]></qkname>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>
+Aku masih tidak dapat melacak keberadaan orang-orang yang pergi ke Spirit's Grave.<BR>
+<FONT color=#7e12d2>(Harus menyelesaikan sub-quest Spirit's Treasure)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting" image="QW_37.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-a" mid="7" select_type="0"><![CDATA[<html>Tidak, tidak ada tanda-tanda adanya orang lain.</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Adventurer's Guild Master Gunter$<BR>Apakah kamu melihat jejak orang lain saat ke <FONT color=#a82424>Spirit Tomb</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-b" mid="9" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Hmm, siapapun yang pergi kesana pasti menghilang. Sayang sekali. Apa yang harus aku katakan kepada <FONT color=#a94407>Ibu Jeffery</FONT>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-c" mid="11" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Diantara para Adventurer yang pergi ke <FONT color=#a82424>Spirit's Grave</FONT>, ada anak kecil yang bernama <FONT color=#a94407>Jeffery</FONT>. Dia adalah anak yang baik, dia merawat ibunya di lingkungan yang menyedihkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-d" mid="13" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Dia berpikir dia dapat memperbaiki hidup ibunya kalau dia menemukan <FONT color=#a94407>Spirit's Treasure</FONT>, jadi dia pergi ke <FONT color=#a82424>Spirit's Grave</FONT>. Yah seperti yang kamu tahu, tidak ada yang pernah kembali dari tempat itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-d" image="QW_37.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-e" mid="15" select_type="0"><![CDATA[<html>(Apa yang harus kulakukan?)</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR><FONT color=#a94407>Ibu Jeffery</FONT> ingin tahu apakah anaknya masih hidup atau tidak. Jadi, apa kamu dapat pergi ke <FONT color=#a82424>Spirit's Grave</FONT> dan cari tahu mengenai dirinya? Carilah barang kepunyaan Jeffery untuk mengetahui kemana dia pergi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Search for Missing People$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="QW_37.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Terima kasih. Pergilah ke <FONT color=#a82424>Spirit's Grave</FONT> dan bawa kembali apapun kepunyaan <FONT color=#a94407>Jeffery</FONT> untuk mencari tahu keberadaannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3" mid="25" select_type="0"><![CDATA[<html>(Berikan Tas Jeffery)</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Jadi apa kamu menemukan tanda-tanda keberadaan <FONT color=#a94407>Jeffery</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3" image="QS_Default.dds" itemindex="400185" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-a" mid="27" select_type="0"><![CDATA[<html>Poison Skeleton memilikinya.</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>
+Dimana kamu menemukan ini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-a" image="QS_Default.dds" itemindex="400185" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-b" mid="29" select_type="0"><![CDATA[<html>Apa menurutmu dia berubah menjadi Poison Skeleton?</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>
+Bagaimana monster undead itu membawa-bawa <FONT color=#a82424>Jeffery's bag</FONT>. Mau tidak mau kita harus menerima kalau Jeffery sudah tidak ada.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-b" image="QM_Gargoyle_Green.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-c" mid="31" select_type="0"><![CDATA[<html>Sayang sekali.</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Aku tidak mau mengatakan ini, tetapi aku yakin itulah yang terjadi sekarang ini. Walaupun kita belum tahu pasti apakah penyebabnya adalah tanaman beracun yang dia makan ketika mencari-cari di <FONT color=#a82424>Spirit's Grave</FONT>, atau karena pengaruh dari energi <FONT color=#a82424>Gargoyle Gargoyle Noxius</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-d" mid="33" select_type="0"><![CDATA[<html>(Mengganggukkan kepala)</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Ibunya akan sangat terguncang mendengar berita ini. Hmm, aku akan mengurus hal ini, jadi tolong jangan beritahu siapapun mengenai hal ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-e" mid="35" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Aku yakin orang-orang yang lain juga berubah menjadi Poison Skeletons. Kita harus mengumpulkan barang-barang milik yang lain segera dan meminta <FONT color=#a94407>Master Cleric Enoch</FONT> untuk mengadakan upacara demi jiwa-jiwa yang tersesat itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">5817,5811,5812,5813,5814,5815,5816,5817,,</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="2">1003</exe>
+         <exe type="addquestitem" num="1">400185</exe>
+         <exe type="huntitem" num="1" exe="" onexe="4,5,6">400185</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setquest">581</exe>
+         <exe type="talk" npc="n036_adventurer_guildmaster_gunter">1</exe>
+         <exe type="setjornal">1</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="2">201003</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">400185</exe>
+         <exe type="setstep">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">5817,5811,5812,5813,5814,5815,5816,5817,,</exe>
+         <exe type="complete" true="">581</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 36, 480 );</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="e">0</exelink>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="acceptted">7,1,10,3,9,8</exelink>
+   <exelink qstep="2" npc="n036_adventurer_guildmaster_gunter" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="b" />
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="c" />
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="d">0</exelink>
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="e">1,2</exelink>
+   <journal_data recompense="1:5811,2:5812,3:5813,4:5814,5:5815,6:5816,7:5817" quest_title="실종자 수색" chapterid="" quest_level="32" quest_mark_type="10" use_item_list="400185 제프리의 가방">
+      <journal index="1">
+         <contents_image>QW_37.dds</contents_image>
+         <destination_pos>372,0,0</destination_pos>
+         <destination_mode>custom:371@3,372@3,373@3,374@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="38"><![CDATA[Jeffery's Whereabouts]]></title>
+         <contents mid="39"><![CDATA[<html>Pergilah ke <FONT color=#a82424>Spirit''s Grave Tomb</FONT> dan carilah barang yang bisa menjadi petunjuk <FONT color=#a82424>keberadaan Jeffrey</FONT>.<BR><BR><FONT color=#086171>Hermalte Port (River Ruins Path)</FONT> <FONT color=#a82424>→ Spirit''s Grave Tomb</FONT></html>]]></contents>
+         <destination mid="40"><![CDATA[Jeffery's Bag]]></destination>
+         <todo_msg mid="41"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Master_Gunter.dds</contents_image>
+         <destination_pos>11,n36</destination_pos>
+         <destination_mode />
+         <statemark_npcid>36</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="42"><![CDATA[Lapor ke Adventurer's Guild Master Gunther]]></title>
+         <contents mid="43"><![CDATA[<html>Telah menemukan <FONT color=#a82424>Jeffery's bag</FONT>. Berikan kepada <FONT color=#a82424>Adventurer's Guild Master Gunther</FONT> di <FONT color=#a82424>Saint's Haven</FONT>.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Gunther</FONT></html>]]></contents>
+         <destination mid="44"><![CDATA[Berbicara dengan Adventurer's Guild Master Gunther]]></destination>
+         <todo_msg mid="45"><![CDATA[Found Jeffery's bag.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>580</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

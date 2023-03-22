@@ -1,0 +1,178 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_877_renewel_book</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>877</qid>
+      <designer>김인정</designer>
+      <qlevel>56</qlevel>
+      <qdesc>생물표본(1)	300517
+생물표본(2)	300518
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[New Encyclopedia]]></qkname>
+      <qnpc>
+         <npcid>44</npcid>
+         <npcename>n044_archer_master_ishilien</npcename>
+         <npckname>상급 아처 이실리엔</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Teruskan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Master Archer Eithain$<BR>Karena kita sudah menemukan old encyclopedia, kita bisa membandingkan penyebaran organisme nanti dan sekarang.<BR>Jadi kita bisa mengetahui apakah peri-peri benar-benar ada di masa lalu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$New Encyclopedia$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1" image="QW_60.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2" mid="189" select_type="0"><![CDATA[<html>Okay.</html>]]></talk_answer>
+      <talk_question mid="187"><![CDATA[<html>$Master Archer Eithain$<BR>Kali ini aku ingin membuat bagan penyebaran monster yang ada di <FONT color=#a82424>Meteor Crash Site Boundaries</FONT>.<BR>Bisakah kamu pergi kesana untukku dan kumpulkan beberapa sample?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2" image="QW_60.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="190"><![CDATA[<html>$Master Archer Eithain$<BR>Jadi pergilah ke <FONT color=#a82424>Meteor Crash Site Boundaries</FONT>.<BR>Akan menyulitkan untuk mengumpulkan sample yang cukup tapi akan mudah bagimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-a" mid="193" select_type="0"><![CDATA[<html>(Teruskan)</html>]]></talk_answer>
+      <talk_question mid="191"><![CDATA[<html>$Master Archer Eithain$<BR>Ini cukup. Terimakasih.<BR>Sekarang aku akan membuat daftar dengan membandingkannya dengan encyclopedia sebelumnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-b" mid="195" select_type="0"><![CDATA[<html><FONT color=#086171>(Terima reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="194"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="196"><![CDATA[<html>$Master Archer Eithain$<BR>Terimakasih, maaf merepotkan.<BR>Lotus Marsh sedikit rame belakangan ini. Aku mencoba sebaik mungkin.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">877</exe>
+         <exe type="talk" npc="n044_archer_master_ishilien">1</exe>
+         <exe type="recompense_view">8770,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="questitem" num="3" op="]=">300517</chk>
+         <chk type="questitem" num="3" op="]=">300518</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="6">600161</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="6">700161</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">600165</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">700165</exe>
+         <exe type="addquestitem" num="1">300517</exe>
+         <exe type="addquestitem" num="1">300518</exe>
+         <exe type="huntitem" num="3" exe="" onexe="10">300517</exe>
+         <exe type="huntitem" num="3" exe="" onexe="10">300518</exe>
+         <exe type="conexe" true="11,12,13" false="">0 and 1</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">8770,,,,,,,,,</exe>
+         <exe type="complete" true="">877</exe>
+         <exe type="delquestitem" num="-1">300517</exe>
+         <exe type="delquestitem" num="-1">300518</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n044_archer_master_ishilien" sub="a">2</exelink>
+   <exelink qstep="accepting" npc="n044_archer_master_ishilien" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="2">0,1,2,3,4,5,8,9</exelink>
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="a">0</exelink>
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="b">1,2,3</exelink>
+   <journal_data recompense="8770" quest_title="새로운 생물도감" chapterid="" quest_level="56" quest_mark_type="10" use_item_list="300517,300518">
+      <journal index="1">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="201"><![CDATA[Bicara dengan Master Archer Eithain]]></title>
+         <contents mid="202"><![CDATA[<html>Bicara dengan Master Archer Eithain.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Archer Eithain</FONT></html>]]></contents>
+         <destination mid="203"><![CDATA[Bicara dengan Master Archer Eithain]]></destination>
+         <todo_msg mid="204"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_60.dds</contents_image>
+         <destination_pos>601,0,0</destination_pos>
+         <destination_mode>custom:601@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="197"><![CDATA[Ke Meteor Crash Site Boundaries]]></title>
+         <contents mid="198"><![CDATA[<html>Pergi ke Meteor Crash Site Boundaries dan kumpulkan biological sample.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> <FONT color=#a82424>→ Meteor Crash Site Boundaries</FONT></html>]]></contents>
+         <destination mid="199"><![CDATA[Meteor Crash Site Boundaries]]></destination>
+         <todo_msg mid="200"><![CDATA[Kumpulkan biological sample dari Meteor Crash Site Boundaries.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="205"><![CDATA[Lapor ke Master Archer Eithain]]></title>
+         <contents mid="206"><![CDATA[<html>Berikan biological sample ke Master Archer Eithain.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Archer Eithain</FONT></html>]]></contents>
+         <destination mid="207"><![CDATA[Bicara dengan Master Archer Eithain]]></destination>
+         <todo_msg mid="208"><![CDATA[Lapor ke Master Archer Eithain.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>53:-1</user_level>
+      <user_class />
+      <prev_quest>876</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

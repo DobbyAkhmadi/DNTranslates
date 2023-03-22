@@ -1,0 +1,364 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq05_093_review_the_current_time</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>93</qid>
+      <designer>김인정</designer>
+      <qlevel>3</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>94</nextqid>
+      <nextqname>mq05_094_track_the_location</nextqname>
+      <nextqnpc>n012_sorceress_master_cynthia</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Review the Current Time]]></qkname>
+      <qnpc>
+         <npcid>12</npcid>
+         <npcename>n012_sorceress_master_cynthia</npcename>
+         <npckname>상급 소서리스 신시아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>13</npcid>
+         <npcename>n013_cleric_tomas</npcename>
+         <npckname>클레릭 토마스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>391</npcid>
+         <npcename>n391_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-noquest" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-noquest-" mid="136" select_type="5" />
+      <talk_question mid="32"><![CDATA[<html>$Cleric Thomas$<BR>Aku sedang sibuk jadi tidak bisa meladeni anak kecil sepertimu.<BR>
+ <BR>
+※ <FONT color=#7e12d2>Dapat dijalankan jika menerima Quest dari Tinkerer Station.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-noquest" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-noquest-" mid="137" select_type="5" />
+      <talk_question mid="48"><![CDATA[<html>$Master Sorceress Cynthia$<BR>
+Aku sedang sibuk, jadi tidak bisa meladeni anak kecil.<BR>
+Kalau bukan hal yg buru-buru, kembali lagi nanti.<BR>
+※ <FONT color=#7e12d2>Dapat dijalankan jika menerima Quest dari Tinkerer Station.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-accepting-a" mid="83" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_MR_Jasmin_sp_03.ogg}<BR><FONT color=#387206>{user_nick}</FONT>, does the equipment fit you well?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-accepting-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-accepting-b" mid="85" select_type="2" />
+      <talk_question mid="84"><![CDATA[<html>${user_nick}$<BR>
+Tidak tahu. Rasanya sama saja....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-accepting-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-accepting-acceptted" mid="86" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Tinkerer Jasmine$<BR>Is that so? <FONT color=#a82424>Borin</FONT> is a renowned blacksmith even at the headquarters...<BR>Anyway, shall we start with our plan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-a" mid="87" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Tinkerer Jasmine$<BR>
+First, you need to find out exactly what the current time is. Also, we need to check how far the situation has evolved.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-b" mid="13" select_type="0"><![CDATA[<html>Vision Orb...? Apa itu?</html>]]></talk_answer>
+      <talk_answer link_index="n391_academic_station-1-b" mid="89" select_type="0"><![CDATA[<html>What's that?</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Tinkerer Jasmine$<BR>Sementara kamu memperbaiki equipment kamu, aku telah menghitungkan data virtual dan aku yakin kamu sampai pada waktu sebelum  <FONT color=#a82424>Vision Orb Theft</FONT> muncul.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-c" mid="91" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Tinkerer Jasmine$<BR>I'll send you the data, so take a look.<BR>
+<FONT color=#7e12d2>(Jasmine opens the data on your screen)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-c" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-d" mid="92" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$File No.103 : Vision Orb$<BR><FONT color=#7e12d2>Setelah mengetahui kalau waktu mendengarkan ramalan sudah tiba, Cleric membawa Sage's Staff ke Mana Ridge. Sage's Prophecy akan muncul setelah Sage's Staff dan Vision Orb, yang tadinya merupakan 1 barang, digabungkan lagi.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-d" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-e" mid="93" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$File No.103 : Vision Orb$<BR><FONT color=#7e12d2>Tapi, ketika Sage's Staff dipindahkan ke Mana Ridge, Cleric diserang oleh monster dan mereka kehilangan Staff itu. Monster itu juga memiliki Vision Orb, tapi Cleric dan Sorceress bersatu dan kemudian berhasil merebut kembali kedua benda pusaka itu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-e" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-f" mid="94" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$File No.103 : Vision Orb$<BR>
+<FONT color=#7e12d2>Tidak lama setelahnya terungkaplah kalau pengkhianat itu adalah seorang Templar Knight, yang menjadi Dragon Follower...</FONT><BR>
+<FONT color=#7e12d2>(Transmisi data berhenti)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-f" image="QN_Cl_Tomas.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-g" mid="96" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Tinkerer Jasmine$<BR>
+Have you read the data on the screen carefully? Now, go meet <FONT color=#a82424>Cleric Thomas</FONT>, the Templar Knight Leader. We need to obtain information from him on how far the incident has evolved.<BR>
+Since you became a cute little girl, try to take advantage of that.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-h" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Aku bukan gadis kecil...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-i" mid="99" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_MR_Jasmin_sp_05.ogg}<BR>So what? You have to take advantage of everything you have.<BR>Don't forget, you're our last hope....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-i" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-j" mid="100" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Tinkerer Jasmine$<BR>Also, press [ <FONT color=#a82424>K</FONT> ] key or use this FONT color=#a82424>Tinkerer Station</FONT>'s skill program to upgrade your skills.<BR>Make sure you check them when you level up.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1-j" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-" mid="101" select_type="5" />
+      <talk_question mid="30"><![CDATA[<html>$Tinkerer Jasmine$<BR>I'm sorry, I may be giving you too much of a burden.<BR>I'll always be cheering for you even at this distant world....<BR>
+<FONT color=#7e12d2>(Communication with Jasmine ended)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-" mid="102" select_type="5" />
+      <talk_question mid="33"><![CDATA[<html>$Cleric Thomas$<BR>I'm busy now so go and play with your friends, little girl.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-1-" mid="103" select_type="5" />
+      <talk_question mid="49"><![CDATA[<html>$Master Sorceress Cynthia$<BR>
+Aku sibuk. Aku tidak ada waktu berurusan sama anak kecil.<BR>
+Kalau tidak penting, kembali lagi saja nanti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-2" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-2-" mid="104" select_type="5" />
+      <talk_question mid="28"><![CDATA[<html>$Tinkerer Station$<BR>▶ Mission Objective.<BR>▷ <FONT color=#7e12d2>Meet Cleric Thomas and find out the information regarding the current position.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-2-a" mid="106" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Cleric Thomas${action:Talk}<BR>How can I help you little girl?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-2-b" mid="108" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Halo.</FONT><BR>
+<FONT color=#662500>Boleh tidak aku menanyakan sesuatu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-2-c" mid="109" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Cleric Thomas$<BR>Hmm... I'm sorry, but this is not a good time.<BR>I'm tied up with internal affairs, so if it's not something urgent, please come by later.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-2-d" mid="111" select_type="2" />
+      <talk_question mid="110"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Ada masalah?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-2-e" mid="112" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Cleric Thomas$<BR>
+Even though you may be an innocent little girl, I can't divulge internal matters to an outsider.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-2-f" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Oh, kamu sudah ketemu pengkhianatnya?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-2-g" mid="41" select_type="0"><![CDATA[<html>Oh, lupakan. (Apa yang aku lakukan...?)</html>]]></talk_answer>
+      <talk_answer link_index="n013_cleric_tomas-2-g" mid="116" select_type="0"><![CDATA[<html>N-no I didn't mean it in that way!!</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Cleric Thomas${action:Talk2}<BR>Apa...?<BR><FONT color=#7e12d2>(Thomas mengerutkan dahi)</FONT><BR>Gadis kecil, dimana kamu mendengar ini? Siapa yang menyuruhmu menanyakan hal itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-2-h" mid="118" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Cleric Thomas$<BR>
+Is this a joke?<BR>
+We are sincere servants of the Goddess, but we get angry sometimes too. You shouldn't tease adults.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-2-i" mid="120" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Erm... Tapi aku sudah tahu.</FONT><BR>
+<FONT color=#662500>Aku tahu siapa pengkhianatnya...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-3" mid="121" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Cleric Thomas$<BR><FONT color=#7e12d2>(Thomas' face twitches after listening to my story)</FONT><BR>You're quite mischievous, aren't you?! He's a Templar Knight who is faithfully serving his mission.<BR>
+I do not want to hear a child's nonsense anymore. Go away!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-3" image="QN_SoceressCynthia.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-3-" mid="122" select_type="5" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>... Hah?</FONT><BR>
+<FONT color=#662500>Sepertinya Thomas tidak mau bicara dengan aku lagi.</FONT><BR>
+<FONT color=#662500>Apa sekarang aku harus menemui </FONT><FONT color=#a82424>Master Sorceress Cynthia</FONT><FONT color=#662500>?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-3" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-3-" mid="123" select_type="5" />
+      <talk_question mid="50"><![CDATA[<html>$Tinkerer Station$<BR>▶ Mission Objective.<BR>▷ <FONT color=#7e12d2>Meet Master Sorceress Cynthia and find out information regarding the current time.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-3-a" mid="124" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Aku belum pernah melihatmu sebelumnya...<BR>
+Apa kamu mau jadi sorceress?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-3-b" mid="126" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>$Master Sorceress Cynthia${action:Talk}<BR>Ah maaf, aku sibuk sekali akhir-akhir ini.<BR>Kalau kamu mau jadi Sorceress, temui Tara. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-3-c" mid="128" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Vision Orbnya sudah ketemu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-3-d" mid="129" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Master Sorceress Cynthia$<BR>
+Apuuwaa?! Darimana kamu dengar hal itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-3-e" mid="130" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Master Sorceress Cynthia$<BR>
+Haha... Dengan muka imut begitu, kamu menanyakan pertanyaan yang berani...<BR>
+Tapi, Aku, Master Sorceress Cynthia, tidak tahan pada sesuatu hal yang kecil, imut, dan menggemaskan...<BR>
+<FONT color=#7e12d2>(Mata Cynthia berkilau)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-3-f" mid="131" select_type="4" />
+      <talk_question mid="60"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-3-g" mid="133" select_type="2" />
+      <talk_question mid="132"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Hei nak... Barangmu itu menarik.<BR>Gunanya apa?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_SoceressCynthia.dds" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-3-!next" mid="135" select_type="2" />
+      <talk_question mid="134"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Ini...? Ini... sebuah communicator....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">93</exe>
+         <exe type="talk" npc="n391_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">930,,,,,,,,</exe>
+         <exe type="complete" true="">93</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n391_academic_station" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n391_academic_station" sub="b" />
+   <exelink qstep="1" npc="n391_academic_station" sub="b" />
+   <exelink qstep="1" npc="n391_academic_station" sub="c" />
+   <exelink qstep="1" npc="n391_academic_station" sub="d" />
+   <exelink qstep="1" npc="n391_academic_station" sub="e" />
+   <exelink qstep="1" npc="n391_academic_station" sub="f" />
+   <exelink qstep="1" npc="n391_academic_station" sub="g" />
+   <exelink qstep="1" npc="n391_academic_station" sub="h" />
+   <exelink qstep="1" npc="n391_academic_station" sub="i" />
+   <exelink qstep="1" npc="n391_academic_station" sub="j">0,1</exelink>
+   <exelink qstep="1" npc="n391_academic_station" sub="" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="b" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="c" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="d" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="e" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="f" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="g" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="g" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="h" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="i" />
+   <exelink qstep="2" npc="n013_cleric_tomas" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n012_sorceress_master_cynthia" sub="b" />
+   <exelink qstep="3" npc="n012_sorceress_master_cynthia" sub="c" />
+   <exelink qstep="3" npc="n012_sorceress_master_cynthia" sub="d" />
+   <exelink qstep="3" npc="n012_sorceress_master_cynthia" sub="e">0</exelink>
+   <exelink qstep="3" npc="n012_sorceress_master_cynthia" sub="f">1</exelink>
+   <exelink qstep="3" npc="n012_sorceress_master_cynthia" sub="g" />
+   <exelink qstep="3" npc="n012_sorceress_master_cynthia" sub="!next" />
+   <journal_data recompense="5:930" quest_title="현재시간을 검토합니다" chapterid="1" quest_level="3" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>5,n391</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>391</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="66"><![CDATA[Review the Current Time I]]></title>
+         <contents mid="67"><![CDATA[<html>Hubungi Jasmine di Tinkerer Station dan cari tahu informasi terbaru.<BR>
+ <BR>
+<FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="68"><![CDATA[Terhubung dengan Tinkerer Station]]></destination>
+         <todo_msg mid="69"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Cl_Tomas.dds</contents_image>
+         <destination_pos>5,n13</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>13</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="70"><![CDATA[Review the Current Time II]]></title>
+         <contents mid="71"><![CDATA[<html>Temui Cleric Thomas, dan cari tahu waktu saat ini.<BR>
+ <BR>
+<FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Cleric Thomas</FONT></html>]]></contents>
+         <destination mid="72"><![CDATA[Bicaralah dengan Cleric Thomas]]></destination>
+         <todo_msg mid="73"><![CDATA[Bicaralah dengan Cleric Thomas]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_SoceressCynthia.dds</contents_image>
+         <destination_pos>5,n12</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>12</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="75"><![CDATA[Review the Current Time III]]></title>
+         <contents mid="76"><![CDATA[<html>Cleric Thomas marah karena pertanyaan itu dan berhenti berhubungan denganku. Kali ini, temui Master Sorceress Cynthia dan cari tahu kapankan waktu saat ini.<BR>
+ <BR>
+<FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Master Sorceress Cynthia</FONT></html>]]></contents>
+         <destination mid="77"><![CDATA[Bicaralah dengan Master Sorceress Cynthia]]></destination>
+         <todo_msg mid="78"><![CDATA[Bicaralah dengan Master Sorceress Cynthia]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>92</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

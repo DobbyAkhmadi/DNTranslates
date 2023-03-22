@@ -1,0 +1,527 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc26_9903_sacred_trash</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>26</qchapter>
+      <qid>9903</qid>
+      <designer>조설빈</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9904</nextqid>
+      <nextqname>mqc26_9904_trap_building</nextqname>
+      <nextqnpc>n2725_norphee</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Sanctuary Coffer]]></qkname>
+      <qnpc>
+         <npcid>2725</npcid>
+         <npcename>n2725_norphee</npcename>
+         <npckname>노르페</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2987</npcid>
+         <npcename>n2987_geraint</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2988</npcid>
+         <npcename>n2988_grail</npcename>
+         <npckname>낡은 잔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2989</npcid>
+         <npcename>n2989_hole</npcename>
+         <npckname>움푹 패인 곳</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-accepting" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-accepting-acceptted" mid="80" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Norfe$<BR>Did you… find the item?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2988_grail-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2988_grail-1-" mid="83" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Old Cup$<BR>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-1" image="QW_19026.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-1-a" mid="88" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Nods.)</FONT><FONT color=#662500> </FONT><FONT color=#662500>At last… We can finally go there... To the legendary treasure vault.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-1-a" image="QN_Salica_Chlid.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-1-b" mid="91" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9903_sp_01.ogg}<BR>Now that even <FONT color=#a82424>Shalica</FONT> is in the hands of Vestinel, the <FONT color=#a82424>Cup of Healing</FONT> is desperately needed.<BR>I'm not sure it will be there, but... we better hurry up and find out.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-1-b" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-1-c" mid="92" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I agree. </FONT><FONT color=#a82424>Norfe</FONT><FONT color=#662500>, can you keep watch around here?</FONT><BR>
+<FONT color=#662500>Also, it would be nice if you came with me, </FONT><FONT color=#a82424>Geraint</FONT><FONT color=#662500> and </FONT><FONT color=#a82424>Grele</FONT><FONT color=#662500>...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-1-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n2725_norphee-1-d" mid="95" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Geraint${sound:npc_GereintKid_qu9903_sp_01.ogg}<BR>I was planning to go anyway, whether you said anything or not. Imagine if you found the Cup of Healing only to lose it again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-1-d" image="" itemindex="" portrait_left="Npc_Left_child_grele.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-2" mid="96" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>$Grele${sound:npc_Grele_qu9903_sp_01.ogg}<BR>Right, we simply cannot lose the Cup of Healing. We have to save Lica.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-2" image="" itemindex="" portrait_left="Npc_Left_child_grele.dds" portrait_right="Npc_Right_Nophee.dds" center_image="">
+      <talk_answer link_index="n2725_norphee-2-" mid="98" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Norfe$<BR>Be careful. I can't imagine what kind of danger might be lurking in Vestinel's treasure vault.<BR><FONT color=#7e12d2>※ (Solo) Examine the Sunken Area at the end of the Taeryeong Shrine Secret Path.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-2-prop_check" mid="127" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Insert Finest Stone Jade)</FONT></html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-2-" mid="154" select_type="5" />
+      <talk_question mid="153"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone.)</FONT><BR><BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-3" image="QW_19026.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-3-" mid="101" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Norfe$<BR>I'll watch your back. Go do what you have to do.<BR><FONT color=#7e12d2>※ Find the Cup of Healing in the Plentiful Gold Trove Nest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-3-party_check" mid="156" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Insert Finest Stone Jade)</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-3-" mid="158" select_type="5" />
+      <talk_question mid="157"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone.)</FONT><BR><BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2988_grail-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2988_grail-4-end" mid="103" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Old Cup$<BR><FONT color=#7e12d2>It is covered with scratches and imperfections. A single glance confirms it to be very old and shabby. Yet the arrow stuck next to it seems oddly new).</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-4-party_check" mid="160" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Insert Finest Stone Jade)</FONT></html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-4-" mid="162" select_type="5" />
+      <talk_question mid="161"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>※This quest cannot be carried out in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-5-party_check" mid="169" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Insert Finest Stone Jade)</FONT></html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-5-" mid="165" select_type="5" />
+      <talk_question mid="164"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)
+</FONT><FONT color=#7e12d2> <BR>
+</FONT><FONT color=#7e12d2>※This quest cannot be carried out in a party.</FONT><FONT color=#7e12d2><BR></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-a" mid="106" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Geraint${sound:npc_GereintKid_qu9903_sp_02.ogg}<BR>What's... this?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-a" image="QS_Default.dds" itemindex="400731" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-b" mid="109" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It looks like a cup, but could it really be the Cup of Healing...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-b" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-c" mid="110" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Geraint${sound:npc_GereintKid_qu9903_sp_03.ogg}<BR>It looks old and shabby and smells like a sewer. <FONT color=#7e12d2>(Frowns.)</FONT> Do you honestly think something like this could be the Cup of Healing?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-c" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-d" mid="113" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Geraint, you're a Dragon. Can't you at least sense something? </FONT><FONT color=#7e12d2>(Holds the old cup out to Geraint.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-d" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-e" mid="114" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Geraint${sound:npc_GereintKid_qu9903_sp_04.ogg}<BR>Get that away from me. It's dirty and smells bad. Dragons have sensitive noses!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-e" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-f" mid="115" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I might lose it, so you gotta keep it safe. </FONT><FONT color=#7e12d2>(It really does stink, so you should get him carry it.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-f" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-g" mid="116" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Geraint${sound:npc_GereintKid_qu9903_sp_05.ogg}<BR><FONT color=#7e12d2>(Holds his nose with one hand and takes the cup.)</FONT> Vestinel, why did you put it in a place like this?<BR>If you stole it, you should have kept it safe! Isn't it too worn down to use now?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-g" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2987_geraint-5-h" mid="117" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Grele$<BR>Can we not use it if it is worn down?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-h" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-i" mid="118" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Right... Can we not use it if it's worn down, Geraint?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-i" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-j" mid="119" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Geraint${sound:npc_GereintKid_qu9903_sp_06.ogg}<BR>How would I know?! I still have a lot to learn..<BR><FONT color=#7e12d2>(Mumbles quietly.) </FONT>If even Argenta were here...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-j" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2987_geraint-5-k" mid="120" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Grele${sound:npc_Grele_qu9903_sp_02.ogg}<BR>So there are things even Dragons of <FONT color=#086171>Lagendia</FONT> don’t know. Then what are we to do? What good is it if we don’t know how to use it?<BR>And we aren’t even sure that it really is the Cup of Healing.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-k" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2987_geraint-5-l" mid="121" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No, it must be the real Cup of Healing. It was hidden deep within the treasure vault and even sealed away for a reason.</FONT><BR>
+<FONT color=#662500>The problem is figuring out how to use it...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-5-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-5-end5" mid="172" select_type="4" />
+      <talk_question mid="171"><![CDATA[<html>$Geraint${sound:npc_GereintKid_qu9903_sp_07.ogg}<BR>What good can come of us worrying here amongst ourselves? Let's head back. We need to go deal with the matter.<BR><FONT color=#7e12d2>※ Speak with Norfe in the Streets of Red Lotus Palace.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2987_geraint-6" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2987_geraint-6-" mid="123" select_type="5" />
+      <talk_question mid="32"><![CDATA[<html>$Geraint${sound:npc_GereintKid_qu9903_sp_07.ogg}<BR>What good can come of us worrying here amongst ourselves? Let's head back. We need to go deal with the matter.<BR><FONT color=#7e12d2>※ Speak with Norfe in the Streets of Red Lotus Palace.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-a" mid="124" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Norfe$<BR><FONT color=#7e12d2>(Pacing back and forth, looking at the ground.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-b" mid="128" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Norfe? What is it?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-b" image="QN_Vernicka.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-c" mid="129" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9903_sp_02.ogg}<BR><FONT color=#387206>{user_nick}</FONT>, this is bad…! A message came from <FONT color=#086171>Merca</FONT>. <FONT color=#a82424>Vernicka</FONT> knows everything.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-d" mid="130" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>He knows everything? Just what does he know?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-d" image="QN_Salica.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-e" mid="133" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Norfe$<BR>He knows what happened to <FONT color=#a82424>Shalica</FONT>, and in great detail.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-e" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-f" mid="134" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You didn’t tell him, did you...? You said you were going to contact him before.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-f" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-g" mid="135" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Norfe$<BR>I only told Vernicka a tiny bit for the sake of his own safety.<BR>
+I said to refrain from going outside as much as possible because several new Childs were on the loose.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-g" image="QW_Merca_Heart.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-h" mid="136" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Norfe$<BR>As long as the relics of Chiron Island work, Merca's Heart is the safest place in Mistland.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-h" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-i" mid="137" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Then how does he know? Could he have an agent planted in Red Lotus Palace?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-i" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-j" mid="138" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Norfe$<BR>I heard it's been a while since he lost contact with that informant. But... there's no way he would not have a new source.<BR>
+Anyway, we have to move before Vernicka takes action.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-j" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-k" mid="139" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Do you have any good ideas?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-k" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-l" mid="140" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9903_sp_03.ogg}<BR>The <FONT color=#a82424>Cup of Healing</FONT>. If we at least have that we might be able to convince Vernicka. Did you find your quarry in the treasure vault?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-l" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-m" mid="141" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well… I'm not sure if we can say either way.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-m" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n2725_norphee-6-n" mid="142" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Geraint$<BR>Even you will be shocked when you see it. <FONT color=#7e12d2>(Takes out the old cup.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-n" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-o" mid="143" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Norfe$<BR>Is this the long sought-after Cup of Healing? It's different from what I imagined.<BR>
+I'm not confident I can convince Vernicka using a shabby antique like this...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-o" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-p" mid="144" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It's fine. You don't have to show him, do you? Just say we got the Cup of Healing.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-p" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-q" mid="145" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Norfe$<BR>Right. I see what you mean.<BR>
+Stall for time by pretending that we have a solution, right?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-q" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-r" mid="146" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well… Describe it however you want, but I think you have the idea. The problem is figuring out what to do next...</FONT><BR>
+<FONT color=#662500>We don't know how to use it.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-r" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-s" mid="147" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Norfe$<BR>The Chiron Island relic didn’t react at first either.<BR>
+Maybe… the Cup of Healing also requires something to be activated.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-s" image="QN_Arc.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-t" mid="148" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Then we need to find out what that something is. Norfe, are you able to get in touch with Arc?</FONT><BR>
+<FONT color=#662500>He spoke to me like he knew something of the Cup of Healing before.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-t" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-u" mid="149" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Norfe$<BR>I will try to get in touch with him as quickly as possible. <FONT color=#7e12d2>(Looks backward.)</FONT> <BR>
+… Anyway, I think it would be best if we cut our conversation short here. Someone is coming our way.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2725_norphee-6-u" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2725_norphee-6-!next" mid="150" select_type="4" />
+      <talk_question mid="54"><![CDATA[<html>$Quest Complete$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9903</exe>
+         <exe type="talk" npc="n2725_norphee">1</exe>
+         <exe type="addquestitem" num="1">400730</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment>0,1,2: 언제 다시 들어와도 되도록 세팅 (파티체크)
+3:스테이지로 이동-지금은 193 맵 트리거에서 프랍 움직인 후 넘겨줌
+4,6,7:클리어시 4스텝으로 넘어가도록-지금 안 씀</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+         <chk type="questitem" num="1" op="]=">400730</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="conexe" true="0,1" false="5">0 / 1</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,14970,1);</exe>
+         <exe type="checkStageClearRank" rand="안씀" num="14971" onexe="6,7" true="안씀" xsi:nil="true" />
+         <exe type="talk" npc="n2989_hole">a</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment>0- 지금 쓰지 않음. 193 맵에서 트리거로 넘겨줌
+1- 파티체크시 파티 아니면 나오는 대화문
+2,3,4,5- 스테이지 클리어시 4스텝으로 넘어감</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+         <chk type="questitem" num="1" op="]=">400730</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,14970,1);</exe>
+         <exe type="talk" npc="n2989_hole">a</exe>
+         <exe type="conexe" true="3" false="1">0 / 1</exe>
+         <exe type="checkStageClearRank" rand="안씀" num="14971" onexe="4,5" true="안씀" xsi:nil="true" />
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>0,1,2:낡은잔과 대화 후 치유의 잔 획득
+3: 천하석옥 삭제였는데 지금은 안씀. 스텝 5에서 씀.
+4: 안씀 193 트리거에서 넘겨줌
+5: 파티 아닐시 대화창
+6: 파티체크</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+         <chk type="questitem" num="1" op="]=">400730</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="addquestitem" num="1">400731</exe>
+         <exe type="delquestitem" num="-1">400730</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,14970,1);</exe>
+         <exe type="talk" npc="n2989_hole">a</exe>
+         <exe type="conexe" true="" false="5">0 / 1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment>2,3,4: 입장: 193 맵에서 트리거로 처리
+5:천하석옥 제거
+6 낡은 잔 제거(제레인트에게 주는 설정)</comment>
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+         <chk type="questitem" num="1" op="]=">400730</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,14970,1);</exe>
+         <exe type="talk" npc="n2989_hole">a</exe>
+         <exe type="conexe" true="" false="3">0 / 1</exe>
+         <exe type="delquestitem" num="-1">400730</exe>
+         <exe type="delquestitem" num="-1">400731</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">99030,,,,,,,,,,</exe>
+         <exe type="complete" true="">9903</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2725_norphee" sub="acceptted">0,1,2</exelink>
+   <exelink qstep="1" npc="n2725_norphee" sub="b" />
+   <exelink qstep="1" npc="n2725_norphee" sub="c" />
+   <exelink qstep="1" npc="n2725_norphee" sub="d" />
+   <exelink qstep="1" npc="n2725_norphee" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n2989_hole" sub="prop_check">2</exelink>
+   <exelink qstep="2" npc="n2989_hole" sub="" />
+   <exelink qstep="3" npc="n2989_hole" sub="party_check">2,3</exelink>
+   <exelink qstep="3" npc="n2989_hole" sub="" />
+   <exelink qstep="4" npc="n2988_grail" sub="end">0,1,2</exelink>
+   <exelink qstep="4" npc="n2989_hole" sub="party_check">6</exelink>
+   <exelink qstep="4" npc="n2989_hole" sub="" />
+   <exelink qstep="5" npc="n2989_hole" sub="party_check">4</exelink>
+   <exelink qstep="5" npc="n2989_hole" sub="" />
+   <exelink qstep="5" npc="n2987_geraint" sub="b" />
+   <exelink qstep="5" npc="n2987_geraint" sub="c" />
+   <exelink qstep="5" npc="n2987_geraint" sub="d" />
+   <exelink qstep="5" npc="n2987_geraint" sub="e" />
+   <exelink qstep="5" npc="n2987_geraint" sub="f" />
+   <exelink qstep="5" npc="n2987_geraint" sub="g" />
+   <exelink qstep="5" npc="n2987_geraint" sub="h" />
+   <exelink qstep="5" npc="n2987_geraint" sub="i" />
+   <exelink qstep="5" npc="n2987_geraint" sub="j" />
+   <exelink qstep="5" npc="n2987_geraint" sub="k" />
+   <exelink qstep="5" npc="n2987_geraint" sub="l" />
+   <exelink qstep="5" npc="n2987_geraint" sub="end5">0,1,5,6</exelink>
+   <exelink qstep="6" npc="n2725_norphee" sub="b" />
+   <exelink qstep="6" npc="n2725_norphee" sub="c" />
+   <exelink qstep="6" npc="n2725_norphee" sub="d" />
+   <exelink qstep="6" npc="n2725_norphee" sub="e" />
+   <exelink qstep="6" npc="n2725_norphee" sub="f" />
+   <exelink qstep="6" npc="n2725_norphee" sub="g" />
+   <exelink qstep="6" npc="n2725_norphee" sub="h" />
+   <exelink qstep="6" npc="n2725_norphee" sub="i" />
+   <exelink qstep="6" npc="n2725_norphee" sub="j" />
+   <exelink qstep="6" npc="n2725_norphee" sub="k" />
+   <exelink qstep="6" npc="n2725_norphee" sub="l" />
+   <exelink qstep="6" npc="n2725_norphee" sub="m" />
+   <exelink qstep="6" npc="n2725_norphee" sub="n" />
+   <exelink qstep="6" npc="n2725_norphee" sub="o" />
+   <exelink qstep="6" npc="n2725_norphee" sub="p" />
+   <exelink qstep="6" npc="n2725_norphee" sub="q" />
+   <exelink qstep="6" npc="n2725_norphee" sub="r" />
+   <exelink qstep="6" npc="n2725_norphee" sub="s" />
+   <exelink qstep="6" npc="n2725_norphee" sub="t" />
+   <exelink qstep="6" npc="n2725_norphee" sub="u">0</exelink>
+   <exelink qstep="6" npc="n2725_norphee" sub="!next">1</exelink>
+   <journal_data recompense="99030" quest_title="성역의 궤" chapterid="26" quest_level="95" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Nophee.dds</contents_image>
+         <destination_pos>188,n2725</destination_pos>
+         <destination_mode>custom:188@1</destination_mode>
+         <statemark_npcid>2725</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="55"><![CDATA[The Treasure Vault At Last]]></title>
+         <contents mid="56"><![CDATA[<html>At last, you have gained access to the <FONT color=#086171>Plentiful Gold Trove</FONT>, the treasure vault managed by Commander Hwaran. Continue speaking with Norfe.<BR>
+<BR><FONT color=#086171>Streets of Red Lotus Palace</FONT> - <FONT color=#a82424>Norfe</FONT></html>]]></contents>
+         <destination mid="57"><![CDATA[Talk to the Norfe at the Streets of Red Lotus Palace.]]></destination>
+         <todo_msg mid="58"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_193.dds</contents_image>
+         <destination_pos>193,n2989</destination_pos>
+         <destination_mode>custom:193@1</destination_mode>
+         <statemark_npcid>2989</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="59"><![CDATA[Before the Plentiful Gold Trove Door]]></title>
+         <contents mid="60"><![CDATA[<html>Norfe told you to hurry. You must go to the <FONT color=#086171>Plentiful Gold Trove</FONT> with Geraint and Grele. But… where the heck is the Plentiful Gold Trove? The Silver Treasure Vault wasn't really the treasure vault in the end… That road to the <FONT color=#086171>west of Taeryeong Shrine</FONT>... It seems you'll have to search the place with a fine-tooth comb.<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT> - <FONT color=#a82424>Sunken Area</FONT></html>]]></contents>
+         <destination mid="61"><![CDATA[(Solo) Examine the Sunken Area at the end of the Taeryeong Shrine Secret Path]]></destination>
+         <todo_msg mid="62"><![CDATA[Examine the Sunken Area at the end of the Taeryeong Shrine Secret Path.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_19026.dds</contents_image>
+         <destination_pos>193,n2989</destination_pos>
+         <destination_mode>custom:193@1,14970@4,14971@4</destination_mode>
+         <statemark_npcid>2989</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="63"><![CDATA[Guardians of the Plentiful Gold Trove]]></title>
+         <contents mid="64"><![CDATA[<html>The door to the <FONT color=#086171>Plentiful Gold Trove</FONT> can be found in the <FONT color=#a82424>Sunken Area</FONT> near the <FONT color=#086171>Waterlily Lake and Waterfall</FONT>, which are next to <FONT color=#086171>Taeryeong Shrine</FONT>. The wall is supposed to open when you insert the Finest Stone Jade! The only thing left is to find the Cup of Healing. However, you must first bring down the terrible guards who stand before you.<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.<BR></FONT><FONT color=#7e12d2>※ You must find the Sunken Area in Taeryeong Shrine to access the Plentiful Gold Trove Nest</FONT><BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT> - <FONT color=#a82424>Plentiful Gold Trove Nest</FONT></html>]]></contents>
+         <destination mid="65"><![CDATA[(Solo) Find the Cup of Healing in the Plentiful Gold Trove Nest]]></destination>
+         <todo_msg mid="66"><![CDATA[Look for the Cup of Healing in the Plentiful Gold Trove Nest.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_19026.dds</contents_image>
+         <destination_pos>193,n2989</destination_pos>
+         <destination_mode>custom:193@1,14970@4,14971@4</destination_mode>
+         <statemark_npcid>2988</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="67"><![CDATA[The Humble Treasure of the Splendorous Treasure Vault]]></title>
+         <contents mid="68"><![CDATA[<html>At last, in the deepest room of the <FONT color=#086171>Plentiful Gold Trove</FONT>... an <FONT color=#a82424>Old Cup</FONT> that seems out of place in the acclaimed treasure vault catches your eye. You better look into this cup some more.<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><BR><FONT color=#7e12d2>※ You must find the Sunken Area in Taeryeong Shrine to access the Plentiful Gold Trove Plentiful Gold Trove</FONT><BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Plentiful Gold Trove Nest (</FONT><FONT color=#a82424>Old Cup)</FONT></html>]]></contents>
+         <destination mid="69"><![CDATA[(Solo) Examine the Old Cup in the Plentiful Gold Trove Nest]]></destination>
+         <todo_msg mid="70"><![CDATA[Examine the old cup.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_geraint_Kid.dds</contents_image>
+         <destination_pos>193,n2989</destination_pos>
+         <destination_mode>custom:193@1,14970@4,14971@4</destination_mode>
+         <statemark_npcid>2987</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="71"><![CDATA[How Do We Even Use This?]]></title>
+         <contents mid="72"><![CDATA[<html>That dirty old cup... Could it really be the <FONT color=#a82424>Cup of Healing</FONT>? A dragon like <FONT color=#a82424>Geraint</FONT> might be able to tell either way. You should go ask Geraint about the cup.<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><BR><FONT color=#7e12d2>※ You must find the Sunken Area in Taeryeong Shrine to access the Plentiful Gold Trove Nest</FONT><BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Plentiful Gold Trove (Geraint)</FONT></html>]]></contents>
+         <destination mid="73"><![CDATA[(Solo) Speak with Geraint in the Plentiful Gold Trove Nest]]></destination>
+         <todo_msg mid="74"><![CDATA[You pulled out the arrow. Speak with Geraint.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Nophee.dds</contents_image>
+         <destination_pos>188,n2725</destination_pos>
+         <destination_mode>custom:188@1</destination_mode>
+         <statemark_npcid>2725</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="75"><![CDATA[Unexpected Story]]></title>
+         <contents mid="76"><![CDATA[<html>An <FONT color=#a82424>old cup</FONT> found deep in the Plentiful Gold Trove... Geraint angrily complained about the smell of the goblet, but decided to hold it in safekeeping nonetheless. Everything but its appearance suggests it must be the Cup of Healing, but its use is completely unknown. You better go discuss the matter with Norfe in the Streets of Red Lotus Palace.<BR>
+<BR><FONT color=#086171>Streets of Red Lotus Palace</FONT> - <FONT color=#a82424>Norfe</FONT></html>]]></contents>
+         <destination mid="77"><![CDATA[Talk to the Norfe at the Streets of Red Lotus Palace.]]></destination>
+         <todo_msg mid="78"><![CDATA[Talk to the Norfe at the Streets of Red Lotus Palace.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest>9902</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

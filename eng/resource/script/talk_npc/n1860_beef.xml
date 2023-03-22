@@ -1,0 +1,61 @@
+   <talk>
+      <npcename>n1860_beef</npcename>
+      <npcid>1860</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[VIP Helper Veep]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="get_pc_item" mid="17"><![CDATA[<html>[Rent Item]</html>]]></talk_answer>
+         <talk_answer link_index="shop" mid="22"><![CDATA[<html>[VIP Store]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$VIP Helper Veep$<BR>Hello, I'm VIP Helper Veep.<BR>I provide the rental of best mounts around that befit the VVIP's high standards.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="novip" image="" itemindex="">
+         <talk_answer link_index="shop" mid="30"><![CDATA[<html>[VIP Store]</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$VIP Helper Veep$<BR>Pardon me but you are not a VVIP yet.<BR>You need to be a VVIP to enjoy the rental services. But you can still use the store.<BR>
+I'm not that strict.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="noplayer" image="" itemindex="">
+         <talk_question mid="5"><![CDATA[<html>$VIP Helper Veep$<BR>Currently VVIP service is unavailable for you.<BR>Please contact the administrator for errors.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_vip_0" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$VIP Helper Veep$<BR>You have completed the mount rental. Please note that the item will be returned when you <FONT color=#a82424>log out</FONT>. I hope you have a pleasant adventure.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_vip_2" image="" itemindex="">
+         <talk_question mid="7"><![CDATA[<html>$VIP Helper Veep$<BR>Currently there is no item you can rent.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_vip_3" image="" itemindex="">
+         <talk_question mid="8"><![CDATA[<html>$VIP Helper Veep$<BR>You have already rented a VVIP item. You cannot rent multiple items at once.<BR>If you want to <FONT color=#a82424>rent a new item</FONT>, please go to the <FONT color=#a82424>character selection screen</FONT> and log in to the game again.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_vip_4" image="" itemindex="">
+         <talk_question mid="9"><![CDATA[<html>$VIP Helper Veep$<BR>An error has occurred. Please contact the administrator.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">novip</exe>
+         <exe type="conexe" true="0" false="3">0</exe>
+         <exe type="conexe" true="1" false="4">1</exe>
+         <exe type="talk">noplayer</exe>
+         <exe type="conexe" true="6" false="7">2</exe>
+         <exe type="talk">set_vip_0</exe>
+         <exe type="conexe" true="1" false="8">3</exe>
+         <exe type="conexe" true="11" false="9">4</exe>
+         <exe type="conexe" true="12" false="10">5</exe>
+         <exe type="conexe" true="13" false="4">6</exe>
+         <exe type="talk">set_vip_2</exe>
+         <exe type="talk">set_vip_3</exe>
+         <exe type="talk">set_vip_4</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,220001,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetVVIPLevel(userObjID) >= 1</chk>
+         <chk type="custom">api_user_GetVVIPLevel(userObjID) == 0</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 0</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 1</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 2</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 3</chk>
+         <chk type="custom">api_user_SetVVIPItem(userObjID) == 4</chk>
+      </conditions>
+      <exelink idx="get_pc_item">5</exelink>
+      <exelink idx="shop">14</exelink>
+      <exelink idx="shop">14</exelink>
+   </talk>

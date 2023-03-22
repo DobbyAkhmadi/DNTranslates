@@ -1,0 +1,340 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_355_inventory_clearance</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>355</qid>
+      <designer>김주연</designer>
+      <qlevel>9</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Clearance]]></qkname>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>26</npcid>
+         <npcename>n026_trader_may</npcename>
+         <npckname>소모품 상인 메이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>323</npcid>
+         <npcename>n323_warehouse_lupert</npcename>
+         <npckname>창고지기 루퍼트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-noquest" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Seems like May is trying to sell a strange looking <FONT color=#a82424>bag</font> this time.<BR>It's just a cheapskate suitcase and she claims it's branded.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-noquest" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>You're not keeping another weird object, are you?<BR>Please don't keep useless stuff. Sell it to <FONT color=#a82424>May</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-a" mid="8" select_type="0"><![CDATA[<html> What's happening? </html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Merchant May$<BR>Oh, what am I going to do?<FONT color=#7e12d2><BR>(May seems like she's in trouble.)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-b" mid="10" select_type="0"><![CDATA[<html>I told you I don't need such bag last time.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Merchant May$<BR>Oh you have picked to right time to stop by!<BR>I have a sleek Chaneel bag at <FONT color=#a82424>80%</font> discount only for today!<BR>Buy 10, get two free!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-b" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-c" mid="12" select_type="0"><![CDATA[<html>The magazine looks like it's more than 10 years old.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Merchant May$<BR>Oh no what should I do?<BR>I ordered them in a bulk because I read in <FONT color=#a82424>Oh My Goddess</FONT> that it was the hottest trend now.<BR><FONT color=#7e12d2>(May flips the pages of a magazine published about 10 years ago)</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-c" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-d" mid="14" select_type="0"><![CDATA[<html>Seems like it's not so hot anymore.</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Merchant May$<BR>No Way!<FONT color=#7e12d2>(Looking at the front cover of the magazine, her face turns blue.)</font><BR>It's a magazine from <FONT color=#a82424>10 years ago</font>. No wonder they are selling these designer handbags so cheap!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-d" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-e" mid="16" select_type="0"><![CDATA[<html>Please be careful next time. I'll make a move.</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Merchant May$<BR>It says here that this is the hottest trend "it" bag.<BR><FONT color=#7e12d2>(May opens the magazine to show you)</font> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-f" mid="18" select_type="0"><![CDATA[<html>I'm not buying the bag..</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Merchant May$<BR>Hey! Where are you going?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-g" mid="20" select_type="0"><![CDATA[<html>Compensation? Are you kidding me?</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Merchant May$<BR>Since you caused me emotional distress by pointing out the magazine's date, you will need to compensate me for emotional trauma.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-g" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-h" mid="23" select_type="0"><![CDATA[<html>Well, I really don't care...</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Merchant May$<BR><FONT color=#7e12d2>(Collapses to the ground.)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-h" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-i" mid="25" select_type="0"><![CDATA[<html>Where are you going to keep that many bags?</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Merchant May$<BR>Let's wait and see who will win.<BR>Waarrggghhh!<BR><FONT color=#7e12d2>(May is wailing on the floor. Seems like I'll get into trouble if I don't stop her)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-j" mid="27" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Merchant May$<BR>Warehouse, of course!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-acceptted" mid="29" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Clearance Sale$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-1" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="30"><![CDATA[<html>$Merchant May$<BR>Okay, now go to Mr. <FONT color=#a82424>Rupert the Warehouse Keeper</font> and store these away for me! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="31"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>May seems to be in trouble. You'll probably end up in trouble too if you talk to her now so don't talk to her for the time being.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-a" mid="34" select_type="0"><![CDATA[<html>May sent me here.</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>How can I help you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-a" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-b" mid="36" select_type="0"><![CDATA[<html>Excuse me, can you at least listen to me?</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>I'm sorry. I have so much stuff to clear. Look at all these agate fragments.<BR><BR><FONT color=#7e12d2>(Rupert suddenly acts like he's busy)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-b" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-c" mid="38" select_type="0"><![CDATA[<html>Well, not really.</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Warehouse Keeper Rupert$<BR><BR><FONT color=#7e12d2>(Rupert reluctantly turns around)</font><BR>What did May say?...Does she want to be a Warehouse Keeper again?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-c" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-d" mid="40" select_type="0"><![CDATA[<html>Is May that bad?</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Good. <FONT color=#7e12d2>(Rupert looks much more relaxed)</font>)<BR>I thought she would charge into my warehouse again and mess everything up like last time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-e" mid="42" select_type="0"><![CDATA[<html> (Seems like Rupert had been bullied by May a lot) </html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>I don't even want to think about it. She takes on a new job now and then and she ruins everything. She is least bothersome as a General Store Keeper.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-f" mid="44" select_type="0"><![CDATA[<html>She wants to store her Chaneel bags in the warehouse.</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>So what did May want?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-g" mid="46" select_type="0"><![CDATA[<html> Yes. </html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Hmm Chaneel bags? Only the bags?<BR>I hope it's only the bags. Are you sure there are no explosives or dubious artifacts inside?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-2" mid="48" select_type="0"><![CDATA[<html>(I wonder what May had been up to all this while)</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>If it's only the bags, I'll keep them for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="49"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Please tell May that I'll store the bags.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2" image="QS_Default.dds" itemindex="400252" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-a" mid="52" select_type="0"><![CDATA[<html>So are they really branded?</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Merchant May$<BR>Has it been taken care of? Great! (Phew)<BR>But I cannot leave them in the warehouse forever <FONT color=#7e12d2>(May looks at the Chaneel bag which looks like a cheapskate Adventurer's Bag and sighs)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-a" image="QS_Default.dds" itemindex="400252" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-b" mid="54" select_type="0"><![CDATA[<html>Because they look like normal adventurer's bags.</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Merchant May$<BR>Of course! Why do you ask such a question for such a luxurious looking bag?<BR><FONT color=#7e12d2>(It really looks like an adventurer's bag)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-b" image="QS_Default.dds" itemindex="400252" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-c" mid="56" select_type="0"><![CDATA[<html>Well...it really looks like one.</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Merchant May$<BR>You have absolutely no fashion sense, {user_nick}!<BR>How can you call this an adventurer's bag?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-d" mid="58" select_type="0"><![CDATA[<html>It looks tough and useful.</html>]]></talk_answer>
+      <talk_question mid="57"><![CDATA[<html>$Merchant May$<BR>Hmm, but does it look appealing as an adventurer's bag?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-d" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-3" mid="60" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Merchant May$<BR><FONT color=#7e12d2>(May ponders for a while)</font><BR>If I can't sell them at a high price, I should sell them at a clearance sale.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-3" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="61"><![CDATA[<html>$Merchant May$<BR>Can you go to <FONT color=#a82424>Adventurer's Guild Master Deckard</font> and ask him if he wants to buy adventurer's bags in bulk? I will sell them to him at <FONT color=#a82424>1 Silver per bag</font>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-a" mid="63" select_type="0"><![CDATA[<html>(Tell Deckard about May's offer)</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>What's up?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-b" mid="65" select_type="0"><![CDATA[<html>It looked pretty durable to be used by adventurers.</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Ah, now I know what was troubling May recently. What did you think of the bags?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-c" mid="67" select_type="0"><![CDATA[<html>Condition?</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>I trust you so the bags must be of acceptable standard. I will consider this on one condition.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-d" mid="69" select_type="0"><![CDATA[<html>Would she sell it at that price?</html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>I will take them for <FONT color=#a82424>80 Copper</font> each. 1 Silver per bag is too expensive.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4" mid="71" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Since May's situation doesn't look that good, she will sell them even at that price.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="72"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Please let May know about the conditions.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-a" mid="74" select_type="0"><![CDATA[<html>(Inform May about Deckard's deal terms)</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Merchant May$<BR>What did Deckard say?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-b" mid="76" select_type="0"><![CDATA[<html>(May bites her lips)</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Merchant May${action:Angry}<BR>What? 80 copper?! I absolutely cannot sell them at that price!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-c" mid="78" select_type="0"><![CDATA[<html>Isn't 30 copper profit better than throwing the bags away and getting nothing?</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Merchant May$<BR>Those cost me 50 copper and he wants them for 80? He should just go and rob a bank!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-d" mid="80" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Merchant May$<BR>......I guess it can't be helped.<BR>Let him know we have a deal.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-e" mid="82" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-e" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="83"><![CDATA[<html>$Merchant May$<BR>I'm so upset! If only I have managed to sell them at the retail price, I would have made <FONT color=#a82424>20 times</font> profit.<BR><FONT color=#7e12d2>(May still seems bitter)</font> </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">355</exe>
+         <exe type="recompense_view">3557,3551,3552,3553,3554,3555,3556,3557,3558,3559</exe>
+         <exe type="talk" npc="n026_trader_may">1</exe>
+         <exe type="custom">api_npc_Rage( userObjID, 26);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">3557,3551,3552,3553,3554,3555,3556,3557,3558,3559</exe>
+         <exe type="complete" true="">355</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 26, 600 );</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="h">3</exelink>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="j">1</exelink>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="b" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="c" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="d" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="e" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="f" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="g" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n026_trader_may" sub="b" />
+   <exelink qstep="2" npc="n026_trader_may" sub="c" />
+   <exelink qstep="2" npc="n026_trader_may" sub="d" />
+   <exelink qstep="2" npc="n026_trader_may" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n026_trader_may" sub="b" />
+   <exelink qstep="4" npc="n026_trader_may" sub="c" />
+   <exelink qstep="4" npc="n026_trader_may" sub="d">0</exelink>
+   <exelink qstep="4" npc="n026_trader_may" sub="e">1,2</exelink>
+   <journal_data recompense="1:3551,2:3552,3:3553,4:3554,5:3555,6:3556,7:3557,8:3558,9:3559" quest_title="재고 정리" chapterid="" quest_level="9" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Guilian.dds</contents_image>
+         <destination_pos>8,n323</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>323</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Store Inventory]]></title>
+         <contents mid="85"><![CDATA[<html>Ask Warehouse Keeper Rupert to store May's bags.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Warehouse Keeper Rupert</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Talk to Warehouse Keeper Rupert]]></destination>
+         <todo_msg mid="87"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="88"><![CDATA[Talk to Merchant May]]></title>
+         <contents mid="89"><![CDATA[<html>Rupert agrees to store May's Bags in the Warehouse. Tell May about the news.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="90"><![CDATA[Talk to Merchant May]]></destination>
+         <todo_msg mid="91"><![CDATA[Talk to Merchant May.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="92"><![CDATA[Talk to Adventurer's Guild Master Deckard]]></title>
+         <contents mid="93"><![CDATA[<html>Ask <FONT color=#a82424>Deckard</FONT> if will like to purchase May's Bags.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="94"><![CDATA[Talk to Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="95"><![CDATA[Talk to Adventurer's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="96"><![CDATA[Talk to Merchant May]]></title>
+         <contents mid="97"><![CDATA[<html>Ask <FONT color=#a82424>May</FONT> if she is willing to strike a deal with Deckard. <BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="98"><![CDATA[Talk to Merchant May]]></destination>
+         <todo_msg mid="99"><![CDATA[Talk to Merchant May.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>9:-1</user_level>
+      <user_class />
+      <prev_quest>5101</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

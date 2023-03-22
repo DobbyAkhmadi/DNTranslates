@@ -1,0 +1,37 @@
+   <talk>
+      <npcename>n882_soceress_master_stella</npcename>
+      <npcid>882</npcid>
+      <startexe>1</startexe>
+      <npckname mid="1"><![CDATA[Master Sorceress Stella]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Master Sorceress Stella$<BR>Tidak kusangka bisa melihat teknologi masa depan...</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html><FONT color=#387206>${user_nick}$</FONT><BR>
+<FONT color=#7e12d2>Kenapa Stella ada di gurun?</FONT><BR>
+<FONT color=#7e12d2>Tapi seakan aku pernah melihat... Seperti dejavu. </FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="6" false="2">0</exe>
+         <exe type="conexe" true="7" false="3">1</exe>
+         <exe type="conexe" true="8" false="4">2</exe>
+         <exe type="conexe" true="9" false="5">3</exe>
+         <exe type="conexe" true="10" false="11">4</exe>
+         <exe type="enterquest">sq15_4125_history_of_future</exe>
+         <exe type="enterquest">sq15_4126_history_of_future</exe>
+         <exe type="enterquest">sq15_4127_history_of_future</exe>
+         <exe type="enterquest">sq15_4128_history_of_future</exe>
+         <exe type="enterquest">sq15_4129_history_of_future</exe>
+         <exe type="conexe" true="12" false="0">5</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">4125</chk>
+         <chk type="hasquest">4126</chk>
+         <chk type="hasquest">4127</chk>
+         <chk type="hasquest">4128</chk>
+         <chk type="hasquest">4129</chk>
+         <chk type="class" op="=">5</chk>
+      </conditions>
+   </talk>

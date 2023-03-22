@@ -1,0 +1,56 @@
+   <talk>
+      <npcename>n2861_guild_jin</npcename>
+      <npcid>2861</npcid>
+      <startexe>0</startexe>
+      <comment>n355_guild_war_soldier 와 기능 통합NPC (355 삭제 후 2861로 통합)</comment>
+      <npckname mid="1"><![CDATA[Guild Shopkeeper Jin]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="guild_trade_2" mid="4"><![CDATA[<html>[Guild Shop]</html>]]></talk_answer>
+         <talk_answer link_index="guild_trade_1" mid="16"><![CDATA[<html>[Guild War Shop]</html>]]></talk_answer>
+         <talk_answer link_index="help" mid="17"><![CDATA[<html><FONT color=#086171>[Help]</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Guild Shopkeeper Jin$<BR>Welcome,<FONT color=#387206> {user_nick}</FONT>.<BR>
+…… So the Colosseum is noisy. Is it already the season for <FONT color=#a82424>Guild War</FONT>?<BR>
+ <BR>
+<FONT color=#7e12d2>※The Guild War Final is available on the Colosseum channel.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="guild_trade_2" mid="18"><![CDATA[<html>[Guild Shop]</html>]]></talk_answer>
+         <talk_answer link_index="help" mid="19"><![CDATA[<html><FONT color=#086171>[Help]</FONT></html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Guild Shopkeeper Jin$<BR>
+Welcome,<FONT color=#387206> {user_nick}</FONT> . What brings you here today?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="help" image="" itemindex="">
+         <talk_answer link_index="help_1" mid="20"><![CDATA[<html><FONT color=#086171>[Guild Shop]</FONT> Guide</html>]]></talk_answer>
+         <talk_answer link_index="help_2" mid="21"><![CDATA[<html><FONT color=#086171>[Guild War Shop]</FONT> Guide</html>]]></talk_answer>
+         <talk_answer link_index="back" mid="22"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="11"><![CDATA[<html>$Guild Shopkeeper Jin$<BR>
+Feel free to ask anything. As far as I know, I will answer with all my heart and soul!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="help_1" image="" itemindex="">
+         <talk_answer link_index="help" mid="23"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Guild Shopkeeper Jin$<BR>
+You can purchase goods with Guild Badge as a reward for guild missions from Guild Shop.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="help_2" image="" itemindex="">
+         <talk_answer link_index="help" mid="24"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="15"><![CDATA[<html>$Guild Shopkeeper Jin$<BR>
+For guilds participating in Guild War, they can purchase goods from Guild War Shop with Guild festival Point.<BR>
+ <BR>
+<FONT color=#7e12d2>※Guild War Shop are only available during the Guild War Reward Duration and Final Period.</FONT><BR>
+ </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,6001,102);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,97001,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_guildwar_GetStep(userObjID) == 3</chk>
+      </conditions>
+      <exelink idx="guild_trade_2">4</exelink>
+      <exelink idx="guild_trade_1">3</exelink>
+      <exelink idx="guild_trade_2">4</exelink>
+      <exelink idx="back">0</exelink>
+   </talk>

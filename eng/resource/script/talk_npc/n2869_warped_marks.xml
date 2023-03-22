@@ -1,0 +1,37 @@
+   <talk>
+      <npcename>n2869_warped_marks</npcename>
+      <npcid>2869</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Twisted Trace]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="party_check" mid="4"><![CDATA[<html>(Slowly step forward)</html>]]></talk_answer>
+         <talk_answer link_index="not_going" mid="5"><![CDATA[<html>(Step back)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html><FONT color=#2b2723>$Twisted Trace$</FONT><BR>
+<FONT color=#7e12d2>(Beyond the oddly twisted dimension, a strange scene is seen.)</FONT><BR><BR><FONT color=#7e12d2>※ You can go Saint Heaven through Twisted Trace.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_talk" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Twisted Trace$<BR>
+<FONT color=#7e12d2>(I can feel this discomfort. But not sure what this is.)</FONT><BR>
+<BR>
+<FONT color=#7e12d2>※ Complete Chapter 2 in Main quest and check remote quest from Journal [J]</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="party" image="" itemindex="">
+         <talk_question mid="7"><![CDATA[<html>$Twisted Trace$<BR>
+<FONT color=#7e12d2>(Dimension shook and the scene scattered away)</FONT><BR>
+<FONT color=#7e12d2><BR>※ You can't move while in a party.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">no_talk</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,11,4);</exe>
+         <exe type="talk">party</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">3816</chk>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="party_check">3</exelink>
+   </talk>

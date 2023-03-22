@@ -1,0 +1,483 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_415_stopgap</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>415</qid>
+      <designer>김인정</designer>
+      <qlevel>32</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>416</nextqid>
+      <nextqname>mq11_416_dig_for_minerals</nextqname>
+      <nextqnpc>n039_bishop_ignasio</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Temporary Expedients]]></qkname>
+      <qnpc>
+         <npcid>216</npcid>
+         <npcename>n216_geraint_wounded</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>39</npcid>
+         <npcename>n039_bishop_ignasio</npcename>
+         <npckname>주교 이그나시오</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>44</npcid>
+         <npcename>n044_archer_master_ishilien</npcename>
+         <npckname>상급 아처 이실리엔</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-noquest" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-noquest-" mid="181" select_type="5" />
+      <talk_question mid="91"><![CDATA[<html>$Gerraint$<BR>
+<FONT color=#a82424>Master Archer Eithain</FONT>... Aggota dari Silver Crescent Archers, aku masih ingat Elf yg pintar itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-noquest" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-noquest-" mid="182" select_type="5" />
+      <talk_question mid="92"><![CDATA[<html>$General Douglas$<BR><FONT color=#a82424>Master Archer Eithain</FONT> adalah veteran yg mengikuti perang 50 tahun yg lalu.<BR>Jika orang seperti membantu para tentara.. Aku merasa lega.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-noquest" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-noquest-" mid="183" select_type="5" />
+      <talk_question mid="93"><![CDATA[<html>$Bishop Ignacio$<BR>Apakah <FONT color=#a82424>Goddess</FONT> baik-baik saja? Meskipun <FONT color=#a82424>Gerraint</FONT>  merawatnya dengan baik, aku merasa tidak tenang karena tidak ada di depan mata.<BR>Haha… Ini hanya khawatiran orang yg sudah tua.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-accepting-a" mid="97" select_type="2" />
+      <talk_question mid="94"><![CDATA[<html>$Master Archer Eithain$<BR>Insiden, <FONT color=#a82424>Rain of Disaster</FONT> dan darah Black Dragon...<BR>Setelah Black Dragon Raid 50 tahun lalu, hal yang sama terjadi. Ada banyak sekali tentara dengan gejala yang sama</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-accepting-acceptted" mid="99" select_type="3" />
+      <talk_question mid="98"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Tidak ada obatnya sama sekali?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-" mid="106" select_type="5" />
+      <talk_question mid="5"><![CDATA[<html>$Bishop Ignacio$<BR>Bagaimana keadaan <FONT color=#a82424>Prophet</FONT>? Aku tahu <FONT color=#a82424>Gerraint</FONT> merawatnya dengan sangat baik, tapi aku sedikit cemas karena aku tidak bisa melihatnya.<BR>Haha... Ini hanya orang tua yang terlalu cemas.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="107" select_type="5" />
+      <talk_question mid="6"><![CDATA[<html>$General Douglas$<BR><FONT color=#a82424>Master Archer Eithain</FONT> ikut dalam perang 50 tahun yang lalu.<BR>Aku lega dia membantu kita sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-1" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-1-" mid="108" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Gerraint$<BR>Kesini untuk melihat <FONT color=#a82424>Ancient</FONT> lagi?<BR>Tenang saja, hanya kamu dan Argenta yang bisa  masuk ke tempat ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1" image="QN_archer_nerwin_silhouette.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-a" mid="110" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Master Archer Eithain$<BR><FONT color=#a82424>Obat</FONT> yang manjur belum ditemukan.<BR>SEANDAINYA ada, <FONT color=#a82424>dia</FONT> tidak perlu melalui ini semua......<BR>
+<FONT color=#7e12d2>(Eithain tidak menyelesaikan kalimatnya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-a" image="QN_Npc_Karakule_silhouette.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-b" mid="111" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Master Archer Eithain$<BR>Maaf. Aku sedang bicara sendiri.<BR>Banyak orang termasuk <FONT color=#a82424>Karacule</FONT> sedang mencari perawatan, tapi belum ada yang berhasil menemukannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-c" mid="112" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Master Archer Eithain$<BR>Tidak ada obatnya saat ini, tapi kita bisa <FONT color=#a82424>menangani gejala</FONT> sementara.<BR>Berapa lama seseorang bisa bertahan tergantung kekuatan seseorang, tapi akan lebih baik memberikan mereka obat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-d" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Apa obatnya?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-e" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>$Master Archer Eithain$<BR>Namanya <FONT color=#a82424>Spirit's Teardrop</FONT> yang hanya bisa kamu temukan di <FONT color=#a82424>Dark Overlord's Tower</FONT>.<BR>Kalau kamu membawakan Spirit's Teardrop padaku, aku akan mencoba membuat obatnya.<BR>Aku masih ingat cara membuatnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-e" image="QS_Default.dds" itemindex="300246" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2" mid="117" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Master Archer Eithain$<BR> Aku akan mencoba membuat obatnya dengan itu.<BR>Aku masih ingat cara membuatnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2" image="QS_Default.dds" itemindex="300246" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-" mid="118" select_type="5" />
+      <talk_question mid="18"><![CDATA[<html>$Master Archer Eithain${action:talk}<BR>Ambilkan aku beberapa <FONT color=#a82424>Spirit's Teardrop</FONT> dari brethren di Dark Overlord Tower. Walaupun Water Spirit sudah lama hilang, brethren yang mempelajari sihir mereka seharusnya  masih menyimpannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-a" mid="119" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Master Archer Eithain${action:talk}<BR> Aku akan membuat obatnya sekarang.<BR>Aku akan mengirimkan ke pusat perawatan jika sudah selesai. Laporkan ke <FONT color=#a82424>General Douglas</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-b" mid="121" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-b" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-" mid="122" select_type="5" />
+      <talk_question mid="22"><![CDATA[<html>$Master Archer Eithain$<BR>Tanah ini sudah tercemar darah <FONT color=#a82424>Black Dragon</FONT>. Tanah Goddess akan menjadi kacau setelah orang-orang tidak berdosa ikut tercemar.<BR>Aku harap kita bisa segera mengobati racun ini untuk menghentikan kekacauan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-4" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-4-" mid="124" select_type="5" />
+      <talk_question mid="23"><![CDATA[<html>$Master Archer Eithain$<BR>Kamu sudah sering menyelamatkan aku.<BR>Aku akan mengirimkan obat kepada pasukan yang terluka setelah aku selesai, Laporkan soal ini kepada <FONT color=#a82424>General Douglas</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-4" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-4-a" mid="131" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$General Douglas$<BR>Does <FONT color=#a82424>Master Archer Eithain</FONT> tau asal penyakit ini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-4-b" mid="132" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Itu karena darah Black Dragon.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-4-b" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-4-c" mid="133" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$General Douglas${action:Talk}<BR>Para monster jahat masih menyiksa pasukan kita walaupun mereka sudah mati.<BR>Kita dapat memperkecil kerugian berkat bantuan Eithain, Namun ini hanya sementara sampai obatnya ditemukan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-4-d" mid="134" select_type="2" />
+      <talk_question mid="128"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Tidak ada yang bisa kita lakukan sekarang.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-4-e" mid="135" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$General Douglas$<BR>Aku akan mengurus pasukanku sampai mereka sembuh.<BR>Aku tidak akan menyerah sampai menemukan obatnya.<BR>Siapa yang akan bertarung demi kerajaan yang tidak mengurus pasukannya?<BR>
+<FONT color=#7e12d2>(General Douglas bertekad)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-4-e" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-4-" mid="125" select_type="5" />
+      <talk_question mid="32"><![CDATA[<html>$General Douglas$<BR>Kamu pasti sedang sibuk membantu Ignacio namun masih mau menolong kami juga, Terima kasih. Kamu sudah cukup membantu jadi kembalilah ke <FONT color=#a82424>Bishop Ignacio</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-5" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-5-" mid="129" select_type="5" />
+      <talk_question mid="33"><![CDATA[<html>$General Douglas$<BR>Hah? Kamu belum kembali ke <FONT color=#a82424>Bishop Ignacio</FONT> ?<BR>Dia sangat percaya sama kamu jadi cobalah untuk lebih sering mengunjungi dia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-a" mid="136" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Bishop Ignacio${action:Talk}<BR>Selamat datang, Sahabat <FONT color=#a82424>Saint's Haven</FONT>.<BR>Aku sedang mencemaskan sesuatu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-b" mid="138" select_type="2" />
+      <talk_question mid="137"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><FONT color=#662500><BR></FONT>
+<FONT color=#662500>Apa yang sedang kamu cemaskan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-b" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-c" mid="139" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Bishop Ignacio$<BR>Aku tau <FONT color=#a82424>Gerraint</FONT> melindungi dia tapi aku cemas kalau ada monster jahat yang menyerang saat <FONT color=#a82424>Prophet</FONT> tertidur?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-d" mid="141" select_type="2" />
+      <talk_question mid="140"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Percaya sama Gerraint.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-e" mid="142" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Bishop Ignacio$<BR>Bukannya aku tidak percaya sama Gerraint. Tapi kamu tau bagaimana saat kita melemahkan Black Dragon's Nest dengan <FONT color=#a82424>Ancient Celebrant's Rune</FONT>.<BR>Nah aku cemas kalau ada orang lain yang menggunakan cara yang sama.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-f" mid="144" select_type="2" />
+      <talk_question mid="143"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Kedengarannya cukup serius.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-5-f" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-5-" mid="145" select_type="5" />
+      <talk_question mid="40"><![CDATA[<html>$Bishop Ignacio$<BR>Tanyakan pada <FONT color=#a82424>Gerraint</FONT> mengenai itu?<BR>Walaupun Cuma masalah kecil tapi lebih baik bersiap-siap daripada menyesal nantinya. Aku harap dia tidak tersinggung.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-6-a" mid="147" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Bishop Ignacio${action:Talk}<BR>Aku cemas kalau seseorang bakalan menyusup ke <FONT color=#a82424>Gold Dragon's nest</FONT>. Kamu ingat kan saat kamu menyusup ke Black Dragon nest menggunakan Ancient Priest's Rune. Bagaimana jika orang lain menggunakan cara yang sama untuk menyusup ke Gold Dragon Nest?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-6-b" mid="149" select_type="2" />
+      <talk_question mid="148"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Kedengarannya cukup serius.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-6-b" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-6-" mid="150" select_type="5" />
+      <talk_question mid="43"><![CDATA[<html>$Bishop Ignacio$<BR>Tanyakan pada <FONT color=#a82424>Gerraint</FONT> mengenai itu?<BR>Walaupun Cuma masalah kecil tapi lebih baik bersiap-siap daripada menyesal nantinya. Aku harap dia tidak tersinggung.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-a" mid="155" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Gerraint$<BR>Kamu tidak perlu cemas dengan Ancient Priest's Rune.<BR>Black Dragon dibuat menggunakan <FONT color=#a82424>Kekuatan Ancients</FONT> jadi kita dapat menggunakan rune itu untuk memperlemah nest Black Dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-b" mid="156" select_type="2" />
+      <talk_question mid="151"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Apa maksudnya berbeda?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-c" mid="157" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Gerraint$<BR>Kami berbeda dengan keturunan <FONT color=#a82424>Chaos Dragon</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-d" mid="158" select_type="2" />
+      <talk_question mid="152"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>"Kami"? Maksudnya kamu dan Argenta?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-e" mid="159" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Gerraint$<BR>Ya. Sejauh yang aku tau, Aku dan Argenta adalah satu-satunya <FONT color=#a82424>keturunan Ancient Dragon</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6-e" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-f" mid="160" select_type="2" />
+      <talk_question mid="153"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Begitu ya. (Jadi Argenta juga seekor naga)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6-f" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-" mid="161" select_type="5" />
+      <talk_question mid="50"><![CDATA[<html>$Gerraint$<BR>Sepertinya kamu sudah selesai denganku.<BR>Kembalilah kepada dia yang mengutusmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-7" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-7-" mid="163" select_type="5" />
+      <talk_question mid="51"><![CDATA[<html>$Gerraint$<BR>Sebuah <FONT color=#a82424>Nest</FONT> ada diluar batas. Penyusup tidak akan bisa menggunakan kekuatan di dalam nest kecuali <FONT color=#a82424>pemilik nestnya</FONT> menghilang.<BR>Jadi katakan pada para manusia kalau mereka tidak perlu merasa cemas.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-7" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-7-a" mid="164" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>$Bishop Ignacio${action:Talk}<BR>Kamu sudah kembali.<BR>Apa kata <FONT color=#a82424>Gerraint</FONT> ?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-7-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-7-b" mid="166" select_type="2" />
+      <talk_question mid="165"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Tidak ada alasan untuk khawatir.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-7-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-7-c" mid="167" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>$Bishop Ignacio$<BR>Hmm.. Begitu ya... Berbeda-beda untuk setiap dragon.<BR>Aku mengerti. <FONT color=#a82424>Ancient Priest's Rune</FONT> tidak akan bekerja. Aku lega mendengarnya.<BR>
+<FONT color=#7e12d2>(Bishop tersenyum puas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-7-c" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-7-d" mid="57" select_type="0"><![CDATA[<html>(Tunjukkan Gerraint's Pendant.)</html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Bishop Ignacio$<BR>Kamu dapat memasuki tempatnya karena... Apa yang tadi kamu bilang? Karena... Oh! Semacam Pendanat yang kamu dapatkan dari <FONT color=#a82424>Gerraint</FONT>, benar kan?<BR>Bolehkah aku melihatnya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-7-d" image="QS_Default.dds" itemindex="300022" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-7-e" mid="168" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Bishop Ignacio$<BR>Terampil sekali. Aku tidak pernah menyangka akan melihat sesuatu milik dragon dengan mata kepalaku sendiri.<BR>Hati-hati jangan sampai hilang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-7-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-7-f" mid="170" select_type="4" />
+      <talk_question mid="169"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-7-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-7-!next" mid="172" select_type="2" />
+      <talk_question mid="171"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">415</exe>
+         <exe type="talk" npc="n044_archer_master_ishilien">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">1068</exe>
+         <exe type="huntitem" num="1" exe="" onexe="5,6,7">300246</exe>
+         <exe type="addquestitem" num="1">300246</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">201068</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="1">300246</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">4151,4151,4152,4153,4154,4154,4156,,</exe>
+         <exe type="complete" true="">415</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n044_archer_master_ishilien" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="b" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="c" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="d" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="e" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="2">0,2,8,3,1</exelink>
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="b">0,1,2</exelink>
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="" />
+   <exelink qstep="4" npc="n042_general_duglars" sub="b" />
+   <exelink qstep="4" npc="n042_general_duglars" sub="c" />
+   <exelink qstep="4" npc="n042_general_duglars" sub="d" />
+   <exelink qstep="4" npc="n042_general_duglars" sub="e">0,1</exelink>
+   <exelink qstep="4" npc="n042_general_duglars" sub="" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="b" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="c" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="d" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="e" />
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="f">0,1</exelink>
+   <exelink qstep="5" npc="n039_bishop_ignasio" sub="" />
+   <exelink qstep="6" npc="n039_bishop_ignasio" sub="b" />
+   <exelink qstep="6" npc="n039_bishop_ignasio" sub="" />
+   <exelink qstep="6" npc="n216_geraint_wounded" sub="b" />
+   <exelink qstep="6" npc="n216_geraint_wounded" sub="c" />
+   <exelink qstep="6" npc="n216_geraint_wounded" sub="d" />
+   <exelink qstep="6" npc="n216_geraint_wounded" sub="e" />
+   <exelink qstep="6" npc="n216_geraint_wounded" sub="f">0,1</exelink>
+   <exelink qstep="6" npc="n216_geraint_wounded" sub="" />
+   <exelink qstep="7" npc="n039_bishop_ignasio" sub="b" />
+   <exelink qstep="7" npc="n039_bishop_ignasio" sub="c" />
+   <exelink qstep="7" npc="n039_bishop_ignasio" sub="d" />
+   <exelink qstep="7" npc="n039_bishop_ignasio" sub="e">0</exelink>
+   <exelink qstep="7" npc="n039_bishop_ignasio" sub="f">1</exelink>
+   <exelink qstep="7" npc="n039_bishop_ignasio" sub="!next" />
+   <journal_data recompense="1:4151,2:4152,3:4153,4:4154,5:4154,6:4156" quest_title="임시방편" chapterid="5" quest_level="32" quest_mark_type="1" use_item_list="300246">
+      <journal index="1">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="63"><![CDATA[Lokasi obat]]></title>
+         <contents mid="64"><![CDATA[<html>Bicara pada Master Archer Eithain tentang <FONT color=#a82424>Medicine</FONT>.<BR> <BR><FONT color=#086171>Saint's Haven Royal Palace</FONT> <FONT color=#a82424>→ Master Archer Eithain</FONT></html>]]></contents>
+         <destination mid="65"><![CDATA[Bicara pada Master Archer Eithain]]></destination>
+         <todo_msg mid="66"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_40.dds</contents_image>
+         <destination_pos>403,0,0</destination_pos>
+         <destination_mode>custom:401@3,402@3,403@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="67"><![CDATA[Kumpulkan Spirit Teardrop]]></title>
+         <contents mid="68"><![CDATA[<html>Kumpulkan <FONT color=#a82424>Spirit Teardrop</FONT> di <FONT color=#a82424>Spirit's Grave Tomb</FONT>. Sepertinya kamu harus membuat obat tersebut dengan menggunakan Spirit Teardrop. Sepertinya Monster terkuat pasti akan memiliki Spirit Teardrop.<BR><BR><FONT color=#086171>Hermalte Port (River Ruins Path)</FONT> <FONT color=#a82424>→ Spirit's Grave tomb</FONT></html>]]></contents>
+         <destination mid="69"><![CDATA[Kumpulkan Spirit Teardrop di Spirit's Grave Tomb]]></destination>
+         <todo_msg mid="70"><![CDATA[Dapatkan Spirit Teardrop di Spirit's Grave Tomb]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="71"><![CDATA[Master Archer Eithain's Medicine]]></title>
+         <contents mid="72"><![CDATA[<html>Kamu telah mengumpulkan <FONT color=#a82424>Spirit Teardrop</FONT>. Kembali dan laporkan pada Master Archer Eithainn.<BR> <BR><FONT color=#086171>Saint's Haven </FONT>→ Master Archer Eithain</html>]]></contents>
+         <destination mid="73"><![CDATA[Bicara pada Master Archer Eithain]]></destination>
+         <todo_msg mid="74"><![CDATA[Berikan Spirit Teardrop pada Master Archer Eithain.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Genaral_Duglas.dds</contents_image>
+         <destination_pos>11,n42</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>42</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="75"><![CDATA[Lapor pada General]]></title>
+         <contents mid="76"><![CDATA[<html><FONT color=#a82424>Master Archer Eithain</FONT> berkata bahwa dia akan membuat obatnya. Laporkan situasi tersebut pada General Douglas.<BR> <BR><FONT color=#086171>Saint's Haven </FONT>→ General Douglas</html>]]></contents>
+         <destination mid="77"><![CDATA[Bicara pada General Douglas]]></destination>
+         <todo_msg mid="78"><![CDATA[Kamu telah menyelesaikan misi. Silahkan melapor pada General Douglas.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Bishop.dds</contents_image>
+         <destination_pos>11,n39</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>39</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="79"><![CDATA[Urusan lain]]></title>
+         <contents mid="80"><![CDATA[<html>Kamu telah menyelesaikan semua keperluan. temui Bishop Ignacio.<BR> <BR><FONT color=#086171>Saint's Haven Royal Palace</FONT> <FONT color=#a82424>→ Bishop Ignacio</FONT></html>]]></contents>
+         <destination mid="81"><![CDATA[Bicara pada Bishop Ignacio]]></destination>
+         <todo_msg mid="82"><![CDATA[Tanyakan Bishop Ignacio apakah dia ada perlu lagi denganmu.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Geraint_Closeeye.dds</contents_image>
+         <destination_pos>13014,n216</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>216</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="83"><![CDATA[Tanyakan pada Gerraint]]></title>
+         <contents mid="84"><![CDATA[<html>Dapatkah <FONT color=#a82424>Ancient Celebrate's Rune</FONT> juga melemahkan Nest milik Gerraint? Karena Bishop Ignacio sangat khawatir terhadap masalah ini. Silahkan bicara pada <FONT color=#a82424>Gerraint</FONT> dan pastikan hal ini dengannya.<BR> <BR><FONT color=#086171>Saint's Haven (Underground Secret Region)</FONT> <FONT color=#a82424>→ Gerraint</FONT></html>]]></contents>
+         <destination mid="85"><![CDATA[Bicara pada Gerraint]]></destination>
+         <todo_msg mid="86"><![CDATA[Silahkan teruskan pertanyaan Bishop Ignacio pada Gerraint.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Bishop.dds</contents_image>
+         <destination_pos>11,n39</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>39</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="87"><![CDATA[The Dragon's Response]]></title>
+         <contents mid="88"><![CDATA[<html>Berikan jawaban dari Gerraint pada Bishop Ignacio.<BR> <BR><FONT color=#086171>Saint's Haven Royal Palace</FONT> <FONT color=#a82424>→ Bishop Ignacio</FONT></html>]]></contents>
+         <destination mid="89"><![CDATA[Bicara pada Bishop Ignacio]]></destination>
+         <todo_msg mid="90"><![CDATA[Silahkan berikan jawaban dari Gerraint pada Bishop Ignacio]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>414</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

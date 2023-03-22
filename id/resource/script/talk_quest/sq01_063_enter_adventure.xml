@@ -1,0 +1,169 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq01_063_enter_adventure</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>63</qid>
+      <designer>김인정</designer>
+      <qlevel>8</qlevel>
+      <qdesc>모험자 길드원과 대화
+길드 게시판과 대화</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Adventurer's Introduction]]></qkname>
+      <qnpc>
+         <npcid>341</npcid>
+         <npcename>n341_guild_luke</npcename>
+         <npckname>모험자 길드원 루크</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>402</npcid>
+         <npcename>n402_guild_board</npcename>
+         <npckname>모험자 길드 게시판</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n341_guild_luke-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n341_guild_luke-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Member Luke$<BR>Ah, <FONT color=#382000>{user_class} {user_nick}</FONT>! Masih hidup sebagai Adventurers?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n341_guild_luke-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n341_guild_luke-accepting-acceptted" mid="20" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Adventurer's Introduction$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n341_guild_luke-1" image="QW_WindForest.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Adventurer's Guild Member Luke${action:Talk}<BR>Sekarang<FONT color=#a82424> pergilah </FONT>ke Guild Comission Board yang ada di depan<FONT color=#a82424> Wind Forest Temple</FONT>. Soal penempelan request ini tidak perlu dilaporkan kepadaku secara khusus.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n402_guild_board-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n402_guild_board-1-a" mid="23" select_type="0"><![CDATA[<html>(Menempel quest form.)</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Adventurer's Guild Board$<BR>(Berbagai macam misi ada di board. Ada beberapa yang sobek dan ada beberapa yang di ubah.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n402_guild_board-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n402_guild_board-1-b" mid="25" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n402_guild_board-1-b" image="QS_Default.dds" itemindex="300227" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="26"><![CDATA[<html>$Adventurer's Guild Board$<BR>(Saat menempelkan Beginner's Mission Notice, kamu melihat misi yang terlihat mudah. Lihatlah board lagi jika kamu tertarik.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n341_guild_luke-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n341_guild_luke-2-a" mid="33" select_type="0"><![CDATA[<html>(Teruskan)</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Adventurer's Guild Member Luke$<BR>Jika sudah bertualang dalam waktu lama kadang apa yang harus dilakukan, harus pergi ke mana, kehilangan arah dan akhirnya tersesat. Saat seperti ini  <FONT color=#a82424>sudah saatnya</FONT> <FONT color=#a82424>mencari</FONT>Adventurer's Slump.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n341_guild_luke-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n341_guild_luke-2-b" mid="35" select_type="0"><![CDATA[<html>Bagaimana menerima requestnya?</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Adventurer's Guild Member Luke${action:Talk}<BR>Saat seperti itu <FONT color=#a82424>terimalah</FONT>request<FONT color=#a82424>di</FONT>Adventurer's Guild dan lakukan. Karena tugas yang harus dilakukan dan yang bisa dilakukan dijabarkan dengan jelas maka tidak perlu bingung apa yang harus dilakukan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n341_guild_luke-2-b" image="QW_WindForest.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n341_guild_luke-2-c" mid="37" select_type="0"><![CDATA[<html>Request seperti apa?</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Adventurer's Guild Member Luke$<BR</html>Ada Guild Commission Board <FONT color=#a82424>di setiap daerah yang terhubung dengan masing-masing dungeon</FONT> atau di luar desa. Tempat yang terdekat dari sini... <FONT color=#a82424>adalah </FONT>Wind Forest. <FONT color=#a82424> Wind Forest's Catacomb Entrance</FONT>dan <FONT color=#a82424>Wind Forest's Temple Entrance</FONT> masing-masing terdapat satu Guild Comission Board.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n341_guild_luke-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n341_guild_luke-2-d" mid="39" select_type="0"><![CDATA[<html>Benar juga.</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Adventurer's Guild Member Luke$<BR>Adventurer <FONT color=#a82424>menerima tugas yang sesuai dengan kenyataan </FONT>dan melakukannya. Bisa menerima beragam request mulai dari pencarian kucing hingga mengalahkan evil. Selain itu, kadang tersembunyi <FONT color=#a82424>quest</FONT> <FONT color=#a82424>rahasia</FONT>tergantung dari boardnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n341_guild_luke-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n341_guild_luke-2-e" mid="41" select_type="0"><![CDATA[<html>Saya akan melakukannnya.</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Adventurer's Guild Member Luke${action:Talk}<BR>Jika request yang bersangkutan<FONT color=#a82424>dari board telah dilaksanakan semua</FONT>maka akan ditambahkan quest rahasia. Tapi tidak tahu tersembunyi di board yang berlokasi di dungeon yang mana. Pokoknya... seeing is believing. Kalau tertarik, silakan pergi sekali lagi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n341_guild_luke-2-e" image="QS_Default.dds" itemindex="300227" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n341_guild_luke-1" mid="43" select_type="0"><![CDATA[<html>Baiklah.</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Adventurer's Guild Member Luke$<BR>Ah, sekalian kamu pergi bagaimana kalau aku berikan tugas sederhana? Aku punya<FONT color=#a82424>satu lembar</FONT>surat request Beginner Adventurer, tolong tempelkan di board.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">631,631,632,633,634,,636,637,,</exe>
+         <exe type="setquest">63</exe>
+         <exe type="talk" npc="n341_guild_luke">2</exe>
+         <exe type="addquestitem" num="1">300227</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">631,631,632,633,634,,636,637,,</exe>
+         <exe type="delquestitem" num="-1">300227</exe>
+         <exe type="complete" true="">63</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">1</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="addquestitem" num="1">300227</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n341_guild_luke" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n341_guild_luke" sub="acceptted">1,2,4</exelink>
+   <exelink qstep="1" npc="n402_guild_board" sub="a">0</exelink>
+   <exelink qstep="1" npc="n402_guild_board" sub="b">1,2</exelink>
+   <exelink qstep="2" npc="n341_guild_luke" sub="b" />
+   <exelink qstep="2" npc="n341_guild_luke" sub="c" />
+   <exelink qstep="2" npc="n341_guild_luke" sub="d" />
+   <exelink qstep="2" npc="n341_guild_luke" sub="e" />
+   <exelink qstep="2" npc="n341_guild_luke" sub="1">0,1,2</exelink>
+   <journal_data recompense="1:631,2:632,3:633,4:634,6:636,7:637" quest_title="모험자 입문" chapterid="" quest_level="8" quest_mark_type="10" use_item_list="300227">
+      <journal index="1">
+         <contents_image />
+         <destination_pos>1,n341</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>341</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="47"><![CDATA[Adventurer's Guild Request]]></title>
+         <contents mid="48"><![CDATA[<html>Sepertinya Adventurer's Guild Member Luke ingin mengatakan sesuatu. Mari kita dengar dari Prairie Town's Adventurer's Guild Member Luke.<BR><BR><FONT color=#086171>Prairie town</FONT><FONT color=#a82424> → Adventurer's Guild Member Luke</FONT></html>]]></contents>
+         <destination mid="49"><![CDATA[Bicara dengan Adventurer's Guild Member Luke]]></destination>
+         <todo_msg mid="50"><![CDATA[Bicaralah dengan Prairie Town's Adventurer's Guild Member Luke]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_WindForest.dds</contents_image>
+         <destination_pos>3,n402</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>402</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="28"><![CDATA[The Adventurer's Guild]]></title>
+         <contents mid="29"><![CDATA[<html><FONT color=#a82424>Mari kita tempel surat request di board yang ada di</FONT>Wind Forest Temple's Entrance.<BR><BR><FONT color=#086171>Wind Forest</FONT> <FONT color=#a82424>→ Wind Forest Temple's Entrance</FONT></html>]]></contents>
+         <destination mid="30"><![CDATA[Periksa Adventurer's Guild Board di dekat Wind Forest Temple.]]></destination>
+         <todo_msg mid="31"><![CDATA[Tempelkan Adventurer's Guild Member Luke's notice pada Adventurer's Guild Board di dekata Wind Forest Temple.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>8:-1</user_level>
+      <user_class>1:2:6:7</user_class>
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

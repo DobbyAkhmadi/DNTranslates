@@ -1,0 +1,707 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc14_9426_the_man_who_open_the_door</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>14</qchapter>
+      <qid>9426</qid>
+      <designer>최지은</designer>
+      <qlevel>72</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9427</nextqid>
+      <nextqname>mqc14_9427_invasion</nextqname>
+      <nextqnpc>n1067_elder_elf</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[The One Who Tries To Open The Door]]></qkname>
+      <qnpc>
+         <npcid>1515</npcid>
+         <npcename>n1515_for_memory</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1067</npcid>
+         <npcename>n1067_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1545</npcid>
+         <npcename>n1545_pether</npcename>
+         <npckname>페더</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1546</npcid>
+         <npcename>n1546_lunaria</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1547</npcid>
+         <npcename>n1547_for_memory</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1505</npcid>
+         <npcename>n1505_elf_king</npcename>
+         <npckname>엘프 왕 페르데레스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1548</npcid>
+         <npcename>n1548_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1518</npcid>
+         <npcename>n1518_for_memory</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1537</npcid>
+         <npcename>n1537_gereint_kid</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1515_for_memory-accepting" image="QN_Npc_Elder_elf.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1515_for_memory-accepting-acceptted" mid="6" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Ask the Elf Elder if anyone has entered the Monolith.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1537_gereint_kid-1" image="QN_Npc_Elder_elf.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1537_gereint_kid-1-" mid="10" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(The Elf Elder is in front of the Tree of Life.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1515_for_memory-1" image="QN_Npc_Elder_elf.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1515_for_memory-1-" mid="12" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(The Elf Elder is in front of the Tree of Life.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-a" mid="14" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Elf Elder$<BR>What's the matter? You look like you ran here in a hurry.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-b" mid="16" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Tell him what Argenta said)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-c" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Elf Elder$<BR>We've been guarding this place day and night.<BR>A few Dragon Followers tried to enter, but we stopped all of them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-d" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But… Feder was inside.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2" mid="22" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Elf Elder$<BR>What? How can that be possible…?!<BR>Why don't you ask our king about this?<BR>Since his body is combined with the Tree of Life which stretches its roots under the Monolith, he may have seen more things than we did.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-" mid="209" select_type="5" />
+      <talk_question mid="207"><![CDATA[<html>$Elf Elder$<BR>We've been guarding this place day and night.<BR>A few Dragon Followers tried to enter, but we stopped all of them.<BR><FONT color=#7e12d2>(You must be Lv. 74 or above to proceed with this quest.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-" mid="24" select_type="5" />
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay.<BR>(Enter the Tree of Life.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1545_pether-3" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Pether.dds" center_image="">
+      <talk_answer link_index="n1545_pether-3-" mid="26" select_type="5" />
+      <talk_question mid="25"><![CDATA[<html>$Feder$<BR><FONT color=#7e12d2>(You cannot talk with him.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1546_lunaria-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1546_lunaria-3-" mid="28" select_type="5" />
+      <talk_question mid="27"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(You cannot talk with her.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1547_for_memory-3" image="QN_Npc_King_Yubaensiael.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1547_for_memory-3-a" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Where's Federeth? Wait, isn't that Feder?! And next to him...)</FONT>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1547_for_memory-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1547_for_memory-3-b" mid="32" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Listen to their conversation.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1547_for_memory-3-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Pether.dds" center_image="">
+      <talk_answer link_index="n1547_for_memory-3-c" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Feder${sound:npc_Feder_9426_qu_01.ogg}<BR>Are you telling me the truth, Lunaria?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1547_for_memory-3-c" image="" itemindex="" portrait_left="NPC_Left_Lunaria.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1547_for_memory-3-d" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(She nods.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1547_for_memory-3-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Pether.dds" center_image="">
+      <talk_answer link_index="n1547_for_memory-3-e" mid="38" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Feder${sound:npc_Feder_9426_qu_02.ogg}<BR>If what you're saying is the truth, we can be considered to be on the same side... or maybe not. What is your real goal?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1547_for_memory-3-e" image="" itemindex="" portrait_left="NPC_Left_Lunaria.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1547_for_memory-3-f" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9426_qu_01.ogg}<BR>My goal?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1547_for_memory-3-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Pether.dds" center_image="">
+      <talk_answer link_index="n1547_for_memory-4" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Feder${sound:npc_Feder_9426_qu_03.ogg}<BR>Yes, your goal. Since you're a fragment of the Goddess, you wouldn't care about human's petty feelings.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1547_for_memory-4" image="" itemindex="" portrait_left="NPC_Left_Lunaria.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1547_for_memory-4-" mid="44" select_type="5" />
+      <talk_question mid="43"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9426_qu_02.ogg}<BR>...That's true if you think so. But I'm just doing what I need to do.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-5-a" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Elf King Federeth$<BR><FONT color=#387206>{user_nick}</FONT>? What brings you here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-5-b" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>?!?!!Yuvenciel! You weren't here a moment ago!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-5-c" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Elf King Federeth$<BR>It's Federeth now. I was here all along. You're the one who appeared out of a sudden. Is something wrong?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-5-d" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…?!?! What?<BR>(What's going on here?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-5-e" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Elf King Federeth$<BR>…You seem to be searching for answers that cannot be solved in our current world.<BR>May I suggest a few words that might answer your queries?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-5-f" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…(Looks like time travel or talking about Feder and Lunaria would make no sense right now. Ask him about the intruders to the Monolith first)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-5-g" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Elf King Federeth$<BR>Hmm intruders…? I didn't see any intruders. At least there were no intruders who entered through the Anu Arendel entrance. But I do feel something weird abou the <FONT color=#a82424>Abyss of Heat</FONT>. Why don't you try checking that place out?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-5-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-6" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I see. I'll go and check on Abyss of Heat right now.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1505_elf_king-6" image="QW_93.dds " itemindex="" portrait_left="" portrait_right="NPC_Right_King_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1505_elf_king-6-" mid="62" select_type="5" />
+      <talk_question mid="61"><![CDATA[<html>$Elf King Federeth$<BR>You're busy trying to save the world as usual.<FONT color=#7e12d2>(Federeth gives you a warm smile)</FONT><BR>We will guard this place to our utmost abilities so you can concentrate on the issues on your hand.<BR><FONT color=#7e12d2>(Go to the Abyss of Heat)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-a" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9426_qu_03.ogg}<BR>You're...<BR><FONT color=#7e12d2>(Lunaria's eyes widen with suprise)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-b" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You're the girl who was talking to Feder just now...!!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-c" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9426_qu_04.ogg}<BR>…So this is how we meet each other this time…<BR>Long time no see.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-d" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Long time no see....?? Do I know you?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-e" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Lunaria$<BR>You don't know me... but I know you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-f" mid="74" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(What is she saying?) Are you the person who broke into the Monolith?!!</FONT><BR>
+<FONT color=#662500>Did you do something to do seal stone too?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-g" mid="76" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>$Lunaria$<BR>…Well, first of all I'm not a person, and as for the seal stone… I just took a peek. There were too many "things" inside so I was a little suprised.<BR>Only now that I see the things that I couldn't see the other time. Like him, I...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-h" mid="78" select_type="2" />
+      <talk_question mid="77"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What are you talking about? You'd better give me some clear answers. What are you? What are you doing here? And what were you doing with Feder?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Lunaria$<BR>We both want the same thing. That's why I'm with him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-j" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Lunaria$<BR><FONT color=#387206>{user_nick}</FONT>...?! What are you doing here?!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-k" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Lunaria! Finally we meet again!<BR>What were you talking to Feder about just now? Why are you with Feder?<BR>You said to me yourself that the owner of the Red Army has to be stopped...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-l" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Lunaria$<BR>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-m" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Come on Lunaria… answer me!</FONT><BR>
+<FONT color=#662500>How come you're with Feder?!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-n" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>$Lunaria$<BR>He wants to open the door and I have to open it too.<BR>That's all.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-o" mid="92" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What? You know what will happen if you open the Monolith!!</FONT><BR>
+<FONT color=#662500>You won't solve anything by opening it. Think about what might happen to this world. Don't tell me you want to destroy this world too?!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-p" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(Lunaria looks suprised.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-q" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Answer me, Lunaria!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-r" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>$Lunaria$<BR>No, I'm not trying to destroy everything… The only thing that will disappear will be…<BR><FONT color=#7e12d2>(Lunaria looks at you with her eyes full of sadness)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-r" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-s" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR><FONT color=#a82424>Lunaria...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-6-s" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-6-next_step" mid="102" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>$Lunaria$<BR>I'm sorry. I can't... I just can't tell you anything right now...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-a" mid="167" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You're trying to open the Monolith too? But why?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-b" mid="168" select_type="2" />
+      <talk_question mid="104"><![CDATA[<html>$Lunaria$<BR>Because I need to.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-c" mid="169" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You must have a reason.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-d" mid="170" select_type="2" />
+      <talk_question mid="106"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9426_qu_05.ogg}<BR>I exist to open the Monolith. That's all.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-e" mid="171" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Are you out of your mind? The whole world will be destroyed if you open the Monolith!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-f" mid="172" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(Lunaria looks flustered.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-g" mid="173" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>$Lunaria$<BR>Everything will be destroyed when the Monolith is opened? No that's not true… It can't be true.<BR>There was only one thing that disappeared when I opened the Monolith… Only him... It has always been that way. But not anymore, because it won't be me who's opening the door this time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-h" mid="174" select_type="2" />
+      <talk_question mid="110"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Only "him"...? Is there someone other than Feder?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-i" mid="175" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>$Lunaria$<BR>...<FONT color=#7e12d2>(She doesn’t speak anymore.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-j" mid="176" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>If you're really here to open the Monolith, then you're my enemy.<BR>(You raise your weapon.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-k" mid="177" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Lunaria quietly raises her hand to touch your weapon... but her hand just passes through it without any harm!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-l" mid="178" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>!!!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-m" mid="179" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9426_qu_06.ogg}<BR>No one can hurt me. I'm an outsider, unwelcomed in any period of time. No one can kill me, unless it's someone who suffers the same fate as me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-n" mid="180" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>$Lunaria$<BR>But I can kill you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-o" mid="181" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Lunaria reaches for your neck... it feels strange, like touching a cold cloud)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-p" mid="182" select_type="2" />
+      <talk_question mid="118"><![CDATA[<html>$Lunaria$<BR>...you can't stop me. No one can.<BR>Please go back and close your eyes. Don't see anything. That's what he would want. He's too nice, so he wouldn't be happy if he found out that I hurt you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-q" mid="183" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Who... is "he"?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-8" mid="184" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>$Lunaria$<BR>If you don't know already... there's no point telling you about him.<BR>...If you still want to stop me… you leave me with no choice.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-r" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-s" mid="185" select_type="2" />
+      <talk_question mid="121"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You're always like that… You never explain anything clearly but I won't let you off this time. I will resort to force if you still stay so persistent.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-s" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-t" mid="186" select_type="2" />
+      <talk_question mid="122"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(Lunaria shakes her head)</FONT> You can't stop me, <FONT color=#387206>{user_nick}</FONT>…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-u" mid="187" select_type="2" />
+      <talk_question mid="123"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Lunaria reaches out to your weapon, but her hand passes through it.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-u" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-v" mid="188" select_type="2" />
+      <talk_question mid="124"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>....!!! What's going on? I've never seen such a thing before...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-v" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-w" mid="189" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9426_qu_07.ogg}<BR>You and I don't share the same fate anymore. That means you don't have to suffer anymore. You can't touch me, but I can.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-w" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-7-x" mid="190" select_type="2" />
+      <talk_question mid="126"><![CDATA[<html>$Lunaria$<BR>I will not let you stop me... even if it's you who I need to fight...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1548_lunaria-7-x" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1548_lunaria-8" mid="191" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>${user_nick}$<BR><FONT color=#a82424>Lunaria!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1546_lunaria-8" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1546_lunaria-8-" mid="192" select_type="5" />
+      <talk_question mid="128"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(Lunaria vanished.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1518_for_memory-8" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1518_for_memory-8-a" mid="193" select_type="2" />
+      <talk_question mid="129"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(No… Do I need to fight her…?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1518_for_memory-8-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1518_for_memory-8-b" mid="194" select_type="2" />
+      <talk_question mid="130"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(It must be that Lunaria has a misunderstanding. That's why she's doing this. That's all... I should talk to her when I see her again.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1518_for_memory-8-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1518_for_memory-9" mid="195" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I have to let Argenta know about this... about Lunaria)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1518_for_memory-8-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1518_for_memory-9" mid="196" select_type="2" />
+      <talk_question mid="132"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…!! She's gone. But that girl is dangerous… Lunaria...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1518_for_memory-9" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1518_for_memory-9-" mid="197" select_type="5" />
+      <talk_question mid="133"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I should tell Argenta about this.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-10" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1067_elder_elf-10-a" mid="198" select_type="2" />
+      <talk_question mid="134"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What happened??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-10-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-10-b" mid="199" select_type="2" />
+      <talk_question mid="135"><![CDATA[<html>$Elf Elder${sound:npc_ElfElder_9427_qu_02.ogg}<BR>…I'm sorry...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-10-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-10-c" mid="211" select_type="4" />
+      <talk_question mid="136"><![CDATA[<html>$Quest Completed$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-10-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-10-!next" mid="201" select_type="2" />
+      <talk_question mid="137"><![CDATA[<html>$Elf Elder$<BR>...he's so powerful beyond my imagination!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9426</exe>
+         <exe type="talk" npc="n1537_gereint_kid">1</exe>
+         <exe type="talk" npc="n1515_for_memory">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>자동스텝전환, 카메라로 한번 비춰주기</comment>
+      <conditions>
+         <chk type="lvl" op="]=">74</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="talk" npc="n1067_elder_elf">b</exe>
+         <exe type="talk" npc="n1067_elder_elf">e</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>대화 종료 시 5스텝 4저널로 변경. 루나리아 - 페더 제거
+화면 전환. 페르데레스 생성</comment>
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">7</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="talk" npc="n1548_lunaria">6</exe>
+         <exe type="talk" npc="n1548_lunaria">i</exe>
+         <exe type="setstep">7</exe>
+         <exe type="custom">npc_talk_index = "n1548_lunaria-7-r";</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment>루나리아 사라짐</comment>
+      <conditions>
+         <chk type="class" op="=">7</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="talk" npc="n1548_lunaria">7</exe>
+         <exe type="talk" npc="n1548_lunaria">r</exe>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">7</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk" npc="n1518_for_memory">8</exe>
+         <exe type="talk" npc="n1518_for_memory">c</exe>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment>아누 아렌델 진입시 컷신. 10스텝 8저널 변경</comment>
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="10">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">94268,94261,94262,94263,94264,94265,94266,94267,94268,94269</exe>
+         <exe type="complete" true="">9426</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1515_for_memory" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n1067_elder_elf" sub="b" />
+   <exelink qstep="1" npc="n1067_elder_elf" sub="c" />
+   <exelink qstep="1" npc="n1067_elder_elf" sub="d" />
+   <exelink qstep="1" npc="n1067_elder_elf" sub="2">0,1</exelink>
+   <exelink qstep="1" npc="n1067_elder_elf" sub="" />
+   <exelink qstep="3" npc="n1547_for_memory" sub="b" />
+   <exelink qstep="3" npc="n1547_for_memory" sub="c" />
+   <exelink qstep="3" npc="n1547_for_memory" sub="d" />
+   <exelink qstep="3" npc="n1547_for_memory" sub="e" />
+   <exelink qstep="3" npc="n1547_for_memory" sub="f" />
+   <exelink qstep="3" npc="n1547_for_memory" sub="4">0</exelink>
+   <exelink qstep="5" npc="n1505_elf_king" sub="b" />
+   <exelink qstep="5" npc="n1505_elf_king" sub="c" />
+   <exelink qstep="5" npc="n1505_elf_king" sub="d" />
+   <exelink qstep="5" npc="n1505_elf_king" sub="e" />
+   <exelink qstep="5" npc="n1505_elf_king" sub="f" />
+   <exelink qstep="5" npc="n1505_elf_king" sub="g" />
+   <exelink qstep="5" npc="n1505_elf_king" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n1548_lunaria">0</exelink>
+   <exelink qstep="6" npc="n1548_lunaria" sub="b" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="c" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="d" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="e" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="f" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="g" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="h" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="7">3</exelink>
+   <exelink qstep="6" npc="n1548_lunaria" sub="j" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="k" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="l" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="m" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="n" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="o" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="p" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="q" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="r" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="s" />
+   <exelink qstep="6" npc="n1548_lunaria" sub="next_step">4,3</exelink>
+   <exelink qstep="7" npc="n1548_lunaria">0</exelink>
+   <exelink qstep="7" npc="n1548_lunaria" sub="b" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="c" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="d" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="e" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="f" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="g" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="h" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="i" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="j" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="k" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="l" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="m" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="n" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="o" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="p" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="q" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="8">3,4</exelink>
+   <exelink qstep="7" npc="n1548_lunaria" sub="s" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="t" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="u" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="v" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="w" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="x" />
+   <exelink qstep="7" npc="n1548_lunaria" sub="8">3,4</exelink>
+   <exelink qstep="8" npc="n1518_for_memory">0</exelink>
+   <exelink qstep="8" npc="n1518_for_memory" sub="b" />
+   <exelink qstep="8" npc="n1518_for_memory" sub="9">3,4</exelink>
+   <exelink qstep="8" npc="n1518_for_memory" sub="9">3,4</exelink>
+   <exelink qstep="10" npc="n1067_elder_elf" sub="b">0</exelink>
+   <exelink qstep="10" npc="n1067_elder_elf" sub="c">1</exelink>
+   <exelink qstep="10" npc="n1067_elder_elf" sub="!next" />
+   <journal_data recompense="1:94261,2:94262,3:94263,4:94264,5:94265,6:94266,7:94267,8:94268,9:94269" quest_title="문을 열려는 자" chapterid="14" quest_level="72" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Elder_elf.dds</contents_image>
+         <destination_pos>34,n1067</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1067</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="138"><![CDATA[The One Who Tries To Open The Door 1]]></title>
+         <contents mid="139"><![CDATA[<html>Ask Elf Elder if anyone has intruded into the Monolith.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life)</FONT> <FONT color=#a82424>- Elf Elder</FONT></html>]]></contents>
+         <destination mid="140"><![CDATA[Talk to the Elf Elder]]></destination>
+         <todo_msg mid="141"><![CDATA[Quest has been added. Meet the Elf Elder.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_King_Yubaensiael.dds</contents_image>
+         <destination_pos>34,n1547</destination_pos>
+         <destination_mode>custom:34@4</destination_mode>
+         <statemark_npcid>1547</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="142"><![CDATA[The One Who Tries To Open The Door 2]]></title>
+         <contents mid="143"><![CDATA[<html>Elf Elder has not seen any intruders. Ask Elf King Federeth if he has sensed any intruders.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life)</FONT> <FONT color=#a82424>→ Tree of Life (Elf King Federeth)</FONT></html>]]></contents>
+         <destination mid="144"><![CDATA[Talk to Elf King Federeth]]></destination>
+         <todo_msg mid="145"><![CDATA[Visit Elf King Federeth and ask him about the intruder.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_NPC_Lunaria.dds</contents_image>
+         <destination_pos>34,n1547</destination_pos>
+         <destination_mode>custom:34@4</destination_mode>
+         <statemark_npcid>1547</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="146"><![CDATA[The One Who Tries To Open The Door 3]]></title>
+         <contents mid="147"><![CDATA[<html>Elf King Federeth is nowhere to be found. Instead, you see Feder and Lunaria. Listen to what they're talking about.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life)</FONT><FONT color=#a82424> → Tree of Life (Feder and Lunaria)</FONT></html>]]></contents>
+         <destination mid="148"><![CDATA[See what Lunaria has to say]]></destination>
+         <todo_msg mid="149"><![CDATA[Listen to the conversation between Feder and Lunaria.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_King_Yubaensiael.dds</contents_image>
+         <destination_pos>34,n1505</destination_pos>
+         <destination_mode>custom:34@4</destination_mode>
+         <statemark_npcid>1505</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="150"><![CDATA[The One Who Tries To Open The Door 4]]></title>
+         <contents mid="151"><![CDATA[<html>Feder and Lunaria disappeared. Talk to Elf King Federeth.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life)</FONT> <FONT color=#a82424>→ Tree of Life (Elf King Federeth)</FONT></html>]]></contents>
+         <destination mid="152"><![CDATA[Talk to Elf King Federeth]]></destination>
+         <todo_msg mid="153"><![CDATA[Talk to Elf King Federeth.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_93.dds</contents_image>
+         <destination_pos>1031,n1548</destination_pos>
+         <destination_mode>custom:1031@4</destination_mode>
+         <statemark_npcid>1548</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="154"><![CDATA[The One Who Tries To Open The Door 5]]></title>
+         <contents mid="155"><![CDATA[<html>According to Elf King Federeth, there seems to be something at the Abyss of Heat.<BR>Go and investigate.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT><FONT color=#a82424> → Abyss of Heat (???)</FONT></html>]]></contents>
+         <destination mid="156"><![CDATA[Investigate the Abyss of Heat]]></destination>
+         <todo_msg mid="157"><![CDATA[Investigate the Abyss of Heat.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_NPC_Lunaria.dds</contents_image>
+         <destination_pos>1031,n1518</destination_pos>
+         <destination_mode>custom:1031@4</destination_mode>
+         <statemark_npcid>1518</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="203"><![CDATA[The One Who Tries To Open The Door 6]]></title>
+         <contents mid="204"><![CDATA[<html>Lunaria disappeared.<BR>Think about what you should do.<BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance)</FONT> <FONT color=#a82424>→ Abyss of Heat (Where Lunaria Was)</FONT></html>]]></contents>
+         <destination mid="205"><![CDATA[Collect your thoughts]]></destination>
+         <todo_msg mid="206"><![CDATA[Consider what you should do about Lunaria.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QW_AnuarendelGateway.dds</contents_image>
+         <destination_pos>34,n1067</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1067</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="158"><![CDATA[The One Who Tries To Open The Door 7]]></title>
+         <contents mid="159"><![CDATA[<html>Return to Argenta and tell her about the current situation.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life)</FONT> <FONT color=#a82424>→ ???</FONT></html>]]></contents>
+         <destination mid="160"><![CDATA[Anu Arendel]]></destination>
+         <todo_msg mid="161"><![CDATA[Return to Anu Arendel.]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Npc_Elder_elf.dds</contents_image>
+         <destination_pos>34,n1067</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1067</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="162"><![CDATA[The One Who Tries To Open The Door 8]]></title>
+         <contents mid="163"><![CDATA[<html>Feder has attacked Anu Arendel!<BR>Talk to Elf Elder.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life)</FONT><FONT color=#a82424> → Elf Elder</FONT></html>]]></contents>
+         <destination mid="164"><![CDATA[Talk to the Elf Elder]]></destination>
+         <todo_msg mid="165"><![CDATA[Talk to the Elf Elder.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9425</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,413 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_516_beast_from_the_hell</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>516</qid>
+      <designer>곽노찬</designer>
+      <qlevel>32</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Nest]The Beast from Hell]]></qkname>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>88</npcid>
+         <npcename>n088_scholar_starshy</npcename>
+         <npckname>문장학자 스타쉬</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>91</npcid>
+         <npcename>n091_trader_bellin</npcename>
+         <npckname>대장장이 벨린</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-noquest" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Blacksmith Berlin$<BR><FONT color=#a82424>Adventurer Guild Master Gunther</FONT>is looking for you. Do you wish to meet him?<BR><FONT color=#7e12d2>(Accept Quest from Adventurer Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-noquest" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="148"><![CDATA[<html>$Heraldry Scholar Stas$<BR>
+<FONT color=#a82424>Adventurer Guild Master Gunther</FONT> says that he has something for you to take care of.<BR><FONT color=#7e12d2>(Accept Quest from Adventurer Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-a" mid="7" select_type="0"><![CDATA[<html>What happened to you yesterday?</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Adventurer Guild Master Gunther${action:Talk}<BR>Hello. I was about to find you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-a" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-b" mid="9" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>
+Hmmm......It's good to defeat the <FONT color=#a82424>Black Dragon</FONT> but its blood pollutes the earth, causing the surrounding monsters to be increasingly savage.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-b" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-c" mid="11" select_type="0"><![CDATA[<html>Yes, currently there aren't any issues. </html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>I heard that you have been contaminated with the blood of <FONT color=#a82424>Black Dragon Karas.</FONT> Are you feeling alright?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-c" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-d" mid="13" select_type="0"><![CDATA[<html>I can't believe it turned out to be a monster... It's terrible...</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>That's good...... In the Raid 50 years ago, some of those involved were contaminated with Black Dragon Karas' blood, and are still suffering from its effects till today. The serious ones display signs of turning into monsters, perhaps...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-e" mid="15" select_type="0"><![CDATA[<html>I'm not very sure</html>]]></talk_answer>
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-g" mid="82" select_type="0"><![CDATA[<html>Yes I am aware.</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Adventurer Guild Master Gunther${action:Refusal}<BR>The real reason why I'm looking for you is because of the <FONT color=#a82424>Nest</FONT>problem.<BR>Do you know about the<FONT color=#a82424>Nest</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-e" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-f" mid="86" select_type="0"><![CDATA[<html>Are you suggesting area domination?</html>]]></talk_answer>
+      <talk_question mid="83"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>
+Is it? I obtained the information from <FONT color=#a82424>Heraldry Scholar Stas</FONT> recently. According to him, only those beings with the power of the words of the mighty force are able to control the military.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-g" mid="87" select_type="0"><![CDATA[<html>I see. Is there a problem regarding the Nest?</html>]]></talk_answer>
+      <talk_question mid="84"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>You think you can see it. I'm not sure exactly what causes that, but well, people say that such a region is termed as <FONT color=#a82424>Nest</FONT>.<BR>
+Apart from this, we do not have any other information on it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-g" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-h" mid="96" select_type="0"><![CDATA[<html>I know I can.</html>]]></talk_answer>
+      <talk_question mid="95"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>I do not know the exact problem regarding this nest.<BR>When the Black Dragon Karas fell to the Foothills of Black Mountain, the <FONT color=#a82424>Dragon Nest</FONT> collapsed completely, right?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-h" image="QW_SkirtOfBlackMountain.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-i" mid="92" select_type="0"><![CDATA[<html>Not allowed to enter...?</html>]]></talk_answer>
+      <talk_question mid="91"><![CDATA[<html>$Adventurer Guild Master Gunther${action:Refusal}<BR>Ah... not long ago, a member of the <FONT color=#a82424>Foothills of Black Mountain</FONT> association found a strange area but was unable to access it, thus no investigation was conducted.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-i" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-j" mid="97" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="93"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>Yes. There isn't this strange area in the past. It seem like it appeared after the defeat of <FONT color=#a82424>Black Dragon Karas</FONT>......</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-j" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-k" mid="145" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="144"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>I do not know if it is the <FONT color=#a82424>Black Dragon Kara's</FONT>blood stain that caused these changes... There could be other reasons, which is why I called for you to investigate further. ...huh?<BR>
+Ah.. Please hold on for a second.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-k" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-l" mid="102" select_type="0"><![CDATA[<html>(.........?)</html>]]></talk_answer>
+      <talk_question mid="100"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>
+<FONT color=#a82424>Oh yeah. It's you.</FONT><BR>
+<FONT color=#a82424>How can I help you?</FONT><BR>
+<FONT color=#7e12d2>(Gunther covers his ears and mumbles to himself)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-l" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-m" mid="104" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="103"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR><FONT color=#a82424>What! Is that true!</FONT><BR><FONT color=#a82424>This is terrible!</FONT><BR><FONT color=#7e12d2>(Gunther's private speech continues)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-m" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-n" mid="106" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="105"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR><FONT color=#a82424>Yes I got it, I will send people over.<BR>Ah, Yes, I understand. <BR>I will send them soon.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-n" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-o" mid="110" select_type="0"><![CDATA[<html>what do you think you're ... I mean, what do you want? </html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR><FONT color=#a82424>..................<BR>Okay, you brat!<BR> Break it up, dude!</FONT><BR><FONT color=#7e12d2>(Gunther put his hands down)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-p" mid="111" select_type="0"><![CDATA[<html>......then, of course. Did something bad happen?</html>]]></talk_answer>
+      <talk_question mid="107"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>Ah... Sorry .. I was speaking to someone.<BR>A member of the guild just provided me some <FONT color=#a82424>information</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-p" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-q" mid="114" select_type="0"><![CDATA[<html>Cerberus? What is that....?</html>]]></talk_answer>
+      <talk_question mid="112"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>We received news about the strange area.<BR>It was caused by <FONT color=#a82424>Cerberus</FONT> at the <FONT color=#a82424>Nest</FONT> near the Foothills of Black Mountain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-q" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$The Beast from Hell$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-1-a" mid="116" select_type="0"><![CDATA[<html>......Ah? But you cannot proceed blindly.</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Adventurer Guild Master Gunther${action:Refusal}<BR>What's that....?<BR>How would I know?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1-a" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="149"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>
+Please visit <FONT color=#a82424>Heraldry Scholar Stas</FONT>.<BR>
+He should be able to provide you more information.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="125"><![CDATA[<html>$Blacksmith Berlin$<BR>This material can only produce ordinary items! Good material, I need good material!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-a" mid="154" select_type="0"><![CDATA[<html>Do you know anything about a monster called Cerberus?</html>]]></talk_answer>
+      <talk_question mid="150"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Do you have a question for me? What is it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-a" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-b" mid="156" select_type="0"><![CDATA[<html>He says that Cerberus has re-appeared.</html>]]></talk_answer>
+      <talk_question mid="155"><![CDATA[<html>$Heraldry Scholar Stas${action:Talk}<BR><FONT color=#a82424>Cerberus</FONT>......? Why are you asking this?<BR>Cerberus has disappeared for more than 50 years...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-b" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-c" mid="158" select_type="0"><![CDATA[<html>(Quoted words from Gunther)</html>]]></talk_answer>
+      <talk_question mid="157"><![CDATA[<html>$Heraldry Scholar Stas$<BR>
+What? Does that mean...<FONT color=#a82424>Cerberus</FONT> has appeared again?<BR>
+When??<BR>
+Where???<BR>
+Why????</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-c" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-d" mid="160" select_type="0"><![CDATA[<html>What is Cerberus?</html>]]></talk_answer>
+      <talk_question mid="159"><![CDATA[<html>$Heraldry Scholar Stas$<BR>
+Created a nest near Foothills of Black Mountain....?<BR>
+50 years ago, during the defeat of Black Dragon Karas, he left and hid away, why did he appear again?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-d" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-e" mid="163" select_type="0"><![CDATA[<html>Well I ran into Cerberus from the Raid of Black Dragon, eh?</html>]]></talk_answer>
+      <talk_question mid="161"><![CDATA[<html>$Heraldry Scholar Stas$<BR><FONT color=#a82424>Cerberus </FONT>is known as the Beast from Hell. 50 years ago, it was the guardian of Dark Overlord Keep.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-e" image="QN_archer_nerwin_silhouette.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-f" mid="166" select_type="0"><![CDATA[<html>The music from the Harp, causes Cerberus to fall into a deep sleep......?</html>]]></talk_answer>
+      <talk_question mid="164"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Yes but they did not engage in a fight.<BR>Cerberus was blocking the path, and the Elven Hero <FONT color=#a82424>Nerwin</FONT> played her Harp which made it fall into a deep sleep.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-f" image="QN_archer_nerwin_silhouette.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-g" mid="168" select_type="0"><![CDATA[<html>Even Allies were affected?</html>]]></talk_answer>
+      <talk_question mid="167"><![CDATA[<html>$Heraldry Scholar Stas$<BR>
+Yes. All elves love music. <FONT color=#a82424>Nerwin</FONT> always carries a Harp and often plays it.<BR>However, her music affects not just Cerberus but all of our allies troops too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-g" image="QN_archer_nerwin_silhouette.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-h" mid="173" select_type="0"><![CDATA[<html>......but why would Cerberus wake up?</html>]]></talk_answer>
+      <talk_question mid="172"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Most of the troops fell into a deep sleep after the music performance......<BR>
+We were really amused, Haha....... but we did not have time to appraise the performance as well.<BR>
+This is because all of us fall asleep quickly upon hearing the music.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-h" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-i" mid="175" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="169"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Hmm... it could be due to the reappearance of the <FONT color=#a82424>Black Dragon Karas</FONT>. But why would it create a nest on its own? It used to work around Black Dragon Karas' Nest?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-i" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2" mid="178" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="176"><![CDATA[<html>$Heraldry Scholar Stas$<BR>
+It may be dangerous if we ignore <FONT color=#a82424>Cerberus</FONT>. Nerwin made it sleep previously but she's not here now. We should do our best to let it fall into a deep slumber again. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-2" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="63"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>Should you wish to eliminate<FONT color=#a82424>Cerberus</FONT>?<BR>
+Please be careful.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-a" mid="184" select_type="0"><![CDATA[<html>(Listen to precautions)</html>]]></talk_answer>
+      <talk_question mid="183"><![CDATA[<html>$Heraldry Scholar Stas${action:Talk}<BR>Hurry to Cerberus Nest and defeat <FONT color=#a82424>Cerberus</FONT>.<BR>
+Do not go alone. Bring a party and use them as bait.<BR>
+Your head can do more than just wearing caps.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="185"><![CDATA[<html>$The Beast from Hell$<BR>
+*<FONT color=#7e12d2>A 4-player party is recommended in Cerberus Nest.</FONT><BR>
+*<FONT color=#7e12d2>To enter, the Dark Overlord Heraldry is required.</FONT><BR>* <FONT color=#7e12d2>It can be obtained from Dimensional Rabbit Boxes that appear in Abyss level dungeon in Saint Haven Area.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4" mid="188" select_type="0"><![CDATA[<html>Yes, it is going to be hard, but please defeat it.</html>]]></talk_answer>
+      <talk_question mid="122"><![CDATA[<html>$Heraldry Scholar Stas${action:Talk}<BR>Finally you're back.<BR>How is it? Did you manage to make Cerberus fall into deep sleep?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="126"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>Have you defeated Cerberus?<BR>
+Hurry please, pass the good news to <FONT color=#a82424>Heraldry Scholar Stas</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4" image="QN_Npc_Saint_BlackSmith_Dwarf.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="190"><![CDATA[<html>$Heraldry Scholar Stas$<BR>
+Impressive.<BR>
+I heard that after you went to Cerberus Nest, <FONT color=#a82424>Blacksmith Berlin</FONT>was looking for you. If you have spare time, do meet him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-4" image="QN_Npc_Saint_BlackSmith_Dwarf.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="191"><![CDATA[<html>$Adventurer Guild Master Gunther$<BR>It seems like after you went to Cerberus Nest, <FONT color=#a82424>Blacksmith Berlin</FONT>was looking for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-a" mid="193" select_type="0"><![CDATA[<html>Yes, It was hard, but we managed to finish him off.</html>]]></talk_answer>
+      <talk_question mid="192"><![CDATA[<html>$Blacksmith Berlin$<BR>
+You're here! That's fantastic.<BR>
+I heard that you went to the Cerberus Nest. Have you defeated the <FONT color=#a82424>Cerberus</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-b" mid="197" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="196"><![CDATA[<html>$Blacksmith Berlin$<BR>
+You're remarkable. When you first came to Saint Haven, I thought you were a rookie adventurer. I never thought you have such amazing strength, I'm impressed.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-c" mid="199" select_type="0"><![CDATA[<html>Soothe the Artisan Soul?</html>]]></talk_answer>
+      <talk_question mid="198"><![CDATA[<html>$Blacksmith Berlin$<BR>
+I'm looking for you, to console my desolate Artisan Soul.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-d" mid="204" select_type="0"><![CDATA[<html>I'm... sure.</html>]]></talk_answer>
+      <talk_question mid="200"><![CDATA[<html>$Blacksmith Berlin$<BR>
+What are the aspirations of a Blacksmith? I suppose it's to manufacture legendary equipment, through passion and hard work, that goes down in history, isn't it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-e" mid="206" select_type="0"><![CDATA[<html>Who, me......?</html>]]></talk_answer>
+      <talk_question mid="205"><![CDATA[<html>$Blacksmith Berlin$<BR>
+But all that I've made before were just ordinary items, a far cry from legendary equipment, do you know how anxious I am? Perhaps you can help to realize my dreams.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4-e" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-f" mid="208" select_type="0"><![CDATA[<html>What material are you referring to?</html>]]></talk_answer>
+      <talk_question mid="207"><![CDATA[<html>$Blacksmith Berlin$<BR>Please give the <FONT color=#a82424>Cerberus</FONT> material to me.<BR>I will repay you with the best weapons and equipment.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4-f" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-g" mid="210" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="209"><![CDATA[<html>$Blacksmith Berlin$<BR>
+Defeat <FONT color=#a82424>Cerberus</FONT>, and obtain Cerberus' fur, claw, teeth etc. Using these material, I can manufacture great weapons and armour.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-h" mid="212" select_type="0"><![CDATA[<html>(......move back one step)</html>]]></talk_answer>
+      <talk_question mid="211"><![CDATA[<html>$Blacksmith Berlin$<BR>
+Hoho......I am getting excited.<BR>
+Hmm? Ah, don't... ...don't misunderstand. You're not what excites me, I am just full of anticipation on what good items I can make......</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-i" mid="214" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="213"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-4-i" image="QM_Cerberos.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-4-opencompounditem" mid="202" select_type="0"><![CDATA[<html>[Item Crafted]</html>]]></talk_answer>
+      <talk_question mid="201"><![CDATA[<html>$Blacksmith Berlin$<BR>Ah.. I will wait.<BR>
+<FONT color=#a82424>Grade A Equipment</FONT> requires Cerberus material. With all parts obtained, there will be a Set Bonus effect.<BR>
+Take a look before you leave.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="talk" npc="n036_adventurer_guildmaster_gunter">1</exe>
+         <exe type="recompense_view">5167,5161,5162,5163,5164,5165,5166,5167,5168,5169</exe>
+         <exe type="setquest">516</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="1" party="1" exe="" onexe="3,4,5">235086</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="3,4,5">235090</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">5167,5161,5162,5163,5164,5165,5166,5167,5168,5169</exe>
+         <exe type="complete" true="">516</exe>
+         <exe type="custom">api_ui_OpenCompound2Item(userObjID, 1001);</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="q">1</exelink>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="acceptted">2,0</exelink>
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="b" />
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="c" />
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="d" />
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="e" />
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="f" />
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="g" />
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="h" />
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="i" />
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="2">0,1,2,6</exelink>
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n091_trader_bellin" sub="b" />
+   <exelink qstep="4" npc="n091_trader_bellin" sub="c" />
+   <exelink qstep="4" npc="n091_trader_bellin" sub="d" />
+   <exelink qstep="4" npc="n091_trader_bellin" sub="e" />
+   <exelink qstep="4" npc="n091_trader_bellin" sub="f" />
+   <exelink qstep="4" npc="n091_trader_bellin" sub="g" />
+   <exelink qstep="4" npc="n091_trader_bellin" sub="h">0</exelink>
+   <exelink qstep="4" npc="n091_trader_bellin" sub="i">1</exelink>
+   <exelink qstep="4" npc="n091_trader_bellin" sub="opencompounditem">2</exelink>
+   <journal_data recompense="1:5161,2:5162,3:5163,4:5164,5:5165,6:5166,7:5167,8:5168,9:5169" quest_title="[네스트] 지옥에서 온 마수" chapterid="" quest_level="32" quest_mark_type="10" use_item_list="&#xD;&#xA;">
+      <journal index="1">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>11,n88</destination_pos>
+         <destination_mode />
+         <statemark_npcid>88</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="74"><![CDATA[Speak with Heraldry Scholar Stas]]></title>
+         <contents mid="75"><![CDATA[<html>A Cerberus Nest appears near Foothills of Black Mountain. Speak with Heraldry Scholar Stas for more details.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Heraldry Scholar Stas</FONT></html>]]></contents>
+         <destination mid="76"><![CDATA[Speak with Heraldry Scholar Stas]]></destination>
+         <todo_msg mid="77"><![CDATA[Quest has being added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QM_Cerberos.dds</contents_image>
+         <destination_pos>14002,0,0</destination_pos>
+         <destination_mode>custom:14002@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Eliminate Cerberus]]></title>
+         <contents mid="79"><![CDATA[<html>Go to Cerberus Nest near Foothills of Black Mountain. Eliminate Cerberus.<BR><BR><FONT color=#086171>Foothills of Black Mountain (Cerberus Nest)</FONT> <FONT color=#a82424>→ Cerberus Nest</FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[Eliminate Cerberus]]></destination>
+         <todo_msg mid="81"><![CDATA[Please eliminate Cerberus at Cerberus Nest.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>11,n88</destination_pos>
+         <destination_mode />
+         <statemark_npcid>88</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="218"><![CDATA[Speak with Heraldry Scholar Stas]]></title>
+         <contents mid="219"><![CDATA[<html><FONT color=#a82424>Cerberus</FONT> eliminated. Please bring the news to <FONT color=#a82424>Heraldry Scholar Stas</FONT> at Saint Haven.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Heraldry Scholar Stas</FONT></html>]]></contents>
+         <destination mid="220"><![CDATA[Speak with Heraldry Scholar Stas]]></destination>
+         <todo_msg mid="221"><![CDATA[Please speak with Heraldry Scholar Stas.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Saint_BlackSmith_Dwarf.dds</contents_image>
+         <destination_pos>11,n91</destination_pos>
+         <destination_mode />
+         <statemark_npcid>91</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="223"><![CDATA[Speak with Blacksmith Berlin]]></title>
+         <contents mid="224"><![CDATA[<html>I was told that after I left to hunt the Cerberus, you had requested to see me. Let's speak with Blacksmith Berlin.<BR>
+ <BR>
+<FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Blacksmith Berlin</FONT></html>]]></contents>
+         <destination mid="225"><![CDATA[Speak with Blacksmith Berlin.]]></destination>
+         <todo_msg mid="226"><![CDATA[Please speak with Blacksmith Berlin.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>32:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>409,443,9310,9488</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,34 @@
+   <talk>
+      <npcename>n365_heros_battlefield_board</npcename>
+      <npcid>365</npcid>
+      <startexe>0</startexe>
+      <comment>#164282 영웅의 전장 MAPID : 13693 로 변경 (이전mapid:13631)
+
+#196207 영웅의 전장 계시판에 길드 네스트 랭킹 보기 추가
+
+api_ui_OpenRequestPveRankingBoard( userObjID);</comment>
+      <npckname mid="1"><![CDATA[Rank Board]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="guild_rank" mid="12"><![CDATA[<html>[Check Exhibition Tournament Ranking]</html>]]></talk_answer>
+         <talk_answer link_index="pve_rank" mid="16"><![CDATA[<html>[See Nest Rankings]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Rank Board$<BR>
+You can see the rankings <FONT color=#a82424></FONT>.<BR><BR>※ <FONT color=#7e12d2>Ranking will be initialized every Saturday morning. You cannot check the ranking or enter the dungeon during this time.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="001_no" image="" itemindex="">
+         <talk_question mid="5"><![CDATA[<html>$Rank Board$<BR>
+Ranking information <FONT color=#a82424></FONT> is currently being refreshed.<BR><BR>※ <FONT color=#7e12d2>Ranking will be refreshed every Saturday morning. You cannot check the ranking or enter the dungeon while the ranking is being refreshed.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="3" false="1">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenAllStarBattleRankBoard( userObjID, 13693 );</exe>
+         <exe type="talk">001_no</exe>
+         <exe type="custom">api_ui_OpenGuildNestRankingBoard( userObjID, 19656 );</exe>
+         <exe type="custom">api_ui_OpenRequestPveRankingBoard( userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_env_CheckCloseGateByTime(13693) == 1</chk>
+      </conditions>
+      <exelink idx="guild_rank">4</exelink>
+      <exelink idx="pve_rank">5</exelink>
+   </talk>

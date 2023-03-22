@@ -1,0 +1,515 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc15_9452_time_traveler</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>15</qchapter>
+      <qid>9452</qid>
+      <designer>최지은</designer>
+      <qlevel>77</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9454</nextqid>
+      <nextqname>mqc15_9454_hate_and_role</nextqname>
+      <nextqnpc>n1561_for_memory</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Wanderer of Time]]></qkname>
+      <qnpc>
+         <npcid>1067</npcid>
+         <npcename>n1067_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1594</npcid>
+         <npcename>n1594_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1561</npcid>
+         <npcename>n1561_for_memory</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1592</npcid>
+         <npcename>n1592_velskud</npcename>
+         <npckname>벨스커드</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-accepting-acceptted_1" mid="71" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Elf Elder$<BR>Ah, you're back.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1592_velskud-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Velskud_Human.dds" center_image="">
+      <talk_answer link_index="n1592_velskud-accepting-acceptted_2" mid="72" select_type="2" />
+      <talk_question mid="6"><![CDATA[<html>$Velskud$<BR>I'll explain this again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1592_velskud-1" image="QN_NPC_Lunaria.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Velskud_Human.dds" center_image="">
+      <talk_answer link_index="n1592_velskud-1-a" mid="76" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Velskud$<BR>It's simple. Go to the Watcher's Tower and see if Lunaria is there. You don't have to fight her. Just tell me what you saw, and I'll go there myself.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1592_velskud-1-a" image="QW_94.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Velskud_Human.dds" center_image="">
+      <talk_answer link_index="n1592_velskud-1-b" mid="77" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Velskud$<BR>If she isn't there, then we have to start all over again. We don't have much time.<BR>Go now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1592_velskud-1-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Velskud_Human.dds" center_image="">
+      <talk_answer link_index="n1592_velskud-1-c" mid="78" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Velskud$<BR>If she's there, I'll join you at the Lava River entrance. Do you understand?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1592_velskud-1-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Velskud_Human.dds" center_image="">
+      <talk_answer link_index="n1592_velskud-1-d" mid="79" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Understood!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1592_velskud-1-d" image="QW_94.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Velskud_Human.dds" center_image="">
+      <talk_answer link_index="n1592_velskud-1-" mid="80" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>$Velskud$<BR>Good. Don't try to fight her. You can't win.<BR><FONT color=#7e12d2>(Go to Watcher's Tower.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1" image="" itemindex="" portrait_left="NPC_Left_Elder_elf.dds" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-a" mid="81" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>$Elf Elder$<BR><FONT color=#387206>{user_nick}</FONT>? Where's the Black Knight?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-b" mid="82" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I met him but... I must go to the Watcher's Tower.<BR>(I almost forgot! I should hurry!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-c" mid="83" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Elf Elder$<BR>I see. Please hurry.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1-c" image="QW_94.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-" mid="84" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>I should go to the </FONT><FONT color=#a82424>Watcher's Tower</FONT><FONT color=#662500>.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-a" mid="85" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Lunaria$<BR>Why is everything screwed up when I open this door...? Why???</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-b" mid="86" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#a82424>Lunaria....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-c" mid="87" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Lunaria$<BR><FONT color=#387206>{user_nick}</FONT>?!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-d" mid="88" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Lunaria... what happened? And where's Argenta?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-e" mid="89" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_01.ogg}<BR>…I don't know.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-f" mid="90" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Come on, Lunaria. Stop saying you don't know!</FONT><BR>
+<FONT color=#662500>You are at the center of all this chaos!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-g" mid="91" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Do I need to give up everything, even being a human, and be obsessed with you like Illusion and chase you till you tell me something? Lunaria, I know you are...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-h" mid="92" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_02.ogg}<BR>...a fragment of Vestinel. You figured it out.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-i" mid="93" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Do you know what I went through to find that out? Why didn't you tell me?! If I'd known who you really were, I wouldn't have left you alone.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-j" mid="94" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>And I've asked you many times already but what am I?<BR>An ordinary human can't stay alive for so long… Am I not an ordinary human who lived 60 years ago? My memories only start from that time… why?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-k" mid="95" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No, even if you can't tell me, we wouldn't have to meet each other like this again if you kept all my memories alive!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-l" mid="96" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_03.ogg}<BR>I... can't... do that...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-m" mid="97" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Yeah of course. I expected that. You're always like that. At least, the Lunaria that I know has always been so.<BR>You were so lively and happy in the past. You've never smiled at me like that before.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-2-n" mid="98" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_04.ogg}<BR>…Me? I smiled?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-2-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3" mid="99" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yeah. The past you was smiling. You seemed really happy, talking to a version of me that I don't know of.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-a" mid="101" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…What do you want me to do…? I tried to ignore you and run away from you, but I just couldn't leave you alone. Please tell me. What do you want me to do? Lunaria...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-b" mid="102" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_05.ogg}<BR>I want you to stay.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-c" mid="103" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-d" mid="104" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_06.ogg}<BR>I want you to stay. I don't care what you look like or talk like. Even if I can't be there with you, even if you forget that I ever existed, I just want you to stay...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-e" mid="105" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Is that why you turned back time when I died….?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-f" mid="106" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_07.ogg}<BR>…I don't ever want to see you die again… I'm going to do anything to stop that…<BR>But you're too nice… As much as you are to me… you are nice to this world….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-g" mid="107" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_08.ogg}<BR>…I can't remember anything now. The sound of your laughter, my answers to your jokes, the times we spent together… The happy feelings are no longer have any life to me now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-h" mid="108" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_09.ogg}<BR>I'm an empty shell. An empty shell that is bent two opposite missions of opening the door and saving you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-i" mid="109" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Lunaria$<BR>But it's okay.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-j" mid="110" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Lunaria$<BR>The Red Dragon opened the Monolith. I don't know what the Silver Dragon did, but you're still alive. Maybe it's because Chaos Dragon gave you the power, maybe it's because of the Alteum created by copying Goddess Altea.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-k" mid="115" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Lunaria${sound:npc_Lunaria_9452_qu_10.ogg}<BR>Whatever the reason is, you didn't disappear and the door is open. That's all I care about. I achieved my missions...<BR><FONT color=#7e12d2>(Lunaria smiles faintly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-l" mid="116" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(As you look at her smile for the first time, tears roll down from her eyes.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-m" mid="117" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…!! Lunaria??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-n" mid="118" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Lunaria$<BR><FONT color=#2b2723>Now I really am nothing but an empty shell. But I finally achieved what I wanted. My love, I don't need to be here anymore…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-o" mid="119" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>$Lunaria$<BR><FONT color=#2b2723>Oh dear Goddess, I will disappear will all the sin. Please let him be free now.</FONT><FONT color=#2b2723>…</FONT><BR>Please let him live happily with other companions who are as friendly and righteous as him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-p" mid="120" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>$Lunaria$<BR><FONT color=#2b2723>Now I don't have to turn back time to save him…</FONT><BR><FONT color=#2b2723>If I'm not around, he doesn't have to turn back time for me…</FONT><BR>
+<FONT color=#2b2723>We are not sinners anymore. I will bear all the sin and disappear as the Goddess wishes.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-q" mid="181" select_type="2" />
+      <talk_question mid="180"><![CDATA[<html>$Lunaria$<BR>Whenever I turned back time, my fragment wore off a little, and your fragment changed a little.</FONT><BR>
+<FONT color=#2b2723>The fragment of memories, the fragment of strength, the fragment of love...<BR>I'm not going to mess with time anymore so nothing is going to change from now. You stay as you, I stay as me.<BR><BR></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-r" mid="183" select_type="2" />
+      <talk_question mid="182"><![CDATA[<html>$Lunaria$<BR>
+<FONT color=#a82424>We</FONT> are the enemies of this world.<BR>
+<FONT color=#a82424>We</FONT> may never be forgiven....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-r" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-s" mid="186" select_type="2" />
+      <talk_question mid="185"><![CDATA[<html>$Lunaria$<BR>But <FONT color=#a82424>you</FONT> can...<BR>
+You will gain many companions. They promised to take care of you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-s" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-t" mid="188" select_type="2" />
+      <talk_question mid="187"><![CDATA[<html>$Lunaria$<BR>So you never need to be lonely again, you see?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-3-u" mid="190" select_type="2" />
+      <talk_question mid="189"><![CDATA[<html>$Lunaria$<BR>You'll be fine without me...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-3-u" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-4" mid="121" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(Strange light appeared around Lunaria. She's fading away!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1594_lunaria-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1594_lunaria-4-" mid="122" select_type="5" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Lunaria?!! No!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-a" mid="124" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Lunaria…? Did you disappear again?</FONT><BR>
+<FONT color=#662500>Are you gone? Lunaria??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-b" mid="125" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Lunaria turned back time to... save me?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-c" mid="126" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The reason why the present Lunaria is different from the past is because… she kept using her powers to save me...<BR>But… me in the past was like Lunaria now….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-d" mid="127" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Lunaria kept using her powers and that faded her feelings and memories? And I… I changed? Well, I did change but… </FONT><FONT color=#662500>Forget it, I don't know.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-e" mid="128" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Is this the end? Will I ever meet her again? Did she go back to Mistland...?<BR>How can she disappear like this...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-f" mid="129" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What am I supposed to do...<BR>I... I...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-g" mid="156" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Without you, I can't...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-h" mid="157" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Damn it! Illusion! I know you're listening! Come out and say something!! Why did Lunaria have to disappear like that?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-i" mid="158" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Come out!! You only appear when you feel like it! You're me and I'm you?? You didn't know anything!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-j" mid="159" select_type="2" />
+      <talk_question mid="130"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Damn it!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-k" mid="160" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Illusion$<BR>...You can't change anything by lamenting here...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-l" mid="161" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm sure I can see her again... I must!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-m" mid="162" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>$Illusion$<BR><FONT color=#662500>…Now I finally see the truth. Finally! She lied to me all those years and disappeared like this! This is what I wanted to hear. I wanted to know the reason why she couldn't abandon me when she was going to do that eventually!! We... only wanted to save each other!! </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-n" mid="163" select_type="2" />
+      <talk_question mid="132"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You see, I wasn't wrong. I'll do whatever it takes to see her again. I can even become an Apostle if I can see her. See? Lunaria wants that too.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-o" mid="164" select_type="2" />
+      <talk_question mid="133"><![CDATA[<html>$Illusion$<BR>Good friends...? What is that? The Apostles or those kids who try to become heroes? I would always be an outsider from another time. I was only a passerby to them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-p" mid="165" select_type="2" />
+      <talk_question mid="149"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm an outsider to this world... I would always be alone if Lunaria isn't with me... Like how Lunaria is forgotten, I will disappear from people's memories too... I won't be in history...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-p" image="" itemindex="" portrait_left="NPC_Left_Novice_Assassin.dds" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-q" mid="166" select_type="2" />
+      <talk_question mid="135"><![CDATA[<html>$???$<BR><FONT color=#003366>You don't want me to be lonely? Is that why you lied and ran away from me? Lunaria, you're the only one I wished for...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-q" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-r" mid="168" select_type="2" />
+      <talk_question mid="136"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Huh?!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-r" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-s" mid="170" select_type="2" />
+      <talk_question mid="137"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Was it me or Illusion who was talking in my head? I have a terrible headache... I think I wasn't the one who said those things...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-s" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-t" mid="171" select_type="2" />
+      <talk_question mid="139"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Am I hearing things? But it was my voice....)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-t" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-u" mid="173" select_type="2" />
+      <talk_question mid="154"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I don't know. My head hurts too much. I should... take a rest....)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-u" image="QN_NPC_Lunaria.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-v" mid="174" select_type="2" />
+      <talk_question mid="140"><![CDATA[<html>${user_nick}$<BR><FONT color=#a82424>Lunaria...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-v" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-w" mid="175" select_type="4" />
+      <talk_question mid="142"><![CDATA[<html>$Quest Completed$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1561_for_memory-5-w" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1561_for_memory-5-!next" mid="176" select_type="2" />
+      <talk_question mid="143"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Velskud should be at Lava River entrance. I should go and meet him.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9452</exe>
+         <exe type="talk" npc="n1067_elder_elf">1</exe>
+         <exe type="talk" npc="n1592_velskud">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>강제 스텝 저널 변경 2, 2,</comment>
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">94520,,,,,,,,,</exe>
+         <exe type="complete" true="">9452</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1067_elder_elf" sub="acceptted_1">0,1</exelink>
+   <exelink qstep="accepting" npc="n1592_velskud" sub="acceptted_2">0,2</exelink>
+   <exelink qstep="1" npc="n1592_velskud" sub="b" />
+   <exelink qstep="1" npc="n1592_velskud" sub="c" />
+   <exelink qstep="1" npc="n1592_velskud" sub="d" />
+   <exelink qstep="1" npc="n1592_velskud" sub="" />
+   <exelink qstep="1" npc="n1067_elder_elf" sub="b" />
+   <exelink qstep="1" npc="n1067_elder_elf" sub="c" />
+   <exelink qstep="1" npc="n1067_elder_elf" sub="" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="b" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="c" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="d" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="e" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="f" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="g" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="h" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="i" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="j" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="k" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="l" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="m" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="n" />
+   <exelink qstep="2" npc="n1594_lunaria" sub="3">0</exelink>
+   <exelink qstep="3" npc="n1594_lunaria" sub="b" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="c" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="d" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="e" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="f" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="g" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="h" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="i" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="j" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="k" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="l" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="m" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="n" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="o" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="p" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="q" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="r" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="s" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="t" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="u" />
+   <exelink qstep="3" npc="n1594_lunaria" sub="4">0</exelink>
+   <exelink qstep="5" npc="n1561_for_memory" sub="b" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="c" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="d" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="e" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="f" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="g" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="h" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="i" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="j" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="k" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="l" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="m" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="n" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="o" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="p" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="q" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="r" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="s" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="t" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="u" />
+   <exelink qstep="5" npc="n1561_for_memory" sub="v">0</exelink>
+   <exelink qstep="5" npc="n1561_for_memory" sub="w">1</exelink>
+   <exelink qstep="5" npc="n1561_for_memory" sub="!next" />
+   <journal_data recompense="94520" quest_title="시간을 헤메는 자" chapterid="15" quest_level="77" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_94.dds</contents_image>
+         <destination_pos>1041,n1594</destination_pos>
+         <destination_mode>custom:1041@4</destination_mode>
+         <statemark_npcid>1594</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="58"><![CDATA[Wanderer of Time 1]]></title>
+         <contents mid="59"><![CDATA[<html>Go to the Watcher's Tower.<BR><BR><FONT color=#086171>Anu Arendel (Lava River)</FONT> <FONT color=#a82424>→ Watcher's Tower</FONT></html>]]></contents>
+         <destination mid="60"><![CDATA[To the Watcher's Tower]]></destination>
+         <todo_msg mid="61"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Lunaria.dds</contents_image>
+         <destination_pos>1041,n1594</destination_pos>
+         <destination_mode>custom:1041@1</destination_mode>
+         <statemark_npcid>1594</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="62"><![CDATA[Wanderer of Time 2]]></title>
+         <contents mid="63"><![CDATA[<html>You found Lunaria. Talk to her.<BR><BR><FONT color=#086171>Anu Arendel (Lava River)</FONT> <FONT color=#a82424>→ Watcher's Tower (Lunaria)</FONT></html>]]></contents>
+         <destination mid="64"><![CDATA[Lunaria appeared. Talk to her.]]></destination>
+         <todo_msg mid="65"><![CDATA[Talk to Lunaria.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_NPC_Lunaria.dds</contents_image>
+         <destination_pos>1041,n1561</destination_pos>
+         <destination_mode>custom:1041@1</destination_mode>
+         <statemark_npcid>1561</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="66"><![CDATA[Wanderer of Time 3]]></title>
+         <contents mid="67"><![CDATA[<html>Lunaria disappeared after telling you that she distorted time to save you.<BR>The reason why she couldn't tell you much was because her memories and feelings faded away as she used her powers to save you... Go and Collect your thoughts.<BR><BR><FONT color=#086171>Anu Arendel (Lava River)</FONT> <FONT color=#a82424>→ Watcher's Tower (Where Lunaria Was)</FONT></html>]]></contents>
+         <destination mid="68"><![CDATA[Collect your thoughts at Watcher's Tower]]></destination>
+         <todo_msg mid="69"><![CDATA[Collect your thoughts.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>77:-1</user_level>
+      <user_class>7</user_class>
+      <prev_quest>9451</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

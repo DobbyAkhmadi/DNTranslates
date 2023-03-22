@@ -1,0 +1,609 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_261_argenta_milk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>261</qid>
+      <designer>김인정</designer>
+      <qlevel>14</qlevel>
+      <qdesc>향긋한 와인맛 우유(300137), 발효된 나무 열매(300129)</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Argenta's Milk]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타(잿빛폐허)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>26</npcid>
+         <npcename>n026_trader_may</npcename>
+         <npckname>소모품 상인 메이   (캐더락 잡화상)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>28</npcid>
+         <npcename>n028_scholar_bailey</npcename>
+         <npckname>문장학자 베일리</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>29</npcid>
+         <npcename>n029_crew_kevin</npcename>
+         <npckname>자칭 승무원 케빈</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>323</npcid>
+         <npcename>n323_warehouse_lupert</npcename>
+         <npckname>창고지기 루퍼트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>I am kinda of busy right now, do not disturb.<BR><FONT color=#7e12d2>(Talk to Argenta in the Gray Ruins to start this quest.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Merchant May$<BR>Yes? You have something for me?<BR><FONT color=#7e12d2>(Talk to Argenta in the Gray Ruins to start this quest.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>If you want to know more about the Heraldry, you can come to me.<BR><FONT color=#7e12d2>(Talk to Argenta in the Gray Ruins to start this quest.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Kevin$<BR>I want to be the pilot of the airship! But... for now I can't.<BR><FONT color=#7e12d2>(Talk to Argenta in the Gray Ruins to start this quest.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-a" mid="11" select_type="0"><![CDATA[<html> ... ... ...? Yes? </html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Argenta$<BR>I'm hungry.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-b" mid="187" select_type="0"><![CDATA[<html> ... What is it? </html>]]></talk_answer>
+      <talk_question mid="186"><![CDATA[<html>$Argenta$<BR>Um, that would be good<BR>Yeah I want to eat <FONT color=#a82424>that</FONT>! Yes!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-c" mid="13" select_type="0"><![CDATA[<html>Would milk be enough for you?</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Argenta$<BR>You know, the milk everyone was crazy about a while ago.<BR>The tasty <FONT color=#a82424>wine-flavoured milk</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-c" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-d" mid="15" select_type="0"><![CDATA[<html> (... I am not very curious actually ...) </html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Argenta$<BR>Tsk tsk. You don't know a lot of things.<BR>The greatest poet of our times, the legendary William Bleah teared up and left this comment after drinking the tasty wine milk:</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-e" mid="185" select_type="0"><![CDATA[<html>So... where can I get it from?</html>]]></talk_answer>
+      <talk_question mid="184"><![CDATA[<html>$Poet William Bleah$<BR><FONT color=#7e12d2>Ah... This makes me think of lines for a poem!</FONT><BR><FONT color=#7e12d2> I was angry with the goblin:
+I told my wrath, and he gave me the wine-flavoured milk.
+I was angry with the orc:
+I told it not, and he also gave me the wine-flavoured milk.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-f" mid="17" select_type="0"><![CDATA[<html>Perhaps the general store might have it...</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Argenta$<BR>I don't know. Isn't it sold in <FONT color=#a82424>shops</FONT>?<BR>Isn't there a shop over there where the humans live?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-f" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-g" mid="19" select_type="0"><![CDATA[<html> Okay. </html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Argenta$<BR>Why not try asking Merchant May? She might have some idea.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-h" mid="21" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</font> </html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Argenta's Milk$ </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-h" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="22"><![CDATA[<html>$Argenta$<BR>Get moving, I'm hungry..<BR><FONT color=#7e12d2>(Argenta looks bored and turns away)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-a" mid="26" select_type="0"><![CDATA[<html> ... ... ...? Yes? </html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Argenta$<BR>I'm hungry</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-b" mid="180" select_type="0"><![CDATA[<html> ... What is it? </html>]]></talk_answer>
+      <talk_question mid="179"><![CDATA[<html>$Argenta$<BR>Um, that would be good<BR>Yeah I want to eat <FONT color=#a82424>that</FONT>! Yes!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-b" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-c" mid="28" select_type="0"><![CDATA[<html>Would milk be enough for you?</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Argenta$<BR>You know, the milk everyone was crazy about a while ago.<BR>The tasty <FONT color=#a82424>wine-flavoured milk</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-d" mid="30" select_type="0"><![CDATA[<html> (... I am not very curious actually ...) </html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Argenta$<BR>Tsk tsk. You don't know a lot of things.<BR>The greatest poet of our times, the legendary William Bleah teared up and left this comment after drinking the tasty wine milk:</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-e" mid="182" select_type="0"><![CDATA[<html>So... where can I get it from?</html>]]></talk_answer>
+      <talk_question mid="181"><![CDATA[<html>$Poet William Bleah$<BR><FONT color=#7e12d2>Ah... This makes me think of lines for a poem!</FONT><BR><FONT color=#7e12d2> I was angry with the goblin:
+I told my wrath, and he gave me the wine-flavoured milk.
+I was angry with the orc:
+I told it not, and he also gave me the wine-flavoured milk.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-f" mid="32" select_type="0"><![CDATA[<html>Perhaps the general store might have it...</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Argenta$<BR>I don't know. Isn't it sold in <FONT color=#a82424>shops</FONT>?<BR>Isn't there a shop over there where the humans live?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-f" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-2" mid="34" select_type="0"><![CDATA[<html> Okay. </html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Argenta$<BR>Why not try asking Merchant May? She might have some idea.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="174"><![CDATA[<html>$Merchant May$<BR>Yes? What do you need?<BR><FONT color=#7e12d2>(Talk to Argenta in the Gray Ruins.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="175"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Anytime you want to chat about heraldry, jewels, or plates, I'm your man!<BR><FONT color=#7e12d2>(Talk to Argenta in the Gray Ruins.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="176"><![CDATA[<html>$Kevin$<BR>Sorry, the airship is not ready for boarding yet.<BR><FONT color=#7e12d2>(Talk to Argenta in the Gray Ruins.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="177"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Do you need help in storing stuff? I will be glad to be at your assistance.<BR><FONT color=#7e12d2>(Talk to Argenta in the Gray Ruins.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-2" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="38"><![CDATA[<html>$Argenta$<BR>Haven't I told you, I'm hungry.<BR><FONT color=#7e12d2>(Argenta turns away, ignoring you.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-a" mid="41" select_type="0"><![CDATA[<html>You mean wine-flavoured milk?</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Merchant May$<BR>Good stuff are hard to find these day, not that I don't want to sell.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-a" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-b" mid="43" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Merchant May$<BR>Wine-flavoured milk... Ah! That! Wait, let me check the recipe book.<BR><FONT color=#7e12d2>(May begins rummaging through the old chest of drawers.)</FONT> <BR>Ah, here it is!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-b" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-c" mid="45" select_type="0"><![CDATA[<html>What? 50 years ago?</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Merchant May$<BR>Hmm.. wine-flavoured milk... It was popular but that was 50 years ago. You won't be able to find it now. But you are lucky that I still have the recipe.<BR><FONT color=#7e12d2>(May happily shows you the recipe book)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-c" image="QS_Default.dds" itemindex="300129" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-d" mid="47" select_type="0"><![CDATA[<html>So.. Any idea where I can get them?</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Merchant May$<BR>Let me see.. Seems like I have all the ingredients except one. I need a couple of <FONT color=#a82424>Fermented Herbs</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-d" image="QW_18.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-3" mid="49" select_type="0"><![CDATA[<html>Alright.. I'll go and get them.</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Merchant May$<BR>I used to get them delivered, but the delivery wagon was attacked and stolen by the monsters. The <FONT color=#a82424>Kobolds</FONT> at <FONT color=#a82424>Raider's Ambush Point</FONT> stole them because they like sweet stuff. Do you think you can get them back?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-2" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="165"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Do you need help in storing stuff? I'd be happy to help you..<BR><FONT color=#7e12d2>(Talk to <FONT color=#7e12d2>Merchant May</FONT>.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-2" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="166"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Talk to be anytime if you want to know more about heraldry, jewels or plates!<BR><FONT color=#7e12d2>(Talk to <FONT color=#7e12d2>Merchant May</FONT>.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-2" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="167"><![CDATA[<html>$Kevin$<BR>Sorry, the airship is not ready for boarding yet.<BR><FONT color=#7e12d2>(Talk to <FONT color=#7e12d2>Merchant May</FONT>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-3" image="QS_Default.dds" itemindex="300129" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="50"><![CDATA[<html>$Merchant May$<BR>I think 5 <FONT color=#a82424>Fermented Herbs</FONT> will be more than enough. Meanwhile I will work on the rest of the ingredients.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4" image="QS_Default.dds" itemindex="300129" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-a" mid="54" select_type="0"><![CDATA[<html>(You pass them over to Merchant May.)</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Merchant May$<BR>Did you bring the <FONT color=#a82424>Fermented Herbs</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-a" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-b" mid="58" select_type="0"><![CDATA[<html> Wow.. You brought... So much? </html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Merchant May$<BR>It's almost ready. Now for the final ingredient... <BR><FONT color=#7e12d2>(May tosses them into a huge pot.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-c" mid="60" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Merchant May$<BR>This is my first try at making this so I might have made it a little too much.<BR>There are many ingredients for this you know… Haha…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-c" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-d" mid="62" select_type="0"><![CDATA[<html> Well ... I'll do that. </html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Merchant May$<BR>Since I am feeling generous today, I'm thinking of sharing the extra wine-flavoured milk with the rest of the people in Calderock. Can you help with the <FONT color=#a82424>delivery</FONT>?<BR>I will give you a lot of this tasty wine-flavoured milk for free in return!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-d" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="63"><![CDATA[<html>$Merchant May$<BR>Thank you so much! Okay first on list is <FONT color=#a82424>Warehouse Keeper Rupert</FONT>, then some to <FONT color=#a82424>Heraldry Scholar Bailey</FONT>, and last but not least, <FONT color=#a82424>Kevin</FONT>. Only these 3. Thanks!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-5" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="64"><![CDATA[<html>$Merchant May$<BR>Deliver this first batch of wine-flavoured milk to <FONT color=#a82424>Warehouse Keeper Rupert</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-5" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-5-a" mid="67" select_type="0"><![CDATA[<html>(You explain him it's a gift from Merchant May.)</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Oh what is that? It doesn't look like it can be stored here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-5-a" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-5-b" mid="69" select_type="0"><![CDATA[<html> Yes, sir. </html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Ah! It's from <FONT color=#a82424>May</FONT>? Just in time, I was feeling thirsty. Thank May for me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-5-b" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="70"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Remember to look for me if you need any storage service.<BR><FONT color=#7e12d2>(Head to Heraldry Scholar Bailey next.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-6" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="72"><![CDATA[<html>$Merchant May$<BR>Deliver some of my wine milk to <FONT color=#a82424>Heraldry Scholar Bailey</FONT> next, please.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-6-a" mid="74" select_type="0"><![CDATA[<html>(You explain him it's a gift from Merchant May.)</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Do you have something to ask me?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-6-a" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-6-b" mid="76" select_type="0"><![CDATA[<html>I heard that it was popular not so long ago.</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Heraldry Scholar Bailey${action:Talk}<BR>What? <FONT color=#a82424>May</FONT> made this? I'm surprised.<BR>How does she know such an <FONT color=#a82424>old drink's recipe</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-6-b" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-6-c" mid="78" select_type="0"><![CDATA[<html> 50 years ago... Oh ... I see. </html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Can't be.<BR>My <FONT color=#a82424>grandmother</FONT> used to like this when she was still young.<BR>It was popular about <FONT color=#a82424>50 years ago</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-6-c" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="79"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Ah! This drink brought back memories of my grandma.. Please thank May for me.<BR><FONT color=#7e12d2>(Talk to Kevin next.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-6" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="81"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Do let me know if you need any storage service.<BR><FONT color=#7e12d2>(Head to Heraldry Scholar Bailey next.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-7" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="82"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Ah! This drink brought back memories of my grandma.. Please thank May for me.<BR><FONT color=#7e12d2>(Talk to Kevin next.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-7" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="83"><![CDATA[<html>$Merchant May$<BR>Last on the list... <FONT color=#7e12d2>Would you please deliver this to <FONT color=#a82424>Kevin</FONT></FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-a" mid="85" select_type="0"><![CDATA[<html>(You explain him it's a gift from Merchant May.)</html>]]></talk_answer>
+      <talk_question mid="84"><![CDATA[<html>$Kevin$<BR>Sorry, no boarding is allowed.<BR>What? You're here for something else?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-a" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-b" mid="87" select_type="0"><![CDATA[<html> Does it taste okay? </html>]]></talk_answer>
+      <talk_question mid="86"><![CDATA[<html>$Kevin$<BR>Doesn't this contain alcohol? Airship crew are not allowed to drink while on duty. <BR>(He sniffs the drink.) .<BR>…Wait a minute. This is <FONT color=#a82424>milk</FONT>! <BR>
+<FONT color=#7e12d2>(Kevin's eyes are sparkling)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-kevinansw" mid="89" select_type="0"><![CDATA[<html>Are you waiting for the airship?</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Kevin$<BR>Yummy! Super delicious! It'd be much better if we could drink this on board the airship.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-c" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-d" mid="92" select_type="0"><![CDATA[<html>I think I can leave soon. </html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Kevin$<BR>All thanks to you, this airship can fly again! I heard stories about you from Airship Engineer Hubert.<BR><FONT color=#7e12d2>(Kevin seems excited)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-e" mid="94" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="93"><![CDATA[<html><FONT color=#2b2723>$Kevin$<BR>Wow~ Cool!! Am I going to be a real <FONT color=#a82424>crew</FONT> now?!! I'm going to be the proud crew of the<FONT color=#a82424>Nautilus</FONT>!! Heheh!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-e" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-j" mid="96" select_type="0"><![CDATA[<html>Okay bye! </html>]]></talk_answer>
+      <talk_question mid="95"><![CDATA[<html>$Kevin$<BR>Maybe May can try selling this milk to the airship guests. I am sure it will sell well! I'll let her know about that the next time we meet.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-f" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-g" mid="98" select_type="0"><![CDATA[<html>I'm sure the airship will be repaired in no time...</html>]]></talk_answer>
+      <talk_question mid="97"><![CDATA[<html>$Kevin$<BR>I thought Nautilus would have been ready to take off by now. Airship Engineer Hubert just wouldn't tell me what the problem is. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-g" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-j" mid="101" select_type="0"><![CDATA[<html>(Kevin is excited about his long-awaited dream) </html>]]></talk_answer>
+      <talk_question mid="99"><![CDATA[<html>$Kevin$<BR>Maybe May can try selling this milk to the airship guests. I am sure it will sell well! I'll let her know about that the next time we meet.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-h" image="QS_20.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-i" mid="103" select_type="0"><![CDATA[<html>I'm sure the airship will be repaired in no time...</html>]]></talk_answer>
+      <talk_question mid="102"><![CDATA[<html>$Kevin$<BR>I've been waiting to fly since... ages ago. Uncle Hubert told me that he found someone to help in the search for the missing airship parts. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-i" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-j" mid="105" select_type="0"><![CDATA[<html>(Kevin is excited about everything.)</html>]]></talk_answer>
+      <talk_question mid="104"><![CDATA[<html>$Kevin$<BR>Maybe May can try selling this milk to the airship guests. I am sure it will sell well! I'll let her know about that the next time we meet.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-j" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-k" mid="172" select_type="0"><![CDATA[<html>I'll let May know. </html>]]></talk_answer>
+      <talk_question mid="106"><![CDATA[<html>$Kevin$<BR>Oh! I almost forget. Please let <FONT color=#a82424>May</FONT> that I love the milk!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="173"><![CDATA[<html>$Kevin$<BR>It kind of smelled like my grandmother at first, but the more I drink, the more tasty it gets! It will sell quite well!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-8" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="107"><![CDATA[<html>$Kevin$<BR>Oh! I almost forget. Please let <FONT color=#a82424>May</FONT> that I love the milk! It kind of smelled like my grandmother at first, but the more I drink, the more tasty it gets! It will sell quite well!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-8" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-8-a" mid="110" select_type="0"><![CDATA[<html> Everybody liked it. </html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html>$Merchant May$<BR>Wow are you done with the deliveries? You're so quick!<BR>How did everyone find the milk?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-8-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-8-b" mid="112" select_type="0"><![CDATA[<html> Hundred years is a little too….</html>]]></talk_answer>
+      <talk_question mid="111"><![CDATA[<html>$Merchant may$<BR>That's a relief. This recipe book might prove to be quite useful.<BR>Indeed, <FONT color=#a82424>vintage is the new in-thing</FONT>! Ten years is not enough, it should be at least <FONT color=#a82424>fifty years old</FONT>!! <FONT color=#a82424>Hundred years old</FONT>!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-8-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-9" mid="114" select_type="0"><![CDATA[<html> Thank you. </html>]]></talk_answer>
+      <talk_question mid="113"><![CDATA[<html>$Merchant May$<BR>I'm going to recreate these recipes and expand my menu list.<BR>Oh! I almost forgot, these leftover wine-flavoured milk is for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-9" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="115"><![CDATA[<html>$Merchant May$<BR>Bye! See you again</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-a" mid="117" select_type="0"><![CDATA[<html>No this had to be handmade...</html>]]></talk_answer>
+      <talk_question mid="116"><![CDATA[<html>$Argenta$<BR>What took you so long?<BR>It was just buying the milk from that <FONT color=#a82424>merchant girl</FONT>!!<BR>
+Don't tell me you drank up all my milk on your way back?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-b" mid="119" select_type="0"><![CDATA[<html> This drink was only popular 50 years ago… They don't sell this anymore now.</html>]]></talk_answer>
+      <talk_question mid="118"><![CDATA[<html>$Argenta$<BR>Yeah…I understand that it is quite popular so it may have been sold out..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-c" mid="121" select_type="0"><![CDATA[<html>It's not a while ago but long ago...</html>]]></talk_answer>
+      <talk_question mid="120"><![CDATA[<html>$Argenta$<BR>Yeah I know. 50 years ago. What's wrong with that?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-d" mid="123" select_type="0"><![CDATA[<html> Just... take the milk. </html>]]></talk_answer>
+      <talk_question mid="122"><![CDATA[<html>$Argenta$<BR>If 50 years is considered long, what about 500? Or even 5000 years ago? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-d" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-e" mid="125" select_type="0"><![CDATA[<html> (Argenta finish all the milk in a split second) </html>]]></talk_answer>
+      <talk_question mid="124"><![CDATA[<html>$Argenta$<BR>You took so long and all you got is just these few bottle?<BR><FONT color=#7e12d2>(*Gulp*)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-f" mid="127" select_type="0"><![CDATA[<html><FONT color=#2b2723>(She drank ten bottles and she says it was not enough…!!)</FONT></html>]]></talk_answer>
+      <talk_question mid="126"><![CDATA[<html>$Argenta$<BR>Thanks, even though this wasn't enough to satisfy me. Now, slave <FONT color=#382000>{user_nick}</font>, take this!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-g" mid="170" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="128"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="171"><![CDATA[<html>$Argenta$<BR>Ah... Now that I remember...<BR>You better come back often, don't be lazy. Heard that?!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">2611,2611,2612,2613,2614,2615,2616,2617,2618,2619</exe>
+         <exe type="setquest">261</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">,2611,2612,2613,2614,2615,2616,2617,,</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="questitem" num="5" op="]=">400409</chk>
+         <chk type="prob">300</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">444</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="delcount">.</exe>
+         <exe type="huntitem" num="5" exe="" onexe="">400409</exe>
+         <exe type="conexe" true="5,3,4" false="8,9">0</exe>
+         <exe type="addquestitem" num="1">400409</exe>
+         <exe type="conexe" true="5,3,4" false="">0</exe>
+         <exe type="conexe" true="8,9" false="">1</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">200444</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">445</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">200445</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">446</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">200446</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">400409</exe>
+         <exe type="addquestitem" num="3">300137</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="1">300137</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="1">300137</exe>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 218 ) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 208 ) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="talk" npc="n029_crew_kevin">c</exe>
+         <exe type="talk" npc="n029_crew_kevin">f</exe>
+         <exe type="talk" npc="n029_crew_kevin">h</exe>
+         <exe type="delquestitem" num="-1">300137</exe>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="10">300137</exe>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">8</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">2611,2611,2612,2613,2614,2615,2616,2617,2618,2619</exe>
+         <exe type="delquestitem" num="-1">300137</exe>
+         <exe type="complete" true="">261</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="g">0</exelink>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="h">1,2</exelink>
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="e" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="f" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="2">1</exelink>
+   <exelink qstep="2" npc="n026_trader_may" sub="b" />
+   <exelink qstep="2" npc="n026_trader_may" sub="c" />
+   <exelink qstep="2" npc="n026_trader_may" sub="d" />
+   <exelink qstep="2" npc="n026_trader_may" sub="3">2,11,12,13,14,15,6,0,1</exelink>
+   <exelink qstep="4" npc="n026_trader_may" sub="b" />
+   <exelink qstep="4" npc="n026_trader_may" sub="c" />
+   <exelink qstep="4" npc="n026_trader_may" sub="d">0,1,2,3</exelink>
+   <exelink qstep="5" npc="n323_warehouse_lupert" sub="b">0,1,2</exelink>
+   <exelink qstep="6" npc="n028_scholar_bailey" sub="b" />
+   <exelink qstep="6" npc="n028_scholar_bailey" sub="c">0,1,2</exelink>
+   <exelink qstep="7" npc="n029_crew_kevin" sub="b" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="kevinansw">0</exelink>
+   <exelink qstep="7" npc="n029_crew_kevin" sub="d" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="e" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="j" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="g" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="j" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="i" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="j" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="k">5,6,7</exelink>
+   <exelink qstep="8" npc="n026_trader_may" sub="b" />
+   <exelink qstep="8" npc="n026_trader_may" sub="9">0,1,2</exelink>
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="e" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="f">0</exelink>
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="g">1,2</exelink>
+   <journal_data recompense="1:2611,2:2612,3:2613,4:2614,5:2615,6:2616,7:2617,8:2618,9:2619" quest_title="아르젠타와 우유" chapterid="" quest_level="14" quest_mark_type="10" use_item_list="300137,300129">
+      <journal index="1">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="131"><![CDATA[Argenta's hunger]]></title>
+         <contents mid="132"><![CDATA[<html><FONT color=#a82424>Argenta</FONT> has a craving for <FONT color=#a82424>wine-flavoured milk</FONT>. You might be able to get some from <FONT color=#a82424>Merchant May</FONT>.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="133"><![CDATA[Talk to Merchant May]]></destination>
+         <todo_msg mid="134"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_18.dds</contents_image>
+         <destination_pos>139,0,0</destination_pos>
+         <destination_mode>custom:136@3,137@3,138@3,139@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="135"><![CDATA[Merchant May's Recipes]]></title>
+         <contents mid="136"><![CDATA[<html><FONT color=#2b2723>Merchant May needs <FONT color=#a82424>Fermented Herbs</FONT> to make the drink. Go to the <FONT color=#a82424>Raider's Ambush Point</FONT> and retrieve those stolen goods from the <FONT color=#a82424>Kobolds</FONT>.</FONT><BR><BR><FONT color=#086171>Cristal Stream (Raider's Den Entrance)<FONT color=#a82424>→ Raider's Ambush Point</FONT></FONT></html>]]></contents>
+         <destination mid="137"><![CDATA[Collect 5 Fermented Herbs]]></destination>
+         <todo_msg mid="138"><![CDATA[Hunt down Kobolds at Raider's Ambush Point.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="139"><![CDATA[Completed collecting materials]]></title>
+         <contents mid="140"><![CDATA[<html>You have completed collecting the <FONT color=#a82424>Fermented Herbs</FONT>. Return to <FONT color=#a82424>Merchant May </FONT> at Calderock Village and ask her to make the milk Argenta wants.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="141"><![CDATA[Talk to Merchant May]]></destination>
+         <todo_msg mid="142"><![CDATA[Talk to Merchant May at Calderock Village.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Guilian.dds</contents_image>
+         <destination_pos>8,n323</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>323</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="145"><![CDATA[Delivery Request from Merchant May]]></title>
+         <contents mid="146"><![CDATA[<html>Merchant May successfully made the <FONT color=#a82424>wine-flavoured milk</FONT>. She'll give you some for free if you make some deliveries for her. Give some to <FONT color=#a82424>Warehouse Keeper Rupert</FONT>.<BR><BR><FONT color=#086171>Calderock Village</FONT> → <FONT color=#a82424>Warehouse Keeper Rupert</FONT></html>]]></contents>
+         <destination mid="147"><![CDATA[Talk to Warehouse Keeper Rupert]]></destination>
+         <todo_msg mid="148"><![CDATA[Deliver wine-flavoured milk to Warehouse Keeper Rupert]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Scholar_Baily.dds</contents_image>
+         <destination_pos>8,n28</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>28</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="149"><![CDATA[Delivery Request from Merchant May II]]></title>
+         <contents mid="150"><![CDATA[<html>Merchant May successfully made the <FONT color=#a82424>wine-flavoured milk</FONT>. She'll give you some for free if you make deliveries for her. Deliver some to <FONT color=#a82424>Heraldry Scholar Bailey</FONT>.<BR><BR><FONT color=#086171>Calderock Village</FONT> → <FONT color=#a82424>Heraldry Scholar Bailey</FONT></html>]]></contents>
+         <destination mid="151"><![CDATA[Talk to Heraldry Scholar Bailey]]></destination>
+         <todo_msg mid="152"><![CDATA[Deliver the wine-flavoured milk to Heraldry Scholar Bailey]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_crew_kevin.dds</contents_image>
+         <destination_pos>8,n29</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>29</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="153"><![CDATA[Delivery Request from Merchant May III]]></title>
+         <contents mid="154"><![CDATA[<html>It seems like the craze over <FONT color=#a82424>wine-flavoured milk</FONT> has already passed long time ago. Get rid of the stock by giving some to <FONT color=#a82424>Kevin</FONT>. <BR><BR><FONT color=#086171>Calderock Village</FONT> → <FONT color=#a82424>Kevin</FONT></html>]]></contents>
+         <destination mid="155"><![CDATA[Talk to Kevin]]></destination>
+         <todo_msg mid="156"><![CDATA[Deliver wine-flavoured milk to Kevin.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="157"><![CDATA[Merchant May Delivery Mission Complete]]></title>
+         <contents mid="158"><![CDATA[<html>You have completed delivering wine-flavoured milk. Now, go back and talk to <FONT color=#a82424>Merchant May</FONT>.<BR><BR><FONT color=#086171>Calerock Village</FONT> → <FONT color=#a82424>Merchant May</FONT></html>]]></contents>
+         <destination mid="159"><![CDATA[Talk to Merchant May]]></destination>
+         <todo_msg mid="160"><![CDATA[Deliveries complete! Report back to Merchant May.]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="161"><![CDATA[Argenta's Milk]]></title>
+         <contents mid="162"><![CDATA[<html>You've obtained <FONT color=#a82424>wine-flavoured milk</FONT> from <FONT color=#a82424>Merchant May</FONT>. Now deliver the milk to <FONT color=#a82424>Argenta</FONT> in the <FONT color=#a82424>Gray Ruins</FONT>.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="163"><![CDATA[Talk to Argenta at the Gray Ruins]]></destination>
+         <todo_msg mid="164"><![CDATA[Deliver wine-flavoured milk to Argenta.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest>260,376,249</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

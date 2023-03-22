@@ -1,0 +1,21 @@
+   <talk>
+      <npcename>n353_cataract_warp</npcename>
+      <npcid>353</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Adventurer's Guild Member]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="warp" mid="6"><![CDATA[<html>[Warp]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Adventurer's Guild Member$<BR>You may use the warp to quickly navigate the town, select [<FONT color=#a82424>Warp Gate</FONT>] to do so.<BR>Use <FONT color=#7e12d2>[NPC Search]</FONT> - <FONT color=#a82424>to move to the NPC.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="enterquest">sq08_374_cataract_warp</exe>
+         <exe type="custom">api_ui_OpenWarpListDlg(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 374) == 1</chk>
+      </conditions>
+      <exelink idx="warp">3</exelink>
+   </talk>

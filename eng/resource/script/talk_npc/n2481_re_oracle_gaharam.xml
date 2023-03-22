@@ -1,0 +1,30 @@
+   <talk>
+      <npcename>n2481_re_oracle_gaharam</npcename>
+      <npcid>2481</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Gaharam]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="002" mid="4"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>${user_nick}$<BR>
+No… NO!!!<BR>Master, please open your eyes… Noooo...</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="set_quest" mid="6"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>${user_nick}$<BR>Why... Why did this happen while I was away…<BR>I’m not ready yet… <BR>How can I live on if you leave me like this…!<BR>Master… Please say something.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="7"><![CDATA[<html>$Gaharam$<BR>
+<FONT color=#7e12d2>(Her cold body is lying limp.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">003</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 997, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 88</chk>
+      </conditions>
+      <exelink idx="set_quest">3</exelink>
+   </talk>

@@ -1,0 +1,80 @@
+   <talk>
+      <npcename>n736_pcbang_npc</npcename>
+      <npcid>736</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Warnet Weapon Rent NPC]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="get_pc_item" mid="38"><![CDATA[<html>[Meminjam Item]</html>]]></talk_answer>
+         <talk_answer link_index="about_service" mid="39"><![CDATA[<html>[Apa itu Item Rent?]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Premium User Helper Fiona$<BR>Apa kabar? Aku adalah <FONT color=#a82424>Premium User Helper Fiona</FONT>.<BR>Aku melayani user yang menggunakan Premium User untuk meminjamkan Item.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="nopcbang" image="" itemindex="">
+         <talk_answer link_index="about_service" mid="58"><![CDATA[<html>[Apa itu item rent?]</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Premium User Helper Fiona$<BR>Silahkan meminjam item khusus pengguna Premium User.<BR>
+Aku akan menjelaskan tentang Item Rent.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="noplayer" image="" itemindex="">
+         <talk_question mid="13"><![CDATA[<html>$Premium User Helper Fiona$<BR>Kamu tidak dapat menggunakan item rent.<BR>
+Silahkan hubungi GM untuk masalah ini.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="about_service" image="" itemindex="">
+         <talk_answer link_index="about_2" mid="40"><![CDATA[<html>(Teruskan)</html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Premium User Helper Fiona$<BR>Item Rent adalah layanan untuk meminjamkan item kepada para Premium User. Item Rent akan selesai jika user tidak menggunakan Premium User lagi.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_0" image="" itemindex="">
+         <talk_answer link_index="notice_01" mid="54"><![CDATA[<html>(Dengarkan)</html>]]></talk_answer>
+         <talk_question mid="19"><![CDATA[<html>$Premium User Helper Fiona$<BR>Item Rent selesai. Jika terputus dari server atau selesai menggunakan <FONT color=#a82424>Premium User</FONT> akan mengakhiri layanan Item Rent..<BR>
+</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_2" image="" itemindex="">
+         <talk_question mid="23"><![CDATA[<html>$Premium User Helper Fiona$<BR>Tidak ada item yang bisa dipinjamkan kepada kamu.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_3" image="" itemindex="">
+         <talk_question mid="24"><![CDATA[<html>$Premium User Helper Fiona$<BR>Silahkan kosongkan tas kamu.<BR>
+Aku tidak bisa meminjamkan item jika tas penuh.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_4" image="" itemindex="">
+         <talk_question mid="25"><![CDATA[<html>$Premium User Helper Fiona$<BR>Sudah memiliki item pinjaman. Tidak dapat meminjam lagi.<BR>
+Jika ingin memilih item lain, silahkan koneksi ulang dari halaman pilihan karakter.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_5" image="" itemindex="">
+         <talk_question mid="43"><![CDATA[<html>$Premium User Helper Fiona$<BR>Error. Silahkan hubungi GM.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="about_2" image="" itemindex="">
+         <talk_answer link_index="001" mid="48"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="46"><![CDATA[<html>$Premium User Helper Fiona$<BR>Item yang dipinjam akan menghilang jika terputus dari server, jadi kamu harus datang lagi ke aku untuk meminjam item lagi..</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="notice_01" image="" itemindex="">
+         <talk_question mid="52"><![CDATA[<html>$Premium User Helper Fiona$<BR>Item yang dipinjam akan hilang jika terputus dari server, maka sangat tidak disarankan untuk <FONT color=#a82424>Enhance</FONT>. <FONT color=#a82424>Potential Code</FONT>. <FONT color=#a82424>Suffix</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">nopcbang</exe>
+         <exe type="conexe" true="0" false="3">0</exe>
+         <exe type="conexe" true="1" false="4">1</exe>
+         <exe type="talk">noplayer</exe>
+         <exe type="conexe" true="6" false="7">2</exe>
+         <exe type="talk">set_pc_0</exe>
+         <exe type="conexe" true="1" false="8">3</exe>
+         <exe type="conexe" true="11" false="9">4</exe>
+         <exe type="conexe" true="12" false="10">5</exe>
+         <exe type="conexe" true="13" false="14">6</exe>
+         <exe type="talk">set_pc_2</exe>
+         <exe type="talk">set_pc_3</exe>
+         <exe type="talk">set_pc_4</exe>
+         <exe type="conexe" true="15" false="4">7</exe>
+         <exe type="talk">set_pc_5</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetPCCafe(userObjID) >= 1</chk>
+         <chk type="custom">api_user_GetPCCafe(userObjID) == 0</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 0</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 1</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 2</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 3</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 4</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 5</chk>
+      </conditions>
+      <exelink idx="get_pc_item">5</exelink>
+   </talk>

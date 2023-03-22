@@ -1,0 +1,91 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq13_6005_lupert_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>6005</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Girls]]></qkname>
+      <qnpc>
+         <npcid>323</npcid>
+         <npcename>n323_warehouse_lupert</npcename>
+         <npckname>창고지기 루퍼트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-accepting-a" mid="6" select_type="0"><![CDATA[<html>Bagaimana kalau aku?</html>]]></talk_answer>
+      <talk_answer link_index="n323_warehouse_lupert-accepting-b" mid="7" select_type="0"><![CDATA[<html>Bagaimana kalau Tiana?</html>]]></talk_answer>
+      <talk_answer link_index="n323_warehouse_lupert-accepting-c" mid="8" select_type="0"><![CDATA[<html>Bagaimana kalau Adelynn?</html>]]></talk_answer>
+      <talk_answer link_index="n323_warehouse_lupert-accepting-d" mid="9" select_type="0"><![CDATA[<html>Bagaimana kalau May?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Aku selalu mengagumi wanita yang cermat walaupun orang mungkin menganggapnya pelit. Selama dia baik padaku, hal tersebut bukan masalah tapi suilt menemukan wanita seperti itu di sini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="10"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Hahaha Itu lelucon yang bagus. Aku akan menganggap bahwa kamu sangat nyaman berada di sekitarku dan akhirnya kamu sangat menyukaiku. Tapi kamu bercanda, kan? Kuharap kamu benar-benar bercanda.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Aku memang berpikir bahwa Sorceress itu cukup cantik dari luar, tapi aku tidak terlalu nyaman berada di sekitar perempuan terlibat dalam hal yang tidak aku mengerti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Adelynn masih belum melupakan Eureke, kan? Mungkin jika dia sembuh dari lukanya... tapi tetap saja, bersama Adelynn pasti akan sulit.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>May?! Apa kamu bercanda!! Kecuali kalau kamu memang ingin membuatku menderita, tolong jangan berpikir untuk menjodohkan aku dan May.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 6005, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 323, 220 ); </exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 323, 110 ); </exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 323, 60 ); </exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 323, 220 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 이상형에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>323:3850:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

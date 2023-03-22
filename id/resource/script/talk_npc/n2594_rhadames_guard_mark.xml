@@ -1,0 +1,26 @@
+   <talk>
+      <npcename>n2594_rhadames_guard_mark</npcename>
+      <npcid>2594</npcid>
+      <startexe>0</startexe>
+      <comment>2. 프로즌네스트 상점</comment>
+      <npckname mid="1"><![CDATA[Guard Mark]]></npckname>
+      <talk_paragraph index="basic" image="" itemindex="">
+         <talk_answer link_index="quest" mid="9"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="prozen_shop" mid="16"><![CDATA[<html>[Tiger Dragon Shop]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Guard Mark$<BR>
+This place is dangerous so please don’t enter.<BR>
+You never know when the Nests will spread.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="11" link_target="sqc17_4760_labyrinth_of_mirage.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>[Nest] Maze of Mirage</FONT></html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Guard Mark$<BR>
+You said you have some business with me, right? Make it quick. Do you understand?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">basic</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,91101,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,99001,100);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="prozen_shop">2</exelink>
+   </talk>

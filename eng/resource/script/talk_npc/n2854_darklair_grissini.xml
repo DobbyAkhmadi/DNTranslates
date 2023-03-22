@@ -1,0 +1,44 @@
+   <talk>
+      <npcename>n2854_darklair_grissini</npcename>
+      <npcid>2854</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Priestess of Darkness Grisini]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="miroshop" mid="13"><![CDATA[<html>[Maze Shop]</html>]]></talk_answer>
+         <talk_answer link_index="mareshop" mid="23"><![CDATA[<html>[Nightmare Shop]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Priestess of Darkness Grisini$<BR>Welcome.<BR>I am here under orders to guard the boundary of the maze.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="4219" image="" itemindex="">
+         <talk_answer link_index="miroshop" mid="14"><![CDATA[<html>[Maze Shop]</html>]]></talk_answer>
+         <talk_answer link_index="mareshop" mid="15"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="24"><![CDATA[<html></html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Priestess of Darkness Grisini$<BR>Welcome.<BR>I am here under orders to guard the boundary of the maze.<BR>......And sometimes I meet someone who remembers me before.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="crowa" mid="16"><![CDATA[<html>[About Crowa]</html>]]></talk_answer>
+         <talk_answer link_index="ring" mid="17"><![CDATA[<html>[About Ring]</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Priestess of Darkness Grisini$<BR>The distorted Mobius World must have been eaten by a maze. Because I, who was still in Mobius World, ended up coming back to the boundary of this maze. So, I was able to protect this place.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="crowa" image="" itemindex="">
+         <talk_question mid="20"><![CDATA[<html>$Priestess of Darkness Grisini$<BR>Unfortunately, I do not remember about Crowa now but I remember there was someone who push my back forward this boundary. I can't leave this place because I'm thinking her was.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="ring" image="" itemindex="">
+         <talk_question mid="21"><![CDATA[<html>$Priestess of Darkness Grisini$<BR>. As expected, you remember this ring. When I got back here, my ring was gone, and all I had was Crowa's ring. I think she probably has it.<BR>
+(She pats the ring as if it were precious.)</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk">4219</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,212001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,230001,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">4219</chk>
+      </conditions>
+      <exelink idx="miroshop">3</exelink>
+      <exelink idx="mareshop">4</exelink>
+      <exelink idx="miroshop">3</exelink>
+      <exelink idx="mareshop">4</exelink>
+   </talk>

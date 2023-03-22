@@ -1,0 +1,69 @@
+   <talk>
+      <npcename>n2694_promise_grace</npcename>
+      <npcid>2694</npcid>
+      <startexe>0</startexe>
+      <comment>4월 타겟 진행 시 클릭 시 실행 문을 0으로 변경</comment>
+      <npckname mid="1"><![CDATA[Oath Assistant Grace]]></npckname>
+      <talk_paragraph index="basic" image="" itemindex="">
+         <talk_answer link_index="promise_explain" mid="33"><![CDATA[<html>[What's all this talk about oaths?]</html>]]></talk_answer>
+         <talk_answer link_index="hall_booking" mid="34"><![CDATA[<html>[Oath Ceremony reservations]</html>]]></talk_answer>
+         <talk_answer link_index="ck_invitehall" mid="35"><![CDATA[<html>[Go to Oath Hall]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="40"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Oath Assistant Grace${action:Talk2}<BR>Welcome! How can I help you?<BR>Making an Oath Ceremony reservation? Or were you invited to an Oath Ceremony and want to attend?<BR>Or... Perhaps you want to take an oath yourself?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="promise_explain" image="" itemindex="">
+         <talk_answer link_index="bf_explain" mid="36"><![CDATA[<html>[What is a best friend?]</html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="68"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Oath Assistant Grace$<BR>Want to learn more about oaths?<BR>Taking an oath means committing to someone who you want to be with for life.<BR>Before you can take an oath, you need to have a best friend.<BR>If you already have a best friend, try carrying out the oath quest.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="bf_explain" image="" itemindex="">
+         <talk_answer link_index="promise_explain" mid="38"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="13"><![CDATA[<html>$Oath Assistant Grace$<BR>You can become best friends with a friend you are already close with.<BR>You will gain some benefits when you undertake your adventure with a best friend.<BR><BR><FONT color=#7e12d2>※ Check the Help section for more detailed info on best friends.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="42" link_target="sqc10000_3706_promise_try01.xml"><![CDATA[<html><FONT color=#7e12d2>[Oath]</FONT> You and I Are Best Friends</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="46" link_target="sqc10000_3707_promise_try02.xml"><![CDATA[<html><FONT color=#7e12d2>[Oath]</FONT> Items With a Long History</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="49" link_target="sqc10000_3708_promise_try03.xml"><![CDATA[<html><FONT color=#7e12d2>[Oath]</FONT> Promise to Wait</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="53" link_target="sqc10000_3709_promise_try04.xml"><![CDATA[<html><FONT color=#7e12d2>[Oath]</FONT> Three Requirements for an Oath</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="80" link_target="sqc10000_3741_promise_buff.xml"><![CDATA[<html><FONT color=#7e12d2>[Oath]</FONT> I would never forget how happy I was today!</html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="43"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="41"><![CDATA[<html>$Oath Assistant Grace$<BR>What brings you here?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="hall_ck" image="" itemindex="">
+         <talk_answer link_index="move_hall" mid="57"><![CDATA[<html>[Accessible Oath Hall]</html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="71"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="56"><![CDATA[<html>$Oath Assistant Grace$<BR>First, let me check to see if there are any Oath Halls you can get to.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_invite" image="" itemindex="">
+         <talk_answer link_index="basic" mid="62"><![CDATA[<html>(Back to beginning)</html>]]></talk_answer>
+         <talk_question mid="59"><![CDATA[<html>$Oath Assistant Grace$<BR>Sorry, but it seems you haven't been invited to an Oath Ceremony.<BR>Perhaps you made a mistake?<BR>Can you go check your mailbox again to make sure?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_move" image="" itemindex="">
+         <talk_question mid="74"><![CDATA[<html>$Oath Assistant Grace$<BR>Sorry, but typically we expect people to enter the Oath Hall one-by-one.<BR>It gets too chaotic in there if we let a bunch of people in all at once.<BR><BR><FONT color=#7e12d2>※ You cannot travel to other locations while a party is formed or when undergoing random matching.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_open" image="" itemindex="">
+         <talk_question mid="77"><![CDATA[<html>$Oath Assistant Grace$<BR>The kingdom plans to open the <FONT color=#a82424>Oath Hall</FONT> to the public as part of their new policy to promote safety and well-being.<BR>If you head inside you'll see the renovations are already well underway!<BR>Once the Oath Hall is open to the public you should come check it out.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">basic</exe>
+         <exe type="talk">bf_explain</exe>
+         <exe type="custom">api_ui_PromiseInviteInfo(userObjID)</exe>
+         <exe type="custom">api_ui_PromiseReservation(userObjID)</exe>
+         <exe type="custom">api_user_PromiseMyInviteListLoad(userObjID)</exe>
+         <exe type="conexe" true="2" false="6">0</exe>
+         <exe type="talk">no_invite</exe>
+         <exe type="talk">hall_ck</exe>
+         <exe type="conexe" true="9" false="10">1</exe>
+         <exe type="conexe" true="10" false="4,7">2</exe>
+         <exe type="talk">no_move</exe>
+         <exe type="talk">no_open</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_CheckHasPromiseInviteList(userObjID) == 1</chk>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+         <chk type="custom">api_user_IsMatching(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="hall_booking">3</exelink>
+      <exelink idx="ck_invitehall">8</exelink>
+      <exelink idx="move_hall">5</exelink>
+   </talk>

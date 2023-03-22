@@ -1,0 +1,20 @@
+   <talk>
+      <npcename>n1906_shaolong</npcename>
+      <npcid>1906</npcid>
+      <startexe>1</startexe>
+      <comment>조설빈 : 전직 이후 리버워트선착장에 있는 샤오룽과 대화하여 비정상적으로 전직공간에 재진입 가능. 전직 중간에 튕기는 것을 고려하여 트리거를 따로 수정하지 않고. 스크립트에서 전직완료 스텝을 체크하여 재진입 방지. (2019.06.12)</comment>
+      <npckname mid="1"><![CDATA[Xiaolong]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Xiaolong${action:Talk}<BR>We are not welcomed in these areas. Krrang.<BR>But we have our own work to do.<BR> </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="3" false="0">0</exe>
+         <exe type="enterquest">sqc06_4726_figth_with_strength</exe>
+         <exe type="conexe" true="0" false="2">1</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">4726</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, (4726)) == (7)</chk>
+      </conditions>
+   </talk>

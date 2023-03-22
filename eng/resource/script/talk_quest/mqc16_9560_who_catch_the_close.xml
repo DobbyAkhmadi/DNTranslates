@@ -1,0 +1,761 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc16_9560_who_catch_the_close</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>16</qchapter>
+      <qid>9560</qid>
+      <designer>최지은</designer>
+      <qlevel>80</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9561</nextqid>
+      <nextqname>mqc16_9561_princess_and_knight</nextqname>
+      <nextqnpc>n1065_geraint_kid</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[The One Who Stopped The Doom]]></qkname>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>38</npcid>
+         <npcename>n038_royal_magician_kalaen</npcename>
+         <npckname>궁정 소서리스 칼라엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>41</npcid>
+         <npcename>n041_duke_stwart</npcename>
+         <npckname>공작 스튜어트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>822</npcid>
+         <npcename>n822_teramai</npcename>
+         <npckname>테렌스 테라마이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1067</npcid>
+         <npcename>n1067_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>249</npcid>
+         <npcename>n249_saint_guard</npcename>
+         <npckname>왕성 근위병 로이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1065</npcid>
+         <npcename>n1065_geraint_kid</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-acceptted_1" mid="162" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Royal Guard Roy$<BR><FONT color=#387206>{user_nick}</FONT>, Terramai is looking for you.<BR>He said King Cassius has summoned you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-accepting" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-accepting-acceptted_2" mid="163" select_type="3" />
+      <talk_question mid="6"><![CDATA[<html>$Elf Elder$<BR>...I have a message from Terramai.<BR>It's about time you returned to the Royal Castle.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n249_saint_guard-1-" mid="166" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Royal Guard Roy$<BR>It seems like something big is going to happen…<BR>I just hope no harm will go to you, <FONT color=#387206>{user_nick}</FONT>.<BR>Please take care.<BR><FONT color=#7e12d2>(Go to Saint Haven Royal Castle and meet King Cassius)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-" mid="167" select_type="5" />
+      <talk_question mid="8"><![CDATA[<html>$Elf Elder$<BR>…If anything happens, I'll go there myself.<BR>Don't worry too much. <FONT color=#387206>{user_nick}</FONT>, you didn't do anything wrong. <BR>So please don't cower in self blame.<BR><FONT color=#7e12d2>(Go to Saint Haven and meet King Cassius)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1065_geraint_kid-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1065_geraint_kid-1-" mid="168" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Geraint$<BR>Are you done? Don't be distracted!<BR><FONT color=#7e12d2>(Go to Saint Haven Royal Castle)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-1-" mid="169" select_type="5" />
+      <talk_question mid="10"><![CDATA[<html>$Duke Stuart$<BR>…...<FONT color=#7e12d2>(His eyes are full of distrust)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-1-" mid="170" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>$Court Sorceress Kayleen$<BR><FONT color=#2b2723>….</FONT><FONT color=#7e12d2>(She looks like she wants to say something but she's holding it back)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="171" select_type="5" />
+      <talk_question mid="12"><![CDATA[<html>$General Douglas$<BR><FONT color=#2b2723>….</FONT><FONT color=#7e12d2>(He looks serious)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-1-" mid="172" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Terrence Terramai$<BR><FONT color=#2b2723>….</FONT><FONT color=#7e12d2>(He is putting on a warm smile like he's trying to assure you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-a" mid="173" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(The atmosphere is so tense it is suffocating.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-b" mid="180" select_type="0"><![CDATA[<html>That's right....</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-1-b" mid="181" select_type="0"><![CDATA[<html>I'm sorry.</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-1-b" mid="182" select_type="0"><![CDATA[<html>I have nothing to say.</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$King Cassius$<BR>Er... erm... ehem... So I got this r-r-report... <FONT color=#387206>{user_nick}</FONT>… It is a p-pity…. Everyone t-tried s-s-so hard… B-but the r-r-results were d-disappointing... <BR><FONT color=#7e12d2>(Cassius carefully checks the expressions on the faces of those around him)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-c" mid="175" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$King Cassius$<BR><FONT color=#7e12d2>(Cassius jolts)</FONT>H-h-hey... you should at least g-give an e-e-excuse... N-no let me h-hear what happened there...<BR>Won't you t-t-tell me what happened there... What did you s-see…?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-c" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-d" mid="183" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(The moment I tried to recall what happened, it almost seemed like Argenta's voice was ringing in my ears. Her voice that told me not to make the sad face and told me to be strong as it faded away... It was so stuck in my head that my lips were locked and my voice was muted. Standing there without saying anything sprung murmurs again)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-d" image="QN_Npc_Arno.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-1-e" mid="185" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(…It was fine when I told the Elder and Yuvenciel what happened. What's wrong with me? As more time passes by, everything I've done seems like a nightmare... The memory of the Ancients... Argenta... Feder... Meriendel... and the discord between the Elves... Ah... everything's a mess... There's no memory that isn't painful... Do I really need to tell them about this?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-f" mid="186" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$King Cassius$<BR>Erm… <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-g" mid="187" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Duke Stuart$<BR><FONT color=#7e12d2>(He is clearly being sarcastic)</FONT>Well well, you were so confident when you first came in here, and now you're scared of taking the responsibility for the defeat? Whatever the case, you're nothing but a half-fledged greenhorn adventurer. This is why I was against trusting young adventurers in the first place.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-h" mid="188" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Terrence Terramai$<BR>That's too much! How can you say that to someone who just returned from a series of difficult missions? Our friend here has put up a lonely fight at a place where nobody has ever been to and even lost a precious friend! Don't you think a more mature reaction would be to understand what <FONT color=#387206>{user_nick}</FONT> went through?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-i" mid="193" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Duke Stuart$<BR>Well, Terramai... It's you who has to be understanding of His Majesty's devastation after achieving nothing despite sending so many soldiers. You were the one who said everything's over when the Monolith's doors opened. Yet, this is what we achieved... <FONT color=#7e12d2>(Stuart shakes his head)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-j" mid="194" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Duke Stuart$<BR>The doors of the Monolith have opened and the world will soon end! The royal army couldn't stop it either!<BR>You know this is enough to thrust the people into chaos and instigate a revolt! And it's all because of <FONT color=#387206>{user_nick}</FONT>! Yet, you are not going to make the person who is responsible for all this be held accountable?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-k" mid="195" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Court Sorceress Kayleen$<BR>I can't stand it anymore. You're sidetracking too much! It was Feder who opened the Monolith, not <FONT color=#387206>{user_nick}</FONT>. Feder is the one who caused all this. <FONT color=#387206>{user_nick}</FONT> asked for our help to stop him but unfortunately, we lost. Putting all the blame on <FONT color=#387206>{user_nick}</FONT> clearly seems like a mistake to me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-l" mid="197" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Besides, if <FONT color=#387206>{user_nick}</FONT> disappeared in the Monolith, we would have never realised what was happening. We're wasting our precious time here. We should rather devise a plan to catch Feder now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-m" mid="198" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Duke Stuart$<BR>That's why we should give duly punishment so that rumours don't spread.<BR>What if...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2" mid="199" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Terrence Terramai$<BR><FONT color=#7e12d2>(Terramai quickly interrupts)</FONT>I totally agree with Kayleen. If you're worried about uprisings, we can stop them. But right now you're trying to imply <FONT color=#387206>{user_nick}</FONT> is going to lead the commoners into a revolt. Don't you agree that this isn't logical, Stuart?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-a" mid="203" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$King Cassius$<BR><FONT color=#7e12d2>(Cassius breaks the tense atmosphere and shouts)</FONT>Errrrrm...!!! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-2-b" mid="204" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Everyone In the Castle$<BR><FONT color=#7e12d2>(All eyes are on Cassius now after hearing his unexpectedly loud attempt to get everyone's attention. While everyone's taken aback, Cassius painfully opens his mouth with everyone focusing on the next word he is going to say)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-c" mid="315" select_type="0"><![CDATA[<html>Why do you ask that?</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-2-c" mid="316" select_type="0"><![CDATA[<html>If you've already received the report... then why do you ask again?</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$King Cassius$<BR>Th-there's... s-something weird... I think... It's b-b-been bugging me... since I received the Elf's r-r-report!!! B-b-but <FONT color=#387206>{user_nick}</FONT> who was at the c-center of the b-b-battles is h-here now...!! So let me ask...! Is the Feder you s-s-saw... the l-l-legendary Conqueror Feder?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-d" mid="210" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$King Cassius$<BR>…<FONT color=#7e12d2>(He opens his mouth after a few failed attempts to spit the words out)</FONT>Th-though the k-kingdom is under the Cassius f-f-family now, Feder is... s-s-someone who unified this continent and f-f-founded this kingdom... Why is s-someone like h-h-him trying to o-o-open the M-M-Monolith...? Why is a h-h-hero trying to d-d-destroy this w-w-world...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3" mid="212" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$King Cassius$<BR>Why…? How could that be…? The Conqueror King is a hero!! He is… isn't he…?! Though the dynasty has changed, he united the world and was praised and respected by many…! Why would such a king…. C-could it be because… He thought I wasn't doing a good job…? Is that why he escaped the Hero Island…? <FONT color=#2b2723>Tell me!! Now...!! </FONT><FONT color=#7e12d2>(Cassius is about to burst into tears. No one in the castle dares to say anything)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3" image="QN_NPC_Npc_Pether.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3-b" mid="217" select_type="0"><![CDATA[<html>It's the same Feder.</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-3-a" mid="218" select_type="0"><![CDATA[<html>It's not the same Feder...</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(What should I tell him... Well, he IS the same Feder... But would it be better if I told him that he's not... Or should I explain to him about Feder's intentions...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-3" mid="219" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(...was what I wanted to say, but if the king already received the report... Then maybe it's useless to tell him that. I'm not really keen on telling a lie eiter. I should think about it again.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-b" image="QN_NPC_Npc_Pether.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-c" mid="220" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Feder who tried to open the Monolith… is the same person as the Conqueror King Feder...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-d" mid="221" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$King Cassius$<BR>Wh-what!! Then… He's back because he thinks I'm a lousy king….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-d" image="QN_NPC_Npc_Pether.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-e" mid="222" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No, hear me out!<BR>That's not the reason why Feder is trying to open the Monolith and destroy the world!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-f" mid="223" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$King Cassius$<BR>D-do you really mean that?! That why is he doing this…..?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-f" image="QN_NPC_Npc_Pether.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-g" mid="224" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>That's because… (Wait a second... Do I need to tell him that this world is nothing but a Goddess's dream too? No, I can't tell that to a young king...) Feder is... trying to destroy this world and make a new one.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-h" mid="225" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>$King Cassius$<BR>D-destroy this world? He opened the Monolith to destroy this world? Erm... But why...? Why would the Conqueror King want to do that…?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-i" mid="226" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Duke Stuart$<BR><FONT color=#7e12d2>(Stuart interrupts)</FONT>Your Majesty, there's no need to delve deeper into the intentions of a villain. He's just a despicable enemy. How dare he try to destroy our world!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-j" mid="227" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>$King Cassius$<BR>Erm… Yeah, but…. Still…. He was a hero….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-k" mid="319" select_type="0"><![CDATA[<html>(Terramai...)</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-3-k" mid="320" select_type="0"><![CDATA[<html>(His words are achingly heavy. Who could he be referring to?)</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Terrence Terramai$<BR>A hero in the past may not be a hero in the future. Though he was a hero, maybe he changed his ways or his thoughts became so twisted that he thinks what he's doing is for the good, like he always did….<FONT color=#7e12d2>(Terramai somehow looks lonely)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-l" mid="230" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$King Cassius$<BR>Is that right…?<FONT color=#7e12d2>(Cassius seems disappointed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-4" mid="231" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Duke Stuart$<BR><FONT color=#7e12d2>(Stuart cuts in abruptly)</FONT>This is not a time for such useless discussions... This is not a time for us to be concerned about his identity. Since we keep sidetracking, I would like to suggest adjourning this meeting. Let's cool our heads for a while.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-4-" mid="177" select_type="5" />
+      <talk_question mid="59"><![CDATA[<html>$Duke Stuart$<BR><FONT color=#2b2723>And </FONT><FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723>? See me. I have something to check with you.</FONT><BR>
+<FONT color=#7e12d2>(Stuart glares this way with a vicious look in his eyes. Go and talk to Stuart.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-a" mid="321" select_type="0"><![CDATA[<html>What is it that you want to check...?</html>]]></talk_answer>
+      <talk_answer link_index="n041_duke_stwart-4-a" mid="322" select_type="0"><![CDATA[<html>I'm here.</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Duke Stuart$<BR>…Ah that stupid old man... Can't he just use his brain and think where the conversation is heading?! He's making it plain that he has no experience whatsoever in dealing with kids!! The king's young!! He should take that into account. Why is he saying such things in front of the young king?<FONT color=#7e12d2>(Stuart is mumbling to himself like he's flustered)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-b" mid="323" select_type="0"><![CDATA[<html>(What an irritating guy...)</html>]]></talk_answer>
+      <talk_answer link_index="n041_duke_stwart-4-b" mid="324" select_type="0"><![CDATA[<html>(Prison...!)</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Duke Stuart$<BR>…Maybe the Goddess is helping you afterall. By right, I was planning to throw you into the prison. But looking at how things are going, it would be much more beneficial to make you work for me than rot in a dark cell.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4-b" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-c" mid="325" select_type="0"><![CDATA[<html>I will not run away from my responsibilities.</html>]]></talk_answer>
+      <talk_answer link_index="n041_duke_stwart-4-c" mid="326" select_type="0"><![CDATA[<html>Of course.</html>]]></talk_answer>
+      <talk_question mid="63"><![CDATA[<html>$Duke Stuart$<BR>…You seem to have become conceited after gaining so much trust from Terramai. But don't forget -- you have a responsibility. Though you may manage to escape going to a prison this time, your responsibility doesn't dissipate into the air. Got that? I'm sure you also have some common sense and didn't expect things to end here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-d" mid="327" select_type="0"><![CDATA[<html>What kind of mission will I be on?</html>]]></talk_answer>
+      <talk_answer link_index="n041_duke_stwart-4-d" mid="328" select_type="0"><![CDATA[<html>What toughest mission?</html>]]></talk_answer>
+      <talk_question mid="65"><![CDATA[<html>$Duke Stuart$<BR>Yeah, you should take your responsibility. So you can't complain even if you are tasked with the toughest mission to pay for this incident. Got that?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-5" mid="330" select_type="0"><![CDATA[<html>If it's something within my means...</html>]]></talk_answer>
+      <talk_answer link_index="n041_duke_stwart-5" mid="331" select_type="0"><![CDATA[<html>If it's agreed by everyone, I will follow.</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Duke Stuart$<BR>I asked first.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-5-" mid="242" select_type="5" />
+      <talk_question mid="69"><![CDATA[<html>$Duke Stuart$<BR>Good. I was expecting to hear that. Now go on. The meeting will resume soon.<BR>
+<FONT color=#7e12d2>(Stuart lets out a sigh of relief. Since the break is over, talk to Cassius)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-5-a" mid="243" select_type="2" />
+      <talk_question mid="70"><![CDATA[<html>$King Cassius$<BR>….L-let's continue.<BR>Our i-initial g-g-goal was... to f-find someone to be held r-r-responsible for the war...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-5-b" mid="244" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Duke Stuart$<BR>That's right, Your Majesty. Let me summarise it for you. Like we have discussed just now, it would be unfair to make <FONT color=#387206>{user_nick}</FONT> bear all the responsibility. Also, we need to think about the future. We need to track Feder down. <FONT color=#7e12d2>(Kayleen turns to Stuart like she's surprised)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-5-c" mid="246" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Duke Stuart$<BR>But <FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723> is the one who led us into this and should take some kind of responsibility though.</FONT><FONT color=#387206> </FONT>So my suggestion is... Why not send <FONT color=#387206>{user_nick}</FONT> to track Feder down, ALONE? Without any royal soldiers involved this time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-5-d" mid="247" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>$Terrence Terramai$<BR>Oh Stuart, do you think you make any sense right now? You're trying to make <FONT color=#387206>{user_nick}</FONT> search the entire continent all alone?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-5-e" mid="248" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>$Duke Stuart$<BR>Oh there's something I missed out. There's a particular place that <FONT color=#387206>{user_nick}</FONT> would be in charge of. Like the area around Feder's old palace for example.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5-e" image="QM_dragonSycophant.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-5-f" mid="249" select_type="2" />
+      <talk_question mid="76"><![CDATA[<html>$General Douglas$<BR>Feder's old palace? That's the place where it was thought to be the base of the Dragon Followers... Our soldiers were annihilated by unknown creatures when they were sent there for an investigation...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-5-g" mid="250" select_type="2" />
+      <talk_question mid="77"><![CDATA[<html>$Duke Stuart$<BR>Yes, that's right. But it's an area worth investigating, and we need to save up on men. It would be a good idea to send <FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723> alone.</FONT><FONT color=#387206> </FONT><FONT color=#387206>{user_nick}</FONT> is strong and brave enough to have fought with Feder in the Monolith. <FONT color=#387206>{user_nick}</FONT> would be fulfilling own responsibilities too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-5-h" mid="252" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Terrence Terramai$<BR>But <FONT color=#387206>{user_nick}</FONT> must be exhausted after all that has happened. Do you think fighting face-to-face with Feder is something easy? I'm against this. Send someone who just returned from hell back to hell? That's not the right thing to do.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-5-i" mid="253" select_type="2" />
+      <talk_question mid="80"><![CDATA[<html>$Duke Stuart$<BR>Let's ask <FONT color=#387206>{user_nick}</FONT>. What do you think?<BR>This is the best way to make up for what you did and track Feder down at the same time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-5-i" image="QN_NPC_Npc_Pether.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6" mid="254" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…(Feder's old palace...? Would Feder really be there? Even if it's a dangerous place where many lives were lost, I can't waste time hesitating if I can get at least a small clue about Feder there...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6-a" mid="257" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'll go. I've recovered while I was in the land of the Elves so I'm fine.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6-b" mid="258" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>$Terrence Terramai$<BR>…Hey…!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6-c" mid="259" select_type="2" />
+      <talk_question mid="84"><![CDATA[<html>$Court Sorceress Kayleen$<BR>….<FONT color=#7e12d2>(She frowns and mumbles to herself like she's unhappy with what's going on)</FONT>You don't look fine at all...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6-d" mid="260" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Duke Stuart$<BR>Great. Have we reached a decision then? Now, shall we discuss about the rewards for achievements?<BR>
+Chasing Feder away by earning the cooperation of the Elves was a great achievement that future kings should know about. <FONT color=#7e12d2>(Stuart looks highly satisfied)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6-e" mid="261" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>$Duke Stuart$<BR><FONT color=#387206>{user_nick}</FONT> stands at the center of that achievement, but our soldiers did most work. It was also an opportunity we proved our strength to a foreign land of the Elves. Though <FONT color=#387206>{user_nick}</FONT> was the one who fought Feder, our soldiers should get the recognition for their outstanding achievements.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6-e" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6-f" mid="262" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Wait, I didn't achieve anything. It was Argenta who did everything. It was Argenta who fought Feder, not me...!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6-g" mid="263" select_type="2" />
+      <talk_question mid="88"><![CDATA[<html>$Duke Stuart$<BR>Argenta...? Someone with the same name as the silver-haired swordswoman who travelled with the Six Heroes 50 years ago... I thought Geraint or Velskud were popular names, but I didn't expect that name to be used so commonly nowadays too. I'm sorry, it would be hard to recognise the achievements of a nameless swordsman who's not registered with the Royal Guards.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6-g" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6-h" mid="264" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Wh-what...??? Argenta fought with her life to stop Feder!! How can you say that!!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-6-i" mid="265" select_type="2" />
+      <talk_question mid="90"><![CDATA[<html>$Terrence Terramai$<BR>Stuart, that's enough. We know achievements and rewards are important, but it's not right to rush those matters right now without full information.<FONT color=#7e12d2>(Terramai hurriedly stops him, but with a forceful voice)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-6-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-7" mid="266" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>$Duke Stuart$<BR>…<FONT color=#7e12d2>(He frowns like he's unhappy)</FONT>It's not right? Tsk tsk... You shouldn't take every word of that young adventurer seriously... Anyways... Let's discuss this among ourselves later.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-7" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-7-" mid="267" select_type="5" />
+      <talk_question mid="92"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Discussing among "ourselves" shouldn't become another monologue of yours, Stuart. Let's call it a day. <FONT color=#387206>{user_nick}</FONT>, come. I have some information to pass to you for your mission. <FONT color=#7e12d2>(The meeting has ended... Go to Kayleen)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-7-a" mid="362" select_type="0"><![CDATA[<html><FONT color=#2b2723>(I'm so choked with emotions that I can't even swear properly.)</FONT></html>]]></talk_answer>
+      <talk_answer link_index="n038_royal_magician_kalaen-7-a" mid="363" select_type="0"><![CDATA[<html>He doesn't even know how Argenta felt when she fought Feder...!!</html>]]></talk_answer>
+      <talk_question mid="93"><![CDATA[<html>$Court Sorceress Kayleen$<BR><FONT color=#7e12d2>(Kayleen mumbles a spell below her breath, breathes in deeply, then starts shouting vulgarities)</FONT><BR>
+<FONT color=#2b2723>AHHH!!! That $%^(*#$^!! </FONT><FONT color=#2b2723>He didn't even lift a finger when my sorceresses were dying in battle, and here he is spouting those nonsense! Argh!! You can swear all you want too!! I chanted a spell so that they can't hear us right now.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-7-b" mid="270" select_type="2" />
+      <talk_question mid="94"><![CDATA[<html>$Court Sorceress Kayleen$<BR>It's only natural that you're angry. I mean, can anyone stay calm in that kind of situation? Huh?? Phew... To think that such a jerk is in charge of educating the king... I should have been the one to take that position. Then all this wouldn't have happened.<FONT color=#7e12d2>(Kayleen shakes her head)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-7-c" mid="271" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>$Court Sorceress Kayleen$<BR>…And you. You don't have to be so down. You're not the one who hurt your friend….<BR>
+But I guess whatever I say won't make you feel much better. You're still young so you can think about what to do a little more. Not everyone here are obnoxious blockheads.<FONT color=#7e12d2> (Kayleen tries to comfort you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-7-d" mid="272" select_type="2" />
+      <talk_question mid="96"><![CDATA[<html>$General Douglas$<BR>If you're talking about the mission, may I interrupt? You probably need the map from us.<BR><FONT color=#7e12d2>(Kayleen quickly takes the map, ignoring Douglas's curiosity on the previous conversation between you and Kayleen)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-7-e" mid="274" select_type="2" />
+      <talk_question mid="98"><![CDATA[<html>$General Douglas$<BR>Hmm well... Let me explain about this map. All the paths we took were dangerous, so... I recommend this path through Anu Arendel. It's called the <FONT color=#a82424>"Forest of Little Shadows"</FONT>. You are on good terms with the Elves so I guess it would be a good idea to take this route. <FONT color=#2b2723>By the way....</FONT><FONT color=#7e12d2>(Douglas reaches his hand out for a handshake and your reflexes make you grab his hand automatically)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7-e" image="QN_Npc_Duke_Stwart.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-7-f" mid="332" select_type="0"><![CDATA[<html>It's not something you should apologize about...</html>]]></talk_answer>
+      <talk_answer link_index="n038_royal_magician_kalaen-7-f" mid="333" select_type="0"><![CDATA[<html>It's not me who should get an apology... it's Argenta.</html>]]></talk_answer>
+      <talk_question mid="99"><![CDATA[<html>$General Douglas$<BR>I know Stuart was rather harsh just now. Let me apologize on his behalf. He always thinks of what is best for the royal family... There's nothing more painful than seeing your comrade's achievements being disregarded. Let me apologise once again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-7-g" mid="277" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>$General Douglas$<BR>But please, take my sincere apologies. That's all I can do for now. Your friend Argenta has done something outstanding. No matter what others say, her achievements cannot be denied. She saved the world. You can be proud of that anywhere you go.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7-g" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-7-h" mid="278" select_type="2" />
+      <talk_question mid="102"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-7-i" mid="279" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$General Douglas$<BR>And we will carry on with what she sought to do by risking her own life. Even if Feder was a Conqueror King in the past, we will not stand around and see him ruin our homeland. It's a pity that her remains couldn't be retrieved... But I swear, by my position as the General, that I will not forget what she did for us.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-7-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-8" mid="280" select_type="2" />
+      <talk_question mid="104"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Same for me. Giving her a medal of honour is the least we can do for injuring Feder. Stuart is just... <FONT color=#7e12d2>(Kayleen shakes her head)</FONT>We won't take this lying down so don't worry. We have to recognise what has to be recognised!! I promise, by the name of Fairystar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-8" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-8-" mid="282" select_type="5" />
+      <talk_question mid="105"><![CDATA[<html>$General Douglas$<BR>Terramai will give you the royal letter for your mission.<BR>We will start investigating as soon as our losses have been recovered too.<BR><FONT color=#7e12d2>(Douglas seems to be feeling really sorry. Go to Terramai)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-8" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-8-a" mid="334" select_type="0"><![CDATA[<html>But….</html>]]></talk_answer>
+      <talk_answer link_index="n822_teramai-8-a" mid="335" select_type="0"><![CDATA[<html>Argenta did all the work.</html>]]></talk_answer>
+      <talk_question mid="106"><![CDATA[<html>$Terrence Terramai$<BR><FONT color=#7e12d2>(He opens his mouth as soon as you approach him as if he was worried)</FONT><BR>Why can't you just tell them about your achievements? This is a very dangerous mission. Stuart has been harping on responsibilities, but we wouldn't have been able to go to Anu Arendel if it was not for you! We could have just faced the end of the world without knowing anything!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-8-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-8-b" mid="284" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Terrence Terramai$<BR>Ah…<FONT color=#7e12d2>(Terramai seems to be having a hard time trying to find the right words to say)</FONT><BR>You've done so much for us that I've been forgetting how young you are... But what you did is definitely commendable. What you've done until now, and what you've done for this incident as well... I suggest holding another meeting for...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-8-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-8-c" mid="286" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…No, I'll go. I have Geraint with me, and it's true that we don't have much time…</FONT><BR><FONT color=#662500>Though I didn't do much, I'm not weak….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-8-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-9" mid="339" select_type="0"><![CDATA[<html>(An ordeal that I can endure...)</html>]]></talk_answer>
+      <talk_answer link_index="n822_teramai-9" mid="340" select_type="0"><![CDATA[<html>I'm fine. I...</html>]]></talk_answer>
+      <talk_question mid="110"><![CDATA[<html>$Terrence Terramai$<BR>….<FONT color=#7e12d2>(Terramai stares at you for a while and sighs)</FONT><BR>Though I serve the Goddess, I feel like blaming her at times like this. How much ordeal would there be in the path of this young adventurer... They say the Goddess gives ordeals just so much that one can endure, but this... this is too much….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-9" image="QN_Npc_Elder_elf.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-9-" mid="290" select_type="5" />
+      <talk_question mid="113"><![CDATA[<html>$Terrence Terramai$<BR>…I'm sure Argenta wouldn't want you to get hurt either.<BR>So... Don't blame yourself too much.<BR><FONT color=#7e12d2>(Terramai hands over the royal letter. Take it to Elf Elder)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1065_geraint_kid-9" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1065_geraint_kid-9-" mid="178" select_type="5" />
+      <talk_question mid="114"><![CDATA[<html>$Geraint$<BR>Are you done? Can you just focus on your task? Hurry up!<BR><FONT color=#7e12d2>(Go to Elf Elder)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-9" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-9-a" mid="292" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>$Elf Elder$<BR>Ah, <FONT color=#387206>{user_nick}</FONT>. You're back. How did things go?<BR><FONT color=#7e12d2>(Explain what happened in the castle as you give him the royal letter)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-9-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-9-b" mid="341" select_type="0"><![CDATA[<html>Meriendel?!</html>]]></talk_answer>
+      <talk_answer link_index="n1067_elder_elf-9-b" mid="342" select_type="0"><![CDATA[<html>You know Meriendel too?</html>]]></talk_answer>
+      <talk_question mid="117"><![CDATA[<html>$Elf Elder$<BR><FONT color=#7e12d2>(Hints of fury appear on Elf Elder's face)</FONT> Is that how humans treat a hero?! ...Anyway, we should follow what they say for now. Can I see the map please? Hmm... if he told you to go through Anu Arendel... Oh, this looks like the route created by Sage Meriendel.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-9-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-9-c" mid="350" select_type="0"><![CDATA[<html>(Is she nothing but a traitor to the Elves...?)</html>]]></talk_answer>
+      <talk_answer link_index="n1067_elder_elf-9-c" mid="351" select_type="0"><![CDATA[<html>(The wisest Elf...)</html>]]></talk_answer>
+      <talk_question mid="118"><![CDATA[<html>$Elf Elder$<BR>She's a legendary Elf who is said to be the wisest Elf that ever lived. But she joined Feder and disappeared later in her life… <FONT color=#7e12d2>(Elf Elder keeps it short)</FONT> Anyway, the Forest of Little Shadows is near the Forest of Shady Blue Moon. It's likely of her to have created a route that leads to Feder's palace.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-9-c" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-10" mid="344" select_type="0"><![CDATA[<html>He didn't create any trouble, did he?</html>]]></talk_answer>
+      <talk_answer link_index="n1067_elder_elf-10" mid="345" select_type="0"><![CDATA[<html>Did he break anything?</html>]]></talk_answer>
+      <talk_question mid="120"><![CDATA[<html>$Elf Elder$<BR>Please go with Geraint.<BR>He has been waiting for you for a long time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-10" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-10-" mid="201" select_type="5" />
+      <talk_question mid="124"><![CDATA[<html>$Elf Elder$<BR>…<FONT color=#7e12d2>(Elf Elder smiles)</FONT>Of course not. He has been very quiet as usual. Though he is not very familiar with this world yet because he's still young, he still is a dragon. <FONT color=#7e12d2>(The Elder is being conned, but I have no energy to argue with him. Go and look for Geraint.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1065_geraint_kid-10" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1065_geraint_kid-10-a" mid="301" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>$Geraint$<BR>Why are you here only now?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1065_geraint_kid-10-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1065_geraint_kid-10-b" mid="302" select_type="4" />
+      <talk_question mid="126"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1065_geraint_kid-10-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1065_geraint_kid-10-!next" mid="303" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>$Geraint$<BR>…You're always late!<BR><FONT color=#7e12d2>(Geraint looks at you with a sulky face)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9560</exe>
+         <exe type="talk" npc="n249_saint_guard">1</exe>
+         <exe type="talk" npc="n1067_elder_elf">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">10</exe>
+         <exe type="setjornal">8</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="10">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">95600,,,,,,,,,</exe>
+         <exe type="complete" true="">9560</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n249_saint_guard" sub="acceptted_1">0,1</exelink>
+   <exelink qstep="accepting" npc="n1067_elder_elf" sub="acceptted_2">0,2</exelink>
+   <exelink qstep="1" npc="n040_king_casius" sub="b" />
+   <exelink qstep="1" npc="n040_king_casius" sub="b" />
+   <exelink qstep="1" npc="n040_king_casius" sub="b" />
+   <exelink qstep="1" npc="n040_king_casius" sub="c" />
+   <exelink qstep="1" npc="n040_king_casius" sub="d" />
+   <exelink qstep="1" npc="n040_king_casius" sub="e" />
+   <exelink qstep="1" npc="n040_king_casius" sub="f" />
+   <exelink qstep="1" npc="n040_king_casius" sub="g" />
+   <exelink qstep="1" npc="n040_king_casius" sub="h" />
+   <exelink qstep="1" npc="n040_king_casius" sub="i" />
+   <exelink qstep="1" npc="n040_king_casius" sub="j" />
+   <exelink qstep="1" npc="n040_king_casius" sub="k" />
+   <exelink qstep="1" npc="n040_king_casius" sub="l" />
+   <exelink qstep="1" npc="n040_king_casius" sub="m" />
+   <exelink qstep="1" npc="n040_king_casius" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n040_king_casius" sub="b" />
+   <exelink qstep="2" npc="n040_king_casius" sub="c" />
+   <exelink qstep="2" npc="n040_king_casius" sub="c" />
+   <exelink qstep="2" npc="n040_king_casius" sub="d" />
+   <exelink qstep="2" npc="n040_king_casius" sub="3">0</exelink>
+   <exelink qstep="3" npc="n040_king_casius" sub="3" />
+   <exelink qstep="3" npc="n040_king_casius" sub="c" />
+   <exelink qstep="3" npc="n040_king_casius" sub="d" />
+   <exelink qstep="3" npc="n040_king_casius" sub="e" />
+   <exelink qstep="3" npc="n040_king_casius" sub="f" />
+   <exelink qstep="3" npc="n040_king_casius" sub="g" />
+   <exelink qstep="3" npc="n040_king_casius" sub="h" />
+   <exelink qstep="3" npc="n040_king_casius" sub="i" />
+   <exelink qstep="3" npc="n040_king_casius" sub="j" />
+   <exelink qstep="3" npc="n040_king_casius" sub="k" />
+   <exelink qstep="3" npc="n040_king_casius" sub="k" />
+   <exelink qstep="3" npc="n040_king_casius" sub="l" />
+   <exelink qstep="3" npc="n040_king_casius" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n041_duke_stwart" sub="b" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="b" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="c" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="c" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="d" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="d" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="5">0,1</exelink>
+   <exelink qstep="4" npc="n041_duke_stwart" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n040_king_casius" sub="b" />
+   <exelink qstep="5" npc="n040_king_casius" sub="c" />
+   <exelink qstep="5" npc="n040_king_casius" sub="d" />
+   <exelink qstep="5" npc="n040_king_casius" sub="e" />
+   <exelink qstep="5" npc="n040_king_casius" sub="f" />
+   <exelink qstep="5" npc="n040_king_casius" sub="g" />
+   <exelink qstep="5" npc="n040_king_casius" sub="h" />
+   <exelink qstep="5" npc="n040_king_casius" sub="i" />
+   <exelink qstep="5" npc="n040_king_casius" sub="6">0</exelink>
+   <exelink qstep="6" npc="n040_king_casius" sub="b" />
+   <exelink qstep="6" npc="n040_king_casius" sub="c" />
+   <exelink qstep="6" npc="n040_king_casius" sub="d" />
+   <exelink qstep="6" npc="n040_king_casius" sub="e" />
+   <exelink qstep="6" npc="n040_king_casius" sub="f" />
+   <exelink qstep="6" npc="n040_king_casius" sub="g" />
+   <exelink qstep="6" npc="n040_king_casius" sub="h" />
+   <exelink qstep="6" npc="n040_king_casius" sub="i" />
+   <exelink qstep="6" npc="n040_king_casius" sub="7">0,1</exelink>
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="b" />
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="c" />
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="d" />
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="e" />
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="f" />
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="f" />
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="g" />
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="h" />
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="i" />
+   <exelink qstep="7" npc="n038_royal_magician_kalaen" sub="8">0,1</exelink>
+   <exelink qstep="8" npc="n822_teramai" sub="b" />
+   <exelink qstep="8" npc="n822_teramai" sub="c" />
+   <exelink qstep="8" npc="n822_teramai" sub="9">0,1</exelink>
+   <exelink qstep="8" npc="n822_teramai" sub="9">0,1</exelink>
+   <exelink qstep="9" npc="n1067_elder_elf" sub="b" />
+   <exelink qstep="9" npc="n1067_elder_elf" sub="b" />
+   <exelink qstep="9" npc="n1067_elder_elf" sub="c" />
+   <exelink qstep="9" npc="n1067_elder_elf" sub="c" />
+   <exelink qstep="9" npc="n1067_elder_elf" sub="10">0,1</exelink>
+   <exelink qstep="9" npc="n1067_elder_elf" sub="10">0,1</exelink>
+   <exelink qstep="10" npc="n1065_geraint_kid" sub="a">0</exelink>
+   <exelink qstep="10" npc="n1065_geraint_kid" sub="b">1</exelink>
+   <exelink qstep="10" npc="n1065_geraint_kid" sub="!next" />
+   <journal_data recompense="95600" quest_title="종막을 붙잡은 자" chapterid="16" quest_level="80" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>11,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="128"><![CDATA[The One Who Stopped The Doom 1]]></title>
+         <contents mid="129"><![CDATA[<html>It's time to report on the fierce battle at the Monolith.<BR>Go to Saint Haven Royal Castle.<BR><BR><FONT color=#086171>Saint Haven</FONT><FONT color=#a82424> - Saint Haven Royal Castle</FONT></html>]]></contents>
+         <destination mid="130"><![CDATA[Talk to King Cassius]]></destination>
+         <todo_msg mid="131"><![CDATA[Quest has been added. Go to Saint Haven Royal Castle.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>11,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="132"><![CDATA[The One Who Stopped The Doom 2]]></title>
+         <contents mid="133"><![CDATA[<html>Cassius has something to say...?! Listen to Cassius.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- Saint Haven Royal Castle (King Cassius)</FONT></html>]]></contents>
+         <destination mid="134"><![CDATA[Talk to King Cassius]]></destination>
+         <todo_msg mid="135"><![CDATA[Cassius is trying to say something. Listen to him.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Duke_Stwart.dds</contents_image>
+         <destination_pos>11,n41</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>41</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="136"><![CDATA[The One Who Stopped The Doom 3]]></title>
+         <contents mid="137"><![CDATA[<html>Stuart seems to have something to say. Listen to Stuart.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- Saint Haven Royal Castle (Duke Stuart)</FONT></html>]]></contents>
+         <destination mid="138"><![CDATA[Talk to Duke Stuart]]></destination>
+         <todo_msg mid="139"><![CDATA[Talk to Duke Stuart.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>11,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="140"><![CDATA[The One Who Stopped The Doom 4]]></title>
+         <contents mid="141"><![CDATA[<html>Stuart seems to be trying to give you a special mission.<BR>Though you're not exactly sure what the mission would be, the meeting is about to start so go and talk to King Cassius.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- Saint Haven Royal Castle (King Cassius)</FONT></html>]]></contents>
+         <destination mid="142"><![CDATA[Talk to King Cassius]]></destination>
+         <todo_msg mid="143"><![CDATA[Talk to King Cassius.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Royal_Magician_Kalaen.dds</contents_image>
+         <destination_pos>11,n38</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>38</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="144"><![CDATA[The One Who Stopped The Doom 5]]></title>
+         <contents mid="145"><![CDATA[<html>You were tasked to investigate a particularly dangerous area alone to track Feder down.<BR>Kayleen says she'll give you a map, so go and talk to her.<BR><BR><FONT color=#086171>Saint Haven</FONT><FONT color=#a82424> - Saint Haven Royal Castle (Court Sorceress Kayleen)</FONT></html>]]></contents>
+         <destination mid="146"><![CDATA[Talk to Court Sorceress Kayleen]]></destination>
+         <todo_msg mid="147"><![CDATA[Talk to Court Sorceress Kayleen.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Lotus_Elder_Teramai.dds</contents_image>
+         <destination_pos>11,n822</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>822</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="148"><![CDATA[The One Who Stopped The Doom 6]]></title>
+         <contents mid="149"><![CDATA[<html>You've received the map from Kayleen. General Douglas apologized on Stuart's behalf for ignoring Argenta's achievements... Terramai will give you the royal letter so go and talk to him.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- Saint Haven Royal Castle (Terrence Terramai)</FONT></html>]]></contents>
+         <destination mid="150"><![CDATA[Talk to Terrence Terramai]]></destination>
+         <todo_msg mid="151"><![CDATA[Get the royal letter from Terrence Terramai.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Elder_elf.dds</contents_image>
+         <destination_pos>34,n1067</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1067</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="152"><![CDATA[The One Who Stopped The Doom 7]]></title>
+         <contents mid="153"><![CDATA[<html>Deliver the royal letter to Elf Elder.<BR><BR><FONT color=#086171>Anu Arendel (Tree of Life Entrance)</FONT> <FONT color=#a82424>- Elf Elder</FONT></html>]]></contents>
+         <destination mid="154"><![CDATA[Talk to Elf Elder]]></destination>
+         <todo_msg mid="155"><![CDATA[Deliver the royal letter to Elf Elder.]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Npc_geraint_Kid.dds</contents_image>
+         <destination_pos>34,n1065</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1065</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="156"><![CDATA[The One Who Stopped The Doom 8]]></title>
+         <contents mid="157"><![CDATA[<html>You have delivered the royal letter to Elf Elder.<BR>Geraint is waiting for you so go and look for him.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Geraint</FONT></html>]]></contents>
+         <destination mid="158"><![CDATA[Talk to Geraint]]></destination>
+         <todo_msg mid="159"><![CDATA[Go to Geraint.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>80:-1</user_level>
+      <user_class />
+      <prev_quest>9458</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

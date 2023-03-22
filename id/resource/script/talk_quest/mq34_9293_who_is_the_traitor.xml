@@ -1,0 +1,466 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq34_9293_who_is_the_traitor</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>12</qchapter>
+      <qid>9293</qid>
+      <designer>강지영</designer>
+      <qlevel>67</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9294</nextqid>
+      <nextqname>mq34_9294_decryption_to_finding_traitor</nextqname>
+      <nextqnpc>n1047_argenta</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Who is the Traitor?]]></qkname>
+      <qnpc>
+         <npcid>1047</npcid>
+         <npcename>n1047_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1067</npcid>
+         <npcename>n1067_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1087</npcid>
+         <npcename>n1087_triana</npcename>
+         <npckname>아처 트리아나</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1088</npcid>
+         <npcename>n1088_unknown_mail</npcename>
+         <npckname>수상한 편지</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1132</npcid>
+         <npcename>n1132_rojalin</npcename>
+         <npckname>로잘린데</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-accepting" image="QN_Npc_Elder_elf.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-accepting-acceptted" mid="6" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Argenta$<BR>Sekarang para candidate queen sudah tidak ada, hutan telah hancur. Apa sih yang dilakukan oleh Elf Elder?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1087_triana-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1087_triana-1-" mid="9" select_type="5" />
+      <talk_question mid="8"><![CDATA[<html>$Archer Triana$<BR><FONT color=#387206>{user_nick}</FONT>, kamu tidak bisa memasuki Tree of Life. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1088_unknown_mail-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1088_unknown_mail-1-" mid="11" select_type="5" />
+      <talk_question mid="10"><![CDATA[<html>$Suspicious Letter$<BR><FONT color=#7e12d2>(Suratnya ada di tanah)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-" mid="13" select_type="5" />
+      <talk_question mid="12"><![CDATA[<html>$Elf Elder$<BR><FONT color=#7e12d2>(Wajah Elder terlihat sangat khawatir)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-level_check" mid="15" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Argenta$<BR>Aku harus menemui Elf Elder dan memeriksa bagaimana kondisi Conclave.<BR>Lagian kenapa aku bisa-bisanya peduli hal-hal seperti ini sih? Menyebalkan banget.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-b" mid="17" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Haruskah aku menemui Elf Elder?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-c" mid="19" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Argenta$<BR>Ya, aku juga hendak mengutus kamu kok.<BR>Memangnya kamu kira aku mau repot-repot melakukannya sendiri? Ogah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-d" mid="21" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh... Ya sudah....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1-d" image="QN_Npc_Elder_elf.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-" mid="23" select_type="5" />
+      <talk_question mid="22"><![CDATA[<html>$Argenta$<BR>Sikap macam apa itu. <BR>Kok kamu males banget sih menemui <FONT color=#a82424>Elf Elder</FONT> yang berdiri didepan Tree of Life disana?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-" mid="129" select_type="5" />
+      <talk_question mid="128"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The Elder terlihat sibuks ekarang. Lebih baik bicara dengannya nanti saja.</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>(* Kamu dapat menjalani quest ini saat mencapai Lv67)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1132_rojalin-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Rojalin.dds" center_image="">
+      <talk_answer link_index="n1132_rojalin-1-" mid="72" select_type="5" />
+      <talk_question mid="71"><![CDATA[<html>$Rozalinde$<BR>Aneh. Katanya, ada disekitar sini...hmmm...<BR><FONT color=#7e12d2>(Rozalinde sepertinya sedang merenungkan sesuatu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2" image="QN_Npc_Elder_elf.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-" mid="25" select_type="5" />
+      <talk_question mid="24"><![CDATA[<html>$Argenta$<BR>Kok kamu males banget sih menemui <FONT color=#a82424>Elf Elder</FONT> yang berdiri didepan Tree of Life disana?<BR>
+<FONT color=#7e12d2>(Temui Elf Elder di depan Tree of Life)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-a" mid="27" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Elf Elder${sound:npc_AN_Elf Elder_qu_9293_01.ogg}<BR><FONT color=#7e12d2>(Wajah Elder terlihat sangat khawatir)<BR></FONT>Kamu bukanlah anak hutan ini. Mengapa tertarik dengan Conclave?<BR>Aku tidak bisa memberitahukan situasinya begitu saja ke orang asing yang tak kupercaya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-b" mid="29" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku mengejar apostles bersama Triana.<BR>Aku ingin dapat membantu melindungi hutan elf.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-c" mid="31" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Elf Elder$<BR>Ini bukan situasi yang mengizinkan kita untuk mempercayai mulut manis manusia.<BR>Bahkan sekarang aku juga tidak bisa percaya pada elf. Mengertilah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-c" image="" itemindex="" portrait_left="NPC_Left_Triana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-d" mid="33" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Archer Triana$<BR>Kamu bisa mempercayai dia sama seperti kamu percaya padaku.<BR>Aku sudah menerima banyak bantuan dari <FONT color=#387206>{user_nick}</FONT> dalam perjalanananku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-e" mid="35" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Elf Elder$<BR>Triana, kamu pintar dan baik hati.<BR>Namun terkadang manusia memanfaatkan kebaikan demi keserakahan mereka. Sulit untuk mempercayai mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-e" image="" itemindex="" portrait_left="NPC_Left_Triana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-f" mid="37" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Archer Triana$<BR>Aku tahu sangat sulit mengetahui apa yang Yuvenciel pikirkan.<BR>Tapi, <FONT color=#387206>{user_nick}</FONT> adalah temanku yang selalu membantuku selama pengejaran Black Dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-f" image="" itemindex="" portrait_left="NPC_Left_Triana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-g" mid="39" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Archer Triana${sound:npc_AN_Archer Triana_qu_9293_01.ogg}<BR>Apa kamu juga tidak mempercayaiku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-h" mid="41" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Elf Elder$<BR><FONT color=#7e12d2>(Elf Elder tidak tahu bagaimana harus menjawab pertanyaan Triana)<BR></FONT>Hmm... Karena kamu terlihat sangat mempercayai dia, aku juga akan mencoba melakukannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-job2_2" mid="43" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Elf Elder$<BR>Tapi Conclave adalah ritual para elf. Kami tidak membutuhkan bantuan dari manusia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-k" mid="45" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku tak akan ikut campur kecuali bila perlu.<BR>Tapi kamu harus tahu bahwa situasi ini sangatlah sulit bagi elf untuk dapat mereka tanggung sendiri.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-k" mid="47" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Jika Conclave mendapatkan campur tangan dari pihak non-elf, aku pasti akan membantu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-l" mid="132" select_type="0"><![CDATA[<html>Bertanya tentang jasad</html>]]></talk_answer>
+      <talk_answer link_index="n1067_elder_elf-2-m" mid="133" select_type="0"><![CDATA[<html>Bertanya tentang apostles</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Elf Elder${sound:npc_AN_Elf Elder_qu_9293_02.ogg}<BR>Kamu benar. <BR>Masalah ini mempengaruhi masa depan Elf. Bantuan dari adventurer baik sepertimu tak sepatutnya ditolak.<BR>
+Apa yang ingin kamu tahu dari Conclave?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-n" mid="140" select_type="2" />
+      <talk_question mid="134"><![CDATA[<html>$Elf Elder$<BR>Anak itu adalah candidate queen yang berharga. Dia tidak pernah lengah sedikitpun hingga bisa diserang begitu saja...<BR>Yang lebih mengejutkan adalah  Conclave tidak dapat melindungi para candidate sepenuhnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-n" mid="141" select_type="2" />
+      <talk_question mid="135"><![CDATA[<html>$Elf Elder$<BR>Aku tidak tahu bagaimana mereka sangat tahu mengenai Conclave.<BR>
+Aku tidak bisa memikirkan kemungkinan lain selain ada yang membantu mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-2-n" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-2-" mid="137" select_type="5" />
+      <talk_question mid="136"><![CDATA[<html>$Elf Elder$<BR>Sekarang, apa aku menjawab pertanyaanmu?<BR>Kembalilah ke Argenta.<BR><FONT color=#7e12d2>(Sepertinya Elder tidak mau bicara lagi. Kembalilah ke Argenta)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-3" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-3-" mid="54" select_type="5" />
+      <talk_question mid="52"><![CDATA[<html>$Elf Elder$<BR>Aku sudah mengatakan apa yang bisa aku beritahu. Sekarang kembalilah ke <FONT color=#a82424>Argenta</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-3-a" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Argenta$<BR>Kok lama banget sih?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-3-b" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Elf Elder sepertinya berada dalam situasi yang sulit.<BR>Dia tidak mengatakan jelas apakah ada pengkhianat atau tidak.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-3-b" image="QN_Npc_Rosalin.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-3-c" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Argenta${sound:npc_AN_Argenta_qu_9293_01.ogg}<BR>Pengkhianat....oke, terus gimana cara Rozalinde tahu soal Conclave?<BR>Pasti ada yang memberi tahu dia.<BR>Jadi apa yang dilakukan Elf?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-3-d" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Terlepas dari candidate yang terbunuh, candidate queen lainnya belum juga kembali.<BR>Kudengar mereka dibutuhkan untuk mencari candidate yang hilang di Bronze Crescent Forest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-3-e" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$Argenta$<BR>
+Oke, jadi kamu mengajukan diri untuk pergi?<BR>The apostles pasti juga mengincar para candidates juga.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-3-e" image="QW_79.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-3-" mid="66" select_type="5" />
+      <talk_question mid="65"><![CDATA[<html>$Argenta$<BR>Kalau begitu pergilah ke <FONT color=#a82424>Bronze Crescent Forest</FONT> dan cari candidates yang hilang.<BR>Siap-siap saja melihat lebih banyak mayat jika terlambat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-4" image="QW_79.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-4-" mid="69" select_type="5" />
+      <talk_question mid="68"><![CDATA[<html>$Argenta$<BR>Kalau begitu pergilah ke <FONT color=#a82424>Bronze Crescent Forest</FONT> dan cari candidates yang hilang.<BR>Siap-siap saja melihat lebih banyak mayat jika terlambat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1132_rojalin-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Rojalin.dds" center_image="">
+      <talk_answer link_index="n1132_rojalin-4-a" mid="75" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>$Rozalinde${sound:npc_AN_Rozalinde_qu_9293_01.ogg}<BR>Aneh. Katanya, ada disekitar sini... Huh?<BR><FONT color=#7e12d2>(Rozalinde terkejut melihatmu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1132_rojalin-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Rojalin.dds" center_image="">
+      <talk_answer link_index="n1132_rojalin-4-c" mid="77" select_type="2" />
+      <talk_question mid="76"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Elf yang mati... Apa kamu yang membunuhnya? Aku tak akan melepaskan kamu kali ini!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1132_rojalin-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Rojalin.dds" center_image="">
+      <talk_answer link_index="n1132_rojalin-4-c" mid="79" select_type="2" />
+      <talk_question mid="78"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu membunuh elf lagi? Aku tak akan melepaskanmu!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1132_rojalin-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Rojalin.dds" center_image="">
+      <talk_answer link_index="n1132_rojalin-4-" mid="81" select_type="5" />
+      <talk_question mid="80"><![CDATA[<html>$Rozalinde${sound:npc_AN_Rozalinde_qu_9293_02.ogg}<BR>Ha! Ya ampun. Mood ku sedang tidak bagus sekarang.<BR>Si bodoh yang tak bisa diajak kerjasama itu membuatku marah. Sekarang malah ada pengganggu yang menyebalkan!<BR><FONT color=#7e12d2>(Rozalinde menghilang sebelum kamu siap untuk bertarung)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1088_unknown_mail-5" image="QS_Default.dds" itemindex="400396" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1088_unknown_mail-5-a" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>$Suspicious Letter$<BR><FONT color=#7e12d2>(Sebuah surat jatuh di tempat Rozalinde berdiri)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1088_unknown_mail-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1088_unknown_mail-5-" mid="86" select_type="5" />
+      <talk_question mid="85"><![CDATA[<html>$Suspicious Letter$<BR><FONT color=#7e12d2>(Mungkin saja memiliki informasi yang berguna. Bawa ke Argenta)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1132_rojalin-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Rojalin.dds" center_image="">
+      <talk_answer link_index="n1132_rojalin-5-" mid="127" select_type="5" />
+      <talk_question mid="126"><![CDATA[<html>$Rozalinde$<BR>Ha! Ya ampun. Mood ku sedang tidak bagus sekarang.<BR>Si bodoh yang tak bisa diajak kerjasama itu membuatku marah. Sekarang malah ada pengganggu yang menyebalkan!<BR><FONT color=#7e12d2>(Rozalinde menghilang sebelum kamu siap untuk bertarung)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1088_unknown_mail-6" image="QS_Default.dds" itemindex="400396" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1088_unknown_mail-6-" mid="88" select_type="5" />
+      <talk_question mid="87"><![CDATA[<html>$Suspicious Letter$<BR><FONT color=#7e12d2>(Mungkin saja memiliki informasi yang berguna. Bawa ke Argenta)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-6-a" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>$Argenta$<BR>Lambat banget sih. Tidak heran kamu kalah oleh Rozalinde. <BR>Bisa tidak sih bergerak lebih cepat dari para apostles?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-6-a" image="QS_Default.dds" itemindex="400396" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-6-b" mid="92" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tapi aku menemukan ini.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-6-c" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>$Argenta${sound:npc_AN_Argenta_qu_9293_03.ogg}<BR>Surat? Tapi... Hmm....<BR><FONT color=#7e12d2>(Argenta memperhatikan suratnya selama beberapa waktu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-6-c" image="QN_Npc_Rosalin.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-6-d" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Sepertinya ada yang membantu Rozalinde.<BR>Apakah itu petunjuk siapa sang pengkhianat?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-6-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-6-e" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>$Argenta$<BR>Mungkin. Tapi gimana caranya membaca ini?<BR>Ini bukan bahasa Ancient. Aku tak pernah melihat huruf-huruf ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-6-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-6-!next" mid="100" select_type="4" />
+      <talk_question mid="99"><![CDATA[<html>$Quest rewards$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9293</exe>
+         <exe type="talk" npc="n1047_argenta">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="]=">67</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="talk" npc="n1047_argenta">a</exe>
+         <exe type="talk" npc="n1047_argenta">e</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">3</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="talk" npc="n1067_elder_elf">i</exe>
+         <exe type="talk" npc="n1067_elder_elf">j</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">3</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="talk" npc="n1132_rojalin">a</exe>
+         <exe type="talk" npc="n1132_rojalin">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="addquestitem" num="1">400396</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">92931,92931,,92933,92934,92935,92936,92937,92938,92939</exe>
+         <exe type="complete" true="">9293</exe>
+         <exe type="delquestitem" num="-1">400396</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1047_argenta" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n1047_argenta" sub="level_check">2</exelink>
+   <exelink qstep="1" npc="n1047_argenta" sub="b" />
+   <exelink qstep="1" npc="n1047_argenta" sub="c" />
+   <exelink qstep="1" npc="n1047_argenta" sub="d">0,1</exelink>
+   <exelink qstep="1" npc="n1047_argenta" sub="" />
+   <exelink qstep="1" npc="n1047_argenta" sub="" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="b" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="c" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="d" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="e" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="f" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="g" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="h" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="job2_2">2</exelink>
+   <exelink qstep="2" npc="n1067_elder_elf" sub="k" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="k" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="l" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="m" />
+   <exelink qstep="2" npc="n1067_elder_elf" sub="n">0,1</exelink>
+   <exelink qstep="2" npc="n1067_elder_elf" sub="n">0,1</exelink>
+   <exelink qstep="2" npc="n1067_elder_elf" sub="" />
+   <exelink qstep="3" npc="n1047_argenta" sub="b" />
+   <exelink qstep="3" npc="n1047_argenta" sub="c" />
+   <exelink qstep="3" npc="n1047_argenta" sub="d" />
+   <exelink qstep="3" npc="n1047_argenta" sub="e">0,1</exelink>
+   <exelink qstep="3" npc="n1047_argenta" sub="" />
+   <exelink qstep="4" npc="n1132_rojalin" sub="c">0,1</exelink>
+   <exelink qstep="4" npc="n1132_rojalin" sub="c">0,1</exelink>
+   <exelink qstep="4" npc="n1132_rojalin" sub="" />
+   <exelink qstep="5" npc="n1088_unknown_mail" sub="a">0,1,2</exelink>
+   <exelink qstep="5" npc="n1088_unknown_mail" sub="" />
+   <exelink qstep="6" npc="n1047_argenta" sub="b" />
+   <exelink qstep="6" npc="n1047_argenta" sub="c" />
+   <exelink qstep="6" npc="n1047_argenta" sub="d" />
+   <exelink qstep="6" npc="n1047_argenta" sub="e">0</exelink>
+   <exelink qstep="6" npc="n1047_argenta" sub="!next">1,2</exelink>
+   <journal_data recompense="1:92931,3:92933,4:92934,5:92935,6:92936,7:92937,8:92938,9:92939" quest_title="배신자는 누구?" chapterid="12" quest_level="67" quest_mark_type="1" use_item_list="400396">
+      <journal index="1">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>34,n1047</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1047</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="102"><![CDATA[Who is the Traitor?I]]></title>
+         <contents mid="103"><![CDATA[<html>The Origin of the Forest masih terus dicuri. Argenta ingin mengatakan sesuatu.<BR>
+ <BR>
+<FONT color=#7e12d2>※ Kamu harus mencapai level Lv67 untuk melanjutkan.</FONT><BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="104"><![CDATA[Bicara pada Argenta di Anu Arendel]]></destination>
+         <todo_msg mid="105"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos>34,n1067</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1067</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="106"><![CDATA[Who is the Traitor? II]]></title>
+         <contents mid="107"><![CDATA[<html>Situasi di Anu Arendel bertambah parah.<BR>Tanyalah Elder bagaimana Conclave berlansung.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Di depan Tree of Life (Elf Elder)</FONT></html>]]></contents>
+         <destination mid="108"><![CDATA[Bicara pada Elf Elder di Anu Arendel]]></destination>
+         <todo_msg mid="109"><![CDATA[Pergi ke depan Tree of Life.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>34,n1047</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1047</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="110"><![CDATA[Who is the Traitor? III]]></title>
+         <contents mid="111"><![CDATA[<html>Elf Elder tidak mempercayai orang asing tapi tetap memberitahu padamu situasi Conclave. <BR>Laporkan ke Argenta.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="112"><![CDATA[Bicara pada Argenta di Anu Arendel]]></destination>
+         <todo_msg mid="113"><![CDATA[Kembali ke Argenta.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_79.dds</contents_image>
+         <destination_pos>791,n1132</destination_pos>
+         <destination_mode>custom:791@4,792@1</destination_mode>
+         <statemark_npcid>1132</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="114"><![CDATA[Who is the Traitor? IV]]></title>
+         <contents mid="115"><![CDATA[<html>Temukan candidate queen yang hilang sebelum Dragon Followers menemukan mereka.<BR>Jelajahi  Bronze Crescent Forest.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Bronze Crescent Forest(???)</FONT></html>]]></contents>
+         <destination mid="116"><![CDATA[Jelajahi Bronze Crescent Forest]]></destination>
+         <todo_msg mid="117"><![CDATA[Pergi ke Bronze Crescent Forest.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_79.dds</contents_image>
+         <destination_pos>791,n1088</destination_pos>
+         <destination_mode>custom:791@4,792@1</destination_mode>
+         <statemark_npcid>1088</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="118"><![CDATA[Who is the Traitor? V]]></title>
+         <contents mid="119"><![CDATA[<html>Queen candidate yang kamu cari telah mati. Kamu berusaha mengejar Rozalinde yang ada di dekat jasad candidate namun kehilangan jejaknya.<BR> Amati tempat terakhir Rozalinde.</FONT> <FONT color=#a82424>- Bronze Crescent Forest (Suspicious Letter)</FONT></html>]]></contents>
+         <destination mid="120"><![CDATA[Periksa surat mencurigakan di Bronze Crescent Forest]]></destination>
+         <todo_msg mid="121"><![CDATA[Periksa surat yang ditinggalkan oleh Rozalinde.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>34,n1047</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1047</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="122"><![CDATA[Who is the Traitor? VI]]></title>
+         <contents mid="123"><![CDATA[<html>Candidate Elf Queen sudah mati.<BR>Temukan petunjuk dari surat yang dijatuhkan Rozalinde. Bawa ke Argenta.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="124"><![CDATA[Bicara pada Argenta di Anu Arendel]]></destination>
+         <todo_msg mid="125"><![CDATA[Kembali ke Anu Arendel.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9292</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

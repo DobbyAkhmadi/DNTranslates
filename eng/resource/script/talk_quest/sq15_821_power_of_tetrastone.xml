@@ -1,0 +1,267 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_821_power_of_tetrastone</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>821</qid>
+      <designer>나은하</designer>
+      <qlevel>45</qlevel>
+      <qdesc>아이언 블레이드의 칼날	가디언 아이언 블레이드의 칼날. 망가져서 지금은 움직이지 않는다.	300451
+	테트라스톤의 파편	테트라스톤의 조각난 파편. 고대의 무기들을 연구 중인 몰린에게 전달해야한다.	300452</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>822</nextqid>
+      <nextqname>sq15_822_disappeared_tetrastone</nextqname>
+      <nextqnpc>n710_scholar_hancock</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Power of Tetrastone]]></qkname>
+      <qnpc>
+         <npcid>708</npcid>
+         <npcename>n708_trader_molin</npcename>
+         <npckname>대장장이 몰린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>710</npcid>
+         <npcename>n710_scholar_hancock</npcename>
+         <npckname>문장학자 핸콕</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n708_trader_molin-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Blacksmith Molin$<BR>Heraldry Scholar Hancock started researching something interesting..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-accepting-a" mid="10" select_type="0"><![CDATA[<html>How can I help you?</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Heraldry Scholar Hancock$<BR>So, keeping Tetrastone is safely done. I'm going to research it more deeply. Can you help me to research on Tetrastone?</html> ]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-accepting-a" image="QW_56.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-accepting-b" mid="12" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Heraldry Scholar Hancock$<BR>I'm planning to go to<FONT color=#a82424>East Ancient Armory</FONT> and beat up one monster which will be used to check whether it can be revived or not. <FONT color=#a82424>{monster:1552}</FONT> would be good.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-accepting-acceptted" mid="14" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Power of Tetrastone$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n708_trader_molin-1" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="16"><![CDATA[<html>$Blacksmith Molin$<BR><FONT color=#a82425>Heraldry Scholar Hancock</FONT>is now researching something interesting.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-1" image="QW_56.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-2" mid="83" select_type="0"><![CDATA[<html>Okay.</html>]]></talk_answer>
+      <talk_question mid="82"><![CDATA[<html>$Heraldry Scholar Hancock$<BR>Please go to<FONT color=#a82424>East Ancient Armory</FONT>and get a<FONT color=#a82425>guardian's iron blade</FONT>. I'm going to use that whether it's revived or not with Tetrastone's power.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-2" image="QW_56.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="25"><![CDATA[<html>$Heraldry Scholar Hancock$<BR>Maybe Blacksmith Molin would have interest in this research. <FONT color=#a82424>{monster:1551}</FONT>is in <FONT color=#a82425>East Ancient Armory</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-3" image="QN_LM_Blacksmith.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-3-a" mid="28" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Heraldry Scholar Hancock$<BR>Oh, you brought the iron blade.<BR><FONT color=#a82425>Blacksmith Molin</FONT> heard that you are recently researching to revive the Ancients's arms.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-3-a" image="QS_Default.dds" itemindex="300452" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-4" mid="30" select_type="0"><![CDATA[<html>Okay.</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Heraldry Scholar Hancock$<BR>I'll give you <FONT color=#a82424>a part of Tetrastone</FONT>so please deliver it and the iron blade to <FONT color=#a82425>Blacksmith Molin</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-4" image="QN_LM_Blacksmith.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="32"><![CDATA[<html>$Heraldry Scholar Hancock$<BR><FONT color=#a82425>Blacksmith Molin</FONT> would be surprised of Tetrastone's power.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n708_trader_molin-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n708_trader_molin-4-a" mid="35" select_type="0"><![CDATA[<html>(Give him the iron blade and Tetrastone)</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Blacksmith Molin$<BR>Oh, I've been waiting for you. Give me the iron blade and Tetrastone.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n708_trader_molin-4-a" image="QN_LM_Blacksmith.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n708_trader_molin-4-b" mid="37" select_type="0"><![CDATA[<html>(Keep eyes on it)</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Blacksmith Molin$<BR>Let's see, can I do this?<BR><FONT color=#7e12d3>(Molin's heating up the iron blade and hammering Tetrastone)</FONT><BR>Wow, it looks like something will happen.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n708_trader_molin-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n708_trader_molin-4-c" mid="39" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Blacksmith Molin$<BR><FONT color=#7e12d3>(The iron blade's starting to flying up)<BR></FONT>Wow, it works!<BR>It's flying up!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n708_trader_molin-4-c" image="QS_Default.dds" itemindex="300449" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n708_trader_molin-5" mid="41" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Blacksmith Molin$<BR><FONT color=#7e12d3>(The iron blade has just fallen down)</FONT><BR>Oh, it's almost.<BR>Didn't I put more power on it?<BR>Anyway I think the Tetrastone is quite useful.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n708_trader_molin-5" image="QN_LM_Blacksmith.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="42"><![CDATA[<html>$Blacksmith Molin$<BR>Go to<FONT color=#a82425>Heraldry Scholar Hancock</FONT> and tell him that I used this usefully.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-5" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-5-a" mid="45" select_type="0"><![CDATA[<html>Tetrastone made the iron blade moved.</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Heraldry Scholar Hancock$<BR><FONT color=#7e12d3>(Hancock looks embarrassed)</FONT><BR>Oh, you've been there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-5-b" mid="47" select_type="0"><![CDATA[<html>What?</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Heraldry Scholar Hancock$<BR>I already know the result. I saw Tetrastone's power in front of my eyes.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-5-c" mid="49" select_type="0"><![CDATA[<html>Mimic revived?!</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Heraldry Scholar Hancock$<BR>The dalton's box keeping Tetrastone revived and became a great mimic dalton and then ran away.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-5-c" image="QW_55.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-5-d" mid="51" select_type="0"><![CDATA[<html>(I was sure that it was dangerous...)</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Heraldry Scholar Hancock$<BR>Yeah. Please go to<FONT color=#a82425>East Ancient Armory</FONT>and get Tetrastone back.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n710_scholar_hancock-5-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n710_scholar_hancock-5-!next" mid="81" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="80"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">8210,,,,,,,,,</exe>
+         <exe type="setquest">821</exe>
+         <exe type="talk" npc="n710_scholar_hancock">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="2,4,5,6">1601</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="2,4,5,6">201601</exe>
+         <exe type="addquestitem" num="1">300451</exe>
+         <exe type="huntitem" num="1" exe="" onexe="">300451</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="1">300452</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300451</exe>
+         <exe type="delquestitem" num="-1">300452</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">8210,,,,,,,,,</exe>
+         <exe type="complete" true="">821</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n710_scholar_hancock" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n710_scholar_hancock" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n710_scholar_hancock" sub="2">0,1,3,7,8</exelink>
+   <exelink qstep="3" npc="n710_scholar_hancock" sub="4">0,1,2</exelink>
+   <exelink qstep="4" npc="n708_trader_molin" sub="a">0,1</exelink>
+   <exelink qstep="4" npc="n708_trader_molin" sub="b" />
+   <exelink qstep="4" npc="n708_trader_molin" sub="c" />
+   <exelink qstep="4" npc="n708_trader_molin" sub="5">2,3</exelink>
+   <exelink qstep="5" npc="n710_scholar_hancock" sub="b" />
+   <exelink qstep="5" npc="n710_scholar_hancock" sub="c" />
+   <exelink qstep="5" npc="n710_scholar_hancock" sub="d">0</exelink>
+   <exelink qstep="5" npc="n710_scholar_hancock" sub="!next">1</exelink>
+   <journal_data recompense="8210" quest_title="테트라스톤의 힘" chapterid="" quest_level="45" quest_mark_type="10" use_item_list="300451,300452">
+      <journal index="1">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>15,n710</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>710</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="55"><![CDATA[Tetrastone Research]]></title>
+         <contents mid="56"><![CDATA[<html>Heraldry Scholar Hancock's starting to researching Tetrastone in earnest. Talk with Heraldry Scholar Hancock.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82425>→ Heraldry Scholar Hancock</FONT></html>]]></contents>
+         <destination mid="57"><![CDATA[Talk with Heraldry Scholar Hancock]]></destination>
+         <todo_msg mid="58"><![CDATA[New Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_56.dds</contents_image>
+         <destination_pos>563,0,0</destination_pos>
+         <destination_mode>custom:561@3,562@3,563@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="60"><![CDATA[Ancient armoury]]></title>
+         <contents mid="61"><![CDATA[<html>Go to East Ancient Armory and bring the iron blade.<BR><BR><FONT color=#086171>Riverwort Wharf (Entrance to Ancient Warehouse)</FONT> <FONT color=#a82425>→ East Ancient Armory</FONT></html>]]></contents>
+         <destination mid="62"><![CDATA[East Ancient Armory]]></destination>
+         <todo_msg mid="63"><![CDATA[In East Ancient Armory, beat up a guardian iron blade.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>15,n710</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>710</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="65"><![CDATA[The iron blade]]></title>
+         <contents mid="66"><![CDATA[<html>I just got a iron blade. Go back to Lotus Marsh's Heraldry Scholar Hancock.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82425>→ Heraldry Scholar Hancock</FONT></html>]]></contents>
+         <destination mid="67"><![CDATA[Talk with Heraldry Scholar Hancock]]></destination>
+         <todo_msg mid="68"><![CDATA[Go to Lotus Marsh's Heraldry Scholar Hancock.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_LM_Blacksmith.dds</contents_image>
+         <destination_pos>15,n708</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>708</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="69"><![CDATA[Tetrastone Test]]></title>
+         <contents mid="70"><![CDATA[<html>Heraldry Scholar Hancock asked me to deliver a part of Tetrastone and the iron blade to Blacksmith Molin.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82425>→ Blacksmith Molin</FONT></html>]]></contents>
+         <destination mid="71"><![CDATA[Talk with Blacksmith Molin]]></destination>
+         <todo_msg mid="72"><![CDATA[Go to Blacksmith Molin.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>15,n710</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>710</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="74"><![CDATA[Report to the result of test]]></title>
+         <contents mid="75"><![CDATA[<html>Blacksmith Molin revealed that Tetrastone has something to do with reviving ancient arms. Let's go to Heraldry Scholar Hancock and tell him about it.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82425>→ Heraldry Scholar Hancock</FONT></html>]]></contents>
+         <destination mid="76"><![CDATA[Talk with Heraldry Scholar Hancock]]></destination>
+         <todo_msg mid="77"><![CDATA[Deliver to Heraldry Scholar Hancock about Blacksmith Molin's saying.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>45:-1</user_level>
+      <user_class />
+      <prev_quest>820</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

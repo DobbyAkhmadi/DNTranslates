@@ -1,0 +1,312 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_208_depleting_fuel</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>3</qchapter>
+      <qid>208</qid>
+      <designer>김주연</designer>
+      <qlevel>14</qlevel>
+      <qdesc>300103 부유장치</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Energy Depleted]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타(잿빛폐허)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>167</npcid>
+         <npcename>n167_charging_point</npcename>
+         <npckname>투명NPC(이름 없음)(잠든자의 신전 이벤트 맵)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>99</npcid>
+         <npcename>n099_engineer_hubert</npcename>
+         <npckname>비행선 엔지니어 휴버트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-noquest" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-noquest-" mid="152" select_type="5" />
+      <talk_question mid="97"><![CDATA[<html>$Argenta$<BR>Pergilah ke <FONT color=#a82424>Saint's Haven</FONT> dan  beritahu blond-haired swordsman apa yang terjadi.<BR>Dan minta bantuannya. Dia bisa menghentikan Black Knight.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n167_charging_point-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n167_charging_point-noquest-" mid="153" select_type="5" />
+      <talk_question mid="98"><![CDATA[<html><FONT color=#2b2723>$Airship Engine Battery$<BR></FONT><FONT color=#7e12d2>(Tidak bekerja)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-accepting-acceptted" mid="103" select_type="3" />
+      <talk_question mid="99"><![CDATA[<html>$Airship Engineer Hubert$<BR>Selamat datang kembali.<BR>Tunggu. Aku hampir selesai dengan tahap akhir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-cutscene" mid="104" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Airship Engineer Hubert$<BR>Akhirnya perbaikan selesai!<BR>Semua orang, mundur! Biarkan Nautilus terbang sekali lagi!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-" mid="105" select_type="5" />
+      <talk_question mid="50"><![CDATA[<html>$Argenta$<BR>Pergilah ke <FONT color=#a82424>Saint's Haven</FONT> dan beritahu blond-haired swordsman apa yang terjadi.<BR>Dan minta bantuannya. Dia bisa menghentikan Black Knight.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-a" mid="106" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Airship Engineer Hubert$<BR>Apa-apaan? Apa yang terjadi?!Ledakan itu pasti artinya ada masalah dengan mesinnya! Aku sangat yakin tidak ada masalah, jadi apa yang salah?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-a" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-b" mid="107" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Airship Engineer Hubert$<BR>Ack...sigh...<BR>jangan salahkan mesin...Aku sudah mengeceknya tiga kali.<BR>Jadi pasti masalahnya ada di tenaganya. Aku diberitahu bahwa ship ini menggunakan drive sistem rechargeable khusus. Aku tidak percaya... Aku tidak mempunyai peralatan yang lengkap disini.]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-b" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-" mid="108" select_type="5" />
+      <talk_question mid="55"><![CDATA[<html>$Airship Engineer Hubert$<BR>Maaf mengecewakanmu...<BR>Tapi sepertinya airship tidak akan kemana-kemana sekarang...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-f" mid="131" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Argenta$<BR>Apa!? Aku minta kamu melakukan sesuatu yang penting, dan kamu masih disini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-a" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-b" mid="109" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Argenta$<BR>Black Knight selalu lebih duluan.<BR>Menghancurkannya. Bagaimanapun, kita harus mendapatkan pecahan pesawat terbang itu lagi...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-b" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-c" mid="110" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Argenta$<BR>Kuil mempunyai sumber tenaga yang mungkin bisa kita gunakan... itu pun, jika Black Knight belum menghabiskannya. Semoga masih ada yang tersisa. Kita harus menggunakannya dengan baik...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-c" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-d" mid="111" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$Argenta$<BR>{user_nick}!!! Coba ingat kembali saat Black Knight mencuri kekuatan Ancient! Ambil itu...apapun itu dari airship dan periksa apakah kamu bisa menyalakannya di kuil.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-e" mid="113" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Maksudmu.... Sleepers' Temple?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-e" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-" mid="114" select_type="5" />
+      <talk_question mid="64"><![CDATA[<html>$Argenta$<BR>Oh please! Aku terluka dan butuh istirahat. Berhenti main-main! Ambil...komponen mesin...airship ke Sleepers' Temple.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-a" mid="133" select_type="2" />
+      <talk_question mid="132"><![CDATA[<html>${user_nick}$<BR>Black Knight sudah menghancurkan airship ke <FONT color=#662500>Saint's Haven...</FONT><BR>
+<FONT color=#7e12d2>(Jelaskan bagaimana airship hancur)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3-" mid="115" select_type="5" />
+      <talk_question mid="65"><![CDATA[<html>$Airship Engineer Hubert$<BR>Maaf, sepertinya airship tidak akan terbang dalam waktu dekat... Semua yang aku coba tidak bisa mengisi kembali Airship Engine Battery. Mungkin inilah akhirnya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-a" mid="116" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>$Airship Engineer Hubert$<BR>Kamu juga melihatnya.<BR>Airship tidak bisa terbang dalam waktu dekat...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-b" mid="118" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Mungkin ada cara.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-b" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-c" mid="119" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>$Airship Engineer Hubert$<BR>Kamu serius? Kamu menemukan cara untuk mengisinya tanpa pergi ke Saint's Haven?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-d" mid="121" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Mungkin. Aku harus membawa alat aneh ini...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-d" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-" mid="122" select_type="5" />
+      <talk_question mid="70"><![CDATA[<html>$Airship Engineer Hubert$<BR>Okay, pergilah. Aku sangat ingin membuat benda ini terbang lagi. Aku tidak bisa bayangkan bagaimana kamu akan melakukannya!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-4-" mid="123" select_type="5" />
+      <talk_question mid="71"><![CDATA[<html>$Argenta$<BR>Oh please! Aku terluka dan butuh istirahat. Berhenti main-main! Ambil...Airship Engine Battery ke Sleepers' Temple. Kamu tahu harus mendapatkannya dari <FONT color=#a82424>Engineer Hubert</FONT> kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-5" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-5-" mid="124" select_type="5" />
+      <talk_question mid="72"><![CDATA[<html>$Argenta$<BR>Kenapa kamu masih disini? Pergilah ke <FONT color=#a82424>Sleepers' Temple</FONT> dengan <FONT color=#a82424>airship engine</FONT> SEKARANG. MENGERTI?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-5" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-5-" mid="125" select_type="5" />
+      <talk_question mid="73"><![CDATA[<html>$Airship Engineer Hubert$<BR>Jika kamu berhasil mengisinya kembali, Nautilus akan bisa mengarungi angkasa lagi!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n167_charging_point-5" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n167_charging_point-5-check_class" mid="126" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html><FONT color=#a82424><FONT color=#2b2723>$Airship Engine Battery$</FONT></FONT><BR><FONT color=#7e12d2>(Terdengar suara dengungan lembut.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n167_charging_point-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n167_charging_point-5-b" mid="127" select_type="4" />
+      <talk_question mid="76"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n167_charging_point-5-b" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n167_charging_point-5-" mid="128" select_type="5" />
+      <talk_question mid="95"><![CDATA[<html><FONT color=#a82424><FONT color=#2b2723>$Airship Engine Battery$</FONT></FONT><BR><FONT color=#7e12d2>(Airship Engine Battery bergetar dengan kuat. Pasti sudah penuh sekarang.)</FONT><BR></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n167_charging_point-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n167_charging_point-5-d" mid="147" select_type="4" />
+      <talk_question mid="146"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n167_charging_point-5-d" image="QS_Default.dds" itemindex="300103" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n167_charging_point-5-" mid="149" select_type="5" />
+      <talk_question mid="148"><![CDATA[<html><FONT color=#a82424><FONT color=#2b2723>$Airship Engine Battery$</FONT><FONT color=#7e12d2>(Airship Engine Battery bergetar dengan kuat. Pasti sudah penuh sekarang.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">208</exe>
+         <exe type="talk" npc="n099_engineer_hubert">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_user_PlayCutScene(userObjID,npcObjID,61);</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>잠든자의 신전에서 부유장치를 충전한 뒤, 컷신 출력(71)</comment>
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="1">300103</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment>퀘스트 완료후, 컷씬 보기, 18-BossA맵으로 이동 순으로 실행됨.
+</comment>
+      <conditions>
+         <chk type="class" op="=">8</chk>
+      </conditions>
+      <executions>
+         <exe type="complete" true="6">208</exe>
+         <exe type="recompense">2081,2081,2082,2083,2084,2084,2086,,2088</exe>
+         <exe type="delquestitem" num="-1">300103</exe>
+         <exe type="conexe" true="5,1" false="4,1">0</exe>
+         <exe type="talk" npc="n167_charging_point">a</exe>
+         <exe type="talk" npc="n167_charging_point">c</exe>
+         <exe type="setquest">209</exe>
+         <exe type="setquest">9474</exe>
+         <exe type="complete" true="7">208</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n099_engineer_hubert" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="cutscene">0,1</exelink>
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="b">0,1</exelink>
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="e">0,1</exelink>
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="a" />
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="b" />
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="c" />
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="d">0,1,2</exelink>
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="" />
+   <exelink qstep="5" npc="n167_charging_point" sub="check_class">3</exelink>
+   <exelink qstep="5" npc="n167_charging_point" sub="b">0,2</exelink>
+   <exelink qstep="5" npc="n167_charging_point" sub="" />
+   <exelink qstep="5" npc="n167_charging_point" sub="d">8,2</exelink>
+   <exelink qstep="5" npc="n167_charging_point" sub="" />
+   <journal_data recompense="1:2081,2:2082,3:2083,4:2084,6:2086,8:2088" quest_title="고갈된 에너지" chapterid="3" quest_level="14" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,3959,3392</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="36"><![CDATA[Bicara dengan Airship Engineer Hubert]]></title>
+         <contents mid="37"><![CDATA[<html><FONT color=#a82424>Hubert</FONT> dengan Battery yang terisi penuh, Albatross bisa terbang lagi. Bicara dengannya.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Hubert</FONT></html>]]></contents>
+         <destination mid="38"><![CDATA[Bicara dengan Airship Engineer Hubert]]></destination>
+         <todo_msg mid="39"><![CDATA[Albatross aktif kembali!]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Argenta_wounded.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="40"><![CDATA[Bicara dengan Argenta di Calderock Village]]></title>
+         <contents mid="41"><![CDATA[<html>Karena <FONT color=#a82424>Albatross</FONT> tidak bisa beroperasi, kamu tidak bisa mencapai<FONT color=#a82424>Saint's Haven</FONT>. Argenta mungkin memiliki beberapa ide.<BR><FONT color=#a82424></FONT><BR><FONT color=#a82424><FONT color=#086171>Gray Ruins</FONT> → Argenta</FONT></html>]]></contents>
+         <destination mid="42"><![CDATA[Bicara dengan Argenta di Calderock Village]]></destination>
+         <todo_msg mid="43"><![CDATA[Ceritakan kepada Argenta tentang pesawat yang rusak.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,3959,3392</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="44"><![CDATA[Bicara dengan Airship Engineer Hubert]]></title>
+         <contents mid="45"><![CDATA[<html>Kembali ke Airship Engineer Hubert dan dapatkan Albatross's Engine Battery.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="46"><![CDATA[Bicara dengan Airship Engineer Hubert]]></destination>
+         <todo_msg mid="47"><![CDATA[Dapatkan Airship Engine Battery dari Airship Engineer Hubert.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_16.dds</contents_image>
+         <destination_pos>130,0,0</destination_pos>
+         <destination_mode>custom:126@1,127@1,128@1,129@1,130@4,13005@3</destination_mode>
+         <statemark_npcid>167</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="81"><![CDATA[Airship Engine Battery di charge dengan kekuatan Ancients.]]></title>
+         <contents mid="82"><![CDATA[<html>Bawakan <FONT color=#a82424>Airship Engine Battery</FONT> ke <FONT color=#a82424>Sleepers' Temple</FONT>. Jika Black Knight belum mencuri semua kekuatan, kamu mungkin masih bisa mengisi ulang alat itu.<BR><FONT color=#7e12d2>(Kamu tidak bisa lanjut ketika sedang dalam party.)<BR><BR></FONT><FONT color=#086171>Lower Ridge</FONT><FONT color=#a82424> → Sleepers' Temple</FONT></html>]]></contents>
+         <destination mid="83"><![CDATA[Airship Engine Battery di charge dengan kekuatan Ancients.]]></destination>
+         <todo_msg mid="84"><![CDATA[Charge Airship Engine Battery di Sleepers' Temple]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest>207,9473</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

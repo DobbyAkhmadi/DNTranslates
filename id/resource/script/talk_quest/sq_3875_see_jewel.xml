@@ -1,0 +1,391 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_3875_see_jewel</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter />
+      <qid>3875</qid>
+      <designer>양희주</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>3876</nextqid>
+      <nextqname>sq_3876_hero_skills</nextqname>
+      <nextqnpc>n1871_trader_april</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Hero] Sea Jewel]]></qkname>
+      <qnpc>
+         <npcid>1871</npcid>
+         <npcename>n1871_trader_april</npcename>
+         <npckname>상인 에이프릴</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2877</npcid>
+         <npcename>n2877_mineral</npcename>
+         <npckname>광물 더미</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2948</npcid>
+         <npcename>n2948_overhear</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>2951</npcid>
+         <npcename>n2951_alexander</npcename>
+         <npckname>무언가를 물고 있는 알렉산더</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2952</npcid>
+         <npcename>n2952_fishmonger</npcename>
+         <npckname>곤란해 하는 생선장수</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-accepting-a" mid="6" select_type="0"><![CDATA[<html>I'm looking for something; By any chance do you sell any unusual items?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Merchant April$<BR>Welcome. Is there anything in particular you're looking for?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-accepting-b" mid="8" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Merchant April$<BR>Oh, why, it’s our store policy that we sell absolutely everything except what we don’t have.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-accepting-acceptted" mid="10" select_type="0"><![CDATA[<html><FONT color=#086171>(Accept quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Sea Jewel$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2948_overhear-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Geraint$<BR>An Old Mechanism alongside a... Sea Jewel, wasn’t it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-a" mid="13" select_type="0"><![CDATA[<html>It’s… <FONT color=#7e12d2>(You tell her about the items you seek.)</FONT></html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Merchant April$<BR>What kind of things are they that you’re looking for?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-b" mid="15" select_type="0"><![CDATA[<html>Do you know what those are?</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Merchant April$<BR>An <FONT color=#a82424>Old Mechanism</FONT> and a <FONT color=#a82424>Sea Jewel</FONT>?<BR>They definitely sound like riddles. It's been a while since I've seen a spell that requires imagination!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-c" mid="17" select_type="0"><![CDATA[<html>I think that should be enough.</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Merchant April$<BR>Well... If it's an <FONT color=#a82424>“Old Mechanism...”</FONT> There's something that just came in from Rhadames; do you think it would work? It’s a pocket watch or something like that. I heard it was used it for a long time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-d" mid="94" select_type="0"><![CDATA[<html>You say that like you actually sell everything.</html>]]></talk_answer>
+      <talk_question mid="93"><![CDATA[<html>$Merchant April$<BR>In that case, I’ll start getting ready with this. So what’s left? The <FONT color=#a82424>Sea Jewel</FONT>, was it? <BR>Maybe “Sea Jewel” is a nickname for some gem. Who might’ve made up such a name?<BR>The thing is, I don’t really deal in jewelry...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-e" mid="19" select_type="0"><![CDATA[<html>Me? In person?</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Merchant April$<BR>I did say “everything but what we don’t have.” C’mon, it’’ll be fine. What we don’t have... you’ll find!<BR>What’s the problem? You're a kinda famous mercenary – you don’t want to go out and find it yourself?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-f" mid="21" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Merchant April$<BR>OK! I'll call you an Alpaca Taxi so you can get there straight away!<BR>Some kinda “Sea Jewel” doesn’t sound all that difficult, I mean...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-check" mid="23" select_type="0"><![CDATA[<html>Guess I have no choice...</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Merchant April$<BR>Oh, if you don’t find it, just come to me anytime. I can call you a Taxi whenever.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-h" mid="25" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Merchant April$<BR>Haha. Let’s not let the small things bother us.<BR>So, <FONT color=#387206>{user_nick}</FONT> where do think we can find a <FONT color=#a82424>Sea Jewel</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-choice1" mid="29" select_type="0"><![CDATA[<html>Merca's Port</html>]]></talk_answer>
+      <talk_answer link_index="n1871_trader_april-1-j" mid="30" select_type="0"><![CDATA[<html>Merca's Heart</html>]]></talk_answer>
+      <talk_answer link_index="n1871_trader_april-1-k" mid="31" select_type="0"><![CDATA[<html>Rhadames</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Where could we get a Sea Jewel?)</FONT><BR><BR><FONT color=#7e12d2>※ Choose and click on a location, and you will be taken there.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="33"><![CDATA[<html>$Merchant April$<BR>Hold on! Alpaca Taxis are for solo use only.<BR><BR><FONT color=#7e12d2>※ After you have disbanded the party, try speaking again.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-h" mid="102" select_type="0"><![CDATA[<html>(Let’s choose again)</html>]]></talk_answer>
+      <talk_question mid="101"><![CDATA[<html>$Merchant April$<BR>
+This is Merca's Heart?<BR>
+Hey, you weren’t about to go to some other merchant, were ya?<BR>
+How about thinking of a different place?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-h" mid="104" select_type="0"><![CDATA[<html>(Let’s choose again)</html>]]></talk_answer>
+      <talk_question mid="103"><![CDATA[<html>$Merchant April$<BR>
+Rhadames?<BR>
+There? That just a wasteland, you know. I wouldn’t think you could find a Sea Jewel in a place like that.<BR>
+How about thinking of a different place?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2951_alexander-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Alexander With Something in His Mouth$<BR>*Gack... *Gack—</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2877_mineral-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$sacks of minerals$<BR>…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2952_fishmonger-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Troubled Fishmonger$<BR>Hold real still!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-a" mid="39" select_type="0"><![CDATA[<html>…….</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Merchant April$<BR><FONT color=#387206>{user_nick}</FONT>? You still haven’t found a <FONT color=#a82424>Sea Jewel</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-check" mid="41" select_type="0"><![CDATA[<html>I suppose… you could say that.</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Merchant April$<BR>Imagination is a tricky thing, huh? Well, seeing as how it’s called a Sea Jewel, do you think you might find it at the beach?<BR>If you search carefully at Merca's Port, you might find a clue.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-talk2" mid="43" select_type="0"><![CDATA[<html>(Go)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Merchant April$<BR>Well, if you're going to Merca's Port now, I'll call you an Alpaca Taxi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="46"><![CDATA[<html>$Merchant April$<BR>Hold on! Alpaca Taxis are for solo use only.<BR><BR><FONT color=#7e12d2>※ After you have disbanded the party, try speaking again.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2951_alexander-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2951_alexander-2-check_coral1" mid="48" select_type="0"><![CDATA[<html>(You try to take it by force.)</html>]]></talk_answer>
+      <talk_answer link_index="n2951_alexander-2-check_coral2" mid="89" select_type="0"><![CDATA[<html>(You gently soothe it with a piece of fish.)</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Alexander With Something in His Mouth$<BR>*Gurk, *gurk!!<BR><FONT color=#7e12d2>(Something red is in it’s beak.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2951_alexander-2-a" image="QS_Default.dds" itemindex="400700" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2951_alexander-2-a1" mid="78" select_type="0"><![CDATA[<html>Let’s search Merca’s Port a little more.</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Alexander With Something in His Mouth$<BR>Kya-raaakh!! Kyakh!!!!<BR><FONT color=#7e12d2>(When you take out the thing in its beak, out comes... smooth... gems?)</FONT><BR><FONT color=#7e12d2>(It appears it has chewed it to the point that it will crumble any moment.)<BR></FONT><BR><FONT color=#a82424>[Acquired +1 Coral Stone]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2951_alexander-2-b" image="QS_Default.dds" itemindex="400700" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2951_alexander-2-b1" mid="91" select_type="0"><![CDATA[<html>Let’s search Merca’s Port a little more.</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Alexander With Something in His Mouth$<BR>*Gloo~ *gloo~♥<BR><FONT color=#7e12d2>(When you gently pull the thing in its beak, out comes... smooth... gems?)</FONT><BR><FONT color=#7e12d2>(It appears it has chewed it to the point that it will crumble any moment.)</FONT><BR><BR><FONT color=#a82424>[Acquired +1 Coral Stone]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2951_alexander-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="49"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(It seems you’ve taken everything you can take.)</FONT><BR>
+Shall we go back now?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2951_alexander-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2951_alexander-2-nocoral" mid="96" select_type="0"><![CDATA[<html>Let’s search Merca’s Port a little more.</html>]]></talk_answer>
+      <talk_question mid="95"><![CDATA[<html>$Alexander With Something in His Mouth$<BR>*Goo-huck *goo-huck!! Kyak!<BR><FONT color=#7e12d2>(You already took the jewel he had in his mouth.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2877_mineral-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2877_mineral-2-check_lapis" mid="51" select_type="0"><![CDATA[<html>(Let’s rummage around inside the sack.)</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$sacks of minerals$<BR><FONT color=#7e12d2>(It’s a sack containing various minerals of all sorts of colors.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2877_mineral-2-a" image="QS_Default.dds" itemindex="400701" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2877_mineral-2-a2" mid="80" select_type="0"><![CDATA[<html>Let’s search Merca’s Port a little more.</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$sacks of minerals$<BR><FONT color=#7e12d2>(A blue ore is visible from within the sack.)<BR>(It looks like these are pigments for dyeing, but they have formed just as gems would.)<BR></FONT><BR><FONT color=#a82424>[Acquired +1 Lapiz Lazuli]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2877_mineral-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(It seems you’ve taken everything you can take.)</FONT><BR>
+Shall we go back now?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2877_mineral-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2877_mineral-2-nolapis" mid="98" select_type="0"><![CDATA[<html>Let’s search Merca’s Port a little more.</html>]]></talk_answer>
+      <talk_question mid="97"><![CDATA[<html>$sacks of minerals$<BR><FONT color=#7e12d2>(In this sack, there’s nothing further to see, it seems.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2952_fishmonger-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2952_fishmonger-2-check_aqua" mid="54" select_type="0"><![CDATA[<html>(You observe the thing that fell onto the floor.)</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Troubled Fishmonger$<BR>It’ll be hard to fix – hold still!<BR><FONT color=#7e12d2>(The fish wriggled and something fell down into the puddle on the ground.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2952_fishmonger-2-a" image="QS_Default.dds" itemindex="400702" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2952_fishmonger-2-a3" mid="82" select_type="0"><![CDATA[<html>Let’s search Merca’s Port a little more.</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Water Puddle$<BR><FONT color=#7e12d2>(Something glitters from the puddle.)</FONT><BR><FONT color=#7e12d2>(It is a gem that appeared transparent due to its in fact being the exact color of the water.)<BR></FONT><BR><FONT color=#a82424>[Acquired +1 Aquamarine]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2952_fishmonger-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="55"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(It seems you’ve taken everything you can take.)</FONT><BR>
+<FONT color=#2b2723>Shall we go back now?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2952_fishmonger-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2952_fishmonger-2-noaqua" mid="100" select_type="0"><![CDATA[<html>Let’s search Merca’s Port a little more.</html>]]></talk_answer>
+      <talk_question mid="99"><![CDATA[<html>$Water Puddle$<BR><FONT color=#7e12d2>(You've already picked up the jewels. There seems to be nothing but water in the pool now.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-3-a" mid="58" select_type="0"><![CDATA[<html>Thanks to you. (You display the jewels you found.)</html>]]></talk_answer>
+      <talk_question mid="57"><![CDATA[<html>$Merchant April$<BR>Have you found a <FONT color=#a82424>Sea Jewel</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-3-b" mid="60" select_type="0"><![CDATA[<html>Mightn't that be right? You'll find out what kind of gem it is if you take it there.</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Merchant April$<BR>There’s a lot, huh? The <FONT color=#a82424>Coral Stone</FONT>, the<FONT color=#a82424> Lapis Lazuli</FONT>, and the<FONT color=#a82424> Aquamarine</FONT>... They all kinda stir the imagination.<BR>They said one <FONT color=#086171>gem comes from the sea</FONT>, one <FONT color=#086171>gem comes from across the sea</FONT>, and one <FONT color=#086171>gem looks like the sea</FONT>, right? Are these ones you found the right ones? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-3-!next" mid="62" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Quest Completed$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2948_overhear-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="63"><![CDATA[<html>$Geraint$<BR>
+Did you retrieve all the gems?</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">3875</exe>
+         <exe type="recompense_view">38750,,,,,,,,,,</exe>
+         <exe type="talk" npc="n1871_trader_april">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+         <chk type="questitem" num="1" op="]=">400700</chk>
+         <chk type="questitem" num="1" op="]=">400701</chk>
+         <chk type="questitem" num="1" op="]=">400702</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk" npc="n1871_trader_april">g</exe>
+         <exe type="talk" npc="n1871_trader_april">i</exe>
+         <exe type="huntitem" num="1" exe="6" onexe="">400700</exe>
+         <exe type="huntitem" num="1" exe="6" onexe="">400701</exe>
+         <exe type="huntitem" num="1" exe="6" onexe="">400702</exe>
+         <exe type="conexe" true="7" false="">1</exe>
+         <exe type="conexe" true="8" false="">2</exe>
+         <exe type="conexe" true="9,14,15" false="">3</exe>
+         <exe type="delcount">.</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,54,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13043,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,175,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,187,1);</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+         <chk type="questitem" num="1" op="]=">400700</chk>
+         <chk type="questitem" num="1" op="]=">400701</chk>
+         <chk type="questitem" num="1" op="]=">400702</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,13043,1);</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="talk" npc="n1871_trader_april">b</exe>
+         <exe type="talk" npc="n1871_trader_april">c</exe>
+         <exe type="addquestitem" num="1">400700</exe>
+         <exe type="addquestitem" num="1">400701</exe>
+         <exe type="addquestitem" num="1">400702</exe>
+         <exe type="conexe" true="8" false="">1</exe>
+         <exe type="conexe" true="9" false="">2</exe>
+         <exe type="conexe" true="10,11,12" false="">3</exe>
+         <exe type="talk" npc="n2951_alexander">c</exe>
+         <exe type="talk" npc="n2877_mineral">b</exe>
+         <exe type="talk" npc="n2952_fishmonger">b</exe>
+         <exe type="conexe" true="" false="4">1</exe>
+         <exe type="conexe" true="" false="5">2</exe>
+         <exe type="conexe" true="" false="6">3</exe>
+         <exe type="talk" npc="n2951_alexander">d</exe>
+         <exe type="talk" npc="n2877_mineral">c</exe>
+         <exe type="talk" npc="n2952_fishmonger">c</exe>
+         <exe type="conexe" true="16" false="23">1</exe>
+         <exe type="conexe" true="17" false="25">2</exe>
+         <exe type="conexe" true="18" false="26">3</exe>
+         <exe type="conexe" true="16" false="24">1</exe>
+         <exe type="talk" npc="n2951_alexander">a</exe>
+         <exe type="talk" npc="n2951_alexander">b</exe>
+         <exe type="talk" npc="n2877_mineral">a</exe>
+         <exe type="talk" npc="n2952_fishmonger">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">3875</exe>
+         <exe type="recompense">38750,,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1871_trader_april" sub="b">1</exelink>
+   <exelink qstep="accepting" npc="n1871_trader_april" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n1871_trader_april" sub="b" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="c" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="d" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="e" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="f" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="check">0</exelink>
+   <exelink qstep="1" npc="n1871_trader_april" sub="h" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="choice1">16,17,11,3,4,5</exelink>
+   <exelink qstep="1" npc="n1871_trader_april" sub="j" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="k" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="h" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="h" />
+   <exelink qstep="2" npc="n1871_trader_april" sub="check">1</exelink>
+   <exelink qstep="2" npc="n1871_trader_april" sub="talk2">0</exelink>
+   <exelink qstep="2" npc="n2951_alexander" sub="check_coral1">19</exelink>
+   <exelink qstep="2" npc="n2951_alexander" sub="check_coral2">22</exelink>
+   <exelink qstep="2" npc="n2951_alexander" sub="a1">13,7</exelink>
+   <exelink qstep="2" npc="n2951_alexander" sub="b1">13,7</exelink>
+   <exelink qstep="2" npc="n2951_alexander" sub="nocoral">7</exelink>
+   <exelink qstep="2" npc="n2877_mineral" sub="check_lapis">20</exelink>
+   <exelink qstep="2" npc="n2877_mineral" sub="a2">14,7</exelink>
+   <exelink qstep="2" npc="n2877_mineral" sub="nolapis">7</exelink>
+   <exelink qstep="2" npc="n2952_fishmonger" sub="check_aqua">21</exelink>
+   <exelink qstep="2" npc="n2952_fishmonger" sub="a3">15,7</exelink>
+   <exelink qstep="2" npc="n2952_fishmonger" sub="noaqua">7</exelink>
+   <exelink qstep="3" npc="n1871_trader_april" sub="b">1</exelink>
+   <exelink qstep="3" npc="n1871_trader_april" sub="!next">0</exelink>
+   <journal_data recompense="38750" quest_title="[영웅] 바다의 보석" chapterid="-1" quest_level="95" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos>54,n1871</destination_pos>
+         <destination_mode>custom:54@1</destination_mode>
+         <statemark_npcid>1871</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="65"><![CDATA[[Hero] Sea Jewel Ⅰ]]></title>
+         <contents mid="66"><![CDATA[<html>Ask April if she can get the materials that Rubinart's conceptual apparition requested. And discuss where you can obtain the materials.<BR><BR><FONT color=#086171>Merca's Heart</FONT> - <FONT color=#a82424>Merchant April</FONT></html>]]></contents>
+         <destination mid="67"><![CDATA[Talk to April at Merca's Heart]]></destination>
+         <todo_msg mid="68"><![CDATA[Let’s talk to April.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos />
+         <destination_mode>custom:54@4,13043@4,175@4,187@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="69"><![CDATA[[Hero] Sea Jewel Ⅱ]]></title>
+         <contents mid="70"><![CDATA[<html>Choose either of Merca's Port, Merca's Heart, or Rhadames, and search for the Sea Jewel there. If you want to move again, visit April in Merca's Heart and ask her about it.<BR><BR><FONT color=#086171>???</FONT> - <FONT color=#a82424>Sea Jewel (Coral Stone, Lapis Lazuli, Aquamarine)</FONT></html>]]></contents>
+         <destination mid="71"><![CDATA[Acquired the Sea Jewel]]></destination>
+         <todo_msg mid="72"><![CDATA[Let’s search for the Sea Jewel.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image />
+         <destination_pos>54,n1871</destination_pos>
+         <destination_mode>custom:54@1</destination_mode>
+         <statemark_npcid>1871</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="73"><![CDATA[[Hero] Sea Jewel Ⅲ]]></title>
+         <contents mid="74"><![CDATA[<html>If we’ve found the three gems purported to be the Sea Jewel, let's go see April and let her know.<BR><BR><FONT color=#086171>Merca's Heart</FONT> - <FONT color=#a82424>Merchant April</FONT></html>]]></contents>
+         <destination mid="75"><![CDATA[Talk to April at Merca's Heart]]></destination>
+         <todo_msg mid="76"><![CDATA[Let’s speak with April.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class>10</user_class>
+      <prev_quest>3822</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

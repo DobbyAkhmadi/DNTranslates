@@ -1,0 +1,29 @@
+   <talk>
+      <npcename>n2895_hwaran_maid</npcename>
+      <npcid>2895</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Palace Attendant Jeokwolyang]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="23"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="20"><![CDATA[<html>$Palace Attendant Jeokwolyang$<BR>I am serving Master Hwaran up close.<BR>Talking with strangers is<BR>not allowed.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="25" link_target="mqc03_9891_vandar_07.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>Jamihwa’s Fury</FONT></html>]]></talk_answer>
+         <talk_question mid="24"><![CDATA[<html>$Palace Attendant Jeokwolyang$<BR>I am a close attendant of Commander Hwaran.<BR>Speaking freely to a stranger like you<BR>is against the law.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="4" false="2">0</exe>
+         <exe type="conexe" true="5" false="3">1</exe>
+         <exe type="conexe" true="6" false="0">2</exe>
+         <exe type="enterquest">mqc03_9888_vandar_04</exe>
+         <exe type="enterquest">mqc03_9890_vandar_06</exe>
+         <exe type="enterquest">mqc03_9891_vandar_07</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9888</chk>
+         <chk type="hasquest">9890</chk>
+         <chk type="hasquest">9891</chk>
+      </conditions>
+   </talk>

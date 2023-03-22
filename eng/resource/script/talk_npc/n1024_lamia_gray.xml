@@ -1,0 +1,22 @@
+   <talk>
+      <npcename>n1024_lamia_gray</npcename>
+      <npcid>1024</npcid>
+      <startexe>0</startexe>
+      <npckname mid="1"><![CDATA[Canyon Guardian Sharti]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Canyon Guardian Sharti$<BR>
+You're… good…</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="2" false="1">2</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="enterquest">sq15_4228_good_operation</exe>
+         <exe type="enterquest">sq15_4229_forgotten_story</exe>
+         <exe type="talk">001</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">4228</chk>
+         <chk type="hasquest">4229</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 4228) == 1</chk>
+      </conditions>
+   </talk>

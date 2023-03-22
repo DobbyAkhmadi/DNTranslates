@@ -1,0 +1,26 @@
+   <talk>
+      <npcename>n2056_cronicle_geraint_st01</npcename>
+      <npcid>2056</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Gerraint (Chronicle Tutorial)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="002" mid="6"><![CDATA[<html>(Next)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Gerraint${sound:npc_Gereint_2901_qu_08.ogg}<BR>Terim kasih. Kau dapat menjagai dirimu rupanya\.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="7"><![CDATA[<html>$Gerraint${sound:npc_Gereint_2901_qu_09.ogg}<BR>
+Akan kudengarkan cerita setelah kau pergi ke area berikutnya. pergilah menggunakan portal di depan.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="4">0</exe>
+         <exe type="enterquest">sq_cronicle_2901_01</exe>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">sq_cronicle_2921_return_hero_01</exe>
+         <exe type="conexe" true="3" false="2">1</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">2901</chk>
+         <chk type="hasquest">2921</chk>
+      </conditions>
+   </talk>

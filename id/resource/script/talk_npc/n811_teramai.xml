@@ -1,0 +1,49 @@
+   <talk>
+      <npcename>n811_teramai</npcename>
+      <npcid>811</npcid>
+      <startexe>9</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Terence Teramai]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="6"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Terence Teramai$<BR>Senang berjumpa dengan kamu, <FONT color=#387206>{user_nick}</FONT>.<BR>Aku adalah <FONT color=#a82424>Terence Teramai</FONT> sebagai kepala denominasi Goddess dengan tubuh yang sudah tidak sehat.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="8" link_target="mq15_9210_return_of_pope.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Return of The Pope</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="18" link_target="mq15_9360_the_other_hero.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>The Other Hero</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="19" link_target="mq15_9361_that_girl.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>That Girl</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="20" link_target="mq15_9362_last_sleep.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Last Sleep</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="mq15_9363_pope_coming.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Pope of Saint's Haven</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="9"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Terence Teramai$<BR>Senang berjumpa dengan kamu, <FONT color=#387206>{user_nick}</FONT>.<BR>Aku adalah <FONT color=#a82424>Terence Teramai</FONT> sebagai kepala denominasi Goddess dengan tubuh yang sudah tidak sehat.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="23"><![CDATA[<html>$Terrence Terramai$<BR>Apa aku dihukum karena dosaku...? Tinggal sendiri dan semua temanku telah tiada...</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mq15_9207_contact</exe>
+         <exe type="conexe" true="1" false="0">0</exe>
+         <exe type="enterquest">mq15_9208_reunited</exe>
+         <exe type="conexe" true="3" false="2">1</exe>
+         <exe type="enterquest">mq15_9209_eternal_rest</exe>
+         <exe type="conexe" true="5" false="4">2</exe>
+         <exe type="enterquest">mq15_9210_return_of_pope</exe>
+         <exe type="conexe" true="7" false="6">3</exe>
+         <exe type="conexe" true="10" false="8">4</exe>
+         <exe type="conexe" true="12" false="11">5</exe>
+         <exe type="conexe" true="13" false="14">6</exe>
+         <exe type="enterquest">mqc08_9528_traces_of_comrades</exe>
+         <exe type="enterquest">mqc08_9529_purification_failed</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9207</chk>
+         <chk type="hasquest">9208</chk>
+         <chk type="hasquest">9209</chk>
+         <chk type="hasquest">9210</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="hasquest">9528</chk>
+         <chk type="hasquest">9529</chk>
+      </conditions>
+   </talk>

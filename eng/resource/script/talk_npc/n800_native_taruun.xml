@@ -1,0 +1,24 @@
+   <talk>
+      <npcename>n800_native_taruun</npcename>
+      <npcid>800</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Native Taroon(Isla Native Village)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Native Taroon$<BR>I'm waiting for the Sorceress, Charti's friend.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="3">0</exe>
+         <exe type="enterquest">mq15_9201_lament_for_farewell2</exe>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+         <exe type="enterquest">mq15_9354_telling_farewell2</exe>
+         <exe type="conexe" true="6" false="2">2</exe>
+         <exe type="enterquest">mqc08_9639_prevent_him</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9201</chk>
+         <chk type="hasquest">9354</chk>
+         <chk type="hasquest">9639</chk>
+      </conditions>
+   </talk>

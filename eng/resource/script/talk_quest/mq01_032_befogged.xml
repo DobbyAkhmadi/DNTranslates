@@ -1,0 +1,636 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq01_032_befogged</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>32</qid>
+      <designer>김인정</designer>
+      <qlevel>3</qlevel>
+      <qdesc>붉은 인장의 파편	300009
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>33</nextqid>
+      <nextqname>mq01_033_groping_in_the_dark</nextqname>
+      <nextqnpc>n001_elder_harold</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Befogged]]></qkname>
+      <qnpc>
+         <npcid>1</npcid>
+         <npcename>n001_elder_harold</npcename>
+         <npckname>촌장 해롤드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1092</npcid>
+         <npcename>n1092_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1093</npcid>
+         <npcename>n1093_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>572</npcid>
+         <npcename>n572_shadow_meow</npcename>
+         <npckname>그림자 냥</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-accepting-a" mid="191" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>$Mayor Harold$<BR>Oh you've found the herb.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-accepting-a" image="QS_Default.dds" itemindex="300572" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-accepting-acceptted" mid="193" select_type="3" />
+      <talk_question mid="192"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Will this really work?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-a" mid="376" select_type="2" />
+      <talk_question mid="375"><![CDATA[<html>$Mayor Harold$<BR>Of course.<BR>That lady will have enough strength to wake up now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1-a" image="QN_NPC_Shadow_Meow.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-b" mid="378" select_type="2" />
+      <talk_question mid="377"><![CDATA[<html>$Mayor Harold$<BR>Ah… right. In the meanwhile, why don't you take a tour around our town?<BR>Actually, there's a cat who is wearing similar clothes as yours.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-c" mid="380" select_type="2" />
+      <talk_question mid="379"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A cat...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1-c" image="QN_NPC_Shadow_Meow.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-d" mid="382" select_type="2" />
+      <talk_question mid="381"><![CDATA[<html>$Mayor Harold$<BR>Yes, a cat named <FONT color=#a82424>Shadow Neko</FONT>....<BR>Why don't you go and meet him?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1-d" image="QN_NPC_Shadow_Meow.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-2" mid="387" select_type="2" />
+      <talk_question mid="386"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Shadow Neko? I've never heard of that name, but I'm open to all chances that might explain the situation I'm in...<BR>I guess it would be better to meet the cat or whatever creature that can help me.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-1-" mid="389" select_type="5" />
+      <talk_question mid="388"><![CDATA[<html>$???$<BR>......<BR><FONT color=#7e12d2>(The girl is staring at you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-1-" mid="391" select_type="5" />
+      <talk_question mid="390"><![CDATA[<html>$Shadow Neko$<BR>
+I am the silent assassin Shadow Neko~!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-2" image="QN_NPC_Shadow_Meow.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-2-" mid="384" select_type="5" />
+      <talk_question mid="383"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Since I can't go far unless the girl wakes up, I should go and meet Shadow Neko.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-a" mid="394" select_type="2" />
+      <talk_question mid="392"><![CDATA[<html>$Shadow Neko$<BR>Who goes there?!<BR>
+I'm the silent assassin Shadow Neko!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-b" mid="396" select_type="2" />
+      <talk_question mid="395"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(…He looks like a strange person… I mean a strange cat.<BR>Maybe it was a bad idea to talk to the cat...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-c" mid="398" select_type="2" />
+      <talk_question mid="397"><![CDATA[<html>$Shadow Neko$<BR>Hmm~ I've never seen you around before.<BR>So? You wanna be a disciple of the great Shadow Neko?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-d" mid="400" select_type="2" />
+      <talk_question mid="399"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A disciple?!</FONT><BR>
+<FONT color=#662500>No way, I was just looking for clues...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-e" mid="402" select_type="2" />
+      <talk_question mid="401"><![CDATA[<html>$Shadow Neko$<BR>Clues? Kyaaamyeeeoow!<BR>How can you ask for clues to becoming the greatest assassin of all time when this is but your first lesson...!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-f" mid="404" select_type="2" />
+      <talk_question mid="403"><![CDATA[<html>$Shadow Neko$<BR>Kids these days are scary.<BR>Phew~ But what can I do? I have no choice.<BR>
+Yoshi! I will teach you! Ehem!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-g" mid="406" select_type="2" />
+      <talk_question mid="405"><![CDATA[<html>$Shadow Neko$<BR>Do you know how to evade? When a crazy monster charges at you, you should quickly <FONT color=#a82424>press the direction key twice</FONT>. Or you can choose to press the direction key and press [ <FONT color=#7e12d2>Shift</FONT> ] too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-h" mid="408" select_type="2" />
+      <talk_question mid="407"><![CDATA[<html>$Shadow Neko$<BR>That will make you an excellent evader!! Ehem.<BR>And by your looks… I can tell you are a noob. You should train hard and learn new skills as you go along.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-i" mid="411" select_type="2" />
+      <talk_question mid="410"><![CDATA[<html>$Shadow Neko$<BR>If you think you are ready to learn a new skill, you can always ask me or press [ <FONT color=#7e12d2>K</FONT> ].<BR>So? Are you ready to serve your new master?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-2-j" mid="413" select_type="2" />
+      <talk_question mid="412"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A master?!</FONT><BR>
+<FONT color=#662500>…a cat as my master?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-3" mid="415" select_type="2" />
+      <talk_question mid="414"><![CDATA[<html>$Shadow Neko$<BR>What are you so happy about? You look like a puppy on a snowing day. Kehehehe~<BR>Ok then, train hard and I will see you again soon!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n572_shadow_meow-3" image="QN_Elder_Harold.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n572_shadow_meow-3-" mid="418" select_type="5" />
+      <talk_question mid="417"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I don't know what's going on but I'm sure that the cat saw me for the first time.<BR>Too bad. I should just go back to Mayor Harold and check if the girl has woken up.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-a" mid="420" select_type="2" />
+      <talk_question mid="419"><![CDATA[<html>$Mayor Harold$<BR>Oh! You're back.<BR>I was waiting anxiously for you!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-b" mid="422" select_type="0"><![CDATA[<html>She woke up?</html>]]></talk_answer>
+      <talk_answer link_index="n001_elder_harold-3-b" mid="423" select_type="0"><![CDATA[<html>Where did she go?</html>]]></talk_answer>
+      <talk_question mid="421"><![CDATA[<html>$Mayor Harold$<BR>Haven't you met your lady companion? She woke up a while ago.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-b" image="QW_WindForest.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-c" mid="425" select_type="2" />
+      <talk_question mid="424"><![CDATA[<html>$Mayor Harold$<BR>According to Guard Darcy, he saw her wandering near the <FONT color=#a82424>Wind Forest</FONT>.<BR>Please hurry.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-" mid="427" select_type="5" />
+      <talk_question mid="426"><![CDATA[<html>$Mayor Harold$<BR>My granddaughter Rose used to like going for a walk at the Wind Forest too...<BR>
+Rose... Where are you now?<BR><FONT color=#7e12d2>(Tears swell up in Harold's eyes)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-4" image="QW_WindForest.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-4-" mid="429" select_type="5" />
+      <talk_question mid="428"><![CDATA[<html>$Mayor Harold$<BR>
+The lady went towards the <FONT color=#a82424>Wind Forest</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-a" mid="432" select_type="0"><![CDATA[<html>Erm...</html>]]></talk_answer>
+      <talk_answer link_index="n1092_lunaria-4-a" mid="433" select_type="0"><![CDATA[<html>Are you feeling ok?</html>]]></talk_answer>
+      <talk_answer link_index="n1092_lunaria-4-a" mid="434" select_type="0"><![CDATA[<html>(Wave hand)</html>]]></talk_answer>
+      <talk_question mid="430"><![CDATA[<html>$???$<BR>......<BR>
+<FONT color=#7e12d2>(The girl is staring at you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-b" mid="436" select_type="2" />
+      <talk_question mid="435"><![CDATA[<html>$???$<BR>......</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-c" mid="438" select_type="2" />
+      <talk_question mid="437"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hey!!! Don't tell me you can't talk.<BR>I'm relieved that you are fine, but don't you have anything to say about this situation?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-d" mid="440" select_type="2" />
+      <talk_question mid="439"><![CDATA[<html>$???$<BR>Say what?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-e" mid="442" select_type="2" />
+      <talk_question mid="441"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I crashed into the man who appeared with you, and when I woke up, I was here...... Anyways!<BR>You should tell me what is going on.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-f" mid="445" select_type="0"><![CDATA[<html>You don't know?!</html>]]></talk_answer>
+      <talk_answer link_index="n1092_lunaria-4-f" mid="446" select_type="0"><![CDATA[<html>…What?!</html>]]></talk_answer>
+      <talk_question mid="444"><![CDATA[<html>$???$<BR>I don't know.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-f" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-g" mid="448" select_type="2" />
+      <talk_question mid="447"><![CDATA[<html>$???$<BR>I don't know anything.<BR>…Why don't you ask yourself? He's inside you.<BR><FONT color=#7e12d2>(The girl points at {user_nick})</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-g" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-h" mid="451" select_type="2" />
+      <talk_question mid="450"><![CDATA[<html>$???$<BR>
+The man who appeared with me… he's inside you.<BR>
+Haven't you met him yet? He must have said something to you.<BR>
+…Probably.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-i" mid="453" select_type="2" />
+      <talk_question mid="452"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Wh... WHAT?! What nonsense is this?<BR>This must be a dream!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-j" mid="456" select_type="2" />
+      <talk_question mid="455"><![CDATA[<html>$???$<BR>Think of it in any way as you want.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-k" mid="458" select_type="2" />
+      <talk_question mid="457"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>This is driving me mad.</FONT><BR>
+<FONT color=#662500>I thought you might know something. Uhhh...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-l" mid="461" select_type="2" />
+      <talk_question mid="460"><![CDATA[<html>$???$<BR>No I don't know anything.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-m" mid="463" select_type="2" />
+      <talk_question mid="462"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Then the man who entered my body... How did he do that?<BR>Does this even make sense?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-m" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-n" mid="465" select_type="2" />
+      <talk_question mid="464"><![CDATA[<html>$???$<BR>I don't know.<BR>We travelled across time, and he bumped into you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-n" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-o" mid="467" select_type="2" />
+      <talk_question mid="466"><![CDATA[<html>$???$<BR>He bumped into you and… erm… I don't know what happened next.<BR>But he is inside you.<BR><FONT color=#7e12d2>(The girl points straight at {user_nick}'s chest)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-p" mid="469" select_type="2" />
+      <talk_question mid="468"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(This is insane.</FONT><BR>
+<FONT color=#662500>…Maybe it's not her but me who is crazy. Did I go mad?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-q" mid="471" select_type="2" />
+      <talk_question mid="470"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Ugh. But if I think about it, I could feel "someone else" inside me when I was saving this girl and when i went to get the herb. Maybe that man can give me answers to this situation...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-r" mid="473" select_type="2" />
+      <talk_question mid="472"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(…But how do I call him out?</FONT><BR>
+<FONT color=#662500>And it's not like he will come out when I call him!!!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-r" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-4-s" mid="476" select_type="2" />
+      <talk_question mid="475"><![CDATA[<html>$???$<BR>......</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-4-s" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-5" mid="479" select_type="2" />
+      <talk_question mid="478"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hey wait!!! Where are you going?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1092_lunaria-5" image="QW_2.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1092_lunaria-5-" mid="481" select_type="5" />
+      <talk_question mid="480"><![CDATA[<html> <BR>
+<FONT color=#7e12d2>(The girl is walking towards the Ancient Temple Ruins)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-a" mid="483" select_type="2" />
+      <talk_question mid="482"><![CDATA[<html>$???$<BR>......You seem to have met him already.<BR>The man inside yourself.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-a" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-b" mid="485" select_type="2" />
+      <talk_question mid="484"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>He only appears during battles...<BR>Is he the one? The one who appeared with you?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-c" mid="487" select_type="2" />
+      <talk_question mid="486"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You… I mean the man who travelled across time with you.<BR>So I crashed into that man, and he is now inside me.<BR>Okay, fine. Let's take it as that for now.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-d" mid="489" select_type="2" />
+      <talk_question mid="488"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>So if I find out who he is, can I go back to where I came from?<BR>Can I somehow go back to my ordinary life?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-e" mid="492" select_type="2" />
+      <talk_question mid="491"><![CDATA[<html>$???$<BR>No you can't.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-f" mid="494" select_type="2" />
+      <talk_question mid="493"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What? No?! Then what should I do?<BR>There must be an answer!<BR>…Why did you travel across time in the first place?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-g" mid="496" select_type="2" />
+      <talk_question mid="495"><![CDATA[<html>$???$<BR>…Is it because of me…?<BR><FONT color=#7e12d2>(The girl thinks for a while)</FONT><BR>It happens sometimes… I mean… rather often...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-h" mid="498" select_type="2" />
+      <talk_question mid="497"><![CDATA[<html>$???$<BR>…No. Forever.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-i" mid="500" select_type="2" />
+      <talk_question mid="499"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>......Then what?<BR>You mean all of this happened because of your weird abilities?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-j" mid="502" select_type="2" />
+      <talk_question mid="501"><![CDATA[<html>$???$<BR>Maybe.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-k" mid="505" select_type="2" />
+      <talk_question mid="504"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What?! Then you should know how to solve this!!<BR>You should clean up the mess you've made. Hey are you listening?<BR>There must at least be... Emergency measures or something...!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-l" mid="507" select_type="2" />
+      <talk_question mid="506"><![CDATA[<html>$???$<BR>Oh I'm sorry to hear that.<BR>
+Good luck.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-m" mid="509" select_type="2" />
+      <talk_question mid="508"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hey you're treating this like it's none of your business.<BR>Hey you… Wait a minute, what's your name?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-n" mid="511" select_type="2" />
+      <talk_question mid="510"><![CDATA[<html>$???$<BR><FONT color=#a82424>Lunaria.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-o" mid="514" select_type="2" />
+      <talk_question mid="513"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Lunaria? …Okay, Miss Lunaria.<BR>Don't you want to go back?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-p" mid="516" select_type="2" />
+      <talk_question mid="515"><![CDATA[<html>$Lunaria$<BR>Go back...?<BR>
+I don't know.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-q" mid="518" select_type="2" />
+      <talk_question mid="517"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You don't know?!<BR>Why is your answer always the same? Where on earth are you from?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-r" mid="520" select_type="2" />
+      <talk_question mid="519"><![CDATA[<html>$Lunaria$<BR>I......don't know.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-r" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-s" mid="522" select_type="2" />
+      <talk_question mid="521"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Urrr... Ughhh...<BR>This conversation is going nowhere......</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-s" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-t" mid="524" select_type="2" />
+      <talk_question mid="523"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay, let's do it this way.<BR>I'll return you to where you came from, and I will go back to where I came from!<BR>Back to the beginning!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-u" mid="526" select_type="2" />
+      <talk_question mid="525"><![CDATA[<html>$Lunaria$<BR>
+The beginning?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-u" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-6-v" mid="528" select_type="2" />
+      <talk_question mid="527"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>To the time before you and that weird guy inside me appeared.<BR>Isn't that good for you too? So help me out!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-6-v" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-7" mid="530" select_type="2" />
+      <talk_question mid="529"><![CDATA[<html>$Lunaria$<BR>
+Hmm.....<BR>
+…it won't work.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-7" image="QS_Default.dds" itemindex="300009" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-7-a" mid="532" select_type="2" />
+      <talk_question mid="531"><![CDATA[<html><BR><FONT color=#7e12d2>(Lunaria seems to understand what you said, but remains quietly by your side.</FONT><BR>
+<FONT color=#7e12d2>Come to think of it, the object you obtained while eliminating the monsters is in your hand.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1093_lunaria-7-a" image="QN_Elder_Harold.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1093_lunaria-7-" mid="534" select_type="5" />
+      <talk_question mid="533"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Anyway, what is this weird thing?<BR>I should go back to town first. The mayor might know.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-7" image="QN_NPC_Lunaria.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-7-a" mid="538" select_type="2" />
+      <talk_question mid="537"><![CDATA[<html>$Mayor Harold$<BR>Have you met the lady?<BR>She seems to have completely recovered. It's a relief.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-7-a" image="QS_Default.dds" itemindex="300009" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-7-b" mid="540" select_type="2" />
+      <talk_question mid="539"><![CDATA[<html>$Mayor Harold$<BR>Hmm? The thing you're holding is...<BR><FONT color=#7e12d2>(Harold narrows his eyes to take a better look at the object from Ancient Temple Ruins)</FONT><BR>That's...!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-7-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-7-c" mid="542" select_type="4" />
+      <talk_question mid="541"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-7-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-7-!next" mid="544" select_type="2" />
+      <talk_question mid="543"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>...?</FONT><BR>
+<FONT color=#662500>What's wrong?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">32</exe>
+         <exe type="talk" npc="n001_elder_harold">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4,5,6,7">200129</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4,5,6,7">129</exe>
+         <exe type="addquestitem" num="1">300009</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">320,,,,,,,,</exe>
+         <exe type="complete" true="">32</exe>
+         <exe type="delquestitem" num="-1">300009</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n001_elder_harold" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n001_elder_harold" sub="b" />
+   <exelink qstep="1" npc="n001_elder_harold" sub="c" />
+   <exelink qstep="1" npc="n001_elder_harold" sub="d" />
+   <exelink qstep="1" npc="n001_elder_harold" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n572_shadow_meow" sub="b" />
+   <exelink qstep="2" npc="n572_shadow_meow" sub="c" />
+   <exelink qstep="2" npc="n572_shadow_meow" sub="d" />
+   <exelink qstep="2" npc="n572_shadow_meow" sub="e" />
+   <exelink qstep="2" npc="n572_shadow_meow" sub="f" />
+   <exelink qstep="2" npc="n572_shadow_meow" sub="g" />
+   <exelink qstep="2" npc="n572_shadow_meow" sub="h" />
+   <exelink qstep="2" npc="n572_shadow_meow" sub="i" />
+   <exelink qstep="2" npc="n572_shadow_meow" sub="j" />
+   <exelink qstep="2" npc="n572_shadow_meow" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n001_elder_harold" sub="b" />
+   <exelink qstep="3" npc="n001_elder_harold" sub="b" />
+   <exelink qstep="3" npc="n001_elder_harold" sub="c">0,1</exelink>
+   <exelink qstep="3" npc="n001_elder_harold" sub="" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="b" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="c" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="d" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="e" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="f" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="f" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="g" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="h" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="i" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="j" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="k" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="l" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="m" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="n" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="o" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="p" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="q" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="r" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="s" />
+   <exelink qstep="4" npc="n1092_lunaria" sub="5">0,1,2,3</exelink>
+   <exelink qstep="6" npc="n1093_lunaria" sub="b" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="c" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="d" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="e" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="f" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="g" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="h" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="i" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="j" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="k" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="l" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="m" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="n" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="o" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="p" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="q" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="r" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="s" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="t" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="u" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="v" />
+   <exelink qstep="6" npc="n1093_lunaria" sub="7">0,1</exelink>
+   <exelink qstep="7" npc="n1093_lunaria" sub="" />
+   <exelink qstep="7" npc="n001_elder_harold" sub="b">0</exelink>
+   <exelink qstep="7" npc="n001_elder_harold" sub="c">1,2</exelink>
+   <exelink qstep="7" npc="n001_elder_harold" sub="!next" />
+   <journal_data recompense="320" quest_title="오리무중" chapterid="1" quest_level="3" quest_mark_type="1" use_item_list="300009">
+      <journal index="1">
+         <contents_image>QN_Elder_Harold.dds</contents_image>
+         <destination_pos>1,n1</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="91"><![CDATA[Befogged I]]></title>
+         <contents mid="92"><![CDATA[<html>You have obtained the herb. Go to Mayor Harold and ask if the girl has waken up.<BR>
+ <BR>
+<FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>- Mayor Harold</FONT></html>]]></contents>
+         <destination mid="93"><![CDATA[Talk to Mayor Harold at Prairie Town]]></destination>
+         <todo_msg mid="94"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Shadow_Meow.dds</contents_image>
+         <destination_pos>1,n572</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>572</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="96"><![CDATA[Befogged II]]></title>
+         <contents mid="97"><![CDATA[<html>Shadow Neko? I've never heard of that name, but I'm open to all clues that might explain the situation I'm in... I guess it would be better to meet the cat or whatever creature that can help me.<BR>
+ <BR>
+<FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>- Shadow Neko</FONT></html>]]></contents>
+         <destination mid="98"><![CDATA[Talk to Shadow Neko at Prairie Town]]></destination>
+         <todo_msg mid="99"><![CDATA[Talk to Shadow Neko at Prairie Town.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Elder_Harold.dds</contents_image>
+         <destination_pos>1,n1</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="187"><![CDATA[Befogged III]]></title>
+         <contents mid="188"><![CDATA[<html>Shadow Neko shared his knowledge with you. Go to Mayor Harold and check if the girl has waken up.<BR><BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>- Mayor Harold</FONT></html>]]></contents>
+         <destination mid="189"><![CDATA[Talk to Mayor Harold at Prairie Town]]></destination>
+         <todo_msg mid="190"><![CDATA[Go back to Mayor Harold at Prairie Town.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_WindForest.dds</contents_image>
+         <destination_pos>3,n1092</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1092</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="183"><![CDATA[Befogged IV]]></title>
+         <contents mid="184"><![CDATA[<html>The girl has waken up! Mayor said she went towards the Wind Forest so I should go and take a look.<BR>Hmm... it seemed like the path to the <FONT color=#a82424>Wind Forest</FONT> was next to the path to the <FONT color=#a82424>Shadow Forest</FONT>.<BR><BR><FONT color=#086171>Wind Forest</FONT> <FONT color=#a82424>- ???</FONT></html>]]></contents>
+         <destination mid="185"><![CDATA[Talk to a person at the Wind Forest]]></destination>
+         <todo_msg mid="186"><![CDATA[Talk to the girl at the Wind Forest.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_2.dds</contents_image>
+         <destination_pos>58,0,0</destination_pos>
+         <destination_mode>custom:56@3,57@3,58@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="363"><![CDATA[Befogged V]]></title>
+         <contents mid="364"><![CDATA[<html>The girl claimed that she doesn't know anything. She advised you to ask that "someone" inside you if you have any questions.<BR>Is she insane or what?! But she is the only one who holds clues to this weird situation. You can't let her go alone, so follow her.<BR>
+ <BR>
+<FONT color=#086171>Wind Forest</FONT> <FONT color=#a82424>- Ancient Temple Ruins</FONT></html>]]></contents>
+         <destination mid="365"><![CDATA[Ancient Temple Ruins]]></destination>
+         <todo_msg mid="366"><![CDATA[Go to Ancient Temple Ruins.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QW_2.dds</contents_image>
+         <destination_pos>58,n1093</destination_pos>
+         <destination_mode>custom:56@1,57@1,58@1</destination_mode>
+         <statemark_npcid>1093</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="367"><![CDATA[Befogged VI]]></title>
+         <contents mid="368"><![CDATA[<html>I think I picked up a strange object......<BR>Huh? It's her! I found her!<BR>
+ <BR>
+<FONT color=#086171>Wind Forest</FONT> <FONT color=#a82424>- Ancient Temple Ruins(???)</FONT></html>]]></contents>
+         <destination mid="369"><![CDATA[Talk to the strange girl at the Ancient Temple Ruins]]></destination>
+         <todo_msg mid="370"><![CDATA[Talk to the strange girl at the Ancient Temple Ruins.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Elder_Harold.dds</contents_image>
+         <destination_pos>1,n1</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="371"><![CDATA[Befogged VII]]></title>
+         <contents mid="372"><![CDATA[<html>The girl's name is Lunaria. Though she seems a little strange, it's certain that she has something to do with this weird situation.<BR>Not knowing what to do now can be a problem.<BR>First, bring the object you have obtained from the monster to the town.<BR><BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>- Mayor Harold</FONT></html>]]></contents>
+         <destination mid="373"><![CDATA[Talk to Mayor Harold at Prairie Town]]></destination>
+         <todo_msg mid="374"><![CDATA[Go back to Mayor Harold at Prairie Town.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>31</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

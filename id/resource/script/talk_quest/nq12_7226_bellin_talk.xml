@@ -1,0 +1,92 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq12_7226_bellin_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>7226</qid>
+      <designer>안여옥</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About Lebrium]]></qkname>
+      <qnpc>
+         <npcid>91</npcid>
+         <npcename>n091_trader_bellin</npcename>
+         <npckname>대장장이 벨린</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-accepting-a" mid="6" select_type="0"><![CDATA[<html>What is it?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Blacksmith Berlin$<BR>You're finally back! I've been waiting for you. I have something to show you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-accepting-b" mid="15" select_type="0"><![CDATA[<html>...Lebrium? So many?</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Blacksmith Berlin$<BR>
+<FONT color=#7e12d2>(Berlin takes a metal out from his forge.)</FONT><BR>
+Normal people would have no idea but I'm sure you know what this is.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-accepting-c" mid="17" select_type="0"><![CDATA[<html>It could be Goddess Vestinel's doing.</html>]]></talk_answer>
+      <talk_answer link_index="n091_trader_bellin-accepting-d" mid="19" select_type="0"><![CDATA[<html>Maybe they are formed by the Labyrinth?</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Blacksmith Berlin$<BR>Yeah. I thought it was a rare metal but more and more people are turning up with it ever since the Labyrinth appeared. I don't know why this material exists there but...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-accepting-e" mid="18" select_type="0"><![CDATA[<html>That makes sense.</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Blacksmith Berlin$<BR>Well… That doesn't seem right. As you know, Lebrium can be used to forge weapons and equipment that are uncomparable to those made with other materials. What good would it do for the Goddess to enhance her enemies?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-accepting-e" mid="23" select_type="0"><![CDATA[<html>Haha... (Should I tell him about time travelling…? Nevermind.)</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Blacksmith Berlin$<BR>Anyway, I heard that the Labyrinth keeps splitting into more spaces. It's little wonder that strange materials like Lebrium are appearing. I'm a little concerned about the possible side effects but you seem fine even though you've been using Lebrium all along! Haha!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Blacksmith Berlin$<BR>I'm thinking it would be a good idea to make Lebrium the main product of Berlin Corporation. Make sure you bring me all the Lebrium you can find!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 7226, 0, 1, 1, 0);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n091_trader_bellin" sub="e">0</exelink>
+   <exelink qstep="accepting" npc="n091_trader_bellin" sub="e">0</exelink>
+   <journal_data recompense="" quest_title="[대화] 레브리움에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class>5</user_class>
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>91:1000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,367 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_405_cursed_fragment</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>4</qchapter>
+      <qid>405</qid>
+      <designer>김인정</designer>
+      <qlevel>30</qlevel>
+      <qdesc>1. 아르젠타와 대화
+2. 말라버린 마리사의 샘에서 룬의 파편 수집
+3. 아르젠타에게 보고
+4. 주교에게 돌아가 보고.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>406</nextqid>
+      <nextqname>mq11_406_guard_of_munition</nextqname>
+      <nextqnpc>n039_bishop_ignasio</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Cursed Fragments]]></qkname>
+      <qnpc>
+         <npcid>212</npcid>
+         <npcename>n212_argenta</npcename>
+         <npckname>아르젠타(검은 산자락)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>39</npcid>
+         <npcename>n039_bishop_ignasio</npcename>
+         <npckname>주교 이그나시오</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-noquest" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="68"><![CDATA[<html>$Bishop Ignacio$<BR>How did things go? I am trying to convince the nobles so don't worry about that.<BR><FONT color=#7e12d2>(Talk to Argenta at Foothills of Black Mountain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-accepting-a" mid="75" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Argenta$<BR>Black Dragon has reawakened and it has even built a nest. Things are getting more irritating.<BR>The same thing happened <FONT color=#a82424>50 years ago</FONT>. <FONT color=#a82424>Ancient Priest's Rune</FONT> was needed to enter the Black Dragon Nest.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-accepting-b" mid="77" select_type="2" />
+      <talk_question mid="76"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Then this time too…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-accepting-c" mid="78" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Argenta$<BR>Yeah. I hope Geraint can find out other ways, but it would be safe to create the <FONT color=#a82424>Ancient Priest's Rune</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-accepting-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-accepting-acceptted" mid="80" select_type="3" />
+      <talk_question mid="79"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Leave it to me!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-a" mid="82" select_type="2" />
+      <talk_question mid="6"><![CDATA[<html>$Argenta$<BR>To create the <FONT color=#a82424>Ancient Priest's Rune</FONT>, you have to find the rune shards first. The shards then need to be combined to form a single rune and use a core to infuse power.<BR>Do you know what to do now?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-b" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well… I should get the rune shards first.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-b" image="QS_Default.dds" itemindex="300020" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-c" mid="85" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Argenta$<BR>That's a good attitude. I guess you must be anxious since the Prophet's within your reach yet you can't go and save her.<BR>Go and get those <FONT color=#a82424>rune shards</FONT> now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-c" image="QS_Default.dds" itemindex="300020" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-d" mid="87" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Where can I find them?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-d" image="QW_35.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-e" mid="88" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Argenta$<BR>Your brain must really be empty. Do you know this place called <FONT color=#a82424>Dried Marissa Spring</FONT>? That place had a device that gathered the dark energy recently. There must be some broken runes lying around.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-e" image="QW_35.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-f" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay. I'll be back soon!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1-f" image="QW_35.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-" mid="91" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Argenta$<BR>Look around carefully.<BR>Get about <FONT color=#a82424>10</FONT> pieces.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-" mid="92" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Bishop Ignacio$<BR>How did things go? I am trying to convince the nobles so don't worry about that.<BR><FONT color=#7e12d2>(Talk to Argenta at Foothills of Black Mountain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-2" image="QW_35.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-2-" mid="93" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Argenta$<BR>You can find the rune shards at <FONT color=#a82424>Dried Marissa Spring</FONT>. They may only be <FONT color=#a82424>fragments</FONT> but they can be combined into a whole rune so look around carefully.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-a" mid="17" select_type="0"><![CDATA[<html>(Give Rune Shards.)</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Argenta$<BR>Hmm...not bad, but a monkey could have done it too. I'm just saying you did your best.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-a" image="QS_Default.dds" itemindex="300020" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-b" mid="94" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Argenta$<BR>Humans never change. the Ancients and the current day humans are all same to me. <FONT color=#7e12d2>(Argenta caresses the rune)</FONT> This rune also used to be in a complete form, but the humans foolishly broke it into pieces.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-b" image="QS_Default.dds" itemindex="300020" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-c" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What happened?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-d" mid="97" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Argenta$<BR>There must have been some Ancients who had evil plans. They carried out an <FONT color=#a82424>experiment</FONT> that <FONT color=#a82424>shouldn't have been done</FONT>. You know, some people just do things they are not supposed to and can't clean up the shitty mess that they've made. This wouldn't have happened if all humans were naive and stupid like you.<BR>
+<FONT color=#7e12d2>(Argenta frowns)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-e" mid="98" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Argenta$<BR>Anyway, I'm going to create the <FONT color=#a82424>Ancient Priest's Rune</FONT> with these. It's just like bringing the puzzle pieces together. Even a child can do it, but you can't so I'm doing it for you. Take it as an honour.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-f" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Of course. Thank you.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-g" mid="101" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Argenta$<BR>I said it's easy but that doesn't mean it won't take long. This would take time even for someone like me.<BR>You should get some training in the meanwhile.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-h" mid="103" select_type="2" />
+      <talk_question mid="102"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'll go to the Royal Castle ad make a report then.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-h" image="QW_SaintHaven_Inside.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-i" mid="104" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Argenta$<BR><FONT color=#a82424>Report</FONT>? Whatever. Do you really think the humans will be of any help? Will you ony learn your lesson the hard way?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-i" image="QW_SaintHaven_Inside.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-j" mid="106" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hey don't be so negative about everything.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-k" mid="107" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Argenta$<BR>It's not that I'm negative, you're the one who doesn't know how things work in this world. If the humans were as innocent as you think, then at least that time it wouldn't….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-l" mid="109" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Huh? "that time"?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-3-l" image="QW_SaintHaven_Inside.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-3-" mid="110" select_type="5" />
+      <talk_question mid="30"><![CDATA[<html>$Argenta$<BR>…I should concentrate on this. Talking to you irritates me.<BR>Go to the <FONT color=#a82424>Royal Castle</FONT> and report or beg or do whatever you want.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-4" image="QW_SaintHaven_Inside.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-4-" mid="111" select_type="5" />
+      <talk_question mid="31"><![CDATA[<html>$Argenta$<BR>…I should concentrate on this. Talking to you irritates me.<BR>Go to the <FONT color=#a82424>Royal Castle</FONT> and report or beg or do whatever you want.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-a" mid="112" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Bishop Ignacio$<BR>I know that the nest has been created. Nests cannot be seen with our eyes, but I have the <FONT color=#a82424>Eye</FONT> of the <FONT color=#a82424>Sage</FONT>. <FONT color=#7e12d2>(Ignacio shows you a weird looking orb)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-b" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Eye of the Sage?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-c" mid="115" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Bishop Ignacio$<BR>This thing dates back to the Dragon Raid 50 years ago. Light bursts from it the moment a <FONT color=#a82424>force field</FONT> is created. Nests are made up of strongest of the force fields, so I could find it out with this orb.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-d" mid="117" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Interesting.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-d" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-e" mid="118" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Bishop Ignacio$<BR>So who's the one that created the <FONT color=#a82424>nest</FONT>?<BR>The <FONT color=#a82424>Black Knight</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-e" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-f" mid="120" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Actually… The Black Dragon has resurrected.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-g" mid="121" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Bishop Ignacio$<BR>What?! The… <FONT color=#a82424>Black Dragon</FONT> has resurrected?!<BR>Oh no… This is really the worst thing that could have happened…Oh Goddess, please save Saint Haven….<BR>
+<FONT color=#7e12d2>(The Bishop brings his hands together to pray)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-h" mid="122" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Bishop Ignacio$<BR>Things are getting more and more serious. It would be hard to escape from a full scale war. I'm glad that Argenta is helping to make the <FONT color=#a82424>Ancient Priest's Rune</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-i" mid="124" select_type="2" />
+      <talk_question mid="123"><![CDATA[<html>${user_nick}$<BR>You know about the <FONT color=#662500>Ancient Priest's Rune</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-i" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-j" mid="125" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Bishop Ignacio$<BR>Well of course. It was used <FONT color=#a82424>50 years ago to break into the Black Dragon Nest</FONT>.<BR>Anyway, I'm worried about the Prophet since the Black Dragon is out in the world again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-j" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-k" mid="127" select_type="2" />
+      <talk_question mid="126"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>If we don't save her soon….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-l" mid="128" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Bishop Ignacio$<BR>Since the Black Dragon has reawakened, Saint Haven might come under an all-out attack from the monsters anytime. We need to find the Prophet before that happens .<BR>
+<FONT color=#7e12d2>(The Bishop looks at you as he thinks about something)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-m" mid="129" select_type="4" />
+      <talk_question mid="47"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-m" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-n" mid="130" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Bishop Ignacio$<BR>I'm trying to convince other nobles and his highness, and I'm getting my Templar Knights ready for battle as well.<BR>You must be anxious but please trust me and give me some time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-4-n" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-4-!next" mid="132" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay I'll do that.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">405</exe>
+         <exe type="talk" npc="n212_argenta">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="]=">30</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="talk" npc="n212_argenta">a</exe>
+         <exe type="talk" npc="n212_argenta">b</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntitem" num="10" exe="6,7,8" onexe="">300020</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="delquestitem" num="-1">300020</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">4051,4051,4052,4053,4054,4055,4056,,</exe>
+         <exe type="complete" true="">405</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n212_argenta" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n212_argenta" sub="b" />
+   <exelink qstep="1" npc="n212_argenta" sub="c" />
+   <exelink qstep="1" npc="n212_argenta" sub="d" />
+   <exelink qstep="1" npc="n212_argenta" sub="e" />
+   <exelink qstep="1" npc="n212_argenta" sub="f">3,4,5</exelink>
+   <exelink qstep="1" npc="n212_argenta" sub="" />
+   <exelink qstep="3" npc="n212_argenta" sub="b" />
+   <exelink qstep="3" npc="n212_argenta" sub="c" />
+   <exelink qstep="3" npc="n212_argenta" sub="d" />
+   <exelink qstep="3" npc="n212_argenta" sub="e" />
+   <exelink qstep="3" npc="n212_argenta" sub="f" />
+   <exelink qstep="3" npc="n212_argenta" sub="g" />
+   <exelink qstep="3" npc="n212_argenta" sub="h" />
+   <exelink qstep="3" npc="n212_argenta" sub="i" />
+   <exelink qstep="3" npc="n212_argenta" sub="j" />
+   <exelink qstep="3" npc="n212_argenta" sub="k" />
+   <exelink qstep="3" npc="n212_argenta" sub="l">2,0,1</exelink>
+   <exelink qstep="3" npc="n212_argenta" sub="" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="b" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="c" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="d" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="e" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="f" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="g" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="h" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="i" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="j" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="k" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="l">0</exelink>
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="m">1</exelink>
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="n" />
+   <exelink qstep="4" npc="n039_bishop_ignasio" sub="!next" />
+   <journal_data recompense="1:4051,2:4052,3:4053,4:4054,5:4055,6:4056" quest_title="저주받은 파편들" chapterid="4" quest_level="30" quest_mark_type="1" use_item_list="300020">
+      <journal index="1">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>13,n212</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>212</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="52"><![CDATA[Ancient Priest's Rune]]></title>
+         <contents mid="53"><![CDATA[<html>The Ancient Priest's Rune is needed to break into the Nest. Talk to <FONT color=#a82424>Argenta</FONT> about how to create it.<BR><BR><FONT color=#086171>Foothills of Black Mountain</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="54"><![CDATA[Talk to Argenta at Foothills of Black Mountain]]></destination>
+         <todo_msg mid="55"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_35.dds</contents_image>
+         <destination_pos>354,0,0</destination_pos>
+         <destination_mode>custom:351@4,352@4,353@4,354@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="56"><![CDATA[Rune Shards]]></title>
+         <contents mid="57"><![CDATA[<html>Go Dried Marissa Spring and collect the <FONT color=#a82424>Rune Shards</FONT>.<BR><BR><FONT color=#086171>Foothills of Black Mountain (Lonely Forest Path)</FONT> <FONT color=#a82424>→ Dried Marissa Spring</FONT></html>]]></contents>
+         <destination mid="58"><![CDATA[Collect Rune Shards]]></destination>
+         <todo_msg mid="59"><![CDATA[Collect Rune Shards at Dried Marissa Spring]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>13,n212</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>212</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="60"><![CDATA[Collection Complete]]></title>
+         <contents mid="61"><![CDATA[<html>You have completed the collection of <FONT color=#a82424>Rune Shards</FONT>. Return to Argenta and report it.<BR><BR><FONT color=#086171>Foothills of Black Mountain</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="62"><![CDATA[Talk to Argenta at Foothills of Black Mountain]]></destination>
+         <todo_msg mid="63"><![CDATA[You have completed the collection. Report to Argenta at Foothills of Black Mountain.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Bishop.dds</contents_image>
+         <destination_pos>11,n39</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>39</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Reporting the Situation]]></title>
+         <contents mid="65"><![CDATA[<html> As Argenta is combining the Rune Shards, return to Saint Haven and report to <FONT color=#a82424>Bishop Ignacio</FONT>.<BR> <BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ Bishop Ignacio</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Talk to Bishop Ignacio]]></destination>
+         <todo_msg mid="67"><![CDATA[Report the situation to Bishop Ignacio.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>404</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,377 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_204_swordwoman_with_siverblond</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>2</qchapter>
+      <qid>204</qid>
+      <designer>김주연</designer>
+      <qlevel>12</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>205</nextqid>
+      <nextqname>mq08_205_ancient_relic</nextqname>
+      <nextqnpc>n028_scholar_bailey</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Who Is She?]]></qkname>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>27</npcid>
+         <npcename>n027_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>28</npcid>
+         <npcename>n028_scholar_bailey</npcename>
+         <npckname>문장학자 베일리</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-noquest-" mid="193" select_type="5" />
+      <talk_question mid="97"><![CDATA[<html>$Argenta$<BR>Haven't you learnt your lesson yet? Quit wandering around here and go home!<BR><FONT color=#7e12d2>(Silver-haired swordswoman sounds irritated)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-noquest-" mid="194" select_type="5" />
+      <talk_question mid="98"><![CDATA[<html>$Heraldry Scholar Bailey$<BR><FONT color=#a82424>Adventurer's Guild Master Deckard</FONT> is looking for you, <FONT color=#387206>{user_nick}</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-a" mid="104" select_type="3" />
+      <talk_question mid="100"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>You know, the silver-haired woman who saved you from the Black Knight...<BR>There is one <FONT color=#a82424>silver-haired swordswoman</FONT> that I know of…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-b" mid="155" select_type="3" />
+      <talk_question mid="154"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Do you know her?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-c" mid="180" select_type="2" />
+      <talk_question mid="179"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Well… I don't know if she is a friend or a foe.<BR>I don't know much about her but she appeared around the time when the Black Knight appeared.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-acceptted" mid="182" select_type="2" />
+      <talk_question mid="181"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>It was from her that I received the information that the Black Knight will appear at the Forest Sanctuary. <BR>Thanks to that information, the Guild lost more than half of our men…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-accepting-acceptted" mid="157" select_type="3" />
+      <talk_question mid="156"><![CDATA[<html>$Argenta$<BR>You're chasing the Black Knight? Hah… You're a little too weak to be concerned with the <FONT color=#a82424>Black Knight</FONT>.<BR>Looks like you've lost your sense of fear. Go back!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-a" mid="105" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Well… I don't know if she is a friend or a foe.<BR>I don't know much about her but she appeared around the time when the Black Knight appeared.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3" mid="106" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>It was from her that I received the information that the Black Knight will appear at the Forest Sanctuary. <BR>Thanks to that information, the Guild lost more than half of our men…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-" mid="113" select_type="5" />
+      <talk_question mid="12"><![CDATA[<html>$Heraldry Scholar Bailey$<BR><FONT color=#a82424>Adventurer's Guild Master Deckard</FONT> was looking for you, <FONT color=#387206> {user_nick}</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-a" mid="158" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>I need to save the girl from the Black Knight.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1-a" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-b" mid="160" select_type="2" />
+      <talk_question mid="159"><![CDATA[<html>$Argenta$<BR>A girl? You mean the redhead that the <FONT color=#a82424>Black Knight</FONT> carries around?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1-b" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-c" mid="162" select_type="2" />
+      <talk_question mid="161"><![CDATA[<html>${user_nick}$<BR>Yes. I heard that she's a descendant of the Ancients.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1-c" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-d" mid="164" select_type="2" />
+      <talk_question mid="163"><![CDATA[<html>$Argenta$<BR>(Her expression stiffens.)<BR>A <FONT color=#a94407>descendant of the Ancients</FONT>...that changes things...<BR>That doesn't explain why you're chasing the <FONT color=#a82424>Black Knight</FONT> though.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-e" mid="166" select_type="2" />
+      <talk_question mid="165"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I made a promise to save her.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-f" mid="168" select_type="2" />
+      <talk_question mid="167"><![CDATA[<html>$Argenta$<BR>A promise...? Hmph. What a joke...<BR>I wonder if that empty promise is ever going to last when you face irresistable temptations...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-g" mid="170" select_type="2" />
+      <talk_question mid="169"><![CDATA[<html>$Argenta$<BR>Good! I don't have any time to spare so I can use your help.<BR><FONT color=#a82424>Black Knight</FONT> is heading towards the <FONT color=#a82424>Sleepers' Temple</FONT> now. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1-g" image="QS_Default.dds" itemindex="300030" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-h" mid="172" select_type="2" />
+      <talk_question mid="171"><![CDATA[<html>$Argenta$<BR>I should have figured out what his plans were when he was loitering in those ancient relics. You go and help me find the <FONT color=#a82424>Pendant of the Pure</FONT>. We need to gain access to the Forgotten Temple.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1-h" image="QS_Default.dds" itemindex="300030" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-i" mid="174" select_type="2" />
+      <talk_question mid="173"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Where can I get the Pendant of the Pure?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1-i" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-" mid="176" select_type="5" />
+      <talk_question mid="175"><![CDATA[<html>$Argenta$<BR>Ask that Adventurer's Guild guy or something! Just make your way to the <FONT color=#a82424>Sleepers' Temple</FONT> once you get the pendant.<BR>We need to act quickly.<BR>I'll see you around, kid.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-" mid="115" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>The Guild members told me that the silver-haired swordswoman is at <FONT color=#a82424>Forest Sanctuary</FONT>. <BR>You may be able to meet her if you go now. Or maybe she is on her way to chase the Black Knight already.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-j" mid="116" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Argenta$<BR>What are you doing here again kid?<BR><FONT color=#7e12d2>(Silver-haired swordswoman seems irritated with you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-a" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-b" mid="18" select_type="0"><![CDATA[<html>(Ask about the Black Knight.)</html>]]></talk_answer>
+      <talk_answer link_index="n027_argenta-2-c" mid="19" select_type="0"><![CDATA[<html>(Ask about the girl.)</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Argenta$<BR>The <FONT color=#a82424>Black Knight</FONT>? Hahaha... The weak should not concern themselves with him.<BR>Have you forgotten your defeat? I can defeat you just as easily... Just go back!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-b" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-a" mid="117" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Argenta$<BR>I don't know why you're interested in the <FONT color=#a82424>Black Knight</FONT>, but let me warn you. <BR>You better get your hands off now if you want to live…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-c" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-d" mid="23" select_type="0"><![CDATA[<html>(You explain to her about the girl.)</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Argenta$<BR>The girl? You mean the little redhead the Black Knight carries around? I don't know anything about her.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-d" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-e" mid="118" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Argenta$<BR>What...?<BR>That girl is a <FONT color=#a82424>descendant of the Ancients</FONT>…? I've arrived too late.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-e" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-k" mid="119" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Argenta$<BR>(Her expression stiffens.)<BR>A <FONT color=#a94407>descendant of the Ancients</FONT>...that changes things...<BR>That doesn't explain why you're chasing the <FONT color=#a82424>Black Knight</FONT> though.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-g" mid="120" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Argenta$<BR>A promise...? Hmph. What a joke...<BR>I wonder if that empty promise is ever going to last when you face irresistable temptations...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-g" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-h" mid="121" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Argenta$<BR>Good! I don't have any time to spare so I can use your help.<BR><FONT color=#a82424>Black Knight</FONT> is heading towards the <FONT color=#a82424>Sleepers' Temple</FONT> now. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-h" image="QS_Default.dds" itemindex="300030" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-l" mid="122" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Argenta$<BR>I should have figured out what his plans were when he was loitering in those ancient relics. You go and help me find the <FONT color=#a82424>Pendant of the Pure</FONT>. We need to gain access to the Forgotten Temple.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-i" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-" mid="123" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$Argenta$<BR>Ask that Adventurer's Guild guy or something! Just make your way to the <FONT color=#a82424>Sleepers' Temple</FONT> once you get the pendant.<BR>We need to act quickly.<BR>I'll see you around, kid.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-a" mid="125" select_type="2" />
+      <talk_question mid="124"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I heard that you're after the Black Knight.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-f" mid="127" select_type="2" />
+      <talk_question mid="126"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I made a promise to save her.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-2-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-2-i" mid="129" select_type="2" />
+      <talk_question mid="128"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Where can I get the Pendant of the Pure?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-2" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-2-" mid="130" select_type="5" />
+      <talk_question mid="35"><![CDATA[<html>$Heraldry Scholar Bailey${action:Talk}<BR>I heard that the adventurer who saved you is at <FONT color=#a82424>Forest Sanctuary</FONT>. <BR>(Go to Forest Sanctuary and meet the silver-haired swordswoman <FONT color=#a82424>Argenta</FONT>)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-3" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-3-" mid="131" select_type="5" />
+      <talk_question mid="36"><![CDATA[<html>$Heraldry Scholar Bailey$<BR><FONT color=#a82424>Adventurer's Guild Master Deckard</FONT> was looking for you, <FONT color=#387206> {user_nick}</FONT>. <BR><FONT color=#7e12d2>(Talkto Adventurer's Guild Master Deckard)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-a" mid="150" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>So, did the swordwoman give you any information on the Black Knight?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-b" mid="147" select_type="2" />
+      <talk_question mid="146"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yes, she told me which way he went. Also...</FONT><BR><FONT color=#7e12d2>(Tell him what she said)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-b" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-c" mid="132" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>So the Black Knight is on his way to the <FONT color=#a82424>Sleepers' Temple</FONT>… He must be after the power of the Ancients. <BR>But did you say that she showed interest in the girl too?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-d" mid="133" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Hmm…. Then maybe she's after the Ancient's powers herself, or belong to an organization that aims to get it. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-e" mid="135" select_type="2" />
+      <talk_question mid="134"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>She didn't seem like a bad person.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-f" mid="136" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>You are too trusting. <BR>Remember that not everyone in this world are like you. <BR>It may hurt you badly someday.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-f" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-" mid="137" select_type="5" />
+      <talk_question mid="45"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Anyway… <FONT color=#a82424>Pendant of the Pure</FONT>… <FONT color=#a82424>Heraldry Scholar Bailey</FONT> should know about it. Ask for his help.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-3" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-3-" mid="138" select_type="5" />
+      <talk_question mid="46"><![CDATA[<html>$Argenta$<BR>Ask the <FONT color=#a82424>Adventurer's Guild Master</FONT> about the <FONT color=#a82424>Pendant of the Pure</FONT>! <BR>Come and find me at the <FONT color=#a82424>Sleepers' Temple</FONT> when you find the pendant. <BR>See you later, kid.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4-" mid="139" select_type="5" />
+      <talk_question mid="47"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR><FONT color=#a82424>Heraldry Scholar Bailey</FONT> should know about the <FONT color=#a82424>Pendant of the Pure</FONT>. Ask him for help.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-4-a" mid="140" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Heraldry Scholar Bailey${action:Talk}<BR>You're <FONT color=#387206>{user_class} {user_nick}</FONT> who took part in the recent Black Dragon chase. <BR>How are you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-4-b" mid="142" select_type="2" />
+      <talk_question mid="141"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Not bad.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-4-c" mid="51" select_type="0"><![CDATA[<html>(You ask about the Pendant of the Pure.)</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>I'm glad you came back safely. How can I help you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-4-!next" mid="143" select_type="4" />
+      <talk_question mid="52"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">204</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">1</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">3</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>2스텝은 2013 동선개선때 제거됨. 3스텝으로 연결</comment>
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">204</exe>
+         <exe type="recompense">2041,2041,2042,2043,2044,2046,2046,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="acceptted">0,2,3</exelink>
+   <exelink qstep="accepting" npc="n027_argenta" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="3">0,1</exelink>
+   <exelink qstep="1" npc="n027_argenta" sub="b" />
+   <exelink qstep="1" npc="n027_argenta" sub="c" />
+   <exelink qstep="1" npc="n027_argenta" sub="d" />
+   <exelink qstep="1" npc="n027_argenta" sub="e" />
+   <exelink qstep="1" npc="n027_argenta" sub="f" />
+   <exelink qstep="1" npc="n027_argenta" sub="g" />
+   <exelink qstep="1" npc="n027_argenta" sub="h" />
+   <exelink qstep="1" npc="n027_argenta" sub="i">0,1</exelink>
+   <exelink qstep="1" npc="n027_argenta" sub="" />
+   <exelink qstep="2" npc="n027_argenta" sub="b" />
+   <exelink qstep="2" npc="n027_argenta" sub="c" />
+   <exelink qstep="2" npc="n027_argenta" sub="a" />
+   <exelink qstep="2" npc="n027_argenta" sub="d" />
+   <exelink qstep="2" npc="n027_argenta" sub="e" />
+   <exelink qstep="2" npc="n027_argenta" sub="k" />
+   <exelink qstep="2" npc="n027_argenta" sub="g" />
+   <exelink qstep="2" npc="n027_argenta" sub="h" />
+   <exelink qstep="2" npc="n027_argenta" sub="l" />
+   <exelink qstep="2" npc="n027_argenta" sub="" />
+   <exelink qstep="2" npc="n027_argenta" sub="a" />
+   <exelink qstep="2" npc="n027_argenta" sub="f" />
+   <exelink qstep="2" npc="n027_argenta" sub="i">0,1</exelink>
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="e" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="f">0,1</exelink>
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="4" npc="n028_scholar_bailey" sub="b" />
+   <exelink qstep="4" npc="n028_scholar_bailey" sub="c">1</exelink>
+   <exelink qstep="4" npc="n028_scholar_bailey" sub="!next">0</exelink>
+   <journal_data recompense="1:2041,2:2042,3:2043,4:2044,6:2046" quest_title="은발의 여검사" chapterid="2" quest_level="12" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>124,n27</destination_pos>
+         <destination_mode>custom:121@1,122@1,123@1,124@1</destination_mode>
+         <statemark_npcid>27</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="54"><![CDATA[Talk to the silver-haired swordswoman]]></title>
+         <contents mid="55"><![CDATA[<html><FONT color=#2b2723>Talk to the silver-haired swordswoman. <BR>If you have already left, ask Adventurer's Guild Master Deckard about her.</FONT> <BR><BR><FONT color=#086171>Cristal Stream (Silent Forest Entrance)</FONT><FONT color=#a82424> - Forest Sanctuary</FONT></html>]]></contents>
+         <destination mid="56"><![CDATA[Talk to the silver-haired swordswoman at Forest Sanctuary.]]></destination>
+         <todo_msg mid="57"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="58"><![CDATA[Talk to Adventurer's Guild Master Deckard]]></title>
+         <contents mid="59"><![CDATA[<html><FONT color=#2b2723>Go back and report to Adventurer's Guild Master Deckard.</FONT><FONT color=#2b2723> <BR><BR></FONT><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Adventurer's Guild Master Deckard.</FONT></html>]]></contents>
+         <destination mid="60"><![CDATA[Talk to Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="61"><![CDATA[Report to Adventurer's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Scholar_Baily.dds</contents_image>
+         <destination_pos>8,n28</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>28</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="62"><![CDATA[Talk to Heraldry Scholar Bailey]]></title>
+         <contents mid="63"><![CDATA[<html><FONT color=#2b2723>Seek help from Heraldry Scholar Bailey to find the Pendant of the Pure that Argenta talked about.</FONT> <BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Heraldry Scholar Bailey</FONT></html>]]></contents>
+         <destination mid="64"><![CDATA[Talk to Heraldry Scholar Bailey]]></destination>
+         <todo_msg mid="65"><![CDATA[Meet Heraldry Scholar Bailey.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>203</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

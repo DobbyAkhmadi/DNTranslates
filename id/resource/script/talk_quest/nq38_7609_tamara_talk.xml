@@ -1,0 +1,103 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq38_7609_tamara_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>7609</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] Tentang Camilan favorite]]></qkname>
+      <qnpc>
+         <npcid>713</npcid>
+         <npcename>n713_soceress_tamara</npcename>
+         <npckname>상급 소서리스 타마라</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n713_soceress_tamara-accepting-a" mid="8" select_type="0"><![CDATA[<html>Apa! Bagaimana bisa kamu memakan itu!</html>]]></talk_answer>
+      <talk_answer link_index="n713_soceress_tamara-accepting-b" mid="57" select_type="0"><![CDATA[<html>Kelihatan nya kamu menyukai hal lain.</html>]]></talk_answer>
+      <talk_answer link_index="n713_soceress_tamara-accepting-c" mid="58" select_type="0"><![CDATA[<html>Aku ingin mencoba kodok goreng juga.</html>]]></talk_answer>
+      <talk_answer link_index="n713_soceress_tamara-accepting-d" mid="59" select_type="0"><![CDATA[<html>Apa itu kodok goreng?</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Sorceress Tamara$<BR>Hmm... Camilan favorit harus... kodok goreng? Hoohoo.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="31"><![CDATA[<html>$Master Sorceress Tamara$<BR>
+Oh, bagaimana bisa kamu berkata seperti itu....<BR>
+Ayahku selalu menggoreng itu sebelum aku datang kesini untuk menjadi Sorceress .<BR>
+<FONT color=#7e12d2>(Tamara terlihat tersinggung)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="33"><![CDATA[<html>$Master Sorceress Tamara$<BR>
+Hoohoo.Aku tidak tahu apa yang kamu pikirkan tentang diriku.<BR>
+Tetapi kodok goreng sangatlah enak.<BR>
+<FONT color=#7e12d2>(Tamara tersenyum)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Master Sorceress Tamara$<BR>
+Hoohoo, Kamu pasti seorang pencicip makanan juga! Bagiku, Kodok goreng ada bagian dari kenangan indah .<BR>
+Ayahku, orang yang samar-samar ku ingat, selalu menggorengnya untuk-ku.<BR>
+Suatu hari nanti dan jika sempat, akan kubuatkan untukmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Master Sorceress Tamara$<BR>
+Seiring nama itu berjalan, itu terbuat dari kodok yang di goreng.<BR>
+Walaupun itu tampak samar karena aku masih sangat muda, Aku masih ingat ayahku yang menggorengnya untuk-ku.<BR>
+Hanya itu satu-satunya ingatan tentang orang tuaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,7609, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 713, 500 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 713, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 713, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 713, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n713_soceress_tamara" sub="a">0,4</exelink>
+   <exelink qstep="accepting" npc="n713_soceress_tamara" sub="b">0,3</exelink>
+   <exelink qstep="accepting" npc="n713_soceress_tamara" sub="c">0,1</exelink>
+   <exelink qstep="accepting" npc="n713_soceress_tamara" sub="d">0,2</exelink>
+   <journal_data recompense="" quest_title="[대화] 좋아하는 간식에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>713:15000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

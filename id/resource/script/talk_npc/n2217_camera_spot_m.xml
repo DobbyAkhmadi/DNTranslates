@@ -1,0 +1,35 @@
+   <talk>
+      <npcename>n2217_camera_spot_m</npcename>
+      <npcid>2217</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Mana Ridge Photo]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="photo" mid="20"><![CDATA[<html>(Lihat Gambar)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Scenic Spot$<BR><FONT color=#7e12d2> (Inilah tempat Blacksmith di Mana Ridge.</FONT><FONT color=#7e12d2>)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="photo" image="" itemindex="">
+         <talk_answer link_index="view" mid="21"><![CDATA[<html>(Lihat Gambar)</html>]]></talk_answer>
+         <talk_answer link_index="back_quest" mid="22"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Scenic Spot$<BR><FONT color=#7e12d2>
+</FONT><FONT color=#7e12d2>※</FONT><FONT color=#7e12d2>Kamu dapat melihat lagi gambar yang sudah kamu ambil saat menjalankan </FONT><FONT color=#a82424>Event Quest.</FONT> <FONT color=#7e12d2></FONT><FONT color=#7e12d2><BR>
+Kalau kamu sudah tidak mau melihatnya lagi, tekan </FONT><FONT color=#086171>ESC</FONT><FONT color=#7e12d2>.<BR></FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="13"><![CDATA[<html>$Scenic Spot$<BR><FONT color=#7e12d2> (Inilah tempat Blacksmith di Mana Ridge.</FONT><FONT color=#7e12d2>)</FONT><BR><BR><FONT color=#7e12d2>※</FONT><FONT color=#7e12d2>Setelah kamu menyelesaikan</FONT> <FONT color=#a82424>Event Quest Christmas</FONT> <FONT color=#a82424></FONT><FONT color=#7e12d2>, kamu akan dapat melihat gambar yang sudah kamu ambil.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="4">0</exe>
+         <exe type="enterquest">eq_2455_2016_christmas2</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenTextureDialog(userObjID, 49026, 0.5, 0.5, 8, 10, 1);</exe>
+         <exe type="conexe" true="2" false="5">1</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">2455</chk>
+         <chk type="hascomq">2455</chk>
+      </conditions>
+      <exelink idx="view">3</exelink>
+      <exelink idx="back_quest">001</exelink>
+   </talk>

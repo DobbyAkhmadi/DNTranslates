@@ -1,0 +1,33 @@
+   <talk>
+      <npcename>n2474_re_academic_receiver</npcename>
+      <npcid>2474</npcid>
+      <startexe>7</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Communication Device]]></npckname>
+      <talk_paragraph index="001" image="QN_Npc_Academic_station.dds" itemindex="">
+         <talk_answer link_index="quest_set" mid="4"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Communication Device$<BR><FONT color=#7e12d2>(You have found the communication device. Return to Mana Ridge and connect to Academic Station.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="QN_Npc_Academic_station.dds" itemindex="">
+         <talk_answer link_index="quest_set" mid="6"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Communication Device$<BR><FONT color=#7e12d2>(Luckily the device seems to be working. Return to Mana Ridge and connect to Academic Station.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="0" false="3">2</exe>
+         <exe type="conexe" true="1" false="0">0</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 91, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 91, 1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 91, 1);</exe>
+         <exe type="conexe" true="0,4,5,6" false="2">1</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 40, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 86</chk>
+         <chk type="hascomq">3610</chk>
+         <chk type="hascomq">91</chk>
+      </conditions>
+      <exelink idx="quest_set">8</exelink>
+      <exelink idx="quest_set">8</exelink>
+   </talk>

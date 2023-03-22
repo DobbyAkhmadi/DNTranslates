@@ -1,0 +1,525 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc17_9701_go_mistland2</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>17</qchapter>
+      <qid>9701</qid>
+      <designer>이세정</designer>
+      <qlevel>80</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9702</nextqid>
+      <nextqname>mqc17_9702_successor_of_protector</nextqname>
+      <nextqnpc>n1806_merca_rubinat</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[To Mistland II]]></qkname>
+      <qnpc>
+         <npcid>1805</npcid>
+         <npcename>n1805_merca_geraint</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1806</npcid>
+         <npcename>n1806_merca_rubinat</npcename>
+         <npckname>레드 드래곤 루비나트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1813</npcid>
+         <npcename>n1813_rubinat_box</npcename>
+         <npckname>???</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1839</npcid>
+         <npcename>n1839_gereint_kid</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1840</npcid>
+         <npcename>n1840_velskud</npcename>
+         <npckname>벨스커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>775</npcid>
+         <npcename>n775_cleric_ilizer</npcename>
+         <npckname>신전기사 일라이저</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>776</npcid>
+         <npcename>n776_darklair_mardlen</npcename>
+         <npckname>어둠의 여신관 마들렌</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Left_cleric_ilizer.dds" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-accepting-party_check" mid="140" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Templar Knight Elizer$<BR>What brings you here, <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Left_cleric_ilizer.dds" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-accepting-acceptted" mid="142" select_type="3" />
+      <talk_question mid="141"><![CDATA[<html>$Templar Knight Elizer$<BR>Have you completed what <FONT color=#a82424>Priestess of Darkness Madeleine</FONT><FONT color=#2b2723> asked you to do</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Left_cleric_ilizer.dds" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-accepting-" mid="144" select_type="5" />
+      <talk_question mid="143"><![CDATA[<html>$Templar Knight Elizer$<BR>Have you talked to Priestess Madeleine? Why don't you part with your friends for a while and go and talk toher?<BR> <BR> <FONT color=#7e12d2>*You cannot proceed in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-a" mid="67" select_type="2" />
+      <talk_question mid="6"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Rubinart wanted me to pass you this message because the Priestesses of Darkness are deeply related to the cracks in dimensions, and currently you have to go through a <FONT color=#a82424>Dimensional Gap</FONT> to go to Mistland.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-b" mid="68" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I see… Geraint told me there's a barrier near the gateway to Mistland and not everyone can enter. Is it true?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-c" mid="69" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Yes, that's right. Monolith's door is now open and monsters from Mistland can enter our world anytime. However, apart from the fact that the cracks in the dimensions have become more severe, there are no sign of armies coming to attack us from Mistland.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-d" mid="70" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>But that doesn't mean they're doing nothing. They just can't enter Lagendia because there is an <FONT color=#a82424>invisible barrier on the Mistland's side</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-d" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-e" mid="71" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Rubinart said the person who created that barrier must be someone related to him. He added that the barrier is preventing attacks from Mistland so it should not be destroyed. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-f" mid="72" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>If you try going to Mistland through the Monolith, you may break the barrier in the process. <BR>So he wanted you to get our help in gettng to Mistland through the Dimensional Gap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-g" mid="73" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Mistland must bea world that is completely different from Lagendia. Is there any possibility of us getting lost while we travel through the Dimensional Gap?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-g" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-h" mid="74" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>It's normally a difficult journey, but Rubinart mentioned thatthe person in Mistland who is related tohimwill guide you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-h" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-i" mid="75" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(The person in Mistland who is related to Rubinart? It must be </FONT><FONT color=#a82424>The other half of Rubinart's jewel</FONT><FONT color=#662500>. Rubinart also mentioned that the jewel I havewilllead me tothe other half in Mistland…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-j" mid="76" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Ever since the Monolith opened, several <FONT color=#a82424>Dimensional Gaps</FONT> have been created in Saint Haven.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-k" mid="77" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>A normal person wouldn't be allowed to go near them but since you have Rubinart's energy, you will be able to go through the opening and go to Mistland.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-l" mid="117" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>I'll personally guide you to the Dimensional Gap since you're going there for the first time.<BR>In the future, please use the opening at <FONT color=#a82424>Saint Haven's Western Boundary Gate</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-m" mid="120" select_type="0"><![CDATA[<html>Yes, I'm ready. </html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-1-n" mid="121" select_type="0"><![CDATA[<html>Let me finish up some stuff first.</html>]]></talk_answer>
+      <talk_question mid="119"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Are you ready to depart to Mistland?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-party_check" mid="123" select_type="2" />
+      <talk_question mid="122"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>I'll open the Dimensional Gap now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-" mid="125" select_type="5" />
+      <talk_question mid="124"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Please come and talk to me again when you're ready.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2" mid="169" select_type="2" />
+      <talk_question mid="168"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Please bring backhope for the crumbling world...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-p" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-" mid="171" select_type="5" />
+      <talk_question mid="170"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>I'm sorry but you can't bring your companions along. Please come back after leaving your party.<BR><BR><FONT color=#7e12d2>*You cannot proceed in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-1-" mid="78" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$Geraint${sound:npc_GereintKid_9701_qu_01.ogg}<BR>I won't let this world be destroyed when Argenta died trying to save it...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Velskud_Human.dds" center_image="">
+      <talk_answer link_index="n1840_velskud-1-" mid="111" select_type="5" />
+      <talk_question mid="18"><![CDATA[<html>$Velskud${sound:npc_Velskud_9701_qu_01.ogg}<BR>Only if the jewels are stabilised...<FONT color=#7e12d2>(Velskud seemslost in his thoughts)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-1-" mid="112" select_type="5" />
+      <talk_question mid="19"><![CDATA[<html>$Red Dragon Rubinart$<BR>……….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1813_rubinat_box-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1813_rubinat_box-1-" mid="136" select_type="5" />
+      <talk_question mid="135"><![CDATA[<html><FONT color=#2b2723>$???$<BR></FONT><FONT color=#7e12d2>(There is a casket with unknown purpose.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Left_cleric_ilizer.dds" center_image="">
+      <talk_question mid="138"><![CDATA[<html>$Templar Knight Elizer$<BR>If you don't know what you should do, why don't you go to the <FONT color=#a82424>Garden of Time and Space</FONT> and talk to Priestess Madeleine?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-a" mid="153" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>……………….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-b" mid="155" select_type="0"><![CDATA[<html>I'm lost.</html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-2-e" mid="156" select_type="0"><![CDATA[<html>No, I'll make my way now.</html>]]></talk_answer>
+      <talk_question mid="154"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Is there something you want to say to me?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-party_check" mid="158" select_type="2" />
+      <talk_question mid="157"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>You must have lost your way in the Dimensional Gap.<BR>Let me open the Dimensional Gap one more time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-warp" mid="173" select_type="2" />
+      <talk_question mid="159"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Please come and talk to me again when you're ready.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-" mid="176" select_type="5" />
+      <talk_question mid="175"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>I'm sorry but you can't bring your companions along. Please come back after leaving your party.<BR><BR><FONT color=#7e12d2>*You cannot proceed in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-" mid="183" select_type="5" />
+      <talk_question mid="182"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Then please talk to me again when you're done with the preparations.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-" mid="114" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Geraint$<BR>Dragons don't really need to prepare anything for travelling, but it seems like you do. I'll neet you at the <FONT color=#a82424>Western Boundary Gate</FONT> when you're done.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-a" mid="149" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>……………….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-b" mid="162" select_type="0"><![CDATA[<html>I'm lost.</html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-3-e" mid="163" select_type="0"><![CDATA[<html>No, I'll make my way now.</html>]]></talk_answer>
+      <talk_question mid="150"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Is there something you want to say to me?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-party_check" mid="165" select_type="2" />
+      <talk_question mid="164"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>I'll open the Dimensional Gap one more time.<BR>Please be careful not to get lost this time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-warp" mid="178" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Please bring backhope for the crumbling world...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-" mid="180" select_type="5" />
+      <talk_question mid="179"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>I'm sorry but you can't bring your companions along. Please come back after leaving your party.<BR><BR><FONT color=#7e12d2>*You cannot proceed in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-" mid="186" select_type="5" />
+      <talk_question mid="185"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Then please talk to me again when you're done with the preparations.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-4-" mid="83" select_type="5" />
+      <talk_question mid="23"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>
+If you're lost again, please go to <FONT color=#a82424>Saint Haven'sWestern Boundary Gate</FONT>. Rubinart's energy will lead you towards Mistlandfrom there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1805_merca_geraint-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1805_merca_geraint-4-" mid="84" select_type="5" />
+      <talk_question mid="24"><![CDATA[<html>$Geraint$<BR><FONT color=#7e12d2>(Geraint is frowning as he is lost in his thoughts.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-a" mid="85" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Red Dragon Rubinart$<BR>……….Looks like you're in a much better state than I expected. I ran here as soon as I felt my jewel. You almost died.<BR><FONT color=#7e12d2>(Rubinart rubs </FONT><FONT color=#387206>{user_nick}</FONT><FONT color=#7e12d2>'s head worriedly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-b" mid="86" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You felt your jewel…?You must bethe Rubinart who went over to</FONT><FONT color=#a82424>Mistland</FONT><FONT color=#662500>, aren't you?<BR>Am I in Mistland now?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-c" mid="87" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Red Dragon Rubinart$<BR>Yes, you're in <FONT color=#a82424>Mistland</FONT>. You must have come here to find a way to close the Monolith so that you can save Lagendia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-d" mid="88" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Red Dragon Rubinart$<BR>I've seen the memories recorded in the jewel you haveso you don't have to explain anything. I asked this golden-haired boywhen there were thingsI didn't understand too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-d" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-e" mid="89" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Geraint$<BR>I'm not "golden-haired boy". My name is Geraint!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-e" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-f" mid="90" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Red Dragon Rubinart$<BR>Alright. You're an energetic Ancient Dragon.<BR>But I'm in a serious situation so I hope you can hear me out first.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-g" mid="91" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A serious situation...? By the way what was the battlefield?<BR>Don't tell me Mistland is a world made up of such fighting grounds.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-h" mid="92" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Red Dragon Rubinart${sound:npc_Rubinart_9701_qu_01.ogg}<BR>No, not at all. In fact, this world has the samefoundationalstructure as Lagendia. It's something likeits<FONT color=#a82424>parallel world</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-i" mid="93" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You mean Lagendia and Mistlandare originally based on the same structure?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-j" mid="94" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Red Dragon Rubinart$<BR>Yeah, I'm running out of time so I'll explain it briefly. After poisoning Goddess Altea, Goddess Vestinel ran away and thought,"I can make a world like Altea's! I'll make a much better one based on what Altea has built!" and she <FONT color=#a82424>copied Lagendia and recreated the current Mistland</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-k" mid="95" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Red Dragon Rubinart$<BR>However, when Goddess Altea fell asleep, her world Lagendia became dormant too and itdeveloped based on Goddess Altea's dreams. So it's not completely the same as Mistland which has developedin its own wayto suit Goddess Vestinel.But still, you may find some people you knew in Lagendia so don't be too surprised. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-l" mid="96" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Red Dragon Rubinart$<BR>Anyway, since you're here to save Lagendia too, I hope you can help me in protecting the barrier. I created it to stop the Army of Destruction from entering Lagendia as soon as the Monolith'sdoor opened, but this is only a temporary measure...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-m" mid="97" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Red Dragon Rubinart$<BR>Closing the door would be the best way but the door on the Mistland'sside can only be closed by Goddess Vestinelso we can't do anything about it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-m" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-n" mid="98" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Geraint$<BR>So it really was you who created a barrier to stop the enemies from Mistland.<BR>But why were theguyshere fighting like that? Aren't they supposed to join their hands to break the barrier or something? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-n" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-o" mid="99" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Red Dragon Rubinart$<BR>The people here are not madethat way. Well, you'll find out for yourself soon buthere, the <FONT color=#a82424>Childs</FONT> arethe ones who rule this world.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-o" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-p" mid="100" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Red Dragon Rubinart$<BR>The <FONT color=#a82424>Childs</FONT> are evolved forms of theBeyond Dragon... you know, the onewho attacked Lagendia in the past. Their purpose in life is to defeat one another to geteachother's jewel and become a stronger entity.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-p" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-q" mid="101" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Red Dragon Rubinart$<BR>So when theChildswho gathered here to attack Lagendia realised that they were blocked by my barrier,they ended up hunting each other for jewel. You wereunfortunate to have landedatthe center of thatfray.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-q" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-r" mid="102" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Geraint$<BR>Huh? Then can't we just find something to replace the barrier while they tussle?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-r" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-s" mid="103" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Red Dragon Rubinart$<BR>We could in the short term. But in the long term, the faster the Childs kill each other, thesooner the stronger ones will emerge.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-s" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-t" mid="104" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Red Dragon Rubinart$<BR>A Child getting another's jewel will not double his power but may result in tripling or quadrupling it. My barrier can keep them out for now, but itcannot stop themforever. That's whythe<FONT color=#a82424>Anti-Goddess Faction</FONT> and Iare aiming tostop their evolution as much as possible to stop them from gettinganystronger.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-u" mid="105" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>An evolved version of the Beyond Dragon… And they become stronger by stealing each other's jewels? And what, </FONT><FONT color=#a82424>Anti-Goddess</FONT><FONT color=#662500> faction? What's that?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-u" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-v" mid="106" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Red Dragon Rubinart$<BR>In short, the <FONT color=#a82424>Anti-Goddess Faction is a group of people who oppose Goddess Vestinel's rule</FONT>. Enemy of our enemies makes them our allies.<BR>I'll explain more later if you have any more questions.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-v" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-w" mid="128" select_type="4" />
+      <talk_question mid="47"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-w" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-x" mid="108" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Red Dragon Rubinart$<BR>We'rerunning out of time. Although I'm a dragon, it's hard to maintain the barrier and keep my sanity in a place full of poisonwhen I have only half of my jewel.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-x" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-!next" mid="109" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Red Dragon Rubinart$<BR>I heard humans are like that too. No matter how good a person is, if he or she is placed in a complicated situation that is too much to handle, a devil will be awoken inside. Moreover, I'm a corrupted Chaos Dragon so I'm all the more vulnerable to Mistland's poison.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1813_rubinat_box-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1813_rubinat_box-4-a" mid="130" select_type="2" />
+      <talk_question mid="129"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(There is a pretty casket that looks like it doesn't belong here)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1813_rubinat_box-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1813_rubinat_box-4-b" mid="132" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>$Red Dragon Rubinart$<BR>Hey, don't touch that! It is not polite to touch things without the owner's permission when you enter another dragon's territory... or another person's house. Have you not learnt such manners?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1813_rubinat_box-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1813_rubinat_box-4-" mid="134" select_type="5" />
+      <talk_question mid="133"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(Rubinart seems to be in a foul mood so it would be good to leave it alone. Maybe check it out when Rubinart is away.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">9701</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="talk" npc="n775_cleric_ilizer">a</exe>
+         <exe type="talk" npc="n775_cleric_ilizer">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>미지의 격전지로 이동.</comment>
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13525,1);</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">o</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">p</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment>2스텝일 때 이벤트 맵에서 컷신 1 출력 - 종료 후 3스텝 3저널로</comment>
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,13525,1);</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">c</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">d</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment>일정 수의 몬스터 제거 -> 컷신 2 출력 (루비나트 은신처로 워프) -> 4스텝 4저널로 변경</comment>
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,13525,1);</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">c</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">d</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">97010,,,,,,,,,</exe>
+         <exe type="complete" true="">9701</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n775_cleric_ilizer" sub="party_check">1</exelink>
+   <exelink qstep="accepting" npc="n775_cleric_ilizer" sub="acceptted">0</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="c" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="d" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="e" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="f" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="g" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="h" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="i" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="j" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="k" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="l" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="m" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="n" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="party_check">3</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="2">0,1,2</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="e" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="party_check">1</exelink>
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="warp">0</exelink>
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="e" />
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="party_check">1</exelink>
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="warp">0</exelink>
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="b" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="c" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="d" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="e" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="f" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="g" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="h" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="i" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="j" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="k" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="l" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="m" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="n" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="o" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="p" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="q" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="r" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="s" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="t" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="u" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="v">0</exelink>
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="w">1</exelink>
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="x" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="!next" />
+   <exelink qstep="4" npc="n1813_rubinat_box" sub="b" />
+   <exelink qstep="4" npc="n1813_rubinat_box" sub="" />
+   <journal_data recompense="97010" quest_title="미스트랜드로 II" chapterid="17" quest_level="80" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_SaintHaven_NestWorldZone01.dds</contents_image>
+         <destination_pos>55,n776</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>776</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="50"><![CDATA[To Mistland 1]]></title>
+         <contents mid="51"><![CDATA[<html>Geraint and Velskud gave you half of Rubinart's jewel that Feder used to have. Rubinart disappeared after saying that he'll leave the world in your hands. Now ask Priestess of Darkness Madeleine on how to go to Mistland.<BR><BR><FONT color=#7e12d2>*You cannot proceed in a party.</FONT><BR><BR><FONT color=#086171>Saint Haven</FONT><FONT color=#a82424> - Garden of Time and Space (Priestess of Darkness Madeleine)</FONT></html>]]></contents>
+         <destination mid="52"><![CDATA[(Solo) Talk to Madeleine in the Garden of Time and Space]]></destination>
+         <todo_msg mid="53"><![CDATA[Talk to Priestess of Darkness Madeleine in the Garden of Time and Space.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos>13525,0,0</destination_pos>
+         <destination_mode>custom:13525@2</destination_mode>
+         <statemark_npcid>776</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="54"><![CDATA[To Mistland 2]]></title>
+         <contents mid="55"><![CDATA[<html>Priestess of Darkness Madeleine said you can go to Mistland with Rubinart's jewel. Follow Madeleine's instructions and enter the Dimensional Gap.<BR><BR><FONT color=#7e12d2>*You cannot proceed in a party</FONT><BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- ???</FONT></html>]]></contents>
+         <destination mid="56"><![CDATA[(Solo) To Mistland]]></destination>
+         <todo_msg mid="57"><![CDATA[Go to Mistland following Madeleine's guide.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image />
+         <destination_pos>13525,0,0</destination_pos>
+         <destination_mode>custom:13525@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="58"><![CDATA[To Mistland 3]]></title>
+         <contents mid="59"><![CDATA[<html>You've landed on a strange battlefield. Protect yourself from the attackers to survive.<BR><BR><FONT color=#7e12d2>*You cannot proceed in a party</FONT><BR><BR><FONT color=#a82424>Unknown Battlefield (???)</FONT></html>]]></contents>
+         <destination mid="60"><![CDATA[(Solo) Defeat the attackers]]></destination>
+         <todo_msg mid="61"><![CDATA[Defeat the attackers.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_NPC_rubinat.dds</contents_image>
+         <destination_pos>54,n1806</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1806</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="62"><![CDATA[To Mistland 4]]></title>
+         <contents mid="63"><![CDATA[<html>When you have regained your consciousness, you saw Rubinart's face. Ask him where you are and why you are here.<BR><BR><FONT color=#7e12d2>*You cannot proceed in a party</FONT><BR><BR><FONT color=#086171>Rubinart's Hideout</FONT> <FONT color=#a82424>- Red Dragon Rubinart</FONT></html>]]></contents>
+         <destination mid="64"><![CDATA[(Solo) Talk to Rubinart]]></destination>
+         <todo_msg mid="65"><![CDATA[Talk to Rubinart.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9700</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

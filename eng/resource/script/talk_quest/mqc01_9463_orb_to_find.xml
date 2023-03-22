@@ -1,0 +1,536 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc01_9463_orb_to_find</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>9463</qid>
+      <designer>강지영</designer>
+      <qlevel>4</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9464</nextqid>
+      <nextqname>mqc01_9464_first_mission</nextqname>
+      <nextqnpc>n011_priest_leonardo</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Find the Orb]]></qkname>
+      <qnpc>
+         <npcid>11</npcid>
+         <npcename>n011_priest_leonardo</npcename>
+         <npckname>상급 클레릭 레오날드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1686</npcid>
+         <npcename>n1686_eltia</npcename>
+         <npckname>엘티아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1687</npcid>
+         <npcename>n1687_kaye</npcename>
+         <npckname>케이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>206</npcid>
+         <npcename>n206_cleric_jake</npcename>
+         <npckname>클레릭 제이크</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Master Cleric Leonard$<BR>So you want to resolve the misunderstanding.<BR>I heard that pompous sorceress screaming at you too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-b" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>More than that, I can't let the evil forces have their own way.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-!next" mid="10" select_type="3" />
+      <talk_question mid="9"><![CDATA[<html>$Master Cleric Leonard$<BR>We'll wait and see if you're one of those evil forces or not.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-a" mid="101" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Master Cleric Leonard$<BR>No one has a clue about who stole the staff and the Orb so it would be good to have more helping hands.<BR>But before that, let me ask you something. I will trust you if you answer my question honestly.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-b" mid="102" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm… what?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-c" mid="103" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Master Cleric Leonard$<BR>Why are you in Mana Ridge?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-d" mid="104" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm… we're just travelling…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-e" mid="105" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Master Cleric Leonard$<BR>Hmm.... I heard that you told Cynthia that you were on an <FONT color=#a82424>errand</FONT>. If you want to gain our trust, you better tell us who sent you. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-f" mid="106" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm well… I'm not really sure...<BR>(What should I do? If I don't tell him, that will make me even more suspicious…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-g" mid="107" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Master Cleric Leonard$<BR>You don't know...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-g" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-h" mid="108" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Cleric Edan$<BR>May I interrupt if you don't mind?<BR>To me it seems that this girl is too clumsy to be the culprit.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-h" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-i" mid="109" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Cleric Edan$<BR>I don't think she has bad intentions. It's just that she has a problem with communication.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-j" mid="110" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Master Cleric Leonard$<BR>Even if you say so, we still need to be careful.<BR>Even the sorceresses are wary of these girls. Our relationship with the sorceresses may be affected if we don't take caution.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-j" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-k" mid="111" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Cleric Edan$<BR>Well, you're right. Did you say you are <FONT color=#387206>{user_nick}</FONT>?<BR><FONT color=#7e12d2>(Edan turns to you)</FONT><BR>It seems like you have your own reasons. Please tell us truthfully and I swear we will not spread a word about it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-k" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-l" mid="112" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh Edan… I'm actually from the Brrr… brrr….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-l" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-m" mid="113" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Edan must be nodding his head to encourage me to carry on.</FONT><BR>
+<FONT color=#662500>But father always told me the Brotherhood of Steel should never reveal our identity under any circumstances.</FONT><BR>
+<FONT color=#662500>Even when we are being accused of something...</FONT><FONT color=#662500>)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-n" mid="114" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm sorry! I really can't…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-n" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-o" mid="115" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Master Cleric Leonard$<BR>Hmph! <FONT color=#7e12d2>(Master Cleric Leonard turns serious)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-o" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-p" mid="116" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Cleric Edan$<BR><FONT color=#7e12d2>(Cleric Edan shakes his head)</FONT><BR>Then I can't help you, <FONT color=#387206>{user_nick}</FONT>.<BR>Trust is an important thing.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-p" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-" mid="117" select_type="5" />
+      <talk_question mid="27"><![CDATA[<html><BR><FONT color=#7e12d2>(It would be hard to make them trust you again. <BR>Ask Eltia what to do.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-" mid="118" select_type="5" />
+      <talk_question mid="28"><![CDATA[<html>$Eltia$<BR>I hope the staff is recovered soon so that they don't accuse you anymore… Have you talked to <FONT color=#a82424>Master Cleric Leonard</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-" mid="119" select_type="5" />
+      <talk_question mid="29"><![CDATA[<html>$Kay$<BR>Hmm... How's the mission from Ras going? I feel uneasy 'cos you're the one in charge.<BR>Discuss with Eltia before you do anything!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-1-" mid="120" select_type="5" />
+      <talk_question mid="30"><![CDATA[<html>$Cleric Jake$<BR>What brings you here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-2" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-2-" mid="121" select_type="5" />
+      <talk_question mid="31"><![CDATA[<html><BR><FONT color=#7e12d2>(It would be hard to make them trust you again. <BR>Ask Eltia what to do.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-a" mid="122" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Eltia$<BR>Oh no… So you couldn't find out anything?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-b" mid="123" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Don't you think they're too much?! Why!!! Why do I need to tell them everything???</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-c" mid="124" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Eltia$<BR>You should have told them that. There are many adventurers who have their own secrets. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-d" mid="125" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Everyone in this town is as cold-hearted as the weather here! Heartless people!<BR>Even Edan!! He's only good looking! He's still a cold-hearted and inconsiderate jerk!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-d" image="QN_Kaye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-e" mid="126" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Eltia$<BR>…Hmm. Is this Edan more good looking than <FONT color=#387206>Kay</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-f" mid="127" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What? Kay? Oh please... Of course Edan is much more handsome!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-g" mid="128" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Eltia$<BR>Pfft. Fine. <BR>Anyway, with the <FONT color=#a82424>Dragon Followers</FONT> in the picture, things look more serious than expected. We should let Kay know about this.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-h" mid="129" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>He didn't come back with a message from father yet, didn't he?<BR>Is there any way we can contact Kay?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-i" mid="130" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Eltia$<BR>Yeah it's not that difficult actually.<BR>Use this <FONT color=#a82424>Breezy Bird</FONT>.. You press this bird with your middle finger… and say... <FONT color=#086171>[Kay, we need to talk to you. Please come to Blizzard Plain -Eltia]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-j" mid="131" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Wow cool!! You prepared so many things for this trip!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-" mid="132" select_type="5" />
+      <talk_question mid="42"><![CDATA[<html>$Eltia$<BR>Father taught me this so that I can look after you. This is the most commonly used way of communication in the Brotherhood of Steel. <BR>Kay must have seen the message by now. Go to the Blizzard Plain and see if he's there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-3-" mid="133" select_type="5" />
+      <talk_question mid="43"><![CDATA[<html>$Eltia$<BR>I hope you will find the staff soon and resolve the misunderstanding...<BR><FONT color=#7e12d2>(Eltia looks worried about you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-a" mid="134" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Kay$<BR>Looks like there's not much progress. Then why did want to see me?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-b" mid="135" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The Dragon Followers seem to be involved in this. Dragon Followers are the Brotherhood's worst enemy!<BR>I thought maybe this thing is too big for us to take care of, so we wanted to get some feedback. So what did father say?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-c" mid="137" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Kay$<BR>Dragon Followers? Hmm... It's strange. Ras hasn't been replying to me.<BR>I couldn't even let him know that the Orb was a fake one.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-d" mid="138" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Really? Hmm… Is he busy? <BR>How can he be busy with other things when his precious daughters are all the way here in Mana Ridge? If we let this be, our family will be accused of being the Dragon Followers...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-e" mid="139" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Kay$<BR>First, get more clues that might help to find the Orb or the staff. Maybe that will help the townspeople to trust you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-f" mid="140" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You're right. But there's nothing else I can find, and they don't tell me anything that might help in the search.<BR>I feel like I'm being cast out.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-g" mid="141" select_type="0"><![CDATA[<html>Tell him about the Minotaur.</html>]]></talk_answer>
+      <talk_answer link_index="n1687_kaye-3-m" mid="142" select_type="0"><![CDATA[<html>Tell him about Edan.</html>]]></talk_answer>
+      <talk_answer link_index="n1687_kaye-3-n" mid="143" select_type="0"><![CDATA[<html>Tell him about the sceneries.</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Kay$<BR>Hey, think about your sister who's waiting for you alone in Mana Ridge.<BR>I'll help you. Tell me more about the situation when the Orb was stolen.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-g" image="QM_minotauros_Bison.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-h" mid="144" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Kay$<BR>What? I have received a report about a <FONT color=#a82424>Minotaur</FONT> heading this way too... <BR>But why would a Minotaur want the Orb?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-i" mid="145" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Really? Where did the Minotaur go??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-i" image="QW_9.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-j" mid="146" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Kay$<BR>Hey hey, stop cutting me will you?<BR>The last report I got was that it went towards the <FONT color=#a82424>Silent Monastery</FONT>. I don't know if it's still there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-k" mid="147" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ooh~ Kay, you're not bad.<BR>I'm going to get the Orb back then. See ya!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-l" mid="148" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Kay$<BR>Hey! <FONT color=#387206>{user_nick}</FONT>!! You can't fight a monster like Minotaur alone!<BR>Don't create trouble for yourself and just go back to Mana Ridge and find more clues about the staff all right?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-4" mid="149" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What you told me is the clue!! All I need is faith that justice will prevail!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-f" mid="150" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Kay$<BR>I know you like pretty boys but do you think this is the right time to talk about them?<BR>Phew… Learn from your little sister. She's…<FONT color=#7e12d2>(Kay starts to nag)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-f" mid="151" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Kay$<BR>The scenery at Parelina's Resting Place was beautiful? Were you there on a holiday?<BR>Give me some useful information please!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-4" image="QW_9.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-4-" mid="152" select_type="5" />
+      <talk_question mid="59"><![CDATA[<html><BR><FONT color=#7e12d2>(Go to Silent Monastery)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-a" mid="153" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Cleric Jake$<BR>So you were after the Orb too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-b" mid="154" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Do you know me?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-c" mid="155" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$Cleric Jake$<BR>I heard from Leonard that a pretty aristocrat is interested in the Orb and the staff too.<BR>I can clearly see that it's you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-d" mid="156" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Thanks for saying I'm pretty. Hehe.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-d" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-e" mid="157" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$Cleric Jake$<BR>Anyway, what are you going to do with that orb?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-f" mid="158" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm going to give it to the clerics at Mana Ridge and get rid of the accusations.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-g" mid="159" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>$Cleric Jake$<BR>I see.<BR>Then I will take it to them for you.<FONT color=#7e12d2>(Cleric Jake reaches out his hands)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-h" mid="160" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm… I want to give it to them myself.<BR>Eltia… I mean my sister told me not to trust strangers.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-i" mid="161" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>$Cleric Jake$<BR>But I am a servant of the Goddess. You can trust me.<BR>If not, I can't trust you too and you leave me with no choice but to take it by force.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-j" mid="162" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm that's not really a good idea. Why don't we go back to Mana Ridge together?<BR>That would put both of our minds at ease.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-j" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-6" mid="163" select_type="2" />
+      <talk_question mid="70"><![CDATA[<html>$Cleric Jake$<BR><FONT color=#7e12d2>(Cleric Jake thinks for a while and replies)</FONT>…All right, let's do that.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-6" image="QW_ManaRidge.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-6-" mid="164" select_type="5" />
+      <talk_question mid="71"><![CDATA[<html>$Kay$<BR>Hey I heard you found the Orb. Go and meet <FONT color=#a82424>Mana Ridge's Master Cleric</FONT> to resolve the misunderstanding.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-6" image="QW_ManaRidge.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-6-" mid="165" select_type="5" />
+      <talk_question mid="72"><![CDATA[<html>$Cleric Jake$<BR>I will go to <FONT color=#a82424>Master Cleric Leonard</FONT> with you.<BR>Let's go back to Mana Ridge now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-6" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-6-a" mid="166" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Master Cleric Leonard$<BR>This really is the Vision Orb that was stolen by the Minotaur.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-6-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-6-b" mid="167" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I risked my life to get it back so that I can gain your trust.<BR>Do you believe me now??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-6-!next" mid="169" select_type="4" />
+      <talk_question mid="75"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9463</exe>
+         <exe type="talk" npc="n011_priest_leonardo">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="huntmon" num="1" party="1" exe="" onexe="3,4,5,6">269</exe>
+         <exe type="addquestitem" num="1">300059</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>3스텝에서 사냥하면 오브(300059) 획득하게 적용</comment>
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300059</exe>
+         <exe type="recompense">94630,,,,,,,,,</exe>
+         <exe type="complete" true="">9463</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n011_priest_leonardo" sub="!next">0,1</exelink>
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="b" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="c" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="d" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="e" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="f" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="g" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="h" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="i" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="j" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="k" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="l" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="m" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="n" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="o" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="p">0,1</exelink>
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="" />
+   <exelink qstep="2" npc="n1686_eltia" sub="b" />
+   <exelink qstep="2" npc="n1686_eltia" sub="c" />
+   <exelink qstep="2" npc="n1686_eltia" sub="d" />
+   <exelink qstep="2" npc="n1686_eltia" sub="e" />
+   <exelink qstep="2" npc="n1686_eltia" sub="f" />
+   <exelink qstep="2" npc="n1686_eltia" sub="g" />
+   <exelink qstep="2" npc="n1686_eltia" sub="h" />
+   <exelink qstep="2" npc="n1686_eltia" sub="i" />
+   <exelink qstep="2" npc="n1686_eltia" sub="j">0,1</exelink>
+   <exelink qstep="2" npc="n1686_eltia" sub="" />
+   <exelink qstep="3" npc="n1687_kaye" sub="b" />
+   <exelink qstep="3" npc="n1687_kaye" sub="c" />
+   <exelink qstep="3" npc="n1687_kaye" sub="d" />
+   <exelink qstep="3" npc="n1687_kaye" sub="e" />
+   <exelink qstep="3" npc="n1687_kaye" sub="f" />
+   <exelink qstep="3" npc="n1687_kaye" sub="g" />
+   <exelink qstep="3" npc="n1687_kaye" sub="m" />
+   <exelink qstep="3" npc="n1687_kaye" sub="n" />
+   <exelink qstep="3" npc="n1687_kaye" sub="h" />
+   <exelink qstep="3" npc="n1687_kaye" sub="i" />
+   <exelink qstep="3" npc="n1687_kaye" sub="j" />
+   <exelink qstep="3" npc="n1687_kaye" sub="k" />
+   <exelink qstep="3" npc="n1687_kaye" sub="l" />
+   <exelink qstep="3" npc="n1687_kaye" sub="4">0,1,2</exelink>
+   <exelink qstep="3" npc="n1687_kaye" sub="f" />
+   <exelink qstep="3" npc="n1687_kaye" sub="f" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="b" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="c" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="d" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="e" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="f" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="g" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="h" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="i" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="j" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n011_priest_leonardo" sub="b">0,1</exelink>
+   <exelink qstep="6" npc="n011_priest_leonardo" sub="!next">2</exelink>
+   <journal_data recompense="94630" quest_title="오브를 찾아서" chapterid="1" quest_level="4" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_ManaRidge.dds</contents_image>
+         <destination_pos>5,n011</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>11</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="76"><![CDATA[His Help]]></title>
+         <contents mid="77"><![CDATA[<html>Cleric Edan said he'll help you resolve the misunderstanding. Talk to Master Cleric Leonard.<BR><BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>- Master Cleric Leonard</FONT></html>]]></contents>
+         <destination mid="78"><![CDATA[Talk to Master Cleric Leonard]]></destination>
+         <todo_msg mid="79"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Eltia.dds</contents_image>
+         <destination_pos>5,n1686</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1686</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="80"><![CDATA[Unresolved Misunderstanding]]></title>
+         <contents mid="81"><![CDATA[<html>Misunderstanding couldn't be resolved in the end and you've only built on more distrust from Edan and Leonard. <BR>Tell Eltia about the situation.<BR><BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>- Eltia</FONT></html>]]></contents>
+         <destination mid="82"><![CDATA[Talk to Eltia]]></destination>
+         <todo_msg mid="83"><![CDATA[Talk to Eltia at Mana Ridge.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Kaye.dds</contents_image>
+         <destination_pos>7,n1687</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1687</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Contact]]></title>
+         <contents mid="85"><![CDATA[<html>Eltia sent a message to Kay, saying that you shouldn't be rash if the Dragon Followers are involved. Go to Blizzard Plain to meet Kay.<BR><BR><FONT color=#086171>Blizzard Plain</FONT> <FONT color=#a82424>- Kay</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Talk to Kay at Blizzard Plain]]></destination>
+         <todo_msg mid="87"><![CDATA[Meet Kay at the Blizzard Plain]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_9.dds</contents_image>
+         <destination_pos>93,0,0</destination_pos>
+         <destination_mode>custom:91@1,92@1,93@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="88"><![CDATA[With the Power of Justice]]></title>
+         <contents mid="89"><![CDATA[<html>Kay told you where the Minotaur is. Minotaurs are not easy opponents, but recovering the Orb is the only thing you care about right now.<BR>Go to Silent Monastery to get the Orb back.<BR><BR><FONT color=#086171>Blizzard Plain (Monastery Gate)</FONT> <FONT color=#a82424>- Silent Monastery</FONT></html>]]></contents>
+         <destination mid="90"><![CDATA[Kill the Minotaur at Silent Monastery]]></destination>
+         <todo_msg mid="91"><![CDATA[Go to Silent Monastery.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Jake.dds</contents_image>
+         <destination_pos>93,n206</destination_pos>
+         <destination_mode>custom:91@1,92@1,93@1</destination_mode>
+         <statemark_npcid>206</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="92"><![CDATA[Recovered Vision Orb]]></title>
+         <contents mid="93"><![CDATA[<html>You met a cleric after you killed the minotaur and got the Orb back. <BR>Talk to him.<BR><BR><FONT color=#086171>Blizzard Plain (Monastery Gate)</FONT><FONT color=#a82424> - Silent Monastery (Cleric Jake)</FONT></html>]]></contents>
+         <destination mid="94"><![CDATA[Talk to Cleric Jake]]></destination>
+         <todo_msg mid="95"><![CDATA[Talk to Cleric Jake at Silent Monastery.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QW_7.dds</contents_image>
+         <destination_pos>5,n011</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>11</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="96"><![CDATA[Deliver the Genuine Orb]]></title>
+         <contents mid="97"><![CDATA[<html>Cleric Jake asked you to give him the Vision Orb, but it would be better to deliver it yourself.<BR>Go back to town and give the Vision Orb to Master Cleric Leonard.<BR><BR><FONT color=#086171>Mana Ridge</FONT><FONT color=#a82424> - Master Cleric Leonard</FONT></html>]]></contents>
+         <destination mid="98"><![CDATA[Go back to Master Cleric Leonard]]></destination>
+         <todo_msg mid="99"><![CDATA[Go back to Master Cleric Leonard at Mana Ridge.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9462</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

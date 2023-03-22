@@ -1,0 +1,176 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_cronicle_2924_return_hero_04</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2924</qid>
+      <designer>정진호</designer>
+      <qlevel>60</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Event] Returned Hero - Argenta's Memory]]></qkname>
+      <qnpc>
+         <npcid>2153</npcid>
+         <npcename>n2153_cronicle_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2153_cronicle_argenta-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2153_cronicle_argenta-accepting-acceptted" mid="6" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Argenta$<BR>Fyuhh...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2153_cronicle_argenta-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2153_cronicle_argenta-2" mid="44" select_type="0"><![CDATA[<html>maka dari itu... karena tak bisa mengingatnya dengan baik.</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Argenta$<BR>
+<FONT color=#2b2723>Jadi apa yang kamu pertanyakan tadi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2153_cronicle_argenta-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Argenta${sound:npc_Argenta_2904_qu_09.ogg}<BR><FONT color=#7e12d2>(Argenta memandang dengan muka masam dan berbicara)</FONT><BR><FONT color=#2b2723>Hound yang ada di Saint's Haven pun bahkan lebih pintar darimu. Merepotkan... datang ikutilah aku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2153_cronicle_argenta-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="15"><![CDATA[<html>$Argenta$<BR><FONT color=#2b2723>Apa yang sedang kamu lakukan disini?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2153_cronicle_argenta-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2153_cronicle_argenta-4-a" mid="17" select_type="0"><![CDATA[<html>Yes.</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Argenta${sound:npc_Argenta_2905_qu_01.ogg}<BR><FONT color=#2b2723>Kamu dapat masuk ke dalam Monolyth, itu semua adalah berkat Dragon Power yang diberikan Iona kepadamu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2153_cronicle_argenta-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2153_cronicle_argenta-4-b" mid="19" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Argenta${sound:npc_Argenta_2905_qu_02.ogg}<BR><FONT color=#2b2723>Sungguh beruntung karena muncul seorang pesuruh yang bisa dipakai di Monolyth, tetapi dengan sombongnya melakukan pekerjaan yang tak disuru.. Chaos bocah ini.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2153_cronicle_argenta-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2153_cronicle_argenta-4-c" mid="23" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2153_cronicle_argenta-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Argenta$<BR>
+<FONT color=#7e12d2>(Argenta sedang memperlihatkan wajah dingin berbeda dengan yang ia bicarakan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">2924</exe>
+         <exe type="talk" npc="n2153_cronicle_argenta">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">29240,,,,,,,,,</exe>
+         <exe type="complete" true="">2924</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2153_cronicle_argenta" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n2153_cronicle_argenta" sub="2">0,1</exelink>
+   <exelink qstep="4" npc="n2153_cronicle_argenta" sub="b">0</exelink>
+   <exelink qstep="4" npc="n2153_cronicle_argenta" sub="c">1</exelink>
+   <journal_data recompense="29240" quest_title="[이벤트] 돌아온 용자 - 아르젠타의 기억" chapterid="" quest_level="60" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>17411,n2153</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>2153</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="28"><![CDATA[[Event] Returned Hero - Argenta's Memory I]]></title>
+         <contents mid="29"><![CDATA[<html>Ayo dengarkan cerita selanjutnya sebelum Argenta menjadi kesal.<BR>
+<BR><FONT color=#086171>Garden of Memory</FONT><FONT color=#a82424> - Argenta</FONT></html>]]></contents>
+         <destination mid="30"><![CDATA[Talk to Argenta]]></destination>
+         <todo_msg mid="31"><![CDATA[Bicaralah lagi dengan Argenta.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>17408,0,0</destination_pos>
+         <destination_mode>custom:17408@2,17409@2,17412@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="32"><![CDATA[[Event] Returned Hero - Argenta's Memory II]]></title>
+         <contents mid="33"><![CDATA[<html>Berpindah ke Memory Path bersama dengan Argenta, dan kembalilah ke Argenta's Memory. <BR>
+<BR><FONT color=#086171>Garden of Memory(Memory Path)</FONT><FONT color=#a82424> - Argenta's Memory</FONT></html>]]></contents>
+         <destination mid="34"><![CDATA[Berpindah ke Argenta's Memory]]></destination>
+         <todo_msg mid="35"><![CDATA[Kembalilah ke Argenta's Memory dengan berpindah ke Memory Path bersama dengan Argenta.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>17408,0,0</destination_pos>
+         <destination_mode>custom:17408@2,17409@2,17412@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="36"><![CDATA[[Event] Returned Hero - Argenta's Memory III]]></title>
+         <contents mid="37"><![CDATA[<html>Ayo dengarkan cerita yang disampaikan Argenta di Argenta's Memory.<BR><BR><FONT color=#086171>Garden of Memory(Memory Path)</FONT><FONT color=#a82424> - Argenta's Memory</FONT></html>]]></contents>
+         <destination mid="38"><![CDATA[Argenta's Memory]]></destination>
+         <todo_msg mid="39"><![CDATA[Dengarkanlah cerita Argenta di Argenta's Memory.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>17411,n2153</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>2153</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="40"><![CDATA[[Event] Returned Hero - Argenta's Memory IV]]></title>
+         <contents mid="41"><![CDATA[<html>Kembalilah ke Garden of Memory.<BR><BR><FONT color=#086171>Garden of Memory</FONT><FONT color=#a82424> - Argenta</FONT></html>]]></contents>
+         <destination mid="42"><![CDATA[Kembali ke Garden of Memory]]></destination>
+         <todo_msg mid="43"><![CDATA[Kembalilah ke Garden of Memory.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>61:-1</user_level>
+      <user_class />
+      <prev_quest>2923</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,111 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq38_7601_kind_sorceress</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>7601</qid>
+      <designer>김인정</designer>
+      <qlevel>42</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Kind Sorceress]]></qkname>
+      <qnpc>
+         <npcid>713</npcid>
+         <npcename>n713_soceress_tamara</npcename>
+         <npckname>상급 소서리스 타마라</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n713_soceress_tamara-accepting-a" mid="10" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Master Sorceress Tamara$<BR>Terima kasih karena telah rajin membantuku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n713_soceress_tamara-accepting-acceptted" mid="16" select_type="0"><![CDATA[<html>(Dia terlihat seperti tidak akan menyerah)</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Master Sorceress Tamara$<BR>Terima kasih, Aku jadi sedikit lebih percaya diri saat memasak. Erm...<BR>
+M-memang benar aku sering gagal saat memasak, tapi bukankah kegagalan adalah keberhasilan yang tertunda? Hoohoo.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n713_soceress_tamara-1-a" mid="59" select_type="0"><![CDATA[<html>(Tamara tersenyum lebar)</html>]]></talk_answer>
+      <talk_question mid="57"><![CDATA[<html>$Master Sorceress Tamara${action:Talk}<BR>Anyway~ Sepertinya kita jadi lebih dekat?<BR>Cuma ada satu orang yang pernah tertarik pada hobiku selain kamu.<BR>
+Aku terharu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-1-a" image="QN_Npc_Royal_Magician_Kalaen.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n713_soceress_tamara-1-b" mid="61" select_type="0"><![CDATA[<html>Umm...B-benar...</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Master Sorceress Tamara$<BR>Entah guru Karacule atau Kayleen, mereka selalu menyihirku menjadi kucing setiap kali aku menyentuh sebuah pot.<BR><FONT color=#7e12d2>(Tamara menarik nafas panjang)<BR></FONT>Mereka terlalu berlebihan. Tidak ada yang sempurna saat pertama kali. Aku benar kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n713_soceress_tamara-1-c" mid="64" select_type="0"><![CDATA[<html>(Teruskan)</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Master Sorceress Tamara$<BR>Aku tahu sekarang. Kegagalan yang terus menerus pasti karena tidak ada yang percaya padaku kecuali kamu!<BR><FONT color=#387206>{user_nick}</FONT>, jika kamu ada di sekitar...Aku yakin...!!<BR>
+Bahwa aku akan menjadi ahli dalam pekerjaan rumah juga!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-1-c" image="QN_Npc_SoceressTamara.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="65"><![CDATA[<html>$Master Sorceress Tamara$<BR>So <FONT color=#387206>{user_nick}</FONT>, marilah teruskan persahabatan kita.<BR>Kunjungi aku lebih sering, ok? Hoohoo.<BR><FONT color=#7e12d2>(Kamu jadi lebih dekat dengan Master Sorceress Tamara)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">7601</exe>
+         <exe type="talk" npc="n713_soceress_tamara">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="1">7601</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 713, 300 );</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n713_soceress_tamara" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n713_soceress_tamara" sub="b" />
+   <exelink qstep="1" npc="n713_soceress_tamara" sub="c">0</exelink>
+   <journal_data recompense="" quest_title="상냥한 소서리스" chapterid="" quest_level="42" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_SoceressTamara.dds</contents_image>
+         <destination_pos>15,n713</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>713</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="53"><![CDATA[Bicara dengan Tamara]]></title>
+         <contents mid="54"><![CDATA[<html>Bicara dengan <FONT color=#a82424>Master Sorceress Tamara</FONT>.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→ Master Sorceress Tamara</FONT></html>]]></contents>
+         <destination mid="55"><![CDATA[Bicara dengan Master Sorceress Tamara]]></destination>
+         <todo_msg mid="56"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>42:-1</user_level>
+      <user_class />
+      <prev_quest>771</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

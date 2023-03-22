@@ -1,0 +1,187 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_2077_chase_santa_orc</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2077</qid>
+      <designer>정진호</designer>
+      <qlevel>10</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <qkname mid="1"><![CDATA[[Event] Chase Santa Orc]]></qkname>
+      <qnpc>
+         <npcid>100</npcid>
+         <npcename>n100_event_ilyn</npcename>
+         <npckname>이벤트 도우미 아이린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>381</npcid>
+         <npcename>n381_jester_aldo</npcename>
+         <npckname>어릿광대 알도</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n381_jester_aldo-noquest" image="QN_Event_Red.dds" itemindex="">
+      <talk_question mid="13"><![CDATA[<html>$Jester Aldo$<BR>To celebrate <FONT color=#a94407>Christmas</FONT>, a <FONT color=#a82424>special event</FONT> has been prepared for you at <FONT color=#a82424>Wonderful Theme Park</FONT>!!<BR>
+<FONT color=#7e12d2>(You can get the quest from Events Planner Irine)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n383_jester_jack-noquest" image="QN_Event_Red.dds" itemindex="">
+      <talk_question mid="15"><![CDATA[<html>$Jester Jack$<BR>To celebrate <FONT color=#a94407>Christmas</FONT>, a <FONT color=#a82424>special event</FONT> has been prepared for you at <FONT color=#a82424>Wonderful Theme Park</FONT>!!<BR>
+<FONT color=#7e12d2>(You can get the quest from Events Planner Irine)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting" image="" itemindex="">
+      <talk_answer link_index="n100_event_ilyn-accepting-a" mid="17"><![CDATA[<html>What's the matter?</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Events Planner Irine$<BR>Merry Christmas! Enjoying your Christmas?<BR>But it seems like some people are thinking <FONT color=#a94407>"I'm not enjoying it so you can't enjoy it too!"</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-a" image="QM_ORC_Santa.dds" itemindex="">
+      <talk_answer link_index="n100_event_ilyn-accepting-level_check" mid="19"><![CDATA[<html>How mean!! Can I help you with anything?</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Events Planner Irine$<BR>Someone has ruined the <FONT color=#a94407>Christmas</FONT> for children who had been looking forward to it so much. They say the person was <FONT color=#a82424>dressed up as Santa Claus</FONT> and <FONT color=#a82424>stole the presents</FONT> from the children. This is totally unacceptable.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-b" image="QW_WoderfulThemePark.dds" itemindex="">
+      <talk_question mid="21"><![CDATA[<html>$Events Planner Irine$<BR>I'm sorry. You are not ready yet to go to the Wonderful Theme Park so I can't ask you for help.<BR><FONT color=#7e12d2>*You have to be at least Lv10 to receive the event quest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-c" image="QW_WoderfulThemePark.dds" itemindex="">
+      <talk_answer link_index="n100_event_ilyn-accepting-d" mid="27"><![CDATA[<html>Of course. Ask anytime.</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Events Planner Irine$<BR>I hope you can find the thief, <FONT color=#a82424>Santa Orc</FONT> and teach him a lesson.<BR>The one who told me where that Santa Orc is... he's around the <FONT color=#a82424>Wonderful Theme Park</FONT>.<BR>Get the details from there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-d" image="" itemindex="">
+      <talk_answer link_index="n100_event_ilyn-accepting-acceptted" mid="29"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Christmas Event - Find Santa Orc$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1" image="QN_Jester.dds" itemindex="">
+      <talk_answer link_index="n100_event_ilyn-1-check_party" mid="86"><![CDATA[<html>Jester Aldo?</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Events Planner Irine$<BR><FONT color=#a82424>Wonderful Theme Park</FONT> can be accessed via <FONT color=#a94407>Calderock Village</FONT> and <FONT color=#a94407>Saint Haven</FONT>. All these places are in the <FONT color=#a82424>East</FONT> of the maps. If you can't find the place, ask the <FONT color=#a82424>Guards</FONT> or <FONT color=#a82424>Adventurer's Guild Members</FONT>. But right now, <FONT color=#a82424>Jester Aldo</FONT> from Calderock Village is looking for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-a" image="" itemindex="">
+      <talk_answer link_index="n100_event_ilyn-1-c" mid="96"><![CDATA[<html>Yes! Please.</html>]]></talk_answer>
+      <talk_answer link_index="n100_event_ilyn-1-b" mid="97"><![CDATA[<html>It's fine. I will go by myself.</html>]]></talk_answer>
+      <talk_question mid="95"><![CDATA[<html>$Events Planner Irine$<BR>
+Yes, <FONT color=#a82424>Jester Aldo</FONT> is at <FONT color=#a82424>Calderock Village</FONT> or <FONT color=#a82424>Wonderful Theme Park</FONT> which is connected to Calderock Village.<BR>
+I have no time, so I'll send you there this time. Is that okay?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-b" image="QN_Jester.dds" itemindex="">
+      <talk_question mid="100"><![CDATA[<html>$Events Planner Irine$<BR>
+ <FONT color=#a82424>Jester Aldo</FONT> is at <FONT color=#a82424>Calderock Village</FONT> or <FONT color=#a82424>Wonderful theme Park</FONT>. I wish you luck<BR>
+<FONT color=#7e12d2>*If you're not in a party, you can be teleported to where Jester Aldo is by talking to Irine.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-c" image="QW_WoderfulThemePark.dds" itemindex="">
+      <talk_answer link_index="n100_event_ilyn-1-warp" mid="93"><![CDATA[<html>Got it.</html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Events Planner Irine$<BR><FONT color=#a82424>Jester Aldo</FONT> is at <FONT color=#a82424>Calderock Village</FONT> or <FONT color=#a82424>Wonderful Theme Park</FONT> which is linked to Calderock Village. After meeting him, try out <FONT color=#a94407>Wonderful Theme Park<FONT color=#2b2723> </FONT>once</FONT>, and select <FONT color=#7e12d2>Return to Town</FONT>. Or you can select <FONT color=#7e12d2>Return to Town</FONT> from the System menu to come back to town.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n381_jester_aldo-1" image="QW_WoderfulThemePark.dds" itemindex="">
+      <talk_answer link_index="n381_jester_aldo-1-a" mid="42"><![CDATA[<html>Huh? Suprise? Sounds different.</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Jester Aldo$<BRI have been waiting for you! I was worried that you might be late.<BR>Welcome to <FONT color=#a82424>Wonderful Theme Park</FONT>. We have prepared a little <FONT color=#a82424>Christmas Surprise</FONT> for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n381_jester_aldo-1-a" image="QM_ORC_Santa.dds" itemindex="">
+      <talk_answer link_index="n381_jester_aldo-1-b" mid="44"><![CDATA[<html>.........</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Jester Aldo$<BR>Kekeke. Turning the most tragic things into <FONT color=#a94407>laughter</FONT> is the spirit of our <FONT color=#a82424>Wonderful Theme Park</FONT>. We're planning to show everyone <FONT color=#a94407>how the bad guys get punished</FONT> with a little help from you. Do you get what I'm saying?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n381_jester_aldo-1-b" image="QM_ORC_Santa.dds" itemindex="">
+      <talk_answer link_index="n381_jester_aldo-1-c" mid="47"><![CDATA[<html>Summarize this in 3 lines please.</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Jester Aldo$<BR>You're a naive one. All right. We have already tracked <FONT color=#a82424>Santa Orc</FONT> down. He is at <FONT color=#a82424>Wonderful Theme Park</FONT>'s <FONT color=#a82424>Santa Orc's Getaway</FONT>. Erm... after that, I will leave it to your <FONT color=#a82424>instincts</FONT>. Oh yes, I will explain the <FONT color=#a82424>rules</FONT> to you first.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n381_jester_aldo-1-c" image="QM_ORC_Santa.dds" itemindex="">
+      <talk_answer link_index="n381_jester_aldo-1-d" mid="49"><![CDATA[<html>You're talking a little too much.</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Jester Aldo$<BR><FONT color=#7e12d2>*You can enjoy it in Wonderful Theme Park with a party of 1 to 4 players above Lv10.</FONT><BR><FONT color=#7e12d2>*You can enter up to 7 times a week.<BR>*Make the Santa Orc fall down during the limited time and he may drop gifts.<BR>*The item to help you topple the monsters will appear.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n381_jester_aldo-1-d" image="QM_ORC_Santa.dds" itemindex="">
+      <talk_answer link_index="n381_jester_aldo-1-e" mid="52"><![CDATA[<html>.........</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Jester Aldo$<BR>…You may never laugh in your life if you're too concerned with <FONT color=#a94407>trivial matters</FONT>.<BR><BR>Now, let the <FONT color=#a82424>game</FONT> begin.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n381_jester_aldo-1-e" image="" itemindex="">
+      <talk_answer link_index="n381_jester_aldo-1-f" mid="54"><![CDATA[<html><FONT color=#086171>(Quest Completed)</FONT></html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Christmas Event - Find Santa Orc$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n381_jester_aldo-1-f" image="QW_WoderfulThemePark.dds" itemindex="">
+      <talk_question mid="55"><![CDATA[<html>$Jester Aldo$<BR>The children will get their <FONT color=#a94407>lost presents</FONT> back, adventurers will get their <FONT color=#a94407>rewards</FONT>, and we will get <FONT color=#a94407>new surprises</FONT>!! This sure is the way to make everyone happy!<BR><FONT color=#a82424>This is Wonderful Theme Park everyone!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="[">10</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk" npc="n100_event_ilyn">b</exe>
+         <exe type="talk" npc="n100_event_ilyn">c</exe>
+         <exe type="recompense_view">20770,,,,,</exe>
+         <exe type="setquest">2077</exe>
+         <exe type="talk" npc="n100_event_ilyn">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="recompense">20770,,,,,</exe>
+         <exe type="complete">2077</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13621,1);</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="talk" npc="n100_event_ilyn">a</exe>
+         <exe type="talk" npc="n100_event_ilyn">b</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n100_event_ilyn" sub="level_check">0</exelink>
+   <exelink qstep="accepting" npc="n100_event_ilyn" sub="d">3</exelink>
+   <exelink qstep="accepting" npc="n100_event_ilyn" sub="acceptted">4,5</exelink>
+   <exelink qstep="1" npc="n100_event_ilyn" sub="check_party">3</exelink>
+   <exelink qstep="1" npc="n100_event_ilyn" sub="c" />
+   <exelink qstep="1" npc="n100_event_ilyn" sub="b" />
+   <exelink qstep="1" npc="n100_event_ilyn" sub="warp">2</exelink>
+   <exelink qstep="1" npc="n381_jester_aldo" sub="b" />
+   <exelink qstep="1" npc="n381_jester_aldo" sub="c" />
+   <exelink qstep="1" npc="n381_jester_aldo" sub="d" />
+   <exelink qstep="1" npc="n381_jester_aldo" sub="e">0</exelink>
+   <exelink qstep="1" npc="n381_jester_aldo" sub="f">1</exelink>
+   <journal_data recompense="20770" quest_title="[이벤트]산타오크를 추적하라" chapterid="" quest_level="10" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Jester.dds</contents_image>
+         <destination_pos>8,n381</destination_pos>
+         <destination_mode>custom:1@0,5@0,11@0,12@0,13@0,14@0,15@0,21@0,13621@4</destination_mode>
+         <statemark_npcid>381</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="81"><![CDATA[Santa Orc and a New Surprise]]></title>
+         <contents mid="82"><![CDATA[<html>Find Jester Aldo at Wonderful Theme Park in Calderock Village to hear more about Santa Orc's Getaway<BR><BR><FONT color=#086171>Wonderful Theme Park (Calderock Village)</FONT> <FONT color=#a82424>→ Jester Aldo</FONT></html>]]></contents>
+         <destination mid="83"><![CDATA[Conversation with Jester Aldo]]></destination>
+         <todo_msg mid="84"><![CDATA[Listen to Aldo's story at Wonderful Theme Park]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>1:-1</user_level>
+      <user_worldzone_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <have_symbol_item />
+      <quest_date />
+      <quest_day />
+      <npc_favor />
+      <npc_malice />
+   </condition_data>
+</quest>

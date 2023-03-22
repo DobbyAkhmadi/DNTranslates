@@ -1,0 +1,75 @@
+   <talk>
+      <npcename>n2480_cleric_samuel</npcename>
+      <npcid>2480</npcid>
+      <startexe>0</startexe>
+      <comment>api_ui_OpenTextureDialog(userObjID, 53237, 0.5, 0.5, 8, 10, 1);
+api_ui_OpenTextureDialog(userObjID, 55907, 0.5, 0.5, 8, 10, 1, 0, "1200590, 1200591");
+api_ui_OpenTextureDialog(userObjID, 57529, 0.5, 0.5, 8, 10, 1, 0, "1250136, 1250137");
+
+api_ui_OpenTextureDialog_MultiImg(userObjID, "53237, 55907", 0.5, 0.5, 8, 10, 1, 0, "1200590, 1200591, 1200636");</comment>
+      <npckname mid="1"><![CDATA[Temple Knight Samuel]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="nestworld" mid="93"><![CDATA[<html>[Garden of Time and Space]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Temple Knight Samuel$<BR>Please step back.<BR>You should not come near the Garden of Time and Space for the time being.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="nestworld" image="" itemindex="">
+         <talk_answer link_index="talk_ck" mid="94"><![CDATA[<html>Garden of Time and Space is in trouble.</html>]]></talk_answer>
+         <talk_answer link_index="info" mid="95"><![CDATA[<html>Do you want to know more about the Garden of Time and Space?</html>]]></talk_answer>
+         <talk_answer link_index="labyrinth" mid="96"><![CDATA[<html>You don’t know what Labyrinth is?</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="97"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Temple Knight Samuel$<BR>
+Are you still not aware of what happened to the Garden of Time and Space?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="whathappen" image="" itemindex="">
+         <talk_answer link_index="img_explain" mid="131"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_answer link_index="img_explain2" mid="167"><![CDATA[<html>The Nests started to be affected as well.</html>]]></talk_answer>
+         <talk_answer link_index="nestworld" mid="188"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="17"><![CDATA[<html>$Temple Knight Samuel$<BR>It was so scary.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="info" image="" itemindex="">
+         <talk_answer link_index="nestworld" mid="126"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="102"><![CDATA[<html>$Temple Knight Samuel$<BR>There used to be a <FONT color=#a82424>guardian dragon</FONT> in Alteia long ago.<BR>It is said that Garden of Time and Space was created by that dragon to protect Alteia.<BR>And now a catastrophe has happened here……<BR>We are worried too but we will do our best to stop bigger disasters from happening.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="labyrinth" image="" itemindex="">
+         <talk_answer link_index="labyrinth1" mid="127"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="104"><![CDATA[<html>$Temple Knight Samuel$<BR>
+Labyrinth is a terrible disaster that can manifest itself in any location now.<BR>It divides space into countless sections.<BR>I heard there’s someone behind this but I don’t think the culprit will be caught easily.<BR>
+ </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="labyrinth1" image="" itemindex="">
+         <talk_answer link_index="nestworld" mid="128"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="106"><![CDATA[<html>$Temple Knight Samuel$<BR>
+Did you know that places with Labyrinth need to be kept in check?<BR>That’s the only way to stop the spaces from dividing.<BR>Everyone is looking forward to your achievements, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="nestworld1" image="" itemindex="">
+         <talk_answer link_index="talk_ck" mid="169"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="136"><![CDATA[<html>$Temple Knight Samuel$<BR>It’s hard to try to think of it again.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="whathappen_qclear" image="" itemindex="">
+         <talk_answer link_index="img_explain1" mid="189"><![CDATA[<html>At first, the Garden of Time and Space started to change a little.</html>]]></talk_answer>
+         <talk_answer link_index="img_explain2" mid="190"><![CDATA[<html>The Nests started to be affected as well.</html>]]></talk_answer>
+         <talk_answer link_index="img_explain3" mid="191"><![CDATA[<html>You want to know how the <FONT color=#a82424>current Garden of Time and Space</FONT> is like?</html>]]></talk_answer>
+         <talk_answer link_index="nestworld" mid="192"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="173"><![CDATA[<html>$Temple Knight Samuel$<BR>It was so scary.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenTextureDialog(userObjID, 55907, 0.5, 0.5, 8, 10, 1, 0, "1200590, 1200591, 1200636");</exe>
+         <exe type="talk">nestworld1</exe>
+         <exe type="custom">api_ui_OpenTextureDialog(userObjID, 57072, 0.5, 0.5, 8, 10, 1, 0, "1250136, 1250137");</exe>
+         <exe type="conexe" true="6" false="5">0</exe>
+         <exe type="talk">whathappen</exe>
+         <exe type="talk">whathappen_qclear</exe>
+         <exe type="custom">api_ui_OpenTextureDialog(userObjID, 57529, 0.5, 0.5, 8, 10, 1, 0, "1019977");</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">3681</chk>
+      </conditions>
+      <exelink idx="talk_ck">4</exelink>
+      <exelink idx="img_explain">1,2</exelink>
+      <exelink idx="img_explain2">3,2</exelink>
+      <exelink idx="talk_ck">4</exelink>
+      <exelink idx="img_explain1">1,2</exelink>
+      <exelink idx="img_explain2">3,2</exelink>
+      <exelink idx="img_explain3">7,2</exelink>
+   </talk>

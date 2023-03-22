@@ -1,0 +1,37 @@
+   <talk>
+      <npcename>n125_lily</npcename>
+      <npcid>lily</npcid>
+      <startexe>7</startexe>
+      <comment>조건 1 : 다크직업 확인
+
+조건 2와 실행 10 : 다크 어벤저가 버그로 튜토리얼 수행 전에 릴리와 대화를 먼저 하는 경우에 대한 예외 처리를 위한 조건</comment>
+      <npckname mid="1"><![CDATA[Lily [Tutorial]]]></npckname>
+      <talk_paragraph index="001" image="QN_Lily.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Lily$<BR><FONT color=#7e12d2>[Gadis kecil terlihat trauma. Bawa dia ke desa sekarang!]</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="001" mid="8"><![CDATA[<html>Periksa keadaan gadis itu</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[ <html><FONT color=#662500>${user_nick}$</FONT><BR><FONT color=#662500>Apakah itu mimpi...?? Aku nyaris tidak mengenal diriku.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="11"><![CDATA[<html><FONT color=#662500>${user_nick}$</FONT><BR><FONT color=#662500>Apakah itu mimpi...?? Aku merasa seperti orang lain.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 12, 2);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 12, 1);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID,12, 1);</exe>
+         <exe type="conexe" true="0" false="10">0</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 24, 0, 1, 1, 0);</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="8" false="4">1</exe>
+         <exe type="conexe" true="9" false="6,5,1,2,3">0</exe>
+         <exe type="talk">003</exe>
+         <exe type="conexe" true="0" false="5,0,1,2,3">2</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">12</chk>
+         <chk type="hascomq">998</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 75</chk>
+      </conditions>
+   </talk>

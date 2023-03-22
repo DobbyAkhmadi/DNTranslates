@@ -1,0 +1,315 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq34_9282_closing_danger</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>12</qchapter>
+      <qid>9282</qid>
+      <designer>강지영</designer>
+      <qlevel>60</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9283</nextqid>
+      <nextqname>mq34_9283_encounter_the_enemy</nextqname>
+      <nextqnpc>n1047_argenta</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Approaching Danger]]></qkname>
+      <qnpc>
+         <npcid>101</npcid>
+         <npcename>n101_event_tracey</npcename>
+         <npckname>워프 도우미 트레이시</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1046</npcid>
+         <npcename>n1046_slave_david</npcename>
+         <npckname>아르젠타의 노예 데이비드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1047</npcid>
+         <npcename>n1047_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>822</npcid>
+         <npcename>n822_teramai</npcename>
+         <npckname>테렌스 테라마이</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Terrence Terramai${sound:npc_AN_Teramai_qu_9261_01.ogg}<BR>Ready to go?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-accepting-a" image="QW_AnuarendelGateway.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-accepting-b" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yes. I should head off to </FONT> <FONT color=#a82424> Anu Arendel</FONT><FONT color=#662500>  now.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-accepting-c" mid="10" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Terrence Terramai$<BR>That's right. You should look for adventures during your young adventurer days.<BR>The human body becomes useless with age and I can no longer travel freely. What a pity...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-accepting-c" image="QN_Npc_Elf_Narsilia.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-accepting-d" mid="12" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Terrence Terramai$<BR>You should take care of your health too.<BR>Since you're heading to Anu Arendel... Ask the <FONT color=#387206>Queen of Elves</FONT> for the cure.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-accepting-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-accepting-e" mid="14" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Can I meet the Queen of Elves</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-accepting-e" image="QS_Default.dds" itemindex="400381" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-accepting-f" mid="16" select_type="3" />
+      <talk_question mid="15"><![CDATA[<html>$Terrence Terramai$<BR>Hmm. Well, but after she became the Queen....<BR><FONT color=#7e12d2>(Terramai pauses for a while)<BR></FONT>I will write a letter for you. It will be useful. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-accepting-f" image="QS_Default.dds" itemindex="400381" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-accepting-acceptted" mid="18" select_type="3" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Thank you.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting" image="QS_Default.dds" itemindex="400381" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-a" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Warp Guide Tracy$<BR>Wait! I almost forgot!<BR>I have a letter for you, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-b" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Who sent it?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting-b" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-c" mid="90" select_type="0"><![CDATA[<html>Terramai must have been worried about me...</html>]]></talk_answer>
+      <talk_answer link_index="n101_event_tracey-accepting-c" mid="91" select_type="0"><![CDATA[<html><FONT size=2 face=Arial>What is it? I'm a little curious...</FONT></html>]]></talk_answer>
+      <talk_question mid="89"><![CDATA[<html>$Warp Guide Tracy$<BR>It is from <FONT color=#a82424>Terramai</FONT> at the Royal Castle. He told me to look out for travellers here and pass this to <FONT color=#387206>{user_nick}</FONT> when you were leaving for Anu Arendel.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-d" mid="93" select_type="2" />
+      <talk_question mid="92"><![CDATA[<html>$Warp Guide Tracy$<BR>Please don't open it here. It should be used somewhere else.<BR>I took down his verbal message. I'll read it to you.<BR><FONT color=#7e12d2>(Tracy smiles and searches her pocket for the note)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting-d" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-e" mid="95" select_type="2" />
+      <talk_question mid="94"><![CDATA[<html>$Terramai's Message$<BR><FONT color=#086171>You must be ready to leave now. Adventurers should look for adventures in their younger days. <BR>The human body becomes useless with age and I can no longer travel freely. What a pity...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting-e" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-f" mid="97" select_type="2" />
+      <talk_question mid="96"><![CDATA[<html>$Terramai's Message$<BR><FONT color=#086171>As someone who has experienced what you will be going through, I want to advice you to take a good care of your health. Since you're heading to Anu Arendel… Meet the Queen of Elves and ask her for the cure.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting-f" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-g" mid="99" select_type="2" />
+      <talk_question mid="98"><![CDATA[<html>$Terramai's Message$<BR><FONT color=#086171>But I heard that after Nerwin became the Queen, it is not easy to meet her.<BR>This letter is for Nerwin, and it will help you on your journey.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting-g" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-h" mid="101" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>$Terramai's Message$<BR><FONT color=#086171>It was nice to have a friend like you around. <BR>Adventures are always dangerous, but the Goddess will protect you. Good luck…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-i" mid="103" select_type="0"><![CDATA[<html>Yes.</html>]]></talk_answer>
+      <talk_question mid="102"><![CDATA[<html>$Warp Guide Tracy$<BR>That's it. <BR>Ah, I'm sorry I forgot to ask you something. Are you going to <FONT color=#2b2723>Anu Arendel</FONT> ?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-accepting-i" image="QW_AnuarendelGateway.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-accepting-" mid="105" select_type="5" />
+      <talk_question mid="104"><![CDATA[<html>$Warp Guide Tracy$<BR>Great! Now the letter is in your hands. <BR><FONT color=#a82424>Anu Arendel</FONT> is a beautiful place. I hope you have a wonderful journey.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n822_teramai-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Teramai.dds" center_image="">
+      <talk_answer link_index="n822_teramai-1-" mid="20" select_type="5" />
+      <talk_question mid="19"><![CDATA[<html>$Terrence Terramai$<BR><FONT color=#086171>It was nice to have a friend like you around. <BR>Adventures are always dangerous, but the Goddess will protect you. Good luck…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-" mid="22" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Argenta$<BR>Useless slaves...<BR><FONT color=#7e12d2>(Argenta is ignoring you. Try talking to David)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-a" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$David$<BR>Hey… you!! What have you done?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-b" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$David$<BR>Argenta didn't want anything to do with "irritating humans" anymore and she even took away my <FONT color=#a82424>mark of slavery</FONT>!!<BR>It's all because of you!<BR><FONT color=#7e12d2>(David looks like he is going to cry)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-c" mid="28" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$David$<BR>I thought she recognized my abilities unlike all the other people… <BR>but she's always with that <FONT color=#a82424>blond-haired pretty boy</FONT>….<BR><FONT color=#7e12d2>(Looks like he will ramble on for a long time)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-d" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…So what do you want?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-e" mid="32" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$David$<BR>But didn't Argenta at least reply you after she abandoned you?<BR>Maybe she'll talk to me someday too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-f" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-g" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$David$<BR>I can't be abandoned like this!<BR>Won't you go and convince Argenta to take me back?<BR><FONT color=#7e12d2>(David crouches in one corner like a lost puppy)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-h" mid="38" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Is Argenta here?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-i" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$David$<BR>She's there in front of the Tree of Life.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-j" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Great, I can go and ask Argenta)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-1-j" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-1-" mid="44" select_type="5" />
+      <talk_question mid="43"><![CDATA[<html>$David$<BR>Now go on and tell <FONT color=#a82424>Argenta</FONT><FONT color=#387206> </FONT> to take me in as her slave again.<BR>Why are you still here? Go!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n101_event_tracey-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Event_SchoolLook.dds" center_image="">
+      <talk_answer link_index="n101_event_tracey-1-" mid="83" select_type="5" />
+      <talk_question mid="82"><![CDATA[<html>$Warp Guide Tracy$<BR><FONT color=#a82424>Anu Arendel</FONT> is a beautiful place. I hope you have a wonderful journey.<BR><FONT color=#7e12d2>(Tracy smiles and waves goodbye)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1046_slave_david-2" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n1046_slave_david-2-" mid="46" select_type="5" />
+      <talk_question mid="45"><![CDATA[<html>$David$<BR>Now go on and tell <FONT color=#a82424>Argenta</FONT><FONT color=#387206> </FONT> to take me in as her slave again.<BR>Why are you still here? Go!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-i" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Argenta$<BR><FONT color=#7e12d2>(Argenta looks serious)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-b" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I heard that something dangerous will happen here.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-c" mid="80" select_type="0"><![CDATA[<html>I want to help</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Argenta$<BR>It's none of your business. Get lost.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-d" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Argenta$<BR>Ah… you're such an irritating kid. Who sent you here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2-d" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-e" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Velskud told me you'd be here.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-f" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Argenta${sound:npc_AN_Argenta_qu_9261_02.ogg}<BR><FONT color=#2b2723>Him? Yeah I could feel that Black Dragon's powers had disappeared.<BR>So it was you who killed Velskud… You must have become pretty useful.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-g" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Well it's not that....<BR></FONT><FONT color=#7e12d2>(Tell her what happened so far)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2-g" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-h" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$Argenta$<BR><FONT color=#2b2723>What? You saved Velskud using the jewel? And you lost the Black Dragon's jewel?<BR>Humans really make me speechless.</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-!next" mid="74" select_type="4" />
+      <talk_question mid="63"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-2-a" mid="77" select_type="2" />
+      <talk_question mid="76"><![CDATA[<html>$Argenta${sound:npc_AN_Argenta_qu_9261_01.ogg}<BR><FONT color=#2b2723>You again? You couldn't even cure yourself. What mischiefs are you up to here now?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="questitem" num="1" op="[">400381</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">9282</exe>
+         <exe type="talk" npc="n822_teramai">1</exe>
+         <exe type="addquestitem" num="1">400381</exe>
+         <exe type="conexe" true="2" false="">0</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">92821,92821,,92823,92824,92825,92826,92827,92828,92829</exe>
+         <exe type="complete" true="">9282</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n822_teramai" sub="f">3</exelink>
+   <exelink qstep="accepting" npc="n822_teramai" sub="acceptted">0,1</exelink>
+   <exelink qstep="accepting" npc="n101_event_tracey" sub="h">3</exelink>
+   <exelink qstep="accepting" npc="n101_event_tracey" sub="i">0</exelink>
+   <exelink qstep="1" npc="n1046_slave_david" sub="b" />
+   <exelink qstep="1" npc="n1046_slave_david" sub="c" />
+   <exelink qstep="1" npc="n1046_slave_david" sub="d" />
+   <exelink qstep="1" npc="n1046_slave_david" sub="e" />
+   <exelink qstep="1" npc="n1046_slave_david" sub="f" />
+   <exelink qstep="1" npc="n1046_slave_david" sub="g" />
+   <exelink qstep="1" npc="n1046_slave_david" sub="h" />
+   <exelink qstep="1" npc="n1046_slave_david" sub="i" />
+   <exelink qstep="1" npc="n1046_slave_david" sub="j">0,1</exelink>
+   <exelink qstep="1" npc="n1046_slave_david" sub="" />
+   <exelink qstep="2" npc="n1047_argenta" sub="b" />
+   <exelink qstep="2" npc="n1047_argenta" sub="c" />
+   <exelink qstep="2" npc="n1047_argenta" sub="d" />
+   <exelink qstep="2" npc="n1047_argenta" sub="e" />
+   <exelink qstep="2" npc="n1047_argenta" sub="f" />
+   <exelink qstep="2" npc="n1047_argenta" sub="g" />
+   <exelink qstep="2" npc="n1047_argenta" sub="h">0</exelink>
+   <exelink qstep="2" npc="n1047_argenta" sub="!next">1</exelink>
+   <exelink qstep="2" npc="n1047_argenta" sub="a" />
+   <journal_data recompense="1:92821,3:92823,4:92824,5:92825,6:92826,7:92827,8:92828,9:92829" quest_title="다가오는 위험" chapterid="12" quest_level="60" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_AnuarendelGateway.dds</contents_image>
+         <destination_pos>34,n1046</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1046</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="65"><![CDATA[Approaching Danger I]]></title>
+         <contents mid="66"><![CDATA[<html>Check what has happened at Anu Arendel.<BR><BR><FONT color=#086171>Saint Haven - Anu Arendel</FONT><FONT color=#a82424> - ????</FONT></html>]]></contents>
+         <destination mid="67"><![CDATA[Go to Anu Arendel]]></destination>
+         <todo_msg mid="68"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>34,n1047</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1047</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="69"><![CDATA[Approaching Danger II]]></title>
+         <contents mid="70"><![CDATA[<html>Argenta is in front of the Tree of Life. Ask her what has happened.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Argenta</FONT></html>]]></contents>
+         <destination mid="71"><![CDATA[Talk to Argenta]]></destination>
+         <todo_msg mid="72"><![CDATA[Talk to Argenta.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>60:-1</user_level>
+      <user_class>1:3:4:5:6:7:8:9</user_class>
+      <prev_quest>9735</prev_quest>
+      <have_quest>9258,9263,9388,9556</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

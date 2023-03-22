@@ -1,0 +1,103 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_050_vandar_tutorial</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>50</qid>
+      <designer>조설빈</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Tutorial]]></qkname>
+      <qnpc>
+         <npcid>2866</npcid>
+         <npcename>n2866_rubinat</npcename>
+         <npckname>레드 드래곤 루비나트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2866_rubinat-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2866_rubinat-accepting-a" mid="35" select_type="0"><![CDATA[<html>Krgh...</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Red Dragon Rubinart$<BR>
+How dare some lowly human wander around here? Do you know where you are? Are you out of mind?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2866_rubinat-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2866_rubinat-accepting-b" mid="37" select_type="0"><![CDATA[<html>(Smell? What smell?)</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Red Dragon Rubinart$<BR>
+Yes, it should be painful.<BR>
+But you... seem familiar somehow. That smell, I know it from somewhere...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2866_rubinat-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2866_rubinat-accepting-" mid="39" select_type="0"><![CDATA[<html>(Your vision blurs as you lose consciousness….)</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Red Dragon Rubinart$<BR>
+Come closer, so I can get a better whiff of you. Hey, human... Are you listening?</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="hascomq">50</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 50, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="2" false="">0</exe>
+         <exe type="custom">api_user_SetLevel(userObjID,90,50);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2866_rubinat" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n2866_rubinat" sub="">1</exelink>
+   <journal_data recompense="" quest_title="튜토리얼" chapterid="-1" quest_level="1" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos />
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>2866</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="31"><![CDATA[Vandar]]></title>
+         <contents mid="32"><![CDATA[<html></html>]]></contents>
+         <destination mid="33"><![CDATA[]]></destination>
+         <todo_msg mid="34"><![CDATA[Man Renowned as the Strongest]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>1:-1</user_level>
+      <user_class>10</user_class>
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

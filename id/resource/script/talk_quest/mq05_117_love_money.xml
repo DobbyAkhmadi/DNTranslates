@@ -1,0 +1,282 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq05_117_love_money</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>117</qid>
+      <designer>손원호</designer>
+      <qlevel>5</qlevel>
+      <qdesc>오브의 안전을 위해 회랑으로 갔다는 제이크의 소식을 듣고, 길이 엇갈린 소서리스는 오브의 안전을 전하기 위해 회랑으로 향한다. 소식을 전하고 마을로 온 소서리스에게 타라는 오브가 사라졌다는 소식을 전한다.
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>118</nextqid>
+      <nextqname>mq05_118_snatch_orb</nextqname>
+      <nextqnpc>n012_sorceress_master_cynthia</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Richie Rich]]></qkname>
+      <qnpc>
+         <npcid>12</npcid>
+         <npcename>n012_sorceress_master_cynthia</npcename>
+         <npckname>상급 소서리스 신시아 (마나리지 소서리 스킬)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>14</npcid>
+         <npcename>n014_cleric_cedric</npcename>
+         <npckname>클레릭 세드릭   (마나리지)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>15</npcid>
+         <npcename>n015_sorceress_tara</npcename>
+         <npckname>소서리스 타라   (마나리지)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>206</npcid>
+         <npcename>n206_cleric_jake</npcename>
+         <npckname>클레릭 제이크(고요한 수도원 회랑)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-noquest" image="QN_SoceressTara.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="79"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Akhir akhir ini aku dapat merasakan sedikit keganjilan dalam arus mana...<BR><FONT color=#7e12d2>(Kamu bisa mendapatkan quest dari Sorceress Tara.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n014_cleric_cedric-noquest" image="QN_SoceressTara.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="80"><![CDATA[<html>$Cleric Cedric$<BR>Apakah Vision orb sudah benar benar aman?<BR>Dimana lokasinya?<BR>Kamu harus memastikan sudah benar benar aman.<BR><FONT color=#7e12d2>(Kamu bisa mendapatkan quest dari Sorceress Tara.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-a" mid="82" select_type="0"><![CDATA[<html>Maksudmu Cedric?</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Sorceress Tara$<BR>Oh, aku jadi ingat. Barusan ini, ada seorang Cleric yang mencarimu...<BR>Siapa namanya...? Eric...Derek...Kedrick? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting-a" image="QN_Npc_Cl_Fallen_Cedric.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="83"><![CDATA[<html>$Sorceress Tara$<BR>Ah! Iya, <FONT color=#a82424>Cedric</FONT>. Hehehe... dia seorang<FONT color=#2b2723> Cleric dengan rambut funky</FONT> mencarimu kesana kemari. Aku bilang kepadanya kalau aku akan memberitahumu, soalnya aku di instruksikan untuk tidak berbicara dengan orang luar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n014_cleric_cedric-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n014_cleric_cedric-1-a" mid="6" select_type="0"><![CDATA[<html>Bantuan apa?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Cleric Cedric$<BR>Tunggu. Maaf, Aku minta satu bantuan lagi darimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n014_cleric_cedric-1-a" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n014_cleric_cedric-1-b" mid="8" select_type="0"><![CDATA[<html>Jake?</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Cleric Cedric$<BR>Ini tentang <FONT color=#a82424>Jake</FONT>... </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n014_cleric_cedric-1-b" image="QW_9.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n014_cleric_cedric-1-c" mid="10" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Cleric Cedric$<BR>Jake pergi untuk mencari Orb di <FONT color=#a82424>Silent Monastery Cloister</FONT>. Dia tidak tahu Orb itu sudah di selamatkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n014_cleric_cedric-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n014_cleric_cedric-1-d" mid="72" select_type="0"><![CDATA[<html>(Hoam... Aku agak lelah...)</html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Cleric Cedric$<BR>Dapatkah kamu menyusulnya dan memberitahukan padanya kalau Orb-nya sudah diamankan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n014_cleric_cedric-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n014_cleric_cedric-1-e" mid="12" select_type="0"><![CDATA[<html>I terima.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Cleric Cedric$<BR>Yah, Kamu tahu aku tidak memiliki banyak hal untuk ditawarkan namun tenang saja, kamu akan diberikan <FONT color=#a82424>imbalan yang setimpal</FONT> jika kamu menolong Jake. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n014_cleric_cedric-1-e" image="QW_9.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Cleric Cedric$<BR>Terima kasih. Lekaslah pergi ke <FONT color=#a82424>Silent Monastery Cloister</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="69"><![CDATA[<html>$Sorceress Tara${action:Talk}<BR>Ooh...cuacanya lebih dingin dari biasanya ya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="70"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Akhir akhir ini aku dapat merasakan sedikit keganjilan dalam arus mana...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n014_cleric_cedric-2" image="QW_9.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Cleric Cedric$<BR>Dia berada di Silent Monastery Cloister. Cepatlah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-2" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n206_cleric_jake-2-a" mid="16" select_type="0"><![CDATA[<html>Aku sudah menemukannya.</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Cleric Jake$<BR>Apakah kamu disini untuk mencari <FONT color=#a82424>Vision Orb</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-2-a" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n206_cleric_jake-2-b" mid="18" select_type="0"><![CDATA[<html>Jangan khawatir, Benda itu sudah aman sekarang.</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Cleric Jake$<BR>Berita...bagus... Apakah Orb-nya sudah berada di lokasi yang aman?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>$Cleric Jake$<BR>Bagus...bagus.<BR>Aku akan kembali untuk meninjau situasinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-3-a" mid="25" select_type="0"><![CDATA[<html>Apa yang terjadi?</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Sorceress Tara${action:Talk}<BR>Kemana saja kamu? Aku mencari mu kemana mana!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-3-a" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-3-b" mid="29" select_type="0"><![CDATA[<html>Hah. Master Sorceress Cynthia bilang dia akan menjaganya!</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Sorceress Tara$<BR>Hilang sudah... <FONT color=#a82424>Vision Orb</FONT> kita... hilang!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-3-b" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-3-c" mid="31" select_type="0"><![CDATA[<html>Hey! Hati hati kalau bicara!</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Sorceress Tara$<BR>Tidak masuk akal... <FONT color=#a82424>Vision Orb</FONT> dalam penjagaan Master Sorceress Cynthia adalah sebuah rahasia. Bagaimana pelaku bisa mengetahuinya? Kamu...tidak mungkin kamu...kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-3-c" image="QN_SoceressCynthia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-3-d" mid="33" select_type="0"><![CDATA[<html>Baiklah.</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Sorceress Tara$<BR>Huuh... Maaf. Keaadan sangat kacau sekarang. Semua orang jadi gelisah. Tolonglah, temui <FONT color=#a82424>Master Sorceress Cynthia</FONT>. Sepertinya dia mau bertemu denganmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-3-d" image="QN_SoceressCynthia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Sorceress Tara$<BR>berhati-hatilah, <FONT color=#a82424>Master Sorceress Cynthia</FONT> terlihat sangat menderita...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-4" image="QN_SoceressCynthia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Sorceress Tara$<BR>berhati-hatilah, <FONT color=#a82424>Master Sorceress Cynthia</FONT> terlihat sangat menderita...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-4-a" mid="39" select_type="0"><![CDATA[<html>Hey hey, bukan aku!</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Master Sorceress Cynthia${action:Talk}<BR><FONT color=#382000>{user_nick}!</FONT>! DASAR KAU...!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-4-a" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-4-b" mid="41" select_type="0"><![CDATA[<html>Benar benar bukan aku! AKU BERSUMPAH!</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Jangan coba coba menyangkalnya! Bisa bisanya kamu mencurinya? Apa kamu pikir menjualnya bisa melunasi hutang hutangmu? Aku tahu itu adalah sebuah harta yang sangat berharga, tapi itu harta milik KITA! KEMBALIKAN! Kembalikan sekarang juga!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-4-c" mid="43" select_type="0"><![CDATA[<html>(Apa...?)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Master Sorceress Cynthia$<BR>... Kamu...kamu benar benar tidak mengambilnya? <FONT color=#7e12d2>(Dia menatap langsung ke wajahmu.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-4-d" mid="45" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Hmph... Aku tidak berpikir kamu cukup bodoh untuk menyia-nyiakan nyawamu seperti itu... Kamu TAHU kan kalau <FONT color=#a82424>siksaan luar biasa</FONT> menantimu jika kamu ternyata terilbat dalam hal ini, iya kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-4-e" mid="76" select_type="0"><![CDATA[<html>Emm...Aku...mungkin telah berkata sesuatu pada Cedric yang mungkin...umm...memberikan petunjuk tentang keberadaan Orb itu...</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Jika bukan kamu, lalu siapa? Siapa lagi yang tahu kalau Orb itu ada dalam penjagaanku? Tidak dapat dipercaya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-4-f" mid="47" select_type="0"><![CDATA[<html>Bagus...bagus sekali...huuh.</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Jadi ini MEMANG ULAHMU! Ya, secara tidak langsung, Namun tetap saja! Bah! Benar benar kamu ini! Bisakah kamu kerjakan sesuatu dengan benar?<BR>Ugh, lupakanlah. Aku akan berurusan denganmu lagi nanti! Kita harus mencari Orb ini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-4-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-4-!next" mid="78" select_type="0"><![CDATA[<html><FONT color=#a94407>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">117</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">117</exe>
+         <exe type="recompense">1170,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n015_sorceress_tara" sub="a">0</exelink>
+   <exelink qstep="1" npc="n014_cleric_cedric" sub="b" />
+   <exelink qstep="1" npc="n014_cleric_cedric" sub="c" />
+   <exelink qstep="1" npc="n014_cleric_cedric" sub="d" />
+   <exelink qstep="1" npc="n014_cleric_cedric" sub="e">0,1</exelink>
+   <exelink qstep="2" npc="n206_cleric_jake" sub="b">0,1</exelink>
+   <exelink qstep="3" npc="n015_sorceress_tara" sub="b" />
+   <exelink qstep="3" npc="n015_sorceress_tara" sub="c" />
+   <exelink qstep="3" npc="n015_sorceress_tara" sub="d">0,1</exelink>
+   <exelink qstep="4" npc="n012_sorceress_master_cynthia" sub="b" />
+   <exelink qstep="4" npc="n012_sorceress_master_cynthia" sub="c" />
+   <exelink qstep="4" npc="n012_sorceress_master_cynthia" sub="d" />
+   <exelink qstep="4" npc="n012_sorceress_master_cynthia" sub="e" />
+   <exelink qstep="4" npc="n012_sorceress_master_cynthia" sub="f">1</exelink>
+   <exelink qstep="4" npc="n012_sorceress_master_cynthia" sub="!next">0</exelink>
+   <journal_data recompense="1170" quest_title="부자가 좋아" chapterid="1" quest_level="5" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Cl_Fallen_Cedric.dds</contents_image>
+         <destination_pos>6,n14</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>14</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="49"><![CDATA[Bicara dengan Cleric Cedric]]></title>
+         <contents mid="50"><![CDATA[<html>Cleric Cedric mencarimu. Temukan dia di Blizzard Plain.<BR><BR><FONT color=#086171>Blizzard Plain</FONT> <FONT color=#a82424>→ Cleric Cedric</FONT></html>]]></contents>
+         <destination mid="51"><![CDATA[Bicara dengan Cleric Cedric]]></destination>
+         <todo_msg mid="52"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_9.dds</contents_image>
+         <destination_pos>93,0,0</destination_pos>
+         <destination_mode>custom:91@1,92@1,93@4</destination_mode>
+         <statemark_npcid>206</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string>고요한 수도원 회랑
+n206_cleric_jake : 제이크 등장 </trigger_string>
+         <maptool_index />
+         <title mid="53"><![CDATA[Sampaikan berita ke Cleric Jake]]></title>
+         <contents mid="54"><![CDATA[<html>Jake masih berada di Silent Monastery Cloister. Sampaikan padanya kalau Vision Orb sudah aman.<BR><BR><FONT color=#086171>Blizzard Plain (Silent Monastery Cloister Gate)</FONT> <FONT color=#a82424>→ Silent Monastery Cloister</FONT></html>]]></contents>
+         <destination mid="55"><![CDATA[Sampaikan berita ke Cleric Jake]]></destination>
+         <todo_msg mid="56"><![CDATA[Temui Jake di Silent Monastery Cloister.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_SoceressTara.dds</contents_image>
+         <destination_pos>5,n15</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>15</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="57"><![CDATA[Bicara dengan Sorceress Tara]]></title>
+         <contents mid="58"><![CDATA[<html>Jake menjanjikan hadiah yang besar! Ceritakan pada Sorceress Tara berita bagus ini.<BR><BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Sorceress Tara</FONT></html>]]></contents>
+         <destination mid="59"><![CDATA[Bicara dengan Sorceress Tara]]></destination>
+         <todo_msg mid="60"><![CDATA[Kembali ke Mana Ridge dan ceritakan Sorceress Tara berita ini.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_SoceressCynthia.dds</contents_image>
+         <destination_pos>5,n12</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>12</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="61"><![CDATA[Bicara dengan Master Sorceress Cynthia]]></title>
+         <contents mid="62"><![CDATA[<html>Kamu telah di tuduh sebagai tersangka pencuri Vision Orb. Hadapi ketidak adlian ini. Pergi ke Master Cynthia dan jelaskan kalau kamu tidak bersalah.<BR><BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Master Sorceress Cynthia</FONT></html>]]></contents>
+         <destination mid="63"><![CDATA[Bicara dengan Master Sorceress Cynthia]]></destination>
+         <todo_msg mid="64"><![CDATA[Jelaskan bahwa kamu tidak bersalah kepada Cynthia.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>116</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

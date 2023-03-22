@@ -1,0 +1,112 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq41_8307_yohan_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>8307</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About elves]]></qkname>
+      <qnpc>
+         <npcid>714</npcid>
+         <npcename>n714_cleric_yohan</npcename>
+         <npckname>상급 클레릭 요한</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-accepting-a" mid="8" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Cleric Johan$<BR>Even from our tribe's point of view, elves are special creatures.<BR>
+They are said to be born from a tree, then do they only have a mother?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-accepting-b" mid="18" select_type="0"><![CDATA[<html>How would I know?</html>]]></talk_answer>
+      <talk_answer link_index="n714_cleric_yohan-accepting-c" mid="19" select_type="0"><![CDATA[<html>You're concerned with such useless things.</html>]]></talk_answer>
+      <talk_answer link_index="n714_cleric_yohan-accepting-d" mid="20" select_type="0"><![CDATA[<html>Wouldn't it be because it would not be fun if everything was the same?</html>]]></talk_answer>
+      <talk_answer link_index="n714_cleric_yohan-accepting-e" mid="21" select_type="0"><![CDATA[<html>Maybe some deep understanding was to be taught by that.</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Master Cleric Johan$<BR>
+Hmm, why did the Goddess make the elves to be born in such a special way?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Master Cleric Johan$<BR>
+Hmm, I must have made a mistake.<BR>
+<FONT color=#387206>{user_nick}</FONT>, maybe you're not the person I should discuss this with.<BR>
+ </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Master Cleric Johan$<BR>...I'm sorry.<BR>
+<FONT color=#387206> {user_nick}</FONT>, maybe I should not discuss with you things like this in the future.<BR><FONT color=#7e12d2>(Johan seems disturbed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Master Cleric Johan$<BR>
+Haha maybe.<BR>
+Maybe there was a deep understanding that was to be taught by the difference in things.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-accepting-f" mid="50" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Master Cleric Johan$<BR>
+An understanding to be taught.... Yes.<BR>
+Maybe she wanted to teach tolerance by making different species to understand and accept each other.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="47"><![CDATA[<html>$Master Cleric Johan$<BR>
+Haha.<BR>
+You think about the Goddess's deep meaning in such small things.<FONT color=#387206>{user_nick}</FONT>, your religiosity seems very deep.<BR>
+<FONT color=#7e12d2>(Johan seems very impressed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,8307, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 500 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="b">0,3</exelink>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="c">0,4</exelink>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="d">0,2</exelink>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="e">0,1</exelink>
+   <journal_data recompense="" quest_title="[대화] 엘프에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>714:11000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

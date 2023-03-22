@@ -1,0 +1,71 @@
+   <talk>
+      <npcename>n2257_hector</npcename>
+      <npcid>2257</npcid>
+      <startexe>4</startexe>
+      <comment>퀘스트 메뉴만 보일 때 - 9814 퀘 완료 (3652네스트는 알 수 없음 퀘스트로 임시작동하고 있었다가 2018.10월 메인 퀘스트 업데이트 이후로 수정)
+3652 퀘스트를 완료하여 헥터에게서 퀘스트메뉴만 보이던 유저가 이후 9814를 완료하지 않아 다시 다른 메뉴가 보이면 이상하므로
+3652 퀘스트를 완료했는지는 계속 체크해준다.
+
+3656퀘스트 - 아직 메인퀘스트가 신 메르카를 갈 수 없는데, 유저가 신 메르카포구 열기를 선택하면 완료시켜주는 더미 퀘스트</comment>
+      <npckname mid="1"><![CDATA[Merca Captain Hector]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="4"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="change_map_chk" mid="15"><![CDATA[<html>[Enter Merca's Port]</html>]]></talk_answer>
+         <talk_answer link_index="new_merca_open" mid="80"><![CDATA[<html>[Open New Merca’s Port]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Merca Captain Hector$<BR>What brings you here?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="10" link_target="mqc21_9787_question_assistance.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Unexpected Help</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="24" link_target="scq22_3653_place_of_memory.xml"><![CDATA[<html>[World] <FONT color=#086171>His Past</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="6" link_target="sqc21_4911_armada_of_merca.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Merca's Magnificent Fleet</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="7" link_target="sqc21_4912_battleship_of_merca.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Merca's Magnificent Warship</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back" mid="8"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="87" link_target="mqc02_9875_vandar_01.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>To Chiron Island</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="88" link_target="mqc02_9876_vandar_02.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Unwanted Secret</FONT></html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Merca Captain Hector$<BR>What brings you here?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="14"><![CDATA[<html>$Merca Captain Hector$<BR>Under President Vernicka's orders, you can only enter Merca's Port alone.<BR><BR><FONT color=#7e12d2>* You cannot enter in a party.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="standard_talk_allclearquest" image="" itemindex="">
+         <talk_answer link_index="quest" mid="25"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="20"><![CDATA[<html>$Merca Captain Hector$<BR>What brings you here?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="new_merca_open" image="" itemindex="">
+         <talk_answer link_index="open" mid="81"><![CDATA[<html>[Open]</html>]]></talk_answer>
+         <talk_answer link_index="back" mid="82"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="28"><![CDATA[<html>$Merca Captain Hector$<BR>
+It’s a little early to go to this place. Are you sure you want to go there?<BR>
+ <BR>
+<FONT color=#7e12d2>※ The new Merca’s Port will open as the main quest story progresses.<BR>If you open the port now, the story may not make sense.<BR>Do you still want to proceed?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="open_newmerca_already" image="" itemindex="">
+         <talk_answer link_index="quest" mid="83"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="change_map_chk" mid="84"><![CDATA[<html>[Enter Merca's Port]</html>]]></talk_answer>
+         <talk_question mid="32"><![CDATA[<html>$Merca Captain Hector$<BR>What brings you here?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13040,1);</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="5" false="10">1</exe>
+         <exe type="talk">standard_talk_allclearquest</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3656, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="8" false="0">2</exe>
+         <exe type="talk">open_newmerca_already</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 3656, 1);</exe>
+         <exe type="conexe" true="5" false="7">3</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+         <chk type="hascomq">9814</chk>
+         <chk type="hascomq">3656</chk>
+         <chk type="hascomq">3652</chk>
+      </conditions>
+      <exelink idx="change_map_chk">2</exelink>
+      <exelink idx="back">4</exelink>
+      <exelink idx="open">9,6</exelink>
+      <exelink idx="back">4</exelink>
+      <exelink idx="change_map_chk">2</exelink>
+   </talk>

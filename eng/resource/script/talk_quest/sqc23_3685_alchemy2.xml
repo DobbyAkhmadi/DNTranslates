@@ -1,0 +1,240 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc23_3685_alchemy2</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>3685</qid>
+      <designer>채다혜</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[April's Workshop: Item Crafting]]></qkname>
+      <qnpc>
+         <npcid>1871</npcid>
+         <npcename>n1871_trader_april</npcename>
+         <npckname>상인 에이프릴</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2623</npcid>
+         <npcename>n2623_alchemy</npcename>
+         <npckname>연금 가마</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Now take a deep breath……<BR>The cauldron will explode if I put the ingredients in in the wrong order.<BR>Let me remind myself of the alchemy conditions April told me about.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$April's Workshop: Item Crafting$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Merchant April$<BR>Depending on your imagination,<BR>the limits of alchemy can be as little as a dust particle<BR>or expand endlessly to the universe.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-a" mid="43" select_type="0"><![CDATA[<html>[Craft Item]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-e" mid="44" select_type="0"><![CDATA[<html>[Backpack]</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Alchemy Cauldron$<BR>*Bubbling*<BR><BR><FONT color=#7e12d2>(Shimmering amber-coloured liquid is simmering in the cauldron.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-d" mid="45" select_type="0"><![CDATA[<html>[Clear Resin, Red Porgy Scale, Crimson Pastel]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-d" mid="46" select_type="0"><![CDATA[<html>[Sundrop Fruit, Red Needle Flower, Clear Resin]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-d" mid="47" select_type="0"><![CDATA[<html>[Red Porgy Scale, Sundrop Fruit, Clear Resin]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-d" mid="48" select_type="0"><![CDATA[<html>[Crimson Pastel, Clear Resin, Sundrop Fruit]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-b" mid="49" select_type="0"><![CDATA[<html>[Red Needle Flower, Red Porgy Scale, Clear Resin]</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Item Crafting$<BR>Please select the materials you want to use.<BR><BR><FONT color=#086171>[Item Name: ??? / Category: ??? / Grade: ???]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-d" mid="50" select_type="0"><![CDATA[<html>[Add the remaining ingredients]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-c" mid="69" select_type="0"><![CDATA[<html>[Stop adding the ingredients and observe the cauldron]</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Item Crafting$<BR>Selected items will be added to the cauldron.<BR><BR><FONT color=#086171>[Red Needle Flower +1]<BR>[Red Porgy Scale +1]<BR>[Clear Resin +1]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-c" image="QS_Default.dds" itemindex="400628" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-2" mid="51" select_type="0"><![CDATA[<html>I... I did it!!</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Alchemy Results$<BR><FONT color=#2b2723>An object that shines with a brilliant red sheen rises amidst the amber bubbles……</FONT><BR><BR><FONT color=#086171>[Item Name: Merca Red Jade / Category: Ore / Grade: B]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-d" image="QS_Default.dds" itemindex="400629" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-a" mid="52" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(What went wrong? I should try again.)</FONT></html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html><FONT color=#2b2723>$Item Crafting$<BR>With a loud explosion, a black mass of soot appears from the smoke……</FONT><BR><BR><FONT color=#086171>[Item Name: Black Coal / Category: Ore / Grade: F]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-f" mid="53" select_type="0"><![CDATA[<html>[Red Needle Flower]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-g" mid="72" select_type="0"><![CDATA[<html>[Red Porgy Scale]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-h" mid="73" select_type="0"><![CDATA[<html>[Clear Resin]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-i" mid="74" select_type="0"><![CDATA[<html>[Crimson Pastel]</html>]]></talk_answer>
+      <talk_answer link_index="n2623_alchemy-1-j" mid="75" select_type="0"><![CDATA[<html>[Sundrop Fruit]</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Backpack$<BR>A backpack for storing items you collected.<BR>Select an item to see more details.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-f" image="QS_Default.dds" itemindex="400623" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-e" mid="54" select_type="0"><![CDATA[<html>(Back)</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Red Needle Flower$<BR>The flower of cacti that prick alpacas' butts the most.<BR>Its bloody red flower bud is starting to bloom.<BR><BR>* Ingredient Origin: <FONT color=#a82424>Merca's Heart</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-g" image="QS_Default.dds" itemindex="400624" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-e" mid="55" select_type="0"><![CDATA[<html>(Back)</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Red Porgy Scale$<BR>Red Porgies can only be found in Merca’s coasts.<BR>Their scales become shinier and redder in spawning seasons.<BR>
+<BR>* Ingredient Origin: <FONT color=#a82424>Merca's Heart</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-h" image="QS_Default.dds" itemindex="400625" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-e" mid="56" select_type="0"><![CDATA[<html>(Back)</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Clear Resin$<BR>Resin of a tree that was extracted at Phantom Forest Core.<BR>It becomes clearer and harder as it solidifies and is frequently used for coating gemstones.<BR>
+<BR>* Ingredient Origin: <FONT color=#a82424>Merca's Heart</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-i" image="QS_Default.dds" itemindex="400626" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-e" mid="77" select_type="0"><![CDATA[<html>(Back)</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Crimson Pastel$<BR>A pastel that is popular for its smooth texture.<BR>It’s made by finely grinding rocks found in Red Waste and adding a little water to the powder.<BR>
+<BR>* Ingredient Origin: <FONT color=#a82424>Rhadames</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-1-j" image="QS_Default.dds" itemindex="400627" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2623_alchemy-1-e" mid="57" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Sundrop Fruit$<BR>A specialty of the Red Waste that was genetically engineered to grow well on arid lands.<BR>It’s hard to get this fruit’s juice stains off your clothes so be careful.<BR><BR>* Ingredient Origin: <FONT color=#a82424>Rhadames</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2623_alchemy-2" image="QS_Default.dds" itemindex="400628" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(So this is Merca Red Jade!<BR>I should let April see this!!)<BR><BR></FONT><FONT color=#7e12d2>* Go to Merchant April.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2" image="QN_Npc_Trader_Phara.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-a" mid="58" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Who is she? Is she April’s client?)</FONT></html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Hybrid Madam$<BR>My granddaughter has been bed-ridden for many years now.<BR>She used to be an energetic girl<BR>
+and she couldn’t stand boredom more than the pain of her illness.<BR>It was her wish to visit Merca's Heart someday when the port opened its doors to outsiders……</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-a" image="QN_Npc_Trader_Phara.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-b" mid="59" select_type="0"><![CDATA[<html>Erm, April?</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Hybrid Madam$<BR>
+But why a red jewel out of all the colours out there?<BR><BR><FONT color=#7e12d2>(The old lady rubs her wrinkly hands and smiles sadly.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-b" image="QS_Default.dds" itemindex="400628" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-c" mid="60" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Give her Merca Red Jade.)</FONT></html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Merchant April$<BR>Oh, the client is here now.<BR>Did you make the jewel?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-c" image="QN_Npc_Trader_Phara.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-d" mid="61" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Hybrid Madam$<BR>……No matter how her sickness suck life out of her,<BR>her eyes always glistened with hope.<BR>Her red eyes glowed like the red jade.<BR>I wish she could see that beautiful horizon of Merca with her own eyes!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-d" image="QN_Npc_Trader_Phara.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-e" mid="62" select_type="0"><![CDATA[<html>Take care, madam.</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Hybrid Madam$<BR>Thank you, young friend.<BR>I hope this can alleviate<BR>her boredom at least a little……<BR><BR><FONT color=#7e12d2>(The lady carefully wraps the red jade and leaves hurriedly.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-f" mid="63" select_type="0"><![CDATA[<html>That was a fun experience, April.</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Merchant April$<BR>Well done, <FONT color=#387206>{user_nick}</FONT>.<BR>You saved two people today.<BR>The shopkeeper who was drowning in a whole heap of work, and that old lady.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2-g" mid="64" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Receive Rewards)</FONT></html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Quest Completed$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="29"><![CDATA[<html>$Merchant April$<BR>Come and find me any time if you need some alchemy in your life.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">3685</exe>
+         <exe type="recompense_view">36850,,,,,,,,,</exe>
+         <exe type="talk" npc="n2623_alchemy">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">3685</exe>
+         <exe type="recompense">36850,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2623_alchemy" sub="a">1</exelink>
+   <exelink qstep="accepting" npc="n2623_alchemy" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n2623_alchemy" sub="d" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="d" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="d" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="d" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="b" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="d" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="c" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="2">0,1</exelink>
+   <exelink qstep="1" npc="n2623_alchemy" sub="a" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="f" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="g" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="h" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="i" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="j" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="e" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="e" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="e" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="e" />
+   <exelink qstep="1" npc="n2623_alchemy" sub="e" />
+   <exelink qstep="2" npc="n1871_trader_april" sub="b" />
+   <exelink qstep="2" npc="n1871_trader_april" sub="c" />
+   <exelink qstep="2" npc="n1871_trader_april" sub="d" />
+   <exelink qstep="2" npc="n1871_trader_april" sub="e" />
+   <exelink qstep="2" npc="n1871_trader_april" sub="f">1</exelink>
+   <exelink qstep="2" npc="n1871_trader_april" sub="g">0</exelink>
+   <journal_data recompense="36850" quest_title="에이프릴의 아틀리에 ~아이템 제조~" chapterid="" quest_level="95" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_Merca_Heart.dds</contents_image>
+         <destination_pos>54,n2623</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>2623</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="30"><![CDATA[Challenge! Item Crafting]]></title>
+         <contents mid="31"><![CDATA[<html>All the materials are ready. Now, all you have to do is to make the red jewel. Place the materials in the Alchemy Cauldron to craft the jewel that was requested by the client.<BR><BR><FONT color=#086171>Merca's Heart</FONT> - <FONT color=#a82424>Alchemy Cauldron</FONT></html>]]></contents>
+         <destination mid="32"><![CDATA[Make the requested item using the Alchemy Cauldron.]]></destination>
+         <todo_msg mid="33"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_Merca_Heart.dds</contents_image>
+         <destination_pos>54,n1871</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1871</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="34"><![CDATA[Success! Merca Red Jade]]></title>
+         <contents mid="35"><![CDATA[<html>Merca Red Jade appeared in the cauldron filled with golden bubbles. You’ve developed a recipe from scratch and even succeeded in creating an item with alchemy! Go to April and let her know about this good news.<BR><BR><FONT color=#086171>Merca's Heart</FONT> - <FONT color=#a82424>Merchant April</FONT></html>]]></contents>
+         <destination mid="36"><![CDATA[Talk to Merchant April.]]></destination>
+         <todo_msg mid="37"><![CDATA[Talk to Merchant April.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest>3684</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

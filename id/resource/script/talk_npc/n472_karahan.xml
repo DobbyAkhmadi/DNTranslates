@@ -1,0 +1,35 @@
+   <talk>
+      <npcename>n472_karahan</npcename>
+      <npcid>472</npcid>
+      <startexe>0</startexe>
+      <comment>mq15_9337_the_sibling</comment>
+      <npckname mid="1"><![CDATA[Strange Man]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="13"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Strange Man$<BR>Hehe, mencari perhatianku atau memprovokasiku hanya akan membuang-buang waktumu saja, karena kecantikan kecantikanmu saja sudah tak tertahankan, hahaha!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="14" link_target="mq15_705_doubtful_proposal.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Strange proposal</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="15" link_target="sq15_759_real_cause.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Magician trouble</FONT></html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Mysterious Men$<BR>Huhu, aku tahu banyak yang ingin kamu bicarakan dengan aku yang indah ini. Hahaha </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="18"><![CDATA[<html>$Mysterious Men$<BR>Huhu, tidak ada gunanya berusaha untuk tidak melihat. Keindahan tidak bisa ditolak. Hahaha!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="4" false="1">2</exe>
+         <exe type="conexe" true="7" false="2">0 and 1</exe>
+         <exe type="conexe" true="5" false="3">0</exe>
+         <exe type="conexe" true="6" false="8">1</exe>
+         <exe type="enterquest">mq15_9337_the_sibling</exe>
+         <exe type="enterquest">mq15_705_doubtful_proposal</exe>
+         <exe type="enterquest">sq15_759_real_cause</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">705</chk>
+         <chk type="hasquest">759</chk>
+         <chk type="hasquest">9337</chk>
+      </conditions>
+   </talk>

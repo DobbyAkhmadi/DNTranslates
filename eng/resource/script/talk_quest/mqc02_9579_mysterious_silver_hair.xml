@@ -1,0 +1,578 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc02_9579_mysterious_silver_hair</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>2</qchapter>
+      <qid>9579</qid>
+      <designer>이현진 </designer>
+      <qlevel>12</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9580</nextqid>
+      <nextqname>mqc02_9580_unexpected_encounter</nextqname>
+      <nextqnpc>n1848_shaolong</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Mysterious Silver-haired Swordswoman]]></qkname>
+      <qnpc>
+         <npcid>23</npcid>
+         <npcename>n023_ranger_fugus</npcename>
+         <npckname>정찰병 퍼거스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1848</npcid>
+         <npcename>n1848_shaolong</npcename>
+         <npckname>샤오룽 </npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>27</npcid>
+         <npcename>n027_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>31</npcid>
+         <npcename>n031_adventurer_wilber</npcename>
+         <npckname>모험자 길드원 윌버</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>53</npcid>
+         <npcename>n053_adventurer_wounded</npcename>
+         <npckname>부상당한 모험자</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-accepting-acceptted" mid="6" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Scout Fergus$<BR>The Black Knight appeared at Sigh Canyon and took the girl away? Phew...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-1-" mid="106" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Xiaolong$<BR>Go to Scout Fergus and report what happened at Sigh Canyon first. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-1-" mid="107" select_type="5" />
+      <talk_question mid="8"><![CDATA[<html>$Argenta$<BR>What's this?<BR><FONT color=#7e12d2>(The silver-haired swordswoman doesn't want to bother about you.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n053_adventurer_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n053_adventurer_wounded-1-" mid="108" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Injured Adventurer$<BR><FONT color=#7e12d2>(He looks unconscious.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-1-" mid="109" select_type="5" />
+      <talk_question mid="10"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Who… Who are you…?<BR><FONT color=#7e12d2>(He looks badly hurt.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-a" mid="110" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Scout Fergus$<BR>If that's true, that means the Black Knight is after the Ancient's power too….<BR>I should check with the Adventurer's Guild and gather some men to chase after the Black Knight.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-b" mid="111" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Please count me in.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-2" mid="112" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Scout Fergus$<BR>The adventurers from Mana Ridge are already helping us so you don't have to trouble yourself, <FONT color=#387206>{user_nick}</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-2-" mid="113" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>...Well, I offered to help only out of courtesy.<BR>(Hmph, so you won't let me join because I'm a hybrid? I'll meet Xiaolong and tell him about Suriya first.) </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-a" mid="114" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9579_qu_01.ogg}<BR>So how did things go with Rose's rescue? I believe you've done an excellent job as my disciple. <BR>Now we will become famous for being the saviour of the Prophet! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-b" mid="115" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Sigh loudly and report what happened at Sigh Canyon.) </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-c" mid="116" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9579_qu_02.ogg}<BR>It's good that you saw Suriya but what? The Black Knight? Who's that? A Batman wannabe?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-d" mid="117" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I don't know. More and more people are disrupting our plans... Phew.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-e" mid="118" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9579_qu_03.ogg}<BR>It's probably because Rose is the Prophet. I managed to sweet-talk a half-wit from Mana Ridge, and she said Rose is the girl of destiny born under the Star of the Prophet. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-f" mid="119" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Xiaolong$<BR>I believe you've heard of the Ancient's prophecy before. You know, the story of a child born under the Star of the Prophet saving the world. I heard she can see the future in her dreams too… <FONT color=#7e12d2>(Xiaolong scratches his head like he is not certain about it.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-g" mid="120" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9579_qu_04.ogg}<BR>Then maybe Suriya is really intending to cure your villagers.<BR>Maybe he knows a top secret or something... Since he's protecting your villagers, he seems to be a good guy afterall. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-h" mid="121" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What are you talking about? If it wasn't for him, we would have gone to the Red Merchants and...! Argh...<BR>(Black discharge drips from your prosthetic arm again.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-i" mid="122" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9579_qu_05.ogg}<BR>Oh no, your arm must be hurting again. My kung fu was only a temporary relief. The more you rely on the power of your fake arm, you will reach a limit to suppressing the pain with kung fu. What I taught you barely helps you to balance it out.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-3" mid="123" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Xiaolong$<BR>If what Suriya said is true, maybe you can save your arm and your villagers when you find Rose. <BR>We should find Rose before the adventurers from Mana Ridge take her away. <BR>Though Scout Fergus said he doesn't need your help, well... would <FONT color=#2b2723>Guild Master Deckard think the same way?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-" mid="172" select_type="5" />
+      <talk_question mid="170"><![CDATA[<html>$Xiaolong$<BR>Hmm, nevermind. There are more important things to do now so I should hear it from you later.<BR><FONT color=#7e12d2>* You can proceed when you have reached Lv12.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-3-" mid="124" select_type="5" />
+      <talk_question mid="25"><![CDATA[<html>$Xiaolong$<BR>Ignore what a puny low-rank small fry says and go straight to Adventurer's Guild Master Deckard and tell him you'll help to find the Black Knight!<BR>Deckard was worried that the adventurer from Mana Ridge seemed like a dimwit anyway. <BR>Even if you're a hybrid, he'd welcome any help from first-class martial artists like us! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-a" mid="125" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>I haven't seen you around before... Oh! You must be Xiaolong's disciple. I've heard a lot about you.<BR>I heard that you've been keeping in touch with Scout Fergus without coming to see me when I'm the guild master. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-b" mid="126" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Oh that stupid tiger…) <BR>It's a misunderstanding. Xiaolong offered to meet you on my behalf.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-c" mid="127" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>There's no need for you to explain. Xiaolong has told me everything.<BR>Xiaolong is such a funny guy. <FONT color=#7e12d2>(Deckard seems pleased.)</FONT> <BR>So, what brings you here? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-d" mid="128" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I want to help out in pursuing the Black Knight.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-e" mid="129" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Hmm, there's a rumour that the Black Knight is actually a Dragon Follower or someone under a dragon.<BR>The scouts have spotted the Black Knight going towards <FONT color=#a82424>Forest Sanctuary</FONT>. We've already sent our ambush team. Let me see….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-f" mid="130" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Hmm… By now, they should have captured the Black Knight and rescued the girl. <BR>If you really want to help, you can go to <FONT color=#a82424>Forest Sanctuary</FONT> and help the guild members bring the girl back to Calderock Village. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4" mid="131" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Forest Sanctuary. Got it. </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4-" mid="132" select_type="5" />
+      <talk_question mid="33"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>You can go to <FONT color=#a82424>Forest Sanctuary</FONT> by crossing a bridge at <FONT color=#a94407>Cristal Stream</FONT> and going through the <FONT color=#a94407>Silent Forest</FONT> <FONT color=#a94407>Entrance</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-" mid="133" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$Scout Fergus$<BR>I heard that the Black Knight is on his way to Forest Sanctuary. <BR>Adventurer's Guild members are ambushing at Forest Sanctuary but I don't know if they can win over him. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-5-a" mid="134" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Who… Who are you…? Are you under the Black Knight...? <BR><FONT color=#7e12d2>(He looks badly hurt.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-5-b" mid="135" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No! I was asked to help by Deckard. </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-5-c" mid="136" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Argh... I didn't expect to get helped by a hybrid…. Urgh… We were ambushing to attack the Black Knight but we failed miserably.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-5-d" mid="137" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Have you seen the red-haired girl? </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-5-d" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-5-e" mid="138" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>You mean the red-haired girl who was with the Black Knight? <BR>The Black Knight took her inside the temple... But I don't know what happened after that... Argh….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-6" mid="139" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Further inside…? I should get going. </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n053_adventurer_wounded-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n053_adventurer_wounded-6-" mid="140" select_type="5" />
+      <talk_question mid="41"><![CDATA[<html>$Injured Adventurer$<BR>I'm fine so please help the other guild members who went inside to chase the Black Knight….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-6-" mid="141" select_type="5" />
+      <talk_question mid="42"><![CDATA[<html>$Injured Adventurer$<BR>I'm fine so please help the other guild members who went inside to chase the Black Knight….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-a" mid="142" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Argenta$<BR>What are you doing here, kid?<BR><FONT color=#7e12d2>(The silver-haired swordswoman seems irritated by you.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-b" mid="143" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm chasing after the Black Knight. Who are you? </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-c" mid="144" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Argenta$<BR>The Black Knight? Hah… You're too weak to be interested in the Black Knight.<BR>Go back if you want to save your precious life!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-d" mid="145" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I can't. I can only save my life if I find the girl. </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-e" mid="146" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Argenta$<BR>The girl? You mean the redhead the Black Knight took with him?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-f" mid="147" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yes, the descendant of the Ancients.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-g" mid="148" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Argenta$<BR>What!?<FONT color=#7e12d2>(The swordswoman frowns.)</FONT><BR>...I came too late. Things are different if that kid is a descendant of the Ancients. <BR>But why are you after the Black Knight?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-h" mid="149" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A guy called Suriya who's chasing after Rose said the descendant of the Ancients knows how to fix my arm. I need to meet him.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-i" mid="150" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Argenta$<BR>Suriya? Who's that? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-j" mid="151" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>He's a bad guy! He crashed the airship that my villagers and I were on... And he must be doing bad things with his gang everywhere. He's my arch enemy!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-7-k" mid="152" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Argenta$<BR>So you're not really after the Black Knight but after another guy called Suriya. <BR>Then good luck with finding Suriya. I'm going to follow the Black Knight. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-7-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-8" mid="153" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm... if you don't mind that I'm a hybrid, I'll help you! We have the same goal whether it's finding the girl or the Black Knight.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-8" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-8-a" mid="154" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Argenta$<BR>You're a hybrid? What's that got to do with anything? <BR>Kid, you should just look for the person you're looking for. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n027_argenta-8-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n027_argenta-8-" mid="155" select_type="5" />
+      <talk_question mid="56"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>...So you don't mind even if I'm a hybrid? </FONT><BR>
+<FONT color=#662500>Well, there's no need for me to be here if you don't need my help. I should go and meet Guild Master </FONT><FONT color=#662500>Deckard.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-8" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-8-a" mid="156" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>Hmm… I didn't expect the whole ambush team to get killed… <BR>The Black Knight must be much stronger than I expected. <BR>Are you all right? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-8-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-8-b" mid="157" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Tell him what happened.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-8-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-8-c" mid="158" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>You passed out after an attack from the Black Knight but a silver-haired swordswoman in a red robe saved you?<BR>That sounds like her…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-8-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-8-d" mid="159" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Her?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-8-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-8-e" mid="160" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Well… I don't know if she is a friend or a foe.<BR>I don't know much about her but she appeared around the time when the Black Knight appeared.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-8-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-8-f" mid="161" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>She was the one who gave us the information that the Black Knight will appear at Forest Sanctuary. <BR>Thanks to that, Calderock's Adventurer's Guild has lost half of its force…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-8-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-9" mid="162" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>It would be difficult for us to pursue the Black Knight now. We need help from the other adventurers.<BR>If you come across any more information about the silver-haired swordswoman or the Black Knight, please let me know.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-9" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-9-a" mid="163" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Oh, by the way, your master is waiting for you.<BR>He said a disciple shouldn't make her master wait. I don't know what country he's from to say that kind of thing...<BR>Anyway, please go and see him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-9-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-9-" mid="164" select_type="5" />
+      <talk_question mid="65"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(That stupid tiger must be going around telling everyone that he's my master. <BR>Hmph, he doesn't know that I'm just using him for now because I need help…) </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-9" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-9-a" mid="165" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>$Xiaolong$<BR><FONT color=#387206>{user_nick}</FONT>!! I heard that you went to Forest Sanctuary to help Deckard. <BR>See? Go to the leader and everything is solved! <BR>So my disciple, I believe you've managed to amaze everyone with your brilliant feat this time? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-9-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-9-b" mid="166" select_type="4" />
+      <talk_question mid="67"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-9-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-9-!next" mid="167" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(It's troublesome but explain what happened.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9579</exe>
+         <exe type="talk" npc="n023_ranger_fugus">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="]=">12</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="talk" npc="n1848_shaolong">c</exe>
+         <exe type="talk" npc="n1848_shaolong">j</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment>컷신 플레이 후, 카메라 블랙 아웃</comment>
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">8</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">9</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">95790,,,,,,,,,</exe>
+         <exe type="complete" true="">9579</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n023_ranger_fugus" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n023_ranger_fugus" sub="b" />
+   <exelink qstep="1" npc="n023_ranger_fugus" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n1848_shaolong" sub="b" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="c" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="d" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="e" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="f" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="g" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="h" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="i" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="3">0,1</exelink>
+   <exelink qstep="2" npc="n1848_shaolong" sub="" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="e" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="f" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="4">0,1</exelink>
+   <exelink qstep="5" npc="n031_adventurer_wilber" sub="b" />
+   <exelink qstep="5" npc="n031_adventurer_wilber" sub="c" />
+   <exelink qstep="5" npc="n031_adventurer_wilber" sub="d" />
+   <exelink qstep="5" npc="n031_adventurer_wilber" sub="e" />
+   <exelink qstep="5" npc="n031_adventurer_wilber" sub="6">0,1</exelink>
+   <exelink qstep="7" npc="n027_argenta" sub="b" />
+   <exelink qstep="7" npc="n027_argenta" sub="c" />
+   <exelink qstep="7" npc="n027_argenta" sub="d" />
+   <exelink qstep="7" npc="n027_argenta" sub="e" />
+   <exelink qstep="7" npc="n027_argenta" sub="f" />
+   <exelink qstep="7" npc="n027_argenta" sub="g" />
+   <exelink qstep="7" npc="n027_argenta" sub="h" />
+   <exelink qstep="7" npc="n027_argenta" sub="i" />
+   <exelink qstep="7" npc="n027_argenta" sub="j" />
+   <exelink qstep="7" npc="n027_argenta" sub="k" />
+   <exelink qstep="7" npc="n027_argenta" sub="8">0,1</exelink>
+   <exelink qstep="8" npc="n027_argenta" sub="" />
+   <exelink qstep="8" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="8" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="8" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="8" npc="n024_adventurer_guildmaster_decud" sub="e" />
+   <exelink qstep="8" npc="n024_adventurer_guildmaster_decud" sub="f" />
+   <exelink qstep="8" npc="n024_adventurer_guildmaster_decud" sub="9">0,1</exelink>
+   <exelink qstep="9" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="9" npc="n1848_shaolong" sub="a">0</exelink>
+   <exelink qstep="9" npc="n1848_shaolong" sub="b">1</exelink>
+   <exelink qstep="9" npc="n1848_shaolong" sub="!next" />
+   <journal_data recompense="95790" quest_title="신비한 은발의 여검사 " chapterid="2" quest_level="12" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_ranger_fugus.dds</contents_image>
+         <destination_pos>8,n23</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>23</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="69"><![CDATA[The Black Knight Appears]]></title>
+         <contents mid="70"><![CDATA[<html>Tell Scout Fergus in Calderock Village about the Black Knight.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Scout Fergus</FONT></html>]]></contents>
+         <destination mid="71"><![CDATA[Talk to Scout Fergus]]></destination>
+         <todo_msg mid="72"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Shaolong.dds</contents_image>
+         <destination_pos>8,n1848</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1848</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="73"><![CDATA[Xiaolong's Suggestion]]></title>
+         <contents mid="74"><![CDATA[<html>Scout Fergus doesn't seem keen about getting help from you. Meet Xiaolong first and tell him about Suriya.<BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Xiaolong</FONT></html>]]></contents>
+         <destination mid="75"><![CDATA[Talk to Xiaolong]]></destination>
+         <todo_msg mid="76"><![CDATA[Talk to Xiaolong at Calderock Village.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="77"><![CDATA[The Power of Leader]]></title>
+         <contents mid="78"><![CDATA[<html>As Xiaolong has suggested, meet Adventurer's Guild Master Deckard instead of Scout Fergus and ask him about the Black Knight. <BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="79"><![CDATA[Talk to Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="80"><![CDATA[Talk to Adventurer's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_15.dds</contents_image>
+         <destination_pos>124,0,0</destination_pos>
+         <destination_mode>custom:121@1</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="81"><![CDATA[Enter Forest Sanctuary]]></title>
+         <contents mid="82"><![CDATA[<html><FONT color=#2b2723>The Black Knight has taken the girl to Forest Sanctuary.<BR></FONT><FONT color=#2b2723>Go through Cristal Stream and to Forest Sanctuary.<BR><BR></FONT><FONT color=#086171>Cristal Stream (Silent Forest Entrance)</FONT> <FONT color=#a82424>- Forest Sanctuary</FONT></html>]]></contents>
+         <destination mid="83"><![CDATA[Enter Forest Sanctuary]]></destination>
+         <todo_msg mid="84"><![CDATA[Chase after the Black Knight at Forest Sanctuary.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Adventure_Wilber.dds</contents_image>
+         <destination_pos>121,27,3133</destination_pos>
+         <destination_mode>custom:121@1</destination_mode>
+         <statemark_npcid>31</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="85"><![CDATA[Talk to Adventurer's Guild Member Wilber at Forest Sanctuary]]></title>
+         <contents mid="86"><![CDATA[<html><FONT color=#2b2723>Talk to Adventurer's Guild Member Wilber who was waiting in ambush at Forest Sanctuary and ask about the Black Knight. <BR><BR></FONT><FONT color=#086171>Cristal Stream (Silent Forest Entrance)</FONT><FONT color=#a82424> - Forest Sanctuary(Adventurer's Guild Member Wilber)</FONT></html>]]></contents>
+         <destination mid="87"><![CDATA[Talk to Adventurer's Guild Member Wilber at Forest Sanctuary]]></destination>
+         <todo_msg mid="88"><![CDATA[Talk to Adventurer's Guild Member Wilber]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QM_GargoyleGray.dds</contents_image>
+         <destination_pos>124,-142.62,767.80</destination_pos>
+         <destination_mode>custom:121@1,122@1,123@1,124@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="89"><![CDATA[Chase after the Black Knight at Forest Sanctuary]]></title>
+         <contents mid="90"><![CDATA[<html><FONT color=#2b2723>The Black Knight took the girl deeper inside Forest Sanctuary. <BR></FONT><FONT color=#2b2723>Go inside Forest Sanctuary and chase after the Black Knight. <BR><BR></FONT><FONT color=#086171>Cristal Stream (Silent Forest Entrance)</FONT> <FONT color=#a82424>- Forest Sanctuary</FONT></html>]]></contents>
+         <destination mid="91"><![CDATA[Chase after the Black Knight at Forest Sanctuary]]></destination>
+         <todo_msg mid="92"><![CDATA[Chase after the Black Knight]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>124,n27</destination_pos>
+         <destination_mode>custom:121@1,122@1,123@1,124@4</destination_mode>
+         <statemark_npcid>27</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="93"><![CDATA[Encounter with the Silver-haired Swordswoman]]></title>
+         <contents mid="94"><![CDATA[<html>Though you've met the Black Knight again, you passed out from his attack.<BR>Talk to the Silver-haired Swordswoman who appeared at that moment. <BR><BR><FONT color=#086171>Cristal Stream (Silent Forest Entrance)</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>- Forest Sanctuary</FONT></html>]]></contents>
+         <destination mid="95"><![CDATA[Talk to the silver-haired swordswoman]]></destination>
+         <todo_msg mid="96"><![CDATA[Talk to the silver-haired swordswoman at Forest Sanctuary.]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="97"><![CDATA[Report to Deckard]]></title>
+         <contents mid="98"><![CDATA[<html>Report to Adventurer's Guild Master Deckard about what happened at Forest Sanctuary. <BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="99"><![CDATA[Talk to Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="100"><![CDATA[Talk to Adventurer's Guild Master Deckard at Calderock Village]]></todo_msg>
+      </journal>
+      <journal index="9">
+         <contents_image>QN_Npc_Shaolong.dds</contents_image>
+         <destination_pos>8,n1848</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1848</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="101"><![CDATA[Xiaolong's Information]]></title>
+         <contents mid="102"><![CDATA[<html>According to Deckard, Xiaolong seems to have something to say. Go and meet Xiaolong.<BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Xiaolong</FONT></html>]]></contents>
+         <destination mid="103"><![CDATA[Talk to Xiaolong]]></destination>
+         <todo_msg mid="104"><![CDATA[Talk to Xiaolong.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>9</user_class>
+      <prev_quest>9578</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

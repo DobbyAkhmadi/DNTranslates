@@ -1,0 +1,34 @@
+   <talk>
+      <npcename>n2053_cronicle_argenta</npcename>
+      <npcid>2053</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Argenta]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="4"><![CDATA[<html>(Next)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Agenta${sound:npc_Argenta_2053_sp_01.ogg}<BR>Hmm. Aku tidak menyangka akan melihat wajahmu lagi.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="6" link_target="sq_cronicle_2903_03.xml"><![CDATA[<html>(Bertanya apa yang terjadi)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="7" link_target="sq_cronicle_2904_04.xml"><![CDATA[<html>(Bertanya apa yang terjadi)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="8" link_target="sq_cronicle_2905_05.xml"><![CDATA[<html>(Bertanya apa yang terjadi)</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="9"><![CDATA[<html>(Berhentilah)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Argenta${sound:npc_Argenta_2053_sp_03.ogg}<BR><FONT color=#2b2723>Apa yang anda ingin bicarakan?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="0" false="2">0</exe>
+         <exe type="conexe" true="6" false="3">1</exe>
+         <exe type="conexe" true="5" false="7">2</exe>
+         <exe type="enterquest">sq_cronicle_2903_03</exe>
+         <exe type="enterquest">sq_cronicle_2904_04</exe>
+         <exe type="enterquest">sq_cronicle_2905_05</exe>
+         <exe type="conexe" true="4" false="0">3</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">2905</chk>
+         <chk type="hascomq">2904</chk>
+         <chk type="hascomq">2903</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 2903) == 4</chk>
+      </conditions>
+   </talk>

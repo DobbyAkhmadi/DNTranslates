@@ -1,0 +1,91 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq01_5102_may_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>5102</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Calderock Village]]></qkname>
+      <qnpc>
+         <npcid>26</npcid>
+         <npcename>n026_trader_may</npcename>
+         <npckname>소모품 상인 메이</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-a" mid="8" select_type="0"><![CDATA[<html>Kurasa ini cocok untukmu.</html>]]></talk_answer>
+      <talk_answer link_index="n026_trader_may-accepting-b" mid="9" select_type="0"><![CDATA[<html>Ya, tempat "kuno". Aku mendengarmu.</html>]]></talk_answer>
+      <talk_answer link_index="n026_trader_may-accepting-c" mid="10" select_type="0"><![CDATA[<html>Kota ini akan membosankan tanpamu.</html>]]></talk_answer>
+      <talk_answer link_index="n026_trader_may-accepting-d" mid="11" select_type="0"><![CDATA[<html>Kurasa ini cocok untukmu.</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Merchant May$<BR>Aku lahir dan tumbuh di Calderock Village. Sejujurnya, kota ini terlalu kuno. Opps, apa aku baru saja mengucapkan "kuno"? Anggap saja kamu tidak mendengarnya. Calderock Village adalah tempat jelek yang tidak cocok untukku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Merchant May$<BR>Apa?! Kurasa kamu tidak tahu, {user_nick}, tapi aku bukanlah orang seperti itu. Kamu harus memahamiku lebih jauh, {user_nick}.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Merchant May$<BR>Ko-kota kuno?! Ka-kapan aku mengatakannya?! Seseorang akan benar-benar berpikir aku mengatakannya jika mereka tahu hal tersebut. <FONT color=#7e12d2>(May terlihat gelisah)</FONT>To-tolong lupakan hal ini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Merchant May$<BR>Huff, Aku tahu. Tapi seharusnya orang-orang tidak terpenjara di tempat ini terutama orang seperti aku, kan? Walaupun mereka akan merasa sedih karena kepergianku, mereka akan bangga pernah melewatkan hari-hari bersama si cantik jelita, May.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="15"><![CDATA[<html>$Merchant May$<BR>Hehe, benarkah? Perempuan menawan, anggun, sempurna dan elegan seperti aku seharusnya pergi ke Saint's Haven yang lega dan bergaya. (Sepertinya May tidak memahami semua kata yang diucapkannya)</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 5102, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 26, 400 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 26, 200 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 26, 400 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 26, 200 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 캐더락 관문에 대해서  " chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>26:1000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

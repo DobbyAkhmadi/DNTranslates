@@ -1,0 +1,566 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_188_clue_out</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>2</qchapter>
+      <qid>188</qid>
+      <designer>김인정</designer>
+      <qlevel>12</qlevel>
+      <qdesc xml:space="preserve">
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>189</nextqid>
+      <nextqname>mq08_189_surprise_people</nextqname>
+      <nextqnpc>n024_adventurer_guildmaster_decud</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Lost Clue]]></qkname>
+      <qnpc>
+         <npcid>1101</npcid>
+         <npcename>n1101_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>23</npcid>
+         <npcename>n023_ranger_fugus</npcename>
+         <npckname>정찰병 퍼거스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>31</npcid>
+         <npcename>n031_adventurer_wilber</npcename>
+         <npckname>모험자 길드원 윌버</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>53</npcid>
+         <npcename>n053_adventurer_wounded</npcename>
+         <npckname>부상당한 모험자</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>542</npcid>
+         <npcename>n542_edan</npcename>
+         <npckname>클레릭 에단</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-acceptted" mid="149" select_type="3" />
+      <talk_question mid="131"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>This is bad.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QN_Npc_Cian.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-a" mid="298" select_type="2" />
+      <talk_question mid="297"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Hmm? I've never seen you around before...<BR>
+Oh!<BR>You must be the adventurer that Warrior Xian and Archer Triana talked about! Haha! Nice to meet you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-a" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-b" mid="313" select_type="2" />
+      <talk_question mid="312"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Anyway, I heard that the Harpy was killed but the <FONT color=#a82424>Black Knight</FONT> appeared and took the <FONT color=#a82424>Prophet</FONT> away.<BR>
+Angelica and Edan seem to be frustrated by their wasted efforts as well.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-b" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-c" mid="315" select_type="2" />
+      <talk_question mid="314"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Angelica? Edan...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-c" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-d" mid="317" select_type="2" />
+      <talk_question mid="316"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>They are adventurers from Mana Ridge.<BR>They are helping out to save the Prophet.<BR>
+</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-d" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-e" mid="319" select_type="2" />
+      <talk_question mid="318"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Who is the Black Knight?</FONT><BR>
+</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-e" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-f" mid="322" select_type="0"><![CDATA[<html>(Ask about the Dragon Followers)</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-h" mid="323" select_type="0"><![CDATA[<html>(Ask about those working for the Dragon)</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-j" mid="324" select_type="0"><![CDATA[<html>(Ask about the Black Knight)</html>]]></talk_answer>
+      <talk_question mid="320"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>The Black Knight is an unidentified swordsman who had appeared around this area only recently. <BR>The rumours say that the <FONT color=#a82424>Black Knight</FONT> could be a <FONT color=#a82424>Dragon Follower</FONT> or <FONT color=#a82424>works for the Dragon</FONT>.<BR>
+Anyways, he is a strange man.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-f" image="QM_dragonSycophant.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-g" mid="326" select_type="2" />
+      <talk_question mid="325"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Dragon Followers are a group of people who <FONT color=#a82424>worship the dragons</FONT>. Their belief is that submitting to the dragons will bring true salvation. To me, it's all a big load of bullshit.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-g" image="QM_dragonSycophant.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-h" mid="328" select_type="0"><![CDATA[<html>(Ask about those working for the Dragon)</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-j" mid="329" select_type="0"><![CDATA[<html>(Ask about the Black Knight)</html>]]></talk_answer>
+      <talk_question mid="327"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>The insane thing is that their influence is far and wide, even stronger than the royal family.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-i" mid="331" select_type="2" />
+      <talk_question mid="330"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Not much is known about the Dragon's men. <BR>It seems that the evil dragons <FONT color=#a82424>brainwash and exploit both humans and monsters to their will</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-f" mid="333" select_type="0"><![CDATA[<html>(Ask about the Dragon Followers)</html>]]></talk_answer>
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-j" mid="334" select_type="0"><![CDATA[<html>(Ask about the Black Knight)</html>]]></talk_answer>
+      <talk_question mid="332"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Come to think of it, I think I heard of a story that the <FONT color=#a82424>founder of the order of Dragon Followers</FONT> was actually one of the Dragon's men.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-j" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-k" mid="336" select_type="2" />
+      <talk_question mid="335"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>The Black Knight is highly dangerous, as seen by his attacks on Saint Haven, and even on the Foothills of Black Mountain monsters.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-k" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-l" mid="339" select_type="2" />
+      <talk_question mid="338"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>For some reason, he has also wrecked two <FONT color=#a82424>airships</FONT> which were coming to Calderock Village from Saint Haven. <BR>Who could have guessed that he was aiming to get the Ancient's powers...?<BR>He sure is an evil one.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-l" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-m" mid="341" select_type="2" />
+      <talk_question mid="340"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Airships...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-m" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-n" mid="343" select_type="2" />
+      <talk_question mid="342"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>You don't know what airships are? Haha. They're gigantic boats that fly in the sky.<BR>You need to board an airship to get to Saint Haven. Calderock Village is a strong fortress.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-n" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-o" mid="346" select_type="2" />
+      <talk_question mid="345"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(How can such things be destroyed by a human?<BR>I feel something weird going on about the Black Knight too...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-o" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-p" mid="348" select_type="2" />
+      <talk_question mid="347"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>
+Anyway, the adventurers and my scouts have spotted him. <BR>I've currently sent a team to chase him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-p" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-q" mid="351" select_type="2" />
+      <talk_question mid="350"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>He seems to be heading towards the Forest Sanctuary.<BR>
+All the adventurers have headed towards the <FONT color=#a82424>Forest Sanctuary</FONT> after hearing the news.<BR>I hope they come back with some good news.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-q" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-" mid="353" select_type="5" />
+      <talk_question mid="352"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>Please help out too if you don't mind.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-r" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_question mid="468"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Luckily I didn't jump across too much time Talk to Lunaria first.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1118_lunaria-1" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1118_lunaria-1-" mid="302" select_type="5" />
+      <talk_question mid="301"><![CDATA[<html>$Lunaria$<BR>
+What are you doing?<BR>
+Aren't you going to meet Adventurer's Guild Master Deckard?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-1-" mid="304" select_type="5" />
+      <talk_question mid="303"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Umm...<BR>
+Wh-who are you?<BR><FONT color=#7e12d2>(He doesn't look good due to his injuries)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n053_adventurer_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n053_adventurer_wounded-1-" mid="306" select_type="5" />
+      <talk_question mid="305"><![CDATA[<html>$Injured Adventurer$<BR><FONT color=#7e12d2>(He seems unconscious)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-1-" mid="308" select_type="5" />
+      <talk_question mid="307"><![CDATA[<html>$Cleric Edan$<BR>...We're too late.<BR><FONT color=#7e12d2>(Edan frowns like he's in pain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-" mid="310" select_type="5" />
+      <talk_question mid="309"><![CDATA[<html>$Scout Fergus$<BR><FONT color=#a82424>Adventurer's Guild Master Deckard</FONT> is near the bridge at the center of Calderock Village.<BR>
+Please go and see him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-a" mid="355" select_type="2" />
+      <talk_question mid="354"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR><FONT color=#2b2723>The other adventurers already left for </FONT><FONT color=#a82424>Forest Sanctuary</FONT>.<BR>
+Please help out too if you don't mind.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-a" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-" mid="357" select_type="5" />
+      <talk_question mid="356"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I should talk to Lunaria first.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-a" mid="359" select_type="2" />
+      <talk_question mid="358"><![CDATA[<html>$Lunaria$<BR>…I see.<BR>So the Black Knight took the girl.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-b" mid="362" select_type="2" />
+      <talk_question mid="361"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I don't think we warped that far.<BR>But we'll still have to wait and see.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-c" mid="364" select_type="2" />
+      <talk_question mid="363"><![CDATA[<html>$Lunaria$<BR>Oh yeah?<BR>That's good.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-c" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-d" mid="366" select_type="2" />
+      <talk_question mid="365"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Anyway, until when do we need to follow this girl?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-e" mid="368" select_type="2" />
+      <talk_question mid="367"><![CDATA[<html>$Lunaria$<BR>I don't know.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-e" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-f" mid="370" select_type="2" />
+      <talk_question mid="369"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>If the Ancients are special people, they should have done a better job protecting her...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-f" image="QM_HarpyRed.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-g" mid="372" select_type="2" />
+      <talk_question mid="371"><![CDATA[<html>$Lunaria$<BR>You caught the Harpy who kidnapped her.<BR>What are you trying to find now?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-g" image="QN_NPC_Illusion.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-h" mid="374" select_type="2" />
+      <talk_question mid="373"><![CDATA[<html>$Lunaria$<BR>You are concerned about the woman named Elena?<BR>
+…Oh the boss of the Red Harpy. I remember you saying that the <FONT color=#a82424>man inside you</FONT> knows her.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-h" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-i" mid="376" select_type="2" />
+      <talk_question mid="375"><![CDATA[<html>$Lunaria$<BR><FONT color=#7e12d2>(Lunaria quietly listens to {user_nick})</FONT><BR>So what you're saying is… The Red Harpy was supposed to bring the Prophet to Elena, but lost her to the Black Knight. So <FONT color=#a82424>Elena will go after the Black Knight</FONT>. Am I right?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-i" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-j" mid="378" select_type="2" />
+      <talk_question mid="377"><![CDATA[<html>$Lunaria$<BR>Then you are going to look for the Black Knight.<BR>You're thinking that you might be able to find Elena if you find the Black Knight. I understand.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-2-k" mid="381" select_type="0"><![CDATA[<html>What does that mean?</html>]]></talk_answer>
+      <talk_answer link_index="n1101_lunaria-2-k" mid="382" select_type="0"><![CDATA[<html>You know something, don't you?</html>]]></talk_answer>
+      <talk_question mid="380"><![CDATA[<html>$Lunaria$<BR>But it's not you that Elena recognized.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-2-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-3" mid="384" select_type="2" />
+      <talk_question mid="383"><![CDATA[<html>$Lunaria$<BR>Well.<BR>…I have nothing else to say. Let's get going.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1118_lunaria-3" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1118_lunaria-3-" mid="387" select_type="5" />
+      <talk_question mid="386"><![CDATA[<html>$Lunaria$<BR>Let's go to the Forest Sanctuary.<BR><FONT color=#7e12d2>(It looks like Lunaria is not interested in talking anymore)<BR></FONT>I will follow you behind.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n053_adventurer_wounded-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n053_adventurer_wounded-3-" mid="389" select_type="5" />
+      <talk_question mid="388"><![CDATA[<html>$Injured Adventurer$<BR>I'm fine so please help the other guild members who went inside to chase the Black Knight….<BR>Krrgh….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-3-a" mid="391" select_type="2" />
+      <talk_question mid="390"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Umm...<BR>
+Wh-who are you?<BR><FONT color=#7e12d2>(He doesn't look good due to his injuries)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-3-a" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-3-b" mid="393" select_type="2" />
+      <talk_question mid="392"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Uhhh! Ad... Adventurer...!<BR>I was chasing after the <FONT color=#a82424>Black Knight</FONT>, and he punched me in the face and...<BR>
+I don't remember anything from then onwards...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-3-c" mid="395" select_type="2" />
+      <talk_question mid="394"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Have you seen Elena?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-3-d" mid="397" select_type="2" />
+      <talk_question mid="396"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>Huh? El… Who?<BR>
+I'm sorry… I don't know anyone by that name...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-3-d" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-3-" mid="399" select_type="5" />
+      <talk_question mid="398"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>The Black Knight went towards the deepest part of the Forest Sanctuary... ughh... I don't know what happened next... krrgh...<BR>
+I need to get to the... other guild members...<BR>
+<FONT color=#7e12d2>(He seems to be in too much pain to talk)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n031_adventurer_wilber-4" image="QW_15.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Adventure_Wilber.dds" center_image="">
+      <talk_answer link_index="n031_adventurer_wilber-4-" mid="401" select_type="5" />
+      <talk_question mid="400"><![CDATA[<html>$Adventurer's Guild Member Wilber$<BR>
+Come on, please chase after the Black Knight... To the core of the Forest Sanctuary... Krrgh...!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-5-a" mid="403" select_type="2" />
+      <talk_question mid="402"><![CDATA[<html>$Cleric Edan$<BR>Hello there.<BR>What are you doing at a dangerous place like this?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-5-a" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-5-b" mid="405" select_type="2" />
+      <talk_question mid="404"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Where did the Black Knight go?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-5-b" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-5-c" mid="408" select_type="2" />
+      <talk_question mid="407"><![CDATA[<html>$Cleric Edan$<BR>You must be one of the adventurers who was chasing after the Black Knight.<BR>I'm sorry to tell you that the Black Knight was too strong for us to handle.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-5-c" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-5-d" mid="410" select_type="2" />
+      <talk_question mid="409"><![CDATA[<html>$Cleric Edan$<BR>Angelica and I attacked him to save the girl, but we were easily defeated.<BR>He wasn't someone who could be subdued by the adventurers alone.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-5-e" mid="413" select_type="2" />
+      <talk_question mid="412"><![CDATA[<html>$Cleric Edan$<BR>The Black Knight disappeared after dealing a heavy blow on our men.<BR>If not for the beautiful silver-haired swordswoman, we would all be dead….<BR><FONT color=#7e12d2>(Edan sighs)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-5-f" mid="415" select_type="2" />
+      <talk_question mid="414"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A beautiful silver-haired lady?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-5-g" mid="417" select_type="2" />
+      <talk_question mid="416"><![CDATA[<html>$Cleric Edan$<BR>I have never seen her before.<BR>I stayed behind to look for any clues but to no avail.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-5-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-5-h" mid="419" select_type="2" />
+      <talk_question mid="418"><![CDATA[<html>${user_nick}$<BR>Wasn't there anyone else...<BR>
+I mean… any other monsters?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-5-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-6" mid="421" select_type="2" />
+      <talk_question mid="420"><![CDATA[<html>$Cleric Edan$<BR><FONT color=#7e12d2>(Edan looks confused)</FONT><BR>No there was no one else.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n542_edan-6" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n542_edan-6-" mid="423" select_type="5" />
+      <talk_question mid="422"><![CDATA[<html>$Cleric Edan$<BR>I'm going to see <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT> to report what happened.<BR>You should go to a safer place too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1101_lunaria-6" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1101_lunaria-6-" mid="425" select_type="5" />
+      <talk_question mid="424"><![CDATA[<html>$Lunaria$<BR>Are you concerned about the beautiful silver-haired woman?<BR><FONT color=#7e12d2>(Lunaria stares into your eyes)</FONT><BR>Isn't it more urgent to go to
+Adventurer's Guild Master Deckard?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-a" mid="428" select_type="2" />
+      <talk_question mid="426"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Refusal}<BR>Oh it's you. Where have you been?<BR>I didn't see you around for a long time. I thought you were busy with something else.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-b" mid="430" select_type="2" />
+      <talk_question mid="429"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>You don't understand what am I talking about?!<BR>You've come back only now after going to the <FONT color=#a82424>Forest Sanctuary</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-c" mid="432" select_type="2" />
+      <talk_question mid="431"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>The other adventurers have already reported back to me twice, and you're here only now.<BR>After all the search teams that went after the Black Knight have been killed, a <FONT color=#a82424>silver-haired swordswoman</FONT> appeared and helped the adventurers, and they...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-d" mid="434" select_type="2" />
+      <talk_question mid="433"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>And?</FONT><BR><FONT color=#662500>Did they go back to the Forest Sanctuary?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-e" mid="436" select_type="2" />
+      <talk_question mid="435"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>That's what I'm telling you!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-f" mid="438" select_type="4" />
+      <talk_question mid="437"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-!next" mid="467" select_type="2" />
+      <talk_question mid="466"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I seem to have jumped across quite a bit of time...</FONT><BR>
+<FONT color=#662500>Why did things go like this?!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">188</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4,5,6">395</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4,5,6">200395</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">1880,,,,,,,,</exe>
+         <exe type="complete" true="">188</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="e" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="f" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="h" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="j" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="g" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="h" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="j" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="i" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="f" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="j" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="k" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="l" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="m" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="n" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="o" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="p" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="q">0,1</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="b" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="c" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="d" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="e" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="f" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="g" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="h" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="i" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="j" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="k" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="k" />
+   <exelink qstep="2" npc="n1101_lunaria" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n031_adventurer_wilber" sub="b" />
+   <exelink qstep="3" npc="n031_adventurer_wilber" sub="c" />
+   <exelink qstep="3" npc="n031_adventurer_wilber" sub="d">0,1,2,3</exelink>
+   <exelink qstep="3" npc="n031_adventurer_wilber" sub="" />
+   <exelink qstep="5" npc="n542_edan" sub="b" />
+   <exelink qstep="5" npc="n542_edan" sub="c" />
+   <exelink qstep="5" npc="n542_edan" sub="d" />
+   <exelink qstep="5" npc="n542_edan" sub="e" />
+   <exelink qstep="5" npc="n542_edan" sub="f" />
+   <exelink qstep="5" npc="n542_edan" sub="g" />
+   <exelink qstep="5" npc="n542_edan" sub="h" />
+   <exelink qstep="5" npc="n542_edan" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="6" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="6" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="6" npc="n024_adventurer_guildmaster_decud" sub="e">0</exelink>
+   <exelink qstep="6" npc="n024_adventurer_guildmaster_decud" sub="f">1</exelink>
+   <exelink qstep="6" npc="n024_adventurer_guildmaster_decud" sub="!next" />
+   <journal_data recompense="1880" quest_title="빼앗긴 단서" chapterid="2" quest_level="12" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="440"><![CDATA[Lost Clue I]]></title>
+         <contents mid="441"><![CDATA[<html>It seems like the Prophet girl was not saved. Go to Adventurer's Guild Master Deckard to find outmore.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="442"><![CDATA[Talk to Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="443"><![CDATA[Talk to Adventurer's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Lunaria.dds</contents_image>
+         <destination_pos>8,n1101</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1101</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="444"><![CDATA[Lost Clue II]]></title>
+         <contents mid="445"><![CDATA[<html>According to what Deckard said, it looks like you didn't warp across too much time. Talk to Lunaria first.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Lunaria</FONT></html>]]></contents>
+         <destination mid="446"><![CDATA[Talk to Lunaria]]></destination>
+         <todo_msg mid="447"><![CDATA[Talk to Lunaria at Calderock Village.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_15.dds</contents_image>
+         <destination_pos>121,n31</destination_pos>
+         <destination_mode>custom:121@1</destination_mode>
+         <statemark_npcid>31</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="448"><![CDATA[Lost Clue III]]></title>
+         <contents mid="449"><![CDATA[<html>Go to Forest Sanctuary and look for the Black Knight. If he took the Prophet, Elena must be there too.<BR>
+ <BR>
+<FONT color=#086171>Cristal Stream (Silent Forest Entrance)</FONT> <FONT color=#a82424>- Forest Sanctuary(Adventurer's Guild Member Wilber)</FONT></html>]]></contents>
+         <destination mid="450"><![CDATA[Talk to Adventurer's Guild Member Wilber at Forest Sanctuary]]></destination>
+         <todo_msg mid="451"><![CDATA[Go to Forest Sanctuary to chase after the Black Knight.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_15.dds</contents_image>
+         <destination_pos>124,0,0</destination_pos>
+         <destination_mode>custom:121@3,122@3,123@3,124@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="453"><![CDATA[Lost Clue IV]]></title>
+         <contents mid="454"><![CDATA[<html>The Black Knight went inside the Forest Sanctuary with the Prophet. <BR>Chase after the Black Knight and go to the deepest part of the Forest Sanctuary.<BR>
+ <BR>
+<FONT color=#086171>Cristal Stream (Silent Forest Entrance)</FONT> <FONT color=#a82424>- Forest Sanctuary</FONT></html>]]></contents>
+         <destination mid="455"><![CDATA[Search Forest Sanctuary]]></destination>
+         <todo_msg mid="456"><![CDATA[Go deeper into Forest Sanctuary to chase after the Black Knight.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Edan.dds</contents_image>
+         <destination_pos>124,n542</destination_pos>
+         <destination_mode>custom:121@3,122@3,123@3,124@1</destination_mode>
+         <statemark_npcid>542</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="457"><![CDATA[Lost Clue V]]></title>
+         <contents mid="458"><![CDATA[<html>Neither the Prophet nor the Black Knight can be seen. Of course, Elena is not there too.<BR>There is a cleric standing around though...<BR>
+Talk to him to find out what happened.<BR>
+ <BR>
+<FONT color=#086171>Cristal Stream (Silent Forest Entrance)</FONT> <FONT color=#a82424>- Forest Sanctuary(Cleric Edan)</FONT></html>]]></contents>
+         <destination mid="459"><![CDATA[Talk to Cleric Edan at the Forest Sanctuary]]></destination>
+         <todo_msg mid="460"><![CDATA[Talk to Cleric Edan at the Forest Sanctuary.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="462"><![CDATA[Lost Clue VI]]></title>
+         <contents mid="463"><![CDATA[<html>It seems like Edan and Angelica met the Black Knight but was defeated by him hands down. Edan said a silver-haired woman saved them. Who could it be? First, go back to Adventurer's Guild Master Deckard.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="464"><![CDATA[Talk to Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="465"><![CDATA[Talk to Adventurer's Guild Master Deckard.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>187</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

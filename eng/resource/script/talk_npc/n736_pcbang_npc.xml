@@ -1,0 +1,82 @@
+   <talk>
+      <npcename>n736_pcbang_npc</npcename>
+      <npcid>736</npcid>
+      <startexe>2</startexe>
+      <comment>#208941 넥슨 PC방과 통합. 다시 분리할 경우에는 실행리스트 3에서, 참이면 0을 4로 고칠 것</comment>
+      <npckname mid="1"><![CDATA[Cyber Café Weapon Rental NPC]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="get_pc_item" mid="38"><![CDATA[<html>[Rent item]</html>]]></talk_answer>
+         <talk_answer link_index="about_service" mid="39"><![CDATA[<html>[What is item rental service?]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>Hello. I'm <FONT color=#a82424>Cyber Cafe Helper Fiona</FONT>.<BR>Users who are using the premium cyber cafes can use the item rental service.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="nopcbang" image="" itemindex="">
+         <talk_answer link_index="about_service" mid="58"><![CDATA[<html>[What is item rental service?]</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>Adventurer, log in from a premium cyber café and you can borrow cyber café exclusive items for your adventure.<BR>
+I will introduce you to the rental service.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="noplayer" image="" itemindex="">
+         <talk_question mid="13"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>You cannot use the rental item right now.<BR>
+Please make an enquiry regarding this error.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="about_service" image="" itemindex="">
+         <talk_answer link_index="about_2" mid="40"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>Item rental service allows the adventurers using premium cyber cafes to borrow cyber café exclusive items. Please take note that the rental of items will end when you leave the cyber café.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_0" image="" itemindex="">
+         <talk_answer link_index="notice_01" mid="54"><![CDATA[<html>(Listen to the warnings)</html>]]></talk_answer>
+         <talk_question mid="19"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>Item rental is complete. Please take note that when you leave the cyber cafe or when you <FONT color=#a82424>log out</FONT>, the item will be returned. Have a pleasant journey!<BR>
+<FONT color=#7e12d2>※ Weapon rental will start from Lv.24.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_2" image="" itemindex="">
+         <talk_question mid="23"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>There are no items you can borrow.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_3" image="" itemindex="">
+         <talk_question mid="24"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>Adventurer, please make some space in your bag.<BR>
+You cannot rent the item when your bag is full.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_4" image="" itemindex="">
+         <talk_question mid="25"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>You already have a cyber café rental item. You cannot borrow more than once.<BR>
+If you want to <FONT color=#a82424>get a new item</FONT>, please go back to <FONT color=#a82424>character selection screen</FONT> and log in again.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="set_pc_5" image="" itemindex="">
+         <talk_question mid="43"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>An error has occurred. Please contact the administrator.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="about_2" image="" itemindex="">
+         <talk_answer link_index="back_2" mid="48"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="46"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>Also, log out and <FONT color=#a82424>re-login</FONT>, the item will be <FONT color=#a82424>returned</FONT>, so you have to talk to me again to get the item after you have logged in again.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="notice_01" image="" itemindex="">
+         <talk_question mid="52"><![CDATA[<html>$Cyber Cafe Helper Fiona$<BR>Also, rental weapons will be <FONT color=#a82424>returned when you log out</FONT>, so it is recommended that you do not <FONT color=#a82424>enhance</FONT>, <FONT color=#a82424>apply potential</FONT>, or <FONT color=#a82424>apply suffix</FONT> on the item.<BR>
+<FONT color=#7e12d2>※ You can receive an item again by talking to Fiona after logging in again.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">nopcbang</exe>
+         <exe type="conexe" true="0" false="3">0</exe>
+         <exe type="conexe" true="0" false="1">1</exe>
+         <exe type="talk">noplayer</exe>
+         <exe type="conexe" true="6" false="7">2</exe>
+         <exe type="talk">set_pc_0</exe>
+         <exe type="conexe" true="1" false="8">3</exe>
+         <exe type="conexe" true="11" false="9">4</exe>
+         <exe type="conexe" true="12" false="10">5</exe>
+         <exe type="conexe" true="13" false="14">6</exe>
+         <exe type="talk">set_pc_2</exe>
+         <exe type="talk">set_pc_3</exe>
+         <exe type="talk">set_pc_4</exe>
+         <exe type="conexe" true="15" false="4">7</exe>
+         <exe type="talk">set_pc_5</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetPCCafe(userObjID) == 2</chk>
+         <chk type="custom">api_user_GetPCCafe(userObjID) == 3</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 0</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 1</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 2</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 3</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 4</chk>
+         <chk type="custom">api_user_SetPCCafeItem(userObjID) == 5</chk>
+      </conditions>
+      <exelink idx="get_pc_item">5</exelink>
+      <exelink idx="back_2">2</exelink>
+   </talk>

@@ -1,0 +1,142 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dqc14_1292_chaos_shadow</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1292</qid>
+      <designer>정진호</designer>
+      <qlevel>80</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Shadow Grave (Chaos)]]></qkname>
+      <qnpc>
+         <npcid>359</npcid>
+         <npcename>n359_trader_merlin</npcename>
+         <npckname>대장장이 멀린</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-accepting" image="QW_91.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Blacksmith Merlin$<BR>
+Aku dengar kamu dapat masuk ke tempat bernama [<FONT color=#a82424>Shadow Grave</FONT>]. Aku punya misi untuk kamu. Tertarik?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>Ambil Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Shadow Grave (Chaos)$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-1" image="QW_91.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-1-back_npc" mid="10" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Blacksmith Merlin$<BR>Aku mempercayakannya padamu. Ingat, <FONT color=#a94407>Shadow Grave</FONT>. Kamu harus menyelesaikannya dengan <FONT color=#a82424>Tingkat kesulitan Chaos</FONT>.<BR>
+ <BR>
+<FONT color=#7e12d2>*Quest ini tidak dapat diselesaikan dengan tingkat kesulitan lainnya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-2-a" mid="12" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Blacksmith Merlin$<BR>Ah kamu sudah kembali! Orang yang memberikan misi ini sepertinya puas dengan hasil kerjamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-2-b" mid="14" select_type="0"><![CDATA[<html><FONT color=#086171>(Ambil Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-2-back_end" mid="16" select_type="0"><![CDATA[<html><FONT color=#2b2723>(Kembali)</FONT></html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Blacksmith Merlin$<BR>Bagus sekali. Kembalilah lagi besok untuk misi yang lainnya.<BR>
+<BR><FONT color=#7e12d2>*Daily Quest hanya dapat diselesaikan 1 kali per hari.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">12920,,,,,,,,,</exe>
+         <exe type="setquest">1292</exe>
+         <exe type="talk" npc="n359_trader_merlin">1</exe>
+         <exe type="checkStageClearRank" rand="6" num="1073" onexe="4,5,6" true="[=" xsi:nil="true" />
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n359_trader_merlin.xml");</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">12920,,,,,,,,,</exe>
+         <exe type="complete" true="">1292</exe>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n359_trader_merlin.xml");</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n359_trader_merlin" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n359_trader_merlin" sub="acceptted">1,2,3</exelink>
+   <exelink qstep="1" npc="n359_trader_merlin" sub="back_npc">0</exelink>
+   <exelink qstep="2" npc="n359_trader_merlin" sub="a">0</exelink>
+   <exelink qstep="2" npc="n359_trader_merlin" sub="b">1</exelink>
+   <exelink qstep="2" npc="n359_trader_merlin" sub="back_end">2</exelink>
+   <journal_data recompense="12920" quest_title="그림자 무덤 (카오스)" chapterid="" quest_level="80" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_91.dds</contents_image>
+         <destination_pos>1073,0,0</destination_pos>
+         <destination_mode>custom:1073@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>24</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="18"><![CDATA[Shadow Grave (Chaos)]]></title>
+         <contents mid="19"><![CDATA[<html>Selesaikan Shadow Grave dengan Tingkat kesulitan Chaos.<BR><BR><FONT color=#7e12d2>*Daily Quest hanya dapat diselesaikan 1 kali per hari.</FONT><BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance) </FONT><FONT color=#a82424>- Shadow Grave(Chaos)</FONT></html>]]></contents>
+         <destination mid="20"><![CDATA[(Chaos) Selesaikan Shadow Grave]]></destination>
+         <todo_msg mid="21"><![CDATA[Shadow Gravein Tingkat kesulitan Chaos.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n359</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>359</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="22"><![CDATA[Lapor ke Blacksmith Merlin]]></title>
+         <contents mid="23"><![CDATA[<html>Lapor ke Blacksmith Merlin di Saint's Haven.<BR><BR><FONT color=#7e12d2>*Daily Quest hanya dapat diselesaikan 1 kali per hari.</FONT><BR><BR><FONT color=#086171>Saint's Haven </FONT><FONT color=#a82424>- Blacksmith Merlin</FONT></html>]]></contents>
+         <destination mid="24"><![CDATA[Lapor ke Blacksmith Merlin]]></destination>
+         <todo_msg mid="25"><![CDATA[Lapor ke Blacksmith Merlin.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>80:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,30 @@
+   <talk>
+      <npcename>n1206_lunaria</npcename>
+      <npcid>1206</npcid>
+      <startexe>6</startexe>
+      <comment>듀얼 캐릭터 때문에 메인퀘스트 완료 여부를 체크함</comment>
+      <npckname mid="1"><![CDATA[Lunaria (Tutorial)]]></npckname>
+      <talk_paragraph index="001" image="QW_PrairieTown.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><BR><FONT color=#7e12d2>(</FONT><FONT color=#7e12d2>It would be better to go to the town first)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="11" link_target="mq01_031_desiny_girl.xml"><![CDATA[<html>[Lv.1] <FONT color=#a82424>The Girl of Destiny</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back" mid="12"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Mysterious Girl$<BR>
+…….</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,31, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 31, 1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 31, 1);</exe>
+         <exe type="conexe" true="0,1,2,3,5" false="0,1,2,3,5">0</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 24, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="0" false="4">1</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">7</chk>
+         <chk type="hascomq">31</chk>
+      </conditions>
+      <exelink idx="back">0</exelink>
+   </talk>

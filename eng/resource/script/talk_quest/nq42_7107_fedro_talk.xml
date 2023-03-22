@@ -1,0 +1,118 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq42_7107_fedro_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>7107</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About Barnac]]></qkname>
+      <qnpc>
+         <npcid>711</npcid>
+         <npcename>n711_warrior_fedro</npcename>
+         <npckname>상급 워리어 페드로</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-a" mid="8" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Warrior Pedro$<BR>
+Barnac is at the peak of all warriors goals.<BR>
+It's a pity that he's missing at times like this.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-b" mid="18" select_type="0"><![CDATA[<html>Even if he's around, he would be old</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-accepting-c" mid="19" select_type="0"><![CDATA[<html>Where is Barnac?</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-accepting-d" mid="20" select_type="0"><![CDATA[<html>But he only wields the sword, can he do much?</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-accepting-e" mid="21" select_type="0"><![CDATA[<html>We can't just sit around and wait for him to come back.</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Master Warrior Pedro$<BR>If he was around, the Dragon Followers wouldn't run around like this....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Master Warrior Pedro$<BR>
+What nonsense! Barnac is always a hero!<BR>
+Age is just a number for him!!<BR>
+<FONT color=#7e12d2>(Pedro seems offfended)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Master Warrior Pedro$<BR>
+That's the problem.<BR>
+Hmm, after he arrived in Lotus Marsh, no one knows where he went to.<BR>
+Please tell me if you hear any news about him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-f" mid="46" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Master Warrior Pedro$<BR>
+What?!<BR>
+People think that Barnac only knows how to wield swords but that is a great misunderstanding.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="38"><![CDATA[<html>$Master Warrior Pedro$<BR>
+Yes, we can't sit around waiting for him to come back. We have to do something about the situation before he comes back!!!<BR>
+So you just trust me and follow me!<BR>
+<FONT color=#7e12d2>(Pedro acts like he became a hero)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="47"><![CDATA[<html>$Master Warrior Pedro$<BR>
+He is the person who created what is called the Adventurer's Guild today and the...<BR>
+Well, I'll stop here. Haha.<BR>
+<FONT color=#7e12d2>(Pedro weirdly stops talking)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,7107, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 500 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="b">0,3</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="c">0,2</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="d">0,4</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="e">0,1</exelink>
+   <journal_data recompense="" quest_title="[대화] 바르낙에 대해서" chapterid="-1" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>711:11000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

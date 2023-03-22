@@ -1,0 +1,286 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_519_boom_artist</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>519</qid>
+      <designer>손원호</designer>
+      <qlevel>24</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Bomb Expert]]></qkname>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>91</npcid>
+         <npcename>n091_trader_bellin</npcename>
+         <npckname>대장장이 벨린</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-noquest" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Blacksmith Berlin$<BR>Sibuk ya.<BR>
+<FONT color=#7e12d2>※Adventurer's Guild Master Gunter akan memberikan Quest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting" image="QS_Default.dds" itemindex="300244" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-a" mid="8" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR><FONT color=#a82424>Analisa yang detil</FONT> sangat dibutuhkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[$Orc Bomb Expert$]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="QN_Npc_Saint_BlackSmith_Dwarf.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-1-a" mid="25" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR><FONT color=#a82424>Blacksmith Berlin</FONT> adalah ahlinya di daerah sini. Bawa ini kepadanya dan dia akan mengetahui berapa banyak Gunpowder yang ada di bom ini.]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1-a" image="QN_Npc_Saint_BlackSmith_Dwarf.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="26"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR><FONT color=#a82424>Berlin</FONT>  adalah orang yang kasar tapi hatinya baik. Kalau kamu mengatakan kepadanya aku yang mengirim kamu, dia akan memeriksa bom ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-2" image="QN_Npc_Saint_BlackSmith_Dwarf.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="28"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Apa kamu tidak dapat menemukan <FONT color=#a82424>Berlin</FONT> ?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-2" image="QS_Default.dds" itemindex="300244" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-2-a" mid="30" select_type="0"><![CDATA[<html>Itu bom.</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Blacksmith Berlin$<BR>Huh? Ada apa itu di tangan mu?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-2-a" image="QS_Default.dds" itemindex="300244" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-2-b" mid="32" select_type="0"><![CDATA[<html>(Beritahu dia kalau Adventurer's Guild Master Gunther yang mengirim ku)</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Blacksmith Berlin$<BR>Apa? Bom? <BR>Apa kamu mencoba melemparkannya kepada ku? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-2-b" image="QS_Default.dds" itemindex="300244" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-2-c" mid="34" select_type="0"><![CDATA[<html>(Berikan bomnya)</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Blacksmith Berlin$<BR>oh. Itu adalah permintaan Adventurer's Guild Master Gunther. <BR>Sini, berikan padaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-2-c" image="QM_Orc_Gray.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-2-d" mid="36" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Blacksmith Berlin$<BR>Hmm... Ini dikarenakan oleh <FONT color=#a82424>Orc technician</FONT>. Mengejutkan. Sangat mengejutkan. <BR>Dalam beberapa tahun belakangan ini mereka telah berkembang pesat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-2-d" image="QM_Orc_Gray.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-2-e" mid="38" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Blacksmith Berlin$<BR>Sebelumnya bom buatan Orc sangatlah lemah. Kita tidak harus memperhatikannya, tapi ini berbeda.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-2-e" image="QM_Orc_Gray.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-2-f" mid="40" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Blacksmith Berlin$<BR>Aku yakin mereka telah mempelajari teknik pembuatan Gunpowder dengan cara yang benar. Dengan bom ini, dinding istana pun akan hancur.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-2-f" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="42"><![CDATA[<html>$Blacksmith Berlin$<BR>Masalah ini dapat menjadi hal serius dan berbahaya... <BR>Beritahu  <FONT color=#a82424>Adventurer's Guild Master Gunther </FONT> akan hal mendesak ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-3" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="54"><![CDATA[<html>$Blacksmith Berlin$<BR>Apa yang kamu lakukan? Cepat beritahu Adventurer's Guild Master Gunther kabar ini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-a" mid="89" select_type="0"><![CDATA[<html>(Beritahu kekuatan bom itu)</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Jadi, apa yang Berlin katakan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-b" mid="91" select_type="0"><![CDATA[<html>Apa maksudmu?</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Ahh.. Aku tidak dapat menunggu lagi. <BR>Karena kita sudah tahu apa yang dapat diperbuat oleh benda ini, kita harus <FONT color=#a82424>mencegahnya</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-b" image="QW_28.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-c" mid="93" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Berdasarkan info dari mata-mata kami, bom-bom ini dibuat oleh <FONT color=#a82424> Bomb expert Numhark</FONT>. Walaupun dia Orc, dia adalah ahli dalam pembuatan bom.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-c" image="QW_28.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-d" mid="95" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="94"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Atasi  <FONT color=#a82424>Bomb expert Numhark</FONT>. Kalau kamu menghancurkan technical department, proses pembuatan bom akan dapat kita perlambat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-d" image="QW_28.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="96"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR><FONT color=#a82424>Bomb Expert Numhark </FONT> bersembunyi tempat yang aman jauh di dalam <FONT color=#a82424>Dark Mine</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-4" image="QW_28.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="98"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Kalau <FONT color=#a82424>Bomb expert Numhark </FONT> terus membuat bom seperti ini, istana kita akan segera dikuasai mereka. Ayo cepat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-a" mid="100" select_type="0"><![CDATA[<html>Pasti.</html>]]></talk_answer>
+      <talk_question mid="99"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Jadi, apa tugas mu sudah selesai?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-b" mid="102" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="101"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-c" mid="104" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="103"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Bagus sekali kerja mu. Tapi aku dengar bom yang sudah jadi telah diseludupkan ke dalam istana. Perang sudah ada di depan mata.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-d" mid="106" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="105"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>General Douglas akan tahu maksud dari pesan ini. Dan karena kamu mempunyai bukti yang kuat, kamu akan dapat meyakinkan General Douglas. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="107"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Aku akan memerlukan bantuan kamu lagi segera, jadi bersiap-siaplah.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">519</exe>
+         <exe type="recompense_view">5197,5191,5192,5193,5194,5195,5196,5197,5198,5199</exe>
+         <exe type="talk" npc="n036_adventurer_guildmaster_gunter">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="huntmon" num="3" party="1" exe="3,4,5" onexe="">825</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="delcount">.</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">200825</exe>
+         <exe type="custom">api_quest_IncCounting(userObjID, 2, 825);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">5197,5191,5192,5193,5194,5195,5196,5197,5198,5199</exe>
+         <exe type="complete" true="">519</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="a">1</exelink>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n036_adventurer_guildmaster_gunter" sub="a">0,1</exelink>
+   <exelink qstep="2" npc="n091_trader_bellin" sub="b" />
+   <exelink qstep="2" npc="n091_trader_bellin" sub="c" />
+   <exelink qstep="2" npc="n091_trader_bellin" sub="d" />
+   <exelink qstep="2" npc="n091_trader_bellin" sub="e" />
+   <exelink qstep="2" npc="n091_trader_bellin" sub="f">0,1</exelink>
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="b" />
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="c" />
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="d">0,2,6,1</exelink>
+   <exelink qstep="5" npc="n036_adventurer_guildmaster_gunter" sub="a">0</exelink>
+   <exelink qstep="5" npc="n036_adventurer_guildmaster_gunter" sub="b">1</exelink>
+   <exelink qstep="5" npc="n036_adventurer_guildmaster_gunter" sub="c" />
+   <exelink qstep="5" npc="n036_adventurer_guildmaster_gunter" sub="d" />
+   <journal_data recompense="1:5191,2:5192,3:5193,4:5194,5:5195,6:5196,7:5197,8:5198,9:5199" quest_title="폭탄 전문가" chapterid="" quest_level="24" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Master_Gunter.dds</contents_image>
+         <destination_pos>11,n36</destination_pos>
+         <destination_mode />
+         <statemark_npcid>36</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Bicara dengan Adventurer's Guild Master Gunther]]></title>
+         <contents mid="65"><![CDATA[<html>Bicara dengan Adventurer's Guild Master Gunther<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Gunther</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Bicara dengan Adventurer's Guild Master Gunther]]></destination>
+         <todo_msg mid="67"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Saint_BlackSmith_Dwarf.dds</contents_image>
+         <destination_pos>11,n91</destination_pos>
+         <destination_mode />
+         <statemark_npcid>91</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="68"><![CDATA[Bicara dengan Blacksmith Berlin]]></title>
+         <contents mid="69"><![CDATA[<html>Bawa Special Orc Bomb dari Dark Mine ke Blacksmith Berlin untuk dianalisa.<BR>
+<BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Blacksmith Berlin</FONT></html>]]></contents>
+         <destination mid="70"><![CDATA[Bicara dengan Blacksmith Berlin. ]]></destination>
+         <todo_msg mid="71"><![CDATA[Bawakan bomnya ke Blacksmith Berlin untuk dianalisa]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Master_Gunter.dds</contents_image>
+         <destination_pos>11,n36</destination_pos>
+         <destination_mode />
+         <statemark_npcid>36</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="73"><![CDATA[Bicara dengan Adventurer's Guild Master Gunther]]></title>
+         <contents mid="74"><![CDATA[<html>Apa yang ku dengar dari Berlin, kekuatan bom itu akan besar. Ayo kembali ke Berlin untuk melaporkan hal ini. <BR><BR><FONT color=#086171> Saint's Haven </FONT> <FONT color=#a82424>→ Adventurer's Guild Master Gunther </FONT></html>]]></contents>
+         <destination mid="75"><![CDATA[Bicara dengan Adventurer's Guild Master Gunther]]></destination>
+         <todo_msg mid="76"><![CDATA[Kembali ke Adventurer's Guild Master Gunther untuk melapor]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_28.dds</contents_image>
+         <destination_pos>284,0,0</destination_pos>
+         <destination_mode>custom:281@1,282@1,283@1,284@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Serang bomb expert Numhark]]></title>
+         <contents mid="79"><![CDATA[<html>Pergilah ke Dark Mine untuk mengalahkan Bomb expert Numhark. <BR><BR><FONT color=#086171> Hermalte Port <FONT color=#2b2723> </FONT><FONT color=#a82424>→ Dark Mine Access </FONT></FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[Serang bomb expert Numhark]]></destination>
+         <todo_msg mid="81"><![CDATA[Pergilah ke Dark Mine untuk menyerang bomb expert Numhark]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Master_Gunter.dds</contents_image>
+         <destination_pos>11,n36</destination_pos>
+         <destination_mode />
+         <statemark_npcid>36</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="109"><![CDATA[Melapor Adventurer's Guild Master Gunther]]></title>
+         <contents mid="110"><![CDATA[<html>Bomb expert Numhark telah dikalahkan. Ayo kembali dan laporkan kepada Saint's Haven's Adventurer's Guild Master.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Adventurer's Guild Master</FONT></html>]]></contents>
+         <destination mid="111"><![CDATA[Melapor Adventurer's Guild Master Gunther]]></destination>
+         <todo_msg mid="112"><![CDATA[Kembali ke Saint's Haven dan Lapor ke Adventurer's Guild Master Gunther.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>24:-1</user_level>
+      <user_class />
+      <prev_quest>518</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

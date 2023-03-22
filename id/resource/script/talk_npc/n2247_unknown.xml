@@ -1,0 +1,62 @@
+   <talk>
+      <npcename>n2247_unknown</npcename>
+      <npcid>2247</npcid>
+      <startexe>1</startexe>
+      <comment>3 : 실버 직업 구분을 위한 공용 퀘스트
+4,6,7,8,9,10 : 아카데믹 15레벨 45레벨 전직 퀘스트 완료 
+(242,379,747,748,749,750 )
+실버: 80 실버헌터 :81
+
+임시로 파르페 파일 복사해서 작업중</comment>
+      <npckname mid="1"><![CDATA[Mysterious Communicator (Prologue)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><BR><FONT color=#7e12d2>(Bentuknya sama seperti yang aku miliki)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="qu_02" mid="22"><![CDATA[<html><FONT size=2 face=Arial>(Sinyalnya masuk. Mari coba angkat)</FONT></html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html> <BR>
+<FONT color=#7e12d2>(Apa ini? Sama persis seperti alat komunikasi yang aku punya, bukan?!)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_02" image="" itemindex="">
+         <talk_answer link_index="qu_03" mid="23"><![CDATA[<html>Siapa kamu? Bagaimana kau tahu tentangku?</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Mysterious Communicator$<BR><FONT color=#7e12d2>(Dari alat komunikasi tersebut terdengar suara yang cukup familiar)</FONT><BR>Ah, aah. Terdengar jelas? Untunglah,<FONT color=#387206> {user_nick}</FONT>.<BR>Sudah kuduga kau pasti ada di sana.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_03" image="" itemindex="">
+         <talk_answer link_index="qu_04" mid="24"><![CDATA[<html>(Lanjut)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Mysterious Communicator$<BR><FONT color=#2b2723>Aku tidak punya banyak waktu untuk menjelaskan.<BR>Kalau kau menunggu lebih lama, orang itu akan datang.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_04" image="" itemindex="">
+         <talk_answer link_index="qu_05" mid="25"><![CDATA[<html>Yap. Apa sih yang sebenarnya terjadi?</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Mysterious Communicator$<BR><FONT color=#2b2723>...jadi...sebenar... </FONT><FONT color=#7e12d2>(bzzt)</FONT><FONT color=#2b2723> itu…sinyal macet…</FONT><BR><FONT color=#7e12d2>(bzzt)</FONT><FONT color=#2b2723> bila kau...membiarkannya ...baha...ya...<BR></FONT><FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723>, apa suaraku masih terdengar jelas?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_05" image="" itemindex="">
+         <talk_answer link_index="qu_06" mid="26"><![CDATA[<html>Lho?! stop motion program? Aku harus segera menemui prophet!</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Mysterious Communicator$<BR><FONT color=#7e12d2>(Terdengar suara yang keras dari kejauhan)</FONT><FONT color=#2b2723><BR>Baiklah. Gunakan alat komunikasi yang kau bawa dan aku akan mengaktifkan stop motion program tersebut.</FONT><BR>
+</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_06" image="" itemindex="">
+         <talk_answer link_index="qu_07" mid="29"><![CDATA[<html>Tunggu sebentar!</html>]]></talk_answer>
+         <talk_question mid="16"><![CDATA[<html>$Mysterious Communicator$<BR><FONT color=#2b2723>Bila tidak begitu orang itu pasti akan membunuhmu.<BR>Percayalah kepadaku, </FONT><FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723>. Kalau begitu aku aktifkan ya?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_07" image="" itemindex="">
+         <talk_question mid="30"><![CDATA[<html>$Mysterious Communicator$<BR>
+<FONT color=#2b2723>(Program dijalankan)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,5" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 997, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 242, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 87 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 379, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 747, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 748, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 749, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 750, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 86</chk>
+      </conditions>
+      <exelink idx="qu_07">3,4,6,7,8,9,10</exelink>
+   </talk>

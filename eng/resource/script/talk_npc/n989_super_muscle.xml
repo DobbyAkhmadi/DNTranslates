@@ -1,0 +1,65 @@
+   <talk>
+      <npcename>n989_super_muscle</npcename>
+      <npcid>989</npcid>
+      <startexe>9</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Super Muscle Duck]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Super Muscle Duck${action:Stand_1}<BR>
+You. Become a <FONT color=#a82424>Crazy Duck</FONT>. Crazy Duck!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="002_1" mid="29"><![CDATA[<html>What is this crazy duck quacking about?</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Super Muscle Duck${action:Stand_1}<BR>
+You. Become a <FONT color=#a82424>Crazy Duck</FONT>. Crazy Duck!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_1" image="" itemindex="">
+         <talk_answer link_index="002_2b" mid="30"><![CDATA[<html>Huh? What?</html>]]></talk_answer>
+         <talk_answer link_index="002_2a" mid="31"><![CDATA[<html>I've heard about it.</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Super Muscle Duck$<BR>
+Quack? Haven't you heard about the DJ Duck story from Storyteller Kathy?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_2a" image="" itemindex="">
+         <talk_answer link_index="002_3a1" mid="32"><![CDATA[<html>Erm… Okay…</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Super Muscle Duck$<BR>
+Great. Go to Storyteller Kathy and come to <FONT color=#a82424>Crazy Duck Nest</FONT>. Quack.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_3a" image="" itemindex="">
+         <talk_question mid="11"><![CDATA[<html>$Super Muscle Duck$<BR>
+You can find Storyteller Kathy near the fountain at the center of the town.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_2b" image="" itemindex="">
+         <talk_answer link_index="002_3b" mid="33"><![CDATA[<html>And?</html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Super Muscle Duck$<BR>
+You're all brawl, no brains eh?<BR>
+Talk to <FONT color=#7e12d2>[Storyteller Kathy] near the central fountain and you can enter Crazy Duck Nest once a day.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_3b" image="" itemindex="">
+         <talk_answer link_index="002_3a2" mid="34"><![CDATA[<html>I got it. </html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Super Muscle Duck${action:Stand}<BR>
+<FONT color=#7e12d2>You can get Lv80 Unique equipment and various festival rewards from Crazy Duck Nest.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="16"><![CDATA[<html>$Super Muscle Duck$<BR>
+Listen to <FONT color=#a82424>Storyteller Kathy</FONT>'s muscle-warming story and go to Crazy Duck Nest.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="custom">api_quest_AddQuest(userObjID, 2439, 2);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 2439, 1);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 2439, 1);</exe>
+         <exe type="conexe" true="4" false="6">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="7" false="5">1</exe>
+         <exe type="talk">003</exe>
+         <exe type="talk">002_3a</exe>
+         <exe type="conexe" true="3" false="4">2</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">2439</chk>
+         <chk type="hasquest">2439</chk>
+         <chk type="lvl" op=">=">80</chk>
+      </conditions>
+      <exelink idx="002_3a1">8,0,1,2</exelink>
+      <exelink idx="002_3a2">8,0,1,2</exelink>
+   </talk>

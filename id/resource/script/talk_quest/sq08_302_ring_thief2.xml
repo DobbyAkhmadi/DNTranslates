@@ -1,0 +1,376 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_302_ring_thief2</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>302</qid>
+      <designer>김인정</designer>
+      <qlevel>14</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>303</nextqid>
+      <nextqname>sq08_303_ring_thief3</nextqname>
+      <nextqnpc>n255_invisible_thief</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Hiding in Plain Sight]]></qkname>
+      <qnpc>
+         <npcid>25</npcid>
+         <npcename>n025_trader_corin</npcename>
+         <npckname>대장장이 코린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>254</npcid>
+         <npcename>n254_invisible_thief</npcename>
+         <npckname xml:space="preserve">　</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>255</npcid>
+         <npcename>n255_invisible_thief</npcename>
+         <npckname xml:space="preserve">　</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>29</npcid>
+         <npcename>n029_crew_kevin</npcename>
+         <npckname>자칭 승무원 케빈</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>99</npcid>
+         <npcename>n099_engineer_hubert</npcename>
+         <npckname>비행선 엔지니어 휴버트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-noquest" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Blacksmith Corin$<BR>Kalau kamu tidak ada urusan denganku, tolong biarkan aku kembali bekerja.<BR>(Kamu dapat Menerima Quest dari Airship Engineer Hubert.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-noquest" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$???$<BR>...<BR>(Kamu dapat Menerima Quest dari Airship Engineer Hubert.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n255_invisible_thief-noquest" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$???$<BR>...<BR>(Kamu dapat Menerima Quest dari Airship Engineer Hubert.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-noquest" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Kevin$<BR>Kamu...tak dapat menangkap thiefnya? (Mata Kevin berair.) Oh, tidak...tak apa. Umm, pergi bicaralah kepada Mr. Airship Engineer Hubert. Kurasa dia ingin mengatakan sesuatu kepadamu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-accepting" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-accepting-a" mid="10" select_type="0"><![CDATA[<html>Kamu tak akan percaya padaku jika kuberitahu.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Airship Engineer Hubert$<BR>Aku yakin kita dapat menangkap thief itu dan mengambil kembali Kevin's Ring jika kita melacak bau dari barang yang May jual kepadaku. Apa itu? Bahan bakar? Lem? Pembersih?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-accepting-a" image="QS_Default.dds" itemindex="300214" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-accepting-b" mid="12" select_type="0"><![CDATA[<html>Yeeugh.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Airship Engineer Hubert$<BR>Bagaimanapun. Kita memerlukan Hound untuk melacak baunya. Begitu kita mendapatkannya, mintalah untuk mencium bau tersebut. (Dia memegang Filthy Cloth.) Ini, bawalah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-accepting-c" mid="14" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Hiding in Plain Sight$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-accepting-c" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="15"><![CDATA[<html>$Airship Engineer Hubert$<BR>Kita mungkin dapat meminjam seekor Hound dari Blacksmith Corin. Maksudku, kita tidak punya waktu menjinakkan seekor wild Hound.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-a" mid="18" select_type="0"><![CDATA[<html>Gah! Menjijikan.</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Airship Engineer Hubert$<BR>Tidak peduli seberapa kuat dia menghapus baunya, bau seperti ini akan tetap menyatu paling tidak satu minggu. Percayalah! Sekarang, pergilah meminjam Hound sehingga kita dapat menangkap bajingan ini. Ini, kamu membutuhkannya. (Airship Engineer Hubert memberimu Filthy Cloth.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1-a" image="QS_Default.dds" itemindex="300214" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-b" mid="20" select_type="0"><![CDATA[<html>Lebih cepat aku membuang ini, lebih baik...</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Airship Engineer Hubert$<BR>Setelah kita mendapatkan Hound, minta untuk mencium bau tersebut dan ikuti baunya. Mudah, kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-c" mid="22" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Hiding in Plain Sight$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1-c" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="23"><![CDATA[<html>$Airship Engineer Hubert$<BR>Kita mungkin dapat meminjam seekor Hound dari Blacksmith Corin. Maksudku, kita tidak punya waktu menjinakkan seekor wild Hound.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="24"><![CDATA[<html>$Kevin$<BR>Kamu akan menemukan ring ayahku, kan? Dan kamu akan memukul thief itu tepat di muka bodohnya, kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="25"><![CDATA[<html>$???$<BR>...<BR>(Ada kehadiran yang aneh disini...)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n255_invisible_thief-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="26"><![CDATA[<html>$???$<BR>...<BR>(Ada kehadiran yang aneh disini...)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="27"><![CDATA[<html>$Airship Engineer Hubert$<BR>Pergilah mendapatkan Hound dari Blacksmith Corin, dan minta untuk mencium bau dari baju tersebut. Sekali tercium olehnya, akan dapat membawamu ke tersangka. Cepat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n025_trader_corin-2-a" mid="29" select_type="0"><![CDATA[<html>Aku ingin meminjam seekor Hound.</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Blacksmith Corin$<BR>Oh, hallo! Apa yang dapat... (Blacksmith Corin mencium bau aneh di udara.) ...whoof! Apa bau INI ? Apa kamu belum mandi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n025_trader_corin-2-b" mid="32" select_type="0"><![CDATA[<html>Terima kasih.</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Blacksmith Corin$<BR>Huh? Untuk apa? (Kamu menjelaskan.)<BR>Hmm. Kasihan. Baiklah, aku akan membawakan Hound terbaik untuk ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-2-b" image="QS_Default.dds" itemindex="300214" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n025_trader_corin-2-c" mid="34" select_type="0"><![CDATA[<html>(Kamu menunggu dengan sabar.)</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Blacksmith Corin$<BR>Ini. Bawa kemari baju bau atau apapun itu kesini. Hound ini cukup hebat, jadi dia akan ingat baunya. (Blacksmith Corin mengambil baju tersebut dan menaruhnya pada hidung Hound.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n025_trader_corin-2-d" mid="36" select_type="0"><![CDATA[<html>Aku tak menyangka...mungkin seharusnya aku...</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Blacksmith Corin$<BR>(Hound tersebut mulai merasa terganggu. Tiba-tiba, menjerit, melompat ke udara, dan jatuh tergeletak ditanah, tak bergerak.)<BR>A-apa? Apa ini? Apa yang terjadi? Poochoccio-ku! Tidak!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n025_trader_corin-2-e" mid="38" select_type="0"><![CDATA[<html>Mungkin aku harus memberitahumu, May membuat sesuatu yang berbahaya...</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Blacksmith Corin$<BR>I-ini tindakan penyiksaan Hound! Aku akan memenjarakanmu untuk poochicide! Aku akan menggugatmu karena penyerangan dan poochery!<BR>(Blacksmith Corin menyiram air dingin ke Houndnya sambil memukulmu.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n025_trader_corin-2-f" mid="40" select_type="0"><![CDATA[<html>Baik... Terima kasih.</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Blacksmith Corin$<BR>(Hound itu tiba-tiba berdiri tegak.)<BR>Oh! Dia baik-baik saja. Jangan khawatir.<BR>(Hound itu menggigit baju tersebut dan merobeknya hingga hancur.)<BR>Dia tampak baik sekarang. Ok, kamu dapat membawanya!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-2-f" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="41"><![CDATA[<html>$Blacksmith Corin$<BR>Menurutmu thief tersebut berada di sekitar Sleepers' Temple, kan? Jika kamu membawa Hound kesana, dia akan mengendus keluar korbanmu dengan mudah! Pergilah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-3" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="44"><![CDATA[<html>$Blacksmith Corin$<BR>Menurutmu thief tersebut berada di sekitar Sleepers' Temple, kan? Jika kamu membawa Hound kesana, dia akan mengendus keluar korbanmu dengan mudah! Pergilah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Airship Engineer Hubert$<BR>Oh, inikah Houndnya? Terlihat sopan. Bawalah ke Sleepers' Temple. Aku berharap kamu dapat mencari thiefnya kali ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="46"><![CDATA[<html>$Kevin$<BR>Oh! Poochie! Apa dia akan membantumu mencari ring ayahku? Wow, ini hebat! Semoga beruntung!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n254_invisible_thief-3-a" mid="48" select_type="0"><![CDATA[<html>Hello?</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$???$<BR>...<BR>(Kamu menyadari kehadiran seseorang, berusaha bersikap seakan mereka tidak pernah disini.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n254_invisible_thief-3-b" mid="50" select_type="0"><![CDATA[<html>Ketemu kau, akhirnya!</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Invisible Thief$<BR>(Hound mulai mencakar sesuatu seperti udara tipis.)<BR>Hey. Hey! Minggir kamu, pergi! Kupukul kau! Shoo!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-3-b" image="QS_Default.dds" itemindex="300066" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n254_invisible_thief-3-c" mid="52" select_type="0"><![CDATA[<html>Kamu mencuri Kevin's ring!</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Invisible Thief$<BR>Hmph. Kamu hanya beruntung. Jika aku tidak terinjak cat yang sangat bau, kamu tak akan menemukanku. Aku mulai berpikir bau ini tak akan pernah hilang!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-3-c" image="QS_Default.dds" itemindex="300213" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n254_invisible_thief-3-d" mid="54" select_type="0"><![CDATA[<html>Kalau begitu kembalikan!</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Invisible Thief$<BR>Yeah? Kenapa memang? Ini hanya ring tua berkarat. Aku mengambilnya untuk kesenangan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n254_invisible_thief-3-e" mid="56" select_type="0"><![CDATA[<html>Hey, tunggu!</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Invisible Thief$<BR>Yah, terserahlah. Ini hanya ring. Ambillah. Karena kamu juga telah menemukanku, aku mungkin akan kembali ke kota.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-3-e" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="57"><![CDATA[<html>$Invisible thief$<BR>Ayo kita bertemu disana karena aku tidak akan kabur lagi. Datang ke Calderock Village untuk bertemu dengan aku di <FONT color=#a82424>soldier's </FONT> <FONT color=#a82424>tent</FONT>. <FONT color=#7e12d2>(Suara melangkah kabur terdengar setelah pencuri menyampaikan apa yang ingin dia sampaikan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-4" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="58"><![CDATA[<html>$Invisible thief$<BR>.... <FONT color=#7e12d2>(Sekarang tidak ada apa-apa. Pergi ke soldier tent di Calderock Village)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n255_invisible_thief-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n255_invisible_thief-4-a" mid="60" select_type="0"><![CDATA[<html>Kamu bukan penyayang Hound ?</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Invisible Thief$<BR>Hm, kamu menemukanku cukup cepat. Haha.<BR>Tapi...mengapa kamu membawa Hound? Kamu...kamu tidak memerlukannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n255_invisible_thief-4-a" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="61"><![CDATA[<html>$Invisible Thief$<BR>Dengar, bawa...bawalah pulang atau bagaimana. Singkirkan itu, Ok?<BR>(Mungkin Hound menggigit thief tersebut ketika di Temple. Sebaiknya kembalikan ke Blacksmith Corin.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n025_trader_corin-4-a" mid="63" select_type="0"><![CDATA[<html>Ummm...mungkin May...? Atau...</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Blacksmith Corin$<BR>Oh, Houndku kembali! Hmm, kupikir...siapa yang tahu aku menyimpan kasus penyiksaan Hound di sekitar sini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="64"><![CDATA[<html>$Blacksmith Corin$<BR>Baiklah. Ini waktunya memberi makan untuk Poochoccio ku yang berharga, ya sudah ini waktunya kamu pergi sekarang. Sampai jumpa!<BR>(Blacksmith Corin dengan cepat mengalungi Houndnya, dan menaruh makanan yang banyak di depan mukanya.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="65"><![CDATA[<html>$Blacksmith Corin$<BR>Hmmm... Houndku sepertinya tidak bersemangat seperti biasanya. Mungkin aku memang harus menyimpan kasus untuk penyiksaan...<BR>(Blacksmith Corin menatap Hound dengan pandangan kebapakan.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="66"><![CDATA[<html>$Airship Engineer Hubert$<BR>Bagaimana prosesmu menangkap thief? Kevin terbiasa dengan kabar baik, kurasa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n255_invisible_thief-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n255_invisible_thief-5-a" mid="68" select_type="0"><![CDATA[<html>Kamu agak sombong, benarkah?</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Invisible Thief$<BR>Kamu disini. Akupun disini. Ini janjiku, seperti yang kamu lihat. Jangan curiga! Heh heh heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n255_invisible_thief-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n255_invisible_thief-5-b" mid="70" select_type="0"><![CDATA[<html>Aku tak peduli. Berikan padaku ringnya.</html>]]></talk_answer>
+      <talk_question mid="69"><![CDATA[<html>$Invisible Thief$<BR>Um, hello? Aku tak terlihat! Sejauh apapun thief pergi, aku cukup lincah. Kalau bukan karena bau menjijikan itu, kamu TIDAK akan dapat menemukanku. Tapi, karena kamu cukup pintar, aku akan menceritakan sesuatu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n255_invisible_thief-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n255_invisible_thief-5-!next" mid="72" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n025_trader_corin-6" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="94"><![CDATA[<html>$Blacksmith Corin$<BR>Menurutmu thief tersebut berada di sekitar Sleepers' Temple, kan? Jika kamu membawa Hound kesana, dia akan mengendus keluar korbanmu dengan mudah! Pergilah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n254_invisible_thief-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="95"><![CDATA[<html>$???$<BR>...<BR>(Ada kehadiran yang aneh disini...)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n255_invisible_thief-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="96"><![CDATA[<html>$???$<BR>...<BR>(Ada kehadiran yang aneh disini...)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="97"><![CDATA[<html>$Kevin$<BR>Oh! Hound! Apa dia akan membantumu mencari ring ayahku? Wow, ini hebat! Semoga beruntung!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-6" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="98"><![CDATA[<html>$Airship Engineer Hubert$<BR>Oh, inikah Houndnya? Terlihat sopan. Bawalah ke Sleepers' Temple. Aku berharap kamu dapat mencari thiefnya kali ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">302</exe>
+         <exe type="recompense_view">3027,3021,3022,3023,3024,3025,3026,3027,3028,3029</exe>
+         <exe type="addquestitem" num="1">300214</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">3027,3021,3022,3023,3024,3025,3026,3027,,</exe>
+         <exe type="addquestitem" num="1">300214</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300214</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">3027,3021,3022,3023,3024,3025,3026,3027,3028,3029</exe>
+         <exe type="complete" true="">302</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n099_engineer_hubert" sub="b">1</exelink>
+   <exelink qstep="accepting" npc="n099_engineer_hubert" sub="c">2,0,3,4</exelink>
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="b">0</exelink>
+   <exelink qstep="1" npc="n099_engineer_hubert" sub="c">1,2,3</exelink>
+   <exelink qstep="2" npc="n025_trader_corin" sub="b" />
+   <exelink qstep="2" npc="n025_trader_corin" sub="c" />
+   <exelink qstep="2" npc="n025_trader_corin" sub="d" />
+   <exelink qstep="2" npc="n025_trader_corin" sub="e" />
+   <exelink qstep="2" npc="n025_trader_corin" sub="f">0,1,2</exelink>
+   <exelink qstep="3" npc="n254_invisible_thief" sub="b" />
+   <exelink qstep="3" npc="n254_invisible_thief" sub="c" />
+   <exelink qstep="3" npc="n254_invisible_thief" sub="d" />
+   <exelink qstep="3" npc="n254_invisible_thief" sub="e">0,1</exelink>
+   <exelink qstep="4" npc="n025_trader_corin" sub="a">0,1</exelink>
+   <exelink qstep="5" npc="n255_invisible_thief" sub="b">0</exelink>
+   <exelink qstep="5" npc="n255_invisible_thief" sub="!next">1</exelink>
+   <journal_data recompense="1:3021,2:3022,3:3023,4:3024,5:3025,6:3026,7:3027,8:3028,9:3029" quest_title="반지 도둑 II" chapterid="" quest_level="14" quest_mark_type="10" use_item_list="300214">
+      <journal index="1">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="74"><![CDATA[Hubert's Hound Plan]]></title>
+         <contents mid="75"><![CDATA[<html>Sepertinya <FONT color=#a82424>Airplane Engineer Hubert</FONT> ingin menyewa hound untuk mengejar pencuri. Coba dengarkan cerita dia.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Airplane Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="76"><![CDATA[Bicaralah kepada Airship Engineer Hubert]]></destination>
+         <todo_msg mid="77"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>8,n25</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>25</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Sniffing Around]]></title>
+         <contents mid="79"><![CDATA[<html>Pinjamlah Hound dari Blacksmith Corin, dan lacak thiefnya.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Blacksmith Corin</FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[Bicaralah kepada Blacksmith Corin]]></destination>
+         <todo_msg mid="81"><![CDATA[Pinjam Hound dari Blacksmith Corin.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_16.dds</contents_image>
+         <destination_pos>129,n254</destination_pos>
+         <destination_mode>custom:126@1,127@1,128@1,129@1</destination_mode>
+         <statemark_npcid>254</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="82"><![CDATA[On the Trail]]></title>
+         <contents mid="83"><![CDATA[<html>Mengikuti Hound tersebut ke <FONT color=#a82424>Sleepers's Temple</FONT>, dan menemukan thiefnya.<BR><BR><FONT color=#086171>Gray Ruins → Lower Ridge (Forgotten Temple)</FONT> <FONT color=#a82424>→ Sleepers's Temple</FONT></html>]]></contents>
+         <destination mid="84"><![CDATA[Ikuti Hound ke Sleepers's Temple]]></destination>
+         <todo_msg mid="85"><![CDATA[Ikuti Hound ke Sleepers's Temple]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>8,n25</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>25</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="86"><![CDATA[The Hound Comes Home]]></title>
+         <contents mid="87"><![CDATA[<html>Kamu telah menemukan thief yang tidak terlihat, dan setuju menemuinya di Calderock Village. Pertama, kembalikan Hound kepada <FONT color=#a82424>Blacksmith Corin</FONT>.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Blacksmith Corin</FONT></html>]]></contents>
+         <destination mid="88"><![CDATA[Bicaralah kepada Blacksmith Corin.]]></destination>
+         <todo_msg mid="89"><![CDATA[Kembalikan Hound kepada Blacksmith Corin.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>8,n255</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>255</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="90"><![CDATA[The Invisible Thief]]></title>
+         <contents mid="91"><![CDATA[<html>Kamu mengembalikan Hound kepada Blacksmith Corin. Sekarang, temui thief di dekat Elite Soldiers' Tents.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Invisible Thief</FONT></html>]]></contents>
+         <destination mid="92"><![CDATA[Bicaralah kepada Invisible Thief]]></destination>
+         <todo_msg mid="93"><![CDATA[Bicaralah kepada Invisible Thief.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>301</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

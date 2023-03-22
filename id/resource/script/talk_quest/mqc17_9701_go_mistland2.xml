@@ -1,0 +1,530 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc17_9701_go_mistland2</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>17</qchapter>
+      <qid>9701</qid>
+      <designer>이세정</designer>
+      <qlevel>80</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9702</nextqid>
+      <nextqname>mqc17_9702_successor_of_protector</nextqname>
+      <nextqnpc>n1806_merca_rubinat</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[ke Mist Land II]]></qkname>
+      <qnpc>
+         <npcid>1805</npcid>
+         <npcename>n1805_merca_geraint</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1806</npcid>
+         <npcename>n1806_merca_rubinat</npcename>
+         <npckname>레드 드래곤 루비나트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1813</npcid>
+         <npcename>n1813_rubinat_box</npcename>
+         <npckname>???</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1839</npcid>
+         <npcename>n1839_gereint_kid</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1840</npcid>
+         <npcename>n1840_velskud</npcename>
+         <npckname>벨스커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>775</npcid>
+         <npcename>n775_cleric_ilizer</npcename>
+         <npckname>신전기사 일라이저</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>776</npcid>
+         <npcename>n776_darklair_mardlen</npcename>
+         <npckname>어둠의 여신관 마들렌</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Left_cleric_ilizer.dds" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-accepting-party_check" mid="140" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Temple Knight Elizer$<BR>Ada apa, <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Left_cleric_ilizer.dds" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-accepting-acceptted" mid="142" select_type="3" />
+      <talk_question mid="141"><![CDATA[<html>$Temple Knight Elizer$<BR>mission dari <FONT color=#a82424>Priestess of Darkness Madeline</FONT><FONT color=#2b2723></FONT> sudah selesai?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Left_cleric_ilizer.dds" center_image="">
+      <talk_answer link_index="n775_cleric_ilizer-accepting-" mid="144" select_type="5" />
+      <talk_question mid="143"><![CDATA[<html>$Temple Knight Elizer$<BR>Sudah bicara dengan Madeline? Bagaimana kalau bicara setelah berpisah dengan temanmu?<BR>
+ <BR>
+<FONT color=#7e12d2>※tidak bisa laksanakan quest dalam kondisi party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-a" mid="67" select_type="2" />
+      <talk_question mid="6"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>Rubinart menyuruh kamu bicara dengan Dark Priestess karena kita berhubungan dengan dimensional gap dan kamu harus melewati <FONT color=#a82424>Dimensional Gap</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-b" mid="68" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh… kata Gerraint Mist Land's door tidak bisa dilewati karena ada pelindung, apakah itu benar?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-c" mid="69" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Priestess of Darkness Madeline$<BR> Monolith's door terbuka dan apa pun bisa menyerang dari Mist Land. Tapi belum ada kabar ada pasukan dari Mist Land.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-d" mid="70" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>tapi mereka bukannya tidak bergerak. <FONT color=#a82424>karena ada pelindung Mist Land</FONT>, mereka tidak bisa masuk ke Althea.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-d" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-e" mid="71" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>Rubinart mengatakan bahwa pembaut pelindung berhubungan dengan dirinya. Dan pelindung itu tidak boleh dirusak karena pelindung itu melindungi Althea. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-f" mid="72" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>Tapi pelindung Monolith's door bisa rusak jika kamu ingin masuk ke Mist land. <BR>jadi kamu harus ke mist land melalui Dimensional Gap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-g" mid="73" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Mist Land dan Althea beda sekali. Apakah tidak akan terserat jika melalui Dimensional Gap?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-g" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-h" mid="74" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>Yang berhubungan dengan Rubinart di Mist land akan memandu jalan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-h" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-i" mid="75" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(yang berhubungan dengan Rubinart di mist land berarti </FONT><FONT color=#a82424>Rubinart's half jewel</FONT><FONT color=#662500>. Karena Rubinart bilang dia akan terhubung dengan Mist Land's Jewel…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-j" mid="76" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>Muncul <FONT color=#a82424>Dimensional Gap</FONT> akibat Monolith door belakangan ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-k" mid="77" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>aku yakin kamu bisa lewat dimensional gap dan menuju Mist Land.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-l" mid="117" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>aku akan memandu karena pertama kali kamu menggunakan Dimensional Gap.<BR>kamu bisa menggunakannya melalui <FONT color=#a82424>Saint's Haven West Border Gateway</FONT> setelah ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-m" mid="120" select_type="0"><![CDATA[<html>aku sudah siap. </html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-1-n" mid="121" select_type="0"><![CDATA[<html>aku akan kembali setelah selesaikan pekerjaan aku.</html>]]></talk_answer>
+      <talk_question mid="119"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>sudah siap pergi ke Mist Land?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-party_check" mid="123" select_type="2" />
+      <talk_question mid="122"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>aku akan buka Dimensional Gap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-" mid="125" select_type="5" />
+      <talk_question mid="124"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>bicara lagi jika sudah siap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2" mid="169" select_type="2" />
+      <talk_question mid="168"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>harapan dunia ini yang sedang hancur...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-p" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-" mid="171" select_type="5" />
+      <talk_question mid="170"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>kamu tidak bisa pergi dengan teman kamu. Keluar dari party dan kembali lagi.<BR><BR><FONT color=#7e12d2>※tidak bisa laksanakan quest dalam kondisi party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-1-" mid="78" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$Gerraint${sound:npc_GereintKid_9701_qu_01.ogg}<BR>tidak akau kubiarkan dunia yang diselamatkan Argenta hancur...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Velskud_Human.dds" center_image="">
+      <talk_answer link_index="n1840_velskud-1-" mid="111" select_type="5" />
+      <talk_question mid="18"><![CDATA[<html>$Velskud${sound:npc_Velskud_9701_qu_01.ogg}<BR>jika jewel bisa tenang... <FONT color=#7e12d2>(Velskud sedang berpikir)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-1-" mid="112" select_type="5" />
+      <talk_question mid="19"><![CDATA[<html>$Red Dragon Rubinart$<BR>........</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1813_rubinat_box-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1813_rubinat_box-1-" mid="136" select_type="5" />
+      <talk_question mid="135"><![CDATA[<html><FONT color=#2b2723>$???$<BR></FONT><FONT color=#7e12d2>(ada accessories box yang tidak tahu gunanya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Left_cleric_ilizer.dds" center_image="">
+      <talk_question mid="138"><![CDATA[<html>$Temple Knight Elizer$<BR>Coba pergi ke  <FONT color=#a82424>Garden of Time and Space</FONT> untuk bicara dengan Madeline jika tidak tahu harus berbuat apa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-a" mid="153" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>..........…...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-b" mid="155" select_type="0"><![CDATA[<html>aku tersesat.</html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-2-e" mid="156" select_type="0"><![CDATA[<html>tidak, aku akan pergi.</html>]]></talk_answer>
+      <talk_question mid="154"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>ada yang ingin kamu bicarakan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-party_check" mid="158" select_type="2" />
+      <talk_question mid="157"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>sepertinya kamu tersesat di Dimensional Gap. <BR>aku akan buka gap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-warp" mid="173" select_type="2" />
+      <talk_question mid="159"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>harapan di dunia yang hancur ini...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-" mid="176" select_type="5" />
+      <talk_question mid="175"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>kamu tidak bisa pergi dengan teman kamu. Keluar dari party dan kembali lagi.<BR><BR><FONT color=#7e12d2>※tidak bisa laksanakan quest dalam kondisi party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-" mid="183" select_type="5" />
+      <talk_question mid="182"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>bicara lagi jika sudah siap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-" mid="114" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Gerraint$<BR>Dragon tidak membutuhkan persiapan, tapi sepertinya kamu harus bersiap. Kita ketemu di <FONT color=#a82424>West Border Gateway</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-a" mid="149" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>..........…...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-b" mid="162" select_type="0"><![CDATA[<html>Aku tersesat.</html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-3-e" mid="163" select_type="0"><![CDATA[<html>Tidak, aku akan pergi.</html>]]></talk_answer>
+      <talk_question mid="150"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>ada yang ingin kamu bicarakan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-party_check" mid="165" select_type="2" />
+      <talk_question mid="164"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>
+Dimensional Gap를 다시 한 번 열도록 하겠습니다.<BR>이번에는 길을 잃지 않도록 조심하세요.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-warp" mid="178" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>harapan di dunia yang hancur ini...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-" mid="180" select_type="5" />
+      <talk_question mid="179"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>kamu tidak bisa pergi dengan teman kamu. Keluar dari party dan kembali lagi.<BR><BR><FONT color=#7e12d2>※tidak bisa laksanakan quest dalam kondisi party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3-" mid="186" select_type="5" />
+      <talk_question mid="185"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>bicara lagi jika sudah siap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Darklair_Castia.dds" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-4-" mid="83" select_type="5" />
+      <talk_question mid="23"><![CDATA[<html>$Priestess of Darkness Madeline$<BR>
+Coba ke <FONT color=#a82424>Saint's Haven West Border Gateway</FONT> jika tidak tahu harus kemana. Energy adventurer akan memandu kamu ke Mist Land.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1805_merca_geraint-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1805_merca_geraint-4-" mid="84" select_type="5" />
+      <talk_question mid="24"><![CDATA[<html>$Gerraint$<BR><FONT color=#7e12d2>(Gerraint cemberut dan berpikir)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-a" mid="85" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Red Dragon Rubinart$<BR>........kelihatannya tidak apa-apa. hampir saja terjadi hal yang tidak diinginkan.<BR><FONT color=#7e12d2>(Rubinart kelihatan cemas dan melihat </FONT><FONT color=#387206>{user_nick}</FONT><FONT color=#7e12d2>)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-b" mid="86" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>kamu datang dengan merasakan half jewel… kamu memang benar </FONT><FONT color=#a82424>Mist Land</FONT><FONT color=#662500> Rubinart kan?<BR>aku datang dengan benar?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-c" mid="87" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Red Dragon Rubinart$<BR>Iya, ini <FONT color=#a82424>Mist Land</FONT>. Kamu datang dari Althea untuk menutup Monolith's door?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-d" mid="88" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Red Dragon Rubinart$<BR>aku sudah mendapatkan informasi melalui setengah jewel yang kamu simpan. Aku sudah tanya yang lain juga ke anak pirang ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-d" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-e" mid="89" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Gerraint$<BR>bukan anak pirang! Aku Gerraint?!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-e" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-f" mid="90" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Red Dragon Rubinart$<BR>Oh baiklah. Ancient yang energik.<BR>dengarkan aku dulu, karena aku ada cerita.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-g" mid="91" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>oh, tapi perang apa tadi?<BR>apakah Mist Land penuh dengan perang seperti itu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-h" mid="92" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Red Dragon Rubinart${sound:npc_Rubinart_9701_qu_01.ogg}<BR>tidak seperti itu. Dunia ini hampir sama seperti Althea. semacam <FONT color=#a82424>Parallel world</FONT> .</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-i" mid="93" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Althea sama dengan Mist Land?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-j" mid="94" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Red Dragon Rubinart$<BR>iya, aku akan jelaskan dengan singkat. Vestinel yang berikan racun ke Goddess kabur dan membuat dunia yang sama seperti Althea. <FONT color=#a82424>dia menjiplak Althea</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-k" mid="95" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Red Dragon Rubinart$<BR> Althea adalah bentuk perkembangan dari mimpi goddess. jadi beda dengan mist land milik Vestinel. tapi kadang kamu akan melihat orang yang sama di Althea, jadi jangan terkejut. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-l" mid="96" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Red Dragon Rubinart$<BR>aku harap kamu mau melindungi pelindung jika mau menyelamatkan Althea. Pasukan mist land akan menyerang jika pelindung itu terbuka...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-m" mid="97" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Red Dragon Rubinart$<BR>Paling baik adalah menutup pintu itu secara permanen. Tapi itu hampir mustahil karena dari mist land, hanya Vestinel yang berwenang melakukan itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-m" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-n" mid="98" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Gerraint$<BR>jadi memang kamu yang pasang pelindung di Mist Land ya?<BR>tapi kenapa mereka disini saling berantem? Bukannya seharusnya saling kerjasama untuk menghancurkan pelindung? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-n" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-o" mid="99" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Red Dragon Rubinart$<BR>mereka tidak dibuat seperti itu disini. Kamu akan mengerti selama disini, tapi disini paling berkuasa yang namanya <FONT color=#a82424>Child</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-o" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-p" mid="100" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Red Dragon Rubinart$<BR><FONT color=#a82424>Child</FONT> adalah bentuk evolusi dari Beyond Dragon. Dia menyerap kekuatan lawan untuk menjadi lebih kuat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-p" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-q" mid="101" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Red Dragon Rubinart$<BR> Child yang tidak bisa masuk ke althea semakin liar dan saling berburu… kamu kurang beruntung dan jatuh ke tengah-tengah pertarungan mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-q" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-r" mid="102" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Gerraint$<BR>kalau begitu kita bisa cari solusi selama mereka bertarung dong?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-r" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-s" mid="103" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Red Dragon Rubinart$<BR>bisa dilakukan seperti dalam waktu singkat, tapi pada ujungnya akan ada child yang paling kuat bertahan hidup di antara mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-s" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-t" mid="104" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Red Dragon Rubinart$<BR>mereka bisa semakin kuat, mungkin sekarang pelindung berfungsi, tapi aku tidak yakin kalau salah satu dari mereka semakin kuat. Jadi aku dan <FONT color=#a82424>Anti goddess party</FONT> menginginkan  mereka tidak berevolusi lagi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-u" mid="105" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>evolusi dari  Beyond Dragon… mereka bisa semakin kuat menyerap kekuatan lawan... </FONT><FONT color=#a82424>Anti goddess</FONT><FONT color=#662500>P apa lagi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-u" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-v" mid="106" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Red Dragon Rubinart$<BR> <FONT color=#a82424>Anti goddess party adalah kelompok yang menentang Vestinel</FONT>. Musuh dari musuh kita adalah teman.<BR>aku akan jelaskan lebih jelas lain kali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-v" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-w" mid="128" select_type="4" />
+      <talk_question mid="47"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-w" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-x" mid="108" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Red Dragon Rubinart$<BR>sekarang gawat darurat. Aku sulit menangani mereka dengan setengah kekuatan aku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1806_merca_rubinat-4-x" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1806_merca_rubinat-4-!next" mid="109" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Red Dragon Rubinart$<BR>katanya manusia juga seperti itu. Dari baik bisa jadi jahat... Aku rentan terhadap racun Mist Land, apalagi aku chaos dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1813_rubinat_box-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1813_rubinat_box-4-a" mid="130" select_type="2" />
+      <talk_question mid="129"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(ada accessories box yang tidak cocok dengan tempat ini)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1813_rubinat_box-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1813_rubinat_box-4-b" mid="132" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>$Red Dragon Rubinart$<BR>Oh, jangan sentuh itu. Tidak sopan memegang barang orang lain… kamu tahu sopan santun kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1813_rubinat_box-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1813_rubinat_box-4-" mid="134" select_type="5" />
+      <talk_question mid="133"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(Rubinart kelihatan tidak senang. Jangan pegang lagi. Sepertinya coba lihat saat Rubinart tidak ada)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">9701</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="talk" npc="n775_cleric_ilizer">a</exe>
+         <exe type="talk" npc="n775_cleric_ilizer">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>미지의 격전지로 이동.</comment>
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13525,1);</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">o</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">p</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment>2스텝일 때 이벤트 맵에서 컷신 1 출력 - 종료 후 3스텝 3저널로</comment>
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,13525,1);</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">c</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">d</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment>일정 수의 몬스터 제거 -> 컷신 2 출력 (루비나트 은신처로 워프) -> 4스텝 4저널로 변경</comment>
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,13525,1);</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">c</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">d</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">97010,,,,,,,,,</exe>
+         <exe type="complete" true="">9701</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n775_cleric_ilizer" sub="party_check">1</exelink>
+   <exelink qstep="accepting" npc="n775_cleric_ilizer" sub="acceptted">0</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="c" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="d" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="e" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="f" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="g" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="h" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="i" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="j" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="k" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="l" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="m" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="n" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="party_check">3</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="2">0,1,2</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="e" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="party_check">1</exelink>
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="warp">0</exelink>
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="e" />
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="party_check">1</exelink>
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="warp">0</exelink>
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="3" npc="n776_darklair_mardlen" sub="" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="b" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="c" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="d" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="e" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="f" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="g" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="h" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="i" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="j" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="k" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="l" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="m" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="n" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="o" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="p" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="q" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="r" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="s" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="t" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="u" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="v">0</exelink>
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="w">1</exelink>
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="x" />
+   <exelink qstep="4" npc="n1806_merca_rubinat" sub="!next" />
+   <exelink qstep="4" npc="n1813_rubinat_box" sub="b" />
+   <exelink qstep="4" npc="n1813_rubinat_box" sub="" />
+   <journal_data recompense="97010" quest_title="미스트랜드로 II" chapterid="17" quest_level="80" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_SaintHaven_NestWorldZone01.dds</contents_image>
+         <destination_pos>55,n776</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>776</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="50"><![CDATA[ke Mist Land 1]]></title>
+         <contents mid="51"><![CDATA[<html>Gerraint dan Velskud memberikan  Rubinart's half jewel. Rubinart katanya menghilang. Tanya ke Priestess of Darkness Madeline bagaimana pergi ke Mist Land.<BR>
+ <BR>
+<FONT color=#7e12d2>※tidak bisa laksanakan quest dalam kondisi party.</FONT><BR><BR><FONT color=#086171>Saint's Haven </FONT><FONT color=#a82424>- Garden of Time and Space(Priestess of Darkness Madeline)</FONT></html>]]></contents>
+         <destination mid="52"><![CDATA[(Solo)bicara dengan Garden of Time and Space Madeline]]></destination>
+         <todo_msg mid="53"><![CDATA[Bicara dengan Priestess of Darkness Madeline di Garden of Time and Space.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos>13525,0,0</destination_pos>
+         <destination_mode>custom:13525@2</destination_mode>
+         <statemark_npcid>776</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="54"><![CDATA[ke Mist Land 2]]></title>
+         <contents mid="55"><![CDATA[<html>Priestess of Darkness Madeline mengatakan jewel dari Rubinart bisa membuat pergi ke Mist Land. Gunakan dimensional gap dengan panduan Madeline.<BR><BR><FONT color=#7e12d2>※tidak bisa laksanakan quest dalam kondisi party</FONT><BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>- ???</FONT></html>]]></contents>
+         <destination mid="56"><![CDATA[(Solo)ke Mist Land]]></destination>
+         <todo_msg mid="57"><![CDATA[Pergi ke mist land dengan panduan Madeline.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image />
+         <destination_pos>13525,0,0</destination_pos>
+         <destination_mode>custom:13525@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="58"><![CDATA[ke Mist Land 3]]></title>
+         <contents mid="59"><![CDATA[<html>jatuh ke pertempuran. Bunuh monster untuk bertahan hidup.<BR><BR><FONT color=#7e12d2>※tidak bisa laksanakan quest dalam kondisi party</FONT><BR><BR><FONT color=#a82424>Mysterious war(???)</FONT></html>]]></contents>
+         <destination mid="60"><![CDATA[(Solo)bunuh monster]]></destination>
+         <todo_msg mid="61"><![CDATA[bunuh monster yang menyerang.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_NPC_rubinat.dds</contents_image>
+         <destination_pos>54,n1806</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1806</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="62"><![CDATA[ke Mist Land 4]]></title>
+         <contents mid="63"><![CDATA[<html>ada wajah Rubinart saat sadar. tanya apa yang terjadi.<BR><BR><FONT color=#7e12d2>※tidak bisa laksanakan quest dalam kondisi party</FONT><BR><BR><FONT color=#086171>Rubinart's Hiding</FONT> <FONT color=#a82424>- Red Dragon Rubinart</FONT></html>]]></contents>
+         <destination mid="64"><![CDATA[(Solo)Bicara dengan Rubinart]]></destination>
+         <todo_msg mid="65"><![CDATA[Bicara dengan Rubinart.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9700</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

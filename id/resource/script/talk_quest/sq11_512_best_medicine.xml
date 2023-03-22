@@ -1,0 +1,498 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_512_best_medicine</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>512</qid>
+      <designer>손원호</designer>
+      <qlevel>30</qlevel>
+      <qdesc>테이의 엄마의 병은 더 심해졌고 이젠 어떻게 해야 할지 모르겠다고 한다. 테이는 예전에 스타쉬라는 학자가 이야기한 전설의 명약을 떠올린다. 문장학자 스타쉬를 찾아가면. 전설의 명약 만드라고라의 전설을 이야기해준다. 만드라고라는 지성을 가진 식물로서 지금까지 수많은 모험가들이 만드라고라를 찾으러 갔지만 누구도 만드라고라를 구해온 사람은 없다며 만드라고라가 있는 강하류 를 알려준다.
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[The Best Elixir]]></qkname>
+      <qnpc>
+         <npcid>244</npcid>
+         <npcename>n244_tei</npcename>
+         <npckname>테이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>246</npcid>
+         <npcename>n246_mandra_son</npcename>
+         <npckname>만드라</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>249</npcid>
+         <npcename>n249_saint_guard</npcename>
+         <npckname>왕성 근위병 로이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>88</npcid>
+         <npcename>n088_scholar_starshy</npcename>
+         <npckname>문장학자 스타쉬</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="151"><![CDATA[<html>$Tei$<BR>Aku berharap ibuku dapat segera sembuh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="153"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Pergilah! Aku sedang sibuk! Jangan ganggu aku!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-a" mid="6" select_type="0"><![CDATA[<html>Apa yang terjadi?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Royal Guard Roy$<BR>Oh kamu <FONT color=#382000>{user_nick}</FONT>.<BR>Apa yang harus kita lakukan sekarang?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-a" image="QN_boy_tei.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-b" mid="8" select_type="0"><![CDATA[<html>Ahh, yang kamu maksud anak laki-laki yang membantuku mendapatkan Rainbow Bell Flower?</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Royal Guard Roy$<BR>Apa kamu masih ingat anak kecil yang kamu bantu di Hermalte Port?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-c" mid="10" select_type="0"><![CDATA[<html>Ahhh... </html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Royal Guard Roy$<BR>Erm. Karena ibunya sakit, dia meminta bantuan. Sayangnya, Elixir sudah tidak menunjukkan efek apa-apa lagi. Ibunya tetap sakit. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-d" mid="12" select_type="0"><![CDATA[<html>Aku akan pergi melihat.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Royal Guard Roy$<BR>Masih muda tapi sudah banyak memanggul beban, haizz....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-acceptted" mid="14" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$The Best Elixir$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-1" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-1-a" mid="17" select_type="0"><![CDATA[<html>Jangan khawatir</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Royal Guard Roy$<BR>Cara membantu? Mungkin <FONT color=#a82424>Heraldry Scholar Stas</FONT> ada solusi lain.<BR>Coba tanyakan padanya deh</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-1-a" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Royal Guard Roy$<BR>Kamu dapat menemukan anak itu di <FONT color=#a82424>Hermalte Port</FONT>. Terima kasih atas bantuanmu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>$Royal Guard Roy$<BR>Masih muda tapi sudah banyak memanggul beban, haizz....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-2-a" mid="21" select_type="0"><![CDATA[<html>Halo.. Apa kamu baik-baik saja?</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Tei$<BR>Hix Hix. Apa yang harus ku lakukan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-2-b" mid="23" select_type="0"><![CDATA[<html>Ya, ini aku.</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Tei$<BR>Ah, Adventurer! Jadi kamulah yang membantu ku kemarin itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2-b" image="QS_Default.dds" itemindex="300075" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-2-c" mid="25" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Tei$<BR>Apa yang harus kulakukan sekarang.. Sepertinya ibu akan sembuh ketika aku memberikannya Rainbow Bell Flower, ternyata sama seperti elixir, tidak ada efek apa-apa sama sekali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-2-d" mid="27" select_type="0"><![CDATA[<html>Jangan takut! Aku akan menolongmu.</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Tei$<BR>Apa yang harus ku lakukan sekarang? Kalau ibu meninggal... aku... Aku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-2-e" mid="29" select_type="0"><![CDATA[<html>Apa kamu masih punya cara lain?</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Tei$<BR>Hix hix....Bagaimana kamu bisa membantuku?<BR>Aku telah mencoba berbagai macam Elixir.<BR>aku sudah melakukan semua yang dapat dilakukan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-2-f" mid="31" select_type="0"><![CDATA[<html>Janganlah kamu menangis dan pikirkan baik-baik.</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Tei$<BR>Aku tidak tahu....hix hix....<BR>Apa yang harus ku lakukan....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-2-g" mid="33" select_type="0"><![CDATA[<html>Apa yang terjadi?</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Tei$<BR>Hix hix... Kalau ku pikir-pikir, aku mendengar tentang hal ini dari Port Entrance Crew.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2-g" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-2-h" mid="36" select_type="0"><![CDATA[<html>Heraldry Scholar Stas?</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Tei$<BR>Aku tidak begitu ingat, di <FONT color=#a82424>Saint's Haven</FONT> ada seorang <FONT color=#a82424>Heraldry Scholar</FONT> yang tahu mengenai itu. Namanya... Stas...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-2-i" mid="38" select_type="0"><![CDATA[<html>Aku akan pergi melihat.</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Tei$<BR>Iya. Dia akan tahu obat apa yang dapat membantu ibuku, kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-2-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="39"><![CDATA[<html>$Tei$<BR>Hix....Terima kasih....<BR>Kamu harus menyelamatkan ibuku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-3" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="41"><![CDATA[<html>$Tei$<BR>Hix Hix... Temukan <FONT color=#a82424>Stas</FONT> di <FONT color=#a82424>Saint's Haven</FONT> untuk mendapatkan obat untuk Ibuku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-a" mid="43" select_type="0"><![CDATA[<html>Aku punya permintaan untuk mu</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Ah! Ini juga bukan! Semua data kacau!!!!! Siapa kamu? Apa kamu tidak bisa lihat aku sibuk? Jangan ganggu aku!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-b" mid="45" select_type="0"><![CDATA[<html>(Tanyakan Elixir yang dapat digunakan untuk menyelamatkan ibu dari anak kecil itu)</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Percaya? Aku sedang sibuk, untuk apa aku juga memikirkan siapa yang dapat dipercaya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-b" image="QS_Default.dds" itemindex="300075" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-c" mid="47" select_type="0"><![CDATA[<html>Nafas monster?</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Yup. Sepertinya hal ini memang cukup mengganggu. Kalau <FONT color=#a82424>Rainbow Bell Flower</FONT> juga tidak dapat menyembuhkannya... Maka pasti dia telah terkontaminasi nafas monster. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-d" mid="49" select_type="0"><![CDATA[<html>Apa yang harus ku lakukan?!</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Ketika Black Dragon menyembuhkan dirinya, monster di sekelilingnya bertambah kuat. Aku yakin itu disebabkan oleh <FONT color=#2b2723>nafas dari Forest Demon</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-e" mid="51" select_type="0"><![CDATA[<html>Maksudmu tidak ada jalan lain?</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Maaf, tidak ada cara lain lagi.<BR>Kita semua masih hidup sampai sekarang ini pun adalah suatu keajaiban.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-f" mid="53" select_type="0"><![CDATA[<html>Sepertinya ada beberapa hal yang bahkan Star yang-tahu-segalanya tidak tahu.</html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Tidak! Tidak dan Tidak! Pergilah aku masih ada banyak hal yang harus dikerjakan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-g" mid="57" select_type="0"><![CDATA[<html>Apa kamu tidak tahu cara untuk menyelamatkan ibu anak itu? </html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Apa?! Bagaimana mungkin aku memiliki barang yang aku tidak tahu apa-apa mengenainya? Aku tahu semua hal yang harus diketahui mengenai dunia ini. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-h" mid="59" select_type="0"><![CDATA[<html>Beritahu aku jalan keluarnya dan aku akan... </html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Ah! Orang yang keras kepala, bagaimana mungkin aku tidak tahu. Kalaupun aku tahu, tidak ada yang dapat kita lakukan. Jadi... </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-i" mid="61" select_type="0"><![CDATA[<html>Aku tidak tahu</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Keras kepala sekali. Kalau kamu ingin tahu, aku akan memberitahu kamu. Ada <FONT color=#a82424>Legendary Elixir</FONT> yang rumornya dapat menyembuhkan penyakit apapun di dunia ini. Apa kamu tahu apa itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-i" image="QN_mandra_shadow.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-j" mid="63" select_type="0"><![CDATA[<html>Jadi ini semua mungkin selama aku mampu menemukannya? </html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Kamu tidak tahu? Itu adalah <FONT color=#a82424>Mandra</FONT>, tanaman yang biasanya terkubur di bawah tanah, dan mereka berbentuk seperti manusia.  Ah! Bingung aku menjelaskannya, anggap saja makhluk itu ada.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-j" image="QN_mandra_shadow.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-k" mid="65" select_type="0"><![CDATA[<html>Sepertinya aku pernah melihatnya sebelumnya.</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Mencari Mandra? Wahaha! <FONT color=#a82424>Mandra</FONT> sangatlah cerdik dan tidak akan mudah ditangkap. Dilihatpun jarang, apalagi menangkapnya. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-k" image="QN_mandra_shadow.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-l" mid="67" select_type="0"><![CDATA[<html>Dimana aku dapat menemukannya?</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Apa? Kamu dapat melihat <FONT color=#a82424>Mandra</FONT>? Haha... Dasar pembual. Yah kalau kamu bisa melihat mereka dan seberuntung itu, mungkin kamu dapat menguji keberuntungan kamu dengan menangkap mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-l" image="QW_34.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-3-m" mid="69" select_type="0"><![CDATA[<html>Aku akan pergi melihat.</html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Terserah kamu karena kamu sangat suka kekacauan. Ada legenda yang mengatakan <FONT color=#a82424>River Ruins</FONT> adalah habitat paling cocok untuk Mandra tapi tidak ada seorangpun yang pernah melihatnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="70"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Mandra sangat sensitif dengan area di sekelilingnya, dia akan langsung bersembunyi begitu merasakan keberadaan orang lain. Itulah mengapa kamu harus melakukan ini <FONT color=#a82424>sendirian</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-3-n" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="216"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Pergi bersama 1 grup sangatlah berisik!<BR><BR><FONT color=#a82424>※ Quest ini hanya dapat dilakukan sendiri.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4" image="QW_34.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="72"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Kakekku memberitahu Mandra hidup di <FONT color=#a82424>River Ruins</FONT>. Dan saat cerita ini disampaikan kepadaku, tidak ada yang tahu apa Mandra-Mandra itu masih ada di sana atau tidak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-a" mid="157" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="155"><![CDATA[<html>$Mandra$<BR>Ah! Kamu rupanya, Aku pikir orang yang mencari obat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-b" mid="159" select_type="0"><![CDATA[<html>Sejujurnya... (mulai bercerita)</html>]]></talk_answer>
+      <talk_question mid="158"><![CDATA[<html>$Mandra$<BR>Wahahaa! Jadi memang ada hal yang kamu butuhkan dari aku, Sang Raja Tanah? Wahahaha!! <html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-c" mid="161" select_type="0"><![CDATA[<html>Ya</html>]]></talk_answer>
+      <talk_question mid="160"><![CDATA[<html>$Mandra$<BR>Ya? Jadi kalian berhak untuk menangkap kami, Mandra yang malang, untuk menyembuhkan penyakit?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-d" mid="163" select_type="0"><![CDATA[<html>Aku sangat menyesal</html>]]></talk_answer>
+      <talk_question mid="162"><![CDATA[<html>$Mandra$<BR>Hahaha, beraninya kamu menangkap Prince Mandra. <BR>Berani sekali kamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-e" mid="175" select_type="0"><![CDATA[<html>(Menantang Mandra)</html>]]></talk_answer>
+      <talk_question mid="174"><![CDATA[<html>$Mandra$<BR>Ha, sepertinya aku yang akan mengasihani mu. Kamu akan menjadi orang ke 1000 yang mencoba menangkapku dan gagal. <BR><FONT color=#7e12d2>(Mandra memukulkan tangannya dengan kuat)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-f" mid="177" select_type="0"><![CDATA[<html>(Battle Mulai)</html>]]></talk_answer>
+      <talk_question mid="176"><![CDATA[<html>$Mandra$<BR>Kalau kamu dapat menyentuh ku, aku akan melakukan apa yang kamu minta.<BR>Ayo!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-h" mid="179" select_type="0"><![CDATA[<html>(Serangan Pertama)</html>]]></talk_answer>
+      <talk_answer link_index="n246_mandra_son-4-g" mid="180" select_type="0"><![CDATA[<html>(Menunggu lawan membalas)</html>]]></talk_answer>
+      <talk_question mid="178"><![CDATA[<html><FONT color=#086171>Mandra VS {user_nick}</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-u" mid="182" select_type="0"><![CDATA[<html>(Game Over)</html>]]></talk_answer>
+      <talk_question mid="181"><![CDATA[<html>$VS Mandra${sound:Archer_SpinKick_a.wav}<BR>Mandra meninju dengan kecepatan halilintar, serangan yang sulit dihindari, dada terluka.<BR><FONT color=#a82424> Super Efektif!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-i" mid="184" select_type="0"><![CDATA[<html>(Mengincar tubuh bagian atas)</html>]]></talk_answer>
+      <talk_answer link_index="n246_mandra_son-4-j" mid="185" select_type="0"><![CDATA[<html>(Mengincar tubuh bagian bawah)</html>]]></talk_answer>
+      <talk_question mid="183"><![CDATA[<html>$VS Mandra${sound:Archer_SpinKick_a.wav}<BR>{user_nick} tidak memberikan Mandra kesempatan untuk beristirahat dan menyerang tiba-tiba. Mandra menjadi stun dan mulai panik, menurunkan defence nya. <BR><FONT color=#a82424>Mandra menerima 5 damage. <BR>Tidak begitu efektif...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-u" mid="187" select_type="0"><![CDATA[<html>(Game Over)</html>]]></talk_answer>
+      <talk_question mid="186"><![CDATA[<html>$VS Mandra${sound:Archer_SpinKick_a.wav}<BR>Serangan pada bagian atas tubuh Mandra telah di tangkis dengan mudah oleh Mandra, yang meneruskannya dengan serangan sempurna.<BR>Super Efektif!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-l" mid="189" select_type="0"><![CDATA[<html>(Sand Attack)</html>]]></talk_answer>
+      <talk_answer link_index="n246_mandra_son-4-k" mid="190" select_type="0"><![CDATA[<html>(Giga Drain)</html>]]></talk_answer>
+      <talk_question mid="188"><![CDATA[<html>$VS Mandra${sound:Archer_SpinKick_a.wav}<BR> Tubuh bagian bawah yang tidak stabil tampak seperti titik lemah. Mandra mulai goyang setelah menerima pukulan di tubuh bagian bawahnya.<BR><FONT color=#a82424> Mandra menerima 10 damage.</FONT><BR>Bidik dan lancarkan beberapa combo ketika ada kesempatan. Serang? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-u" mid="192" select_type="0"><![CDATA[<html>(Game Over)</html>]]></talk_answer>
+      <talk_question mid="191"><![CDATA[<html>$VS Mandra${sound:Archer_SpinKick_a.wav}<BR>Membidik dan pelancarkan beberapa serangan ke arah titik vital Mandra, tapi karena titik-titik ini berbeda dengan yang dimiliki oleh manusia, dia membalas dengan serangan yang ganas. Mandra mengeluarkan skill rahasianya [Fury Swipes].<BR><FONT color=#a82424> <BR>Super Efektif!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-m" mid="194" select_type="0"><![CDATA[<html>(Gunakan Supersonic Waves)</html>]]></talk_answer>
+      <talk_answer link_index="n246_mandra_son-4-n" mid="195" select_type="0"><![CDATA[<html>(Gunakan Seismic Toss)</html>]]></talk_answer>
+      <talk_question mid="193"><![CDATA[<html>$VS Mandra${sound:Archer_SpinKick_a.wav}<BR>Mengenai mata secara tidak sengaja. <BR><FONT color=#a82424>Mandra menerima 25 damage.</FONT><BR>Mandra tidak dapat melihat. Gunakan skill ultimatemu sekarang!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-u" mid="165" select_type="0"><![CDATA[<html>(Game Over)</html>]]></talk_answer>
+      <talk_question mid="164"><![CDATA[<html>$VS Mandra${sound:Archer_SpinKick_a.wav}<BR>Mengumpulkan energi untuk gelombang supersonik, Mandra tersadar tiba-tiba. Mandra melancarkan serangan angin puyuh. Pandangan langsung buram. <BR><FONT color=#a82424> Menerima 10000000 damage.<BR>{user_nick} pingsan! </FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-n" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-o" mid="167" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="166"><![CDATA[<html>$VS Mandra${sound:Archer_SpinKick_a.wav}<BR>Gerakan yang belum pernah dilihat sebelumnya, Seismic Toss!!! Mandra terkena 100 non-stop combo.<BR><FONT color=#a82424>Mandra menerima 9999999 damage. Super efektif!! <BR>Mandra mundur</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-p" mid="169" select_type="0"><![CDATA[<html>Kamu adalah lawan yang cukup tangguh.</html>]]></talk_answer>
+      <talk_question mid="168"><![CDATA[<html><FONT color=#2b2723>$Mandra$<BR>Ho..ho.. Aku akhirnya terkalahkan juga, kamu adalah orang yang menakjubkan.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-p" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-q" mid="172" select_type="0"><![CDATA[<html>... Kenapa kamu memerah...</html>]]></talk_answer>
+      <talk_question mid="171"><![CDATA[<html>$Mandra$<BR>Ho, Aku tidak percaya... akhirnya aku kalah.<BR>Baiklah, aku akan memegang kata-kataku.<BR>Aku akan mengikuti semua perkataanmu... </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-q" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-r" mid="197" select_type="0"><![CDATA[<html>Hmmm. Daun saja sudah cukup kan?</html>]]></talk_answer>
+      <talk_question mid="196"><![CDATA[<html>$Mandra$<BR>Yang harus kulakukan hanya mengikuti mu ke panci yang mendidih kan?<BR> Ah.. Hidup ini singkat namun indah bagi ku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-r" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-s" mid="199" select_type="0"><![CDATA[<html>Yang harus kulakukan sekarang adalah menyelamatkan ibu anak itu.</html>]]></talk_answer>
+      <talk_question mid="198"><![CDATA[<html>$Mandra$<BR>Apa? Kamu hanya butuh daun ku saja, itu sudah lebih dari cukup untuk menghidupkan kembali manusia. Tapi kalau kamu memakan ku, kamu akan hidup selamanya, apa kamu tidak mau?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-s" image="QS_Default.dds" itemindex="300242" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-t" mid="202" select_type="0"><![CDATA[<html>(Menerima Mandra's Leaf)</html>]]></talk_answer>
+      <talk_question mid="201"><![CDATA[<html>$Mandra$<BR>... Kamu adalah orang yang baik. Ini akan cukup untuk menyelamatkan Mom anak itu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-t" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="203"><![CDATA[<html>$Mandra$<BR>Aku akan selalu mengingat kebaikan mu, Teman.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-4-u" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n246_mandra_son-4-e" mid="219" select_type="0"><![CDATA[<html>(Tanding Ulang)</html>]]></talk_answer>
+      <talk_question mid="218"><![CDATA[<html>$Game Over$<BR>Serangan yang sangat tepat dari Mandra. Kamu kalah.<BR><BR><FONT color=#a82424>▶ Ingin pertandingan ulang?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n246_mandra_son-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="73"><![CDATA[<html>$Mandra$<BR>Aku akan selalu mengingat kebaikan mu, Teman.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-5" image="QS_Default.dds" itemindex="300242" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-5-a" mid="206" select_type="0"><![CDATA[<html>(Berikan Mandra Leaf)</html>]]></talk_answer>
+      <talk_question mid="74"><![CDATA[<html>$Tei$<BR>Ah! Adventurer! Kamu ada di sini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-5-b" mid="208" select_type="0"><![CDATA[<html>Semoga ibuku membaik.</html>]]></talk_answer>
+      <talk_question mid="207"><![CDATA[<html>$Tei$<BR>Ini... Mandra leaf. <BR>Kalau aku memilikinya, ibuku akan...!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-5-c" mid="210" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="209"><![CDATA[<html>$Tei$<BR>Terima kasih. Terima kasih sekal!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-5-d" mid="212" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="211"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-5-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n244_tei-5-e" mid="214" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="213"><![CDATA[<html>$Tei$<BR>Aku akan segera memberikannya kepada ibu! Terima kasih banyak!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n244_tei-5-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="215"><![CDATA[<html><FONT color=#7e12d2>(Tei tersenyum lebar dengan Mandra's Leaf ditangannya. Melihat senyum di wajahnya, aku tidak dapat menahan ketawa. Ada pepatah lama yang mengatakan menolong orang lain adalah menolong dirimu sendiri.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="223"><![CDATA[<html>$Heraldry Scholar Stas$<BR>
+Kamu tidak berikan mandarora root ke Tei?<BR>
+Dia pasti sedang menunggumu di <FONT color=#a82424>Hermalte Port</FONT>. Pergilah untuk temui dia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="224"><![CDATA[<html>$Royal Guard Roy$<BR>Apakah kamu sudah berikan obatnya ke Tei di <FONT color=#a82424>Hermalte Port</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">5127,5121,5122,5123,5124,5125,5126,5127,5128,5129</exe>
+         <exe type="setquest">512</exe>
+         <exe type="talk" npc="n249_saint_guard">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="addquestitem" num="1">300242</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">5127,5121,5122,5123,5124,5125,5126,5127,5128,5129</exe>
+         <exe type="complete" true="">512</exe>
+         <exe type="delquestitem" num="-1">300242</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n249_saint_guard" sub="d">0</exelink>
+   <exelink qstep="accepting" npc="n249_saint_guard" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n249_saint_guard" sub="a">0,1</exelink>
+   <exelink qstep="2" npc="n244_tei" sub="b" />
+   <exelink qstep="2" npc="n244_tei" sub="c" />
+   <exelink qstep="2" npc="n244_tei" sub="d" />
+   <exelink qstep="2" npc="n244_tei" sub="e" />
+   <exelink qstep="2" npc="n244_tei" sub="f" />
+   <exelink qstep="2" npc="n244_tei" sub="g" />
+   <exelink qstep="2" npc="n244_tei" sub="h" />
+   <exelink qstep="2" npc="n244_tei" sub="i" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="b" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="c" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="d" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="e" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="f" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="g" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="h" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="i" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="j" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="k" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="l" />
+   <exelink qstep="3" npc="n088_scholar_starshy" sub="m">0,1</exelink>
+   <exelink qstep="4" npc="n246_mandra_son" sub="b" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="c" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="d" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="e" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="f" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="h" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="g" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="u" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="i" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="j" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="u" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="l" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="k" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="u" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="m" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="n" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="u" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="o" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="p" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="q" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="r" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="s" />
+   <exelink qstep="4" npc="n246_mandra_son" sub="t">0,1,2</exelink>
+   <exelink qstep="4" npc="n246_mandra_son" sub="e" />
+   <exelink qstep="5" npc="n244_tei" sub="a">2</exelink>
+   <exelink qstep="5" npc="n244_tei" sub="b" />
+   <exelink qstep="5" npc="n244_tei" sub="c">0</exelink>
+   <exelink qstep="5" npc="n244_tei" sub="d">1</exelink>
+   <exelink qstep="5" npc="n244_tei" sub="e" />
+   <journal_data recompense="1:5121,2:5122,3:5123,4:5124,5:5125,6:5126,7:5127,8:5128,9:5129" quest_title="최고의 영약" chapterid="" quest_level="30" quest_mark_type="10" use_item_list="300242">
+      <journal index="1">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>11,n249</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>249</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="120"><![CDATA[Speak with Royal Guard Roy]]></title>
+         <contents mid="121"><![CDATA[<html>Royal Guard Roy ingin mengatakan sesuatu. Cobalah berbicara dengannya.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Royal Guard Roy</FONT></html>]]></contents>
+         <destination mid="122"><![CDATA[Speak with Royal Guard Roy]]></destination>
+         <todo_msg mid="123"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_boy_tei.dds</contents_image>
+         <destination_pos>12,n244</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>244</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="124"><![CDATA[Speak with Boy Tei]]></title>
+         <contents mid="125"><![CDATA[<html>Menurut Royal Guard Roy, Ibu Tei masih sakit. Temui Tei di Hermalte Port untuk mendengarkan ceritanya.<BR><BR><FONT color=#086171>Hermalte Port</FONT> <FONT color=#a82424>→ Tei</FONT></html>]]></contents>
+         <destination mid="126"><![CDATA[Speak with Boy Tei]]></destination>
+         <todo_msg mid="127"><![CDATA[Meet Tei at Hermalte Port.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>11,n88</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>88</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="129"><![CDATA[Berbicara dengan Heraldry Scholar Stas]]></title>
+         <contents mid="130"><![CDATA[<html>Ibu Tei masih sakit. Pergilah ke Saint's Haven untuk menemui Heraldry Scholar Stas, tanyakan alternatif penyembuhan lainnya.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Heraldry Scholar Stas</FONT></html>]]></contents>
+         <destination mid="131"><![CDATA[Berbicara dengan Heraldry Scholar Stas]]></destination>
+         <todo_msg mid="132"><![CDATA[Meet with Heraldry Scholar Stas at Saint's Haven.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_34.dds</contents_image>
+         <destination_pos>344,1,1</destination_pos>
+         <destination_mode>custom:341@1,342@1,343@1,344@3</destination_mode>
+         <statemark_npcid>246</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="133"><![CDATA[(Solo) Kumpulkan Mandra]]></title>
+         <contents mid="134"><![CDATA[<html>Menurut Stas, satu-satunya obat yang dapat menyembuhkan Ibu Tei adalah Mandra's Leaf. Pergilah ke Flooded Downstream Ruins untuk mendapatkannya.<BR><BR><FONT color=#a82424>※ Tidak dapat menjalan Quest ketika mempunyai Party.</FONT> Hermalte Port (Ruined Riverbanks Path) <FONT color=#a82424>→Flooded Downstream Ruins</FONT></html>]]></contents>
+         <destination mid="135"><![CDATA[(Solo) Kumpulkan Mandra]]></destination>
+         <todo_msg mid="136"><![CDATA[Pergilah ke River Ruins sendirian untuk menemukan Mandra.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_boy_tei.dds</contents_image>
+         <destination_pos>12,n244</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>244</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="137"><![CDATA[Speak with Boy Tei]]></title>
+         <contents mid="138"><![CDATA[<html>Berikan Mandra's Leaf ke Tei yang sudah menunggu di Hermalte Port.<BR><BR><FONT color=#086171>Hermalte Port</FONT> <FONT color=#a82424>→ Tei</FONT></html>]]></contents>
+         <destination mid="139"><![CDATA[Speak with Boy Tei]]></destination>
+         <todo_msg mid="140"><![CDATA[Return to Hermalte Port dan hand the Mandra to Tei.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>30:-1</user_level>
+      <user_class />
+      <prev_quest>471</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

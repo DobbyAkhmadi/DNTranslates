@@ -1,0 +1,351 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_207_scattered_components</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>3</qchapter>
+      <qid>207</qid>
+      <designer>김주연</designer>
+      <qlevel>13</qlevel>
+      <qdesc>300040 비행선 부품
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>208</nextqid>
+      <nextqname>mq08_208_depleting_fuel</nextqname>
+      <nextqnpc>n099_engineer_hubert</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Scattered Parts]]></qkname>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드의 길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>54</npcid>
+         <npcename>n054_elite_soldier_wounded</npcename>
+         <npckname>부상당한 정예병사1</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>55</npcid>
+         <npcename>n055_elite_soldier</npcename>
+         <npckname>정예병사 클림드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>99</npcid>
+         <npcename>n099_engineer_hubert</npcename>
+         <npckname>비행정 엔지니어 휴버트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n054_elite_soldier_wounded-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n054_elite_soldier_wounded-noquest-" mid="136" select_type="5" />
+      <talk_question mid="32"><![CDATA[<html>$Wounded Elite Soldier$<BR>Aa… Kecelakaan terjadi dalam sekejap. Setelah mendengar suara "Braak!", aku tidak ingat apapun.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-noquest-" mid="137" select_type="5" />
+      <talk_question mid="33"><![CDATA[<html>$Elite Soldier Carlrim$<BR>Harus kembali dengan anak buahku yg terluka sebisa mungkin, meskipun tertinggal sedikit. Aku tidak akan memaafkan pelaku yg membunuh anak buahku…!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-noquest-" mid="138" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$Airship Engineer Hubert$<BR>Apa? Aku sangat sibuk dengan pesawat aku. Pergi saja, jangan ganggu aku! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-acceptted" mid="91" select_type="0"><![CDATA[<html>(Kamu menjelaskan situasinya)</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Bagaimana dengan wanita berambut perak? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-a" mid="95" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>Jadi akhirnya kita kalah dari <FONT color=#a82424>Black Knight</FONT>...<BR>Swordswoman terluka dan gadis <FONT color=#a82424>Prophet</FONT> masih ditangan yang jahat...<BR>Keadaan menjadi semakin buruk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-b" mid="97" select_type="2" />
+      <talk_question mid="96"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Maaf aku tidak bisa berkata lagi...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-b" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-c" mid="98" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Hmm... Bukan salahmu. <BR>Jadi, Argenta memintamu pergi ke <FONT color=#a82424>Saint's Haven</FONT> untuk mencari <FONT color=#a82424>blond-haired swordsman</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-c" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2" mid="99" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Pergilah ke <FONT color=#a82424>Saint's Haven</FONT>... <BR>Kamu harus menggunakan airship untuk pergi ke <FONT color=#a82424>Saint's Haven Royal Palace</FONT>... Tapi sudah dihancurkan oleh <FONT color=#a82424>Black Knight</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-" mid="100" select_type="5" />
+      <talk_question mid="40"><![CDATA[<html>$Airship Engineer Hubert$<BR>Aku sibuk dengan airship ini jadi pergilah! <BR>Kalau ada pertanyaan, Pergilah ke <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-1-" mid="101" select_type="5" />
+      <talk_question mid="41"><![CDATA[<html>$Elite Soldier Carlrim$<BR>Aku harus menyelamatkan setidaknya satu tentara yang terluka sebelum kita pulang. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n054_elite_soldier_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n054_elite_soldier_wounded-1-" mid="102" select_type="5" />
+      <talk_question mid="42"><![CDATA[<html>$Wounded Elite Soldier$<BR>Ah...kecelakaan terjadi dalam sekejap. Tiba-tiba DOR! Dan aku tidak ingat apapun lagi...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-a" mid="103" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Airship Engineer Hubert$<BR>Kamu menanyakan tentang perkembangan airship? Kamu ingin membuat aku tambah kesal?!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-b" mid="105" select_type="2" />
+      <talk_question mid="104"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Maaf...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-b" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Airship Engineer Hubert$<BR>Ack! Kamu bukan bagian dari crewku. Pesawat ini sedang rusak...sampai aku memperbaikinya. Jika kamu ada pertanyaan, tanyakan kepada prajurit yang ada disana. Aku lebih sibuk dari lebah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-" mid="106" select_type="5" />
+      <talk_question mid="46"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Kamu bisa melihat sendiri keadaan airship.<BR>Pergilah ke airship dock dan bicara dengan <FONT color=#a82424>Airship Engineer Hubert</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3" image="QP_AirShip_part .dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3-" mid="107" select_type="5" />
+      <talk_question mid="47"><![CDATA[<html>$Airship Engineer Hubert$<BR>Oh, seriusan...bagaimana aku bisa memperbaiki barang rongsok ini tanpa spare part yang benar! Aku tidak mungkin pergi ke <FONT color=#a82424>Forest of Death</FONT> untuk mengumpulkan part yang tersisa. Dengan nama seperti itu, siapa yang berani pergi kesana?<BR>Kalau ada pertanyaan, tanyakan pada tentara. Aku harus memperbaiki airship.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-a" mid="108" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Elite Soldier Carlrim$<BR>(Dia berteriak keras ke tentara.)<BR>Baiklah semua. Dengarkan! Airship akan berfungsi sebentar lagi. Sampai saat itu, semuanya terus berjuang!<BR>Hei, kamu! Kenapa kamu masih berkeliaran disini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-b" mid="110" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ah... Aku </FONT> <FONT color=#419300>{user_nick}</FONT> <FONT color=#662500>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-b" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-c" mid="111" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Elite Soldier Carlrim$<BR>jadi kamu adventurer yang mengejar <FONT color=#a82424>Black Knight</FONT>? Kami dikirim oleh Saint's Haven Royal Palace tapi berakhir disini karena Black Knight itu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-c" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-d" mid="113" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Apa ada jalan lain aku bisa pergi ke Saint's Haven?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-d" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-e" mid="114" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>$Elite Soldier Carlrim$<BR>Saat ini tidak ada cara lain selain airship.<BR>Aku ingin membantu perbaikan tapi... tentaraku terluka saat airship hancur dan aku harus menjaga mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-f" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Akan bertanya apa yang bisa aku bantu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-" mid="117" select_type="5" />
+      <talk_question mid="54"><![CDATA[<html>$Elite Soldier Carlrim$<BR>Tentu. Lakukan itu. Permisi, aku harus merawat tentara yang terluka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-4-" mid="118" select_type="5" />
+      <talk_question mid="55"><![CDATA[<html>$Elite Soldier Carlrim$<BR>Dengarkan semua! Setelah airship diperbaiki, kita akan kembali ke Saint's Haven! Bertahanlah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-a" mid="120" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Airship Engineer Hubert$<BR>Kamu ingin membantu memperbaiki ship?<BR>Luar biasa!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-a" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-b" mid="121" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Airship Engineer Hubert$<BR>Sejauh yang aku tahu, dua airship diserang di area ini. Airship pertama jatuh di Forest of Death. Yang kedua dibelakangku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-b" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-5" mid="122" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Airship Engineer Hubert$<BR>Kita harus mendapatkan beberapa bagian dari airship lain yang jatuh di <FONT color=#a82424>Forest of Death</FONT> untuk memperbaiki yang ini. Aku senang ada yang bisa membantu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-5" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-5-" mid="123" select_type="5" />
+      <talk_question mid="62"><![CDATA[<html>$Airship Engineer Hubert$<BR><FONT color=#a82424>Spider</FONT> di <FONT color=#a82424>Forest of Death</FONT> <FONT color=#2b2723>dan </FONT> <FONT color=#a82424>Ghoul</FONT><FONT color=#2b2723> adalah</FONT> monster berbahaya. Tapi kamu bisa mengatasinya. Ambil <FONT color=#a82424>3</FONT> <FONT color=#a82424>Airship Parts</FONT> untukku. Pasti tersebar dimana-mana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-6-a" mid="124" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$Airship Engineer Hubert$<BR>Bagus! Ini ambil. Kamu pantas mendapatkannya!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-6-b" mid="126" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Wow terimakasih.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-6-!next" mid="127" select_type="4" />
+      <talk_question mid="66"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">207</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions>
+         <chk type="questitem" num="3" op="]=">300040</chk>
+      </conditions>
+      <executions>
+         <exe type="huntitem" num="3" exe="" onexe="1">300040</exe>
+         <exe type="conexe" true="4,5,6" false="">0</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">2071,2071,2072,2073,2074,2076,2076,,</exe>
+         <exe type="complete" true="">207</exe>
+         <exe type="delquestitem" num="-1">300040</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="b">0,1</exelink>
+   <exelink qstep="3" npc="n055_elite_soldier" sub="b" />
+   <exelink qstep="3" npc="n055_elite_soldier" sub="c" />
+   <exelink qstep="3" npc="n055_elite_soldier" sub="d" />
+   <exelink qstep="3" npc="n055_elite_soldier" sub="e" />
+   <exelink qstep="3" npc="n055_elite_soldier" sub="f">0,1</exelink>
+   <exelink qstep="3" npc="n055_elite_soldier" sub="" />
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="b" />
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="5">0,2,3</exelink>
+   <exelink qstep="6" npc="n099_engineer_hubert" sub="b">0</exelink>
+   <exelink qstep="6" npc="n099_engineer_hubert" sub="!next">1,2</exelink>
+   <journal_data recompense="1:2071,2:2072,3:2073,4:2074,6:2076" quest_title="흩어진 부품들" chapterid="3" quest_level="13" quest_mark_type="1" use_item_list="300040">
+      <journal index="1">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="20"><![CDATA[Menuju Saint's Haven]]></title>
+         <contents mid="21"><![CDATA[<html>Satu satunya cara menuju <FONT color=#a82424>Saint's Haven</FONT> adalah dengan pesawat. Bicara dengan Adventurer's Guild Master Deckard untuk informasi tambahan mengenai pesawat itu.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Deckard</FONT></html>]]></contents>
+         <destination mid="22"><![CDATA[Bicara dengan Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="23"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="70"><![CDATA[Bicara dengan Airship Engineer Hubert]]></title>
+         <contents mid="71"><![CDATA[<html>Deckard berkata bahwa pesawat adalah satu satunya cara mencapai Saint's Haven. Tanyakan pada <FONT color=#a82424>Hubert</FONT> tentang status pesawat, dan kapan akan berangkat.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Hubert</FONT></html>]]></contents>
+         <destination mid="72"><![CDATA[Bicara dengan Airship Engineer Hubert]]></destination>
+         <todo_msg mid="73"><![CDATA[Bicara dengan Airship Engineer Hubert.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>8,n55</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>55</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="74"><![CDATA[Bicara dengan Elite Soldier Carlrim]]></title>
+         <contents mid="75"><![CDATA[<html><FONT color=#a82424>Airship Engineer Hubert</FONT> ingin kamu membicarakan tetang kecelakaan pesawat dengan <FONT color=#a82424>Elite Soldier Carlrim</FONT>, yang sedang berada di kapal pada saat itu. Dia berada di sebelah tenda.</html>]]></contents>
+         <destination mid="76"><![CDATA[Bicara dengan Elite Soldier Carlrim]]></destination>
+         <todo_msg mid="77"><![CDATA[Bicara dengan Elite Soldier Carlrim.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Bicara dengan Airship Engineer Hubert]]></title>
+         <contents mid="79"><![CDATA[<html>Clark memberitahu kamu kalau satu satu cara mencapai Saint's Haven adalah dengan pesawat. Tolong <FONT color=#a82424>Hubert</FONT> untuk membantu memperbaiki pesawat.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Hubert</FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[Bicara dengan Airship Engineer Hubert]]></destination>
+         <todo_msg mid="81"><![CDATA[Bicara dengan Airship Engineer Hubert.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_17.dds</contents_image>
+         <destination_pos>134,0,0</destination_pos>
+         <destination_mode>custom:131@4,132@4,133@4,134@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="82"><![CDATA[Kumpulkan Airship Parts di Forest of Death]]></title>
+         <contents mid="83"><![CDATA[<html>Temukan <FONT color=#a82424>3 Airship Parts</FONT> untuk hubert di <FONT color=#a82424>Forest of Death</FONT>.<BR><BR><FONT color=#086171>Lower Ridge</FONT> <FONT color=#a82424>→ Forest of Death</FONT></html>]]></contents>
+         <destination mid="84"><![CDATA[Kumpulkan Airship Parts di Forest of Death]]></destination>
+         <todo_msg mid="85"><![CDATA[Carilah Airship Parts di Forest of Death.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QP_AirShip_part .dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="86"><![CDATA[Komponen yang berhasil dikumpulkan]]></title>
+         <contents mid="87"><![CDATA[<html>Kamu telah menemukan Airship Parts yang diinginkan Hubert. Bawalah ke <FONT color=#a82424>Airship Engineer Hubert</FONT> di <FONT color=#a82424>Calderock Village</FONT>.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="88"><![CDATA[Bicara dengan Airship Engineer Hubert.]]></destination>
+         <todo_msg mid="89"><![CDATA[Kirimkan part tersebut ke Airship Engineer Hubert.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>206</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

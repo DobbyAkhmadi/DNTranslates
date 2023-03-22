@@ -1,0 +1,78 @@
+   <talk>
+      <npcename>n360_repair</npcename>
+      <npcid>360</npcid>
+      <startexe>0</startexe>
+      <npckname mid="1"><![CDATA[Repair Tool]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="002" mid="12"><![CDATA[<html>[Repair Equipped Item]</html>]]></talk_answer>
+         <talk_answer link_index="003" mid="13"><![CDATA[<html>[Repair All Item]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Repair Tool$<BR>Memperbaiki item equip.<BR>Biaya Repair Equipped Item : <FONT color=#086171>{repair_price}</FONT><BR>Biaya Repair All Item : <FONT color=#086171>{repair_all_price}</FONT><BR><BR>Gold yang dimiliki : <FONT color=#a94407>{money}</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="001" mid="14"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_answer link_index="repair" mid="15"><![CDATA[<html>(Perbaiki)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Repair Tool$<BR>
+Biaya perbaikan <FONT color=#a82424>Eqipped Item</FONT> adalah <FONT color=#086171>{repair_price}</FONT>.<BR>
+Apakah ingin diperbaiki?<BR>
+ <BR>
+Gold yang dimiliki : <FONT color=#a94407>{money}</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="001" mid="16"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_answer link_index="repair_all" mid="17"><![CDATA[<html>(Perbaiki)</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Repair Tool$<BR>
+Biaya perbaikan <FONT color=#a82424>semua item</FONT> adalah <FONT color=#086171>{repair_all_price}</FONT>.<BR>
+Apakah ingin diperbaiki?<BR>
+ <BR>
+Gold yang dimiliki : <FONT color=#a94407>{money}</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_item" image="" itemindex="">
+         <talk_answer link_index="001" mid="22"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="19"><![CDATA[<html>$Repair Tool$<BR>
+※ <FONT color=#7e12d2>Tidak ada item yang perlu diperbaiki.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="complete_repair" image="" itemindex="">
+         <talk_question mid="20"><![CDATA[<html>$Repair Tool$<BR>
+※ <FONT color=#7e12d2>Perbaikan item sudah selesai.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_money" image="" itemindex="">
+         <talk_answer link_index="001" mid="24"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="23"><![CDATA[<html>$Repair Tool$<BR>
+※ <FONT color=#7e12d2>Gold tidak cukup untuk biaya perbaikan.</FONT><BR>
+ <BR>
+Biaya Repair Equipped Item : <FONT color=#086171>{repair_price}</FONT><BR>
+<FONT color=#086171><FONT color=#2b2723>Gold yang dimiliki : </FONT><FONT color=#a94407>{money}</FONT></FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_money_all" image="" itemindex="">
+         <talk_answer link_index="001" mid="26"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="25"><![CDATA[<html>$Repair Tool$<BR>
+※ <FONT color=#7e12d2>Gold untuk biaya perbaikan tidak cukup.</FONT><BR>
+<BR>
+ <BR>
+Biaya Repair All Item : <FONT color=#086171>{repair_all_price}</FONT><BR>
+<FONT color=#086171><FONT color=#2b2723>Gold yang dimiliki : </FONT><FONT color=#a94407>{money}</FONT></FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="9" false="2">0</exe>
+         <exe type="conexe" true="8" false="3">1</exe>
+         <exe type="conexe" true="7" false="">2</exe>
+         <exe type="conexe" true="9" false="5">3</exe>
+         <exe type="conexe" true="10" false="6">4</exe>
+         <exe type="conexe" true="7" false="">5</exe>
+         <exe type="talk">no_item</exe>
+         <exe type="talk">no_money</exe>
+         <exe type="talk">complete_repair</exe>
+         <exe type="talk">no_money_all</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_RepairItem(userObjID, 0) == 2</chk>
+         <chk type="custom">api_user_RepairItem(userObjID, 0) == 1</chk>
+         <chk type="custom">api_user_RepairItem(userObjID, 0) == 0</chk>
+         <chk type="custom">api_user_RepairItem(userObjID, 1) == 2</chk>
+         <chk type="custom">api_user_RepairItem(userObjID, 1) == 1</chk>
+         <chk type="custom">api_user_RepairItem(userObjID, 1) == 0</chk>
+      </conditions>
+      <exelink idx="repair">1</exelink>
+      <exelink idx="repair_all">4</exelink>
+   </talk>

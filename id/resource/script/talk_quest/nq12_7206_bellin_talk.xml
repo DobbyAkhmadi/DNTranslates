@@ -1,0 +1,92 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq12_7206_bellin_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>7206</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Mengenai Master Sorceress Stella]]></qkname>
+      <qnpc>
+         <npcid>91</npcid>
+         <npcename>n091_trader_bellin</npcename>
+         <npckname>대장장이 벨린</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n091_trader_bellin-accepting-a" mid="7" select_type="0"><![CDATA[<html>Biarkan saja dia.</html>]]></talk_answer>
+      <talk_answer link_index="n091_trader_bellin-accepting-b" mid="8" select_type="0"><![CDATA[<html>Sorceress memiliki karakter yang kuat, itu sudah ciri khas mereka. </html>]]></talk_answer>
+      <talk_answer link_index="n091_trader_bellin-accepting-c" mid="9" select_type="0"><![CDATA[<html>Pada bisnismu? Siapa yang berani menjadi rival bisnis Mr. Berlin?</html>]]></talk_answer>
+      <talk_answer link_index="n091_trader_bellin-accepting-d" mid="10" select_type="0"><![CDATA[<html>Hobi yang aneh?</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Blacksmith Berlin$<BR>Sebagian besar Sorceress memiliki hobi yang aneh, terutama Stella. Apapun yang dia lakukan, kuharap dia tidak mengganggu urusan orang lain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Blacksmith Berlin$<BR>Membiarkannya? Kamu tidak tahu apa-apa. kelakuannya yang eksentrik tidak dapat dibiarkan hari demi hari. Hingga saat ini kammi memang membiarkannya melakukan apa yang dia inginkan, tapi sekarang aku akan memikirkan apa yang harus dilakukan terhadapnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Blacksmith Berlin$<BR>
+Nah, jika kamu dapat menyebutnya sebagai karakter. Akhir-akhir ini orang-orang berpikir bahwa individualisme harus ditekankan. Tapi kemudian ada karakter buruk, dan tidak berbahaya. Ngomong-ngomong, Stella seperti itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Blacksmith Berlin$<BR>Perempuan itu sepertinya ketagihan membuat obat ilegal. Aku mendengar rumor bahwa dia mulai menjalankan sebuah mesin. Tentu saja, barang-barang yang dia buat tidak pernah mencapai kemari. Dia cukup lihai berbicara, itu membuatku kesal.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n091_trader_bellin-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Blacksmith Berlin$<BR>Kamu pasti belum pernah mendengar tentang dia. Berikan obat aneh pada seekor kelinci, merebus ramuan aneh untuk membuat ramuan cinta. Panjang sekali jika menuliskan daftar semuanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 7206, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 91, 400 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 91, 200 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 91, 400 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 91, 100 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n091_trader_bellin" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n091_trader_bellin" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n091_trader_bellin" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n091_trader_bellin" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 상급 소서리스 스텔라에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>91:9000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,36 @@
+   <talk>
+      <npcename>n998_experience_shop</npcename>
+      <npcid>998</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Crystal Shop Helper Cherni]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="crystal" mid="6"><![CDATA[<html>[Crystal Point Shop]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="12"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Crystal Shop Helper Cherni$<BR>Halo, <FONT color=#387206>{user_nick}</FONT>. Aku senang bisa membantumu.<BR><FONT color=#2b2723>Silakan melihat-lihat Crystal Point Shop. Kami menjual semua barang berkualitas di sini.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="13" link_target="sq_guide_4994_crystal_02.xml"><![CDATA[<html>[Informasi] <FONT color=#086171>Tentang Crystal Point yang berkilauan</FONT></html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html><FONT color=#2b2723>$Crystal Shop Helper Cherni$</FONT><BR>
+Kamu ingin mengetahui tentang Crystal Shop?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,96001,100);</exe>
+         <exe type="conexe" true="3" false="0">9</exe>
+         <exe type="enterquest">sq_guide_4994_crystal_02</exe>
+      </executions>
+      <conditions>
+         <chk type="lvl" op=">=">1</chk>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="hasquest">4994</chk>
+      </conditions>
+      <exelink idx="crystal">1</exelink>
+   </talk>

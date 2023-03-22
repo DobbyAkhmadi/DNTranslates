@@ -1,0 +1,322 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_468_saint_challenger1</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>468</qid>
+      <designer>손원호</designer>
+      <qlevel>29</qlevel>
+      <qdesc>상급 워리어에게 가면 김오크의 도전장을 볼 수 있다. 예전처럼 허세쩌는 도전장을 보고 약속장소인 검은 대군주의 탑으로 김오크를 찾아가는 주인공. 싸우기 위해 김오크를 찾아갔지만 정작 김오크는 기억을 잃은 상태다. 그는 어째서 싸우는지, 왜 싸움같이 무익한 짓을 하는지 오히려 이해를 못하는데. 
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>469</nextqid>
+      <nextqname>sq11_469_saint_challenger2</nextqname>
+      <nextqnpc>n098_warrior_master_lodrigo</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Returned Orc Kim]]></qkname>
+      <qnpc>
+         <npcid>242</npcid>
+         <npcename>n242_orc_oneeye</npcename>
+         <npckname>김오크</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>98</npcid>
+         <npcename>n098_warrior_master_lodrigo</npcename>
+         <npckname>상급 워리어 로드리고</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Orc Kim$<BR>
+Dimana ini... Siapa aku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-a" mid="7" select_type="0"><![CDATA[<html>Kamu sungguh tak masuk akal...</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Apakah kamu <FONT color=#382000>{user_nick}</FONT>? <FONT color=#a82424>Jika musuh membeli property the bridge akan kesakitan....</FONT> Aku tahu kamu akan datang suatu hari nanti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-b" mid="9" select_type="0"><![CDATA[<html>Apakah tantangan lagi?</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Itu tidak penting. <BR>
+Apakah kamu kenal seseorang bernama <FONT color=#a82424>Orc Kim</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-c" mid="11" select_type="0"><![CDATA[<html>Tunjukkan padaku tantangannya.</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Ya ini untukmu. Ini, Orc Kim mengirim tantangan banyak sekali walau kuberitahu dia mengirimkan ke alamat yang salah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-d" mid="13" select_type="0"><![CDATA[<html>(Membaca tantangan)</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Master Warrior Rodrigo$<BR><FONT color=#a82424>Perjalanan telah dimulai.</FONT> Jangan tergesa-gesa. <BR>
+<BR><FONT color=#7e12d2>(Dia menarik keluar tantangannya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-d" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-e" mid="15" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html><FONT color=#382000>$Orc Kim's Challenge$<BR></FONT><FONT color=#387206>Hey, {user_nick}. Sudah lama sekali sejak pertemuan terakhir kita. Aku tak sempat menunjukkan skill baruku karena terdapat pertandingan sparring. Kuharap kamu tak berpikir itu pertandingan yang layak.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-e" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-f" mid="17" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Orc Kim's Challenge$<BR><FONT color=#387206>Perbedaan kemampuan terlalu jauh untuk disebut pertandingan. Seperti anak kecil bertarung melawan orang dewasa. Aku sungguh tak ingin bertarung melawan pemula sepertimu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-f" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-g" mid="19" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Orc Kim's Challenge$<BR><FONT color=#387206>Oh iya, kemampuan bertarungmu kira-kira 400. Kemampuanku dapat berubah menjadi 100,000 jika aku berubah. Tapi jika kulakukan itu, aku akan membuat dunia dalam bahaya jadi tidak kulakukan itu. Kau tahu apa yang kumaksud jika kamu pernah membaca beberapa komik ketika kamu masih kecil.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-g" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-h" mid="21" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Orc Kim's Challenge$<BR><FONT color=#387206>Bagaimanapun, kita tak dapat terus berlatih tanding atas kehormatan kakekku, tidak, ayahku Typhoon. Jadi hari ini! (tunggu, aku ada kelas hari ini....) Tidak hari ini, besok kita akan mengadakan pertandingan sesungguhnya antar lelaki!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-h" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-i" mid="23" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Orc Kim's Challenge$<BR><FONT color=#387206>Jika kamu tidak datang, semua temanmu akan memiliki pacar dan teman kecuali kamu! Hahaha. Aku pastikan kamu merasakan ketakutan akan kesendirian.</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-i" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-j" mid="25" select_type="0"><![CDATA[<html>(Bicaralah kepada Rodrigo)</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Orc Kim's Challenge$<BR><FONT color=#387206>Yah, aku akan pemanasan di <FONT color=#a82424>Fortress of Dark Overlord Army</FONT></FONT><FONT color=#387206> jadi temui aku disana. Hahaha. <BR><BR>*Ditulis oleh Orc Kim yang menjadi sangat kuat setelah melalui latihan rahasia*</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-k" mid="28" select_type="0"><![CDATA[<html>Tak mungkin.</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Apakah dia rivalmu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-l" mid="30" select_type="0"><![CDATA[<html>Semua yang kamu katakan salah!</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Hmm. Ini bukan pertandingan yang biasa kita lihat. Darah Warriorku mulai memanas! Aku menjadi senang karena <FONT color=#a82424>dua orang dapat mati bersamaan</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-m" mid="32" select_type="0"><![CDATA[<html>... Aku harus pergi ke tempat itu.</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Pria sejati tidak bermain dengan hal kecil. <FONT color=#a82424>Potensial dapat terlihat ketika mereka tua...</FONT> kurasa kamu tak dapat menjadi komedian.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-n" mid="34" select_type="0"><![CDATA[<html>... Ok.</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Hahaha. Kamu memiliki semangat.<BR>
+Tapi <FONT color=#a82424>monyet dapat mengalahkan Naga</FONT>. <BR>
+Waspadalah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-accepting-n" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-accepting-acceptted" mid="37" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Returned Orc Kim$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-1" image="QW_43.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-1-a" mid="40" select_type="0"><![CDATA[<html>Seperti beruang?</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Kamu dapat pergi ke <FONT color=#a82424>Fortress of Dark Overlord Army</FONT> dekat Foothills of Black Mountain. Yah, kembalilah menang seperti beruang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="41"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Jangan khawatir terhadap penjelasannya. Hahaha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-2-a" mid="43" select_type="0"><![CDATA[<html>Tidak terima kasih.</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Kurasa kamu takut akan Orc Kim. <BR>
+<FONT color=#a82424>Pear tak berguna itu payah.</FONT> Apa kamu membutuhkan bantuanku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-2-a" image="QW_43.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="44"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Lalu kenapa kamu tidak bergerak! <FONT color=#a82424>Fortress of Dark Overlord Army</FONT> dapat dicapai melalui Foothills of Black Mountain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n242_orc_oneeye-2-a" mid="46" select_type="0"><![CDATA[<html>Ayo!</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Orc Kim$<BR>Dimana ini? Siapa aku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n242_orc_oneeye-2-b" mid="48" select_type="0"><![CDATA[<html>Apakah kamu tak mengenalku? </html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Orc Kim$<BR>Tunggu. Siapa kamu? Mengapa kamu bertarung melawanku? Aku tak ingin bertarung melawan siapapun.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n242_orc_oneeye-2-c" mid="50" select_type="0"><![CDATA[<html>Apa! Ini tidak mungkin!</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Orc Kim$<BR>Kamu terlihat tidak asing... Apakah kita <FONT color=#a82424>jatuh cinta</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n242_orc_oneeye-2-d" mid="52" select_type="0"><![CDATA[<html>Aku datang kemari karena mendapat surat tantanganmu.</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Orc Kim$<BR>Ah...aku tak ingat apapun. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n242_orc_oneeye-2-e" mid="54" select_type="0"><![CDATA[<html>Apakah kamu kehilangan ingatan?</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Orc Kim$<BR>Tantangan? Apakah itu bertarung?<BR>
+ Maaf tapi aku tidak suka kekerasan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n242_orc_oneeye-2-f" mid="57" select_type="0"><![CDATA[<html>Tidak!</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Orc Kim$<BR>Ingatan... Ah... Aku tak ingat apapun. <BR>
+Yang kuingat hanya namaku adalah Orc Kim... <BR>
+Kamu... Apakah kamu fansku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-2-f" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n242_orc_oneeye-2-g" mid="59" select_type="0"><![CDATA[<html>(Kurasa aku sebaiknya pergi sekarang)</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Orc Kim$<BR>Ah... Kepalaku sakit sekali. <BR>
+Dapatkah kamu pergi sekarang? Aku akan memberimu tanda tangan jika kamu pergi.<BR><BR><FONT color=#7e12d2>(Orc Kim sepertinya sungguh kehilangan ingatannya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n242_orc_oneeye-2-h" mid="61" select_type="0"><![CDATA[<html>Aku pergi!</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Orc Kim$<BR>Ada sesuatu di kepalaku tapi aku tak ingat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="62"><![CDATA[<html>$Orc Kim$<BR>Dimana aku? Mengapa aku disini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n242_orc_oneeye-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="63"><![CDATA[<html>$Orc Kim$<BR>Dimana aku? Mengapa aku disini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-a" mid="65" select_type="0"><![CDATA[<html>Kamu salah mengatakannya dan itu bahkan tidak cocok dengan situasi ini!</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>$Master Warrior Rodrigo$<BR><FONT color=#a82424>Anjing tak berkaki pergi 1000km...</FONT> <BR>
+Kamu kembali cepat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-b" mid="67" select_type="0"><![CDATA[<html>(Kurasa dia bukan orang yang jahat)</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Kamu sangat disiplin. <BR>
+Kamu terlihat lelah ambil ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-c" mid="69" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-d" mid="71" select_type="0"><![CDATA[<html>Surat? Bukan tantangan?</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Ketika kamu pergi <FONT color=#a82424>Surat kedua</FONT> dari Orc Kim telah tiba. Aku tak tahu mengapa dia tetap mengirimnya padaku!!! Ini sangat mengganggu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-e" mid="73" select_type="0"><![CDATA[<html>(Membaca surat)</html>]]></talk_answer>
+      <talk_question mid="72"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Kamu dapat membacanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-e" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-f" mid="76" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Orc Kim's letter$<BR><FONT color=#387206>Hi. {user_nick}. Cuaca disini sungguh bagus seperti Dancer yang dansa di pantai. Tapi Foothills of Black Mountain dekat sini jadi bau belerang cukup kuat.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-f" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-g" mid="78" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html><FONT color=#382000>$Orc Kim's Letter$<BR></FONT><FONT color=#387206>Kupikir baik-baik setelah bertemu denganmu. Kurasa kita adalah teman dekat sebelum aku kehilangan ingatan. Aku lupa semuanya kecuali mengingat namamu. Namamu satu-satunya yang kuingat.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-g" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-h" mid="80" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html><FONT color=#382000>$Orc Kim's Letter$<BR></FONT><FONT color=#387206>Jadi aku memiliki satu permintaan karena kita adalah teman baik. </FONT><BR><FONT color=#387206>Kamu mau membantuku kan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-h" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-i" mid="82" select_type="0"><![CDATA[<html>(Mengembalikan surat)</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html><FONT color=#382000>$Orc Kim's Letter$<BR></FONT><FONT color=#387206>Ayo bicarakan lebih jelasnya di <FONT color=#a82424>Foothills of Black Mountain</FONT></FONT><FONT color=#387206>. Tak sopan jika membicarakannya melalui surat. <BR><BR>* Salam, Temanmu Orc Kim dari Foothills of Black Mountain</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-j" mid="84" select_type="0"><![CDATA[<html>Dia salah paham.</html>]]></talk_answer>
+      <talk_question mid="83"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Apa... Apakah kamu teman Orc Kim?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3-!next" mid="86" select_type="0"><![CDATA[<html>Yah aku tak yakin itu disebut hebat...</html>]]></talk_answer>
+      <talk_question mid="85"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Tapi Orc Kim cukup hebat. Dia masih mengingat nama rivalnya setelah kehilangan ingatannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">4687,4681,4682,4683,4684,4685,4686,4687,4688,4689</exe>
+         <exe type="setquest">468</exe>
+         <exe type="talk" npc="n098_warrior_master_lodrigo">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">4687,4681,4682,4683,4684,4685,4686,4687,4688,4689</exe>
+         <exe type="complete" true="">468</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n098_warrior_master_lodrigo" sub="n">0</exelink>
+   <exelink qstep="accepting" npc="n098_warrior_master_lodrigo" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n098_warrior_master_lodrigo" sub="a">0,1</exelink>
+   <exelink qstep="2" npc="n242_orc_oneeye" sub="b" />
+   <exelink qstep="2" npc="n242_orc_oneeye" sub="c" />
+   <exelink qstep="2" npc="n242_orc_oneeye" sub="d" />
+   <exelink qstep="2" npc="n242_orc_oneeye" sub="e" />
+   <exelink qstep="2" npc="n242_orc_oneeye" sub="f" />
+   <exelink qstep="2" npc="n242_orc_oneeye" sub="g" />
+   <exelink qstep="2" npc="n242_orc_oneeye" sub="h">0,1</exelink>
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="b">0</exelink>
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="c">1</exelink>
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="d" />
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="e" />
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="f" />
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="g" />
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="h" />
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="i" />
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="j" />
+   <exelink qstep="3" npc="n098_warrior_master_lodrigo" sub="!next" />
+   <journal_data recompense="1:4681,2:4682,3:4683,4:4684,5:4685,6:4686,7:4687,8:4688,9:4689" quest_title="돌아온 김오크" chapterid="" quest_level="29" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_NPC_Warrior_Lodrigo.dds</contents_image>
+         <destination_pos>11,n98</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>98</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="88"><![CDATA[Berbicara dengan Master Warrior Rodrigo]]></title>
+         <contents mid="89"><![CDATA[<html>Surat New Challenge dari Orc Kim telah datang. Bicaralah kepada Master Warrior Rodrigo.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Warrior Rodrigo</FONT></html>]]></contents>
+         <destination mid="90"><![CDATA[Berbicara dengan Master Warrior Rodrigo]]></destination>
+         <todo_msg mid="91"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QM_Orc_Oneeye.dds</contents_image>
+         <destination_pos>432,0,0</destination_pos>
+         <destination_mode>custom:431@1,432@4</destination_mode>
+         <statemark_npcid>242</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="93"><![CDATA[Berbicara dengan Orc Kim]]></title>
+         <contents mid="94"><![CDATA[<html>Menurut di surat, Orc Kim menunggu di Fortress of Dark Overlord Army. Pergilah kesana untuk menemui Orc Kim.<BR><BR><FONT color=#086171>Foothills of Black Mountain (Dark Overlord Gates)</FONT> <FONT color=#a82424>→ Fortress of Dark Overlord Army</FONT></html>]]></contents>
+         <destination mid="95"><![CDATA[Berbicara dengan Orc Kim]]></destination>
+         <todo_msg mid="96"><![CDATA[Pergilah ke Fortress of Dark Overlord Army dan terima Orc Kim's challenge.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_NPC_Warrior_Lodrigo.dds</contents_image>
+         <destination_pos>11,n98</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>98</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="97"><![CDATA[Berbicara dengan Master Warrior Rodrigo]]></title>
+         <contents mid="98"><![CDATA[<html>Orc Kim telah kehilangan ingatan atas alasan tertentu. Laporkan kepada Master Warrior Rodrigo.<BR> <BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Warrior Rodrigo</FONT></html>]]></contents>
+         <destination mid="99"><![CDATA[Berbicara dengan Master Warrior Rodrigo]]></destination>
+         <todo_msg mid="100"><![CDATA[Bicaralah kepada Master Warrior Rodrigo]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>28:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

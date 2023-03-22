@@ -1,0 +1,136 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>eq_2356_return_hero_5</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2356</qid>
+      <designer>이한나</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Event] Returned Hero Step 5 - Rewards]]></qkname>
+      <qnpc>
+         <npcid>1635</npcid>
+         <npcename>n1635_return_hero</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1635_return_hero-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1635_return_hero-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Gerraint$<BR><FONT color=#086171>{user_nick}.</FONT>  Waktu yang kamu tunggu sudah datang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1635_return_hero-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1635_return_hero-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>Ambil Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$[Event] Returned Hero Step 5 - Rewards$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1635_return_hero-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1635_return_hero-1-chk_lv" mid="10" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Gerraint$<BR>Terimakasih sudah mendengarkan penjelasan panjang lebarku.<BR>Aku akan memberikan reward <FONT color=#a82424>Returned Hero</FONT> sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1635_return_hero-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1635_return_hero-1-b" mid="12" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Gerraint$<BR>Banyak orang yang menunggumu kembali.<BR>Sekarang pergilah temui mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1635_return_hero-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1635_return_hero-1-c" mid="28" select_type="0"><![CDATA[<html><FONT color=#086171>Menerima Reward</FONT></html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Quest Selesai$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1635_return_hero-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="29"><![CDATA[<html>$Gerraint$<BR>Sampai jumpa lagi <BR><FONT color=#086171>{user_nick}.</FONT> Semoga beruntung.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1635_return_hero-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1635_return_hero-1-e" mid="31" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Gerraint$<BR>Banyak orang yang menunggumu kembali.<BR>Sekarang pergilah temui mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1635_return_hero-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1635_return_hero-1-f" mid="33" select_type="0"><![CDATA[<html><FONT color=#086171>Menerima Reward</FONT></html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Quest Selesai$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1635_return_hero-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Gerraint$<BR>Sampai jumpa lagi <BR><FONT color=#086171>{user_nick}.</FONT> Semoga beruntung.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">2356</exe>
+         <exe type="setjornal">1</exe>
+         <exe type="recompense_view">23560,23561,,,,,,,,</exe>
+         <exe type="talk" npc="n1635_return_hero">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="[=">1</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="talk" npc="n1635_return_hero">d</exe>
+         <exe type="talk" npc="n1635_return_hero">a</exe>
+         <exe type="recompense">23560,,,,,,,,,</exe>
+         <exe type="recompense">23561,,,,,,,,,</exe>
+         <exe type="complete" true="6">2356</exe>
+         <exe type="custom">api_user_ModComebackUser(userObjID,false);</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1635_return_hero" sub="acceptted">0,3</exelink>
+   <exelink qstep="1" npc="n1635_return_hero" sub="chk_lv">0</exelink>
+   <exelink qstep="1" npc="n1635_return_hero" sub="b">3</exelink>
+   <exelink qstep="1" npc="n1635_return_hero" sub="c">5</exelink>
+   <exelink qstep="1" npc="n1635_return_hero" sub="e">4</exelink>
+   <exelink qstep="1" npc="n1635_return_hero" sub="f">5</exelink>
+   <journal_data recompense="23561" quest_title="[Event] Returned Hero Step 5 - Rewards" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos />
+         <destination_mode />
+         <statemark_npcid>1635</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="21"><![CDATA[Step 5 - Returned Hero's Reward]]></title>
+         <contents mid="22"><![CDATA[<html>Bicara pada Gerraint dan ambil reward untuk Returned Hero.<BR>
+ <BR>
+<FONT color=#a82424>※ Kamu hanya dapat mengambil reward Returned Hero sekali.</FONT><BR>
+※ Kamu dapat menemui user lain di kota setelah menyelesaikan Quest ini.<BR>
+ <BR>
+ </html>]]></contents>
+         <destination mid="23"><![CDATA[]]></destination>
+         <todo_msg mid="24"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>2355</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,66 @@
+   <talk>
+      <npcename>n2348_gaharam</npcename>
+      <npcid>2348</npcid>
+      <startexe>1</startexe>
+      <comment>3 : 실버 직업 구분을 위한 공용 퀘스트
+4,6,7,8,9,10 : 칼리 15레벨 45레벨 전직 퀘스트 완료 
+(242,379,747,748,749,750 )
+실버: 80 실버헌터 :81
+
+임시로 파르페 파일 복사해서 작업중</comment>
+      <npckname mid="1"><![CDATA[Teacher Gaharam (Prologue)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><BR><FONT color=#7e12d2>(Gaharam smiles without a word.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="qu_02" mid="22"><![CDATA[<html><FONT size=2 face=Arial>Yes, Master. But where is this place?</FONT></html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Teacher Gaharam$<BR><FONT color=#2b2723>My disciple, are you ready?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_02" image="" itemindex="">
+         <talk_answer link_index="qu_03" mid="23"><![CDATA[<html>Well.......</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Teacher Gaharam$<BR><FONT color=#2b2723>This is a distorted space cut off from the world.</FONT><BR>
+<FONT color=#2b2723>It is a place where you can concentrate without any disruptions.<BR>There wasn't much progress in your training lately. Tell me why.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_03" image="" itemindex="">
+         <talk_answer link_index="qu_04" mid="24"><![CDATA[<html>....No matter how much I practiced, there just wasn't any improvement......</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Teacher Gaharam$<BR><FONT color=#7e12d2>(Gaharam is waiting for your answer.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_04" image="" itemindex="">
+         <talk_answer link_index="qu_05" mid="25"><![CDATA[<html>I have doubts whether I'm doing well.</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Teacher Gaharam$<BR><FONT color=#2b2723>Is that so?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_05" image="" itemindex="">
+         <talk_answer link_index="qu_06" mid="26"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Teacher Gaharam$<BR><FONT color=#2b2723>That's why I brought you here today.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_06" image="" itemindex="">
+         <talk_answer link_index="qu_07" mid="29"><![CDATA[<html>Please tell me what I should do.</html>]]></talk_answer>
+         <talk_question mid="16"><![CDATA[<html>$Teacher Gaharam$<FONT color=#2b2723><BR></FONT><FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723>, the martial arts you are practicing right now needs your mind and body to become one to wield its true power.</FONT><BR>
+<FONT color=#2b2723>No matter how much you practice, you can't reach the highest mastery if you keep having doubts.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_07" image="" itemindex="">
+         <talk_answer link_index="qu_08" mid="34"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="30"><![CDATA[<html>$Teacher Gaharam$<BR><FONT color=#2b2723>I will show you what it would be like when you reach the pinnacle of your abilities.<BR>It would only last for a while but I'm sure it will be enough to motivate you.<BR>Feel how your body and mind can become one and remember it so your doubts can be cleared.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_08" image="" itemindex="">
+         <talk_question mid="33"><![CDATA[<html>$Teacher Gaharam$<BR><FONT color=#2b2723>Now try fighting the spirit I've summoned.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,5" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 997, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 243, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 89 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 287, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4069, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4070, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4071, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4072, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4073, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 88</chk>
+      </conditions>
+      <exelink idx="qu_08">3,4,6,7,8,9,10,11</exelink>
+   </talk>

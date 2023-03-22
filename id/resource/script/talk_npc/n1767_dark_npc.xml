@@ -1,0 +1,45 @@
+   <talk>
+      <npcename>n1767_dark_npc</npcename>
+      <npcid>1767</npcid>
+      <startexe>1</startexe>
+      <comment>3 : 다크 직업 구분을 위한 공용 퀘스트
+4,6,7,8,9,10 : 워리어 15레벨 45레벨 전직 퀘스트 완료 
+(238,340,755,756,757,758 )
+</comment>
+      <npckname mid="1"><![CDATA[Darker Than Darkness NPC]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><BR><FONT color=#7e12d2>(Kegelapan sudah melingkupi cahaya dan mengambil wujud)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="dark_01" mid="14"><![CDATA[<html>Aku tidak lemah.</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Unknown Being$<BR>Oh kasihan..... Kamu kehilangan gadis itu.<BR>Salahkan dirimu sendiri dasar lemah menyedihkan tidak mampu menyelamatkan gadis kecil itu.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="dark_01" image="" itemindex="">
+         <talk_answer link_index="dark_02" mid="15"><![CDATA[<html>S...Siapa,kamu?</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Unknown Being$<BR>Heh,Aku kira tidak begitu.Dasar lemah.Kamu tidak mampu melakukan apapun.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="dark_02" image="" itemindex="">
+         <talk_answer link_index="dark_03" mid="16"><![CDATA[<html>Aku tidak percaya padamu... Kamu hanyalah monster.</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Unknown Being$<BR>Keyakinanmu itu perlahan akan memudar ditelan kegelapan. Kamu hanyalah manusia kecil lemah. Tak lama lagi kamu pun akan menjadi pupuk bagi rumput-rumput ilalang ini. Bwahaha..<BR>Tapi akan kuberikan satu kesempatan<FONT color=#7e12d2>untuk mendapatkan kekuatan dahsyat</FONT>yang hanya dapat diimpikan oleh manusia cacat sepertimu Bwahaha!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="dark_03" image="" itemindex="">
+         <talk_question mid="10"><![CDATA[<html>$Unknown Being$<BR>Apaa... monster? Aku adalah mahkluk kegelapan yang paling kuat di jagat Verathea!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,5" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 998, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 238, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 76 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 340, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 755, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 756, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 757, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 758, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 75</chk>
+      </conditions>
+      <exelink idx="dark_03">3,4,6,7,8,9,10</exelink>
+   </talk>

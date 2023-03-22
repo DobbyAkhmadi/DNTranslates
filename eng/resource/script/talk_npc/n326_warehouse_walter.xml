@@ -1,0 +1,30 @@
+   <talk>
+      <npcename>n326_warehouse_walter</npcename>
+      <npcid>326</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Warehouse Keeper Walter]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="warehouse_001" mid="3"><![CDATA[<html>[Storage]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="4"><![CDATA[<html>[Talk] What is Storage?</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="8"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Warehouse Keeper Walter${action:Talk}<BR>Your inventory looks full, <BR>You have to free up your inventory if you want to store all your loots properly.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="6"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Warehouse Keeper Walter$<BR>It is common to meet with insufficient inventory space while adventuring. At times like this, feel free to store your items in my WareHouse.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenWareHouse(userObjID);</exe>
+         <exe type="conexe" true="4" false="1">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_ui_OpenGuildWareHouse (userObjID);</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,326);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_guild_HasGuildWare(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="warehouse_001">2</exelink>
+      <exelink idx="guildms">5</exelink>
+   </talk>

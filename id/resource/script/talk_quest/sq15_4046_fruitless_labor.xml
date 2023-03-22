@@ -1,0 +1,200 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_4046_fruitless_labor</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4046</qid>
+      <designer>나은하</designer>
+      <qlevel>57</qlevel>
+      <qdesc>다시 가보며 데이지가 애들을 누가 자꾸 때려서 치료해주는데 계속 다친다고 함.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>4047</nextqid>
+      <nextqname>sq15_4047_nurse_angel_daisy</nextqname>
+      <nextqnpc>n036_adventurer_guildmaster_gunter</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Fruitless Labour]]></qkname>
+      <qnpc>
+         <npcid>100</npcid>
+         <npcename>n100_event_ilyn</npcename>
+         <npckname>이벤트 도우미 아이린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>852</npcid>
+         <npcename>n852_daisy</npcename>
+         <npckname>데이지</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Daisy$<BR>Hmm? Daisy tidak tersesat.<BR>Aku tahu cara keluar darisini jadi jangan khawatir.<BR><FONT color=#7e12d2>(※ Quest bisa diambil dari Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-noquest" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="52"><![CDATA[<html>$Events Planner Irine$<BR>
+<FONT color=#a82424>Adventurer's Guild Master Gunther</FONT> mencarimu.<BR>
+Sepertinya dia punya pekerjaan untukmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-a" mid="8" select_type="0"><![CDATA[<html>Apa?</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Aku minta seorang adventurer pergi ke <FONT color=#a82424>Mutant's Habitat</FONT> untuk menyingkirkan<FONT color=#a82424>Scarabee Lord Knactun</FONT>.<BR>Adventurer itu bersikeras dia sudah membunuhnya tapi ternyata dia masih hidup.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-b" mid="10" select_type="0"><![CDATA[<html>Mengerti.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Kalau dia berkata jujur, pasti ada alasannya kenapa monster itu terus kembali hidup.<BR>Kuharap kamu bisa pergi dan mencari tahu apa yang sebenarnya terjadi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-acceptted" mid="12" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Fruitless Labour$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Aku tidak tahu kenapa ini terus terjadi.<BR>Aku berharap setidaknya kita bisa tahu penyebabnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n852_daisy-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n852_daisy-1-a" mid="17" select_type="0"><![CDATA[<html>Huh, kenapa?</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Daisy$<BR>Hmmph, <FONT color=#387206>{user_nick}</FONT> jahat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n852_daisy-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n852_daisy-1-b" mid="19" select_type="0"><![CDATA[<html>Poor kid?</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Daisy$<BR>Kenapa kamu masih mengerjai poor kid?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n852_daisy-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n852_daisy-1-c" mid="21" select_type="0"><![CDATA[<html>Itu monster yang jahat.</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Daisy$<BR>Kamu baru saja memukul Knactty.<BR><FONT color=#7e12d2>(Daisy sepertinya memanggil Scarabee Lord Knactun dengan nama Knactty)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n852_daisy-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n852_daisy-1-d" mid="23" select_type="0"><![CDATA[<html>Monster punya perasaan?</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Daisy$<BR>Tidak bagus memukul walaupun pada monster yang jahat!<BR>Daisy terus mencoba menyembuhkan mereka tapi <FONT color=#387206>{user_nick}</FONT> terus memukul mereka!<BR>Mereka juga punya perasaan!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n852_daisy-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n852_daisy-1-e" mid="25" select_type="0"><![CDATA[<html>Aku tidak mengerti apa yang kamu bicarakan. Sebelumnya kita harus keluar dari sini.</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Daisy$<BR>Yeah! <FONT color=#a82424>Perasaan</FONT> sangat penting. <FONT color=#a82424>Kepercayaan</FONT> juga sangat penting.<BR>Kita tidak hidup sendirian didunia ini. Ada kota lain, hutan, langit dan juga makhluk hidup lainnya....<BR>Bukan hanya kita yang hidup di bumi ini so jadi kita tidak boleh egois.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n852_daisy-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n852_daisy-1-f" mid="28" select_type="0"><![CDATA[<html>Tapi disini berbahaya.</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Daisy$<BR>Daisy sedang marah!<BR><FONT color=#387206>{user_nick}</FONT>, pergilah sendirian!<BR>Daisy akan pergi ke jalan yang lain. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1" image="QN_Npc_Master_Gunter.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="54"><![CDATA[<html>$Irine$<BR><FONT color=#a82424>Adventurer's Guild Master Gunther</FONT> mencarimu, <FONT color=#387206>{user_nick}</FONT>.<BR>Sepertinya penting.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n852_daisy-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="30"><![CDATA[<html>$Daisy$<BR>Tidak! Aku tidak mau pergi dengan orang jahat!<BR>Kakekku sebentar lagi datang jadi aku akan pergi dengan kakekku!<BR>
+Karena kakek orang yang baik!<BR><FONT color=#7e12d2>(Daisy keras kepala. Sepertinya ada yang menjaganya jadi lebih baik kembali)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-2-a" mid="32" select_type="0"><![CDATA[<html>(Ceritakan padanya tentang Daisy)</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Jadi apa yang kamu ketahui tentang Mutant's Habitat?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-2-b" mid="34" select_type="0"><![CDATA[<html>Betul.</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Gadis kecil itu bilang dia merawat monster? <BR>Aneh sekali.  Scarabee Lord Knactun terluka berat. Seorang gadis kecil tidak mungkin bisa mengobati luka serius seperti itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-2-c" mid="36" select_type="0"><![CDATA[<html>Irine akan selalu menjaganya.</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Aku tidak tahu apakah dia berbohong atau tidak tapi sepertinya dia bukan anak kecil biasa.<BR>Kita harus menyelidikinya.<BR>Apakah ada yang mengenalnya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-2-d" mid="38" select_type="0"><![CDATA[<html>Mengerti.</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Hmm, lalu kamu bisa pergi ke Irine dan tanyakan apakah dia mengenal gadis kecil itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-2-!next" mid="40" select_type="0"><![CDATA[<html><FONT color=#086171>(Terima reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">40460,,,,,,,,,</exe>
+         <exe type="setquest">4046</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">40460,,,,,,,,,</exe>
+         <exe type="complete" true="">4046</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="acceptted">1</exelink>
+   <exelink qstep="1" npc="n852_daisy" sub="b" />
+   <exelink qstep="1" npc="n852_daisy" sub="c" />
+   <exelink qstep="1" npc="n852_daisy" sub="d" />
+   <exelink qstep="1" npc="n852_daisy" sub="e" />
+   <exelink qstep="1" npc="n852_daisy" sub="f">0,1</exelink>
+   <exelink qstep="2" npc="n036_adventurer_guildmaster_gunter" sub="b" />
+   <exelink qstep="2" npc="n036_adventurer_guildmaster_gunter" sub="c" />
+   <exelink qstep="2" npc="n036_adventurer_guildmaster_gunter" sub="d">0</exelink>
+   <exelink qstep="2" npc="n036_adventurer_guildmaster_gunter" sub="!next">1</exelink>
+   <journal_data recompense="40460" quest_title="헛된 의뢰" chapterid="" quest_level="57" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_59.dds</contents_image>
+         <destination_pos>591,n852</destination_pos>
+         <destination_mode>custom:591@4</destination_mode>
+         <statemark_npcid>852</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="43"><![CDATA[Mutant's Habitat Investigation]]></title>
+         <contents mid="44"><![CDATA[<html>Adventurer's Guild Master Gunther bilang monster di Mutant's Habitat juga terus kembali hidup. Pergilah ke Mutant's Habitat untuk menyelidikinya.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> <FONT color=#a82424>→ Mutant's Habitat</FONT></html>]]></contents>
+         <destination mid="45"><![CDATA[Investigate Mutant's Habitat]]></destination>
+         <todo_msg mid="46"><![CDATA[Quest baru telah ditambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n36</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>36</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="48"><![CDATA[Lapor ke Adventurer's Guild Master Gunther]]></title>
+         <contents mid="49"><![CDATA[<html>Lapor ke Saint's Haven's Adventurer's Guild Master Gunther tentang Mutant's Habitat.<BR>
+ <BR>
+<FONT color=#086171>Adventurer's Guild Master Gunther </FONT><FONT color=#a82424>→ Adventurer's Guild Master Gunther</FONT></html>]]></contents>
+         <destination mid="50"><![CDATA[Bicara dengan Adventurer's Guild Master Gunther di Saint's Haven]]></destination>
+         <todo_msg mid="51"><![CDATA[Lapor ke Adventurer's Guild Master Gunther di Saint's Haven's .]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>57:-1</user_level>
+      <user_class />
+      <prev_quest>4045</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

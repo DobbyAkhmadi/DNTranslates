@@ -1,0 +1,64 @@
+   <talk>
+      <npcename>n989_super_muscle</npcename>
+      <npcid>989</npcid>
+      <startexe>9</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Super Muscle Duck]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Super Muscle Duck${action:Stand_1}<BR>
+Kamu.  Jadilah <FONT color=#a82424>Crazy duck</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="002_1" mid="29"><![CDATA[<html>Bicara apa ini?</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Super Muscle Duck${action:Stand_1}<BR>
+Kamu.  Jadilah <FONT color=#a82424>Crazy duck</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_1" image="" itemindex="">
+         <talk_answer link_index="002_2b" mid="30"><![CDATA[<html>Apalagi itu?</html>]]></talk_answer>
+         <talk_answer link_index="002_2a" mid="31"><![CDATA[<html>Tidak. Aku tahu.</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Super Muscle Duck$<BR>
+Jadi? Sudah mendengar cerita dari Storyteller Casey tentang Crazy Duck Nest dan "DJ Duck"?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_2a" image="" itemindex="">
+         <talk_answer link_index="002_3a1" mid="32"><![CDATA[<html>Emm. oh...</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Super Muscle Duck$<BR>
+Dengarkan cerita tentang Crazy Duck Nest dari <FONT color=#a82424>Storyteller Casey</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_3a" image="" itemindex="">
+         <talk_question mid="11"><![CDATA[<html>$Super Muscle Duck$<BR>
+[Storyteller Casey] ada di dekat Air Mancur.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_2b" image="" itemindex="">
+         <talk_answer link_index="002_3b" mid="33"><![CDATA[<html>Dan?</html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Super Muscle Duck$<BR>
+<FONT color=#7e12d2> [Storyteller Casey] ada di dekat Air Mancur. Crazy Duck Nest dapat diakses 1 kali sehari.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002_3b" image="" itemindex="">
+         <talk_answer link_index="002_3a2" mid="34"><![CDATA[<html>Baiklah. </html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Super Muscle Duck${action:Stand}<BR>
+<FONT color=#7e12d2>Crazy Duck Nest akan memberikan kamu Unique Equipment Level 80.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="16"><![CDATA[<html>$Super Muscle Duck$<BR>
+Dengarkan cerita tentang Crazy Duck Nest dari <FONT color=#a82424>Storyteller Casey</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="custom">api_quest_AddQuest(userObjID, 2439, 2);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 2439, 1);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 2439, 1);</exe>
+         <exe type="conexe" true="4" false="6">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="7" false="5">1</exe>
+         <exe type="talk">003</exe>
+         <exe type="talk">002_3a</exe>
+         <exe type="conexe" true="3" false="4">2</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">2439</chk>
+         <chk type="hasquest">2439</chk>
+         <chk type="lvl" op=">=">80</chk>
+      </conditions>
+      <exelink idx="002_3a1">8,0,1,2</exelink>
+      <exelink idx="002_3a2">8,0,1,2</exelink>
+   </talk>

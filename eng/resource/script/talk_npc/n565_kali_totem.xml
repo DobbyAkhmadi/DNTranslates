@@ -1,0 +1,74 @@
+   <talk>
+      <npcename>n565_kali_totem</npcename>
+      <npcid>565</npcid>
+      <startexe>2</startexe>
+      <comment>전투수련장 메뉴 삭제로 4, 5, 6번 리스트 사용하지 않습니다.</comment>
+      <npckname mid="1"><![CDATA[Hermit's Totem]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="10"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="dress_1" mid="11"><![CDATA[<html>[Growth]</html>]]></talk_answer>
+         <talk_answer link_index="skill" mid="30"><![CDATA[<html>[Learn Skill]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Hermit's Totem$ {action:Talk}<BR><FONT color=#7e12d2>(It's a totem that you saw in your old town. It seems like you can get enlightenments when you meditate in front of it)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="quest" mid="12"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Hermit's Totem$<BR>
+<FONT color=#7e12d2>(A weird looking object. It has a powerful aura but you don't know what it is for)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="22" link_target="sq_changejob_4966_tremble_heart.xml"><![CDATA[<html>[Spinoff] <FONT color=#086171>Confused Heart</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="23" link_target="sq_changejob_4967_doubt.xml"><![CDATA[<html>[Spinoff] <FONT color=#086171>Doubts</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="24" link_target="sq_changejob_4968_forgotten_foretell.xml"><![CDATA[<html>[Spinoff]<FONT color=#086171> Forgotten Prophecy</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="sq_changejob_4969_knowing.xml"><![CDATA[<html>[Spinoff] <FONT color=#086171>Revelation</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="17" link_target="sq_guide_4866_battle_training_ka.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Introduction to Battle Training Ground</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="27" link_target="sq_changejob_3658_first_test.xml"><![CDATA[<html>[Spinoff] <FONT color=#086171>The First Test</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="42" link_target="sq_3858_all_new_city_6_1.xml"><![CDATA[<html>{quest_level} <FONT color=#086171> Unrecognized Changes </FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_quest" mid="43"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Hermit's Totem$<BR>
+<FONT color=#7e12d2>(Hermit's Totem seems to be trying to talk to you)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_training" image="" itemindex="">
+         <talk_answer link_index="back_training" mid="19"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="18"><![CDATA[<html>$Hermit's Totem$<BR>
+<FONT color=#7e12d2>(There is no reaction.)</FONT><BR>
+<FONT color=#7e12d2>*You cannot enter Battle Training Ground in a party.</FONT><BR>
+ </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="dress_up" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="35" link_target="sq_3831_dress_up.xml"><![CDATA[<html>[Growth] <FONT color=#086171>Pray desperately to ancestors</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="36" link_target="sq_3832_dress_up.xml"><![CDATA[<html>[Growth] <FONT color=#086171>Pray desperately to ancestors</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_dress_up" mid="37"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="31"><![CDATA[<html>$Hermit's Totem$<BR>
+(Looks different from the usual.)</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_dress" image="" itemindex="">
+         <talk_answer link_index="back_training" mid="38"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="32"><![CDATA[<html>$Hermit's Totem$<BR>
+(Don't seems it will response unless becoming stronger.)<BR>
+<BR>
+<FONT color=#7e12d2>※ Available after reaching level 95.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="0" false="1">0</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+         <exe type="conexe" true="6" false="6">1</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID, 11111, 1);</exe>
+         <exe type="talk">no_training1</exe>
+         <exe type="conexe" true="8" false="9">2</exe>
+         <exe type="talk">dress_up</exe>
+         <exe type="talk">no_dress</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">6</chk>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+         <chk type="lvl" op=">=">95</chk>
+      </conditions>
+      <exelink idx="dress_1">7</exelink>
+      <exelink idx="skill">3</exelink>
+      <exelink idx="back_quest">2</exelink>
+      <exelink idx="back_training">2</exelink>
+      <exelink idx="back_dress_up">2</exelink>
+      <exelink idx="back_training">2</exelink>
+   </talk>

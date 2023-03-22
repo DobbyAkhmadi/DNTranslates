@@ -1,0 +1,83 @@
+   <talk>
+      <npcename>n1265_irina</npcename>
+      <npcid>1265</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Lagendia's Number One Beauty Irina]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="present" mid="73"><![CDATA[<html>[Gift]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="74"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>Hello~ What can I do for you?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="90_percent" image="" itemindex="">
+         <talk_answer link_index="present_90" mid="75"><![CDATA[<html>[Gift]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="76"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>
+I'm very happy and excited that <FONT color=#387206>{user_nick}</FONT> comes to see me often nowadays~<BR>
+What a girl needs is <FONT color=#a82424>care</FONT> and <FONT color=#7e12d2>concern</FONT>~!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="60_percent" image="" itemindex="">
+         <talk_answer link_index="present_60" mid="77"><![CDATA[<html>[Gift]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="78"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>Welcome! What I like about most after traveling the entire continent is getting to know <FONT color=#387206>{user_nick}</FONT>. But this is a secret! Because I'm a shy girl~</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="30_percent" image="" itemindex="">
+         <talk_answer link_index="present_30" mid="79"><![CDATA[<html>[Gift]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="80"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="11"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>
+Why are you here again? Phew. <BR>
+Seeing me often will make you fall too deeply for me. Be careful!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="0_percent" image="" itemindex="">
+         <talk_answer link_index="present_0" mid="81"><![CDATA[<html>[Gift]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="82"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>
+Hello~ What can I do for you?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="present_ui" image="" itemindex="">
+         <talk_answer link_index="gift" mid="83"><![CDATA[<html>(Give gift)</html>]]></talk_answer>
+         <talk_answer link_index="back_present_ui" mid="84"><![CDATA[<html>(Don't give gift)</html>]]></talk_answer>
+         <talk_question mid="17"><![CDATA[<html>$Gift$</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="gift" image="" itemindex="">
+         <talk_answer link_index="back_gift" mid="85"><![CDATA[<html>(To the beginning)</html>]]></talk_answer>
+         <talk_question mid="20"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>
+Oh! ......Is this for me? Wow!! I like <FONT color=#7e12d2>br</FONT><FONT color=#a82424>a</FONT><FONT color=#a94407>ve</FONT> men. Hehe. <BR>But don't think I like you just because of this gift!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="93" link_target="sq_2317_irina_talk.xml"><![CDATA[<html>[Talk] <FONT color=#086171>About Irina</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="94" link_target="sq_2318_irina_talk.xml"><![CDATA[<html>[Talk] <FONT color=#086171>About Gifts</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="95" link_target="sq_2319_irina_talk.xml"><![CDATA[<html>[Talk] <FONT color=#086171>About Her Dream Guy</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="96" link_target="sq_2320_irina_talk.xml"><![CDATA[<html>[Talk] <FONT color=#086171>About Dating Style</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_talk" mid="97"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="22"><![CDATA[<html>$Lagendia's Number One Beauty Irina$<BR>You know, there's a saying that goes: <FONT color=#086171>‘None but the brave deserves the fair!’</FONT> Since I'm <FONT color=#7e12d2>f</FONT><FONT color=#a94407>a</FONT><FONT color=#7e12d2>i</FONT><FONT color=#a94407>r</FONT>..... I guess that's why I like brave men~ <BR>Oh! So what was your question again?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="4" false="2">0</exe>
+         <exe type="conexe" true="5" false="3">1</exe>
+         <exe type="conexe" true="6" false="7">2</exe>
+         <exe type="talk">90_percent</exe>
+         <exe type="talk">60_percent</exe>
+         <exe type="talk">30_percent</exe>
+         <exe type="talk">0_percent</exe>
+         <exe type="custom">api_ui_OpenGiveNpcPresent( userObjID, 1265 );</exe>
+         <exe type="talk">present_ui</exe>
+         <exe type="custom">api_npc_SendSelectedPresent( userObjID, 1265 );</exe>
+         <exe type="talk">gift</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_npc_GetFavorPercent( userObjID, 1265 ) >= 90</chk>
+         <chk type="custom">api_npc_GetFavorPercent( userObjID, 1265 ) >= 60</chk>
+         <chk type="custom">api_npc_GetFavorPercent( userObjID, 1265 ) >= 30</chk>
+      </conditions>
+      <exelink idx="present">8,9</exelink>
+      <exelink idx="present_90">8,9</exelink>
+      <exelink idx="present_60">8,9</exelink>
+      <exelink idx="present_30">8,9</exelink>
+      <exelink idx="present_0">8,9</exelink>
+      <exelink idx="gift">10,11</exelink>
+      <exelink idx="back_present_ui">1</exelink>
+      <exelink idx="back_gift">1</exelink>
+      <exelink idx="back_talk">1</exelink>
+   </talk>

@@ -1,0 +1,35 @@
+   <talk>
+      <npcename>n1770_gereint_kid</npcename>
+      <npcid>1770</npcid>
+      <startexe>5</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Gerraint]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="33"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="15"><![CDATA[<html>$Gerraint$<BR>
+aku tidak suka disini.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="34" link_target="mqc16_9562_elf_and_knight.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Elf and Knight</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="35" link_target="mqc16_9565_the_man_who_changed_fate.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The one who changed the destiny</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="39"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="19"><![CDATA[<html>$Gerraint$<BR>Ada yang ingin kamu sampaikan?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mqc16_9561_princess_and_knight</exe>
+         <exe type="enterquest">mqc16_9562_elf_and_knight</exe>
+         <exe type="enterquest">mqc16_9564_dragon_and_name</exe>
+         <exe type="enterquest">mqc16_9565_the_man_who_changed_fate</exe>
+         <exe type="conexe" true="1" false="6">0</exe>
+         <exe type="conexe" true="2" false="7">1</exe>
+         <exe type="conexe" true="3" false="8">2</exe>
+         <exe type="conexe" true="4" false="0">3</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9561</chk>
+         <chk type="hasquest">9562</chk>
+         <chk type="hasquest">9564</chk>
+         <chk type="hasquest">9565</chk>
+      </conditions>
+   </talk>

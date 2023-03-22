@@ -1,0 +1,42 @@
+   <talk>
+      <npcename>n2432_re_mara_death</npcename>
+      <npcid>2432</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Spirit of Death]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Spirit of Death$<BR>I'm not interested in weak humans.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="talk_1" mid="10"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Spirit of Death$<BR>Hello, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_1" image="" itemindex="">
+         <talk_answer link_index="talk_2" mid="11"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html><FONT color=#2b2723>${user_nick}$<BR></FONT><FONT color=#662500>What the heck are you?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_2" image="" itemindex="">
+         <talk_answer link_index="end_talk" mid="12"><![CDATA[<html><FONT color=#7e12d2>(Dimension becomes distorted.)</FONT></html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Spirit of Death$<BR>
+Don't be so defensive. <BR>There are too many people here.<BR>
+Let's go somewhere we can talk alone.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,3" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 85 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 998, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 240, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 342, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 759, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 760, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 761, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 762, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 763, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 84</chk>
+      </conditions>
+      <exelink idx="end_talk">5,6,7,8,9,10,11</exelink>
+   </talk>

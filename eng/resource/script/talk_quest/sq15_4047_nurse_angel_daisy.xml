@@ -1,0 +1,344 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_4047_nurse_angel_daisy</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4047</qid>
+      <designer>나은하</designer>
+      <qlevel>57</qlevel>
+      <qdesc>호호 나아라풀
+데이지가 구해오란 약초. 겉으로는 그냥 평범한 잡초처럼 보인다. 
+
+
+데이지가 동물들을 치료하기 위해서 도움을 청함. 그런데 그 치료제를 몬스터에게 씀. 데이지에게 그러면 안돼라고 일러주지만 데이지는 역으로 생명의 소중함을 설교. 데이지는 이상한 아이임</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Nurse Angel Daisy]]></qkname>
+      <qnpc>
+         <npcid>100</npcid>
+         <npcename>n100_event_ilyn</npcename>
+         <npckname>이벤트 도우미 아이린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>849</npcid>
+         <npcename>n849_daisy</npcename>
+         <npckname>데이지</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>850</npcid>
+         <npcename>n850_invisible</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Irine$<BR>I became quite close to a girl named Daisy recently.<BR>But Daisy is a mysterious girl.<BR><FONT color=#7e12d2>(* You can get the quest from Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Daisy$<BR>Daisy is waiting for her grandfather.<BR><FONT color=#7e12d2>(* You can get the quest from Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n850_invisible-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$???$<BR>
+<FONT color=#7e12d2>(Seems like there's nothing special)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-a" mid="11" select_type="0"><![CDATA[<html>Yeah.</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>The young girl said that she treated the monsters?<BR>That's very strange. Scarabee Lord Knactun was seriously injured. A young girl couldn't have treated such serious injuries.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-b" mid="13" select_type="0"><![CDATA[<html>Irine seemed to take care of her now and then.</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>It must be her grandfather who treated those monsters.<BR>Investigate more about the girl and her grandfather.<BR>Is there anyone who knows her well?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-b" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-c" mid="15" select_type="0"><![CDATA[<html>Got it.</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Then can you go to <FONT color=#a82424>Irine</FONT> and ask her if she knows anything about the girl?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Nurse Angel Daisy$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>I hope <FONT color=#a82424>Irine</FONT> has some useful information.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Daisy$<BR>Daisy is waiting for grandfather.<BR><FONT color=#7e12d2>(*Talk to Saint Haven's Irine)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-1-a" mid="24" select_type="0"><![CDATA[<html>(Tell her what has been happening)</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Irine$<BR>Oh, <FONT color=#387206>{user_nick}</FONT>! Daisy seemed to be very angry with you, <FONT color=#387206>{user_nick}</FONT>. What happened?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-1-b" mid="26" select_type="0"><![CDATA[<html>Raising or curing something?</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Irine$<BR>So that's what happened. <BR>
+<FONT color=#7e12d2>(Irine tilts her head)</FONT> <BR>
+Actually I haven't heard about Daisy's grandfather too. Daisy said she has a grandfather but she was more interested in talking about raising or curing others.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-1-c" mid="28" select_type="0"><![CDATA[<html>But wouldn't it be problematic to treat monsters?</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Irine$<BR>Daisy says she becomes their mother. She seemed to like raising or taking care of other lives. <BR>
+She's a kind girl. And young girls like to act like adults. I believe her grandfather is not a bad person too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-c" image="QN_Npc_Daisy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-2" mid="30" select_type="0"><![CDATA[<html>Hmm, okay.</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Irine$<BR>You don't really have a sense of what is good or bad when you're young. And you don't even know whether Daisy really has the ability to cure monsters.<BR>Why don't you ask <FONT color=#a82424>Daisy</FONT> directly?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-2" image="QN_Npc_Daisy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="32"><![CDATA[<html>$Irine$<BR>When I was young, I wanted to be a healer too. Girls usually have those dreams. <FONT color=#a82424>Daisy</FONT> will stop when she gets older too.<BR>Don't worry too much.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-a" mid="35" select_type="0"><![CDATA[<html>…….</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Daisy$<BR>Hmmph, I won't talk to <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-b" mid="37" select_type="0"><![CDATA[<html>(Explain why she shouldn't take care of monsters)</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Daisy$<BR>Daisy is angry. Why are you disrupting Daisy's work?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-c" mid="39" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Daisy$<BR>No no! Daisy doesn't know that!<BR>{user_nick} is bad.<BR>They can change when they are loved too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-d" mid="41" select_type="0"><![CDATA[<html>…… Er, Daisy? I don't understand what you're talking about.</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Daisy$<BR>Heart to heart bonding is the most important thing. Trust is important.<BR>We're not the only ones living in this world. There are other towns, forests, skies, living things….<BR>We're not the only ones so we shouldn't think about ourselves alone.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-d" image="QW_63.dds " itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-e" mid="43" select_type="0"><![CDATA[<html>For what?</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Daisy$<BR>Anyway, {user_nick}! Daisy will teach you how to treat lives preciously!<BR>First, go to <FONT color=#a82424>Meteor Crash Site Core</FONT> and get <FONT color=#a82424>hoho heal plant</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-f" mid="45" select_type="0"><![CDATA[<html>… Why should I do that?</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Daisy$<BR>Because Daisy needs it to treat kids who are hurt.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-3" mid="47" select_type="0"><![CDATA[<html>Okay, I'll be back in a while.</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Daisy$<BR>Heart to heart bonding is the most important thing. Trust is important.<BR>We are not the only ones in this world. There are other towns, forests, skies, living things….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-3" image="QW_63.dds " itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="51"><![CDATA[<html>$Daisy$<BR><FONT color=#387206>{user_nick}</FONT>, when you treat injured kids, you will become kind too.<BR>Go to <FONT color=#a82424>Meteor Crash Site Core</FONT> and get <FONT color=#a82424>hoho heal plant</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n850_invisible-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n850_invisible-4" mid="91" select_type="0"><![CDATA[<html>(Collect hoho heal plant)</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$???$<BR>
+<FONT color=#7e12d2>(This looks like weed. I think this is the hoho heal plant Daisy was talking about.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-4-a" mid="54" select_type="0"><![CDATA[<html>(Give her hoho heal plant)</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Daisy$<BR>You took such a long time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-4-b" mid="57" select_type="0"><![CDATA[<html>Don't do that.</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Daisy$<BR>Now I'm going to go to Meteor Crash Site Core and treat injured ones.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-4-c" mid="59" select_type="0"><![CDATA[<html>So Daisy, was it your grandfather who treated Knactty?</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Daisy$<BR>Hey bad <FONT color=#387206>{user_nick}</FONT>!<BR>Heart to heart bonding is the most important thing. Trust is important.<BR>We're not the only ones…….<BR><FONT color=#7e12d2>(It seems impossible to persuade Daisy)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-5" mid="61" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Daisy$<BR>I told you many times that Daisy treated them.<BR>You are really stupid, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n850_invisible-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="93"><![CDATA[<html>$???$<BR>
+<FONT color=#7e12d2>(Seems like there's nothing special)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="64"><![CDATA[<html><FONT color=#7e12d2>(It would be no use talking to Daisy anymore. Go back to Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-a" mid="66" select_type="0"><![CDATA[<html>I'm sorry.</html>]]></talk_answer>
+      <talk_question mid="65"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>… So you couldn't find out anything about the child?<BR>So you only ran errands for her?<BR><FONT color=#7e12d2>(Gunther heaves a sigh)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-b" mid="68" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>No it's not your fault.<BR>Thanks anyway.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-c" mid="70" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="69"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-c" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="104"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>
+We should investigate more about the girl's grandfather.<BR>
+<FONT color=#a82424>Irine</FONT> could have found something out so why don't you go and meet <FONT color=#a82424>Irine</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">40470,,,,,,,,,</exe>
+         <exe type="setquest">4047</exe>
+         <exe type="talk" npc="n036_adventurer_guildmaster_gunter">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntitem" num="1" exe="" onexe="3,4,5">400311</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="1">400311</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>아이템 인덱스 임시</comment>
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">400311</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">40470,,,,,,,,,</exe>
+         <exe type="complete" true="">4047</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="c">0</exelink>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n100_event_ilyn" sub="b" />
+   <exelink qstep="1" npc="n100_event_ilyn" sub="c" />
+   <exelink qstep="1" npc="n100_event_ilyn" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n849_daisy" sub="b" />
+   <exelink qstep="2" npc="n849_daisy" sub="c" />
+   <exelink qstep="2" npc="n849_daisy" sub="d" />
+   <exelink qstep="2" npc="n849_daisy" sub="e" />
+   <exelink qstep="2" npc="n849_daisy" sub="f" />
+   <exelink qstep="2" npc="n849_daisy" sub="3">0,1,2</exelink>
+   <exelink qstep="3" npc="n850_invisible" sub="4">0</exelink>
+   <exelink qstep="4" npc="n849_daisy" sub="a">0</exelink>
+   <exelink qstep="4" npc="n849_daisy" sub="b" />
+   <exelink qstep="4" npc="n849_daisy" sub="c" />
+   <exelink qstep="4" npc="n849_daisy" sub="5">1,2</exelink>
+   <exelink qstep="5" npc="n036_adventurer_guildmaster_gunter" sub="b">0</exelink>
+   <exelink qstep="5" npc="n036_adventurer_guildmaster_gunter" sub="c">1</exelink>
+   <journal_data recompense="40470" quest_title="간호천사 데이지" chapterid="" quest_level="57" quest_mark_type="10" use_item_list="400311">
+      <journal index="1">
+         <contents_image>QN_Event_Red.dds</contents_image>
+         <destination_pos />
+         <destination_mode>custom:1@4,5@4,8@4,11@4,15@4</destination_mode>
+         <statemark_npcid>100</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="73"><![CDATA[Daisy's Identity]]></title>
+         <contents mid="74"><![CDATA[<html>Adventurer's Guild Master Gunther wants to know more about Daisy. Go to Events Planner Irine and ask about Daisy.<BR><BR><FONT color=#086171>Prairie Town</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><BR><FONT color=#086171>Mana Ridge</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><BR><FONT color=#086171>Saint Haven</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→ Events Planner Irine</FONT></html>]]></contents>
+         <destination mid="75"><![CDATA[Talk to Events Planner Irine]]></destination>
+         <todo_msg mid="76"><![CDATA[New quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Daisy.dds</contents_image>
+         <destination_pos>14,n849</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>849</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="79"><![CDATA[Friendly Daisy]]></title>
+         <contents mid="80"><![CDATA[<html>Events Planner Irine said Daisy likes to heal and look after others. But Irine doesn't seem to know much about Daisy too. Meet Daisy and ask questions directly.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf</FONT> <FONT color=#a82424>→ Daisy</FONT></html>]]></contents>
+         <destination mid="81"><![CDATA[Talk to Daisy at Riverwort Wharf]]></destination>
+         <todo_msg mid="82"><![CDATA[Talk to Daisy at Riverwort Wharf.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_63.dds</contents_image>
+         <destination_pos>631,0,0</destination_pos>
+         <destination_mode>custom:631@4,632@0</destination_mode>
+         <statemark_npcid>850</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Hoho heal]]></title>
+         <contents mid="85"><![CDATA[<html>Daisy asked you to bring hoho heal plant from Meteor Crash Site Core. Go to Meteor Crash Site Core.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> <FONT color=#a82424>→ Meteor Crash Site Core</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Collect hoho heal plant at Meteor Crash Site Core]]></destination>
+         <todo_msg mid="87"><![CDATA[Find hoho heal plant at Meteor Crash Site Core.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Daisy.dds</contents_image>
+         <destination_pos>14,n849</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>849</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="95"><![CDATA[Talk to Daisy]]></title>
+         <contents mid="96"><![CDATA[<html>You have obtained hoho heal plant. Now go to Riverwort Wharf and give it to Daisy.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf</FONT> <FONT color=#a82424>→ Daisy</FONT></html>]]></contents>
+         <destination mid="97"><![CDATA[Talk to Daisy at Riverwort Wharf]]></destination>
+         <todo_msg mid="98"><![CDATA[Talk to Daisy at Riverwort Wharf.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Master_Gunter.dds</contents_image>
+         <destination_pos>11,n36</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>36</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="100"><![CDATA[Report to Adventurer's Guild Master Gunther]]></title>
+         <contents mid="101"><![CDATA[<html>Report to Saint Haven's Adventurer's Guild Master Gunther about Daisy.<BR>
+<FONT color=#086171></FONT> <BR>
+<FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Gunther</FONT></html>]]></contents>
+         <destination mid="102"><![CDATA[Talk to Adventurer's Guild Master Gunther]]></destination>
+         <todo_msg mid="103"><![CDATA[Talk to Adventurer's Guild Master Gunther at Saint Haven.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>57:-1</user_level>
+      <user_class />
+      <prev_quest>4046</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

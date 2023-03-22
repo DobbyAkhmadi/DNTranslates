@@ -1,0 +1,270 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq05_162_good_arbeit</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>162</qid>
+      <designer>손원호</designer>
+      <qlevel>8</qlevel>
+      <qdesc>매직 마스터 실기 시험을 마치면 할 수 있는 퀘스트. 도망친 배신자 세드릭을 추적하고 사로잡으려 하지만 소서리스의 파워가 너무 강해서 죽이고 마는데… 
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[In The Name of Justice]]></qkname>
+      <qnpc>
+         <npcid>11</npcid>
+         <npcename>n011_priest_leonardo</npcename>
+         <npckname>상급 클레릭 레오날드    (마나리지)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>13</npcid>
+         <npcename>n013_cleric_tomas</npcename>
+         <npckname>클레릭 토마스 (마나리지 클레릭 스킬)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-noquest" image="QN_Cl_Leonardo.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="95"><![CDATA[<html>$Cleric Thomas$<BR><FONT color=#a82424>Master Cleric Leonard</FONT> kelihatannya mencarimu. <BR>Kembalilah setelah berbicara dengannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-a" mid="6" select_type="0"><![CDATA[<html>Apa yang bisa kulakukan untukmu?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Master Cleric Leonard${action:Talk}<BR>Sini <FONT color=#382000>{user_nick}.</FONT> <BR>Aku telah menunggumu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-b" mid="8" select_type="0"><![CDATA[<html>Kamu bicara tentang pengkhianat. Cedric.</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Cleric Leonard$<BR>Hanya kamu yang dapat kuminta bantuan. *Huff*...meski dia pengkhianat, Aku tak bisa memberikan perintah untuk menangkap teman lama.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting-b" image="QN_Npc_Cl_Fallen_Cedric.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-c" mid="10" select_type="0"><![CDATA[<html>Melepaskan tanggung jawab hah? Sungguh mengecewakan.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Master Cleric Leonard$<BR>Ya. Kamu urus, Jake, tapi <FONT color=#a82424>Cedric</FONT> masih lepas. Aku menemukan tempat sembunyinya, tapi... Aku hanya tidak bisa memerintah cleric untuk menangkapnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-d" mid="12" select_type="0"><![CDATA[<html>(Sepertinya pekerjaan yang bagus)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Master Cleric Leonard$<BR>Maaf jika kamu merasa tidak enak. Aku tahu rasanya. Namun aku tidak memaksamu. Di luar itu... Aku akan membayarmu. Bagaimana menurutmu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-e" mid="16" select_type="0"><![CDATA[<html>Baiklah.</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Master Cleric Leonard$<BR>...? Jadi, kamu setuju?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-acceptted" mid="18" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$In The Name of Justice$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1" image="QN_Cl_Tomas.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Master Cleric Leonard$<BR>Aku serahkan padamu sekarang. <BR>Untuk info lainnya tentang Cedric, silahkan cari <FONT color=#a82424>Cleric Thomas</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-a" mid="23" select_type="0"><![CDATA[<html>(Kamu berdiri lebih dekat.)</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Cleric Thomas$<BR>Aku yakin kamu telah menerima permintaan Master Cleric Leonard. Mendekatlah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-b" mid="25" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Cleric Thomas$<BR>Aku terlalu banyak menebak, tapi seperti penghinaan untuk meminta bantuan Sorceress.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-b" image="QN_DragonSycophant.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-c" mid="27" select_type="0"><![CDATA[<html>Dragon Follower?</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Cleric Thomas$<BR>Harus kuakui Jake adalah Cleric hebat... Siapa yang menduga dia menjadi <FONT color=#a82424>Dragon Follower</FONT>? Itu sebuah tragedi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-d" mid="29" select_type="0"><![CDATA[<html>Sebuah tujuan?</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Cleric Thomas$<BR>Dragon Followers... Mereka adalah orang-orang yang tergoda kekuatan dragon dan menyembahnya juga. Tentu saja, tidak hanya menyembah. Mereka punya organisasi, dan punya tujuan terselubung. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-e" mid="31" select_type="0"><![CDATA[<html>Gadis berambut merah...</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Cleric Thomas$<BR>Tujuan utama mereka masih belum kuketahui, tapi satu hal yang pasti... adalah kekuatan <FONT color=#a82424>ancient</FONT> yang mereka incar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-e" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-f" mid="33" select_type="0"><![CDATA[<html>Jadi begitu.</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Cleric Thomas$<BR>Takutnya begitu. Jika <FONT color=#a82424>gadis berambut merah</FONT> adalah seorang ancient, akan lebih banyak orang yang mengincarnya. <BR>Kita tidak akan membiarkan kekuatan itu jatuh ke tangan yang jahat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-f" image="QW_11.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-g" mid="35" select_type="0"><![CDATA[<html>Ok.</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Cleric Thomas$<BR>Setelah kita menangkap Cedric, kita akan mengetahui tujuan mereka. Menurut informasi yang kuterima, Cedric bersembunyi di <FONT color=#a82424>Hall of Marian</FONT>. Menyusup dan bawa dia ke sini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Cleric Thomas$<BR>Kamu harus segera membereskan masalah ini dan ingatlah untuk selalu tidak mencolok.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2" image="QW_11.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Cleric Thomas$<BR>Sekarang, cepat ke <FONT color=#a82424>Hall of Marian</FONT> sebelum dia kabur lagi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-3-a" mid="39" select_type="0"><![CDATA[<html>Yah... Dia sudah mati.</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Cleric Thomas$<BR>Bagaimana? Kamu sudah menangkap Cedric? Dimana dia?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-3-b" mid="41" select_type="0"><![CDATA[<html>Oh tidak.</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Cleric Thomas$<BR>Apa? Aku mengirimu untuk menangkapnya, tapi kamu malah membunuhnya!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-3-c" mid="43" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Cleric Thomas$<BR>Hmm... Mungkin ini cara terbaik. Akan sulit menginterogasi dia tentang tujuan Dragon Followers.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-3-c" image="QN_Cl_Leonardo.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="44"><![CDATA[<html>$Cleric Thomas$<BR>Beritahu <FONT color=#a82424>Master Cleric Leonard</FONT> tentang ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-4" image="QN_Cl_Leonardo.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Cleric Thomas$<BR>Tolong beritahu Master Cleric Leonard tentang berita ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-a" mid="47" select_type="0"><![CDATA[<html>(Kamu menjelaskan situasinya)</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Master Cleric Leonard$<BR>Jadi, Bagaimana hasilnya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-b" mid="49" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Master Cleric Leonard$<BR>Cedric dan Jake punya nasib yang sama. Jika memungkinkan, Aku ingin berdoa untuk mereka... Apakah ini takdir?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-c" mid="51" select_type="0"><![CDATA[<html>Mungkin ini adalah Kebenaran sesungguhnya...?</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Master Cleric Leonard$<BR>*Huff*... Aku yakin mereka punya kebenaran. Meski mereka berkhianat, mereka mengikuti kata hatinya. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-d" mid="62" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Master Cleric Leonard$<BR>Kebenaran itu relatif. Tanpa kekuatan, kebenaran tidak ada dan tanpa kebenaran, kekuatan hanya kekerasan. Itulah dilema manusia untuk mencari keseimbangan. Menurutku solusi mereka berbeda dengan kita.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-e" mid="72" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="77"><![CDATA[<html>$Master Cleric Leonard$<BR>Terima kasih atas bantuannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">1620,,,,,,,,,</exe>
+         <exe type="setquest">162</exe>
+         <exe type="talk" npc="n011_priest_leonardo">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">1620,,,,,,,,,</exe>
+         <exe type="complete" true="">162</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n011_priest_leonardo" sub="e">0</exelink>
+   <exelink qstep="accepting" npc="n011_priest_leonardo" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="b" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="c" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="d" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="e" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="f" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="g">0,1</exelink>
+   <exelink qstep="3" npc="n013_cleric_tomas" sub="b" />
+   <exelink qstep="3" npc="n013_cleric_tomas" sub="c">0,1</exelink>
+   <exelink qstep="4" npc="n011_priest_leonardo" sub="b" />
+   <exelink qstep="4" npc="n011_priest_leonardo" sub="c" />
+   <exelink qstep="4" npc="n011_priest_leonardo" sub="d">0</exelink>
+   <exelink qstep="4" npc="n011_priest_leonardo" sub="e">1</exelink>
+   <journal_data recompense="0:1620" quest_title="괜찮은 아르바이트" chapterid="" quest_level="8" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Cl_Tomas.dds</contents_image>
+         <destination_pos>5,n13</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>13</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Bicara pada Cleric Thomas]]></title>
+         <contents mid="79"><![CDATA[<html>Temui Cleric Thomas untuk mendapatkan info tentang persembunyian Cedric.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Cleric Thomas</FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[Bicara pada Cleric Thomas]]></destination>
+         <todo_msg mid="81"><![CDATA[Quest telah di tambahkan..]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_11.dds</contents_image>
+         <destination_pos>103,0,0</destination_pos>
+         <destination_mode>custom:101@1,102@1,103@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="82"><![CDATA[Kalahkan Cedric di Hall of Marian]]></title>
+         <contents mid="83"><![CDATA[<html>Lanjutkan ke Hall of Marian dan tangkap Cedric.<BR> <BR><FONT color=#086171>Blizzard Plain (Secret Path)</FONT> <FONT color=#a82424>→ Hall of Marian</FONT></html>]]></contents>
+         <destination mid="84"><![CDATA[Kalahkan Cedric di Hall of Marian]]></destination>
+         <todo_msg mid="85"><![CDATA[Kalahkan Cedric di Hall of Marian.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Cl_Tomas.dds</contents_image>
+         <destination_pos>5,n13</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>13</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string>마리온 전당 보스방에 세드릭 보스몹으로 등장
+세드릭 처치후 가면 깨지는 컷씬 
+컷씬 종료후 스탭, 저널 2 에서 3으로 변경</trigger_string>
+         <maptool_index />
+         <title mid="86"><![CDATA[Bicara pada Cleric Thomas]]></title>
+         <contents mid="87"><![CDATA[<html>Cedric, sang pembelot telah di kalahkan! Kembali pada Cleric Thomas dan laporkan kejadiannya.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Cleric Thomas</FONT></html>]]></contents>
+         <destination mid="88"><![CDATA[Bicara pada Cleric Thomas]]></destination>
+         <todo_msg mid="89"><![CDATA[Cedric, sang pembelot telah di kalahkan! Kembali pada Cleric Thomas dan laporkan kejadiannya.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Cl_Leonardo.dds</contents_image>
+         <destination_pos>5,n11</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>11</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="90"><![CDATA[Bicara pada Master Cleric Leonard]]></title>
+         <contents mid="91"><![CDATA[<html>Laporkan pada Master Cleric Leonard tentang kekalahan Cedric dan dapatkan rewardmu.<BR><BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Master Cleric Leonard</FONT><BR> </html>]]></contents>
+         <destination mid="92"><![CDATA[Bicara pada Master Cleric Leonard]]></destination>
+         <todo_msg mid="93"><![CDATA[Laporkan pada Master Cleric Leonard tentang kekalahan cedric.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest>119,143</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

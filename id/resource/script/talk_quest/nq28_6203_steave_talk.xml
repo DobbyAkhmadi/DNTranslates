@@ -1,0 +1,91 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq28_6203_steave_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>6203</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] About Recent Interest]]></qkname>
+      <qnpc>
+         <npcid>4</npcid>
+         <npcename>n004_guard_steave</npcename>
+         <npckname>자경단장 스티브</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n004_guard_steave-accepting-a" mid="7" select_type="0"><![CDATA[<html>Biarkan aku tahu jika suatu saat kamu memerlukan bantuanku.</html>]]></talk_answer>
+      <talk_answer link_index="n004_guard_steave-accepting-b" mid="8" select_type="0"><![CDATA[<html>Kamu sangat berdedikasi kepada kota ini.</html>]]></talk_answer>
+      <talk_answer link_index="n004_guard_steave-accepting-c" mid="9" select_type="0"><![CDATA[<html>Suatu saat, kamu harus santai dan memperoleh kegembiraan.</html>]]></talk_answer>
+      <talk_answer link_index="n004_guard_steave-accepting-d" mid="10" select_type="0"><![CDATA[<html>Kamu adalah orang yang membosankan.</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Vigilante Leader Steve $<BR>Ya, Sepertinya menjaga serangan monster adalah suatu-satunya hal yang saat ini aku lakukan. Aku harap monster-monster itu menghilang, dan Rose dapat kembali seegera mungkin.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Vigilante Leader Steve $<BR>terima kasih telah berkata seperti itu. Tapi, {user_nick}, tolong temukan Rose terlebih dahulu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Vigilante Leader Steve $<BR>Seseorang harus melakukannya. Aku senang dapat kesempatan itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Vigilante Leader Steve $<BR>Dalam situasi seperti ini, tidak ada yang kulakukan yang memberikanku kebahagiaan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Vigilante Leader Steve $<BR>Aku selalu mendengar tentang itu, tapi itulah aku. <FONT color=#7e12d2>(Steve terlihat marah.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 6203, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 4, 200 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 4, 100 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 4, 100 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 4, 200 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n004_guard_steave" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n004_guard_steave" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n004_guard_steave" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n004_guard_steave" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 최근의 관심사에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>4:1500:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

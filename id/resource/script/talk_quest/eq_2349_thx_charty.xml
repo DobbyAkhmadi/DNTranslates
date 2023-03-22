@@ -1,0 +1,117 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>eq_2349_thx_charty</qename>
+      <qtype>eventquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2349</qid>
+      <designer>이한나</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <custommark>30,31,32</custommark>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Event] Jibril Shadow's Gift]]></qkname>
+      <qnpc>
+         <npcid>1275</npcid>
+         <npcename>n1275_thx_charty</npcename>
+         <npckname>지브릴 쉐도우</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1275_thx_charty-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1275_thx_charty-accepting-a" mid="6" select_type="0"><![CDATA[<html>…Membicarakan namaku ya?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Jibril Shadow$<BR>Eu....Ha...Khe....Eeeuu.... <FONT color=#086171>{user_nick}</FONT>....Je....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1275_thx_charty-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1275_thx_charty-accepting-b" mid="8" select_type="0"><![CDATA[<html><FONT color=#7e12d2>....Apakah seperti itu kah..?</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Jibril Shadow$<BR>b...Se...Khe..He.........Tha..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1275_thx_charty-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1275_thx_charty-accepting-c" mid="10" select_type="0"><![CDATA[<html><FONT color=#7e12d2>Sepertinya masih belum bisa belajar bicara rupanya...</FONT></html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Jibril Shadow$<BR>
+Ii.....The..Khe...Go......... k...Kau....J..Ju.....N....Da..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1275_thx_charty-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1275_thx_charty-accepting-acceptted" mid="12" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$[Event] Jibril Shadow's Gift$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1275_thx_charty-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1275_thx_charty-1-a" mid="14" select_type="0"><![CDATA[<html><FONT color=#7e12d2>Saya dikasih ini? Trims!!</FONT></html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Jibril Shadow$<BR>
+Ppi...beu...Kehe.......Sesese........Da...Chepe...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1275_thx_charty-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1275_thx_charty-1-b" mid="16" select_type="0"><![CDATA[<html><FONT color=#086171>(Mendapatkan Reward)</FONT> </html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Event Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1275_thx_charty-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="17"><![CDATA[<html>$Jibril Shadow$<BR>....Se...Sese...Da......Eng....Bo..Ja......<BR><FONT color=#086171>{user_nick}</FONT>.......Khe...Ph...Je..<BR><BR><FONT color=#a82424>(Tampak luarnya menakutkan tetapi, setelah mencari tahu ada bagian yang imut sepertinya.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">23490,,,,,,,,</exe>
+         <exe type="setquest">2349</exe>
+         <exe type="talk" npc="n1275_thx_charty">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">2349</exe>
+         <exe type="recompense">23490,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1275_thx_charty" sub="c">0</exelink>
+   <exelink qstep="accepting" npc="n1275_thx_charty" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n1275_thx_charty" sub="a">1</exelink>
+   <exelink qstep="1" npc="n1275_thx_charty" sub="b">0</exelink>
+   <journal_data recompense="23490" quest_title="[이벤트] 지브릴 쉐도우의 선물" chapterid="" quest_level="1" quest_mark_type="30" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos />
+         <destination_mode>custom:1@0,5@0,8@0,11@2,15@0</destination_mode>
+         <statemark_npcid>1275</statemark_npcid>
+         <statemark_type>31</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="18"><![CDATA[Jibril Shadow's Gift]]></title>
+         <contents mid="19"><![CDATA[<html>'Jibril Shadow' telah memasuki Dragon Nest World !<BR>temuilah dan bicara kepada 'Jibril Shadow'', Mari coba dapatkan hadiah!<BR><BR><FONT color=#7e12d2>Nb. Event spektakuler ini untuk menyampaikan rasa terima kasih kepada para Hero akan berakhir sampai mana ya! (Terharu terharu)</FONT><BR><BR><FONT color=#086171>Saint's Haven</FONT><FONT color=#2b2723> </FONT><FONT color=#2]]></contents>
+         <destination mid="20"><![CDATA[Conversation with Jibril Shadow]]></destination>
+         <todo_msg mid="21"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

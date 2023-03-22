@@ -1,0 +1,418 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_387_temporarily_cure</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>387</qid>
+      <designer>김인정</designer>
+      <qlevel>32</qlevel>
+      <qdesc>오염된 토양표본	300252
+
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>388</nextqid>
+      <nextqname>mq11_388_homesick_to_future</nextqname>
+      <nextqnpc>n393_academic_station</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Find a Temporary Cure]]></qkname>
+      <qnpc>
+         <npcid>216</npcid>
+         <npcename>n216_geraint_wounded</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>393</npcid>
+         <npcename>n393_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>44</npcid>
+         <npcename>n044_archer_master_ishilien</npcename>
+         <npckname>상급 아처 이실리엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>528</npcid>
+         <npcename>n528_acamedic_jasmin</npcename>
+         <npckname>아카데믹 자스민</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="54"><![CDATA[<html>$Geraint$<BR>The Descendent of the Ancient is still not waking up.<BR>It doesn't seem like there is other problems, so it is unclear what the reason is.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="58"><![CDATA[<html>$General Douglas$<BR>I wish the soldiers would get better soon. I'm so concerned.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-accepting-acceptted" mid="244" select_type="3" />
+      <talk_question mid="55"><![CDATA[<html>$Academic Jasmine${sound:npc_SH_Jasmin_sp_04.ogg}<BR>The reason why those soldiers are sick is because of the <FONT color=#a82424>Black Dragon's blood</FONT>.<BR>Strong monster's blood is like a poison to other living organisms.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-a" mid="249" select_type="2" />
+      <talk_question mid="171"><![CDATA[<html>$Academic Jasmine$<BR>Since they were present in the fight of two dragons, there should be some side effects.<BR>Anyway, no one has ever found a perfect cure till this day.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-b" mid="174" select_type="0"><![CDATA[<html>The Elves' medicine?</html>]]></talk_answer>
+      <talk_question mid="173"><![CDATA[<html>$Academic Jasmine$<BR>Yes, but even though it cannot be perfectly cured, there is a way to suppress the symptoms.<BR>How long a person can last will depend on the mental state of each individuals....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-2" mid="176" select_type="0"><![CDATA[<html>I'll try and find that cure.</html>]]></talk_answer>
+      <talk_question mid="175"><![CDATA[<html>$Academic Jasmine$<BR>Yeah. At that time...<FONT color=#7e12d2>(Jasmine searches for data)</FONT><BR>Found it. Master Archer Ithilien might know something.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-1-" mid="251" select_type="5" />
+      <talk_question mid="178"><![CDATA[<html>$Geraint$<BR>The descendant of the Ancient is still not waking up.<BR>It doesn't seem like there is other problems, so I don't know why.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="252" select_type="5" />
+      <talk_question mid="179"><![CDATA[<html>$General Douglas$<BR>I wish the soldiers get better soon.<BR>How are you doing with finding a cure for the soldiers?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-2" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-2-" mid="256" select_type="5" />
+      <talk_question mid="180"><![CDATA[<html>$Academic Jasmine${sound:npc_SH_Jasmin_sp_05.ogg}<BR>
+Ithilien would definitely help you.<BR>
+Try seeking her help.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-2-" mid="258" select_type="5" />
+      <talk_question mid="181"><![CDATA[<html>$Geraint$<BR>If the injuries are due to the Rain of Catastrophe,<BR>
+the Elves helped 50 years ago.<BR>
+Maybe the Elves who were present at that time might know how to cure it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-a" mid="259" select_type="2" />
+      <talk_question mid="254"><![CDATA[<html>$Master Archer Ithilien$<BR>
+How can I help you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-b" mid="261" select_type="2" />
+      <talk_question mid="260"><![CDATA[<html>$Master Archer Ithilien$<BR>
+I see. The same thing happened 50 years ago.<BR>
+But I'm not sure if we can use the same medicine.<BR>
+<FONT color=#7e12d2>(Ithilien thinks for a while)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-b" image="QW_38.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3" mid="263" select_type="2" />
+      <talk_question mid="262"><![CDATA[<html>$Master Archer Ithilien$<BR>
+<FONT color=#387206>{user_nick}</FONT>, can you go to the <FONT color=#a82424>Road to Death City</FONT> and get me some <FONT color=#a82424>Contaminated Soil</FONT>?<BR>
+I think we should use it to compare with the one on injured soldiers.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3" image="QW_38.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-" mid="264" select_type="5" />
+      <talk_question mid="182"><![CDATA[<html>$Master Archer Ithilien$<BR>
+You can get <FONT color=#a82424>Contaminated Soil</FONT> by fighting the monsters at the <FONT color=#a82424>Road to Death City</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-4-a" mid="269" select_type="2" />
+      <talk_question mid="188"><![CDATA[<html>$Master Archer Ithilien$<BR>
+<FONT color=#2b2723>Yes this is it. Let's see...</FONT><BR>
+<FONT color=#2b2723>Right, this isn't an ordinary contamination from the monsters.</FONT><BR>
+<FONT color=#2b2723>The nightmare of 50 years ago repeats...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-4-b" mid="271" select_type="0"><![CDATA[<html>Do you need my help?</html>]]></talk_answer>
+      <talk_answer link_index="n044_archer_master_ishilien-4-b" mid="272" select_type="0"><![CDATA[<html>I'll help.</html>]]></talk_answer>
+      <talk_question mid="270"><![CDATA[<html>$Master Archer Ithilien$<BR>
+It looks like the medicine that we have right now is not sufficient.<BR>
+First, I will give all the medicine I have to General Douglas,<BR>
+and I would need to contact <FONT color=#a82424>Anu Arendel</FONT> as well...<BR>
+<FONT color=#7e12d2>(Ithilien sighs)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5" mid="274" select_type="0"><![CDATA[<html>(It wasn't that hard)</html>]]></talk_answer>
+      <talk_answer link_index="n044_archer_master_ishilien-5" mid="275" select_type="0"><![CDATA[<html>(Round and round it goes)</html>]]></talk_answer>
+      <talk_question mid="273"><![CDATA[<html>$Master Archer Ithilien$<BR>
+No. <FONT color=#387206>{user_nick}</FONT>, you just came back from a rough place. You should get some rest.<BR>
+When your body grows weak, your heart will become weak. A weaker heart will bring suspicion, and suspicion can result in irreversible wounds to the heart and body. <FONT color=#7e12d2>(Ithilien smiles faintly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-" mid="279" select_type="5" />
+      <talk_question mid="199"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(I should report to sis first)</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>(Connect to Academic Station)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-5" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-5-a" mid="299" select_type="2" />
+      <talk_question mid="282"><![CDATA[<html>$Academic Jasmine${sound:npc_SH_Jasmin_sp_02.ogg}<BR>Did you get the <FONT color=#a82424>medicine</FONT>?<BR>…Great. I'm glad that you could help.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-5-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-5-b" mid="300" select_type="0"><![CDATA[<html>Isn't it because the Nest is deactivated?</html>]]></talk_answer>
+      <talk_question mid="283"><![CDATA[<html>$Academic Jasmine$<BR>But there is something I don't quite understand.<BR>According to the records, the Prophet vanishes at this very place? Why is that?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-5-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-5-c" mid="301" select_type="2" />
+      <talk_question mid="284"><![CDATA[<html>$Academic Jasmine$<BR>Yes, of course, but I want to know why. Is Geraint deactivating the Nest to go on a different urgent matter?<BR>Or...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-5-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-5-d" mid="302" select_type="0"><![CDATA[<html>Geraint's pendant...?</html>]]></talk_answer>
+      <talk_question mid="285"><![CDATA[<html>$Academic Jasmine$<BR>Like the <FONT color=#a82424>Ancient Priest's Rune</FONT>, there may be something that can penetrate the Gold Dragon's Nest.<BR>Someone trespasses using that. Isn't it quite probable?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-5-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6" mid="303" select_type="2" />
+      <talk_question mid="286"><![CDATA[<html>$Academic Jasmine$<BR>The pendants were given only to the people who coud be trusted. According to our records, people who received the pendants never did anything suspicious. So that means, someone else penetrated the Nest...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-" mid="304" select_type="5" />
+      <talk_question mid="208"><![CDATA[<html>$Academic Jasmine${sound:npc_SH_Jasmin_sp_06.ogg}<BR>Hmm... This keeps bugging my mind.<BR>Could you go to <FONT color=#a82424>Geraint</FONT> in the basement of the Royal Castle and ask him?<BR>He may be able to answer that.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-a" mid="306" select_type="0"><![CDATA[<html>I'm here to ask you something.</html>]]></talk_answer>
+      <talk_question mid="287"><![CDATA[<html>$Geraint$<BR>It's you, <FONT color=#387206>{user_nick}</FONT>. You must be concerned about the descendant of the Ancient.<BR>But, even if you speak to her, you won't be able to reach her.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6-a" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-b" mid="307" select_type="2" />
+      <talk_question mid="288"><![CDATA[<html>$Geraint$<BR>...You're asking if someone could enter here with the <FONT color=#a82424>Ancient Priest's Rune</FONT>? You don't have to worry about that. The current Black Dragon and the one 50 years ago were made by the power of Ancients, that's why it could be weakened with the Ancient Priest's Rune.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6-b" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-c" mid="308" select_type="2" />
+      <talk_question mid="289"><![CDATA[<html>$Geraint$<BR>The descendants of Chaos Dragon is different from me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6-c" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-7" mid="309" select_type="2" />
+      <talk_question mid="290"><![CDATA[<html>$Geraint$<BR>Unlike the Chaos fragments, there are only two of the <FONT color=#a82424>descendants of Ancient Dragon</FONT> - Argenta and me.<BR>As far as I know, that is the way.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-7" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_question mid="291"><![CDATA[<html>$Geraint$<BR>I think I've answered your question.<BR>Now, return to whoever sent you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-7" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-7-a" mid="312" select_type="2" />
+      <talk_question mid="292"><![CDATA[<html>$Academic Jasmine${sound:npc_SH_Jasmin_sp_02.ogg}<BR>Hmm~ if he says so, then we can be at ease for now.<BR>But, I still don't understand how the Nest could be deactivated and the Prophet could disappear.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-7-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-7-b" mid="313" select_type="2" />
+      <talk_question mid="294"><![CDATA[<html>$Academic Jasmine$<BR>...And not all dragons are the same.<BR>Velskud... I mean, the Black Dragon is a fragment of the <FONT color=#a82424>Chaos Dragon</FONT>, whereas, Geraint and Argenta are the descendants of the <FONT color=#a82424>Ancient Dragon</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-7-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-7-c" mid="314" select_type="2" />
+      <talk_question mid="295"><![CDATA[<html>$Academic Jasmine$<BR>Hmm... We didn't know much about the dragons.<BR>In our days, dragons only appear in legends...<BR>
+<FONT color=#7e12d2>(Jasmine sighs)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-7-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n393_academic_station-7-d" mid="316" select_type="4" />
+      <talk_question mid="315"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-7-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-7-!next" mid="317" select_type="2" />
+      <talk_question mid="296"><![CDATA[<html>$Academic Jasmine$<BR>How's <FONT color=#a82424>Velskud</FONT>? Did you get to know him a little better?<BR>
+If you want to move freely around in that place, you should get close to him.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">387</exe>
+         <exe type="talk" npc="n393_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntitem" num="1" exe="" onexe="6,7,8">300252</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">201028</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">1028</exe>
+         <exe type="addquestitem" num="1">300252</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">3870,,,,,,,,</exe>
+         <exe type="complete" true="">387</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n393_academic_station" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n393_academic_station" sub="b" />
+   <exelink qstep="1" npc="n393_academic_station" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="b" />
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="3">0,1,2,3,4</exelink>
+   <exelink qstep="4" npc="n044_archer_master_ishilien" sub="b" />
+   <exelink qstep="4" npc="n044_archer_master_ishilien" sub="b" />
+   <exelink qstep="4" npc="n044_archer_master_ishilien" sub="5">0,1</exelink>
+   <exelink qstep="4" npc="n044_archer_master_ishilien" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n393_academic_station" sub="b" />
+   <exelink qstep="5" npc="n393_academic_station" sub="c" />
+   <exelink qstep="5" npc="n393_academic_station" sub="d" />
+   <exelink qstep="5" npc="n393_academic_station" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n216_geraint_wounded" sub="b" />
+   <exelink qstep="6" npc="n216_geraint_wounded" sub="c" />
+   <exelink qstep="6" npc="n216_geraint_wounded" sub="7">0,1</exelink>
+   <exelink qstep="7" npc="n393_academic_station" sub="b" />
+   <exelink qstep="7" npc="n393_academic_station" sub="c">0</exelink>
+   <exelink qstep="7" npc="n393_academic_station" sub="d">1</exelink>
+   <exelink qstep="7" npc="n393_academic_station" sub="!next" />
+   <journal_data recompense="3870" quest_title="임시 치료제를 구합니다" chapterid="5" quest_level="32" quest_mark_type="1" use_item_list="300252">
+      <journal index="1">
+         <contents_image>QN_Npc_Academic_jasmine.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="219"><![CDATA[Finding a Temporary Cure I]]></title>
+         <contents mid="220"><![CDATA[<html>Ask Jasmine about the aftereffects the soldiers are experiencing.<BR>
+ <BR>
+<FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Academic Station</FONT></html>]]></contents>
+         <destination mid="221"><![CDATA[Connect to the Academic Station]]></destination>
+         <todo_msg mid="222"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="223"><![CDATA[Finding a Temporary Cure II]]></title>
+         <contents mid="224"><![CDATA[<html>Looks like the Elves have made the cure before.<BR>Talk to Master Archer Ithilien.<BR><BR><FONT color=#086171>Saint Haven </FONT><FONT color=#a82424>→ Master Archer Ithilien</FONT></html>]]></contents>
+         <destination mid="225"><![CDATA[Talk to Master Archer Ithilien]]></destination>
+         <todo_msg mid="226"><![CDATA[Talk to Master Archer Ithilien.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_38.dds</contents_image>
+         <destination_pos>384,0,0</destination_pos>
+         <destination_mode>custom:381@3,382@3,383@3,384@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="227"><![CDATA[Finding a Temporary Cure III]]></title>
+         <contents mid="228"><![CDATA[<html>Go to Road to Death City and get the Contaminated Soil Sample.<BR><BR><FONT color=#086171>Foothills of Black Mountain (Dark Mine Access)</FONT> <FONT color=#a82424>→ Road to Death City</FONT></html>]]></contents>
+         <destination mid="229"><![CDATA[Road to Death City]]></destination>
+         <todo_msg mid="230"><![CDATA[Go to Road to Death City and get the Contaminated Soil Sample.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="231"><![CDATA[Finding a Temporary Cure IV]]></title>
+         <contents mid="232"><![CDATA[<html>Obtained contaminated soil. Bring it to Master Archer Ithilien.<BR>
+ <BR>
+<FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Master Archer Ithilien</FONT></html>]]></contents>
+         <destination mid="233"><![CDATA[Talk to Master Archer Ithilien]]></destination>
+         <todo_msg mid="234"><![CDATA[Talk to Master Archer Ithilien.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="235"><![CDATA[Finding a Temporary Cure V]]></title>
+         <contents mid="236"><![CDATA[<html>Ithilien promised to provide the medicine. Report to Jasmine.<BR><BR></FONT><FONT color=#086171>Saint Haven</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Academic Station</FONT></html>]]></contents>
+         <destination mid="237"><![CDATA[Connect to the Academic Station]]></destination>
+         <todo_msg mid="238"><![CDATA[Connect to the Academic Station and talk to Jasmine.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Geraint_Closeeye.dds</contents_image>
+         <destination_pos>13014,n216</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>216</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="239"><![CDATA[Finding a Temporary Cure VI]]></title>
+         <contents mid="240"><![CDATA[<html>Ask Academic Jasmine's question to Geraint at Royal Castle Basement.<BR><BR><FONT color=#086171>Saint Haven Royal Castle (Underground)</FONT> <FONT color=#a82424>→ Geraint</FONT></html>]]></contents>
+         <destination mid="241"><![CDATA[Talk to Geraint at Royal Castle Basement]]></destination>
+         <todo_msg mid="242"><![CDATA[Talk to Geraint at Royal Castle Basement.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="327"><![CDATA[Finding a Temporary Cure VII]]></title>
+         <contents mid="328"><![CDATA[<html>Go back to Jasmine and tell her what Geraint said.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Academic Station</FONT></html>]]></contents>
+         <destination mid="329"><![CDATA[Connect to the Academic Station]]></destination>
+         <todo_msg mid="330"><![CDATA[Connect to the Academic Station.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>386</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

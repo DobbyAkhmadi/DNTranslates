@@ -1,0 +1,232 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq01_017_red_emblem2</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>17</qid>
+      <designer>김인정</designer>
+      <qlevel>3</qlevel>
+      <qdesc>300009 붉은 인장 파편
+25번 붉은인장1 선행퀘 조건 제거(이제 불필요)</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>18</nextqid>
+      <nextqname>mq01_018_escape_of_the_catacomb</nextqname>
+      <nextqnpc>n001_elder_harold</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[The Red Seal Part 2]]></qkname>
+      <qnpc>
+         <npcid>1</npcid>
+         <npcename>n001_elder_harold</npcename>
+         <npckname>촌장 해롤드   (프레리)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>129</npcid>
+         <npcename>n129_scholar_bunstain</npcename>
+         <npckname>문장학자 번스테인 (프레리)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-accepting-acceptted" mid="96" select_type="3" />
+      <talk_question mid="88"><![CDATA[<html>$Mayor Harold${action:Talk}<BR><FONT color=#a82424>Only Rose was taken?</FONT>(Coughs) That can't be. That shouldn't happen. Oh no... the monsters... (coughs)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-accepting-" mid="97" select_type="5" />
+      <talk_question mid="90"><![CDATA[<html>$Mayor Harold$<BR>Have you found Rose...? (Coughs badly)<BR><FONT color=#7e12d2>(You need to complete Red Seal I quest to proceed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-a" mid="98" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Mayor Harold$<BR>The other villagers are being rescued from the monsters one by one so I believe Rose will be rescued soon too.<BR>
+That's all I'm hoping for.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1-a" image="QM_minotauros_Bison.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-b" mid="99" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Mayor Harold$<BR>
+But did you say that Rose was taken to the <FONT color=#a82424>Catacombs</FONT>...? <BR>Catacombs is famous for the ferocious <FONT color=#a82424>Minotaur </FONT><FONT color=#a82424>Umrak</FONT>. I hope she is alright...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1-b" image="QM_minotauros_Bison.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-c" mid="101" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Aku akan pergi menyelamatkan Rose.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1-c" image="QW_3.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-1-d" mid="102" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Mayor Harold$<BR>Thank you.... <FONT color=#a82424>Minotaur </FONT><FONT color=#a82424>Umrak</FONT>'s <FONT color=#a82424>Catacombs</FONT> has powerful <FONT color=#a82424>traps</FONT> at the entrance.<BR>
+The traps are dangerous...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1-d" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-2" mid="103" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Mayor Harold$<BR>Come to think of it, I've heard from <FONT color=#a82424>Heraldry Scholar Bernstein</FONT> once tentang how to deactivate the traps.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n129_scholar_bunstain-1" image="QN_Elder_Harold.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n129_scholar_bunstain-1-" mid="104" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>$Heraldry Scholar Bernstein$<BR>Mayor sedang mencari mu, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n129_scholar_bunstain-2" image="QS_Default.dds" itemindex="300010" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n129_scholar_bunstain-2-a" mid="105" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Heraldry Scholar Bernstein$<BR><FONT color=#2b2723>Aku sedang meneliti <FONT color=#a82424>Red Seal</FONT>. Aku yakin monster-monster menggunakannya untuk melewati jebakan yang ada. Rose bisa membawakan padaku dengan mudah kalau dia masih ada di sini, tapi sekarang kita harus merebutnya dari monster....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n129_scholar_bunstain-2-a" image="QN_Elder_Harold.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n129_scholar_bunstain-2-" mid="106" select_type="5" />
+      <talk_question mid="50"><![CDATA[<html>$Heraldry Scholar Bernstein$<BR>Setelah menyatukannya, jebakan musuh akan dapat dimatikan.<BR>
+Mungkin Mayor masih menyimpan yang ditemukan oleh Rose waktu dulu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-2" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-2-a" mid="107" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Mayor Harold$<BR>
+Heraldry Scholar Bernstein used to praise Rose for being able to find the ancient relics easily.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-2-a" image="QS_Default.dds" itemindex="300010" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3" mid="109" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>$Mayor Harold$<BR>
+He said that when Rose was near the relics, they would glow or a tremor could be felt. I wanted Rose to lead a normal life but... Indeed, she is....<BR>
+<FONT color=#7e12d2>(Harold shakes his head)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-3-a" mid="110" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Mayor Harold$<BR>
+Anyway, Heraldry Scholar Bernstein gave me some Red Seal fragments last time.<BR>
+He found them when he took Rose on an expedition to find relics, and said that they might be of some use in the future.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-3-a" image="QM_TrollBlue.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-4" mid="111" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>$Mayor Harold$<BR>
+If we can get the last part from the Troll, the Catacomb's trap can be deactivated....<BR>
+And here you have it. This must be Goddess's will.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-4" image="QS_Default.dds" itemindex="300010" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-4-a" mid="116" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Mayor Harold$<BR>
+I will combine them into a Red Seal for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-4-b" mid="112" select_type="4" />
+      <talk_question mid="63"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Harold.dds" center_image="">
+      <talk_answer link_index="n001_elder_harold-4-!next" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>$Mayor Harold$<BR>
+Rose.... Where are you?<BR>
+<FONT color=#7e12d2>(Tears swell up in Harold's eyes)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 15) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 16) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="conexe" true="5" false="4">2</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="conexe" true="5" false="4">3</exe>
+         <exe type="talk" npc="n001_elder_harold">a</exe>
+         <exe type="custom">api_npc_NextTalk(userObjID, npcObjID, "n001_elder_harold-accepting", npc_talk_target);</exe>
+         <exe type="setquest">17</exe>
+         <exe type="talk" npc="n001_elder_harold">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment xml:space="preserve">
+</comment>
+      <conditions />
+      <executions>
+         <exe type="recompense">171,171,172,,,,,,,</exe>
+         <exe type="complete" true="">17</exe>
+         <exe type="delquestitem" num="-1">300009</exe>
+         <exe type="addquestitem" num="1">300010</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n001_elder_harold">0</exelink>
+   <exelink qstep="accepting" npc="n001_elder_harold" sub="acceptted">6,7</exelink>
+   <exelink qstep="1" npc="n001_elder_harold" sub="b" />
+   <exelink qstep="1" npc="n001_elder_harold" sub="c" />
+   <exelink qstep="1" npc="n001_elder_harold" sub="d" />
+   <exelink qstep="1" npc="n001_elder_harold" sub="2">0</exelink>
+   <exelink qstep="2" npc="n129_scholar_bunstain" sub="" />
+   <exelink qstep="2" npc="n001_elder_harold" sub="3">0</exelink>
+   <exelink qstep="3" npc="n001_elder_harold" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n001_elder_harold" sub="a">0</exelink>
+   <exelink qstep="4" npc="n001_elder_harold" sub="b">1,2,3</exelink>
+   <exelink qstep="4" npc="n001_elder_harold" sub="!next" />
+   <journal_data recompense="1:171,2:172" quest_title="붉은 인장Ⅱ" chapterid="1" quest_level="3" quest_mark_type="1" use_item_list="300009">
+      <journal index="1">
+         <contents_image>QN_Elder_Harold.dds</contents_image>
+         <destination_pos>1,n1</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="67"><![CDATA[Bicara dengan Mayor Harold]]></title>
+         <contents mid="68"><![CDATA[<html><FONT color=#a82424>Mayor Harold</FONT> yakin kamu dapat menyelamatkan <FONT color=#a82424>Rose</FONT> karena kamu telah mnyelamatkan pra penduduk. Dia ingin memberimu informasi tentang <FONT color=#a82424>Catacomb</FONT>. Temui dia untuk detilnya.<BR> <BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ Mayor Harold</FONT></html>]]></contents>
+         <destination mid="69"><![CDATA[Bicara dengan Mayor Harold]]></destination>
+         <todo_msg mid="70"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Elder_Harold.dds</contents_image>
+         <destination_pos>1,n1</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="71"><![CDATA[Bicara dengan Heraldry Scholar Bernstein.]]></title>
+         <contents mid="72"><![CDATA[<html>Pintu masuk <FONT color=#a82424>Catacomb</FONT> telah ditutupi dengan jebakan yang kuat yang dipasang oleh para monster. Tanyakan <FONT color=#a82424>Heraldry Scholar Bernstein</FONT> untuk cara melewatinya dengan aman.<BR><BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ Heraldry Scholar Bernstein</FONT><FONT color=#a82424></FONT></html>]]></contents>
+         <destination mid="73"><![CDATA[Bicara dengan Heraldry Scholar Bernstein]]></destination>
+         <todo_msg mid="74"><![CDATA[Bicara dengan Heraldry Scholar Bernstein.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>1:2</user_class>
+      <prev_quest />
+      <have_quest>15,16</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

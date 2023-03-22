@@ -1,0 +1,72 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dq11_1302_take_all_n087</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1302</qid>
+      <designer>정진호</designer>
+      <qlevel>65</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Receive All Daily Quests]]></qkname>
+      <qnpc>
+         <npcid>87</npcid>
+         <npcename>n087_beggar</npcename>
+         <npckname>걸인 로피</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-accepting-acceptted" mid="6" select_type="0"><![CDATA[<html><FONT color=#086171>(Accept all Daily Quests)</FONT></html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Loffy the Beggar$<BR>What a nuisance!! What? Give all the quests at once? Good idea, Hound! Kueheheh!<BR><FONT color=#7e12d2>*Receive all the daily quests you can get from Loffy the Beggar.</FONT><BR><FONT color=#7e12d2>*You must have enough space to receive all the daily quests.</FONT><BR><FONT color=#7e12d2>*You have to carry out and complete the daily quests individually.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Loffy the Beggar$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_AddDailyQuestAll(userObjID, npcObjID);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n087_beggar" sub="acceptted">0</exelink>
+   <journal_data recompense="" quest_title="일일 퀘스트 모두 받기" chapterid="" quest_level="65" quest_mark_type="23" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest>1</have_daily_quest>
+   </condition_data>
+</quest>

@@ -1,0 +1,679 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_758_ordeal_and_answer</qename>
+      <qtype>changejobquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>758</qid>
+      <designer>김인정</designer>
+      <qlevel>45</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <custommark>40,41,42</custommark>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Specialization] Ordeal and answer]]></qkname>
+      <qnpc>
+         <npcid>456</npcid>
+         <npcename>n456_velskud</npcename>
+         <npckname>벨스커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>457</npcid>
+         <npcename>n457_geraint</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>458</npcid>
+         <npcename>n458_sword_of_geraint</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>711</npcid>
+         <npcename>n711_warrior_fedro</npcename>
+         <npckname>상급 워리어 페드로</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-a" mid="10" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Master Warrior Pedro$<BR>You've been wandering around a lot, so did you find something good?<BR>Little Cidel has been training with determined look in her eyes....<BR>
+You shouldn't be back of her.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-acceptted" mid="12" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Ordeal and answer$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-c" mid="192" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="191"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Let Master Warrior Pedro know about specialization.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-acceptted_com" mid="194" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="193"><![CDATA[<html>$Ordeal and answer$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-1" image="QW_LiverwortFerry.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Master Warrior Pedro$<BR>I heard that you were wandering around <FONT color=#a82424>Riverwort Wharf</FONT>, so did you find any good ways to discipline? There's a rumor that you shouted to the sky, so are you okay?<BR><FONT color=#7e12d3>* This quest cannot be continued if you have a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n456_velskud-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="16"><![CDATA[<html>$Velskud$<BR>...You need to decide where to go by yourself.<BR>If you are too young to decide it, don't ever think about traveling.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="17"><![CDATA[<html>$Geraint$<BR>
+It's you.<BR>Did you find... the way to go?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n458_sword_of_geraint-1-level" mid="19" select_type="0"><![CDATA[<html>What should I do grabbing this sword?</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Geraint's voice$<BR>It is definitely you. <FONT color=#387207>{user_nick}</FONT>.<BR>...It is amazing that I could recognize that you're coming as soon as I heard your footstep.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-1-a" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n458_sword_of_geraint-1-b" mid="21" select_type="0"><![CDATA[<html>Into the shadow...?</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Geraint's voice$<BR>This black shadow is mine.<BR>
+If you are strong enough, you can get into the <FONT color=#a82425>shadow</FONT> .</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-1-b" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n458_sword_of_geraint-1-c" mid="24" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Geraint's voice$<BR>Yes. You can't know what you're supposed to meet in the shadow.<BR>You aren't me but, don't close your eyes whatever you see.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-1-c" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n458_sword_of_geraint-1-d" mid="26" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Geraint's voice$<BR>Tenacity, weakness, courage and fear are mixed up in your mind.<BR>
+How to act? You need to understand that the answers can be found only in your mind.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-1-d" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n458_sword_of_geraint-1-e" mid="29" select_type="0"><![CDATA[<html>Okay! I'll remember that!</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Geraint's voice$<BR>
+Just remember that one who knows limitations will overcome them, and one who feels fear will defeat it too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-1-e" image="QP_Geraint_sword.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n458_sword_of_geraint-1-move1" mid="31" select_type="0"><![CDATA[<html>(Grab the sword)</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Geraint's voice$<BR>This is all I can tell you.<BR>So, grab the sword my ex-companion, human.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-1-f" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="32"><![CDATA[<html>$Geraint's voice$<BR>
+You'd better enhance your independence.<BR>
+...I don't have any idea how to get to here.<BR>
+ <BR>
+<FONT color=#7e12d3>* This quest cannot be continued if you have a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-1-g" image="QP_Geraint_sword.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n458_sword_of_geraint-1-a" mid="155" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="154"><![CDATA[<html>$Geraint's voice$<BR>So, grab the sword.<BR>It depends on how much you have confident will.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-1-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="156"><![CDATA[<html>$Geraint's voice$<BR>You're not enough to maintain the strong will.<BR>Take more time to train yourself with the sword.<BR>
+<BR>
+<FONT color=#7e12d2>* You can get Last Ordeal when you get to level 45.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n458_sword_of_geraint-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n458_sword_of_geraint-2-move2" mid="35" select_type="0"><![CDATA[<html>(Grab the sword)</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Geraint's voice$<BR>So, grab the sword my friend.<BR>It depends on how much you have confident will.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-a" mid="39" select_type="0"><![CDATA[<html>(It's good to see you again)</html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-2-a" mid="40" select_type="0"><![CDATA[<html>(Can we meet again someday?)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Geraint$<BR>You look surprised. I'm just a phantom into your memory.<BR>Even if this is broken apart, your memory will exist forever.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-b" mid="42" select_type="0"><![CDATA[<html>The way to go?</html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Geraint$<BR>...Choose to the way to go is totally up to you.<BR>Are you ready for that? <FONT color=#387207>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-c" mid="45" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Geraint$<BR>To maximize your potential power, you need to take and give up some parts.<BR>You can't walk on different ways at the same time, life is that so.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-open_ui2" mid="47" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Geraint$<BR>I'm going to explain more details to you.<BR>If you choose one, you should give up others.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-e" mid="49" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Geraint$<BR>What you can choose is <FONT color=#a82424>Gladiator</FONT>, <FONT color=#a82424>MoonLord</FONT>.<BR>First, <FONT color=#a82425>Gladiator</FONT>is succeeded by sword-master's physical attack skills. This is specialized in powerful repeated heating and conversion actions.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-f" mid="51" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Geraint$<BR><FONT color=#a82425>MoonLord</FONT>is succeeded by sword-master's spell attack skills. This is specialized in fast, long-distance attack and sub-skills so it will be good for long-distance dealers.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-g" mid="77" select_type="0"><![CDATA[<html>(I need more time)</html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-2-gla1" mid="53" select_type="0"><![CDATA[<html>Gladiator</html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-2-moon1" mid="54" select_type="0"><![CDATA[<html>MoonLord</html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Geraint$<BR>The shape and appearance of black shadow will change up to your decision.<BR>Which way are you going for?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="55"><![CDATA[<html>$Geraint$<BR>Choice is totally up to you. Make a decision carefully.<BR>Believe yourself.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-i" mid="58" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Geraint$<BR>What you can choose is <FONT color=#a82424>Barbarian</FONT>or <FONT color=#a82424>Destroyer</FONT>. First, <FONT color=#a82425>Barbarian</FONT>is specialized in utilizing axes so you can attack enemies using turning force in a wide-range area at the same time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-j" mid="61" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Geraint$<BR><FONT color=#a82425>Destroyer</FONT>is specialized in utilizing blunts, self-defense and super-armour destructive power. In case of a head-to-head battle, this position will be beneficial for companies because this can endure enemies' attacking and make opportunities for companies to attack them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-g" mid="78" select_type="0"><![CDATA[<html>(I need more time)</html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-2-baba1" mid="63" select_type="0"><![CDATA[<html>Barbarian</html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-2-des1" mid="64" select_type="0"><![CDATA[<html>Destroyer</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Geraint$<BR>The shape and appearance of black shadow will change up to your decision.<BR>Which way are you going for?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-l" mid="196" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="195"><![CDATA[<html>$Geraint$<BR>There are now two options before you: <FONT color=#a82424>Mystic Knight</FONT> or <FONT color=#a82424>Grand Master</FONT>. The <FONT color=#a82424>Mystic Knight</FONT> can awaken the Ego Sword and transcend the limitations of swordsmanship while summoning fantastical beings to destroy enemies.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-m" mid="198" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="197"><![CDATA[<html>$Geraint$<BR>The <FONT color=#a82424>Grand Master</FONT> freely uses various weapons with the aid of magical apparitions. One cannot stop watching such splendor.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-2-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-2-g" mid="200" select_type="0"><![CDATA[<html>(I need more time)</html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-2-mys1" mid="201" select_type="0"><![CDATA[<html><FONT color=#2b2723>Mystic Knight</FONT></html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-2-grand1" mid="202" select_type="0"><![CDATA[<html><FONT color=#2b2723>Grand Master</FONT></html>]]></talk_answer>
+      <talk_question mid="199"><![CDATA[<html>$Geraint$<BR>The shape and appearance of the Black Shadow will change based on your decision.<BR>Which path will you take?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-3-a" mid="181" select_type="0"><![CDATA[<html>Yes!!</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Geraint$<BR>Temporarily, I gave you new skills into your body.<BR>Press
+<FONT color=#a82425>[K]</FONT> button to check skills and test them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-3-a" image="QM_Wa_Doppelganger.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="182"><![CDATA[<html>$Geraint$<BR>You decided it yourself. Check your potential powers by yourself and beat the<FONT color=#a82425>shadow</FONT>.<BR>The battlefield is waiting for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-4-a" mid="82" select_type="0"><![CDATA[<html>Potential powers?</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Geraint$<BR>Can you feel potential powers inside of you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-4-open_ui4" mid="85" select_type="0"><![CDATA[<html>(I just decided to choose)</html>]]></talk_answer>
+      <talk_question mid="83"><![CDATA[<html>$Geraint$<BR>Yes. The power can be achieved depending on your <FONT color=#a82425>choice</FONT>.<BR>However, there's also another way. Choice is totally up to you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-4-gla2" mid="95" select_type="0"><![CDATA[<html>I'll choose Gladiator.</html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-4-moon2" mid="96" select_type="0"><![CDATA[<html>I'll choose Moonlord.</html>]]></talk_answer>
+      <talk_question mid="87"><![CDATA[<html>$Geraint$<BR>Considering is not a waste of time. Don't be hesitate.<BR>You want to choose it again? Which way are you going for?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-4-barbarian2" mid="97" select_type="0"><![CDATA[<html>I'll choose Barbarian.</html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-4-destroyer2" mid="98" select_type="0"><![CDATA[<html>I'll choose Destroyer.</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Geraint$<BR>Considering is not a waste of time. Don't be hesitate.<BR>You want to choose it again? Which way are you going for?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-4-e" mid="90" select_type="0"><![CDATA[<html>(Geraint stares at me with a warm look)</html>]]></talk_answer>
+      <talk_question mid="89"><![CDATA[<html>$Geraint$<BR>Okay. You look already settled.<BR>Naming to the way you're going to choose is non of my business so get back to humans' land.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-5" mid="92" select_type="0"><![CDATA[<html>Can't we meet again?</html>]]></talk_answer>
+      <talk_question mid="91"><![CDATA[<html>$Geraint$<BR>The man with sincere courage can walk on his own way. So don't be fascinated by the shadow but keep going on your way.<BR>
+I'll always hope that your decision is right.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-4-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="179"><![CDATA[<html>$Geraint$<BR>You decided it yourself. Check your potential powers by yourself and beat the<FONT color=#a82425>shadow</FONT>.<BR>The battlefield is waiting for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-4-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-4-mys2" mid="204" select_type="0"><![CDATA[<html>I shall walk the path of the Mystic Knight.</html>]]></talk_answer>
+      <talk_answer link_index="n457_geraint-4-grand2" mid="205" select_type="0"><![CDATA[<html>I shall walk the path of the Grand Master.</html>]]></talk_answer>
+      <talk_question mid="203"><![CDATA[<html>$Geraint$<BR>It is wise to give this some thought. This is not something that should be taken lightly.<BR>Are you ready to choose? Which path will you take?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-5-a" mid="183" select_type="0"><![CDATA[<html>(Geraint looks at you softly)</html>]]></talk_answer>
+      <talk_question mid="93"><![CDATA[<html>$Geraint$<BR>I don't know. I'm not a prophet.<BR>
+But if there is 'maybe', I hope that I maybe meet you again.<BR>...So, it's time to say goodbye my friend.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n457_geraint-5-b" mid="185" select_type="0"><![CDATA[<html>We can't meet again?</html>]]></talk_answer>
+      <talk_question mid="184"><![CDATA[<html>$Geraint$<BR>Only the one with real courage can choose his own path. So don't be caught up by your shadows, and keep going the path you've taken.<BR>I hope you will make the right choices in your journey ahead.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n457_geraint-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="186"><![CDATA[<html>$Geraint$<BR>I don't know. I'm not the Prophet.<BR>But I hope we can meet again.<BR>…Farewell, my friend.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n456_velskud-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n456_velskud-5-a" mid="100" select_type="0"><![CDATA[<html>(It looks like he was staring at me)</html>]]></talk_answer>
+      <talk_question mid="99"><![CDATA[<html>$Velskud$<BR>Better than before.<BR>At least I found out the fact that you can use your brain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n456_velskud-5-a" image="QN_warrior_barnak.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n456_velskud-5-b" mid="103" select_type="0"><![CDATA[<html>I'm certainly going to overcome you....</html>]]></talk_answer>
+      <talk_question mid="101"><![CDATA[<html>$Velskud$<BR>But you have still unnecessary movements. If you really want to overcome <FONT color=#a82425>Barnac</FONT>, you should train and train without a break.<BR>Well, even if you will do that, you can't overcome him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n456_velskud-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n456_velskud-5-c" mid="105" select_type="0"><![CDATA[<html>...? What's that meaning?</html>]]></talk_answer>
+      <talk_question mid="104"><![CDATA[<html>$Velskud$<BR>What if you can overcome him? Is there a difference?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n456_velskud-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n456_velskud-5-d" mid="107" select_type="0"><![CDATA[<html>Next...?</html>]]></talk_answer>
+      <talk_question mid="106"><![CDATA[<html>$Velskud$<BR>What if you meet Barnac and then? You meet your father and then? ...What are you going to do next? So you should choose the way you will go on. Don't fix your goal with the old saying. Don't be silly.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n456_velskud-5-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n456_velskud-6" mid="109" select_type="0"><![CDATA[<html>Geraint's sword is turned back?</html>]]></talk_answer>
+      <talk_question mid="108"><![CDATA[<html>$Velskud$<BR>...I said too much.<BR>Now go back.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n456_velskud-6" image="QN_Npc_Lotus_WarriorFedro.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="110"><![CDATA[<html>$Velskud$<BR>...I don't have a duty to answer that.<BR><FONT color=#7e12d3>(Go back and talk with Master Warrior Pedro)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-a" mid="113" select_type="0"><![CDATA[<html>am, am I??</html>]]></talk_answer>
+      <talk_question mid="112"><![CDATA[<html>$Master Warrior Pedro$<BR>Huh?! I couldn't notice you. I thought you were wandering around here... but you suddenly!! look different! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-b" mid="116" select_type="0"><![CDATA[<html>The way I should go..is...?</html>]]></talk_answer>
+      <talk_question mid="114"><![CDATA[<html>$Master Warrior Pedro$<BR>Do you decide the way you should go?<BR>I think you're already qualified.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-o" mid="118" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="117"><![CDATA[<html>$Master Warrior Pedro$<BR>3rd job changing. I was wondering why didn't you change the new job.<BR>I just let you consider more deeply because you're young! Hahah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-e" mid="122" select_type="0"><![CDATA[<html>I need more time</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-f" mid="120" select_type="0"><![CDATA[<html>Gladiator</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-g" mid="121" select_type="0"><![CDATA[<html>Moonlord</html>]]></talk_answer>
+      <talk_question mid="119"><![CDATA[<html>$Master Warrior Pedro$<BR>So, what you're going to choose?<BR>Just be frank with me. I'm going to watch while choosing the way you should go.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-e" mid="126" select_type="0"><![CDATA[<html>I need more time.</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-h" mid="124" select_type="0"><![CDATA[<html>Barbarian</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-i" mid="125" select_type="0"><![CDATA[<html>Destroyer</html>]]></talk_answer>
+      <talk_question mid="123"><![CDATA[<html>$Master Warrior Pedro$<BR>So, what you're going to choose?<BR>Just be frank with me. I'm going to watch while choosing the way you should go.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="127"><![CDATA[<html>$Master Warrior Pedro$<BR>Huh? You didn't decide yet? Well~ it's an important work so take more time.<BR>If you need something to ask, just tell me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-e" mid="130" select_type="0"><![CDATA[<html>Wait! I need more time.</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-j" mid="129" select_type="0"><![CDATA[<html><FONT color=#086172>(Change the job)</FONT></html>]]></talk_answer>
+      <talk_question mid="128"><![CDATA[<html>$Master Warrior Pedro$<BR><FONT color=#a82424>Gladiator</FONT> ?! Oh, it sounds good! It looks quite fit to you!!<BR><BR><FONT color=#7e12d3>* If you change the job, you can't set it back.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-e" mid="133" select_type="0"><![CDATA[<html>I need more time.</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-k" mid="132" select_type="0"><![CDATA[<html><FONT color=#086172>(Change the job)</FONT></html>]]></talk_answer>
+      <talk_question mid="131"><![CDATA[<html>$Master Warrior Pedro$<BR><FONT color=#a82424>Moonlord</FONT> ?! Oh, it sounds good! It looks quite fit to you!!<BR><BR><FONT color=#7e12d3>* If you change the job, you can't set it back.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-e" mid="136" select_type="0"><![CDATA[<html>I don't decide it yet.</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-l" mid="135" select_type="0"><![CDATA[<html><FONT color=#086172>(Change the job)</FONT></html>]]></talk_answer>
+      <talk_question mid="134"><![CDATA[<html>$Master Warrior Pedro$<BR><FONT color=#a82424>Barbarian</FONT> ?! Oh, it sounds good! It looks quite fit to you!!<BR><BR><FONT color=#7e12d3>* If you change the job, you can't set it back.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-e" mid="139" select_type="0"><![CDATA[<html>I decided it wrong.</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-m" mid="138" select_type="0"><![CDATA[<html><FONT color=#086172>(Change the job)</FONT></html>]]></talk_answer>
+      <talk_question mid="137"><![CDATA[<html>$Master Warrior Pedro$<BR><FONT color=#a82424>Destroyer</FONT> ?! Oh, it sounds good! It looks quite fit to you!!<BR><BR><FONT color=#7e12d3>* If you change the job, you can't set it back.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-chj" mid="141" select_type="0"><![CDATA[<html><FONT color=#086172>(Change to Gladiator)</FONT></html>]]></talk_answer>
+      <talk_question mid="140"><![CDATA[<html>$[Specialization] Gladiator$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-chk" mid="143" select_type="0"><![CDATA[<html><FONT color=#086172>(Change to Moonlord)</FONT></html>]]></talk_answer>
+      <talk_question mid="142"><![CDATA[<html>$[Specialization] Moonlord$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-chl" mid="145" select_type="0"><![CDATA[<html><FONT color=#086172>(Change to Barbarian)</FONT></html>]]></talk_answer>
+      <talk_question mid="144"><![CDATA[<html>$[Specialization] Barbarian$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-chm" mid="147" select_type="0"><![CDATA[<html><FONT color=#086172>(Change to Destroyer)</FONT></html>]]></talk_answer>
+      <talk_question mid="146"><![CDATA[<html>$[Specialization] Destroyer$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-n" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="148"><![CDATA[<html>$Master Warrior Pedro$<BR>Keep working on it. You will be much better than now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-p" mid="188" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="187"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-p" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="189"><![CDATA[<html>${user_class}$<BR><BR><FONT color=#7e12d2>*Specialization completed.</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-q" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-e" mid="207" select_type="0"><![CDATA[<html>I need more time</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-r" mid="208" select_type="0"><![CDATA[<html>Mystic Knight</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-s" mid="209" select_type="0"><![CDATA[<html>Grand Master</html>]]></talk_answer>
+      <talk_question mid="206"><![CDATA[<html>$Master Warrior Pedro$<BR>So, what you're going to choose?<BR>Just be frank with me. I'm going to watch while choosing the way you should go.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-r" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-e" mid="211" select_type="0"><![CDATA[<html>Wha-! Wait..! </html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-t" mid="212" select_type="0"><![CDATA[<html><FONT color=#086171>(Choose specialization)</FONT></html>]]></talk_answer>
+      <talk_question mid="210"><![CDATA[<html>$Master Warrior Pedro$<BR><FONT color=#a82424>Mystic Knight</FONT>?! Excellent decision!!! It suits you perfectly.<BR><BR><FONT color=#7e12d2>*Once selected, a job change decision cannot be reversed.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-s" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-e" mid="214" select_type="0"><![CDATA[<html>Uh, actually I need a little more time to think…</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-6-u" mid="215" select_type="0"><![CDATA[<html><FONT color=#086171>(Choose specialization)</FONT></html>]]></talk_answer>
+      <talk_question mid="213"><![CDATA[<html>$Master Warrior Pedro$<BR><FONT color=#a82424>Grand Master</FONT>?! Excellent decision!!! It suits you perfectly.<BR><BR><FONT color=#7e12d2>*Once selected, a job change decision cannot be reversed.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-t" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-cht" mid="217" select_type="0"><![CDATA[<html><FONT color=#086171>(Become a Mystic Knight.)</FONT></html>]]></talk_answer>
+      <talk_question mid="216"><![CDATA[<html>$[Specialization] Mystic Knight</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-6-u" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-6-chu" mid="219" select_type="0"><![CDATA[<html><FONT color=#086171>(Become a Grand Master.)</FONT></html>]]></talk_answer>
+      <talk_question mid="218"><![CDATA[<html>$[Specialization] Grand Master</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 23</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 24</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 25</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 26</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 107</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 108</chk>
+      </conditions>
+      <executions>
+         <exe type="recompense_view">7580,,,,,,,,,,</exe>
+         <exe type="setquest">758</exe>
+         <exe type="talk" npc="n711_warrior_fedro">1</exe>
+         <exe type="talk" npc="n711_warrior_fedro">6</exe>
+         <exe type="conexe" true="6" false="5,0">0 / 1 / 2 / 3 / 4 / 5</exe>
+         <exe type="talk" npc="n711_warrior_fedro">a</exe>
+         <exe type="talk" npc="n711_warrior_fedro">b</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="setstep">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+         <chk type="lvl" op="]=">45</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 11</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 12</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 106</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,13512,1);</exe>
+         <exe type="conexe" true="3" false="2">0</exe>
+         <exe type="talk" npc="n458_sword_of_geraint">f</exe>
+         <exe type="conexe" true="8" false="5">2 / 3 / 4</exe>
+         <exe type="talk" npc="n458_sword_of_geraint">g</exe>
+         <exe type="talk" npc="n458_sword_of_geraint">h</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment>글로벌개선(2013) 관련 조건 : 11~</comment>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 11</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 106</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="14">0</exe>
+         <exe type="talk" npc="n457_geraint">d</exe>
+         <exe type="talk" npc="n457_geraint">h</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="talk" npc="n457_geraint">3</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13512,1);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 23 );</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 24 );</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 25 );</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 26 );</exe>
+         <exe type="custom">api_ui_OpenJobChange(userObjID,0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 107 );</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 108 );</exe>
+         <exe type="conexe" true="15" false="2">1</exe>
+         <exe type="talk" npc="n457_geraint">k</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>2013 글로벌 개선 추가 조건 : 12~</comment>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 11</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 106</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="15">0</exe>
+         <exe type="talk" npc="n457_geraint">b</exe>
+         <exe type="talk" npc="n457_geraint">c</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="talk" npc="n457_geraint">f</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 23 );</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 24 );</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 25 );</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 26 );</exe>
+         <exe type="custom">api_ui_OpenJobChange(userObjID,0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 107 );</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 108 );</exe>
+         <exe type="conexe" true="16" false="2">1</exe>
+         <exe type="talk" npc="n457_geraint">g</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment>14 ~ : 2013 글로벌개선 변경된 내용</comment>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 11</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 12</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 106</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="conexe" true="3" false="15">1</exe>
+         <exe type="talk" npc="n711_warrior_fedro">c</exe>
+         <exe type="talk" npc="n711_warrior_fedro">d</exe>
+         <exe type="custom">api_user_SetUserJobID(userObjID, 23);</exe>
+         <exe type="custom">api_user_SetUserJobID(userObjID, 24);</exe>
+         <exe type="custom">api_user_SetUserJobID(userObjID, 25);</exe>
+         <exe type="custom">api_user_SetUserJobID(userObjID, 26);</exe>
+         <exe type="complete" true="4,9">758</exe>
+         <exe type="talk" npc="n711_warrior_fedro">n</exe>
+         <exe type="recompense">7580,,,,,,,,,,</exe>
+         <exe type="complete" true="5,9">758</exe>
+         <exe type="complete" true="6,9">758</exe>
+         <exe type="complete" true="7,9">758</exe>
+         <exe type="complete" true="">758</exe>
+         <exe type="conexe" true="16" false="16">2</exe>
+         <exe type="talk" npc="n711_warrior_fedro">q</exe>
+         <exe type="custom">api_user_SetUserJobID(userObjID, 107);</exe>
+         <exe type="custom">api_user_SetUserJobID(userObjID, 108);</exe>
+         <exe type="complete" true="17,9">758</exe>
+         <exe type="complete" true="18,9">758</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="a">4</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="acceptted">1,2</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="c">0</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="acceptted_com">1,7,8,3</exelink>
+   <exelink qstep="1" npc="n458_sword_of_geraint" sub="level">1</exelink>
+   <exelink qstep="1" npc="n458_sword_of_geraint" sub="b" />
+   <exelink qstep="1" npc="n458_sword_of_geraint" sub="c" />
+   <exelink qstep="1" npc="n458_sword_of_geraint" sub="d" />
+   <exelink qstep="1" npc="n458_sword_of_geraint" sub="e" />
+   <exelink qstep="1" npc="n458_sword_of_geraint" sub="move1">6,7,0</exelink>
+   <exelink qstep="1" npc="n458_sword_of_geraint" sub="a" />
+   <exelink qstep="2" npc="n458_sword_of_geraint" sub="move2">6</exelink>
+   <exelink qstep="2" npc="n457_geraint" sub="b" />
+   <exelink qstep="2" npc="n457_geraint" sub="c" />
+   <exelink qstep="2" npc="n457_geraint" sub="open_ui2">11</exelink>
+   <exelink qstep="2" npc="n457_geraint" sub="e" />
+   <exelink qstep="2" npc="n457_geraint" sub="f" />
+   <exelink qstep="2" npc="n457_geraint" sub="g" />
+   <exelink qstep="2" npc="n457_geraint" sub="gla1">3,4,5,7</exelink>
+   <exelink qstep="2" npc="n457_geraint" sub="moon1">3,4,5,8</exelink>
+   <exelink qstep="2" npc="n457_geraint" sub="i" />
+   <exelink qstep="2" npc="n457_geraint" sub="j" />
+   <exelink qstep="2" npc="n457_geraint" sub="g" />
+   <exelink qstep="2" npc="n457_geraint" sub="baba1">3,4,5,9</exelink>
+   <exelink qstep="2" npc="n457_geraint" sub="des1">3,4,5,10</exelink>
+   <exelink qstep="2" npc="n457_geraint" sub="l" />
+   <exelink qstep="2" npc="n457_geraint" sub="m" />
+   <exelink qstep="2" npc="n457_geraint" sub="g" />
+   <exelink qstep="2" npc="n457_geraint" sub="mys1">3,4,12</exelink>
+   <exelink qstep="2" npc="n457_geraint" sub="grand1">3,4,13</exelink>
+   <exelink qstep="4" npc="n457_geraint" sub="open_ui4">12</exelink>
+   <exelink qstep="4" npc="n457_geraint" sub="gla2">5,6,7,8</exelink>
+   <exelink qstep="4" npc="n457_geraint" sub="moon2">5,6,7,9</exelink>
+   <exelink qstep="4" npc="n457_geraint" sub="barbarian2">5,6,7,10</exelink>
+   <exelink qstep="4" npc="n457_geraint" sub="destroyer2">5,6,7,11</exelink>
+   <exelink qstep="4" npc="n457_geraint" sub="e" />
+   <exelink qstep="4" npc="n457_geraint" sub="5">3,4</exelink>
+   <exelink qstep="4" npc="n457_geraint" sub="mys2">5,6,7,13</exelink>
+   <exelink qstep="4" npc="n457_geraint" sub="grand2">5,6,7,14</exelink>
+   <exelink qstep="5" npc="n457_geraint" sub="b" />
+   <exelink qstep="5" npc="n456_velskud" sub="b" />
+   <exelink qstep="5" npc="n456_velskud" sub="c" />
+   <exelink qstep="5" npc="n456_velskud" sub="d" />
+   <exelink qstep="5" npc="n456_velskud" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="b" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="o">10</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="e" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="f" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="g" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="e" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="h" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="i" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="e" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="j">10</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="e" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="k">10</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="e" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="l">10</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="e" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="m">10</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="chj">8</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="chk">11</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="chl">12</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="chm">13</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="p">14</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="e" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="r" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="s" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="e" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="t">10</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="e" />
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="u">10</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="cht">17</exelink>
+   <exelink qstep="6" npc="n711_warrior_fedro" sub="chu">18</exelink>
+   <journal_data recompense="7580" quest_title="[전직] 시련과 응답" chapterid="-1" quest_level="45" quest_mark_type="40" use_item_list="">
+      <journal index="1">
+         <contents_image>QP_Geraint_sword.dds</contents_image>
+         <destination_pos>14,n458</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>458</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="150"><![CDATA[Beginning of ordeal]]></title>
+         <contents mid="151"><![CDATA[<html>I think there was Geraint's sword fixed at Riverwort Wharf. Let's go there.<BR><BR><FONT color=#7e12d2>* This quest cannot be continued if you have a party.<BR><BR></FONT><FONT color=#086171>Riverwort Wharf</FONT> <FONT color=#a82425>→ Geraint's sword</FONT></html>]]></contents>
+         <destination mid="152"><![CDATA[(Solo) Talk to Geraint's sword at Riverwort Wharf]]></destination>
+         <todo_msg mid="153"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Geraint.dds</contents_image>
+         <destination_pos>13512,n457</destination_pos>
+         <destination_mode>custom:13512@1</destination_mode>
+         <statemark_npcid>457</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="158"><![CDATA[At the Dimensional Gap]]></title>
+         <contents mid="159"><![CDATA[<html>Talk to Geraint's sword and get into the sword at Riverwort Wharf.<BR><FONT color=#7e12d2></FONT><BR>
+<FONT color=#7e12d2>* You cannot proceed in a party.<BR><BR></FONT><FONT color=#086171></FONT>
+<FONT color=#086172>Riverwort Wharf (Geraint's sword)</FONT> <FONT color=#a82424>→Dimensional Gap (Geraint)</FONT></html>]]></contents>
+         <destination mid="160"><![CDATA[(Solo) Talk with Geraint at the Dimensional Gap]]></destination>
+         <todo_msg mid="161"><![CDATA[Go to the Dimensional Gap and talk with Geraint]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QM_Wa_Doppelganger.dds</contents_image>
+         <destination_pos>13512,0,0</destination_pos>
+         <destination_mode>custom:13512@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>42</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="163"><![CDATA[Shadow]]></title>
+         <contents mid="164"><![CDATA[<html>Fight against your own shadow deep inside the Dimensional Gap.</html>]]></contents>
+         <destination mid="165"><![CDATA[(Solo) Fight against the shadow at the Dimensional Gap]]></destination>
+         <todo_msg mid="166"><![CDATA[Fight against your own shadow deep inside the Dimensional Gap.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Geraint.dds</contents_image>
+         <destination_pos>13512,n457</destination_pos>
+         <destination_mode>custom:13512@1</destination_mode>
+         <statemark_npcid>457</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="167"><![CDATA[The potential power]]></title>
+         <contents mid="168"><![CDATA[<html>Talk with Geraint at the Dimensional Gap.<BR><FONT color=#7e12d2></FONT><BR><FONT color=#7e12d2>* You cannot proceed in a party.<BR></FONT><BR><FONT color=#086171>Riverwort Wharf (Geraint's sword)</FONT> <FONT color=#a82425>→ Dimensional Gap (Geraint)</FONT></html>]]></contents>
+         <destination mid="169"><![CDATA[(Solo) Talk with Geraint at the Dimensional Gap]]></destination>
+         <todo_msg mid="170"><![CDATA[Talk with Geraint at the Dimensional Gap]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image />
+         <destination_pos>14,n456</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>456</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="171"><![CDATA[Unexpected meeting]]></title>
+         <contents mid="172"><![CDATA[<html>There is no Geraint's sword but is Velskud standing alone. Let's talk with him.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf</FONT> <FONT color=#a82425>→ Velskud</FONT></html>]]></contents>
+         <destination mid="173"><![CDATA[Talk with Velskud at Riverwort Wharf]]></destination>
+         <todo_msg mid="174"><![CDATA[Talk with Velskud at Riverwort Wharf]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Lotus_WarriorFedro.dds</contents_image>
+         <destination_pos>15,n711</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>711</statemark_npcid>
+         <statemark_type>42</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="175"><![CDATA[Choice]]></title>
+         <contents mid="176"><![CDATA[<html>Talk about which way you chose with Master Warrior Pedro.<BR>
+ <BR>
+<FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82425>→ Master Warrior Pedro</FONT></html>]]></contents>
+         <destination mid="177"><![CDATA[Talk with Master Warrior Pedro]]></destination>
+         <todo_msg mid="178"><![CDATA[Talk with Master Warrior Pedro]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>44:-1</user_level>
+      <user_class>1</user_class>
+      <prev_quest>757</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

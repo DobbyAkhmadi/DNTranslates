@@ -1,0 +1,405 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_267_crisis_of_david</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>267</qid>
+      <designer>김인정</designer>
+      <qlevel>21</qlevel>
+      <qdesc>독 주머니(400091)
+아르젠타 의뢰 수락
+죽음의 분지 1번 맵에서 데이비드와 대화.
+죽음의 분지 2번 맵에서 거미알 중 하운드를 꺼내줌.
+다시 데이비드와 대화.
+보스전을 깬 후 데이비드와 대화.
+아르젠타에게 보고.
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Charlatan's Crisis ]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타(잿빛폐허)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>191</npcid>
+         <npcename>n191_slave_david</npcename>
+         <npckname>아르젠타의 두번째 노예 데이비드(잿빛 폐허)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>192</npcid>
+         <npcename>n192_slave_david</npcename>
+         <npckname>아르젠타의 두번째 노예 데이비드(죽음의 분지)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n191_slave_david-noquest-a" mid="140" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Jangan ini padaku jika aku menjadi lady Argenta's great knight. Dunia ini memang tidak adil. Heh.<BR><FONT color=#7e12d2>(Adventurer David terjebak di mimpinya.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-noquest-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Apakah <FONT color=#a82424>Argenta</FONT> telah jatuh cinta padaku? Ha... Pesonaku tak tertahankan. Heh. Heh. Heh.<BR><FONT color=#7e12d2>(Kamu harus mendapatkan Quest dari Argenta di Calderock Village to proceed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Apakah <FONT color=#a82424>Argenta</FONT> telah jatuh cinta padaku? Ha... Pesonaku tak tertahankan. Heh. Heh. Heh.<BR><FONT color=#7e12d2>(Kamu harus mendapatkan Quest dari Argenta di Calderock Village to proceed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-a" mid="10" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Argenta$<BR>Rasanya aku yang bekerja untukmu, orang lemah..<BR>Ini membuatku jadi lapar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-a" image="QW_24.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-b" mid="12" select_type="0"><![CDATA[<html>Kalau begitu aku akan ke Death Basin lebih dahulu.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Argenta$<BR>Pergilah dan bawakan <FONT color=#a82424>Poison Sac</FONT> sekali lagi.<BR>Karena kamu sudah tahu Poison Sac ada di <FONT color=#a82424>Death Basin</FONT>, kamu harus lebih cepat kali ini, Ok?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-party" mid="14" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Charlatan's Crisis$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="15"><![CDATA[<html>$Argenta$<BR>Ingat, jangan membuatku khawatir. Dan segera kembali jika sudah mengumpulkan<BR>Kamu boros waktu untuk tugas semudah ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="99"><![CDATA[<html>$Argenta$<BR>Kamu tidak butuh bantuan untuk tugas ini.<BR>Aku kan tidak menyuruhmu menculik dragon. Lakukan sendirian!<BR><BR><FONT color=#7e12d2>(Kamu tidak bisa menjalankan quest dalam party)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-a" mid="17" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Argenta$<BR>Memerintah orang lemah sepertimu membuatku lapar!<BR>Betul kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-a" image="QW_24.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-b" mid="19" select_type="0"><![CDATA[<html>Kalau begitu aku akan ke Death Basin dahulu.</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Argenta$<BR>Pergi dan bawakan aku <FONT color=#a82424>Poison Sac</FONT> sekali lagi.<BR>Karena kamu sudah tahu Poison Sac ada di <FONT color=#a82424>Death Basin</FONT>, kamu harus lebih cepat kali ini, Ok?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-party2" mid="21" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Charlatan's Crisis$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="22"><![CDATA[<html>$Argenta$<BR>Ingat, jangan membuatku khawatir. Kembalilah secepatnya jika semua telah terkumpul<BR>Kamu membuang waktu untuk tugas semudah ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="100"><![CDATA[<html>$Argenta$<BR>Kamu tidak butuh bantuan untuk tugas ini.<BR>Aku tidak menyuruhmu menculik dragon. Lakukanlah sendiri!<BR><BR><FONT color=#7e12d2>(Kamu tidak dapat menjalankan quest dalam party)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="97"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Jangan iri padaku jika aku menjadi lady Argenta's personal knight.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="98"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Jangan iri padaku jika aku menjadi lady Argenta's personal knight.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="23"><![CDATA[<html>$Argenta$<BR>Ingat, jangan membuatku khawatir. Dan kembalilah setelah kamu mendapatkannya<BR>Kamu membuang waktu hanya untuk tugas semudah ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-2" image="QW_24.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n191_slave_david-2-a" mid="25" select_type="0"><![CDATA[<html> Oh, yeah .... Kamu akan ikut. </html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Kamu menuju <FONT color=#a82424>Death Basin</FONT>, betul kan? Saat kamu bicara pada Argenta, Aku telah mendapatkan tugas lain! Aku dapat menangani 2 tugas sekaligus! Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="26"><![CDATA[<html>$Adventurer David$<BR>Heh. Lihat dan pelajari aku! Heh. Heh. Heh.<BR><FONT color=#7e12d2>(Adventurer David semakin sombong)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-3-a" mid="28" select_type="0"><![CDATA[<html> Apa yang terjadi? </html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Adventurer David$<BR>Apa? Ini mustahil! Bagaimana mungkin aku melakukan<FONT color=#a82424> kesalahan</FONT>! Ini cuma mimpi! Ini cuma mimpi! uhhh...<BR><FONT color=#7e12d2>(Adventurer David matanya berkaca-kaca.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-3-b" mid="30" select_type="0"><![CDATA[<html>Kamu tuh yang ingin menangis...</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Adventurer David$<BR>Oh! <FONT color=#382000>{user_nick}</FONT>!! Ok... ok. Aku memberi kesempatan untuk membantuku, Great Adventurer David, hanya <FONT color=#a82424>sedikit saja</FONT>. Apa kamu mau menangis? Kamu merasa sangat terhormat? Ha. Jangan cengeng, dan dengarkan ceritaku baik-baik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-3-c" mid="32" select_type="0"><![CDATA[<html> (Adventurer David teriak tiba-tiba) </html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Adventurer David$<BR>Sebenarnya, Aku menerima permintaan. Tugas itu membutuhkan <FONT color=#a82424>Hound</FONT> untuk bersamaku. Aku bisa menyelesaikan misi ini dengan mudah tapi kadang-kadang suatu hari bisa menjadi buruk... </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-3-d" mid="34" select_type="0"><![CDATA[<html>Siapa kamu berani menyuruhku?</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Adventurer David$<BR>Tapi... sayangnya, Hound itu jatuh dan terjebak di <FONT color=#a82424>Spider Eggs</FONT>. *Huff*... Ini tidak bagus.<BR>Jadi kenapa kamu tidak pergi dan menyelamatkan <FONT color=#a82424>Hound</FONT> untukku? Ha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-3-e" mid="36" select_type="0"><![CDATA[<html> Hmm ... Jadi apa tugasnya? </html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Adventurer David$<BR>Anggaplah kamu <FONT color=#a82424>membantuku</FONT> lalu... Ah, Ahem! Merasa terhormatlah mendapatkan tugas dariku, sang great adventurer! Sheesh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-3-f" mid="38" select_type="0"><![CDATA[<html>Tak bisakah kamu lakukan itu sendiri?</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Adventurer David$<BR>Apa kamu melihat Spider Eggs dekatku itu?<BR>Heh, Tidak mungkin kamu tidak melihat Spider Eggs meskipun kamu Pemula. Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-3-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-3-g" mid="40" select_type="0"><![CDATA[<html> Ah... Jadi kamu ketakutan? </html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Adventurer David$<BR>Dengar dulu, sampai selesai! <FONT color=#a82424>Hound</FONT> itu ada di Spider Egg sekitar Spider Eggs. Aku tidak tahu apakah ada di Spider Eggs lain! Ha... Apa kamu sudah mengerti yang harus di lakukan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-3-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="41"><![CDATA[<html>$Adventurer$<BR>Tidak... Aku tidak ketakutan. H... Heh. Heh. Heh. Aku tidak bisa bilang padamu orang lemah. Oh iya... Bantu aku menghancurkan <FONT color=#a82424>Spider Egg</FONT>.<BR><FONT color=#7e12d2>(Adventurer David gemetaran. Dia terlihat ketakutan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="43"><![CDATA[<html>$Adventurer David$<BR>Bisakah kamu lihat <FONT color=#a82424>Spider Eggs</FONT>itu? Yang <FONT color=#a82424>satu</FONT> itu ada <FONT color=#a82424>Hound</FONT>. Jadi sekarang, pergi selamatkan Hound!<BR><FONT color=#7e12d2>(Adventurer David berkeringat dingin dan gemetar.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="44"><![CDATA[<html>$Adventurer David$<BR>Bisakah kamu lihat <FONT color=#a82424>Spider Eggs</FONT>itu? Yang <FONT color=#a82424>satu</FONT> itu ada <FONT color=#a82424>Hound</FONT>. Jadi sekarang, pergi selamatkan Hound!<BR><FONT color=#7e12d2>(Adventurer David berkeringat dan gemetaran.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-6-a" mid="46" select_type="0"><![CDATA[<html>Kamu bahkan tidak membantuku sama sekali...</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Adventurer David${action:talk}<BR>Heh. Heh. Heh. Pemula sepertimu bisa menyelesaikan misi dengan mudah karena <FONT color=#a82424>Bantuanku juga</FONT>! Heh. Heh. Heh</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-7" mid="48" select_type="0"><![CDATA[<html> (Kelihatannya berpikir untuk lari secepat kilat) </html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Adventurer David$<BR>Meskipun kamu banyak komplain. Aku tahu sebenarnya kamu berterima kasih <FONT color=#a82424>Atas bantuan kilatku</FONT> dari hatimu. Heh. Heh. Heh. Aku akan bersamamu lagi setelah <FONT color=#a82424>Aku membawa Hounds ke tempat yang aman</FONT>!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="49"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Jangan takut saat aku pergi, Aku akan kembali secepatnya untuk <FONT color=#a82424>Melindungi</FONT> kamu! Ha. Ha. Ha.<BR><FONT color=#7e12d2>(Adventurer David mulai arogan seperti biasa.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-8" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-8-a" mid="52" select_type="0"><![CDATA[<html> Bohong, lagi .... </html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Adventurer David${action:talk}<BR>Heh. Heh. Heh. Pemula <FONT color=#382000>{user_nick}</FONT>... Tidak bisa bertahan melawan <FONT color=#a82424>Scarlet Scythe Reaper</FONT>. Aku pasti menolongmu jika kamu tidak mengalahkannya, tapi aku memberimu kesempatan untuk itu! Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-8-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-8-b" mid="54" select_type="0"><![CDATA[<html>Um... Poison Sac? Darimana kamu mendapatkan ini?</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Adventurer David$<BR>Aku beri ini padamu karena aku kasihan akan usahamu itu! Tidak... Bukan karena insiden <FONT color=#a82424>Hound</FONT> itu.  Jangan terlalu berharap! Hmph.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-8-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n192_slave_david-8-c" mid="56" select_type="0"><![CDATA[<html>Uang untuk memulai bisnis. Kamu mau jual itu kepada siapa?</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Kamu tertarik ya. Kamu pikir aku akan membeberkan rahasia bisnisku? Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-8-c" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="57"><![CDATA[<html>$Adventurer David$<BR>Hanya <FONT color=#a82424>Argenta</FONT> yang menunjukkan ketertarikannya.. Sejauh ini!! Tapi pionner selalu merasa kesepian! Kasihan sekali kamu tidak mengetahui itu! Heh. Sampai jumpa!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n192_slave_david-9" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="58"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Aku tahu untuk mendapatkan <FONT color=#a82424>Poison Sac</FONT> dariku, membuatmu menangis. Tapi jangan menangis dan temui <FONT color=#a82424>Argenta</FONT> sana. Heh. Heh. Heh.<BR><FONT color=#7e12d2>(Adventurer David memandang langit kosong)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-a" mid="60" select_type="0"><![CDATA[<html> Tidak ada. </html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Argenta$<BR>Apa maksudmu!! Kamu membuatku khawatir dari waktu kewaktu. Kamu berbuat demikian pasti ada tujuannya, bukan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-b" mid="62" select_type="0"><![CDATA[<html>(Kamu memberikannya Poison Sac.)</html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Argenta$<BR>Kamu tidak boleh mati atau terluka hingga aku dapat budak baru, mengerti? Sekarang, berikan itu padaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-c" mid="64" select_type="0"><![CDATA[<html>Racun.. itu...</html>]]></talk_answer>
+      <talk_question mid="63"><![CDATA[<html>$Argenta$<BR>Kamu selalu dibawah harapanku. Bagaimana ini bisa cukup?<BR><FONT color=#7e12d2>(Argenta memakan Poison Sac)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-d" mid="66" select_type="0"><![CDATA[<html>Kamu, khawatir padaku</html>]]></talk_answer>
+      <talk_question mid="65"><![CDATA[<html>$Argenta$<BR>Apa? Jangan khawatir padaku jika kamu tidak bisa mengurus diri sendiri.  </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-e" mid="68" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Argenta$<BR>Tidak, sebagai <FONT color=#a82424>budakku</FONT> kamu tidak boleh terluka tanpa ijinku.<BR>Ah, kamu terlalu banyak bicara. Menyebalkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-f" mid="70" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="69"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="71"><![CDATA[<html>$Argenta$<BR>Aku mulai bosan denganmu, budak. Aku tidak bisa selalu menunggumu. <FONT color=#382000>{user_nick}</FONT>, pergi dan bersiaplah ke <FONT color=#a82424>Saint's Haven</FONT>.<BR><FONT color=#7e12d2>(Quest berikutnya ada di level 22 atau lebih )</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-9" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="91"><![CDATA[<html>$Adventurer David$<BR>Apa <FONT color=#a82424>Argenta</FONT> memuji skillku yang keren?! Heh... Bilang padanya itu bukan apa-apa bagi <FONT color=#a82424>Adventurer David</FONT>!! Ok? Heh. Heh. Heh.<BR><FONT color=#7e12d2>(Adventurer David mulai bertindak aneh)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">267</exe>
+         <exe type="setstep">2</exe>
+         <exe type="recompense_view">2677,2671,2672,2673,2674,2675,2676,2677,2678,2679</exe>
+         <exe type="conexe" true="4,0,1" false="5,0,1">0</exe>
+         <exe type="talk" npc="n164_argenta_wounded">c</exe>
+         <exe type="talk" npc="n164_argenta_wounded">d</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="recompense_view">2677,2671,2672,2673,2674,2675,2676,2677,,</exe>
+         <exe type="conexe" true="0,3" false="0,4">0</exe>
+         <exe type="talk" npc="n164_argenta_wounded">c</exe>
+         <exe type="talk" npc="n164_argenta_wounded">d</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="10">400091</exe>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="10">400091</exe>
+         <exe type="recompense">2677,2671,2672,2673,2674,2675,2676,2677,2678,2679</exe>
+         <exe type="complete" true="">267</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="b">2</exelink>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="party">3</exelink>
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="b">1</exelink>
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="party2">2</exelink>
+   <exelink qstep="3" npc="n192_slave_david" sub="b" />
+   <exelink qstep="3" npc="n192_slave_david" sub="c" />
+   <exelink qstep="3" npc="n192_slave_david" sub="d" />
+   <exelink qstep="3" npc="n192_slave_david" sub="e" />
+   <exelink qstep="3" npc="n192_slave_david" sub="f" />
+   <exelink qstep="3" npc="n192_slave_david" sub="g">0,1</exelink>
+   <exelink qstep="6" npc="n192_slave_david" sub="7">0,1</exelink>
+   <exelink qstep="8" npc="n192_slave_david" sub="b" />
+   <exelink qstep="8" npc="n192_slave_david" sub="c">0,1,2</exelink>
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="e">1</exelink>
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="f">0,2</exelink>
+   <journal_data recompense="1:2671,2:2672,3:2673,4:2674,5:2675,6:2676,7:2677,8:2678,9:2679" quest_title="허풍선이의 위기" chapterid="" quest_level="21" quest_mark_type="10" use_item_list="400091">
+      <journal index="1">
+         <contents_image>QW_24.dds</contents_image>
+         <destination_pos>242,n192</destination_pos>
+         <destination_mode>custom:242@1</destination_mode>
+         <statemark_npcid>192</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="75"><![CDATA[Argenta's request]]></title>
+         <contents mid="76"><![CDATA[<html><FONT color=#a82424>Argenta</FONT>meminta Poison Sac, lagi. Carilah cara untuk menemukannya di <FONT color=#a82424>Death Basin</FONT>.<BR><FONT color=#7e12d2>(Quest tidak dapat di selesaikan dalam status party)</FONT><BR><BR><FONT color=#086171> Lower Ridge (Forest of Death Entrance)</FONT><FONT color=#a82424> → Death Basin</FONT></html>]]></contents>
+         <destination mid="77"><![CDATA[(Solo) Kumpulkan Poison Sac di Death Basin]]></destination>
+         <todo_msg mid="78"><![CDATA[Quest telah di tambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Slave_David.dds</contents_image>
+         <destination_pos>242,n192</destination_pos>
+         <destination_mode>custom:242@4</destination_mode>
+         <statemark_npcid>192</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="79"><![CDATA[Desperate Adventurer David]]></title>
+         <contents mid="80"><![CDATA[<html>Selama proses penyelamatan Hound,<FONT color=#a82424>Adventurer David</FONT> seekor Hound terjebak di spider egg. Temui Adventurer David dekat <FONT color=#a82424>spider egg</FONT> dan dapatkan <FONT color=#a82424>Hound</FONT> lalu keluarkan.<BR><BR><FONT color=#086171> Lower Ridge (Forest of Death Entrance)</FONT><FONT color=#a82424> → Death Basin</FONT></html>]]></contents>
+         <destination mid="81"><![CDATA[Hancurkan spider egg untuk menyelamatkan Hound]]></destination>
+         <todo_msg mid="82"><![CDATA[Selamatkan Hound dari spider egg dekat Adventurer David]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Slave_David.dds</contents_image>
+         <destination_pos>242,n192</destination_pos>
+         <destination_mode>custom:242@1</destination_mode>
+         <statemark_npcid>192</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="83"><![CDATA[Telah berhasil menyelamatkan Hound]]></title>
+         <contents mid="84"><![CDATA[<html>Menyelamatkan Hound. Bicara pada <FONT color=#a82424>Adventurer David</FONT> lagi.<BR><BR><FONT color=#086171>Death Basin</FONT> <FONT color=#a82424>→ Adventurer David</FONT></html>]]></contents>
+         <destination mid="85"><![CDATA[Bicara pada Adventurer David]]></destination>
+         <todo_msg mid="86"><![CDATA[Hound telah selamat. Pergi bicaralah pada Adventurer David.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_24.dds</contents_image>
+         <destination_pos>244,0,0</destination_pos>
+         <destination_mode>custom:242@1,243@1,244@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="102"><![CDATA[Menemukan Poison Sac]]></title>
+         <contents mid="103"><![CDATA[<html>After helping Adventurer David, he disappeared without even saying thank you. Let's go forward to find another Poison Sac.<BR><BR><FONT color=#086171>Lower Ridge (Forest of Death Entrance)</FONT><FONT color=#a82424> → Death Basin</FONT></html>]]></contents>
+         <destination mid="104"><![CDATA[Kumpulkan Poison Sac di Death Basin]]></destination>
+         <todo_msg mid="105"><![CDATA[Teruslah maju untuk mencari Poison Sac]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Slave_David.dds</contents_image>
+         <destination_pos>244,n192</destination_pos>
+         <destination_mode>custom:244@1</destination_mode>
+         <statemark_npcid>192</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="87"><![CDATA[Adventurer David's reward]]></title>
+         <contents mid="88"><![CDATA[<html><FONT color=#2b2723><FONT color=#a82424>Adventurer David</FONT> muncul kembali setelah membawa Hound. Sepertinya dia ingin bicara sesuatu.</FONT><BR><BR><FONT color=#086171>Death Basin</FONT> <FONT color=#a82424>→ Adventurer David</FONT></html>]]></contents>
+         <destination mid="89"><![CDATA[Bicara pada Adventurer David]]></destination>
+         <todo_msg mid="90"><![CDATA[Pergi dan bicara pada Adventurer David.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="93"><![CDATA[Poison Sac diterima]]></title>
+         <contents mid="94"><![CDATA[<html><FONT color=#a82424>Adventurer David</FONT>baru sama menerima Poison Sac. Kembalilah dan laporkan pada <FONT color=#a82424>Argenta</FONT> tentang hasilnya.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="95"><![CDATA[Laporkan pada Argenta]]></destination>
+         <todo_msg mid="96"><![CDATA[Laporkan pada Argenta di Calderock Village.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>266</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

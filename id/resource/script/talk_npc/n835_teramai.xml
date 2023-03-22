@@ -1,0 +1,36 @@
+   <talk>
+      <npcename>n835_teramai</npcename>
+      <npcid>835</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Terence Teramai]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Terence Teramai$<BR>Senang berjumpa dengan kamu, <FONT color=#387206>{user_nick}</FONT>.<BR>Aku adalah <FONT color=#a82424>Terence Teramai</FONT> sebagai kepala denominasi Goddess dengan tubuh yang sudah tidak sehat.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Terence Teramai$<BR><FONT color=#7e12d2>(Terence menggigit bibir)</FONT><BR>Velskud harus dipindahkan dan diobati.<BR>Kamu susul aku ke Royal Palace..</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="9"><![CDATA[<html>$Terrence Terramai$<BR><FONT color=#7e12d2>(Terramai menggigit bibirnya)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="4">0</exe>
+         <exe type="conexe" true="2" false="3">1</exe>
+         <exe type="enterquest">mqc09_9538_intended_ending</exe>
+         <exe type="talk">003</exe>
+         <exe type="conexe" true="5" false="6">2</exe>
+         <exe type="enterquest">mq15_9221_unpleased_successor</exe>
+         <exe type="conexe" true="7" false="8">3</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="9" false="10">4</exe>
+         <exe type="enterquest">mq15_9372_show_the_cloven_hoof</exe>
+         <exe type="talk">001</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">8</chk>
+         <chk type="hasquest">9538</chk>
+         <chk type="hasquest">9221</chk>
+         <chk type="hasquest">9222</chk>
+         <chk type="hasquest">9372</chk>
+      </conditions>
+   </talk>

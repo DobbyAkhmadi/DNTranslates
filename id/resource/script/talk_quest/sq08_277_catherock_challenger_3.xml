@@ -1,0 +1,339 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_277_catherock_challenger_3</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>277</qid>
+      <designer>손원호</designer>
+      <qlevel>23</qlevel>
+      <qdesc>276 선행퀘 완료시 자동으로 이어짐.
+문장학자에게 오크 영웅 타이푼의 비화를 듣고, 챈들러에게 돌아오면 새로운 도전장이 도착해 있다. 기도하는 자의 안식처로 가서 오크 3형제를 해치우면 완료된다.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Orc Kim's Challenge III]]></qkname>
+      <qnpc>
+         <npcid>28</npcid>
+         <npcename>n028_scholar_bailey</npcename>
+         <npckname>문장학자 베일리</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>32</npcid>
+         <npcename>n032_warrior_master_chandler</npcename>
+         <npckname>상급 워리어 챈들러 (캐더락 워려 스킬)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="125"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Aku agak sibuk sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-accepting-a" mid="7" select_type="0"><![CDATA[<html>Pertarungan 10 tahun lalu?</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Master Warrior Chandler${action:Talk}<BR>Hanya melihat performamu cukup membuatku kagum.<BR>Mengingatkanku akan masa lalu.<BR>Aku melakukan pertarungan hebat 10 tahun lalu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-accepting-b" mid="9" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Master' Warrior Chandler$<BR>10 tahun lalu, ketika monster menyerang Calderock, aku bertarung di depan, dan aku berhadapan dengan musuh yang luar biasa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-accepting-c" mid="11" select_type="0"><![CDATA[<html>Apa hasil dari tantangannya?</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Master Warrior Chandler$ <BR>Dia adalah orc. <BR>Walau dia adalah musuh, harus kuakui dia sangat kuat. <BR>Serangannya secepat kilat dan pertahanannya luar biasa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-accepting-d" mid="13" select_type="0"><![CDATA[<html>Jadi, kamu menang?</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>Master Warrior Chandler$<BR>Muhaha! Monster ini tidak akan pernah kalah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-accepting-e" mid="15" select_type="0"><![CDATA[<html>Mata... Apa dia Orc Kim?</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Master Warrior Chandler$<BR>Tidak! Aku bahkan tidak menang. Ahaha!<BR>Masing - masing dari kami hanya bertukar mata.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting-e" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-accepting-f" mid="17" select_type="0"><![CDATA[<html>Oh begitu.</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Master Warrior Chandler$<BR>Hahaha! Kalau <FONT color=#a82424>Orc Kim</FONT> itu yang kuhadapi beberapa tahun lalu, sangat tidak masuk akal kamu kembali dengan selamat. Dia hampir sekuat aku!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-accepting-g" mid="19" select_type="0"><![CDATA[<html>Apa?</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Master Warrior Chandler$<BR>Tapi, mungkin ada hubungan diantara keduanya.<BR>Dapatkah kamu menolongku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting-g" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-accepting-h" mid="21" select_type="0"><![CDATA[<html>Ok.</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Master Warrior Chandler$<BR>Kalau mengenai monster, tidak ada yang lebih paham daripada <FONT color=#a82424>Heraldry Scholar Bailey</FONT>. Dia masih muda, namun pengetahuannya seperti orang tua. Pergi dan cari tahu mengenai  <FONT color=#a82424>Orc Kim</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-accepting-acceptted" mid="23" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Orc Kim's Challenge III$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-accepting-i" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="24"><![CDATA[<html>$Master Warrior Chandler$<BR><FONT color=#a82424>Heraldry Scholar Bailey</FONT> hanya di seberang jembatan, jadi jangan tersesat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-1" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="43"><![CDATA[<html>$Master Warrior Chandler$<BR><FONT color=#a82424>Heraldry Scholar Bailey</FONT> hanya di seberang jembatan, jadi jangan tersesat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-a" mid="45" select_type="0"><![CDATA[<html>Apa yang kamu baca?</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Heraldry Scholar Bailey$<BR><FONT color=#387206>'Orc perempuan menghembuskan nafas panas dan mendekap Orc laki-laki seperti gurita dan...'<BR></FONT>Heh! Jangan mengintip seperti itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-b" mid="47" select_type="0"><![CDATA[<html>Aku ingin bertanya.</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Oh, haha... Ini bukan apa - apa. Aku Cuma membaca buku tua yang diambil dari Forgotten Temple. Bukan sebuah novel aneh atau semacamnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-c" mid="49" select_type="0"><![CDATA[<html>Apa kamu tahu sesuatu mengenai Orc Kim?</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Ya! Kamu datang ke orang yang tepat. Apa yang dapat kubantu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-d" mid="51" select_type="0"><![CDATA[<html>(Menunggu.)</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Kamu bilang <FONT color=#a82424>Orc Kim</FONT>? Nama yang lucu untuk seekor Orc.<BR>Aku pernah mendengar Black Horse Gim, tapi tidak untuk Orc Kim... Tunggu sebentar. Aku akan mencari di Encyclopedia of Orcs.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-d" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-e" mid="53" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Ini bukan... Oh! Ini dia. <FONT color=#a82424>Orc Kim</FONT>. Mungkin orc yang cukup terkenal, karena namanya ada di Encyclopedia of Orcs.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-e" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-f" mid="128" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="127"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Hmm. Sepertinya <FONT color=#a82424>Orc Kim</FONT> tidak terlalu terkenal.. tidak seperti ayahnya, <FONT color=#a82424>Orc Challenger Typhoon</FONT> yang cukup terkenal.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-g" mid="55" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Dia adalah Orc Legendaris bernama <FONT color=#a82424>Typhoon</FONT> karena dia cepat dan kuat seperti topan dan dikenal karena dia mengambil mata <FONT color=#a82424>Chandler</FONT> saat Calderock Resistance. Tentu saja, <FONT color=#a82424>Typhoon</FONT> juga kehilangan sebelah matanya... Jadi <FONT color=#a82424>Orc Kim</FONT> adalah <FONT color=#a82424>anaknya</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-g" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-h" mid="57" select_type="0"><![CDATA[<html>Dia terus mengirimkan tantangan kepadaku.</html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Tapi <FONT color=#a82424>Orc Kim</FONT> tidak sekuat ayahnya, namun dia orc sangat aneh yang suka menjahit dan menyulam. Cukup... untuk seekor Orc.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-h" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-i" mid="59" select_type="0"><![CDATA[<html>Kenapa aku selalu ditantang?</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Aku telah mendengar gosip mengenai itu. Aku tak yakin apa yang terjadi, tapi sepertinya <FONT color=#a82424>Orc Kim</FONT> telah menentukan jalur hidupnya sebagai penantang untuk melanjutkan apa yang dilakukan ayahnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-i" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-j" mid="61" select_type="0"><![CDATA[<html>Begitu. Aku mengerti.</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Yah, aku tak yakin, tapi mungkin dia berpikir kamu, {user_nick}, sebagai rival sejatinya. Lagipula dia memiliki darah yang sama, jadi kupikir dia juga mewarisi keinginan ayahnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="62"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Hanya karena dia seekor monster, tidak berarti dia jahat. <BR>Kuharap kamu melihat dunia dengan mata terbuka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-2" image="QN_NPC_Warrior_Chandler.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="64"><![CDATA[<html>$ Heraldry Scholar Bailey$<BR>Tidak ada lagi informasi di buku. Kurasa kamu harus pergi ke <FONT color=#a82424>Chandler</FONT> sekarang. Ini... Ini bukan berarti aku ingin menyelesaikan novel tersebut.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-a" mid="66" select_type="0"><![CDATA[<html>(Katakan apa yang diberitahu Heraldry Scholar Bailey.)</html>]]></talk_answer>
+      <talk_question mid="65"><![CDATA[<html>$Master Warrior Chandler$<BR>Benarkah? Apa kamu sudah menanyakan Heraldry Scholar Bailey mengenai hal itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-a" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-b" mid="68" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Master Warrior Chandler$<BR>Begitu... Jadi <FONT color=#a82424>Orc Kim</FONT> adalah <FONT color=#a82424>anak</FONT>nya.<BR>Pantas saja wataknya hampir sama...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-c" mid="70" select_type="0"><![CDATA[<html>Kubilang, aku bukan muridmu.</html>]]></talk_answer>
+      <talk_question mid="69"><![CDATA[<html>$Master Warrior Chandler$<BR>Hahaha! Bukankah ini hebat?<BR>Pertarungan antara <FONT color=#a82424>anaknya</FONT> dan muridku. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-d" mid="72" select_type="0"><![CDATA[<html>Kamu sangat keras kepala.</html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Master Warrior Chandler$<BR>Mereka bilang kamu tetap menjadi murid walaupun kamu pernah mengalahkan gurumu!<BR>Yah, acuhkan saja berita ini... Tantangan lain telah datang ketika kamu pergi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-e" mid="74" select_type="0"><![CDATA[<html>(Membaca tantangan.)</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Master Warrior Chandler$<BR>Tentu saja! Kekuatan dan keberanian seperti ini! <BR>Kalau kamu warrior sejati, kamu harus menerimanya!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-f" mid="76" select_type="0"><![CDATA[<html>Apa ini sebuah... tantangan?</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Master Warrior Chandler$<BR><FONT color=#382000>Jadilah teman kencanku! Aku menyukaimu!<BR>Aku.. selalu mengagumi...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-g" mid="78" select_type="0"><![CDATA[<html>(Membaca tantangan.)</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Master Warrior Chandler$<BR>Ya ampun. Hahaha! Bukan yang ini. <BR>Kembalikan padaku, dan ambil yang ini! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-g" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="79"><![CDATA[<html>$Orc Kim's Challenge$<BR><FONT color=#382000>{user_nick}. Maaf telah meremehkanmu selama ini. <BR>Aku akan langsung ke permasalahannya. Hingga sekarang, aku hanya bertarung menggunakan 1% dari kekuatan asliku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-h" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-i" mid="82" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html><FONT color=#2b2723>$Orc Kim's Challenge$<BR></FONT><FONT color=#382000>Kesombonganku membuatku kalah dua kali dari kamu. <BR>Yah sebenarnya, 1% dari kekuatankulah yang kalah dari kamu. <BR>Bagaimanapun, aku memutuskan untuk tidak meremehkanmu lagi.</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-i" image="QM_Orc_Three_brothers.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-j" mid="84" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="83"><![CDATA[<html>$Orc Kim's Challenge$<BR><FONT color=#382000>Aku belum menggunakan 100% kekuatanku, itu mungkin akan membahayakan seluruh dunia. Namun aku memutuskan untuk bertarung dengan kemampuanku, akan terdapat orc brother yang sedikit lebih kuat daripada aku untuk membantuku sekarang.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-j" image="QM_Orc_Three_brothers.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-k" mid="86" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="85"><![CDATA[<html>$Orc Kim's Challenge$<BR><FONT color=#382000>Kami tiga bersaudara namun dalam satu tubuh. Jangan berpikir kamu akan dikeroyok 3 lawan 1. Tidakkah kamu merasakan kekuatan kegelapan Dark Noir? Kuharap kamu tidak kabur...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-k" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-l" mid="88" select_type="0"><![CDATA[<html>(Bicaralah kepada Master Warrior Chandler.)</html>]]></talk_answer>
+      <talk_question mid="87"><![CDATA[<html>$Orc Kim's Challenge$<BR><FONT color=#382000>Hehehe. Aku akan menunggu seharian untuk bertarung denganmu di Prayer's Refugee. <BR></FONT><FONT color=#a82424></FONT><BR><FONT color=#a82424>Ditulis oleh Orc Kim, Powerful Orc Champion tak terkalahkan yang akhirnya menggunakan kekuatan sesungguhnya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-l" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-m" mid="90" select_type="0"><![CDATA[<html>Aku akan menerima tantangannya.</html>]]></talk_answer>
+      <talk_question mid="89"><![CDATA[<html>$Master Warrior Chandler$<BR><FONT color=#2b2723>Aku tak akan buang waktu. Penantang adalah <FONT color=#a82424>Orc Kim</FONT>, anak dari Orc Hero, <FONT color=#a82424>Typhoon</FONT>. Dia musuh yang sempurna untukmu. </FONT><BR><FONT color=#2b2723>Apa kamu akan menerima tantangan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-2-n" mid="92" select_type="0"><![CDATA[<html>Bukannya kamu tidak pernah mengajariku apa - apa...</html>]]></talk_answer>
+      <talk_question mid="91"><![CDATA[<html>$Master Warrior Chandler$<BR>Gunakan skill yang kuajarkan kepadamu!<BR>Dia akan menggunakan 100% kekuatannya sekarang, jadi bersiaplah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-2-n" image="QW_26.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="93"><![CDATA[<html>$Master Warrior Chandler$<BR>Lewati saja kekonyolan ini! Haha!<BR>Lawanmu berada di <FONT color=#a82424>Prayer's Refugee</FONT>, jadi cepatlah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-3" image="QW_26.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="94"><![CDATA[<html>$Master Warrior Chandler$<BR>Lawanmu berada di <FONT color=#a82424>Prayer's Refugee</FONT>, jadi cepatlah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-4-a" mid="96" select_type="0"><![CDATA[<html>Cukup sulit, tapi aku masih menang.</html>]]></talk_answer>
+      <talk_question mid="95"><![CDATA[<html>$Master Warrior Chandler$<BR>Baiklah! Apa hasilnya? Siapa menang?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-4-b" mid="98" select_type="0"><![CDATA[<html>Yah, aku bukanlah muridmu...</html>]]></talk_answer>
+      <talk_question mid="97"><![CDATA[<html>$Master Warrior Chandler$<BR>Hahaha! Ya, seperti dugaanku.<BR>Kamu adalah penerusku!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-4-c" mid="100" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="99"><![CDATA[<html>$Master Warrior Chandler$<BR>Ini hanya masalah kecil.<BR>Ayo pergi dan rayakan kemenangan ini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-4-d" mid="102" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="101"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-4-d" image="QM_Orc_Oneeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-4-e" mid="104" select_type="0"><![CDATA[<html>Kurasa begitu...</html>]]></talk_answer>
+      <talk_question mid="103"><![CDATA[<html>$Master Warrior Chandler$<BR>Tetaplah waspada!<BR>Orc Kim tak akan menyerah... <BR>Dia akan bertambah kuat dan kembali menantang suatu hari nanti!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n032_warrior_master_chandler-4-f" mid="106" select_type="0"><![CDATA[<html>(Aku akan pergi sekarang)</html>]]></talk_answer>
+      <talk_question mid="105"><![CDATA[<html>$Master Warrior Chandler$<BR>Ah! Semangat memang indah! <BR>Anak muda yang menantang!<BR>Hey! Ayo lewat!<BR>Apakah kita siap pergi berpetualang?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n032_warrior_master_chandler-4-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="107"><![CDATA[<html><FONT color=#7e12d2>(Walau aku pernah menang melawan Orc Kim, dia mengingatkanku akan Orc Hero legendaris, Tyhoon. Aku yakin dia bertambah kuat dan kembali suatu hari nanti.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">2777,2771,2772,2773,2774,2775,2776,2777,2778,2779</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,277, 1);</exe>
+         <exe type="setstep">1</exe>
+         <exe type="setjornal">1</exe>
+         <exe type="talk" npc="n032_warrior_master_chandler">i</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment>0~5 리스트 사용하지 않음(목표가 사냥에서 대화로 변경)
+6, 7 리스트 h이전의 대화만 사용합니다.</comment>
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntmon" num="1" party="1" exe="3,4,5" onexe="">21019</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="delcount">.</exe>
+         <exe type="recompense">2777,2771,2772,2773,2774,2775,2776,2777,2778,2779</exe>
+         <exe type="complete" true="">277</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>완료 스텝 변경으로 사용하지 않는 스텝 및 보상입니다.</comment>
+      <conditions />
+      <executions>
+         <exe type="recompense">2777,2771,2772,2773,2774,2775,2776,2777,2778,2779</exe>
+         <exe type="complete" true="">277</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n032_warrior_master_chandler" sub="h">0</exelink>
+   <exelink qstep="accepting" npc="n032_warrior_master_chandler" sub="acceptted">1,2,3,4</exelink>
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="b" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="c" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="d" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="e" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="f" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="g" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="h" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="i" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="j">0,1</exelink>
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="b" />
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="c" />
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="d">6</exelink>
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="e">7</exelink>
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="f" />
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="g" />
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="i" />
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="j" />
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="k" />
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="l" />
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="m">0,2,1</exelink>
+   <exelink qstep="2" npc="n032_warrior_master_chandler" sub="n" />
+   <exelink qstep="4" npc="n032_warrior_master_chandler" sub="b" />
+   <exelink qstep="4" npc="n032_warrior_master_chandler" sub="c">0</exelink>
+   <exelink qstep="4" npc="n032_warrior_master_chandler" sub="d">1</exelink>
+   <exelink qstep="4" npc="n032_warrior_master_chandler" sub="e" />
+   <exelink qstep="4" npc="n032_warrior_master_chandler" sub="f" />
+   <journal_data recompense="1:2771,2:2772,3:2773,4:2774,5:2775,6:2776,7:2777,8:2778,9:2779" quest_title="도전자 김오크 Ⅲ" chapterid="" quest_level="23" quest_mark_type="10" use_item_list="276 선행퀘 완료시 자동으로 이어짐.&#xD;&#xA;도전자 3형제를 처치하면 완료된다.">
+      <journal index="1">
+         <contents_image>QN_Npc_Scholar_Baily.dds</contents_image>
+         <destination_pos>8,n28</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>28</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="108"><![CDATA[Bicaralah kepada Heraldry Scholar Bailey]]></title>
+         <contents mid="109"><![CDATA[<html>Pergi temui Heraldry Scholar Bailey di Calderock Village dan tanyakan mengenai Orc Kim.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→</FONT> <FONT color=#a82424>Heraldry Scholar Bailey</FONT></html>]]></contents>
+         <destination mid="110"><![CDATA[Bicaralah kepada Heraldry Scholar Bailey]]></destination>
+         <todo_msg mid="111"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Warrior_Chandler.dds</contents_image>
+         <destination_pos>8,n32</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>32</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="112"><![CDATA[Laporkan kepada Master Warrior Chandler]]></title>
+         <contents mid="113"><![CDATA[<html>Pergi temui Master Warrior Chandler di Calderock Village dan laporkan informasi mengenai Orc Kim.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→</FONT> <FONT color=#a82424>Master Warrior Chandler</FONT></html>]]></contents>
+         <destination mid="114"><![CDATA[Laporkan kepada Master Warrior Chandler]]></destination>
+         <todo_msg mid="115"><![CDATA[Laporkan kepada Master Warrior Chandler.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>276</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

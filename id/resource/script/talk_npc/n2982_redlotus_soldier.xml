@@ -1,0 +1,28 @@
+   <talk>
+      <npcename>n2982_redlotus_soldier</npcename>
+      <npcid>2982</npcid>
+      <startexe>4</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Red Lotus Palace Royal Guard]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Red Lotus Palace Royal Guard$<BR>Hey! Just what kind of place do you think this is?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="001_van" image="" itemindex="">
+         <talk_question mid="13"><![CDATA[<html>$Red Lotus Palace Royal Guard$<BR>
+Oh my! Welcome!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="enterquest">mqc26_9899_ladys_chest</exe>
+         <exe type="enterquest">mqc04_9913_double_pawn</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">001_van</exe>
+         <exe type="conexe" true="0" false="5">0</exe>
+         <exe type="conexe" true="1" false="6">1</exe>
+         <exe type="conexe" true="3" false="2">2</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9899</chk>
+         <chk type="hasquest">9913</chk>
+         <chk type="class" op="=">10</chk>
+      </conditions>
+   </talk>

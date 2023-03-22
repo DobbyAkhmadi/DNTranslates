@@ -1,0 +1,306 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_378_test_academic2</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>378</qid>
+      <designer>곽노찬</designer>
+      <qlevel>15</qlevel>
+      <qdesc>300018 운기의 돌</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>379</nextqid>
+      <nextqname>sq08_379_change_job5</nextqname>
+      <nextqnpc>n392_academic_station</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Specialization] Qualified II]]></qkname>
+      <qnpc>
+         <npcid>392</npcid>
+         <npcename>n392_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>780</npcid>
+         <npcename>n780_velskud</npcename>
+         <npckname>벨스커드</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-accepting" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-accepting-a" mid="6" select_type="0"><![CDATA[<html>Thanks to you Jasmine.</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Academic Jasmine${sound:npc_Jasmin_qu377_03.ogg}<BR>
+I'm proud of you, sister!<BR>I knew you could do it by yourself!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-accepting-a" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-accepting-b" mid="8" select_type="0"><![CDATA[<html>Thank you.</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Academic Jasmine$<BR>No, <FONT color=#387206>{user_nick}</FONT>. It was you who made it.<BR>You are more than qualified.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-accepting-b" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-accepting-c" mid="10" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Academic Jasmine$<BR>Now, as I promised, I will give you a present!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-accepting-acceptted" mid="12" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$[Specialization] Qualified II$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-1-a" mid="15" select_type="0"><![CDATA[<html>Of course.</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Academic Jasmine$<BR>The present is ready at the Academic Station.<BR>But to receive that, you need to prepare something, are you okay?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-a" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-1-b" mid="17" select_type="0"><![CDATA[<html>Okay, I'll be back!</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Academic Jasmine$<BR>Then, can you find the Energy Stone from the <FONT color=#a82424>Sleepers' Temple</FONT>?<BR>When you insert that into the center of the Academic Station, the locking mechanism is disarmed and you'll be able to take out what's inside</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-b" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Academic Jasmine${sound:npc_CG_Jasmin_sp_08.ogg}<BR>Alright, my lovely sister.<BR>Be careful.<BR><BR>* <FONT color=#7e12d2>Cannot proceed while in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-2" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Academic Station$<BR>
+* Mission Object.<BR>* <FONT color=#7e12d2>Find the Energy Stone at the Sleepers' Temple.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-a" mid="22" select_type="0"><![CDATA[<html>Yes, Velskud. I've prepared everything.</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Velskud$<BR>Soon, you'll be leaving for the past.<BR>
+Are you ready?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-b" mid="24" select_type="0"><![CDATA[<html>I'm so excited. I'll be able to see the past of the people I know!</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Velskud$<BR>50 years ago, many people were living unlike here.<BR>You'll probably meet many people and say goodbye.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-c" mid="26" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Velskud$<BR>You're dreaming an unnecessary excitement....<BR>You'll see someone in danger in the past.<BR>
+You know the history, so you'll already know what will happen to them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-d" mid="28" select_type="0"><![CDATA[<html>Jasmine... told me not to do anything dangerous that could change the history....</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Velskud$<BR>If you see someone in danger...<BR>
+What do you think you will do?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-e" mid="75" select_type="0"><![CDATA[<html>I know my sister's right... but I might help them.</html>]]></talk_answer>
+      <talk_question mid="74"><![CDATA[<html>$Velskud$<BR>
+What do you feel in your heart?<BR>
+Do you agree with her?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-f" mid="30" select_type="0"><![CDATA[<html>What? But... I might fail my mission by doing that.</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Velskud$<BR>.......<BR>Do where your heart goes.<BR>
+If you want to help, help them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-g" mid="32" select_type="0"><![CDATA[<html>That's true...</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Velskud$<BR>I don't oppose Jasmine's plan.<BR>
+I also think that's the only way.<BR>But what she's trying to do, it will definitely cause pain to the people in the past.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-h" mid="35" select_type="0"><![CDATA[<html>What do you think I should do, Velskud...?</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Velskud$<BR>There is no right answer....<BR>
+It's you who have to decide.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-i" mid="37" select_type="0"><![CDATA[<html>Do you think I'm qualified to make that decision... myself...?</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Velskud$<BR>Well....<BR><FONT color=#387206>{user_nick}</FONT>, I just hope you don't regret what you do....<BR>Think by yourself and do what you really want.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-i" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n780_velskud-2-j" mid="39" select_type="0"><![CDATA[<html>....... (Feels the weight on the shoulder)</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Velskud$<BR>Of course. A hero isn't decided by someone, but is born while a person thinks and chooses.<BR>You may become a new hero.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-2-j" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="40"><![CDATA[<html>$Velskud$<BR>From what I've seen, you are more than qualified.<BR><FONT color=#7e12d2>(Velskud speaks to himself)<BR></FONT>You'll know when time comes that you are indeed qualified....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n780_velskud-3" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="41"><![CDATA[<html>$Velskud$<BR><FONT color=#7e12d2><FONT color=#7e12d2>(Velskud speaks to himself)<BR></FONT></FONT><FONT color=#2b2723>You'll know when time comes that you are indeed qualified....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-3-a" mid="43" select_type="0"><![CDATA[<html>Thank you.</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Academic Jasmine${sound:npc_MR_Jasmin_sp_03.ogg}<BR>You've brought back the Energy Stone. Insert the Energy Stone into the center of the Academic Station and take out the item inside.<BR>It's a special present I've prepared it for you, so use it well.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3-a" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-3-b" mid="45" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Academic Jasmine$<BR>Also, I've upgraded the <FONT color=#a82424>Skill Program</FONT> in the Academic Station.<BR>But, in order to have access to the new Skill Program, you need to renew your current ID card to your occupation.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3-b" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-3-c" mid="47" select_type="0"><![CDATA[<html>(Listen to what an engineer is)</html>]]></talk_answer>
+      <talk_answer link_index="n392_academic_station-3-d" mid="80" select_type="0"><![CDATA[<html>(Hear about Alchemist)</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Academic Jasmine$<BR>The technical ID that can be renewed now are [<FONT color=#086171>Engineer</FONT>] and [<FONT color=#086171>Alchemist</FONT>].<BR>If you choose a job, you can't change it easily so choose it carefully.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3-c" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-3-b" mid="49" select_type="0"><![CDATA[<html>I will take a look at the other job.</html>]]></talk_answer>
+      <talk_answer link_index="n392_academic_station-3-e" mid="50" select_type="0"><![CDATA[<html>I'll change my occupation to an engineer.</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Academic Jasmine$<BR>An [<FONT color=#086171>Engineer</FONT>] handles recall device and explosives to block the enemy from approaching in the rear of the battlefield and attacks large amounts of the enemy.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3-d" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-3-b" mid="52" select_type="0"><![CDATA[<html>I will take a look at the other job.</html>]]></talk_answer>
+      <talk_answer link_index="n392_academic_station-3-h" mid="81" select_type="0"><![CDATA[<html>I will specialize into an Alchemist.</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Academic Jasmine$<BR>[<FONT color=#086171>Alchemist</FONT>] is a party support job that uses Elemental Alchemy with Fire and Ice elements and Heal Alchemy that recovers allies.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-3-f" mid="54" select_type="0"><![CDATA[<html><FONT color=#086171>(Changes occupation to an engineer)</FONT></html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$[Specialization] Engineer$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3-f" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-3-!next" mid="57" select_type="0"><![CDATA[<html>Yes, Jasmine. Thank you~.</html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Academic Jasmine$<BR>Renewed the ID Card to an [<FONT color=#086171>Engineer</FONT>].<BR>
+Now you'll be able to learn new skills related to an [<FONT color=#086171>Engineer</FONT>].</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3-g" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="58"><![CDATA[<html>${user_class}$<BR><BR>* <FONT color=#7e12d2>Primary specialization change complete.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-3-i" mid="83" select_type="0"><![CDATA[<html><FONT color=#086171>(Specialize into Alchemist)</FONT></html>]]></talk_answer>
+      <talk_question mid="82"><![CDATA[<html>$[Specialization] Alchemist$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-3-i" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n392_academic_station-3-!next" mid="86" select_type="0"><![CDATA[<html>Ok, thank you~</html>]]></talk_answer>
+      <talk_question mid="84"><![CDATA[<html>$Academic Jasmine$<BR>
+Your ID has been renewed with [<FONT color=#086171>Alchemist</FONT>].<BR>
+Now you will be able to learn new skills related to [<FONT color=#086171>Alchemist</FONT>].</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">3780,,,,,,,,,</exe>
+         <exe type="setquest">378</exe>
+         <exe type="talk" npc="n392_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntitem" num="1" exe="" onexe="">300018</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="addquestitem" num="1">300018</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">3781,,,,,,,,,</exe>
+         <exe type="complete" true="2,3">378</exe>
+         <exe type="custom">api_user_SetUserJobID(userObjID, 46);</exe>
+         <exe type="delquestitem" num="-1">300018</exe>
+         <exe type="custom">api_user_SetUserJobID(userObjID, 49);</exe>
+         <exe type="recompense">3782,,,,,,,,,</exe>
+         <exe type="complete" true="4,3">378</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n392_academic_station" sub="c">0</exelink>
+   <exelink qstep="accepting" npc="n392_academic_station" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n392_academic_station" sub="b">0,1,2</exelink>
+   <exelink qstep="2" npc="n780_velskud" sub="b" />
+   <exelink qstep="2" npc="n780_velskud" sub="c" />
+   <exelink qstep="2" npc="n780_velskud" sub="d" />
+   <exelink qstep="2" npc="n780_velskud" sub="e" />
+   <exelink qstep="2" npc="n780_velskud" sub="f" />
+   <exelink qstep="2" npc="n780_velskud" sub="g" />
+   <exelink qstep="2" npc="n780_velskud" sub="h" />
+   <exelink qstep="2" npc="n780_velskud" sub="i" />
+   <exelink qstep="2" npc="n780_velskud" sub="j">0,1,2</exelink>
+   <exelink qstep="3" npc="n392_academic_station" sub="b" />
+   <exelink qstep="3" npc="n392_academic_station" sub="c" />
+   <exelink qstep="3" npc="n392_academic_station" sub="d" />
+   <exelink qstep="3" npc="n392_academic_station" sub="b" />
+   <exelink qstep="3" npc="n392_academic_station" sub="e">0</exelink>
+   <exelink qstep="3" npc="n392_academic_station" sub="b" />
+   <exelink qstep="3" npc="n392_academic_station" sub="h">5</exelink>
+   <exelink qstep="3" npc="n392_academic_station" sub="f">1</exelink>
+   <exelink qstep="3" npc="n392_academic_station" sub="!next" />
+   <exelink qstep="3" npc="n392_academic_station" sub="i">6</exelink>
+   <exelink qstep="3" npc="n392_academic_station" sub="!next" />
+   <journal_data recompense="3780" quest_title="[전직] 자격은 충분합니다Ⅱ" chapterid="" quest_level="15" quest_mark_type="10" use_item_list="300018">
+      <journal index="1">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>8,n392</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>392</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="60"><![CDATA[Qualified I]]></title>
+         <contents mid="61"><![CDATA[<html>Connect to the Academic Station and talk to Jasmine.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Academic Station</FONT></html>]]></contents>
+         <destination mid="62"><![CDATA[Connect to the Academic Station]]></destination>
+         <todo_msg mid="63"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_16.dds</contents_image>
+         <destination_pos>129,n783</destination_pos>
+         <destination_mode>custom:126@1,127@1,128@1,129@1</destination_mode>
+         <statemark_npcid>783</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Qualified II]]></title>
+         <contents mid="65"><![CDATA[<html>Find the Energy Stone at the Sleepers' Temple.<BR><BR><FONT color=#086171>Lower Ridge(Forgotten Temple Entrance)</FONT> <FONT color=#a82424>→ Sleepers' Temple</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Collect the Energy Stone at the Sleepers' Temple]]></destination>
+         <todo_msg mid="67"><![CDATA[Find the Energy Stone at the Sleepers' Temple.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Velskud.dds</contents_image>
+         <destination_pos>129,n783</destination_pos>
+         <destination_mode>custom:126@1,127@1,128@1,129@1,13016@4</destination_mode>
+         <statemark_npcid>780</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="70"><![CDATA[Qualified III]]></title>
+         <contents mid="71"><![CDATA[<html>Talk to the past Velskud using the Energy Stone at the Sleepers' Temple.<BR><BR><FONT color=#086171>Lower Ridge(Forgotten Temple Entrance)</FONT> <FONT color=#a82424>→ Sleepers' Temple(Velskud)</FONT></html>]]></contents>
+         <destination mid="72"><![CDATA[Talk to Velskud]]></destination>
+         <todo_msg mid="73"><![CDATA[Talk to Velskud.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>8,n392</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>392</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="76"><![CDATA[Qualified IV]]></title>
+         <contents mid="77"><![CDATA[<html>Obtained the Energy Stone. Return to Calderock Village, connect to the Academic Station and report to Jasmine.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Academic Jasmine</FONT></html>]]></contents>
+         <destination mid="78"><![CDATA[Connect to the Academic Station]]></destination>
+         <todo_msg mid="79"><![CDATA[Obtained the Energy Stone. Report to Academic Jasmine.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>5</user_class>
+      <prev_quest>377</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

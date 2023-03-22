@@ -1,0 +1,728 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc27_9921_princess_of_misfortune</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>27</qchapter>
+      <qid>9921</qid>
+      <designer>양희주</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9922</nextqid>
+      <nextqname>mqc27_9922_disappeared_books</nextqname>
+      <nextqnpc>n2067_nophee</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Princess of Misfortune]]></qkname>
+      <qnpc>
+         <npcid>2062</npcid>
+         <npcename>n2062_hologram_nophee</npcename>
+         <npckname>홀로그램 노르페</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2067</npcid>
+         <npcename>n2067_nophee</npcename>
+         <npckname>노르페</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3056</npcid>
+         <npcename>n3056_sylviana</npcename>
+         <npckname>실비아나 공녀</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3075</npcid>
+         <npcename>n3075_sylviana</npcename>
+         <npckname>실비아나 공녀</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Norfe$<BR>So maybe she'll soon arrive in Rhadames, what with all the refugees pour-...<FONT color=#7e12d2>(Suddenly stops talking.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-acceptted" mid="8" select_type="3" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Norfe?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Hologram Norfe$<BR>…………</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="10"><![CDATA[<html>$Princess Sylvania$<BR>……………….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-a" mid="12" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Norfe$<BR>I got a message from the guards. They say Princess Sylvania has in fact arrived in Rhadames.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-b" mid="14" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Really?! Then we better go speak with her!</FONT><BR>
+<FONT color=#662500>If anyone knows something, it would be Princess Sylvania, right?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-b" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-c" mid="16" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Norfe$<BR>I'll remain here and continue thinking about other ways to get information on the matter,<BR>
+so can you go and check if Princess Sylvania knows anything about the Cup of Healing Lid,<BR>
+<FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-2" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Sure, I'll go and report back soon!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="225"><![CDATA[<html>$Princess Sylvania$<BR>……………….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-2" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-2-" mid="20" select_type="5" />
+      <talk_question mid="19"><![CDATA[<html>$Norfe$<BR>Thank you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-2" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-2-a" mid="22" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Princess Sylvania$<BR>Rhadames at last! We'll be safe now! The other citizens have come here too, correct?<BR>That's good… It seems many were saved in spite of the horrible situation.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-2-a" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-2-b" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Um… Excuse me. </FONT><FONT color=#7e12d2>(Is this Princess Sylvania?)</FONT><FONT color=#662500> You're Princess Sylvania, correct?<BR>I'm here representing Norfe. My name is </FONT><FONT color=#387206>{user_nick}</FONT><FONT color=#662500>.</FONT><BR>
+<FONT color=#662500>We gained word of your arrival, Princess Sylvania.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-2-b" image="QN_Hologram.dds" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-2-c" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Princess Sylvania$<BR>Oh, a representative of Norfe? …. You look young, but you must be a capable substitute, I suppose? <FONT color=#7e12d2>(Her eyes brighten.)</FONT><BR>Hmm. The fact that you sought me out must mean you want something in particular, right?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-2-c" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-2-d" mid="28" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh, well… There's something I want to ask you…… <BR>Do you… happen to know anything about the Cup of Healing?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-2-d" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-2-e" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9921_sp_01.ogg}<BR>Cup of Healing? …. I most certainly do. It was a relic of Aergal.<BR>Of course, it exists only in legend now.<BR>It seems you're engaged in nothing but a flight of fancy.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-2-e" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-2-f" mid="32" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But… </FONT><FONT color=#7e12d2>(Should I tell her?)</FONT><FONT color=#662500> I'm legitimately interested in the Cup of Healing! I heard there's a separate lid... I came thinking you might happen to know something... I heard it was somewhere in Aergal...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-2-f" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-2-g" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Princess Sylvania$<BR>Well... I don't know anything about a lid...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-2-g" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Princess's Maid$<BR>Beggin' your pardon Princess, but they must mean <FONT color=#a82424>the relic</FONT> in the-...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-a" mid="38" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9921_sp_02.ogg}<BR><FONT color=#7e12d2>(Quickly interrupts the maid.)</FONT><BR>Wow, Janet, I just became incredibly hungry all of a sudden. Do you have anything to eat?<BR>And you–what makes you think I would have anything useful to say about an old relic, what with the city being destroyed and all?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-a" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-b" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(I'm pretty sure she just deliberately cut off whatever the maid was going to say.)</FONT><FONT color=#662500> Well...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-b" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-c" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Princess Sylvania$<BR>Well, indeed. Is there anything else you wanted to ask me?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-c" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-d" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No, except… I suppose I am curious about the current status of Aergal…<BR>We heard that the kingdom had fallen…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-d" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-e" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Do you who was responsible?<BR></FONT><FONT color=#7e12d2>(Arc says there is a good chance it was Hiver… But you never know.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-e" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-f" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Princess Sylvania$<BR>The most likely culprit behind what happened to Aergal...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-f" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-g" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9921_sp_03.ogg}<BR>I'm not sure, either. I was outside the kingdom when it happened.<BR>I suppose that is why I remain alive.<BR>Based on what I heard from the refugees on the way here, Aergal Kingdom was invaded by Childs.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-g" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-h" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9921_sp_04.ogg}<BR>And it was completely out of the blue. There was no warning... The strange thing is that we had a protective shield in Aergal<BR>that was supposed to keep the Childs from approaching. It is curious that the shield that had always protected Aergal suddenly failed...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-h" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-i" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Princess Sylvania$<BR>Then again, given the circumstances in the Western Territory, there's no way a Child has already emerged as a commander……</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-i" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-j" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Would there be a connection between the commander and the fall of Aergal?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-j" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-k" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Princess Sylvania$<BR>Of course. The whole of the Western Territory is in chaos, after all.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-k" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-l" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Princess Sylvania$<BR>
+It wasn't peaceful when Jade was a commander, but now the entire region is a mess<BR>
+and Childs have flooded in from all over the place to fight for the empty seat of the commander. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-l" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-m" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$Princess Sylvania$<BR>The strange thing is that whoever killed the commander didn't claim the post in the first place.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-m" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-n" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Ugh... Then is this whole situation the result of us killing Jade?)</FONT><FONT color=#662500> </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-n" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-o" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$Princess Sylvania$<BR>The Childs took advantage of the power vacuum to plunder Aergal Kingdom.<BR>And many of my subjects died or were injured on their way here...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-o" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-p" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Princess Sylvania$<BR>I was fortunate that I was outside of the kingdom at the time, but my subjects weren't so lucky...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-p" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-3-q" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9921_sp_05.ogg}<BR>And now Rhadames is all we have.<BR>You said you're a representative of Norfe, right? Will you tell him what I just said?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-3-q" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-4" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Princess Sylvania$<BR>Aergal Kingdom is nothing but ruins. Our only hope now is Rhadames.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-4" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-4-" mid="74" select_type="5" />
+      <talk_question mid="73"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Of course! I'll be sure to pass on your message!</FONT><BR>
+<FONT color=#7e12d2>(Norfe already announced his intention to accept all the refugees anyway.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-a" mid="76" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>$Norfe$<BR>There you are, <FONT color=#387206>{user_nick}</FONT>. How was the princess? Did she seem to know something about the Cup of Healing?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-b" mid="78" select_type="2" />
+      <talk_question mid="77"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well… </FONT><FONT color=#7e12d2>(She cut off her maid from speaking for one thing.)</FONT><FONT color=#662500> She seemed to know something, but didn't admit as much.<BR>In fact, I'd say she was hiding something. She suddenly changed the subject, for one thing. Yeah, I'd say she knows more than she's letting on.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-b" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-c" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But she just wasn't willing to talk about it…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-d" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Norfe$<BR>Hmm… Is that so? Seems to know something…<BR>
+What kind of a person does the princess seem like to you, <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-d" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-e" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The way I see it, Princess Sylvania... seemed very concerned about the Aergal Kingdom refugees.</FONT><BR>
+<FONT color=#662500>She said Rhadames is their only hope, and that she's glad to have us.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-e" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-f" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>She also said Aergal Kingdom is nothing more than a pile of ruins left by the Childs…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-f" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-g" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9921_sp_01.ogg}<BR>Thank you for the information. I will have to speak with Princess Sylvania through the hologram.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-g" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-h" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9921_sp_02.ogg}<BR>Just promise me you won't intervene at any point, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-h" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-5" mid="92" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Huh? </FONT><FONT color=#7e12d2>(Does this mean Norfe wants to take care of it himself?)</FONT><FONT color=#662500> All right.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-5" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-5-" mid="94" select_type="5" />
+      <talk_question mid="93"><![CDATA[<html>$Norfe$<BR>Then, present the hologram to Princess Sylvania.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-5" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-5-a" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>$Princess Sylvania$<BR>What is it now? Have I not satisfied your curiosity?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-5-a" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-5-b" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>$Princess's Maid$<BR>Princess… <FONT color=#7e12d2>(Fidgeting.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-5-b" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-5-c" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Just by looking at the maid, it's obvious they are hiding something. Norfe said he would take care of it though.)<BR></FONT><FONT color=#662500>This time it's not about the Cup of Healing Lid. Norfe wants to see you.</FONT><BR>
+<FONT color=#662500>All you have to do is stand before the hologram.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3075_sylviana-5-c" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3075_sylviana-5-" mid="102" select_type="5" />
+      <talk_question mid="101"><![CDATA[<html>$Princess Sylvania$<BR>Norfe? Okay then.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-a" mid="104" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$Hologram Norfe$<BR>Greetings, Princess. I am Norfe, the acting leader of Rhadames.<BR>Let me apologize from the outset for having to appear in this form.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-a" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-b" mid="106" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>$Princess Sylvania$<BR>Well, I can hear you just fine. And it makes sense that the leader of the Anti-Goddess Faction would want to stay hidden.<BR>Though I didn't think that would be necessary with an ally like me.…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-b" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-c" mid="108" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Princess Sylvania$<BR>Still, I'm sure Rhadames has long been the main cog in the Anti-Goddess Faction for a reason. I understand.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-c" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-d" mid="110" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9921_sp_01.ogg}<BR>Thank you for your understanding. And... I'm sorry to say this,<BR>but I don't think I can accept any more refugees in Aergal.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-d" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-e" mid="112" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>$Princess Sylvania$<BR>What??</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-e" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-f" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Huh??)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-f" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-g" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>$Hologram Norfe$<BR>The more refugees there are, the more financially burdensome they will become. As a princess, this is something you surely understand.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-g" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-h" mid="118" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9921_sp_02.ogg}<BR> Currently, Rhadames has exceeded the number of refugees<BR>that can be accommodated and is facing a financial crisis.<BR>It is unreasonable to accept additional refugees in this situation.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-h" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-i" mid="120" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>$Hologram Norfe$<BR>Moreover, Aergal Kingdom was the victim of a Child surprise attack. We have no idea whether they simply wanted the land,<BR>
+how they knew Aergal's location, or if they suspected its connection with the Anti-Goddess Faction.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-i" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-j" mid="122" select_type="2" />
+      <talk_question mid="121"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9921_sp_03.ogg}<BR>It is too risky to accept refugees from Aergal while ignoring the to potential threat<BR>to Rhadames when the reason for the attack is unknown.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-j" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-k" mid="124" select_type="2" />
+      <talk_question mid="123"><![CDATA[<html>$Princess Sylvania$<BR>Where is this coming from?! I thought Rhadames was a place that welcomed refugees who were left with nowhere to go by the Childs?<BR>How is it that you suddenly can't accept us?<BR>
+Of course I am aware it will be financially burdensome, but…!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-k" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-l" mid="126" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9921_sp_06.ogg}<BR> Even so, how is it not an act of outright cruelty to suddenly refuse to accept refugees like this?<BR>They don't even have anything to wear, or food to eat tomorrow! Don't you feel sorry for these people who pinned their hopes on Rhadames?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-l" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-m" mid="128" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9921_sp_04.ogg}<BR>Money and supplies do not grow from sympathy. That too is something you should know well.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-m" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-n" mid="130" select_type="2" />
+      <talk_question mid="129"><![CDATA[<html>$Princess Sylvania$<BR>Then what if I help ease your financial burden?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-n" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-o" mid="132" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>$Hologram Norfe$<BR>How? I am well aware that you are not in an enviable position at the moment. With the fall of Aergal Kingdom<BR>
+you must be quite short on wealth and supplies. Are you not essentially one of the refugees at this point?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-o" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-p" mid="134" select_type="2" />
+      <talk_question mid="133"><![CDATA[<html>$Princess Sylvania$<BR>Well... Yes! But even though Aergal Kingdom has fallen, our technology handed down through the generations still exists.<BR>
+This is knowledge that is passed down through my people! We can teach some of that knowledge to Rhadames.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-p" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-6-q" mid="136" select_type="2" />
+      <talk_question mid="135"><![CDATA[<html>$Hologram Norfe$<BR>Like an investment, you mean? Hmm…<BR>
+When it comes to technology, Rhadames is not surpassed by Aergal Kingdom.<BR>And you know that introducing new technologies always requires money.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-6-q" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7" mid="138" select_type="2" />
+      <talk_question mid="137"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9921_sp_05.ogg}<BR>In addition, as I mentioned, there are a lot of concerns regarding those who targeted Aergal.<BR>The refugees of Aergal may pose a threat to Rhadames since we do not know what faction attacked your kingdom, or for what purpose.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-a" mid="140" select_type="2" />
+      <talk_question mid="139"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Norfe said not to intervene, but… he's going way too far!)</FONT><FONT color=#662500> I don't understand! </FONT><FONT color=#662500>This place </FONT><FONT color=#662500>was originally founded by refugees!</FONT><BR>
+<FONT color=#662500>How much different are we from the Childs </FONT><FONT color=#662500>if we turn a blind eye </FONT><FONT color=#662500>toward those people who </FONT><FONT color=#662500>have suffered</FONT><BR>
+<FONT color=#662500>by their hand?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-a" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-b" mid="142" select_type="2" />
+      <talk_question mid="141"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>After they said they came to Rhadames because it was their only hope?<BR>How could you say such a thing to those who have lost their homes and the people they love?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-b" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-c" mid="144" select_type="2" />
+      <talk_question mid="143"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>When this problem was raised earlier, you said Rhadames was founded from the very beginning</FONT><BR>
+<FONT color=#662500>by refugees who gathered after losing their homes to Childs!</FONT><BR>
+<FONT color=#662500>So I don't think there will be any </FONT><FONT color=#662500>problem with the refugees coming from Aergal!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-c" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-d" mid="146" select_type="2" />
+      <talk_question mid="145"><![CDATA[<html>$Princess Sylvania$<BR>Huh? I mean, yeah! That's right! You are a fine speaker–<FONT color=#387206>{user_nick}</FONT> was it?<BR>Leader of Rhadames or not, don't you think you are being too cruel, like <FONT color=#387206>{user_nick}</FONT> said?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-d" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-e" mid="148" select_type="2" />
+      <talk_question mid="147"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9921_sp_07.ogg}<BR>What have my people done to deserve such a rejection? We were attacked because we were weak,<BR>and we came here to survive! It's not a crime to be attacked by the Childs because we were weak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-e" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-f" mid="150" select_type="2" />
+      <talk_question mid="149"><![CDATA[<html>$Princess Sylvania$<BR>Of course, I fully understand Rhadames's position.<BR>Accepting us without knowing all the risks that entails is in itself a dangerous proposition.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-f" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-g" mid="152" select_type="2" />
+      <talk_question mid="151"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9921_sp_08.ogg}But all we need is a place of comfort, nothing else!<BR>If we can't count on that small amount of goodwill, what's the difference between Rhadames<BR>and the Childs who destroyed Aergal?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-g" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-h" mid="154" select_type="2" />
+      <talk_question mid="153"><![CDATA[<html>$Hologram Norfe$<BR>……….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-h" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-i" mid="156" select_type="2" />
+      <talk_question mid="155"><![CDATA[<html>$Hologram Norfe$<BR>All right. If you put it that way, <FONT color=#387206>{user_nick}</FONT>, Princess,<BR>
+I will give the idea of Rhadames accepting the Aergal refugees an open-minded review.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-i" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-j" mid="158" select_type="2" />
+      <talk_question mid="157"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9921_sp_06.ogg}<BR>However, even so, we cannot accept the risk without anything in return.<BR>Apart from technology, I hope you will find another way to pay<BR>for the risk of accepting the Aergal refugees, Princess.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-j" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-k" mid="160" select_type="2" />
+      <talk_question mid="159"><![CDATA[<html>$Princess Sylvania$<BR>What do you mean, apart from… technology? <FONT color=#7e12d2>(Pauses to consider.)</FONT><BR>
+Since we are in a bind financially, I will instead mobilize the manpower we have to help with your own economic activity.<BR>
+Aergal Kingdom may have collapsed, but it was the people who made it a commercial hub.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-k" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-l" mid="162" select_type="2" />
+      <talk_question mid="161"><![CDATA[<html>$Hologram Norfe$<BR>When it comes to commercial activity, it seems we are in a much better position than you are, Princess.<BR>We already have a unique trade agreement with the Independent State of Merca.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-l" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-m" mid="164" select_type="2" />
+      <talk_question mid="163"><![CDATA[<html>$Princess Sylvania$<BR>The Independent State of Merca... Th-then...….<BR>Are you saying there's something in return you want from Aergal Kingdom, or from me, in particular?<BR>
+<FONT color=#7e12d2>(Pauses to consider.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-m" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-n" mid="166" select_type="2" />
+      <talk_question mid="165"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9921_sp_09.ogg}<BR>I know! You guys have been looking for the Cup of Healing Lid, right?<BR>You asked me about it earlier, didn't you?<BR>Why don't I help you look into that relic? There can't be anyone who knows more about Aergal's artifacts than the people of Aergal.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-n" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-o" mid="168" select_type="2" />
+      <talk_question mid="167"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Oh, right, I forgot! Don't tell me... Was that what Norfe was after all along?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-o" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-p" mid="170" select_type="2" />
+      <talk_question mid="169"><![CDATA[<html>$Hologram Norfe$<BR>The Cup of Healing Lid, you say…? All right. Information on the Cup of Healing Lid and the technology of Aergal Kingdom.<BR>Those together would be enough incentive for Rhadames.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-p" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-q" mid="172" select_type="2" />
+      <talk_question mid="171"><![CDATA[<html>$Hologram Norfe$<BR>If you provide support in these two areas, Rhadames will accept the Aergal refugees<BR>
+and offer them protection.<BR>When it comes to technological considerations, you should speak with Inventor Narlin.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-q" image="" itemindex="" portrait_left="" portrait_right="Npc_RIght_sylviana.dds" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-7-r" mid="174" select_type="2" />
+      <talk_question mid="173"><![CDATA[<html>$Princess Sylvania$<BR><FONT color=#7e12d2>(With apparent relief.)</FONT> All right. When would be a good time to plan the details?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-7-r" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-8" mid="176" select_type="2" />
+      <talk_question mid="175"><![CDATA[<html>$Hologram Norfe$<BR>In this regard, I will also send someone to help coordinate with Narlin in the future.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-8" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-8-" mid="178" select_type="5" />
+      <talk_question mid="177"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Fortunately, the negotiations seem to have ended well. But why did Norfe say all that? I should go ask him.)</FONT><BR>
+<FONT color=#7e12d2><BR>※ Go speak with Norfe.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-a" mid="180" select_type="2" />
+      <talk_question mid="179"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hey Norfe… I have a question….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-b" mid="182" select_type="2" />
+      <talk_question mid="181"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You definitely told me that Rhadames had no intention of turning away the Aergal refugees, right?<BR>Then why did you say all that to the princess??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8-b" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-c" mid="184" select_type="2" />
+      <talk_question mid="183"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9921_sp_03.ogg}<BR>Though I traveled with you all to find the Cup of Healing, I am the leader of Rhadames first and foremost.<BR>For that reason, I must consider what benefits Rhadames above all. Besides… I had you with me, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-d" mid="186" select_type="2" />
+      <talk_question mid="185"><![CDATA[<html>$Norfe$<BR>I knew that no matter what I said about not intervening, you would step forward<BR>
+when you saw the Aergal Kingdom refugees and the princess being treated unfairly.<BR>
+After all, you are the kind of person who cannot but take the side of the less fortunate, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8-d" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-e" mid="188" select_type="2" />
+      <talk_question mid="187"><![CDATA[<html>$Norfe$<BR>I did what I did knowing that you would say something, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8-e" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-f" mid="190" select_type="2" />
+      <talk_question mid="189"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9921_sp_04.ogg}<BR>I needed to consider the security of Rhadames and, seeing how much Princess Sylvania seems to care about the people of Aergal,<BR>I also thought this would be the fastest way to get Princess Sylvania to talk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8-f" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-g" mid="192" select_type="2" />
+      <talk_question mid="191"><![CDATA[<html>$Norfe$<BR>However… Getting the princess to talk required using the Aergal refugees and manipulating you, <FONT color=#387206>{user_nick}</FONT>.<BR>Allow me to apologize for that.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8-g" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-h" mid="194" select_type="2" />
+      <talk_question mid="193"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9921_sp_05.ogg}<BR>I know that you have a good will, <FONT color=#387206>{user_nick}</FONT>. <BR>However, I had to make use that good will, and for that I am sorry.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8-h" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-i" mid="196" select_type="2" />
+      <talk_question mid="195"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh, not at all! I'm happy to know you have such a high opinion of me… I was just surprised to see you so apparently willing</FONT><BR>
+<FONT color=#662500>to coldly abandon the people of Aergal</FONT><FONT color=#662500>…… But it was all a deliberate negotiation tactic. I'm glad to hear that.</FONT><BR><FONT color=#7e12d2>(I should have known. I almost got Norfe completely wrong.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-8-i" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-8-!next" mid="198" select_type="4" />
+      <talk_question mid="197"><![CDATA[<html>$Quest Complete$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-8" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-8-" mid="224" select_type="5" />
+      <talk_question mid="223"><![CDATA[<html>$Princess Sylvania$<BR>
+……….</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9921</exe>
+         <exe type="talk" npc="n2067_nophee">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">9921</exe>
+         <exe type="recompense">99210,,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2067_nophee" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n2067_nophee" sub="b" />
+   <exelink qstep="1" npc="n2067_nophee" sub="c" />
+   <exelink qstep="1" npc="n2067_nophee" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n3075_sylviana" sub="b" />
+   <exelink qstep="2" npc="n3075_sylviana" sub="c" />
+   <exelink qstep="2" npc="n3075_sylviana" sub="d" />
+   <exelink qstep="2" npc="n3075_sylviana" sub="e" />
+   <exelink qstep="2" npc="n3075_sylviana" sub="f" />
+   <exelink qstep="2" npc="n3075_sylviana" sub="g" />
+   <exelink qstep="2" npc="n3075_sylviana" sub="3">0</exelink>
+   <exelink qstep="3" npc="n3075_sylviana" sub="b" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="c" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="d" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="e" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="f" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="g" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="h" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="i" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="j" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="k" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="l" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="m" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="n" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="o" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="p" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="q" />
+   <exelink qstep="3" npc="n3075_sylviana" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n2067_nophee" sub="b" />
+   <exelink qstep="4" npc="n2067_nophee" sub="c" />
+   <exelink qstep="4" npc="n2067_nophee" sub="d" />
+   <exelink qstep="4" npc="n2067_nophee" sub="e" />
+   <exelink qstep="4" npc="n2067_nophee" sub="f" />
+   <exelink qstep="4" npc="n2067_nophee" sub="g" />
+   <exelink qstep="4" npc="n2067_nophee" sub="h" />
+   <exelink qstep="4" npc="n2067_nophee" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n3075_sylviana" sub="b" />
+   <exelink qstep="5" npc="n3075_sylviana" sub="c">0,1</exelink>
+   <exelink qstep="5" npc="n3075_sylviana" sub="" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="b" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="c" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="d" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="e" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="f" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="g" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="h" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="i" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="j" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="k" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="l" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="m" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="n" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="o" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="p" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="q" />
+   <exelink qstep="6" npc="n2062_hologram_nophee" sub="7">0</exelink>
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="b" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="c" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="d" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="e" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="f" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="g" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="h" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="i" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="j" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="k" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="l" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="m" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="n" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="o" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="p" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="q" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="r" />
+   <exelink qstep="7" npc="n2062_hologram_nophee" sub="8">0,1</exelink>
+   <exelink qstep="8" npc="n2067_nophee" sub="b" />
+   <exelink qstep="8" npc="n2067_nophee" sub="c" />
+   <exelink qstep="8" npc="n2067_nophee" sub="d" />
+   <exelink qstep="8" npc="n2067_nophee" sub="e" />
+   <exelink qstep="8" npc="n2067_nophee" sub="f" />
+   <exelink qstep="8" npc="n2067_nophee" sub="g" />
+   <exelink qstep="8" npc="n2067_nophee" sub="h" />
+   <exelink qstep="8" npc="n2067_nophee" sub="i">1</exelink>
+   <exelink qstep="8" npc="n2067_nophee" sub="!next">0</exelink>
+   <journal_data recompense="99210" quest_title="비운의 공녀" chapterid="27" quest_level="95" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Nophee.dds</contents_image>
+         <destination_pos>175,n2067</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2067</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="199"><![CDATA[Unsurmountable Wall]]></title>
+         <contents mid="200"><![CDATA[<html>You asked some refugees about the Cup of Healing, but learned little of substance. Is this where the mission hits a snag? Before coming to any conclusions, tell Norfe what happened.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Norfe</FONT></html>]]></contents>
+         <destination mid="201"><![CDATA[Talk to Norfe in Rhadames]]></destination>
+         <todo_msg mid="202"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_sylviana.dds</contents_image>
+         <destination_pos>175,n3075</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3075</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="203"><![CDATA[Princess of Misfortune]]></title>
+         <contents mid="204"><![CDATA[<html>They say Princess Sylvania has arrived in Rhadames. Speak with her and find out if she knows anything about the Cup of Healing Lid.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Princess Sylvania</FONT></html>]]></contents>
+         <destination mid="205"><![CDATA[Talk to Princess Sylvania]]></destination>
+         <todo_msg mid="206"><![CDATA[Go speak with Princess Sylvania.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Nophee.dds</contents_image>
+         <destination_pos>175,n2067</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2067</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="207"><![CDATA[Operations Meeting]]></title>
+         <contents mid="208"><![CDATA[<html>Princess Sylvania seems to know something about the Cup of Healing Lid. But she also appears reluctant to talk about it… Speak with Norfe and discuss how to get her to talk.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Norfe</FONT></html>]]></contents>
+         <destination mid="209"><![CDATA[Talk to Norfe in Rhadames]]></destination>
+         <todo_msg mid="210"><![CDATA[Talk to Norfe.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image />
+         <destination_pos>175,n3075</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3075</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="211"><![CDATA[Conciliation]]></title>
+         <contents mid="212"><![CDATA[<html>Norfe asked you to bring Princess Sylvania to the front of the hologram. Talk to Princess Sylvania and bring her.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Princess Sylvania</FONT></html>]]></contents>
+         <destination mid="213"><![CDATA[Bring Princess Sylvania to the front of the hologram]]></destination>
+         <todo_msg mid="214"><![CDATA[Talk to Princess Sylvania.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image />
+         <destination_pos>175,n2062</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2062</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="215"><![CDATA[Things that Cannot Be Abandoned]]></title>
+         <contents mid="216"><![CDATA[<html>Princess Sylvania came with you to the front of the hologram. Norfe plans to speak with the princess. Is this finally the time to learn about the Cup of Healing Lid?<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Hologram Norfe</FONT></html>]]></contents>
+         <destination mid="217"><![CDATA[Listen to Princess Sylvania and Norfe's conversation.]]></destination>
+         <todo_msg mid="218"><![CDATA[Go to Hologram Norfe.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Nophee.dds</contents_image>
+         <destination_pos>175,n2067</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2067</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="219"><![CDATA[Misunderstanding]]></title>
+         <contents mid="220"><![CDATA[<html>Luckily, negotiations between Princess Sylvania and Norfe ended well. But why did Norfe say what he said to Princess Sylvania? Go to Norfe and ask him about it.<BR><BR><FONT color=#086171>Rhadames</FONT> -<FONT color=#a82424> Norfe</FONT></html>]]></contents>
+         <destination mid="221"><![CDATA[Talk to Norfe in Rhadames]]></destination>
+         <todo_msg mid="222"><![CDATA[Go to Norfe and ask him why he was acting so strangely.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest>9920</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

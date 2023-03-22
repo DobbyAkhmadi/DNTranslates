@@ -1,0 +1,66 @@
+   <talk>
+      <npcename>n2653_hongryun_arena</npcename>
+      <npcid>2653</npcid>
+      <startexe>1</startexe>
+      <comment>6: 낙화의 비무대 상점</comment>
+      <npckname mid="1"><![CDATA[Great Arena Manager Hoyeol]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="arena_shop" mid="148"><![CDATA[<html>[Raining Blossoms Exhibition Arena Shop]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="12"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="129"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Great Arena Manager Hoyal${action:Smile}<BR>You look like a million gold coins!<BR>Are you here to take part in the <FONT color=#a82424>Combat Tournament</FONT>?<BR>They call me Great Arena Manager Hoyal.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="001" mid="68"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Great Arena Manager Hoyal$<BR>I have mountains of work to do!<BR>But a good guy like me thinks of work as an opportunity, not an obligation.<BR>Har-har-har─!!!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="winner" mid="130"><![CDATA[<html>[Talk] Famous group with consecutive victories</html>]]></talk_answer>
+         <talk_answer link_index="qna_1" mid="131"><![CDATA[<html>[Talk] About the Great Arena management organization</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="132"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="72"><![CDATA[<html>$Great Arena Manager Hoyal$<BR>
+Looks to me like you're new here in Red Lotus Palace…<BR>
+If there's anything you want to know about the <FONT color=#a82424>Combat Tournament</FONT>,<BR>
+just ask!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qna_1" image="" itemindex="">
+         <talk_answer link_index="qna_2" mid="133"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="82"><![CDATA[<html>$Great Arena Manager Hoyal${action:Break}<BR>
+What kind of work do we usually do here?<BR>
+Well, the most pressing matter is always repairing the tower after tournament season.<BR>
+That's where the most intense, violent <FONT color=#a82424>battles</FONT> take place!<BR>
+Around here, when something gets destroyed it's not a big deal.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qna_2" image="QN_hongryun_merchant.dds" itemindex="">
+         <talk_answer link_index="talk" mid="134"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="90"><![CDATA[<html>$Great Arena Manager Hoyal$<BR>
+Ah, speak to me if you want to register for the Combat Tournament.<BR>
+Once the registration forms pile up<BR>
+it's my job to deliver them to <FONT color=#086171>Head Merchant Jamihwa</FONT>,<BR>
+who writes the match programs.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="winner" image="QN_hongryun_boss.dds" itemindex="">
+         <talk_answer link_index="talk" mid="135"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="96"><![CDATA[<html>$Great Arena Manager Hoyal$<BR>Huh…? You don't know about the <FONT color=#086171>Blue Clan</FONT>?<BR>Right now the list isn't really a list!<BR>
+After all there's only one name on it!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="d-quest" image="" itemindex="">
+         <talk_answer link_index="q_3731" mid="146"><![CDATA[<html>Are there any weapons in the arena being discarded?</html>]]></talk_answer>
+         <talk_question mid="145"><![CDATA[<html>$Great Arena Manager Hoyal$<BR>Welcome! What brings you here?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="0" false="2">1</exe>
+         <exe type="conexe" true="3,5" false="0">0</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 3731, 1);</exe>
+         <exe type="enterquest">sqc24_3731_scrap_metal_6</exe>
+         <exe type="talk">d-quest</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,350001,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">3721</chk>
+         <chk type="hascomq">3731</chk>
+      </conditions>
+      <exelink idx="arena_shop">6</exelink>
+      <exelink idx="q_3731">4</exelink>
+   </talk>

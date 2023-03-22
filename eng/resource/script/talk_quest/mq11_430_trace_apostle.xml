@@ -1,0 +1,481 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_430_trace_apostle</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>430</qid>
+      <designer>김인정</designer>
+      <qlevel>38</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>431</nextqid>
+      <nextqname>mq11_431_next_town</nextqname>
+      <nextqnpc>n042_general_duglars</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Whereabouts of the Apostle]]></qkname>
+      <qnpc>
+         <npcid>209</npcid>
+         <npcename>n209_elite_soldier</npcename>
+         <npckname>정예병사 클림드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>219</npcid>
+         <npcename>n219_velskud</npcename>
+         <npckname>벨스커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>38</npcid>
+         <npcename>n038_royal_magician_kalaen</npcename>
+         <npckname>궁정 소서리스 칼라엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>41</npcid>
+         <npcename>n041_duke_stwart</npcename>
+         <npckname>공작 스튜어트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n219_velskud-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="98"><![CDATA[<html>$Velskud$<BR><FONT color=#a82424>Geraint</FONT>.<BR>Looks like he's dead. His Nest has collapsed as well.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="99"><![CDATA[<html>$Court Sorceress Kayleen${action:Talk}<BR>Hmph. I knew it! That raccoon-faced man is nothing but trouble! Anyone with a sly face like the <FONT color=#a82424>Bishop</FONT> cannot be trusted at all!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="100"><![CDATA[<html>$King Cassius$<BR>What in the world is happening? Oh… grandfather, the great Knight King Cassius, what should I do?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="101"><![CDATA[<html>$Duke Stuart$<BR>I can't believe this happened. So the Prophet was a weapon that couldn't be used...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="102"><![CDATA[<html>$General Douglas$<BR>I need to retrieve some critical reports now. We'll talk later. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-accepting-acceptted" mid="106" select_type="3" />
+      <talk_question mid="103"><![CDATA[<html>$Elite Soldier Calrim$<BR>Emergency!<BR><FONT color=#387206>{user_nick}</FONT>, I'm sorry but I have tons of things to report.<BR>
+<FONT color=#7e12d2>(Calrim flusters)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-" mid="108" select_type="5" />
+      <talk_question mid="5"><![CDATA[<html>$King Cassius$<BR>How could this happen... What happened to the Prophet...? (Mumbles to himself)<BR>Oh grandfather, the great Knight King Cassius... What would you do if you were in my shoes?<BR><FONT color=#7e12d2>(Go to Royal Castle Secret Basement area to check on Rose)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-1" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-1-" mid="109" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Duke Stuart$<BR>I can't believe this happened. So the Prophet was a weapon that couldn't be used....<BR><FONT color=#7e12d2>(Go to Royal Castle Secret Basement area and check on Rose)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-1" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-1-" mid="110" select_type="5" />
+      <talk_question mid="8"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Hmph. I knew it! That raccoon-faced man is nothing but trouble! Anyone with a sly face like the <FONT color=#a82424>Bishop</FONT> cannot be trusted at all! I told you!<BR><FONT color=#7e12d2>(Go to Royal Castle Secret Basement area and check on Rose)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="111" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$General Douglas$<BR>I'm getting some critical reports now. We'll talk later.<BR><FONT color=#7e12d2>(Go to Royal Castle Secret Basement area and check on Rose)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-1" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-1-" mid="112" select_type="5" />
+      <talk_question mid="10"><![CDATA[<html>$Elite Soldier Calrim$<BR>Please go and do what you need to do.<BR>The Royal Castle is in a chaos due to a bad news.<BR><FONT color=#7e12d2>(Go to Royal Castle Secret Basement area and check on Rose)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n219_velskud-1" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n219_velskud-1-a" mid="113" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Velskud$<BR>I came here to slay <FONT color=#a82424>Apostle Ignacio</FONT> but he was already gone.<BR>Together with the descendant of the Ancients.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n219_velskud-1-a" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n219_velskud-1-b" mid="115" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apostle…? Come to think of it, Rose is…!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n219_velskud-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n219_velskud-1-c" mid="116" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Velskud$<BR>Thanks to you everything is in a mess.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n219_velskud-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n219_velskud-1-d" mid="118" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What does that mean?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n219_velskud-1-d" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n219_velskud-1-e" mid="119" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Velskud$<BR>I'm not going to teach you everything like the fool who used to be here.<BR>Why don't you work hard to cure your own idiocy?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n219_velskud-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n219_velskud-1-f" mid="121" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What is an Apostle?! How about Rose? Where did the Bishop go?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n219_velskud-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n219_velskud-1-" mid="122" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$Velskud$<BR>I have no business with you.<BR>You're worthless of even being killed by me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n219_velskud-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n219_velskud-2-" mid="123" select_type="5" />
+      <talk_question mid="18"><![CDATA[<html>$Velskud$<BR>I have no business with you.<BR>You're worthless of even being killed by me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-2" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-2-a" mid="124" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Elite Soldier Calrim${action:Talk}<BR><FONT color=#382000>{user_nick}</FONT>!! Is it true that the <FONT color=#a82424>Prophet</FONT> is gone?<BR>The door to the basement is now open and the guards have searched everywhere but they couldn't find the Prophet.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-2-a" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-2-b" mid="125" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Elite Soldier Calrim$<BR>And <FONT color=#a82424>Bishop Ignacio</FONT> has disappeared too! The whole castle is under emergency.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-2-b" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-2-c" mid="127" select_type="2" />
+      <talk_question mid="126"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Apostle Ignacio… What is an "Apostle" anyway…?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-2-c" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-2-" mid="128" select_type="5" />
+      <talk_question mid="23"><![CDATA[<html>$Elite Royal Guard$<BR>Things are in a mess right now.<BR><FONT color=#a82424>General Douglas</FONT> is passing down instructions so see him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-3" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-3-" mid="129" select_type="5" />
+      <talk_question mid="24"><![CDATA[<html>$Elite Royal Guard${action:Talk}<BR><FONT color=#a82424>Bishop Ignacio</FONT> and the Prophet are both nowhere to be found.<BR><FONT color=#a82424>General Douglas</FONT> is passing down instructions now so go see him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-3" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-3-a" mid="130" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$General Douglas${action:Talk}<BR>There you are! You were only away for a short while but all hell has broken loose.<BR>The Prophet has disappeared!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-3-a" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-3-b" mid="132" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What happened?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-3-b" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-3-c" mid="133" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$General Douglas$<BR>Believe it or not, <FONT color=#a82424>Bishop Ignacio</FONT> and the <FONT color=#a82424>Prophet</FONT> are both gone. A scout has tracked and reported their location... and it seems they are no longer in Saint Haven.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-3-c" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-3-d" mid="135" select_type="2" />
+      <talk_question mid="134"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The Bishop... What is going on?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-3-d" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-3-e" mid="136" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$General Douglas$<BR>Don't you get it? We have all been played by <FONT color=#a82424>Ignacio</FONT>! He must have planned to take the Prophet away right from the beginning!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-3-e" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-3-f" mid="138" select_type="2" />
+      <talk_question mid="137"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No way...!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-3-f" image="QN_Npc_Royal_Magician_Kalaen.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-3-" mid="139" select_type="5" />
+      <talk_question mid="32"><![CDATA[<html>$General Douglas$<BR>Get more information from <FONT color=#a82424>Court Sorceress Kayleen</FONT>.<BR>I am going to send more soldiers after the bishop.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-4" image="QN_Npc_Royal_Magician_Kalaen.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-4-" mid="140" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$General Douglas${action:Talk}<BR>Get more information from <FONT color=#a82424>Court Sorceress Kayleen</FONT>.<BR>I am going to send more soldiers after the bishop.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-4" image="QN_Npc_Duke_Stwart.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-4-a" mid="141" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$King Cassius$<BR>The Bishop.... He betrayed us and took the Prophet. I can't believe it... <FONT color=#a82424>Uncle Stuart</FONT> says I can't trust anyone but family... I think he's right... *Sob*.<BR>
+<FONT color=#7e12d2>(Cassius anxiously looks around him)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-4-a" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-4-" mid="142" select_type="5" />
+      <talk_question mid="37"><![CDATA[<html>$King Cassius$<BR>Are you loyal to the kingdom? I'm not sure if I can trust you anymore...<BR>What about <FONT color=#a82424>General Douglas</FONT>? I hope he's loyal to the kingdom too...<FONT color=#7e12d2>(Cassius is fidgetting nervously.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-a" mid="143" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Duke Stuart${action:Stand2}<BR>Our young <FONT color=#a82424>King Cassius</FONT> is confused and disappointed right now.<BR>This is not the time to announce the news about the Prophet and the Gold Dragon.<BR>
+<FONT color=#7e12d2>(The Duke sighs)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4-a" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-b" mid="144" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Duke Stuart$<BR>The <FONT color=#a82424>Prophet</FONT> and the <FONT color=#a82424>Gold Dragon</FONT> are gone, but we shall keep this a secret.<BR>What's important is that the Black Dragon has been defeated, nothing else really matters. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-4-b" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-4-" mid="145" select_type="5" />
+      <talk_question mid="42"><![CDATA[<html>$Duke Stuart$<BR>So let's keep quiet about <FONT color=#a82424>Bishop Ignacio</FONT> too.<BR>I hope you understand what I mean...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-4" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-4-a" mid="146" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Court Sorceress Kayleen${action:Talk}<BR>Hmph. I knew it! That raccoon-faced man is nothing but trouble! Anyone with a sly face like the <FONT color=#a82424>Bishop</FONT> cannot be trusted at all! I told you!<BR>And you!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-4-a" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-4-b" mid="147" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Court Sorceress Kayleen$<BR>You're the one who created this mess! You naively helped the sly old fox in every way and now he has kidnapped the <FONT color=#a82424>Prophet</FONT>!<BR>I knew this would happen!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-4-b" image="QW_44.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-4-c" mid="148" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Court Sorceress Kayleen$<BR>I overheard the General saying that the bishop was spotted at the <FONT color=#a82424>Nameless Tyrant Tomb</FONT>.<BR>Don't you think you should be heading there, if you feel even a bit responsible for this?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-4-c" image="QW_44.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-4-d" mid="150" select_type="2" />
+      <talk_question mid="149"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I will go and check.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-4-" mid="151" select_type="5" />
+      <talk_question mid="50"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Don't be mistaken that the sorceresses will help you out!<BR>We never step in unless it's something certain. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-5" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-5-a" mid="152" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Court Sorceress Kayleen$<BR>We have various reports in different areas. Looks like YOU have to search them out one by one. After all, it's all your fault that the <FONT color=#a82424>raccoon</FONT> has kidnapped the <FONT color=#a82424>Prophet</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-5-a" image="QW_44.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-5-" mid="153" select_type="5" />
+      <talk_question mid="55"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Go to the <FONT color=#a82424>Nameless Tyrant Tomb</FONT> now! I hope you're not expecting my help, because you will be in for a huge disappointment. Hmph.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-5" image="QW_44.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-5-" mid="154" select_type="5" />
+      <talk_question mid="56"><![CDATA[<html>$General Douglas$<BR>I've been sending men to a few places but it's harder than expected.<BR>I asked for Court Sorceress Kayleen's help to check out the <FONT color=#a82424>Nameless Tyrant Tomb</FONT> area. Are you going there on her behalf?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-6" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-6-a" mid="155" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Court Sorceress Kayleen${action:Talk}<BR>I knew it. You lost the <FONT color=#a82424>sly bishop</FONT> again. Hmph! I knew this would happen!<BR>I knew the bishop had other motives and I also know that you're a dimwit!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-6-a" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-6-b" mid="157" select_type="2" />
+      <talk_question mid="156"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…If you knew it in advance, you could have told me...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-6-c" mid="158" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Court Sorceress Kayleen$<BR>I'm not your teacher. I'm not obliged to teach you anything at all.<BR>Don't just stand there. Think of how you're gonna clear up this mess you're responsible for! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-6-d" mid="160" select_type="2" />
+      <talk_question mid="159"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Argh....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-6-d" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-6-" mid="161" select_type="5" />
+      <talk_question mid="62"><![CDATA[<html>$Court Sorceress Kayleen$<BR>There goes my chance to boast in front of <FONT color=#a82424>General Douglas</FONT>. Argh.. This is annoying indeed.<BR><FONT color=#7e12d2>(Kayleen mumbles and grumbles while looking in the General's direction.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-a" mid="162" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$General Douglas${action:Talk}<BR>Hmm...nothing there too?<BR>The bishop... I mean that cunning Ignacio fooled everyone. Don't blame yourself.<BR><FONT color=#7e12d2>(The General pats your shoulder to encourage you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-b" mid="163" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$General Douglas$<BR>Though things turned out like this, I know how loyal you were to the kingdom.<BR>But to think that your loyalty brought such consequences… I'm just sorry for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-c" mid="164" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$General Douglas$<BR>I'm not sure if its your poor health, or the tough battles so far... but you're looking rather pale...<BR><FONT color=#7e12d2>(The General peers at you with concern.)</FONT><BR>Are you feeling alright?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-d" mid="166" select_type="2" />
+      <talk_question mid="165"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Could it be because of Serpentra's blood…?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6-d" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-e" mid="167" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$General Douglas$<BR>Could you be worn out from the fight with the Black Dragon?<BR>To be safe, maybe you should visit <FONT color=#a82424>Master Archer Ithilien</FONT>, and let her have a look at you. She might be able to help.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6-e" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-f" mid="169" select_type="2" />
+      <talk_question mid="168"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-!next" mid="170" select_type="4" />
+      <talk_question mid="71"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">430</exe>
+         <exe type="talk" npc="n209_elite_soldier">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="3,4,5">1159</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">201159</exe>
+         <exe type="custom">api_quest_IncCounting(userObjID, 2, 1159);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">4301,4301,4302,4303,4304,4304,4306,,</exe>
+         <exe type="complete" true="">430</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n209_elite_soldier" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n219_velskud" sub="b" />
+   <exelink qstep="1" npc="n219_velskud" sub="c" />
+   <exelink qstep="1" npc="n219_velskud" sub="d" />
+   <exelink qstep="1" npc="n219_velskud" sub="e" />
+   <exelink qstep="1" npc="n219_velskud" sub="f">0,1</exelink>
+   <exelink qstep="1" npc="n219_velskud" sub="" />
+   <exelink qstep="2" npc="n209_elite_soldier" sub="b" />
+   <exelink qstep="2" npc="n209_elite_soldier" sub="c">0,1</exelink>
+   <exelink qstep="2" npc="n209_elite_soldier" sub="" />
+   <exelink qstep="3" npc="n042_general_duglars" sub="b" />
+   <exelink qstep="3" npc="n042_general_duglars" sub="c" />
+   <exelink qstep="3" npc="n042_general_duglars" sub="d" />
+   <exelink qstep="3" npc="n042_general_duglars" sub="e" />
+   <exelink qstep="3" npc="n042_general_duglars" sub="f">0,1</exelink>
+   <exelink qstep="3" npc="n042_general_duglars" sub="" />
+   <exelink qstep="4" npc="n040_king_casius" sub="" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="b" />
+   <exelink qstep="4" npc="n041_duke_stwart" sub="" />
+   <exelink qstep="4" npc="n038_royal_magician_kalaen" sub="b" />
+   <exelink qstep="4" npc="n038_royal_magician_kalaen" sub="c" />
+   <exelink qstep="4" npc="n038_royal_magician_kalaen" sub="d">0,2,6,1</exelink>
+   <exelink qstep="4" npc="n038_royal_magician_kalaen" sub="" />
+   <exelink qstep="5" npc="n038_royal_magician_kalaen" sub="" />
+   <exelink qstep="6" npc="n038_royal_magician_kalaen" sub="b" />
+   <exelink qstep="6" npc="n038_royal_magician_kalaen" sub="c" />
+   <exelink qstep="6" npc="n038_royal_magician_kalaen" sub="d" />
+   <exelink qstep="6" npc="n038_royal_magician_kalaen" sub="" />
+   <exelink qstep="6" npc="n042_general_duglars" sub="b" />
+   <exelink qstep="6" npc="n042_general_duglars" sub="c" />
+   <exelink qstep="6" npc="n042_general_duglars" sub="d" />
+   <exelink qstep="6" npc="n042_general_duglars" sub="e" />
+   <exelink qstep="6" npc="n042_general_duglars" sub="f">0</exelink>
+   <exelink qstep="6" npc="n042_general_duglars" sub="!next">1</exelink>
+   <journal_data recompense="1:4301,2:4302,3:4303,4:4304,5:4304,6:4306" quest_title="사도의 행방" chapterid="5" quest_level="38" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Velskud.dds</contents_image>
+         <destination_pos>13014,n219</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>219</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="74"><![CDATA[Unexpected Encounter]]></title>
+         <contents mid="75"><![CDATA[<html><FONT color=#a82424>Velskud </FONT> was at the basement of Royal Castle and the Prophet was already gone. Talk to Velskud.<BR> <BR><FONT color=#086171>Saint Haven Royal Castle (Underground)</FONT> <FONT color=#a82424>→ Velskud</FONT></html>]]></contents>
+         <destination mid="76"><![CDATA[Talk to Velskud]]></destination>
+         <todo_msg mid="77"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>11,n209</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>209</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Royal Castle's Mayhem]]></title>
+         <contents mid="79"><![CDATA[<html>You couldn't really understand what Velskud was trying to say. Go to Royal Castle and talk to other people.<BR>
+ <BR>
+<FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ Elite Soldier Calrim</FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[Talk to other people at the Royal Castle]]></destination>
+         <todo_msg mid="81"><![CDATA[Ask around about the recent incident.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Genaral_Duglas.dds</contents_image>
+         <destination_pos>11,n42</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>42</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="82"><![CDATA[Bishop Disappearance]]></title>
+         <contents mid="83"><![CDATA[<html>According to what Calrim said, it seems like the Bishop has disappeared with the Prophet. Get more information from <FONT color=#a82424>General Douglas</FONT>.<BR>
+ <BR>
+<FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ General Douglas</FONT></html>]]></contents>
+         <destination mid="84"><![CDATA[Talk to General Douglas]]></destination>
+         <todo_msg mid="85"><![CDATA[Find out from General Douglas about what had happened.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Royal_Magician_Kalaen.dds</contents_image>
+         <destination_pos>11,n38</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>38</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="86"><![CDATA[The Situation]]></title>
+         <contents mid="87"><![CDATA[<html>It's hard to believe, but <FONT color=#a82424>Bishop Ignacio</FONT> has kidnapped Rose. Talk to <FONT color=#a82424>Court Sorceress Kayleen</FONT> for more details.<BR>
+ <BR>
+<FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ Court Sorceress Kayleen</FONT></html>]]></contents>
+         <destination mid="88"><![CDATA[Talk to Court Sorceress Kayleen]]></destination>
+         <todo_msg mid="89"><![CDATA[Please talk to Court Sorceress Kayleen.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_44.dds</contents_image>
+         <destination_pos>444,0,0</destination_pos>
+         <destination_mode>custom:441@1,442@1,443@1,444@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="90"><![CDATA[Tracking Down]]></title>
+         <contents mid="91"><![CDATA[<html>Track the bishop down at <FONT color=#a82424>Nameless Tyrant Tomb.</FONT><BR><BR><FONT color=#086171>Foothills of Black Mountain (Dark Mine Access)</FONT> <FONT color=#a82424>→ Nameless Tyrant Tomb</FONT></html>]]></contents>
+         <destination mid="92"><![CDATA[Search Nameless Tyrant Tomb]]></destination>
+         <todo_msg mid="93"><![CDATA[Search Nameless Tyrant Tomb to find Bishop Ignacio.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Genaral_Duglas.dds</contents_image>
+         <destination_pos>11,n42</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>42</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="94"><![CDATA[Tracking Failed]]></title>
+         <contents mid="95"><![CDATA[<html>You could not find Bishop Ignacio and Rose. Report this to Court Sorceress Kayleen and <FONT color=#a82424>General Douglas</FONT>.<BR> <BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ General Douglas</FONT></html>]]></contents>
+         <destination mid="96"><![CDATA[Talk to General Douglas]]></destination>
+         <todo_msg mid="97"><![CDATA[The Bishop could not be found. Report to General Douglas.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>429</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,147 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_4051_pity_pals</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4051</qid>
+      <designer>김인정</designer>
+      <qlevel>52</qlevel>
+      <qdesc>기이한 책의 책장	300538
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Poor Friends]]></qkname>
+      <qnpc>
+         <npcid>703</npcid>
+         <npcename>n703_book_doctor</npcename>
+         <npckname>수다쟁이 책 닥터</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n703_book_doctor-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n703_book_doctor-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Chatterbox Book Doctor$<BR>I think I told you this before but I'm trying to gather friends who can become great books like me.<BR>It may be hard for now but someday they might become alive like me!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n703_book_doctor-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n703_book_doctor-accepting-b" mid="8" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Chatterbox Book Doctor$<BR>My ideas are great but I can't move.<BR>Why don't you help me rescue my friends instead?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n703_book_doctor-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n703_book_doctor-accepting-acceppted" mid="10" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Poor Friends$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n703_book_doctor-1" image="QW_59.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="85"><![CDATA[<html>$Chatterbox Book Doctor$<BR>My friends are stored in <FONT color=#a82424>Mutant's Habitat</FONT>.<BR>Please save my friends from the evil monsters.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n703_book_doctor-2" image="QS_Default.dds" itemindex="300538" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n703_book_doctor-2-a" mid="89" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="87"><![CDATA[<html>$Chatterbox Book Doctor$<BR>You're back! Let me see!<BR>
+Show me if my friends are okay.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n703_book_doctor-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n703_book_doctor-2-b" mid="91" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Chatterbox Book Doctor$<BR>Aww~ it's a relief! Their printing is still clear.<BR>A book's contents are more important than its cover. Ehem.<BR>Of course, both my cover and contents are awesome!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n703_book_doctor-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n703_book_doctor-2-c" mid="93" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n703_book_doctor-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="94"><![CDATA[<html>$Chatterbox Book Doctor$<BR>You should be as good as Karacule to make a book move….<BR>Hmm. But we have Cidel. And we have time too.<BR>
+When time passes and he becomes as great as Karacule, he will make my friends come alive.<BR>
+<FONT color=#7e12d2>(Doctor opens the pages and looks at them carefully)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">4051</exe>
+         <exe type="talk" npc="n703_book_doctor">1</exe>
+         <exe type="recompense_view">40510,,,,,,,,,</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">600061</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">700061</exe>
+         <exe type="addquestitem" num="1">300538</exe>
+         <exe type="huntitem" num="1" exe="" onexe="7,8,9">300538</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">40510,,,,,,,,,</exe>
+         <exe type="delquestitem" num="-1">300538</exe>
+         <exe type="complete" true="">4051</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n703_book_doctor" sub="b">2</exelink>
+   <exelink qstep="accepting" npc="n703_book_doctor" sub="acceppted">0,1,3,4,6</exelink>
+   <exelink qstep="2" npc="n703_book_doctor" sub="b">0</exelink>
+   <exelink qstep="2" npc="n703_book_doctor" sub="c">1,2</exelink>
+   <journal_data recompense="0:40510" quest_title="가엾은 동지들" chapterid="" quest_level="52" quest_mark_type="10" use_item_list="300538">
+      <journal index="1">
+         <contents_image>QW_59.dds</contents_image>
+         <destination_pos>591,0,0</destination_pos>
+         <destination_mode>custom:591@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="26"><![CDATA[Doctor's request]]></title>
+         <contents mid="27"><![CDATA[<html>Go to Mutant's Habitat and get a page from a weird book. Looks like you can obtain it from the monsters.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> <FONT color=#a82424>→ Mutant's Habitat</FONT></html>]]></contents>
+         <destination mid="28"><![CDATA[Mutant's Habitat]]></destination>
+         <todo_msg mid="29"><![CDATA[Get a page from a weird book from Mutant's Habitat]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_BookDoc.dds</contents_image>
+         <destination_pos>14,n703</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>703</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="70"><![CDATA[Report to Doctor]]></title>
+         <contents mid="71"><![CDATA[<html>Go back to Chatterbox Book Doctor.<BR><BR><FONT color=#086171>Riverwort Wharf (Karacule's Hut)</FONT> <FONT color=#a82424>→ Chatterbox Book Doctor</FONT></html>]]></contents>
+         <destination mid="72"><![CDATA[Talk to Chatterbox Book Doctor at Karacule's Hut]]></destination>
+         <todo_msg mid="73"><![CDATA[Report to Chatterbox Book Doctor]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>52:-1</user_level>
+      <user_class />
+      <prev_quest>4050</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

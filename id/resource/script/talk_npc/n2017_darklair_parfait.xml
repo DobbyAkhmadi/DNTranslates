@@ -1,0 +1,54 @@
+   <talk>
+      <npcename>n2017_darklair_parfait</npcename>
+      <npcid>2017</npcid>
+      <startexe>1</startexe>
+      <comment>3 : 실버 직업 구분을 위한 공용 퀘스트
+4,6,7,8,9,10 : 아처 15레벨 45레벨 전직 퀘스트 완료 
+(239,341,764,765,766,767 )
+실버: 80 실버헌터 :81</comment>
+      <npckname mid="1"><![CDATA[Dark Priestess Parfait]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><BR><FONT color=#7e12d2>(Di sana berdiri seorang wanita dengan tatapan sedih)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="qu_02" mid="22"><![CDATA[<html><FONT size=2 face=Arial>Kenyataan?</FONT></html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Dark Priestess Parfait$<BR>Kamu ditakdirkan untuk menghadapi mimpi buruk ini.<BR>Atau inikah kenyataan dunia sebenarnya. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_02" image="" itemindex="">
+         <talk_answer link_index="qu_03" mid="23"><![CDATA[<html>Mimpi buruk?</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Dark Priestess Parfait$<BR>Kebenaran terkadang menyakitkan. <BR>Tetapi aku harus mengetahuinya. <BR>Walaupun aku akan dihantui mimpi buruk,seperti yang sedang terjadi disini.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_03" image="" itemindex="">
+         <talk_answer link_index="qu_04" mid="24"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Dark Priestess Parfait$<BR>Tetapi,ada saja orang yang memilih mimpi buruk karena tergoda oleh kekuatan dahsyat yang berada dibaliknya. Dia percaya dia dapat mengendalikannya, tetapi nyatanya dia sendiri yang dikuasai oleh mimpi buruk itu. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_04" image="" itemindex="">
+         <talk_answer link_index="qu_05" mid="25"><![CDATA[<html>Mengapa kamu berada di sini?</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Dark Priestess Parfait$<BR>Mimpi buruk ini telah menghantui dunia nyata dan membuat retaknya dimensi. Lagipula kalau tidak begini, kamu dan aku tidak akan pernah bertemu.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_05" image="" itemindex="">
+         <talk_answer link_index="qu_06" mid="26"><![CDATA[<html>Aku tidak mengerti.</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Dark Priestess Parfait$<BR>Tidak ada jawaban yang pasti. Kebenaran dan kenyataan hanyalah ilusi, karena hanya hatilah yang mampu membedakan semuanya. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_06" image="" itemindex="">
+         <talk_question mid="16"><![CDATA[<html>$Dark Priestess Parfait$<BR>
+Konon, hanya seorang yang memiliki hati yang jujur dan bersih yang dapat menjadi penyelamat. </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,5" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 997, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 239, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 81 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 341, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 764, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 765, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 766, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 767, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 80</chk>
+      </conditions>
+      <exelink idx="qu_06">3,4,6,7,8,9,10</exelink>
+   </talk>

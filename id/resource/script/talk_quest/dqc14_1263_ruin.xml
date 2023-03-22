@@ -1,0 +1,145 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dqc14_1263_ruin</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1263</qid>
+      <designer>정진호</designer>
+      <qlevel>70</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Jelajahi Mist Ruins]]></qkname>
+      <qnpc>
+         <npcid>359</npcid>
+         <npcename>n359_trader_merlin</npcename>
+         <npckname>대장장이 멀린</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-accepting" image="QW_90.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Blacksmith Merlin$<BR>Kenapa banyak orang membicarakan tentang <FONT color=#a82424>Mist Ruins</FONT>? Maukah kamu mencaritahu dimana tempat itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>Ambil Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Jelajahi Mist Ruins$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-1" image="QW_90.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-1-back_npc" mid="25" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Blacksmith Merlin$<BR>Ingat, <FONT color=#a94407>Mist Ruins</FONT>. Kamu boleh menyelesaikannya dengan tingkat kesulitan apapun, tidak perlu khawatir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-2-a" mid="12" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Blacksmith Merlin$<BR>Ah kamu sudah kembali! Kenapa? Susah menjelaskan tentang tempat itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-2-b" mid="14" select_type="0"><![CDATA[<html><FONT color=#086171>(Ambil Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n359_trader_merlin-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n359_trader_merlin-2-back_end" mid="27" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Blacksmith Merlin$<BR>Bagus sekali. Mungkin besok aku butuh bantuan kamu lagi.<BR><BR><FONT color=#7e12d2>*Daily Quests hanya dapat diselesaikan satu kali per hari.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="stageConstructionLevel" op="]=">0</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">1263</exe>
+         <exe type="recompense_view">12630,,,,,,,,,</exe>
+         <exe type="talk" npc="n359_trader_merlin">1</exe>
+         <exe type="checkStageClearRank" rand="6" num="1001" onexe="4" true="[=" xsi:nil="true" />
+         <exe type="conexe" true="5,6,7" false="">0</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n359_trader_merlin.xml");</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">12630,,,,,,,,,</exe>
+         <exe type="complete" true="">1263</exe>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n359_trader_merlin.xml");</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n359_trader_merlin" sub="a">1</exelink>
+   <exelink qstep="accepting" npc="n359_trader_merlin" sub="acceptted">0,2,3</exelink>
+   <exelink qstep="1" npc="n359_trader_merlin" sub="back_npc">0</exelink>
+   <exelink qstep="2" npc="n359_trader_merlin" sub="a">0</exelink>
+   <exelink qstep="2" npc="n359_trader_merlin" sub="b">1</exelink>
+   <exelink qstep="2" npc="n359_trader_merlin" sub="back_end">2</exelink>
+   <journal_data recompense="12630" quest_title="안개의 유적 알아보기" chapterid="" quest_level="70" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_90.dds</contents_image>
+         <destination_pos>1001,0,0</destination_pos>
+         <destination_mode>custom:1001@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>24</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="15"><![CDATA[Jelajahi Mist Ruins]]></title>
+         <contents mid="16"><![CDATA[<html>Selesaikan Mist Ruins dengan tingkat kesulitan apapun.<BR><BR><FONT color=#7e12d2>*Kamu dapat menyelesaikan Daily Quest 1 kali per hari.</FONT><BR><BR><FONT color=#086171>Anu Arendel (Fire Mountain Entrance) </FONT><FONT color=#a82424>- Mist Ruins</FONT></html>]]></contents>
+         <destination mid="17"><![CDATA[Selesaikan Mist Ruins]]></destination>
+         <todo_msg mid="18"><![CDATA[Selesaikan Mist Ruins dengan tingkat kesulitan apapun.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n359</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>359</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="19"><![CDATA[Lapor ke Blacksmith Merlin]]></title>
+         <contents mid="20"><![CDATA[<html>Lapor ke Blacksmith Merlin di Saint's Haven.<BR>
+ <BR>
+<FONT color=#7e12d2>*Kamu dapat menyelesaikan Daily Quest 1 kali per hari.</FONT><BR>
+ <BR>
+<FONT color=#086171>Saint's Haven </FONT><FONT color=#a82424>- Blacksmith Merlin</FONT></html>]]></contents>
+         <destination mid="21"><![CDATA[Lapor ke Blacksmith Merlin]]></destination>
+         <todo_msg mid="22"><![CDATA[Lapor ke Blacksmith Merlin.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>70:74</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

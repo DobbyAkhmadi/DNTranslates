@@ -1,0 +1,93 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq30_8102_beggar_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>8102</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Mengenai Saint's Haven]]></qkname>
+      <qnpc>
+         <npcid>87</npcid>
+         <npcename>n087_beggar</npcename>
+         <npckname>걸인 로피</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-accepting-a" mid="7" select_type="0"><![CDATA[<html> Itu hanyalah khayalan kalau kamu memiliki anjing di kepalamu. </html>]]></talk_answer>
+      <talk_answer link_index="n087_beggar-accepting-b" mid="8" select_type="0"><![CDATA[<html> Kurasa tidak demikian. </html>]]></talk_answer>
+      <talk_answer link_index="n087_beggar-accepting-c" mid="9" select_type="0"><![CDATA[<html> Ah, ada saja orang yang bodoh. </html>]]></talk_answer>
+      <talk_answer link_index="n087_beggar-accepting-d" mid="10" select_type="0"><![CDATA[<html> Aku juga berpikir begitu.  </html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Beggar Loffy$<BR>Tempat ini penuh dengan orang bodoh. Mereka berpakaian menarik seperti badut tetapi tetap saja bodoh. Anjing di dalam kepalaku lebih pintar jika dibandingkan dengan orang-orang bodoh itu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Beggar Loffy$<BR>
+Bodoh sekali! Bisa ada apa saja di dalam pikiran orang.Kampung halaman, teman, semuanya bisa berada di dalam pikiran orang. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Beggar Loffy$<BR>Alasan kamu tidak berpikir adalah karena kamu itu bodoh. Mereka hanya memikirkan keuntungan seperti anak kecil.  Kentungan yang kecil seperti anak kecil yang serakah akan permen!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Beggar Loffy$<BR>
+Orang yang bodoh? Salah! Ada orang-orang yang tidak bodoh sepertiku. Tempat ini dihuni begitu banyak orang bodoh. Akan lebih cepat jika menghitung orang-orang yang tidak bodoh!!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Beggar Loffy$<BR>Berpikiran sama? Bukankah kamu baru saja mengatakannya? Hahaha, tidak buruk sama sekali. Walaupun kamu bodoh tetapi kamu punya potensi. </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 8102, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 87, 400 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 87, 200 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 87, 200 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 87, 400 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n087_beggar" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n087_beggar" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n087_beggar" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n087_beggar" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 세인트 헤이븐에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>87:1000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

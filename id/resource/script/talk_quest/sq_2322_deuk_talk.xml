@@ -1,0 +1,106 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_2322_deuk_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2322</qid>
+      <designer>이한나</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About Gifts]]></qkname>
+      <qnpc>
+         <npcid>1266</npcid>
+         <npcename>n1266_deuk</npcename>
+         <npckname>알테이아 으뜸 훈남 데우크</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1266_deuk-accepting-a" mid="16" select_type="0"><![CDATA[<html>(Berikan padanya permata yang bagus)</html>]]></talk_answer>
+      <talk_answer link_index="n1266_deuk-accepting-b" mid="17" select_type="0"><![CDATA[<html>(Beri dia kemeja Gu*ci yang mahal)</html>]]></talk_answer>
+      <talk_answer link_index="n1266_deuk-accepting-c" mid="18" select_type="0"><![CDATA[<html>(Beri dia foto kamu kecil)</html>]]></talk_answer>
+      <talk_answer link_index="n1266_deuk-accepting-d" mid="19" select_type="0"><![CDATA[<html>(Beri dia majalah fesyen terbaru)</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Verathea's Number One Hunk Deux$<BR>
+<FONT color=#387206>{user_nick}</FONT>, kamu membuatku gila dengan terus berbicara denganku.<BR>
+Aku penasaran seberapa dalam kamu mengenalku.<BR>
+<FONT color=#086171>Kamu mau memberiku hadiah?</FONT> Aku penasaran apa isinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Verathea's Number One Hunk Deux$<BR>
+Batu besar yang berkilau! Bagus sekali.<BR>
+Tentu saja, terlihat dari keberadaanmu.<BR>
+<FONT color=#387206>{user_nick}</FONT>. Jangan coba menguji <FONT color=#a94407>perasaan tulusku</FONT> padamu dengan cara ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Verathea's Number One Hunk Deux$<BR>
+<FONT color=#387206>{user_nick}</FONT>. Kamu masih terlalu muda. Pakaian bermerk seperti itu tidak ada artinya untukku.<BR>
+Keberadaanku sudah tidak ternilai. Apalagi yang aku butuhkan?<BR>
+Aku kira kamu lebih mengenalku dari yang lainnya. <FONT color=#7e12d2>Aku sedikit kecewa denganmu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="22"><![CDATA[<html>$Verathea's Number One Hunk Deux$<BR>
+Whoa! <FONT color=#387206>{user_nick}</FONT>. Ini hadiah yang sempurna.<BR>
+Sudah kuduga kamu akan mengertiku.<BR>
+Dengan mengingat bahwa <FONT color=#086171>masa kecil bahagiamu</FONT> bersamaku, <FONT color=#a94407>aku merasa tenang......</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="23"><![CDATA[<html>$Verathea's Number One Hunk Deux$<BR>
+Hmm...... (Deuk tidak terlihat senang)<BR>
+<FONT color=#387206>{user_nick}</FONT>. Maksudmu gayaku ketinggalan zaman?<BR>
+Ini mengecewakan.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,2322, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1266, 30 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1266, 10 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1266, 50 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1266, 5 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1266_deuk" sub="a">0,1</exelink>
+   <exelink qstep="accepting" npc="n1266_deuk" sub="b">0,2</exelink>
+   <exelink qstep="accepting" npc="n1266_deuk" sub="c">0,3</exelink>
+   <exelink qstep="accepting" npc="n1266_deuk" sub="d">0,4</exelink>
+   <journal_data recompense="" quest_title="[대화] 선물에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>1266:3000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

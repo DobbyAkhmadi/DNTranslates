@@ -1,0 +1,401 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc01_9462_doubtful_motion</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>9462</qid>
+      <designer>강지영</designer>
+      <qlevel>4</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9463</nextqid>
+      <nextqname>mqc01_9463_orb_to_find</nextqname>
+      <nextqnpc>n011_priest_leonardo</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Suspicious Movements]]></qkname>
+      <qnpc>
+         <npcid>11</npcid>
+         <npcename>n011_priest_leonardo</npcename>
+         <npckname>상급 클레릭 레오날드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1686</npcid>
+         <npcename>n1686_eltia</npcename>
+         <npckname>엘티아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>534</npcid>
+         <npcename>n534_edan</npcename>
+         <npckname>클레릭 에단</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Eltia$<BR>Oh right! How about the Orb?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-accepting-acceptted" mid="8" select_type="3" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>There's no such thing as a perfect crime!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-a" mid="72" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Eltia$<BR>You're awesome!<BR>So did you find the culprit who stole the staff?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-a" image="QS_Default.dds" itemindex="400453" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-b" mid="73" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Not yet. Well I found something but I have no idea what it is…<BR>Is this a bracelet? Or a hair accessory or something?</FONT><BR><FONT color=#7e12d2>(Show Eltia what you found at the Frost Wind Valley)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-c" mid="74" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Eltia$<BR>This is a rosary...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-c" image="QS_Default.dds" itemindex="400453" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-d" mid="75" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A rosary?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-d" image="QS_Default.dds" itemindex="300144" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-e" mid="76" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Eltia$<BR>Yeah, a cleric's rosary.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-f" mid="78" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh I think I remember seeing it in one of the books.<BR>Then this must belong to someone who was delivering the staff, not the one who stole it.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-g" mid="79" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Eltia$<BR>Hmm… <FONT color=#7e12d2>(Eltia thinks for a while)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-h" mid="80" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What do you think?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-i" mid="81" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Eltia$<BR>I don't think so. It must belong to the culprit based on where you found it.<BR>If it was the thief who dropped this, he would return to look for it. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-j" mid="82" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Why would the culprit try to look for this?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-k" mid="83" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Eltia$<BR>Because it's a clue that might reveal his identity! How did you find this so easily? You're really awesome!<BR>Why don't you go back to <FONT color=#a82424>Blizzard Plain</FONT> and see if there's a cleric who's looking for a lost rosary?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-l" mid="84" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>And then?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-" mid="85" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Eltia$<BR>You should follow him! Be careful not to be noticed. See what he's doing and you'll be able to confirm if he really is the one who stole the Orb.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-1-" mid="86" select_type="5" />
+      <talk_question mid="22"><![CDATA[<html>$Cleric Edan$<BR>I have some urgent matters to attend. I'm sorry but I have to make a move first.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-" mid="87" select_type="5" />
+      <talk_question mid="23"><![CDATA[<html>$Master Cleric Leonard$<BR>You're the traveller who brought the fake orb… <BR>What brings you here?<BR><FONT color=#7e12d2>(Master Cleric Leonard puts on his guard)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-" mid="88" select_type="5" />
+      <talk_question mid="24"><![CDATA[<html>$Eltia$<BR>I hope you will find the staff soon and resolve the misunderstanding...<BR><FONT color=#7e12d2>(Eltia looks worried about you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-a" mid="89" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Cleric Edan$<BR>You've been following me for a while.<BR>Is there something you want to say to me?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-b" mid="90" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh you've… noticed? </FONT><BR>
+<FONT color=#662500>(Wow... Just look at those melancholic eyes that shine through his fringes as he keeps his 45 degrees angle perfect for a selfie… I'm in love!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-c" mid="91" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Cleric Edan$<BR>I can't help but notice if you follow me with such loud footsteps.<BR>I apologize for not talking to you earlier as I was on an urgent mission.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-d" mid="92" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Anyways! Erm… wasn't that thing just now the Vision Orb??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-e" mid="93" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Cleric Edan$<BR>So you're here to find the Orb. You're not a sorceress. Why are you here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-f" mid="94" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm here to find proof that I'm not the one who stole the Sage's Staff…<BR>I found a cleric's rosary near where the staff was stolen… so I thought you might be the one who lost it...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-g" mid="95" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Cleric Edan$<BR>......</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-h" mid="96" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh! I'm sorry, I'm not trying to say I think you're the thief!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-i" mid="97" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Cleric Edan$<BR>........</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-j" mid="98" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Cleric Edan$<BR>Then you should have gone to the Frost Wind Valley.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-k" mid="99" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh! You're right.<BR>Then it's not you. Phew~</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-l" mid="100" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Cleric Edan$<BR>Anyone can make mistakes. <BR>The Goddess is forgiving. But… are you feeling all right? You look like you have a fever.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-m" mid="101" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm… I'm fine...<BR>(Am I blushing too much?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-n" mid="102" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Cleric Edan$<BR>Did you say you were looking for the person who lost the rosary?<BR>
+The same person must have taken the Sage's Staff. It's one of the Dragon Followers.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-o" mid="103" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Cleric Edan$<BR>You don't look like a Dragon Follower to me.<BR>Don't worry about little misunderstandings. This place is dangerous so you better head back.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-p" mid="104" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dragon Followers?!! How dare they mess with the holy Order that serves the Goddess?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-q" mid="105" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Cleric Edan$<BR>I thought you were a noble lady… so you know them well too?<BR><FONT color=#7e12d2>(Cleric Edan stares at you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-r" mid="106" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR>Yeah, there has been bad blood between us for a long time. <BR>How can they worship dragons that tried to destroy this world several times? Those infidels should disappear from this world!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-r" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-s" mid="107" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Cleric Edan$<BR>I can't forgive them either.<BR><FONT color=#7e12d2>(Cleric Edan replies in a gloomy voice)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-s" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-t" mid="108" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Of course! I knew we would feel the same way!!<BR>So I can't just go back like this. I want to help find the Orb and the staff.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-t" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-u" mid="109" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Cleric Edan$<BR>All the sorceresses and clerics are doing their best.<BR>A traveller like you need not worry about this…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-u" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-v" mid="110" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I want to help! Please!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-v" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-w" mid="111" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Cleric Edan$<BR>.....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-w" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-3-x" mid="112" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I want to help!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-3-x" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-4" mid="113" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Cleric Edan$<BR>....Please don't throw a tantrum at me… you can do whatever you want.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n534_edan-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n534_edan-4-" mid="114" select_type="5" />
+      <talk_question mid="50"><![CDATA[<html>$Cleric Edan$<BR>Phew… then shall we go back to Mana Ridge first? <BR>If you're going to help, it would be good to listen to <FONT color=#387206>Master Cleric Leonard</FONT> about the situation.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-a" mid="115" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Master Cleric Leonard$<BR>So you want to resolve the misunderstanding.<BR>I heard that pompous sorceress screaming at you too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-b" mid="116" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>More than that, I can't let the evil forces have their own way.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-c" mid="117" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Master Cleric Leonard$<BR>We'll wait and see if you're one of those evil forces or not.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-4-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-4-!next" mid="118" select_type="4" />
+      <talk_question mid="54"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9462</exe>
+         <exe type="talk" npc="n1686_eltia">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">400453</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">94620,,,,,,,,</exe>
+         <exe type="complete" true="">9462</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1686_eltia" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n1686_eltia" sub="b">0</exelink>
+   <exelink qstep="1" npc="n1686_eltia" sub="c" />
+   <exelink qstep="1" npc="n1686_eltia" sub="d" />
+   <exelink qstep="1" npc="n1686_eltia" sub="e" />
+   <exelink qstep="1" npc="n1686_eltia" sub="f" />
+   <exelink qstep="1" npc="n1686_eltia" sub="g" />
+   <exelink qstep="1" npc="n1686_eltia" sub="h" />
+   <exelink qstep="1" npc="n1686_eltia" sub="i" />
+   <exelink qstep="1" npc="n1686_eltia" sub="j" />
+   <exelink qstep="1" npc="n1686_eltia" sub="k" />
+   <exelink qstep="1" npc="n1686_eltia" sub="l">1,2</exelink>
+   <exelink qstep="1" npc="n1686_eltia" sub="" />
+   <exelink qstep="3" npc="n534_edan" sub="b" />
+   <exelink qstep="3" npc="n534_edan" sub="c" />
+   <exelink qstep="3" npc="n534_edan" sub="d" />
+   <exelink qstep="3" npc="n534_edan" sub="e" />
+   <exelink qstep="3" npc="n534_edan" sub="f" />
+   <exelink qstep="3" npc="n534_edan" sub="g" />
+   <exelink qstep="3" npc="n534_edan" sub="h" />
+   <exelink qstep="3" npc="n534_edan" sub="i" />
+   <exelink qstep="3" npc="n534_edan" sub="j" />
+   <exelink qstep="3" npc="n534_edan" sub="k" />
+   <exelink qstep="3" npc="n534_edan" sub="l" />
+   <exelink qstep="3" npc="n534_edan" sub="m" />
+   <exelink qstep="3" npc="n534_edan" sub="n" />
+   <exelink qstep="3" npc="n534_edan" sub="o" />
+   <exelink qstep="3" npc="n534_edan" sub="p" />
+   <exelink qstep="3" npc="n534_edan" sub="q" />
+   <exelink qstep="3" npc="n534_edan" sub="r" />
+   <exelink qstep="3" npc="n534_edan" sub="s" />
+   <exelink qstep="3" npc="n534_edan" sub="t" />
+   <exelink qstep="3" npc="n534_edan" sub="u" />
+   <exelink qstep="3" npc="n534_edan" sub="v" />
+   <exelink qstep="3" npc="n534_edan" sub="w" />
+   <exelink qstep="3" npc="n534_edan" sub="x" />
+   <exelink qstep="3" npc="n534_edan" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n011_priest_leonardo" sub="b" />
+   <exelink qstep="4" npc="n011_priest_leonardo" sub="c">0</exelink>
+   <exelink qstep="4" npc="n011_priest_leonardo" sub="!next">1</exelink>
+   <journal_data recompense="94620" quest_title="수상한 움직임" chapterid="1" quest_level="4" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Eltia.dds</contents_image>
+         <destination_pos>5,n1686</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1686</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="55"><![CDATA[The Clue]]></title>
+         <contents mid="56"><![CDATA[<html>Talk to Eltia about the clue you've found.<BR><BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>- Eltia</FONT></html>]]></contents>
+         <destination mid="57"><![CDATA[Talk to Eltia at Mana Ridge]]></destination>
+         <todo_msg mid="58"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_BlizzardPlain.dds</contents_image>
+         <destination_pos>7,0,0</destination_pos>
+         <destination_mode>custom:7@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="59"><![CDATA[Search for the Culprit]]></title>
+         <contents mid="60"><![CDATA[<html>Eltia says that the clue has something to do with the clerics. Go to Blizzard Plain and look for anyone who's acting suspiciously. <BR><BR><FONT color=#086171>Blizzard Plain</FONT> <FONT color=#a82424>- ???</FONT></html>]]></contents>
+         <destination mid="61"><![CDATA[Go to Blizzard Plain]]></destination>
+         <todo_msg mid="62"><![CDATA[Go to Blizzard Plain.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_8.dds</contents_image>
+         <destination_pos>88,n534</destination_pos>
+         <destination_mode>custom:86@4,87@4,88@1</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="63"><![CDATA[Chase the Culprit]]></title>
+         <contents mid="64"><![CDATA[<html>The cleric who passed by at the Blizzard Plain in a hurry seemed suspicious.<BR>Follow him to Parelina's Resting Place.<BR><BR><FONT color=#086171>Blizzard Plain (Monastery Gate)</FONT><FONT color=#a82424> - Parelina's Resting Place (???)</FONT></html>]]></contents>
+         <destination mid="65"><![CDATA[Pursuit at Parelina's Resting Place]]></destination>
+         <todo_msg mid="66"><![CDATA[Follow the cleric! He went towards Parelina's Resting Place.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Edan.dds</contents_image>
+         <destination_pos>88,n534</destination_pos>
+         <destination_mode>custom:86@4,87@4,88@1</destination_mode>
+         <statemark_npcid>534</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="67"><![CDATA[Crime Scene]]></title>
+         <contents mid="68"><![CDATA[<html>You've witnessed the Orb being stolen. <BR>
+Talk to the cleric you were chasing.<BR><BR><FONT color=#086171>Blizzard Plain (Monastery Gate)</FONT><FONT color=#a82424> - Parelina's Resting Place (Cleric Edan)</FONT></html>]]></contents>
+         <destination mid="69"><![CDATA[Talk to Cleric Edan]]></destination>
+         <todo_msg mid="70"><![CDATA[The orb has been stolen. Talk to Cleric Edan.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_ManaRidge.dds</contents_image>
+         <destination_pos>5,n011</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>11</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="120"><![CDATA[He's Not The Culprit]]></title>
+         <contents mid="121"><![CDATA[<html>The cleric you were chasing after was not the culprit. Go back to Mana Ridge.<BR><BR><FONT color=#086171>Mana Ridge </FONT><FONT color=#a82424>- Master Cleric Leonard</FONT></html>]]></contents>
+         <destination mid="122"><![CDATA[Talk to Master Cleric Leonard]]></destination>
+         <todo_msg mid="123"><![CDATA[Go back to Master Cleric Leonard at Mana Ridge.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9461</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

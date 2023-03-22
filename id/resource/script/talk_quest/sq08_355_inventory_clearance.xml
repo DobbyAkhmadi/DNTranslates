@@ -1,0 +1,340 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_355_inventory_clearance</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>355</qid>
+      <designer>김주연</designer>
+      <qlevel>9</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Clearance]]></qkname>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>26</npcid>
+         <npcename>n026_trader_may</npcename>
+         <npckname>소모품 상인 메이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>323</npcid>
+         <npcename>n323_warehouse_lupert</npcename>
+         <npckname>창고지기 루퍼트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-noquest" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Sepertinya May mencoba menjual <FONT color=#a82424>Bag</font> yang aneh sekarang.<BR>Tidak peduli kamu melihatnya, itu tas yang murah kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-noquest" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Kamu tidak menaruh sesuatu yang aneh di dalamnya kan? <BR> Jangan mengacaukan gudangku dengan sampah seperti itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-a" mid="8" select_type="0"><![CDATA[<html> Ada apa? </html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Merchant May$<BR>Oh, apa yang harus kulakukan?<FONT color=#7e12d2><BR>(May terlihat sangat malu.)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-b" mid="10" select_type="0"><![CDATA[<html>Bukankah sudah kukatakan aku tak memerlukan tas.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Merchant May$<BR>Oh kamu datang tepat pada waktunya!<BR>aku punya tas tangan Orc Leather. <FONT color=#a82424>80%</font> diskon hanya hari ini! <BR> Kita punya 4 design. Bagaimana kalau kamu membeli 10 dan aku memberikan kamu gratis 2.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-b" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-c" mid="12" select_type="0"><![CDATA[<html>Kurasa majalah mengeluarkan iklan tas ini 10 tahun lalu.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Merchant May$<BR>Alas, terserah.<BR><FONT color=#a82424>(May membalikkan majalah Fashion Goddessnya.)<BR><FONT color=#7e12d2>(Majalah May dikeluarkan sekitar 10 tahun lalu)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-c" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-d" mid="14" select_type="0"><![CDATA[<html>Oh...maafkan aku...</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Merchant May$<BR>Tidak mungkin!<FONT color=#7e12d2>(Memandang halaman depan majalah, mukanya menjadi biru.)</font><BR>Ini majalah dari <FONT color=#a82424>10 tahun lalu</font>. Pantas saja mereka menjual tas tangan designer ini sangat murah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-d" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-e" mid="16" select_type="0"><![CDATA[<html>Berhati-hatilah di masa depan. Selamat tinggal.</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Merchant May$<BR>Aku tak percaya ini.<BR> <FONT color=#7e12d2>(May berulang-ulang membalikkan majalah Oh! Goddess Magazine)</font> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-f" mid="18" select_type="0"><![CDATA[<html>Aku tidak membeli tas..</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Merchant May$<BR>Hey! Mau kemana kamu?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-g" mid="20" select_type="0"><![CDATA[<html>Kompensasi? Kamu terlalu berlebihan.</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Merchant May$<BR>Karena kamu membuatku emosi dengan menunjukkan tanggal majalahnya, kamu perlu memberiku kompensasi untuk trauma ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-g" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-h" mid="23" select_type="0"><![CDATA[<html>Hmm, aku tak peduli..</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Merchant May$<BR><FONT color=#7e12d2>(Ambruk ke tanah.)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-h" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-i" mid="25" select_type="0"><![CDATA[<html>Mengapa kamu tidak membuang saja tas itu?.</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Merchant May$<BR>Hmph.<BR>(Mulai menangis histeris) Tidak adil!! Boo Hoo~~~ BOOO<BR><FONT color=#7e12d2>(Tangisan May menarik perhatian orang sekitar.)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-j" mid="27" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Merchant May$<BR>Storage! Ayo pergi!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-accepting-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-accepting-acceptted" mid="29" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Clearance Sale$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-1" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="30"><![CDATA[<html>$Merchant May$<BR>Ok, sekarang pergi ke Mr. <FONT color=#a82424>Rupert the Warehouse Keeper</font> dan simpankan untukku! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="31"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>May terkadang sulit dihadapi dalam situasi ini. Jadi bersiaplah dan kusarankan kamu menjauh dulu darinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-a" mid="34" select_type="0"><![CDATA[<html>Aku disini atas permintaan untuk May.</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Apa?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-a" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-b" mid="36" select_type="0"><![CDATA[<html>Permisi, dapatkah kamu mendengarkanku!</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Maafkan aku. Aku punya banyak masalah untuk diselesaikan. Lihat semua Agate Fragment ini.<BR><BR> <FONT color=#7e12d2>(Rupert mendadak berpura-pura sibuk)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-b" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-c" mid="38" select_type="0"><![CDATA[<html>Ayolah...kamu hanya pura-pura.</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Warehouse Keeper Rupert$<BR><BR> <FONT color=#7e12d2>(Rupert perlahan membalik badan)</font><BR>Apa yang May katakan?...Apakah dia ingin menjadi Warehouse Keeper lagi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-c" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-d" mid="40" select_type="0"><![CDATA[<html>Kurasa itu tidak terlalu buruk?</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Bagus. <FONT color=#7e12d2>(Rupert terlihat santai sekarang)</font>)<BR>Terakhir kali dia di Warehouseku, dia mengacaukan keseluruhan ruangan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-e" mid="42" select_type="0"><![CDATA[<html> (Sementara, Rupert melanjutkan merapikan tempat ini) </html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Jangan terlalu dekat dengan May. Dia selalu punya ide baru untuk ganti kerjaan sekarang dan membuat malapetaka ke semua orang. Dia tidak terlalu mengganggu ketika menjadi General Store Keeper.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-f" mid="44" select_type="0"><![CDATA[<html>Dia memerlukan tempat storage untuk Orc Leather Bag-nya.</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Jadi itu maunya May?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-1-g" mid="46" select_type="0"><![CDATA[<html> Ya. </html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Orc Leather Bag? Berapa banyak? Sepuluh Ribu? Ada isu bahwa mereka adalah tempat bahan peledak, artifact?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-2" mid="48" select_type="0"><![CDATA[<html>Kurasa begitu...</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Baiklah, berikan saja tasnya..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="49"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Beritahu May aku akan menyimpan tas itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2" image="QS_Default.dds" itemindex="400252" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-a" mid="52" select_type="0"><![CDATA[<html>Apakah mereka barang bermerk?</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Merchant May$<BR>Apakah sudah disimpan? Bagus! (Phew) <BR>Tapi aku tak dapat meninggalkan selamanya di Warehouse <FONT color=#7e12d2>(May menghela nafas karena akan seperti Adventurer Edition Bag)</font>....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-a" image="QS_Default.dds" itemindex="400252" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-b" mid="54" select_type="0"><![CDATA[<html>Dengan segala hormat, aku sudah punya adventurer's bag.</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Merchant May$<BR>Tentu saja! Ini Bag yang sangat indah. Apa yang kau lakukan?<BR><FONT color=#7e12d2>(Melihat lagi Adventurous Edition bag)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-b" image="QS_Default.dds" itemindex="400252" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-c" mid="56" select_type="0"><![CDATA[<html>Yah...memang dibuat untuk adventurer.</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Merchant May$<BR>Kamu sungguh tidak punya selera dalam berfashion, {user_nick}!<BR>Bag mu sangat jauh di bawah standar Bag Adventurer Edition kamu lihat?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-d" mid="58" select_type="0"><![CDATA[<html>Memang agak rusak...tapi cukup berguna.</html>]]></talk_answer>
+      <talk_question mid="57"><![CDATA[<html>$Merchant May$<BR>Apa ada gunanya jika terlihat mengerikan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-d" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-3" mid="60" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Merchant May$<BR><FONT color=#7e12d2>(May kesulitan membuka mulutnya)</font><BR>Karena aku tak dapat menjual dengan harga tinggi, aku harus mengadakan sale cuci gudang. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-3" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="61"><![CDATA[<html>$Merchant May$<BR>Sekarang bantu aku temui <FONT color=#a82424>Adventurer Guild Deckard</font> dan tanyakan apabila dia ingin membeli banyak Auxiliary Bag dengan harga <FONT color=#a82424>satu buah silver</font> per barang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-a" mid="63" select_type="0"><![CDATA[<html>(Pergilah ke Deckard untuk memberitahu informasi.)</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Jadi, apa yang terjadi disini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-b" mid="65" select_type="0"><![CDATA[<html>Terlihat cukup bagus dan kuat untuk berpetualang.</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Ahh...pantas dia terlihat sedih belakangan ini. Semua hanya karena beberapa Bag? Jadi beritahu aku...bagaimana menurutmu Bag-bag ini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-c" mid="67" select_type="0"><![CDATA[<html>Kondisinya?</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Yah kamu cukup adil menilai. Bag ini cukup kuno juga. Baiklah, aku akan beli dengan satu syarat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-d" mid="69" select_type="0"><![CDATA[<html>Jadi kamu tidak masalah dengan harganya?.</html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Aku akan membelinya seharga <FONT color=#a82424>80 Copper</font> per barang. Bukan satu silver karena dia sangat ingin menjualnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4" mid="71" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Jadi sudah sepakat? 80 copper harga yang bagus. Orang seharusnya belajar dari tawaran seperti ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="72"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Beritahu May bahwa kita sudah sepakat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-a" mid="74" select_type="0"><![CDATA[<html>(Memberitahu kondisi yang diinginkan Deckard)</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Merchant May$<BR>Apa yang Deckard katakan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-b" mid="76" select_type="0"><![CDATA[<html>Yah...(Menjilat bibir)</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Merchant May${action:Angry}<BR>Apa? 80 copper?! Aku takkan menjualnya dengan harga itu!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-c" mid="78" select_type="0"><![CDATA[<html> Itu tidak buruk. Untung 30 copper lebih baik daripada tidak ada?</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Merchant May$<BR>Harga awalnya 50 copper dan dia inginkan 80? Mengapa dia tidak pergi merampok bank saja!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-d" mid="80" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Merchant May$<BR>......kurasa tidak ada pilihan lain.<BR>Beritahu dia kita sepakat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-e" mid="82" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-e" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="83"><![CDATA[<html>$Merchant May$<BR>Aku sangat kecewa! Coba aku dapat menjualnya dengan harga satuan, aku akan dapat  <FONT color=#a82424>20 kali</font> keuntungan.<BR> <FONT color=#7e12d2>(May, sepertinya masih menyesali kesepakatan itu)</font> </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">355</exe>
+         <exe type="recompense_view">3557,3551,3552,3553,3554,3555,3556,3557,3558,3559</exe>
+         <exe type="talk" npc="n026_trader_may">1</exe>
+         <exe type="custom">api_npc_Rage( userObjID, 26);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">3557,3551,3552,3553,3554,3555,3556,3557,3558,3559</exe>
+         <exe type="complete" true="">355</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 26, 600 );</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="h">3</exelink>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="j">1</exelink>
+   <exelink qstep="accepting" npc="n026_trader_may" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="b" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="c" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="d" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="e" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="f" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="g" />
+   <exelink qstep="1" npc="n323_warehouse_lupert" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n026_trader_may" sub="b" />
+   <exelink qstep="2" npc="n026_trader_may" sub="c" />
+   <exelink qstep="2" npc="n026_trader_may" sub="d" />
+   <exelink qstep="2" npc="n026_trader_may" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="3" npc="n024_adventurer_guildmaster_decud" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n026_trader_may" sub="b" />
+   <exelink qstep="4" npc="n026_trader_may" sub="c" />
+   <exelink qstep="4" npc="n026_trader_may" sub="d">0</exelink>
+   <exelink qstep="4" npc="n026_trader_may" sub="e">1,2</exelink>
+   <journal_data recompense="1:3551,2:3552,3:3553,4:3554,5:3555,6:3556,7:3557,8:3558,9:3559" quest_title="재고 정리" chapterid="" quest_level="9" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Guilian.dds</contents_image>
+         <destination_pos>8,n323</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>323</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Store Inventory]]></title>
+         <contents mid="85"><![CDATA[<html>Mintalah Warehouse Keeper Rupert untuk menyimpan Bag May.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Warehouse Keeper Rupert</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Bicaralah kepada Warehouse Keeper Rupert]]></destination>
+         <todo_msg mid="87"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="88"><![CDATA[Bicaralah kepada Merchant May]]></title>
+         <contents mid="89"><![CDATA[<html>Rupert setuju untuk menyimpan May's Bags di Warehouse. Beritahu May mengenai ini.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="90"><![CDATA[Bicaralah kepada Merchant May]]></destination>
+         <todo_msg mid="91"><![CDATA[Bicaralah kepada Merchant May.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="92"><![CDATA[Bicaralah kepada Adventurer's Guild Master Deckard]]></title>
+         <contents mid="93"><![CDATA[<html>Tanyakan <FONT color=#a82424>Deckard</FONT> jika ingin membeli May's Bags.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="94"><![CDATA[Bicaralah kepada Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="95"><![CDATA[Bicaralah kepada Adventurer's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="96"><![CDATA[Bicaralah kepada Merchant May]]></title>
+         <contents mid="97"><![CDATA[<html>Tanyakan <FONT color=#a82424>May</FONT> jika dia setuju dengan kesepakatan Deckard. <BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="98"><![CDATA[Bicaralah kepada Merchant May]]></destination>
+         <todo_msg mid="99"><![CDATA[Bicaralah kepada Merchant May.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>9:-1</user_level>
+      <user_class />
+      <prev_quest>5101</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

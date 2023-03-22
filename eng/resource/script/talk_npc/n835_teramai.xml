@@ -1,0 +1,36 @@
+   <talk>
+      <npcename>n835_teramai</npcename>
+      <npcid>835</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Terrence Terramai]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Terrence Terramai$<BR>Nice to meet you, <FONT color=#387206>{user_nick}</FONT>.<BR>I'm the head of the Order of the Goddess <FONT color=#a82424>Terrence Terramai</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="QN_Npc_Lotus_Elder_Teramai.dds" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Terrence Terramai$<BR><FONT color=#7e12d2>(Terence bites his lip)</FONT><BR>I will get Velskud to... come to the Royal Castle and get him treated.<BR>Why don't you come to Saint Haven Royal Castle too?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="9"><![CDATA[<html>$Terrence Terramai$<BR><FONT color=#7e12d2>(Terramai bites his lip)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="4">0</exe>
+         <exe type="conexe" true="2" false="3">1</exe>
+         <exe type="enterquest">mqc09_9538_intended_ending</exe>
+         <exe type="talk">003</exe>
+         <exe type="conexe" true="5" false="6">2</exe>
+         <exe type="enterquest">mq15_9221_unpleased_successor</exe>
+         <exe type="conexe" true="7" false="8">3</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="9" false="10">4</exe>
+         <exe type="enterquest">mq15_9372_show_the_cloven_hoof</exe>
+         <exe type="talk">001</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">8</chk>
+         <chk type="hasquest">9538</chk>
+         <chk type="hasquest">9221</chk>
+         <chk type="hasquest">9222</chk>
+         <chk type="hasquest">9372</chk>
+      </conditions>
+   </talk>

@@ -1,0 +1,417 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_263_argenta_trap2</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>263</qid>
+      <designer>김인정</designer>
+      <qlevel>17</qlevel>
+      <qdesc>아르젠타에게 퀘스트 받음.
+신전 예배당의 1번 스테이지에서 데이비드와 만남.
+2번 스테이지에서 데이비드와 대화한 후, 깃발 트리거를 클릭한다.
+그 후 다시 데이비드와 대화.
+아르젠타에게 보고.
+
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Special Device II]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타(잿빛폐허)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>187</npcid>
+         <npcename>n187_slave_david</npcename>
+         <npckname>아르젠타의 두번째 노예 데이비드(신전 예배당)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Adventurer David$<BR>Kamu mau tanda tanganku. Akan aku berikan gratis. Ha. <BR><FONT color=#7e12d2>(Kamu harus Menerima Quest dari Argenta di Calderock Village untuk melanjutkan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-a" mid="7" select_type="0"><![CDATA[<html> Sepertinya tidak pernah ada yang bilang begitu .... </html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Argenta$<BR>Kenapa kamu sangat sibuk? Aku tak mengerti.<BR>Kamu bilang kamu melakukan apa saja untukku, penyelamatmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-a" image="QW_19.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-b" mid="9" select_type="0"><![CDATA[<html> Sebuah alat spesial? </html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Argenta$<BR>Omong-omong, pergilah ke <FONT color=#a82424>Temple Ruins</FONT> saat ini.<BR>Aku pernah melihat<FONT color=#a82424>Special Device</FONT> di sana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-c" mid="11" select_type="0"><![CDATA[<html>Apa kamu yakin?</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Argenta$<BR>Ya. Kamu tahu, ada pintu kecil yang terbuka dan tertutup saat kamu bergerak sedikit.<BR>Di samping itu, aku dengar ada Special Device..<html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-d" mid="13" select_type="0"><![CDATA[<html> Oh ... yeah .... </html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Argenta$<BR>Tentu saja, Aku bertaruh.<BR>Karena aku sudah dewasa.<html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-f" mid="15" select_type="0"><![CDATA[<html> (Apa itu benar) </html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Argenta$<BR>Jadi kenapa kamu tidak pergi dan <FONT color=#a82424>investigasi alat itu?</FONT><BR>Dan, tolong jalani misi rahasia ini <FONT color=#a82424>sendirian</FONT>, mengerti?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="16"><![CDATA[<html>$Argenta$<BR>.. Kamu terlihat seperti orang lemah yang butuh group, bahkan untuk misi sesimpel ini. Biar aku ulangi, kamu harus melakukannya <FONT color=#a82424>sendirian</FONT>.<BR><FONT color=#7e12d2>(Kamu tidak dapat melanjutkannya jika dalam Party.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-f" image="QW_19.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-g" mid="18" select_type="0"><![CDATA[<html> Baiklah ~ Akan ku coba. </html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Argenta$<BR>Aku yakin misi ini akan banyak memakan waktumu ya kan? Pergi cek Special Device di <FONT color=#a82424>Temple Ruins</FONT> secepatnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-h" mid="20" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Special Device II$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Argenta$<BR>Kapan penasaran ini bisa hilang? Aku terlalu malas untuk mengkonfirmasi sendiri. Aku harus memberikan misi ini pada orang lain. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="QW_19.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-a" mid="24" select_type="0"><![CDATA[<html> Sebuah alat spesial? </html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Argenta$<BR>Pergi ke <FONT color=#a82424>Temple Ruins</FONT> kali ini.<BR>Aku pernah melihat Special Device di sana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-b" mid="26" select_type="0"><![CDATA[<html>Apa kamu yakin?</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Argenta$<BR>Yap. Kamu tahu, akan ada pintu kecil yang terbuka dan tertutup saat kamu bergerak sedikit.<BR>Bukan yang satu itu, Aku dengar ada Special Device yang berisi sesuatu yang sangat menarik.<html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-c" mid="28" select_type="0"><![CDATA[<html> Oh ... yeah .... </html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Argenta$<BR>Tentu saja, Aku bertaruh.<BR>Karena aku sudah dewasa.<html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-e" mid="30" select_type="0"><![CDATA[<html> (Apa itu benar) </html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Argenta$<BR>Jadi kenapa kamu tidak pergi dan <FONT color=#a82424>investigasi Special Device itu?</FONT><BR>Oh iya, tolong jalankan misi rahasia ini <FONT color=#a82424>sendirian</FONT>, mengerti?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="31"><![CDATA[<html>$Argenta$<BR>.. Kamu terlihat seperti orang lemah yang butuh group, bahkan untuk misi semudah ini. Biar aku ulangi, kamu harus melakukan ini <FONT color=#a82424>sendirian</FONT>.<BR><FONT color=#7e12d2>(Kamu tidak dapat melanjutkannya jika dalam Party.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-e" image="QW_19.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-2" mid="33" select_type="0"><![CDATA[<html> Sip ~ Akan aku coba. </html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Argenta$<BR>Aku yakin misi ini akan banyak memakan waktumu? Pergi cek Special Device di <FONT color=#a82424>Temple Ruins</FONT> secepatnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-1" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-2" mid="195" select_type="0"><![CDATA[<html> (Melewati tebasan) </html>]]></talk_answer>
+      <talk_question mid="194"><![CDATA[<html>$Adventurer David$<BR><FONT color=#7e12d2>(Orang yang berdiri disana sepertinya ingin berbicara dengan kita.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="38"><![CDATA[<html>$Argenta$<BR>Sampai kapan penasaran ini hilang? Aku terlalu malas kesana sedirian untuk konfirmasi. Aku harus memberikan misi ini pada orang lain. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-2-david1" mid="40" select_type="0"><![CDATA[<html>(Suara itu bergema)</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Hei, kamu!!<BR>Stop !! Adventurer<FONT color=#a82424>Pemula</FONT> !!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-2-b" mid="42" select_type="0"><![CDATA[<html>(Aku tidak mengerti dia bilang apa)</html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Adventurer David${action:Talk}<BR>Yang perlu kamu lakukan <FONT color=#a82424>ikuti saja</FONT> dan, aku akan melindungimu?<BR>Aku akan pergi sendiri dan meninggalkanmu! Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-2-c" mid="44" select_type="0"><![CDATA[<html>...Ok, duluan sana.</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Adventurer David$<BR>Aku pergi duluan. Nanti kamu akan menyesali betapa <FONT color=#a82424>lemahnya</FONT> kamu, sebaiknya kamu kembali sana. Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Adventurer David$<BR>Aku benar-benar akan pergi, Berhentilah <FONT color=#a82424>bersaing</FONT> denganku?!!<BR><FONT color=#7e12d2>(Sebaiknya dia di acuhkan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-2-david2" mid="146" select_type="0"><![CDATA[<html>(...Dia memang orang yang aneh)</html>]]></talk_answer>
+      <talk_question mid="145"><![CDATA[<html>$Adventurer David$<BR>Heh.. Kita bertemu lagi.<BR> aku tahu kamu sangat <FONT color=#a82424>mengidolakanku</FONT> , tapi bisakah berhenti mengejarku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-2-e" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-2-david3" mid="148" select_type="0"><![CDATA[<html> (Orang aneh) </html>]]></talk_answer>
+      <talk_question mid="147"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Namaku adalah <FONT color=#a82424>Adventurer David!!</FONT> Aku yakin kamu mengikuti, ya kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="46"><![CDATA[<html>$Self-Acclaimed Adventurer David$<BR>Heh Heh. Heh. Aku tahu, kamu ingin aku melindungimu!...<BR><FONT color=#7e12d2>(Orang ini menyebalkan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-4-a" mid="49" select_type="0"><![CDATA[<html>Aku hanya sedang menjalankan tugas..</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Adventurer David$<BR>Heh. Apa kamu yakin kamu tidak mengikutiku? Rasa <FONT color=#a82424>iri mu</FONT> sangat kuat, betul?<BR>jika kamu iri akan <FONT color=#a82424>reputasi tinggiku</FONT>, kamu bisa jujur untuk belajar sesuatu dariku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-4-a" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-4-davidwho2" mid="51" select_type="0"><![CDATA[<html>Aku harus pergi sekarang.</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html><FONT color=#2b2723>$Adventurer David$<BR>Heh. Heh. Heh. Aku bisa melihat kamu berpura-pura. Heh Heh. Heh.<BR></FONT><FONT color=#7e12d2>(Adventurer David tersenyum licik)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-4-d" mid="151" select_type="0"><![CDATA[<html> Kamu tahu tentang special device? </html>]]></talk_answer>
+      <talk_question mid="150"><![CDATA[<html>$Adventurer David${action:Talk}<BR>Heh. Heh. Heh. Kamu bersikap begitu hanya karena kamu tidak <FONT color=#a82424>tampan</FONT>. Namun trik itu tidak mempan padaku, kamu tidak dapat menang dariku! Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-4-d" mid="153" select_type="0"><![CDATA[<html> Kamu tahu tentang special device? </html>]]></talk_answer>
+      <talk_question mid="152"><![CDATA[<html>$Adventurer David$<BR>Heh Heh. Heh. Sepertinya kamu tertarik padaku! Heh. Heh. Heh. Kamu <FONT color=#a82424>cute</FONT> juga. Berhenti berpura-pura! Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-4-d" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-4-e" mid="154" select_type="0"><![CDATA[<html> Apa kamu tahu? </html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Adventurer David$<BR>Apa? Special Device? ...Oh, <FONT color=#a82424>yang itu</FONT> ! <FONT color=#7e12d2>(Dengan hebat, Adventurer David tahu tentang Special Device.)</FONT> Heh. Heh. Heh. Aku harus memberimu ilmu karena kamu pemula.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-5" mid="157" select_type="0"><![CDATA[<html> Bendera itu adalah special device? </html>]]></talk_answer>
+      <talk_question mid="156"><![CDATA[<html>$Adventurer David$<BR>Lihat <FONT color=#a82424>bendera</FONT> itu di sana? Heh. Heh. Heh. Seorang pemula tidak akan bisa menemukan hartakarun meskipun di depan mata persis. Alat itu hanya dapat di lihat oleh <FONT color=#a82424>Adventurerhebat</FONT>!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="53"><![CDATA[<html><FONT color=#2b2723>$Adventurer David$<BR>Yaa.. Suka-suka kamu mau berbuat apa. Heh. Heh. Heh. Tapi kamu harus ingat, Akulah yang memberitahumu tentang ini!</FONT><BR><FONT color=#2b2723>Heh. Heh. Heh.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-6" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-6-a" mid="159" select_type="0"><![CDATA[<html>Karena dia telah menolongku, Aku harus diam kali ini....</html>]]></talk_answer>
+      <talk_question mid="158"><![CDATA[<html>$Adventurer David${action:talk}<BR>Sekarang kamu pikir aku keren bukan? Heh. Heh. Heh. Jika bukan karenaku, Aku yakin kamu tidak dapat menemukannya! <FONT color=#7e12d2>(Adventurer David menjadi sangat arogan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-6-b" mid="161" select_type="0"><![CDATA[<html> Namaku? Aku <FONT color=#387206>{user_nick}.</font> </html>]]></talk_answer>
+      <talk_question mid="160"><![CDATA[<html>$Adventurer David$<BR>Apa kamu berterima kasih padaku? Karena aku begitu sopan, Siapa <FONT color=#a82424>namamu</FONT>?<BR>Ini spesial, Biasanya aku tidak pernah menanyakan nama orang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-6-b" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-6-c" mid="163" select_type="0"><![CDATA[<html>(Lihat siapa yang memanggilku newbie...)</html>]]></talk_answer>
+      <talk_question mid="162"><![CDATA[<html>$Adventurer David$<BR><FONT color=#387206>{user_nick}</FONT>? Oh, namamu sangat cocok untuk pemula? Ha. <BR><FONT color=#7e12d2>(Adventurer David bersalaman denganku.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-6-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-6-d" mid="165" select_type="0"><![CDATA[<html> Kamu melihat sekitar special device yang bisa di perintahkan. </html>]]></talk_answer>
+      <talk_question mid="164"><![CDATA[<html>$Adventurer David$<BR>Kenapa kamu di sini?<BR>...Ah, kamu membuntutiku, <FONT color=#a82424>Adventurer David</FONT> Ya kan? Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-6-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-6-e" mid="167" select_type="0"><![CDATA[<html> Itu sangat </html>]]></talk_answer>
+      <talk_question mid="166"><![CDATA[<html>$Adventurer David$<BR>Maksudmu kamu datang sejauh ini hanya untuk Special Device? ...Seperti yang kubayangkan, <FONT color=#a82424>Pemula</FONT> tetap pemula.. Ha? Yakin apa?<BR>Kamu harus tau, tidak ada hal seperti itu!! Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-6-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n187_slave_david-6-f" mid="169" select_type="0"><![CDATA[<html>(Adventurer David sombongnya minta ampun)</html>]]></talk_answer>
+      <talk_question mid="168"><![CDATA[<html>$Adventurer David$<BR>Seperti yang kamu lihat, Special Device hanya mengeluarkan <FONT color=#a82424>jamur</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-6-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="170"><![CDATA[<html>$Adventurer David${action:talk}<BR>Heh. Heh. Heh. Aku yakin kamu tidak tahu hal ini bukan?  Karena kamu adalah <FONT color=#a82424>Pemula</FONT>. Heh. Aku akan istirahat di sini. Sampai jumpa!.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n187_slave_david-7" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="171"><![CDATA[<html>$Adventurer David$<BR>Selamat tinggal, Pemula! Heh. Heh. Heh.<BR><FONT color=#7e12d2>(Adventurer David selalu sombong)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-7-a" mid="173" select_type="0"><![CDATA[<html> Aku khawatir </html>]]></talk_answer>
+      <talk_question mid="172"><![CDATA[<html>$Argenta$<BR>Apa yang membuatmu lama?<BR>Sepertinya kamu tenggelam atau apa, Aku hampir ingin mengecekmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-7-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-7-b" mid="175" select_type="0"><![CDATA[<html> Aku tidak ... </html>]]></talk_answer>
+      <talk_question mid="174"><![CDATA[<html>$Argenta$<BR>Khawatir? Untuk apa aku khawatir?<BR>Aku hanya ingin tahu kamu mati atau tidak, itu bukan khawatir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-7-b" image="QW_19.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-7-c" mid="177" select_type="0"><![CDATA[<html>(Kamu menjelaskan situasinya)</html>]]></talk_answer>
+      <talk_question mid="176"><![CDATA[<html>$Argenta$<BR>Jadi, apa yang kamu temukan tentang <FONT color=#a82424>Special Device</FONT>? Aku yakin kamu menemukannya?<BR>Bahkan orang terbodoh bisa menemukannya, bukan berbicara padamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-7-c" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-7-d" mid="179" select_type="0"><![CDATA[<html> Begitulah .... </html>]]></talk_answer>
+      <talk_question mid="178"><![CDATA[<html>$Argenta$<BR>Apa? Apa maksudmu? Kamu akan membuat suatu alat hanya untuk membuat jamur? Ini sama tidak bergunanya seperti <FONT color=#a82424>Black Thing</FONT>. Uhmm.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-7-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-7-e" mid="181" select_type="0"><![CDATA[<html> (Sepertinya usaha kita sia-sia.) </html>]]></talk_answer>
+      <talk_question mid="180"><![CDATA[<html>$Argenta$<BR>Oh iya, Aku sudah cukup. Karena bukan aku yang membuat <FONT color=#a82424>vain attempt</FONT> dan kamu yang membuat <FONT color=#a82424>vain attempt</FONT>.<BR>Bagus untukmu.. Bukan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-7-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-7-f" mid="183" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="182"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-7-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="184"><![CDATA[<html>$Argenta$<BR>Yaa.. Apa yang bisa kita lakukan, apa yang bisa kamu lakukan? Aku akan memikirkannya, jangan malas dan jangan lupa untuk kembali! <BR><FONT color=#7e12d2>(Quest berikutnya minimal lv 18)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk" npc="n164_argenta_wounded">f</exe>
+         <exe type="talk" npc="n164_argenta_wounded">e</exe>
+         <exe type="recompense_view">2631,2631,2632,2633,2634,2635,2636,2637,2638,2639</exe>
+         <exe type="setquest">263</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk" npc="n164_argenta_wounded">e</exe>
+         <exe type="talk" npc="n164_argenta_wounded">d</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 260 ) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="talk" npc="n187_slave_david">d</exe>
+         <exe type="talk" npc="n187_slave_david">e</exe>
+         <exe type="talk" npc="n187_slave_david">a</exe>
+         <exe type="talk" npc="n187_slave_david">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="conexe" true="2" false="4">0</exe>
+         <exe type="talk" npc="n187_slave_david">b</exe>
+         <exe type="talk" npc="n187_slave_david">c</exe>
+         <exe type="conexe" true="3" false="5">1</exe>
+         <exe type="conexe" true="2" false="3">2</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">2631,2631,2632,2633,2634,2635,2636,2637,2638,2639</exe>
+         <exe type="complete" true="">263</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="g">3</exelink>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="h">4,5</exelink>
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="e" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="2">3</exelink>
+   <exelink qstep="1" npc="n187_slave_david" sub="2">3</exelink>
+   <exelink qstep="2" npc="n187_slave_david" sub="david1">2</exelink>
+   <exelink qstep="2" npc="n187_slave_david" sub="b" />
+   <exelink qstep="2" npc="n187_slave_david" sub="c">0,1</exelink>
+   <exelink qstep="2" npc="n187_slave_david" sub="david2">5</exelink>
+   <exelink qstep="2" npc="n187_slave_david" sub="david3">6</exelink>
+   <exelink qstep="4" npc="n187_slave_david" sub="davidwho2">1</exelink>
+   <exelink qstep="4" npc="n187_slave_david" sub="d" />
+   <exelink qstep="4" npc="n187_slave_david" sub="d" />
+   <exelink qstep="4" npc="n187_slave_david" sub="e" />
+   <exelink qstep="4" npc="n187_slave_david" sub="5">0,6</exelink>
+   <exelink qstep="6" npc="n187_slave_david" sub="b" />
+   <exelink qstep="6" npc="n187_slave_david" sub="c" />
+   <exelink qstep="6" npc="n187_slave_david" sub="d" />
+   <exelink qstep="6" npc="n187_slave_david" sub="e" />
+   <exelink qstep="6" npc="n187_slave_david" sub="f">0,1</exelink>
+   <exelink qstep="7" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="7" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="7" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="7" npc="n164_argenta_wounded" sub="e">0</exelink>
+   <exelink qstep="7" npc="n164_argenta_wounded" sub="f">1</exelink>
+   <journal_data recompense="1:2631,2:2632,3:2633,4:2634,5:2635,6:2636,7:2637,8:2638,9:2639" quest_title="특별한 장치 II" chapterid="" quest_level="17" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_19.dds</contents_image>
+         <destination_pos>142,n187</destination_pos>
+         <destination_mode>custom:142@1</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="119"><![CDATA[Argenta's curiosity]]></title>
+         <contents mid="120"><![CDATA[<html>Argenta bertaruh untuk Special Device di <FONT color=#a82424>Temple Ruins.</FONT> Temukan Special Device di <FONT color=#a82424>Temple Ruins</FONT> dalam <FONT color=#a82424>Wind Forest.</FONT><BR><FONT color=#7e12d2>(Kamu tidak bisa menjalankan jika dalam Party.)</FONT><BR><BR><FONT color=#086171>Crystal Stream → Wind Forest(Wind Forest Temple)</FONT> <FONT color=#a82424>→ Temple Ruins</FONT></html>]]></contents>
+         <destination mid="121"><![CDATA[(Solo) Temukan Special Device di Temple Ruins]]></destination>
+         <todo_msg mid="122"><![CDATA[Quest telah di tambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Slave_David.dds</contents_image>
+         <destination_pos>142,n187</destination_pos>
+         <destination_mode>custom:142@1,143@0</destination_mode>
+         <statemark_npcid>187</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="123"><![CDATA[Strange Person]]></title>
+         <contents mid="124"><![CDATA[<html>Aku bertemu orang aneh yang bernama, <FONT color=#a82424>Adventurer David</FONT>; acuhkan saja dia dan fokus untuk mencari Special Device. Aku harus terus maju <FONT color=#a82424>hingga menemukan pentunjuk </FONT> dari Special Device.<BR><BR><FONT color=#086171>Wind Forest(Wind Forest Temple)</FONT> <FONT color=#a82424>→ Temple Ruins</FONT></html>]]></contents>
+         <destination mid="125"><![CDATA[(Solo) Temukan Special Device di Temple Ruins]]></destination>
+         <todo_msg mid="126"><![CDATA[Terus maju untuk menemukan Special Device]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_19.dds</contents_image>
+         <destination_pos>142,0,0</destination_pos>
+         <destination_mode>custom:142@4,141@1</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="127"><![CDATA[A Suspicious Device]]></title>
+         <contents mid="128"><![CDATA[<html>Menurut kata-kata <FONT color=#a82424>Adventurer David</FONT>, <FONT color=#a82424>bendera itu</FONT> adalah Special Device. Ayo inspeksi bendera itu.<BR><BR><FONT color=#086171>Temple Ruins</FONT> <FONT color=#a82424>→ Special Device</FONT></html>]]></contents>
+         <destination mid="129"><![CDATA[(Solo) Temukan bendera itu, Special Device.]]></destination>
+         <todo_msg mid="130"><![CDATA[Periksa bendera itu juga sekitarnya]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Slave_David.dds</contents_image>
+         <destination_pos>142,n187</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>187</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="186"><![CDATA[Pointless Truth]]></title>
+         <contents mid="187"><![CDATA[<html>Special Device ditemukan; sayangnya, semuanya di tumbuhi <FONT color=#a82424>jamur.</FONT> Bicarakan ini pada <FONT color=#a82424>Adventurer David</FONT> lagi.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Adventurer David</FONT></html>]]></contents>
+         <destination mid="188"><![CDATA[(Solo) Bicara dengan Adventurer David]]></destination>
+         <todo_msg mid="189"><![CDATA[Special devices telah ditemukan. Bicaralah pada Adventurer David lagi.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="190"><![CDATA[Melapor]]></title>
+         <contents mid="191"><![CDATA[<html>Sepertinya special device yang di bicarakan Argenta itu tidak ada yang spesial. Mengecewakan. Kembalilah ke  <FONT color=#a82424>Gray Ruins</FONT>, dan laporkan pada <FONT color=#a82424>Argenta</FONT> tentang yang ditemukan.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="192"><![CDATA[Laporkan pada Argenta di Calderock Village.]]></destination>
+         <todo_msg mid="193"><![CDATA[Tolong laporkan pada Argenta di Calderock Village tentang penemuan Special Device.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>16:-1</user_level>
+      <user_class />
+      <prev_quest>262</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

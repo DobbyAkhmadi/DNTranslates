@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n1687_kaye</npcename>
+      <npcid>1687</npcid>
+      <startexe>1</startexe>
+      <comment>케이는 서브퀘가 엮이지 않기 때문에 스크립트로 바로 진입!
+아무 퀘스트 없는 렌시아 : 8번 002</comment>
+      <npckname mid="1"><![CDATA[Kay]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Kay${sound:npc_Kaye_1687_sp_06.ogg}<BR>Jangan bicara denganku jika tidak ada yang penting.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="4"><![CDATA[<html>$Kay${sound:npc_Kaye_1687_sp_02.ogg}<BR>Jadi bagaimana perjalananmu? <FONT color=#7e12d2>(Kay senang bertemu denganmu)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="conexe" true="5" false="3">1</exe>
+         <exe type="conexe" true="6" false="4">2</exe>
+         <exe type="conexe" true="7" false="8">3</exe>
+         <exe type="enterquest">mqc01_9461_proof</exe>
+         <exe type="enterquest">mqc01_9463_orb_to_find</exe>
+         <exe type="enterquest">mqc02_9468_cataract</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">8</chk>
+         <chk type="hasquest">9461</chk>
+         <chk type="hasquest">9463</chk>
+         <chk type="hasquest">9468</chk>
+      </conditions>
+   </talk>

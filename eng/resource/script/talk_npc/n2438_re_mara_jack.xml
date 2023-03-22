@@ -1,0 +1,48 @@
+   <talk>
+      <npcename>n2438_re_mara_jack</npcename>
+      <npcid>2438</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Clown Jack]]></npckname>
+      <talk_paragraph index="talk_1" image="QN_Jester.dds" itemindex="">
+         <talk_answer link_index="talk_2" mid="18"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html><FONT color=#2b2723>$Clown Jack$<BR>Jack…… hits the jackpot!!!</FONT><BR><BR><FONT color=#7e12d2>(Jack is trembling with joy.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_2" image="QN_Magician.dds" itemindex="">
+         <talk_answer link_index="talk_3" mid="19"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html><FONT color=#2b2723>$Magician Sanders$<BR>Bankrupt.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_3" image="QN_Npc_Beggar.dds" itemindex="">
+         <talk_answer link_index="talk_4" mid="20"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html><FONT color=#2b2723>$Loffy the Beggar$<BR>Kehehe. Bankrupt!!!</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_4" image="QN_Jester.dds" itemindex="">
+         <talk_answer link_index="talk_5" mid="21"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html><FONT color=#2b2723>$Clown Jack$</FONT><BR>It's really an honour, <FONT color=#387206>{user_nick}</FONT>……!<BR>I have thrashed the <FONT color=#086171>Poker Princess</FONT><FONT color=#2b2723></FONT> in poker!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_5" image="" itemindex="">
+         <talk_answer link_index="talk_6" mid="22"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="11"><![CDATA[<html><FONT color=#2b2723>${user_nick}$<BR></FONT><FONT color=#662500>You didn't thrash anybody!</FONT><BR><FONT color=#662500>Deal the cards. NOW!</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_6" image="QN_Npc_Beggar.dds" itemindex="">
+         <talk_answer link_index="talk_7" mid="23"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="13"><![CDATA[<html><FONT color=#2b2723>$Loffy the Beggar$<BR></FONT><FONT color=#2b2723>Hey, you're trying to play with no money?</FONT><BR><FONT color=#2b2723>KEHEHEHE!!!</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_7" image="" itemindex="">
+         <talk_answer link_index="quest_end" mid="24"><![CDATA[<html><FONT color=#7e12d2>(Kick the chair and leave.)</FONT></html>]]></talk_answer>
+         <talk_question mid="15"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><BR><FONT color=#662500>Greedy jerks……!</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_talk" image="" itemindex="">
+         <talk_question mid="17"><![CDATA[<html><FONT color=#2b2723>$Clown Jack$<BR></FONT><FONT color=#2b2723>……</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk">talk_1</exe>
+         <exe type="talk">no_talk</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3610, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">3609</chk>
+      </conditions>
+      <exelink idx="quest_end">3</exelink>
+   </talk>

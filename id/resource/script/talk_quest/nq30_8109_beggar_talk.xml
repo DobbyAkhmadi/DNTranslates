@@ -1,0 +1,94 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq30_8109_beggar_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>8109</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Recent interests]]></qkname>
+      <qnpc>
+         <npcid>87</npcid>
+         <npcename>n087_beggar</npcename>
+         <npckname>걸인 로피</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-accepting-a" mid="7" select_type="0"><![CDATA[<html> Aku tidak memiliki banyak orang untuk kuajak bicara. </html>]]></talk_answer>
+      <talk_answer link_index="n087_beggar-accepting-b" mid="8" select_type="0"><![CDATA[<html> Jika kamu merasa terganggu, aku tidak akan bicara kepadamu lagi. </html>]]></talk_answer>
+      <talk_answer link_index="n087_beggar-accepting-c" mid="9" select_type="0"><![CDATA[<html> Hidupmu membosankan. </html>]]></talk_answer>
+      <talk_answer link_index="n087_beggar-accepting-d" mid="10" select_type="0"><![CDATA[<html> Itu bagus, Aku mulai menyukaimu. </html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Beggar Loffy$<BR>Tak ada yang membuatku tertarik kecuali kamu yang menggangguku setiap saat. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Beggar Loffy$<BR>
+Ya! Kota ini penuh dengan orang bodoh. Kamu hanya sedikit lebih baik dari mereka, jadi kupikir akan lebih baik juga jika aku bicara denganmu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Beggar Loffy$<BR>Yaa, terkadang menjengkelkan juga tidak seburuk itu . <FONT color=#7e12d2>(Loffymenggaruk-garuk kepalanya dengant tongkat)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Beggar Loffy$<BR>
+BowBowBow!! Apa? Kamu pikir dirimu itu siapa bicara tentang kehidupanku?! Pergi sana!! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Beggar Loffy$<BR>
+Jangan bersedih! Sepertinya kamu telah sedikit menjadi lebih pintar belakangan ini . </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 8109, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 87, 400 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 87, 100 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 87, 400 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 87, 200 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n087_beggar" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n087_beggar" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n087_beggar" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n087_beggar" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 최근의 관심사에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>87:15000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

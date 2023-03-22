@@ -1,0 +1,51 @@
+   <talk>
+      <npcename>n382_magician_frederik</npcename>
+      <npcid>382</npcid>
+      <startexe>0</startexe>
+      <comment>이전 테마파크 상점 40011
+#169351 관련 테마파크 상점 - 전직업 40011 으로 통합
+
+#193890 테마파크 상점 - 직업별 아이템 수령가능하도록 교체</comment>
+      <npckname mid="1"><![CDATA[Magician Frederick]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="talk" mid="6"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="15"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Magician Frederick$<BR>Hmm? Can I help you?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="12"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Magician Frederick$<BR>This world is so wonderfully diabolical, filled with joyous fun and fearful threats. Pretty much like this Wonderful Theme Park, don't you think? I wonder what you will encounter right here...</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40111,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40112,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40113,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40114,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40115,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40116,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40117,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40118,100);</exe>
+         <exe type="conexe" true="1" false="10">0</exe>
+         <exe type="conexe" true="2" false="11">1</exe>
+         <exe type="conexe" true="3" false="12">2</exe>
+         <exe type="conexe" true="4" false="13">3</exe>
+         <exe type="conexe" true="5" false="14">4</exe>
+         <exe type="conexe" true="6" false="15">5</exe>
+         <exe type="conexe" true="7" false="16">6</exe>
+         <exe type="conexe" true="8" false="17">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,40119,100);</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,382);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+      </conditions>
+      <exelink idx="guildms">18</exelink>
+   </talk>

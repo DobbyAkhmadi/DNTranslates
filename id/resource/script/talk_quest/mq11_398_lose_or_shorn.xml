@@ -1,0 +1,354 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_398_lose_or_shorn</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>398</qid>
+      <designer>김인정</designer>
+      <qlevel>38</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>399</nextqid>
+      <nextqname>mq11_399_go_mate_with</nextqname>
+      <nextqnpc>n519_cian</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Lost the Prophet]]></qkname>
+      <qnpc>
+         <npcid>209</npcid>
+         <npcename>n209_elite_soldier</npcename>
+         <npckname>정예병사 클림드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>393</npcid>
+         <npcename>n393_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>519</npcid>
+         <npcename>n519_cian</npcename>
+         <npckname>워리어 시안</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>528</npcid>
+         <npcename>n528_acamedic_jasmin</npcename>
+         <npckname>아카데믹 자스민</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>532</npcid>
+         <npcename>n532_rambert</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n532_rambert-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Bulky Adventurer$<BR>...Biasanya aku tidak menggunakan kekerasan ketika menghadapi gadis kecil...<BR><FONT color=#7e12d2>(Tersenyum dengan sinis, seorang laki-laki menatap  {user_nick})</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-noquest" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Warrior Xian$<BR>Karena aku... Gerraint...<BR>
+Ahh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-noquest" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_CG_Jasmin_sp_05.ogg}<BR>Apa yang kamu lakukan? Ambil Prophet kembali!!<BR>Kamu tidak melupakan misi kamu, kan? Kamu tidak melupakan takdir kamu yang berharga kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="246"><![CDATA[<html>$King Cassius$<BR>Mengapa ini bisa terjadi... Apa yang menimpa sang Prophet...? *Mumbling*<BR>Wahai para ksatria Cassius... Apa yang harus kulakukan? *Mumbling*...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-accepting" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-accepting-a" mid="380" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Elite Soldier Carlrim$<BR>Prophet dan Bishop Ignacio hilang.<BR>
+Royal Palace dalam keadaan darurat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-accepting-a" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-accepting-acceptted" mid="382" select_type="3" />
+      <talk_question mid="381"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu tahu kemana dia pergi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n209_elite_soldier-1" image="QW_HermaltePort.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n209_elite_soldier-1-" mid="383" select_type="5" />
+      <talk_question mid="326"><![CDATA[<html>$Elite Soldier Carlrim$<BR>Aku menerima laporan bahwa dia pergi ke Hermalte Port.<BR>
+Elite Soldier mengejarnya... Tapi aku tidak tahu apa yang akan terjadi.<BR><BR><FONT color=#7e12d2>※ Tidak bisa melanjutkan dalam party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-" mid="384" select_type="5" />
+      <talk_question mid="327"><![CDATA[<html>$Tinkerer Station$<BR>▶ Mission Objective.<BR><FONT color=#7e12d2>▷ Pergi ke Hermalte Port.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-" mid="385" select_type="5" />
+      <talk_question mid="328"><![CDATA[<html>$King Cassius$<BR>Bagaimana ini bisa terjadi... Apa yang terjadi pada Prophet...? (Menggerutu)<BR>Kakekku, Knight King Cassius yang hebat... Apa yang kamu lakukan jika kamu dalam posisiku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n532_rambert-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Warrior_Lambert.dds" center_image="">
+      <talk_answer link_index="n532_rambert-1-" mid="386" select_type="5" />
+      <talk_question mid="329"><![CDATA[<html>$Bulky Adventurer$<BR>...Biasanya aku tidak melakukan kekerasan pada anak kecil....<BR><FONT color=#7e12d2>(Sambil tersenyum sinis, seorang pria menatap {user_nick})</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-1-" mid="387" select_type="5" />
+      <talk_question mid="330"><![CDATA[<html>$Warrior Xian$<BR>Gerraint... Karena aku, he....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n532_rambert-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Warrior_Lambert.dds" center_image="">
+      <talk_answer link_index="n532_rambert-2-a" mid="388" select_type="2" />
+      <talk_question mid="332"><![CDATA[<html>$Bulky Adventurer$<BR>...Aku tidak ingin melakukan kekerasan pada anak kecil....<BR><FONT color=#7e12d2>(Tersenyum ketus, seorang pria menatap {user_nick})</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n532_rambert-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Warrior_Lambert.dds" center_image="">
+      <talk_answer link_index="n532_rambert-2-b" mid="390" select_type="2" />
+      <talk_question mid="389"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Buat jalan! Aku harus pergi dan mengambil kembali Prophet...!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n532_rambert-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Warrior_Lambert.dds" center_image="">
+      <talk_answer link_index="n532_rambert-2-c" mid="391" select_type="2" />
+      <talk_question mid="334"><![CDATA[<html>$Bulky Adventurer$<BR>Maaf.<BR>
+Aku juga punya alasan sendiri untuk membawa Prophet.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n532_rambert-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Warrior_Lambert.dds" center_image="">
+      <talk_answer link_index="n532_rambert-2-d" mid="393" select_type="2" />
+      <talk_question mid="392"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Siapa kamu?! Berikan Prophet padaku!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n532_rambert-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Warrior_Lambert.dds" center_image="">
+      <talk_answer link_index="n532_rambert-2-chgmap3" mid="394" select_type="2" />
+      <talk_question mid="336"><![CDATA[<html>$Bulky Adventurer$<BR>Nak, kamu tidak bisa merayuku dengan air mata.<BR>Sekarng, saatnya berpisah.<BR>
+<FONT color=#7e12d2>(Adventurer mengayunkan pukulannya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-a" mid="395" select_type="2" />
+      <talk_question mid="338"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_CG_Jasmin_sp_03.ogg}<BR>Kamu kehilangan Prophet??<BR>Siapa pria asing itu yang tiba-tiba muncul begitu saja?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-b" mid="397" select_type="2" />
+      <talk_question mid="396"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku tidak tahu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-c" mid="398" select_type="2" />
+      <talk_question mid="340"><![CDATA[<html>$Tinkerer Jasmine$<BR>Bagaimana kita  mengejarnya sedangkan kita tidak tahu siapa dia??<BR>Kita hampir mendapatkan Prophet... Kehilangan dia begitu saja...!<BR>
+<FONT color=#7e12d2>(Jasmine sedih.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-d" mid="400" select_type="2" />
+      <talk_question mid="399"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Maaf.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-e" mid="401" select_type="2" />
+      <talk_question mid="343"><![CDATA[<html>$Tinkerer Jasmine$<BR>...Aku tidak menyalahkanmu. Tapi kita tidak ada waktu.<BR>Kita tidak tahu sampai kapan Velskud bisa bertahan...Dia dengan susah mempertahankan tempat ini, kamu tahu itu kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-f" mid="403" select_type="2" />
+      <talk_question mid="402"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ya aku tahu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-g" mid="404" select_type="2" />
+      <talk_question mid="345"><![CDATA[<html>$Tinkerer Jasmine$<BR>Tidak ada catatan bahwa dia akan muncul di Lotus Marsh.<BR>Tapi sampai saat itu, di.... <FONT color=#7e12d2>(Jasmine menghela napas.)</FONT><BR>
+Dia bukan tipe orang yang bisa dirayu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-4" mid="406" select_type="2" />
+      <talk_question mid="405"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tapi aku akan tetap pergi dan memeriksanya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-4" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-4-" mid="407" select_type="5" />
+      <talk_question mid="347"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_CG_Jasmin_sp_07.ogg}<BR>Yah....<BR>Periksa apakah ada petunjuk yang ditinggalkan di <FONT color=#a82424>Royal Palace Basement</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-4" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-4-a" mid="408" select_type="2" />
+      <talk_question mid="349"><![CDATA[<html>$King Cassius$<BR>Aku tidak percaya Prophet hilang... Apa yang harus aku lakukan sekarang...<BR>Apakah ini semua karena aku tidak cocok menjadi raja....?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-4-a" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-4-b" mid="410" select_type="2" />
+      <talk_question mid="409"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Bukan salahmu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-4-" mid="411" select_type="5" />
+      <talk_question mid="352"><![CDATA[<html>$King Cassius$<BR>Gadis pemberani... Kamu akan meninggalkan aku juga?<BR>
+Jangan pergi....<BR><FONT color=#7e12d2>(Cassius menangis.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-4" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-4-a" mid="412" select_type="2" />
+      <talk_question mid="353"><![CDATA[<html>$Warrior Xian$<BR>Karena aku... <FONT color=#a82424>Gerraint</FONT>...<BR>
+Ahh....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-4-a" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-4-b" mid="414" select_type="2" />
+      <talk_question mid="413"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Xian?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-4-b" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-4-c" mid="415" select_type="2" />
+      <talk_question mid="355"><![CDATA[<html>$Warrior Xian$<BR><FONT color=#387206>{user_nick}</FONT>, aku harus apa... <FONT color=#7e12d2>(Warrior Xian terlihat sedih)</FONT><BR>
+Karena aku, Gerraint.......<BR><FONT color=#7e12d2>(Dia tidak bisa menyelesaikan kalimatnya)</FONT> Ahh... semua salahku......!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-4-c" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-4-d" mid="417" select_type="2" />
+      <talk_question mid="416"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tenang.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-4-e" mid="418" select_type="2" />
+      <talk_question mid="357"><![CDATA[<html>$Warrior Xian$<BR>Tapi... Karena kebodohanku, Gerraint mati...<BR>
+Ahh... <FONT color=#7e12d2>(Xian menangis)<BR></FONT>...Dan karena aku, Serpentra bangkit, dan aku membawa Gerraint, dan dia... mati....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-4-f" mid="420" select_type="2" />
+      <talk_question mid="419"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Itu bukan salahmu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-4-f" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-4-g" mid="421" select_type="2" />
+      <talk_question mid="359"><![CDATA[<html>$Warrior Xian$<BR>Semua salahKU!! Sekarang, <FONT color=#a82424>Rose</FONT> pergi juga.<BR>
+Aku tidak pernah mengira <FONT color=#a82424>Ignacio</FONT> orang yang jahat....<BR>Seandainya aku lebih hati-hati! Seharusnya aku mendengarkanmu, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-4-g" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-4-h" mid="423" select_type="2" />
+      <talk_question mid="422"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa yang kamu rencanakan sekarang?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-4-!next" mid="424" select_type="4" />
+      <talk_question mid="361"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">398</exe>
+         <exe type="talk" npc="n209_elite_soldier">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,12,4);</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">3980,,,,,,,,</exe>
+         <exe type="complete" true="">398</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n209_elite_soldier" sub="acceptted">0,1</exelink>
+   <exelink qstep="2" npc="n532_rambert" sub="b" />
+   <exelink qstep="2" npc="n532_rambert" sub="c" />
+   <exelink qstep="2" npc="n532_rambert" sub="d" />
+   <exelink qstep="2" npc="n532_rambert" sub="chgmap3">1,2,0</exelink>
+   <exelink qstep="3" npc="n393_academic_station" sub="b" />
+   <exelink qstep="3" npc="n393_academic_station" sub="c" />
+   <exelink qstep="3" npc="n393_academic_station" sub="d" />
+   <exelink qstep="3" npc="n393_academic_station" sub="e" />
+   <exelink qstep="3" npc="n393_academic_station" sub="f" />
+   <exelink qstep="3" npc="n393_academic_station" sub="g" />
+   <exelink qstep="3" npc="n393_academic_station" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n040_king_casius" sub="b" />
+   <exelink qstep="4" npc="n040_king_casius" sub="" />
+   <exelink qstep="4" npc="n519_cian" sub="b" />
+   <exelink qstep="4" npc="n519_cian" sub="c" />
+   <exelink qstep="4" npc="n519_cian" sub="d" />
+   <exelink qstep="4" npc="n519_cian" sub="e" />
+   <exelink qstep="4" npc="n519_cian" sub="f" />
+   <exelink qstep="4" npc="n519_cian" sub="g" />
+   <exelink qstep="4" npc="n519_cian" sub="h">0</exelink>
+   <exelink qstep="4" npc="n519_cian" sub="!next">1</exelink>
+   <journal_data recompense="3980" quest_title="잃어버렸습니다" chapterid="5" quest_level="38" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_HermaltePort.dds</contents_image>
+         <destination_pos>12,0,0</destination_pos>
+         <destination_mode>custom:12@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="364"><![CDATA[Lost the Prophet I]]></title>
+         <contents mid="365"><![CDATA[<html>Ignacio, yang menculik sang Prophet, mungkin telah pergi ke Hermalte Port. Kejar dia.<BR>
+<BR><FONT color=#7e12d2>※ Tidak dapat melanjutkan Quest ketika berada dalam Party.<BR></FONT><FONT color=#086171></FONT><BR>
+<FONT color=#086171>Hermalte Port</FONT></html>]]></contents>
+         <destination mid="366"><![CDATA[(Solo) Kejar Bishop ke Hermalte Port]]></destination>
+         <todo_msg mid="367"><![CDATA[Pergi ke Hermalte Port untuk menemukan Bishop dan Prophet.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_HermaltePort.dds</contents_image>
+         <destination_pos>12,n532</destination_pos>
+         <destination_mode>custom:12@1</destination_mode>
+         <statemark_npcid>532</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="368"><![CDATA[Lost the Prophet II]]></title>
+         <contents mid="369"><![CDATA[<html>Hampir menangkap Ignacio, tapi seorang Adventurer yang tidak dikenal menghalangi.<BR>
+<BR><FONT color=#7e12d2>※ Tidak dapat melanjutkan Quest ketika berada dalam Party.<BR></FONT><FONT color=#086171></FONT><BR>
+<FONT color=#086171>Hermalte Port</FONT> <FONT color=#a82424>→ ???</FONT></html>]]></contents>
+         <destination mid="370"><![CDATA[(Solo) Bicara pada orang asing di Hermalte Port]]></destination>
+         <todo_msg mid="371"><![CDATA[Seseorang yang asing muncul. Bicaralah padanya.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="372"><![CDATA[Lost the Prophet III]]></title>
+         <contents mid="373"><![CDATA[<html>Benar-benar kehilangan sang Prophet. Ini merupakan kesalahan yang tidak dapat dimaafkan... tapi pertama-tama, hubungi Jasmine dan laporkan situasi ini.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="374"><![CDATA[Hubungkan ke Tinkerer Station]]></destination>
+         <todo_msg mid="375"><![CDATA[Kehilangan Prophet. Hubungkan ke Tinkerer Station.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Cian.dds</contents_image>
+         <destination_pos>13014,n519</destination_pos>
+         <destination_mode>custom:13014@1</destination_mode>
+         <statemark_npcid>519</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="376"><![CDATA[Lost the Prophet IV]]></title>
+         <contents mid="377"><![CDATA[<html>Pergi ke Secret Basement Area Royal Palace untuk melihat apakah ada petunjuk yang tertinggal.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven Royal Palace(Secret Basement Area)</FONT></html>]]></contents>
+         <destination mid="378"><![CDATA[Bicara pada seseorang di Secret Basement Area Royal Palace]]></destination>
+         <todo_msg mid="379"><![CDATA[Kembali ke ruang bawah tanah di Saint's Haven Royal Palace.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>397</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

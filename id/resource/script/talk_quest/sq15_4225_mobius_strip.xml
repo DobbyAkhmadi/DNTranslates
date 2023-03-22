@@ -1,0 +1,125 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_4225_mobius_strip</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4225</qid>
+      <designer>김인정</designer>
+      <qlevel>70</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[The Mobius Strip]]></qkname>
+      <qnpc>
+         <npcid>737</npcid>
+         <npcename>n737_sarasa</npcename>
+         <npckname>원정대 관리자 사라사</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="9" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="175"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n737_sarasa-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n737_sarasa-1-a" mid="186" select_type="0"><![CDATA[<html>Mobius world? Apa itu?</html>]]></talk_answer>
+      <talk_question mid="184"><![CDATA[<html>$Fellowship Manager Sarasa$<BR>
+Selamat datang, <FONT color=#387206>{user_class} {user_nick}</FONT>.<BR>
+Aku Fellowship Manager Sarasa.<BR>
+Tugasku menuntun fellowship traveller ke Mobius World.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n737_sarasa-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n737_sarasa-1-b" mid="188" select_type="0"><![CDATA[<html>(Lanjutkan) </html>]]></talk_answer>
+      <talk_question mid="187"><![CDATA[<html>$Fellowship Manager Sarasa$<BR>
+Dengan adanya serangan dari masa depan, waktu dan ruang dunia kami terganggu.<BR>Saat proses pengembalian otomatis ke kondisi semula, dunia kami telah mengeluarkan dunia buruk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n737_sarasa-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n737_sarasa-1-c" mid="191" select_type="0"><![CDATA[<html>(Lanjutkan) </html>]]></talk_answer>
+      <talk_question mid="189"><![CDATA[<html>$Fellowship Manager Sarasa$<BR>Dan dunia itu adalah Mobius World.<BR>Kamu bertanggungjawa untuk membuat Mobius World dan dunia kita menjadi <FONT color=#a82424>selaras</FONT> dengan mengalahkan monster disana.<BR>
+Dengan begitu, kita bisa mengembalikan kedamaian ke dunia yang telah kacau ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n737_sarasa-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n737_sarasa-1-d" mid="193" select_type="0"><![CDATA[<html><FONT color=#086171>(Terima reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="192"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n737_sarasa-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="194"><![CDATA[<html>$Fellowship Manager Sarasa$<BR>
+…Peraturan yang ada di dunia itu berbeda dengan yang ada di dunia kita.<BR>
+Peraturan tidak ada di area itu, jadi berhati-hatilah jangan sampai tersesat.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">4225,,,,,,,,,</exe>
+         <exe type="setquest">5225</exe>
+         <exe type="talk" npc="n999_remote">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">42250,,,,,,,,,</exe>
+         <exe type="complete" true="">4225</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">1</exelink>
+   <exelink qstep="1" npc="n737_sarasa" sub="b" />
+   <exelink qstep="1" npc="n737_sarasa" sub="c">0</exelink>
+   <exelink qstep="1" npc="n737_sarasa" sub="d">1</exelink>
+   <journal_data recompense="42250" quest_title="뫼비우스의 띠" chapterid="" quest_level="70" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Sarasa.dds</contents_image>
+         <destination_pos>36,n737</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>737</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="90"><![CDATA[Fellowship Of Dragon. Invitation to the Mobius World]]></title>
+         <contents mid="91"><![CDATA[<html>Mobius World tercipta dari pertentangan dan penyimpangan pada dunia nyata...<BR>Fellowship Of Dragon dibuat  untuk menyingkirkan penyimpangan tersebut dengan menjadikan Mobius World selaras dengan dunia nyata. Dengarkan Fellowship Manager Sarasa di Garden of Time and Space untuk detailnya.<BR><BR><FONT color=#086171>Saint's Haven (Garden of Time and Space)</FONT> <FONT color=#a82424>- Garden of Time and Space (Fellowship Manager Sarasa)</FONT></html>]]></contents>
+         <destination mid="92"><![CDATA[Bicara dengan Fellowship Manager Sarasa di Garden of Time and Space]]></destination>
+         <todo_msg mid="93"><![CDATA[Bicara dengan Fellowship Manager Sarasa di Garden of Time and Space.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>70:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,140 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>gq34_3474_n417_sanddust_hard</qename>
+      <qtype>venturerquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>3474</qid>
+      <designer>정진호</designer>
+      <qlevel>66</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Guild Quest] Ancient People]]></qkname>
+      <qnpc>
+         <npcid>417</npcid>
+         <npcename>n417_guild_board</npcename>
+         <npckname>모험자 길드 게시판</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n417_guild_board-accepting" image="GQ_hard.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n417_guild_board-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Lanjutkan) </html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Bulletin Board$<BR>saat ini, <FONT color=#a82424>[Guild Quest] Ancient People</FONT> sedang dijalankan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n417_guild_board-accepting-a" image="GQ_hard.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n417_guild_board-accepting-b" mid="72" select_type="0"><![CDATA[<html><FONT size=2 face=Arial>Sea of Sand Dust</FONT> - Selesaikan tingkat kesulitan hard atau diatasnya</html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Adventurer's Guild Bulletin Board$<BR>Silahkan cap selesai di bawah ini bagi Adventurer yang telah menyelesaikan Quest.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n417_guild_board-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n417_guild_board-accepting-c" mid="11" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Referral Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n417_guild_board-accepting-c" image="GQ_hard.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Adventurer's Guild Bulletin Board$<BR>Telah menyelesaikan Adventurer's Guild Quest.<BR><BR><FONT color=#a82424>[Adventurer's Guild Organization]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n417_guild_board-1" image="GQ_hard.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Adventurer's Guild Bulletin Board$<BR>saat ini, <FONT color=#a82424>[Guild Quest] Ancient People</FONT> sedang dijalankan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n417_guild_board-2" image="GQ_hard_end.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n417_guild_board-2-a" mid="22" select_type="0"><![CDATA[<html>[Quest Complete] <FONT color=#086171>Ancient People</FONT></html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Adventurer's Guild Bulletin Board$<BR>Silahkan cap selesai di bawah ini bagi Adventurer yang telah menyelesaikan Quest.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n417_guild_board-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n417_guild_board-2-b" mid="24" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Referral Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n417_guild_board-2-b" image="GQ_hard_end.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="25"><![CDATA[<html>$Adventurer's Guild Bulletin Board$<BR>Telah menyelesaikan Adventurer's Guild Quest.<BR><BR><FONT color=#a82424>[Adventurer's Guild Organization]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="stageConstructionLevel" op="]=">2</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">3474</exe>
+         <exe type="recompense_view">34740,,,,,,,,,</exe>
+         <exe type="checkStageClearRank" rand="6" num="761" onexe="3" true="[=" xsi:nil="true" />
+         <exe type="conexe" true="4,5,6" false="">0</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">34740,,,,,,,,,</exe>
+         <exe type="complete" true="">3474</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n417_guild_board" sub="b">1</exelink>
+   <exelink qstep="accepting" npc="n417_guild_board" sub="c">0,2</exelink>
+   <exelink qstep="2" npc="n417_guild_board" sub="a">0</exelink>
+   <exelink qstep="2" npc="n417_guild_board" sub="b">1</exelink>
+   <journal_data recompense="34740" quest_title="[길드의뢰] 고인" chapterid="" quest_level="66" quest_mark_type="19" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_76.dds</contents_image>
+         <destination_pos>761,0,0</destination_pos>
+         <destination_mode>custom:761@3</destination_mode>
+         <statemark_npcid>417</statemark_npcid>
+         <statemark_type>20</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="42"><![CDATA[Selesaikan Sea of Sand Dust]]></title>
+         <contents mid="43"><![CDATA[<html>Selesaikan Sea of Sand Dust pada tingkat Hard atau diatasnya.<BR><BR><FONT color=#086171>Anu Arendel (Desert of Waves Entrance) <FONT color=#a82424>→ Sea of Sand Dust</FONT></FONT></html>]]></contents>
+         <destination mid="44"><![CDATA[<html>$[Guild Quest] Ancient People$<BR> Guild Quest telah diterima.<BR><FONT color=#a82424>Sea of Sand Dust</FONT> selesaikan dengan minimal tingkat kesulitan <FONT color=#a82424>Hard</FONT>.</html>]]></destination>
+         <todo_msg mid="45"><![CDATA[Quest Adventurer's Guild telah ditambah. ]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_guild_board.dds</contents_image>
+         <destination_pos>34,n417</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>417</statemark_npcid>
+         <statemark_type>21</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="46"><![CDATA[Lapor selesai Quest ke Adventurer's Bulletin Board]]></title>
+         <contents mid="47"><![CDATA[<html>Lapor untuk menyelesaikan Quest ke Adventurer's Bulletin Board yang ada di Wave Desert Entrance di daerah Anu Arendel Gateway.<BR><BR><FONT color=#086171>Anu Arendel Gateway <FONT color=#a82424>→ Adventurer's Guild Bulletin Board</FONT></FONT></html>]]></contents>
+         <destination mid="48"><![CDATA[Lapor request ke Adventurer's Bulletin Board]]></destination>
+         <todo_msg mid="49"><![CDATA[Quest Adventurer's Guild telah selesai.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>60:-1</user_level>
+      <user_class />
+      <prev_quest>3473</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

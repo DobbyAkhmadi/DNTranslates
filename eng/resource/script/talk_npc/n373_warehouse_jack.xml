@@ -1,0 +1,27 @@
+   <talk>
+      <npcename>n373_warehouse_jack</npcename>
+      <npcid>373</npcid>
+      <startexe>0</startexe>
+      <comment>농장용이라 길드 창고는 제외</comment>
+      <npckname mid="1"><![CDATA[Warehouse Keeper Jack]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="warehouse_001" mid="3"><![CDATA[<html>[Storage]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="4"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Warehouse Keeper Jack${action:Talk}<BR>With the increasing demand for warehouses, more warehouse keepers were needed around here. That is why me and my brothers were sent here. Do you want to use the storage system?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="6"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Warehouse Keeper Jack$<BR>Our oldest brother is Jim, I'm the second, and our baby brother is John. We are all working as warehouse keepers here.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenWareHouse(userObjID);</exe>
+         <exe type="conexe" true="4" false="1">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_ui_OpenGuildWareHouse (userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_guild_HasGuildWare(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="warehouse_001">1</exelink>
+   </talk>

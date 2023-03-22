@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n1083_triana</npcename>
+      <npcid>1083</npcid>
+      <startexe>1</startexe>
+      <npckname mid="1"><![CDATA[Archer Triana]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="6"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Archer Triana$<BR>
+Aku pikir aku akan senang kembali ke rumah... Tapi ternyata semua sedang kacau sekarang.<BR>
+<FONT color=#7e12d2>(Triana murung)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="8" link_target="mq34_9285_doubtful_encounter.xml"><![CDATA[<html>[Lv60] <FONT color=#a94407>Suspicious Encounter</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="9"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Archer Triana$<BR>Aku ingin membicarakan sesuatu padamu, {user_nick}.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="enterquest">mq34_9285_doubtful_encounter</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+         <exe type="enterquest">mq34_9286_dissonance</exe>
+         <exe type="conexe" true="6" false="0">2</exe>
+         <exe type="enterquest">mq34_9287_the_men_of_question</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9285</chk>
+         <chk type="hasquest">9286</chk>
+         <chk type="hasquest">9287</chk>
+      </conditions>
+   </talk>

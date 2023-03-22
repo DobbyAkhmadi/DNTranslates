@@ -1,0 +1,150 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_4281_hidden_fellow</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4281</qid>
+      <designer>김인정</designer>
+      <qlevel>60</qlevel>
+      <qdesc>데저트드래곤 4인네스트
+서브퀘스트.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>4282</nextqid>
+      <nextqname>sq15_4282_killed_rabbit</nextqname>
+      <nextqnpc>n040_king_casius</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Nest] Hidden Helper]]></qkname>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="10" select_type="0"><![CDATA[<html>Terima Quest</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="91"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="92"><![CDATA[<html>$King Cassius$<BR>Tidak banyak catatan tentang Knight King Cassius.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-2-a" mid="95" select_type="0"><![CDATA[<html>(Lanjutkan) </html>]]></talk_answer>
+      <talk_question mid="93"><![CDATA[<html>$King Cassius$<BR>Hmm? Ini...?! Raja yang dimaksud disini adalah...<BR><FONT color=#a82424>Knight King Cassius</FONT>!<BR><FONT color=#7e12d2>(Cassius heboh sendiri)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-2-b" mid="97" select_type="0"><![CDATA[<html>(Lanjutkan) </html>]]></talk_answer>
+      <talk_question mid="96"><![CDATA[<html>$King Cassius$<BR>Darimana kamu mendapatkan ini? Jangan bilang ke siapa-siapa.<BR>Ceritakan hanya kepada aku.<BR><FONT color=#7e12d2>(Cassius melihat sekitar )</FONT><BR>...Be, begitu ya. Memoria...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-2-c" mid="100" select_type="0"><![CDATA[<html>(Lanjutkan) </html>]]></talk_answer>
+      <talk_question mid="98"><![CDATA[<html>$King Cassius$<BR>Sepertinya catatan ini dibuat oleh jendral pada zaman dipimpin oleh <FONT color=#a82424>Knight King Cassius</FONT>....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-2-d" mid="102" select_type="0"><![CDATA[<html><FONT color=#086171>(Terima reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="101"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-2-!next" mid="108" select_type="0"><![CDATA[<html>(Lanjutkan) </html>]]></talk_answer>
+      <talk_question mid="107"><![CDATA[<html>$King Cassius$<BR>
+Langka tapi bukan catatan resmi.<BR><FONT color=#7e12d2>(Cassius melihat catatan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">4281</exe>
+         <exe type="recompense_view">42810,,,,,,,,,</exe>
+         <exe type="checkStageClearRank" rand="6" num="14211" onexe="3,4,5" true="[=" xsi:nil="true" />
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">42810,,,,,,,,,</exe>
+         <exe type="complete" true="">4281</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">0,2</exelink>
+   <exelink qstep="2" npc="n040_king_casius" sub="b" />
+   <exelink qstep="2" npc="n040_king_casius" sub="c">0</exelink>
+   <exelink qstep="2" npc="n040_king_casius" sub="d">1</exelink>
+   <exelink qstep="2" npc="n040_king_casius" sub="!next" />
+   <journal_data recompense="42810" quest_title="[네스트] 감춰진 조력자" chapterid="" quest_level="60" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Desert_Dragon.dds</contents_image>
+         <destination_pos>14211,0,0</destination_pos>
+         <destination_mode>custom:14211@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="70"><![CDATA[Hidden Helper]]></title>
+         <contents mid="71"><![CDATA[<html>Catatan rahasian menyangkut Desert Dragon berkeliaraan di padang pasir.<BR>Katanya bisa mendapatkan informasi di Memoria .<BR><BR><FONT color=#086171>Saint's Haven(Garden of Time and Space Gateway)<FONT color=#2b2723> </FONT><FONT color=#a82424>- Garden of Time and Space(Desert Dragon Nest Extroversion:Memoria ) - Memoria Part II</FONT></FONT></html>]]></contents>
+         <destination mid="72"><![CDATA[Cari lost record di Memoria Part II]]></destination>
+         <todo_msg mid="73"><![CDATA[Silahkan cari lost record di Memoria.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>21,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="103"><![CDATA[General Tirus's Memory Fragment]]></title>
+         <contents mid="104"><![CDATA[<html>( <FONT color=#a82424>-General Tirus's Memory Fragment-<BR></FONT><FONT color=#7e12d2>...Siapa yang menyangka? Aisha, gadis itu membantu kemenangan kita.<BR>Semua ini berkat kemampuan raja kita.<BR>Masa berjaya kerajaan kita sebentar lagi.</FONT>)<BR>
+ <BR>
+Telah mendapatkan catatan lama. Sepertinya kata raja menjadi petunjuk. Coba ke istana.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven Palace</FONT> <FONT color=#a82424>- King Cassius</FONT></html>]]></contents>
+         <destination mid="105"><![CDATA[King Cassius diajak bicara]]></destination>
+         <todo_msg mid="106"><![CDATA[Telah mendapatkan catatan tua. Berikan kepada King Cassius.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>60:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

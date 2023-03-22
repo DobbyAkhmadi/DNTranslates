@@ -1,0 +1,74 @@
+   <talk>
+      <npcename>n2786_v_eltia</npcename>
+      <npcid>2786</npcid>
+      <startexe>2</startexe>
+      <comment>4608 렌시아 전직 선물-아이린
+
+3,5,6,7,8,9,10</comment>
+      <npckname mid="1"><![CDATA[Eltia Justitia]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="002" mid="16"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Eltia. </FONT><FONT color=#662500>It's late. Hadn't we better get some sleep?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="003" mid="17"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Eltia$<BR>No, not yet.<BR>I'd like to talk a little more first.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="004" mid="25"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yawwwn... My eyelids are heavy.</FONT><BR><FONT color=#662500>Could this be because of that nightmare yesterday?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_answer link_index="005" mid="26"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="20"><![CDATA[<html>$Eltia${action:Talk}<BR>But I've had the same dream for days now……</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="005" image="" itemindex="">
+         <talk_answer link_index="006" mid="27"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tell me! What did you dream?</FONT><BR>
+<FONT color=#662500>It's less scary if you talk about it to get it out of your system.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="006" image="" itemindex="">
+         <talk_answer link_index="end_talk" mid="30"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="24"><![CDATA[<html>$Eltia$<BR>Erm... well….</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_v" image="" itemindex="">
+         <talk_question mid="33"><![CDATA[<html>$Eltia$<BR>Yaaaawn……<BR><BR><FONT color=#7e12d2>(Eltia falls asleep.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="c_3765_1" image="" itemindex="">
+         <talk_answer link_index="c_3765_2" mid="45"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="36"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>……That voice?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="c_3765_2" image="" itemindex="">
+         <talk_answer link_index="c_3765_3" mid="46"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="38"><![CDATA[<html>$Eltia$<BR>
+Yaaawn……<BR><BR>
+<FONT color=#7e12d2>(Eltia sleeps peacefully with her eyelids tightly shut.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="c_3765_3" image="" itemindex="">
+         <talk_answer link_index="end_talk2" mid="47"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="40"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>She can't have fallen asleep? Heehee, she's cute……<BR>Perhaps I should throw another log on the fire?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3765, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="11" false="4">0</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 99 );</exe>
+         <exe type="talk">no_v</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 245, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4608, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4604, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4605, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4606, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 4607, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="12" false="0">1</exe>
+         <exe type="talk">c_3765_1</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3767, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 98</chk>
+         <chk type="hascomq">3765</chk>
+      </conditions>
+      <exelink idx="end_talk">1</exelink>
+      <exelink idx="end_talk2">3,5,6,7,8,9,10,13</exelink>
+   </talk>

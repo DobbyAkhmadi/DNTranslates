@@ -1,0 +1,30 @@
+   <talk>
+      <npcename>n2215_cleric_cedric</npcename>
+      <npcid>2215</npcid>
+      <startexe>8</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Cedric (Arch Heretic)]]></npckname>
+      <talk_paragraph index="001" image="QN_Npc_Cl_Fallen_Cedric.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Cleric Cedric$<BR><FONT color=#7e12d2> (Sepertinya dia pingsan, harus segera dibawa ke kota.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="QN_Npc_Cl_Fallen_Cedric.dds" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Cleric Cedric$<BR><FONT color=#7e12d2> (Dia masih bernafas tapi sepertinya dia ini gelandangan. Mungkin pengorbanan kamu sia-sia.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="0" false="3">2</exe>
+         <exe type="conexe" true="1" false="0">0</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 124, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,135, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 135,1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 135, 1);</exe>
+         <exe type="conexe" true="0,4,5,6,7" false="2">1</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 101, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 84</chk>
+         <chk type="hascomq">998</chk>
+         <chk type="hascomq">135</chk>
+      </conditions>
+   </talk>

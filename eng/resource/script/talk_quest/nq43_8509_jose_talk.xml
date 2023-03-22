@@ -1,0 +1,100 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq43_8509_jose_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>8509</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About the ideal type]]></qkname>
+      <qnpc>
+         <npcid>715</npcid>
+         <npcename>n715_adventurer_guildmaster_hose</npcename>
+         <npckname>모험자 길드장 호세</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-a" mid="8" select_type="0"><![CDATA[<html>That's exactly opposite of your wife</html>]]></talk_answer>
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-b" mid="39" select_type="0"><![CDATA[<html>Ideals are only ideals.</html>]]></talk_answer>
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-c" mid="40" select_type="0"><![CDATA[<html>Your wife must have long hair too</html>]]></talk_answer>
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-d" mid="41" select_type="0"><![CDATA[<html>So did you meet the girl of your dreams?</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>The girl of my dreams is a demure girl with long hair.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>
+What are you talking about?! My wife is just my ideal type!!<BR>
+Though her body may be a little generous and strong like a bear, she still has her demure side.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>
+Huh? That's just the logic of the losers who didn't meet their ideal types.<BR>
+Hehehe, look at me! I met the perfect girl of my dreams!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>
+Yes, she has long hair that's like the mane of a werewolf.<BR>
+<FONT color=#7e12d2>(Jose looks faraway like he's satisfied)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="38"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>
+That's right. My wife is perfectly my ideal type!!<BR>
+See how demure she is.<BR>
+<FONT color=#7e12d2>(Jose needs to rethink the meaning of demure but let this pass)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,8509, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 715, 500 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 715, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 715, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 715, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n715_adventurer_guildmaster_hose" sub="a">0,4</exelink>
+   <exelink qstep="accepting" npc="n715_adventurer_guildmaster_hose" sub="b">0,3</exelink>
+   <exelink qstep="accepting" npc="n715_adventurer_guildmaster_hose" sub="c">0,2</exelink>
+   <exelink qstep="accepting" npc="n715_adventurer_guildmaster_hose" sub="d">0,1</exelink>
+   <journal_data recompense="" quest_title="[대화] 이상형에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>715:17000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,73 @@
+   <talk>
+      <npcename>n2768_kusanagi</npcename>
+      <npcid>2768</npcid>
+      <startexe>5</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Kusanagi]]></npckname>
+      <talk_paragraph index="normal_talk" image="" itemindex="">
+         <talk_answer link_index="buy" mid="13"><![CDATA[<html>[Event Shop]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="14"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="present" mid="43"><![CDATA[<html>[Gift]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Kusanagi${action:Talk}<BR>What's the coordinate of this place?<BR>It looks like it's way too far from the target....</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="100_percent" image="" itemindex="">
+         <talk_answer link_index="buy" mid="15"><![CDATA[<html>[Event Shop]</html>]]></talk_answer>
+         <talk_answer link_index="event_talk" mid="16"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Kusanagi${action:Talk}<BR><FONT color=#387206>{user_nick}</FONT>, I know it's all sudden but I need to tell you something.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="event_complete2" image="" itemindex="">
+         <talk_answer link_index="buy" mid="17"><![CDATA[<html>[Event Shop]</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Kusanagi${action:Talk}<BR>You are here, <FONT color=#387206>{user_nick}</FONT>.<BR>I'm just wondering when are you visiting me again today.<BR>It feels empty if I don't see you in this world.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="21" link_target="eq_2933_guest_from_another_dimension.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Guest from Another Dimension</FONT></html>]]></talk_answer>
+         <talk_question mid="11"><![CDATA[<html>$Kusanagi$<BR>
+I just want to ask you something. Just a minute should be enough.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="event_talk" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="24" link_target="nq49_9163_two_successive_worlds.xml"><![CDATA[<html>[Talk] <FONT color=#086171>Two worlds connected as one</FONT></html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Kusanagi$<BR>It is not a big story. Would you like to listen?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="event_complete1" image="" itemindex="">
+         <talk_answer link_index="buy" mid="29"><![CDATA[<html>[Event Shop]</html>]]></talk_answer>
+         <talk_answer link_index="present" mid="49"><![CDATA[<html>[Gift]</html>]]></talk_answer>
+         <talk_question mid="27"><![CDATA[<html>$Kusanagi${action:Talk}<BR>What's the coordinate of this place?<BR>It looks like it's way too far from the target....</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="present_ui" image="" itemindex="">
+         <talk_answer link_index="gift" mid="44"><![CDATA[<html>(Gift)</html>]]></talk_answer>
+         <talk_answer link_index="back" mid="45"><![CDATA[<html>(Do not Gift)</html>]]></talk_answer>
+         <talk_question mid="33"><![CDATA[<html>$Gift$</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="gift" image="" itemindex="">
+         <talk_question mid="42"><![CDATA[<html>$Kusanagi$<BR>
+Can I take this? Thank you.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">event_complete1</exe>
+         <exe type="talk">event_complete2</exe>
+         <exe type="talk">100_percent</exe>
+         <exe type="talk">normal_talk</exe>
+         <exe type="openshop">100006</exe>
+         <exe type="conexe" true="1" false="6">1</exe>
+         <exe type="conexe" true="2" false="7">2</exe>
+         <exe type="conexe" true="0" false="3">0</exe>
+         <exe type="custom">api_ui_OpenGiveNpcPresent( userObjID, 2768 );</exe>
+         <exe type="custom">api_npc_SendSelectedPresent( userObjID, 2768 );</exe>
+         <exe type="talk">present_ui</exe>
+         <exe type="talk">gift</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,100006,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">2933</chk>
+         <chk type="hascomq">9163</chk>
+         <chk type="custom">api_npc_GetFavorPercent( userObjID, 2768 ) >= 100</chk>
+      </conditions>
+      <exelink idx="buy">12</exelink>
+      <exelink idx="present">8,10</exelink>
+      <exelink idx="buy">4</exelink>
+      <exelink idx="buy">4</exelink>
+      <exelink idx="buy">4</exelink>
+      <exelink idx="present">8,10</exelink>
+      <exelink idx="gift">9,11</exelink>
+      <exelink idx="back">5</exelink>
+   </talk>

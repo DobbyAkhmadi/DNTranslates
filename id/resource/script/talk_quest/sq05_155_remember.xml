@@ -1,0 +1,431 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq05_155_remember</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>155</qid>
+      <designer>곽노찬</designer>
+      <qlevel>9</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>156</nextqid>
+      <nextqname>sq05_156_path_of_jake</nextqname>
+      <nextqnpc>n885_light_pole</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Reveries]]></qkname>
+      <qnpc>
+         <npcid>13</npcid>
+         <npcename>n013_cleric_tomas</npcename>
+         <npckname>클레릭 토마스 (마나리지 클레릭 스킬)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>159</npcid>
+         <npcename>n159_light_pole</npcename>
+         <npckname>빛 기둥_(ID는 빈공란)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>170</npcid>
+         <npcename>n170_cl_saintheaven</npcename>
+         <npckname>신전 기사단 클레릭(해빙의 숲/서브퀘)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>172</npcid>
+         <npcename>n172_cleric_tomas</npcename>
+         <npckname>클레릭 토마스(해빙의 숲)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>173</npcid>
+         <npcename>n173_cleric_jake</npcename>
+         <npckname>클레릭 제이크(해빙의 숲)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>174</npcid>
+         <npcename>n174_cleric_jake</npcename>
+         <npckname>용추종자 제이크(튜토리얼)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>885</npcid>
+         <npcename>n885_light_pole</npcename>
+         <npckname>용추종자 제이크(빛기둥)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-accepting-a" mid="168" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Cleric Thomas$<BR>Hmm...<BR><FONT color=#7e12d2>(Thomas terlihat sedang memikirkan sesuatu.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-accepting-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-accepting-acceptted" mid="170" select_type="2" />
+      <talk_question mid="169"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa yang kamu khawatirkan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-accepting-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-accepting-acceptted" mid="219" select_type="3" />
+      <talk_question mid="15"><![CDATA[<html>$Reveries$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-a" mid="171" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html><FONT color=#2b2723>$Cleric Thomas$<BR>Aku hanya berpikir tentang <FONT color=#a82424>Cleric Jake</FONT>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-b" mid="172" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$Cleric Thomas${action:Talk}<BR>Sesuatu menggangguku sejak awal...<BR>Hanya saja aku tidak tahu apa itu.<BR>Aku merasa ada yang sesuatu yang penting terlewat oleh kita.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-c" mid="174" select_type="2" />
+      <talk_question mid="173"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Bukannya semua sudah berakhir?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-c" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-d" mid="175" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>$Cleric Thomas$<BR>Aku mengerti apa yang kamu rasakan tapi tetap, aku pikir kita harus melihat ini lagi.<BR>Kita harus kembali ke masa kamu pertama kali tiba di <FONT color=#a82424>Mana Ridge</FONT>. Jika kita melacak ulang jejak <FONT color=#a82424>Cleric Jake</FONT> dari awal, aku yakin kita akan menemukan sesuatu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-e" mid="177" select_type="2" />
+      <talk_question mid="176"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(Apa maksudmu dari awal lagi?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-e" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-f" mid="178" select_type="2" />
+      <talk_question mid="160"><![CDATA[<html>$Cleric Thomas$<BR>Di malam saat Orb dicuri, <FONT color=#a82424>Jake</FONT> ada di dalam <FONT color=#a82424>tim</FONT> yang mengejar Dragon Follower.<BR>Sebelum tim pencarian dikirim, aku ada bersamanya dari Mana Ridge ke <FONT color=#a82424>Frost Wind Forest</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-f" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-g" mid="179" select_type="2" />
+      <talk_question mid="162"><![CDATA[<html>$Cleric Thomas$<BR>Ada banyak hal yang tidak kumengerti.<BR>Aku tidak mengerti bagaimana dia melakukannya begitu cepat tanpa dicurigai oleh yang lainnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-h" mid="180" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Cleric Thomas$<BR>Hanya kamu dan aku yang tahu seluruh kebenarannya.<BR>Kita berdua ingin kebenaran tentang <FONT color=#a82424>Jake</FONT> tetap rahasia, jadi aku berharap kamu akan mengambil misi ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-h" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-i" mid="181" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>$Cleric Thomas$<BR>Karena kamu akan meninggalkan tempat ini, setidaknya kamu bisa menemukan kebenarannya sebelum kamu pergi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-j" mid="183" select_type="2" />
+      <talk_question mid="182"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku akan mengikuti perintahmu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-1-j" image="QW_BlizzardPlain.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n013_cleric_tomas-1-" mid="184" select_type="5" />
+      <talk_question mid="111"><![CDATA[<html>$Cleric Thomas${action:Talk}<BR>Kalau begitu, coba ingat kembali langkah-langkahmu, dimulai dari <FONT color=#a82424>Blizzard Plain</FONT>.<BR>Ayo coba menghitung kembali semuanya mulai dari <FONT color=#a82424>Cleric Jake</FONT> memerintahkan monster untuk menyerang kereta <FONT color=#a82424>Leonard</FONT> dan <FONT color=#a82424>Cleric Cedric</FONT>.<BR><FONT color=#7e12d2>※ Kamu tidak dapat melanjutkan jika di dalam party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n159_light_pole-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n159_light_pole-2" mid="185" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Memory of the Site$<BR><FONT color=#7e12d2>(Disini tempat dimana Templar Knights berkumpul ketika tiba di Mana Ridge.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n170_cl_saintheaven-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n170_cl_saintheaven-1-" mid="186" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Templar Knight Cleric$<BR>Semoga Goddess memberkatimu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n170_cl_saintheaven-1-a" image="QW_ManaRidge.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="22"><![CDATA[<html>$Temple Knight Cleric$<BR>Apakah <FONT color=#a82424>Mana Ridge</FONT> di atas sana?<BR>Huh, akhirnya! Setelah perjalanan panjang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n170_cl_saintheaven-1-b" image="QN_DragonSycophant.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="23"><![CDATA[<html>$Temple Knight Cleric$<BR>Kita menghancurkan perkumpulan iblis <FONT color=#a82424>Dragon Followers</FONT>, mereka yang menentang Goddess.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n172_cleric_tomas-1" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n172_cleric_tomas-1-" mid="187" select_type="5" />
+      <talk_question mid="24"><![CDATA[<html>$Cleric Thomas${action:Talk}<BR><FONT color=#419300>{user_nick}</FONT>, kamu dan <FONT color=#a82424>Cleric Jake</FONT> yang paling menderita sepanjang perjalanan.<BR>Karenamu lah, kami berhasil sampai dengan selamat di <FONT color=#a82424>Mana Ridge</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n173_cleric_jake-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n173_cleric_jake-1-" mid="188" select_type="5" />
+      <talk_question mid="25"><![CDATA[<html>$Cleric Jake${action:Talk}<BR>Mengingat ini adalah misi pertamamu, pekerjaanmu sangat bagus.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n174_cleric_jake-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n174_cleric_jake-1-" mid="189" select_type="5" />
+      <talk_question mid="26"><![CDATA[<html>$Cleric Jake$<BR><FONT color=#7e12d2>(Jake memberikan perintah kepada monster.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n885_light_pole-1-" mid="190" select_type="5" />
+      <talk_question mid="100"><![CDATA[<html>$Cleric Jake$<BR><FONT color=#7e12d2>(Jake memberikan perintah kepada monster.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n159_light_pole-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n159_light_pole-2-w_155_2" mid="191" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>$Memory of the Site$<BR><FONT color=#7e12d2>(Mengingat apa yang terjadi disini.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n013_cleric_tomas-2" image="QW_BlizzardPlain.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_question mid="226"><![CDATA[<html>$Cleric Thomas${action:Talk}<BR>Kalau begitu, coba ingat kembali langkah-langkahmu, dimulai dari <FONT color=#a82424>Blizzard Plain</FONT>.<BR>Ayo coba menghitung kembali semuanya mulai dari <FONT color=#a82424>Cleric Jake</FONT> memerintahkan monster untuk menyerang kereta <FONT color=#a82424>Leonard</FONT> dan <FONT color=#a82424>Cleric Cedric</FONT>.<BR><FONT color=#7e12d2>※ Kamu tidak dapat melanjutkan jika di dalam party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n172_cleric_tomas-3" image="QN_DragonSycophant.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n172_cleric_tomas-3-a" mid="192" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>$Cleric Thomas${action:Talk}<BR>Budak Goddess yang setia, aku memuji kamu semua karena telah berhasil melewati penderitaan untuk memburu <FONT color=#a82424>Dragon Follower</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n172_cleric_tomas-3-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n172_cleric_tomas-3-b" mid="193" select_type="2" />
+      <talk_question mid="118"><![CDATA[<html>$Cleric Thomas$<BR>Seperti kamu semua, aku hanya ingin beristirahat setelah perjalanan panjang.<BR>Namun, kita tidak dapat melonggarkan penjagaan kita sekarang. Kita harus <FONT color=#a82424>berpatroli</FONT> di area sekitar <FONT color=#a82424>Mana Ridge</FONT>, jadi kita bisa bersiap-siap kalau ada keadaan darurat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n172_cleric_tomas-3-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n172_cleric_tomas-3-c" mid="194" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>$Cleric Thomas${action:Talk}<BR>Kita akan merombak ulang di <FONT color=#a82424>Frost Hill</FONT> setelah <FONT color=#a82424>patroli</FONT> selesai.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n172_cleric_tomas-3-c" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n172_cleric_tomas-3-d" mid="195" select_type="2" />
+      <talk_question mid="122"><![CDATA[<html>$Cleric Thomas$<BR><FONT color=#419300>{user_nick}</FONT>, karena kamu dan <FONT color=#a82424>Cleric Jake</FONT> telah melakukan banyak untuk membantu kita sejak awal perjalanan panjang ini mulai dari <FONT color=#a82424>Saint's Haven Cathedral</FONT>, kamu diizinkan kembali duluan ke <FONT color=#a82424>Mana Ridge</FONT> dan beristirahat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n172_cleric_tomas-3-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n172_cleric_tomas-4" mid="197" select_type="2" />
+      <talk_question mid="196"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Itu tidak perlu. Aku ingin ikut berpatroli.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n172_cleric_tomas-4" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Tomas.dds" center_image="">
+      <talk_answer link_index="n172_cleric_tomas-4-" mid="198" select_type="5" />
+      <talk_question mid="124"><![CDATA[<html>$Cleric Thomas$<BR>Haha... Semangat yang bagus!<BR>Baiklah, kalau begitu silahkan patroli di area dekat Mana Ridge dengan <FONT color=#a82424>Jake</FONT>.<BR>dan jangan sampai membuat kalian terlalu lelah, ok?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n173_cleric_jake-4" image="QW_ManaRidge.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n173_cleric_jake-4-a" mid="199" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>$Cleric Jake$<BR>Kamu sudah mendengar dari <FONT color=#a82424>Cleric Thomas</FONT>.<BR>Kita akan <FONT color=#a82424>patroli</FONT> di area dekat <FONT color=#a82424>Mana Ridge</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n173_cleric_jake-4-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n173_cleric_jake-5" mid="201" select_type="2" />
+      <talk_question mid="200"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Apa kamu akan berangkat bersamaan dengan yang lainnya?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n173_cleric_jake-5" image="QW_ManaRidge.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n173_cleric_jake-5-a" mid="202" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>$Cleric Jake${action:Talk}<BR>Tidak. Ayo kita berpencar jadi kita bisa menyelesaikan <FONT color=#a82424>patroli</FONT> lebih cepat. Lagipula, aku tidak yakin area disekitar <FONT color=#a82424>Mana Ridge</FONT> akan berbahaya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n173_cleric_jake-5-a" image="QW_ManaRidge.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n173_cleric_jake-5-" mid="203" select_type="5" />
+      <talk_question mid="129"><![CDATA[<html>$Cleric Jake$<BR>Ayo kita berangkat sekarang!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-5" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n885_light_pole-5-a" mid="204" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>$Cleric Jake$<BR><FONT color=#a82424>Cleric</FONT> yang membawa <FONT color=#a82424>Sage's Staff</FONT> akan segera tiba di tempat ini.<BR><FONT color=#7e12d2>(Jake memberi perintah kepada monster)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-5-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n885_light_pole-5-b" mid="205" select_type="2" />
+      <talk_question mid="133"><![CDATA[<html>$Cleric Jake$<BR>Kamu sebaiknya menyerang disini untuk mendapatkan perhatian mereka dan bawakan <FONT color=#a82424>Sage's Staff</FONT> ke <FONT color=#a82424>Frost Wind Valley</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-5-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n885_light_pole-6" mid="206" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>$Cleric Jake$<BR>Tidak boleh ada kesalahan.<BR>Lakukan yang terbaik untuk melayani Sovereign!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-a" mid="207" select_type="2" />
+      <talk_question mid="135"><![CDATA[<html><BR><FONT color=#7e12d2>(Memori berhenti)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6-a" image="QN_Jake.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-b" mid="208" select_type="2" />
+      <talk_question mid="139"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Sepertinya <FONT color=#a82424>Cleric Jake</FONT> tertarik dengan <FONT color=#a82424>Sage's Staff</FONT> sejak awal.<BR>Artinya siapapun yang memerintahkan Jake berarti mempunyai hubungan dengan <FONT color=#a82424>Dragon Follower</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6-b" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-c" mid="209" select_type="2" />
+      <talk_question mid="144"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Tapi Archbishop lah yang mengirim kita ke Mana Ridge... Apakah itu hanya kebetulan?<BR>Atau seseorang memberitahukan ke Archbishop tentang Dragon Follower...?<BR>Tidak banyak yang bisa aku dapatkan bila aku mencari tahu sendirian.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6-c" image="QS_Default.dds" itemindex="300145" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-d" mid="210" select_type="2" />
+      <talk_question mid="146"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Dan topeng Dragon Folower yang ditemukan di Frost Wind Valley juga mencurigakan.<BR>Kenapa itu ada disana?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6-d" image="QS_Default.dds" itemindex="300144" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-e" mid="211" select_type="2" />
+      <talk_question mid="148"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Tidak seperti rosario milik Cleric, topeng tidak mungkin kebetulan terjatuh.<BR>Mungkin itu untuk mengalihkan perhatian kami... Tidak hanya itu. Topeng itu membuat kecurigaan kami menjadi benar. Jadi....)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6-e" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-f" mid="212" select_type="2" />
+      <talk_question mid="150"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Jake tidak melakukan, tapi dia menggunakan monster-monster itu dengan sengaja dan membuat hal itu lebih sulit untuk dirinya. Sepertinya dia memang tidak ingin bertemu denganku... atau Templar Knight pada saat kejadian.<BR>Tapi dia beraksi sendirian ketika dia mencuri orb dari Cynthia.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-g" mid="213" select_type="2" />
+      <talk_question mid="153"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Jadi pasti ada alasan lain....<BR> Vision Orb yang dicuri juga mencurigakan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-h" mid="214" select_type="2" />
+      <talk_question mid="155"><![CDATA[<html><FONT color=#7e12d2>${user_nick}$<BR></FONT><FONT color=#662500>(Akan lebih mudah jika dia menunggu staff dan orb sama-sama sudah kembali. Sepertinya ada sesuatu yang disembunyikan....<BR>Mungkinkah itu....)</FONT><FONT color=#7e12d2><BR></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-i" mid="224" select_type="4" />
+      <talk_question mid="157"><![CDATA[<html><FONT color=#662500>$Quest Reward$</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n885_light_pole-6-i" image="QN_DragonSycophant.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n885_light_pole-6-!next" mid="222" select_type="4" />
+      <talk_question mid="142"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Mungkin ada lebih dari satu Dragon Follower.<BR>Seseorang selain Jake...?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment>메인퀘스트는 보상을 보여주지 않으므로 b단계는 제거.</comment>
+      <conditions />
+      <executions>
+         <exe type="setquest">155</exe>
+         <exe type="recompense_view">1550,,,,,,,,,</exe>
+         <exe type="talk" npc="n013_cleric_tomas">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>2. 해빙의 숲 퀘스트 이벤트 존으로 이동</comment>
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13004,1);</exe>
+         <exe type="random_coice" rand="10,10,10">4,5,6</exe>
+         <exe type="talk" npc="n170_cl_saintheaven">1</exe>
+         <exe type="talk" npc="n170_cl_saintheaven">a</exe>
+         <exe type="talk" npc="n170_cl_saintheaven">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,13004,1);</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">155</exe>
+         <exe type="recompense">1550,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n013_cleric_tomas" sub="acceptted">0,2</exelink>
+   <exelink qstep="accepting" npc="n013_cleric_tomas" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="b" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="c" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="d" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="e" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="f" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="g" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="h" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="i" />
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="j">0,1</exelink>
+   <exelink qstep="1" npc="n013_cleric_tomas" sub="" />
+   <exelink qstep="1" npc="n159_light_pole" sub="2">0,1</exelink>
+   <exelink qstep="1" npc="n170_cl_saintheaven">3</exelink>
+   <exelink qstep="2" npc="n159_light_pole" sub="w_155_2">1,2,0</exelink>
+   <exelink qstep="3" npc="n172_cleric_tomas" sub="b" />
+   <exelink qstep="3" npc="n172_cleric_tomas" sub="c" />
+   <exelink qstep="3" npc="n172_cleric_tomas" sub="d" />
+   <exelink qstep="3" npc="n172_cleric_tomas" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n173_cleric_jake" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n173_cleric_jake" sub="" />
+   <exelink qstep="5" npc="n885_light_pole" sub="b" />
+   <exelink qstep="5" npc="n885_light_pole" sub="6">0</exelink>
+   <exelink qstep="6" npc="n885_light_pole" sub="b" />
+   <exelink qstep="6" npc="n885_light_pole" sub="c" />
+   <exelink qstep="6" npc="n885_light_pole" sub="d" />
+   <exelink qstep="6" npc="n885_light_pole" sub="e" />
+   <exelink qstep="6" npc="n885_light_pole" sub="f" />
+   <exelink qstep="6" npc="n885_light_pole" sub="g" />
+   <exelink qstep="6" npc="n885_light_pole" sub="h">1</exelink>
+   <exelink qstep="6" npc="n885_light_pole" sub="i">0</exelink>
+   <exelink qstep="6" npc="n885_light_pole" sub="!next" />
+   <journal_data recompense="0:1550" quest_title="기억" chapterid="1" quest_level="9" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Cl_Tomas.dds</contents_image>
+         <destination_pos>5,-518,1452</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>13</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="94"><![CDATA[Bicara pada Master Cleric Thomas.]]></title>
+         <contents mid="95"><![CDATA[<html>Bicara pada Cleric Thomas.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Cleric Thomas</FONT></html>]]></contents>
+         <destination mid="96"><![CDATA[Bicara pada Master Cleric Thomas]]></destination>
+         <todo_msg mid="97"><![CDATA[Tolong bicara dengan Master Cleric Thomas]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_BlizzardPlain.dds</contents_image>
+         <destination_pos>7,n159</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>159</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Reka ulang di Blizzard Plain]]></title>
+         <contents mid="65"><![CDATA[<html>At <FONT color=#a82424>Blizzard Plain</FONT>, melacak ulang kembali, mulai dari <FONT color=#a82424>Templar Knights</FONT> sampai Mana Ridge, dan perhatikan aktivitas <FONT color=#a82424>Jake</FONT> .<BR> <BR><FONT color=#7e12d2>※ Kamu tidak bisa menyelesaikan dalam party.</FONT><BR><FONT color=#086171>Blizzard Plain</FONT> <FONT color=#a82424>→ Memory of the Earth</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[(Solo) Pergi ke Blizzard Plain, dimana para Divine Knight berkumpul, dan saksikan apa yang terjadi]]></destination>
+         <todo_msg mid="67"><![CDATA[Quest telah di tambahkan.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Cl_Tomas.dds</contents_image>
+         <destination_pos>13004,n172</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>172</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="68"><![CDATA[Bicara pada Master Cleric Thomas di Blizzard Plain]]></title>
+         <contents mid="69"><![CDATA[<html>Bicara pada <FONT color=#a82424>Cleric Thomas</FONT>, pemimpin dari <FONT color=#a82424>Templar Knights</FONT>, dan dengarkan perintahnya.<BR> <BR><FONT color=#086171>Blizzard Plain</FONT> <FONT color=#a82424>→ Cleric Thomas</FONT></html>]]></contents>
+         <destination mid="70"><![CDATA[Bicara pada Master Cleric Thomas at Blizzard Plain]]></destination>
+         <todo_msg mid="71"><![CDATA[Tolong bicara dengan Master Cleric Thomas.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Jake.dds</contents_image>
+         <destination_pos>13004,n173</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>173</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="73"><![CDATA[Bicara pada Cleric Jake di Blizzard Plain]]></title>
+         <contents mid="74"><![CDATA[<html>Bicara pada <FONT color=#a82424>Cleric Jake</FONT> dan dengarkan apa yang dibicarakan tentang patrol.<BR><BR><FONT color=#086171>Blizzard Plain</FONT> <FONT color=#a82424>→ Cleric Jake</FONT></html>]]></contents>
+         <destination mid="75"><![CDATA[Bicara pada Cleric Jake di Blizzard Plain]]></destination>
+         <todo_msg mid="76"><![CDATA[Bicara pada Cleric Jake]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Jake.dds</contents_image>
+         <destination_pos>13003,2560,-4220</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>885</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="90"><![CDATA[Bicara pada Cleric Jake di rute ke Mana Ridge]]></title>
+         <contents mid="91"><![CDATA[<html>Cedric mengintai aktivitas <FONT color=#a82424>Cleric Jake's</FONT> di Vicinity of Mana Ridge, tempat monster menyerang.<BR> <BR><FONT color=#086171>Vicinity of Mana Ridge</FONT> <FONT color=#a82424>→ Cleric Jake</FONT></html>]]></contents>
+         <destination mid="92"><![CDATA[Bicara pada Cleric Jake di rute ke Mana Ridge]]></destination>
+         <todo_msg mid="93"><![CDATA[Tolong bicara dengan Cleric Jake di rute ke Mana Ridge.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>4</user_class>
+      <prev_quest>134</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

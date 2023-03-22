@@ -1,0 +1,142 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dqc18_1350_backing_highland</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1350</qid>
+      <designer>정진호</designer>
+      <qlevel>93</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Daily] Retrograde Highland - Goddess's Lament]]></qkname>
+      <qnpc>
+         <npcid>735</npcid>
+         <npcename>n735_darklair_mocha</npcename>
+         <npckname>어둠의 여신관 모카</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Priestess of Darkness Mocha$<BR>I heard a new <FONT color=#a82424>"Distorted Zone"</FONT> has been created in Mistland.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Retrograde Highland - Goddess's Lament$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-1" image="QW_63.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-1-back_npc" mid="25" select_type="0"><![CDATA[<html>(Back)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Priestess of Darkness Mocha$<BR>Please investigate the changes in Distorted Zone, from the <FONT color=#a82424>Retrograde Highland</FONT> to the <FONT color=#a82424>Neglected Unknown Zone</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-2" image="QW_63.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Priestess of Darkness Mocha$<BR>Please investigate the changes in Distorted Zone, from the <FONT color=#a82424>Retrograde Highland</FONT> to the <FONT color=#a82424>Neglected Unknown Zone</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-3-a" mid="28" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Priestess of Darkness Mocha$<BR>You're back. It looks like there were no definite threats observed yet.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-3-b" mid="30" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-3-back_end" mid="32" select_type="0"><![CDATA[<html>(Back)</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Priestess of Darkness Mocha$<BR>Thank you. Changes are never ending. Please help us again tomorrow.<BR><BR><FONT color=#7e12d2>*Daily quests can only be taken once a day.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">1350</exe>
+         <exe type="recompense_view">13500,,,,,,,,,</exe>
+         <exe type="talk" npc="n735_darklair_mocha">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n735_darklair_mocha.xml");</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">13500,,,,,,,,,</exe>
+         <exe type="complete" true="">1350</exe>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n735_darklair_mocha.xml");</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n735_darklair_mocha" sub="a">1</exelink>
+   <exelink qstep="accepting" npc="n735_darklair_mocha" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n735_darklair_mocha" sub="back_npc">0</exelink>
+   <exelink qstep="3" npc="n735_darklair_mocha" sub="a">0</exelink>
+   <exelink qstep="3" npc="n735_darklair_mocha" sub="b">1</exelink>
+   <exelink qstep="3" npc="n735_darklair_mocha" sub="back_end">2</exelink>
+   <journal_data recompense="13500" quest_title="[일일] 역행하는 상승지 - 여신의 비탄" chapterid="" quest_level="93" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_63.dds</contents_image>
+         <destination_pos>1096,0,0</destination_pos>
+         <destination_mode>custom:1096@3,1097@3,1098@3,1099@3,1100@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>24</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="15"><![CDATA[Investigate Distorted Zone]]></title>
+         <contents mid="16"><![CDATA[<html>Investigate Distorted Zone's <FONT color=#a82424>Retrograde Highland</FONT> to <FONT color=#a82424>Neglected Unknown Zone</FONT>.<BR><BR><FONT color=#7e12d2>*Daily quests can only be taken once a day.</FONT><FONT color=#7e12d2><BR></FONT><BR><FONT color=#086171>Merca's Heart (Distorted Zone)</FONT><FONT color=#a82424> - Retrograde Highland - Neglected Unknown Zone</FONT></html>]]></contents>
+         <destination mid="17"><![CDATA[Clear Distorted Zone]]></destination>
+         <todo_msg mid="18"><![CDATA[Clear Distorted Zone.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n735</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>735</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="19"><![CDATA[Report to Priestess of Darkness Mocha]]></title>
+         <contents mid="20"><![CDATA[<html>Report to Priestess of Darkness Mocha in Saint Haven.<BR><BR><FONT color=#7e12d2>*Daily quests can only be taken once a day.</FONT><BR><BR><FONT color=#086171>Saint Haven </FONT><FONT color=#a82424>- Priestess of Darkness Mocha</FONT></html>]]></contents>
+         <destination mid="21"><![CDATA[Report to Priestess of Darkness Mocha]]></destination>
+         <todo_msg mid="22"><![CDATA[Go back to Priestess of Darkness Mocha.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>93:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

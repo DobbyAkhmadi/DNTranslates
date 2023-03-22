@@ -1,0 +1,601 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_261_argenta_milk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>261</qid>
+      <designer>김인정</designer>
+      <qlevel>14</qlevel>
+      <qdesc>향긋한 와인맛 우유(300137), 발효된 나무 열매(300129)</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Argenta's Milk]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타(잿빛폐허)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>26</npcid>
+         <npcename>n026_trader_may</npcename>
+         <npckname>소모품 상인 메이   (캐더락 잡화상)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>28</npcid>
+         <npcename>n028_scholar_bailey</npcename>
+         <npckname>문장학자 베일리</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>29</npcid>
+         <npcename>n029_crew_kevin</npcename>
+         <npckname>자칭 승무원 케빈</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>323</npcid>
+         <npcename>n323_warehouse_lupert</npcename>
+         <npckname>창고지기 루퍼트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Aku agak sibuk sekarang, jangan di ganggu.<BR><FONT color=#7e12d2>(Bicara pada Argenta di Calderock Village untuk memulai quest ini.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Merchant May$<BR>Ya? Kamu punya sesuatu untukku?<BR><FONT color=#7e12d2>(Bicara pada Argenta di Calderock Village untuk memulai quest ini.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Jika kamu mau tau lebih banyak tentang Heraldry, datanglah padaku.<BR><FONT color=#7e12d2>(Bicara pada Argenta di Calderock Village untuk memulai quest ini.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Kevin$<BR>Aku ingin menjadi pilot airship! Tapi... sekarang belum bisa.<BR><FONT color=#7e12d2>(Bicara pada Argenta di Calderock Village untuk memulai quest ini.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-a" mid="11" select_type="0"><![CDATA[<html> ... ... ...? Ya? </html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Argenta$<BR>Aku lapar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-b" mid="187" select_type="0"><![CDATA[<html> ... Ada apa? </html>]]></talk_answer>
+      <talk_question mid="186"><![CDATA[<html>$Argenta$<BR>Um, bagus juga<BR>Ya itu sangat bagus <FONT color=#a82424>itu</FONT>! Ya, ITU!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-c" mid="13" select_type="0"><![CDATA[<html>Sweet Dark Priestess Milk Wine? Maksudmu hal itu benar-benar ada.</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Argenta$<BR>Sepertinya aku ingin sedikit Sweet Dark Priestess Milk Wine.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-c" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-d" mid="15" select_type="0"><![CDATA[<html> (... Sebenarnya aku tidak terlalu penasaran ...) </html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Argenta$<BR>Tsk. Kamu masih terlalu muda. Dark Priestess Milk Wine terbuat dari bahan-bahan yang sangat penting di era kami.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-e" mid="185" select_type="0"><![CDATA[<html>Jadi, dimana aku bisa mendapatkannya?</html>]]></talk_answer>
+      <talk_question mid="184"><![CDATA[<html>$Poet Pangz$<BR><FONT color=#7e12d2>Ah... Ya, ya, ya! Inilah!</FONT><BR><FONT color=#7e12d2>Sweet Dark Priestess Milk Wine yang semua orang inginkan hingga rela mati!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-f" mid="17" select_type="0"><![CDATA[<html>Mungkin toko-toko sekitar menjual...</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Argenta$<BR>Toko di sekitar mungkin menjualnya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-f" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-g" mid="19" select_type="0"><![CDATA[<html> Ok. </html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Argenta$<BR>Kenapa tidak tanya pada Merchant May? Mungkin dia punya ide.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-h" mid="21" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Argenta's Milk$ </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-h" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="22"><![CDATA[<html>$Argenta$<BR>Buruan, Aku lapar.. <BR> <FONT color=#7e12d2>(Argenta terlihat bosan dan membuang muka)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-a" mid="26" select_type="0"><![CDATA[<html> ... ... ...? Ya? </html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Argenta$<BR>Aku lapar</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-b" mid="180" select_type="0"><![CDATA[<html> ... Ada apa? </html>]]></talk_answer>
+      <talk_question mid="179"><![CDATA[<html>$Argenta$<BR>Um, bagus juga<BR>Yaa itu sangat bagus <FONT color=#a82424>itu</FONT>! Ya, ITU!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-b" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-c" mid="28" select_type="0"><![CDATA[<html>Sweet Dark Priestess Milk Wine? Maksudmu hal itu benar-benar ada.</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Argenta$<BR>Sepertinya aku ingin sedikit Sweet Dark Priestess Milk Wine.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-d" mid="30" select_type="0"><![CDATA[<html> (... Sebenarnya aku tidak terlalu penasaran ...) </html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Argenta$<BR>Tsk. Kamu masih terlalu muda. Dark Priestess Milk Wine terbuat dari bahan-bahan yang sangat penting di era kami.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-e" mid="182" select_type="0"><![CDATA[<html>Jadi, dimana aku bisa mendapatkannya?</html>]]></talk_answer>
+      <talk_question mid="181"><![CDATA[<html>$Poet Pangz$<BR><FONT color=#7e12d2>Ah... Ya, ya, ya! Inilah!</FONT><BR><FONT color=#7e12d2>Sweet Dark Priestess Milk Wine yang semua orang inginkan hingga rela mati!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-f" mid="32" select_type="0"><![CDATA[<html>Mungkin toko-toko sekitar menjual...</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Argenta$<BR>Toko di sekitar mungkin menjualnya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-f" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-2" mid="34" select_type="0"><![CDATA[<html> Ok. </html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Argenta$<BR>Kenapa tidak tanya pada Merchant May? Mungkin dia punya ide.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="174"><![CDATA[<html>$Merchant May$<BR>Ya? Apa yang kamu butuhkan?<BR><FONT color=#7e12d2>(Bicara pada Argenta di Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="175"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Kapanpun kamu mau bertanya tentang heraldry, rune, atau plate, Akulah ahlinya!<BR><FONT color=#7e12d2>(Bicara pada Argenta di Ashen Ruins.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="176"><![CDATA[<html>$Kevin$<BR>Maaf, ini masih belum siap meluncur.<BR><FONT color=#7e12d2>(Bicara pada Argenta di Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="177"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Kamu butuh bantuan untuk menyimpan barang? Aku akan senang membantumu.<BR><FONT color=#7e12d2>(Bicara pada Argenta di Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-2" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="38"><![CDATA[<html>$Argenta$<BR>Bukankah sudah kubilang, Aku lapar. <BR> <FONT color=#7e12d2>(Argenta membuang muka, mengacuhkanmu.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-a" mid="41" select_type="0"><![CDATA[<html>Maksudmu Sweet Dark Priestess Milk Wine?</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Merchant May$<BR>Barang bagus sangat sulit belakangan ini, bukannya aku tidak ingin menjual.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-a" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-b" mid="43" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Merchant May$<BR>Sweet Dark Priestess Milk Wine... Ah! Itu! Tunggu, biar aku cek di buku resep.<BR><FONT color=#7e12d2>(May mulai mencari di dalam kotak tua.)</FONT> <BR>Nah, ini dia!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-b" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-c" mid="45" select_type="0"><![CDATA[<html> Sepertinya minuman ini hanya populer... mungkin.. 50 tahun lalu? </html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Merchant May$<BR>Hmm.. Sweet Dark Priestess Milk Wine... Populer saat 50 tahun lalu, kamu tidak akan bisa mendapatkannya sekarang. Tapi, kamu beruntung aku masih punya resepnya. (May mengeluarkan buku resep tua)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-c" image="QS_Default.dds" itemindex="300129" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-d" mid="47" select_type="0"><![CDATA[<html>Jadi.. Ada ide dimana aku bisa mendapatkannya?</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Merchant May$<BR>Ayo kita lihat.. Aku punya bahannya kecuali satu. Aku butuh beberapa <FONT color=#a82424>Fermented Nuts</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-d" image="QW_18.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-3" mid="49" select_type="0"><![CDATA[<html>Baiklah.. Akan aku cari itu.</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Merchant May$<BR>Waktu itu, Aku sudah memesannya namun kereta di serang monster sebelum sampai Calderock. Mungkin kelelawar di <FONT color=#a82424>Raiders Ambush Point</FONT> memilikinya. Mereka suka yang manis-manis.<FONT color=#a82424></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-2" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="165"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Butuh bantuan menyimpan barang? Aku akan senang membantumu..<BR><FONT color=#7e12d2>(Tidak ada yang bisa kamu lakukan sekarang. Bicara pada <FONT color=#7e12d2>Merchant May</FONT>.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-2" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="166"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Tanyalah padaku jika kamu ingin tahu tentang Heraldry, rune atau bahkan plate!<BR><FONT color=#7e12d2>(Tidak ada yang bisa kamu lakukan sekarang. Bicaralah pada <FONT color=#7e12d2>Merchant May</FONT>.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-2" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="167"><![CDATA[<html>$Kevin$<BR>Maaf, airship masih belum siap di terbangkan.<BR><FONT color=#7e12d2>(Tidak ada yang bisa kamu lakukan sekarang. Bicara pada <FONT color=#7e12d2>Merchant May</FONT>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-3" image="QS_Default.dds" itemindex="300129" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="50"><![CDATA[<html>$Merchant May$<BR>Mungkin 5 <FONT color=#a82424>Fermented Nuts</FONT> sudah lebih dari cukup. Sementara itu aku akan mengolah bahan lainnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4" image="QS_Default.dds" itemindex="300129" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-a" mid="54" select_type="0"><![CDATA[<html>(Kamu memberikannya pada Merchant May.)</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Merchant May$<BR>Sudah dapat <FONT color=#a82424>Fermented Nuts</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-a" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-b" mid="58" select_type="0"><![CDATA[<html> Wow.. Dapat sebanyak... ini? </html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Merchant May$<BR>Tunggu sebentar! Sekarang tinggal bahan akhir... <BR><FONT color=#7e12d2>(May melemparkannya ke kuali besar.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-c" mid="60" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Merchant May$<BR>Ini percobaan pertamaku untuk resep ini, Semoga takarannya tidak salah. Hoho.. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-c" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-d" mid="62" select_type="0"><![CDATA[<html> Yaa ... Akan ku lakukan. </html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Merchant May$<BR>Karena hari ini aku merasa baik, Aku ingin berbagi sisa Sweet Dark Priestess Miok Wine dengan para penduduk Calderock. Aku juga ingin membagi untukmu... maukah kamu membantu mengirimkannya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-d" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="63"><![CDATA[<html>$Merchant May$<BR>Biar kulihat, list pertama <FONT color=#a82424>Warehouse Keeper Rupert</FONT>, lalu ke <FONT color=#a82424>Heraldry Scholar Bailey</FONT>, dan terakhir, sedikit ke <FONT color=#a82424>Kevin</FONT>. Hanya mereka. Tak ada yang lain, ok?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-5" image="QN_Npc_Guilian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="64"><![CDATA[<html>$Merchant May$<BR>Kirimkan botol pertama Dark Priestess Milk Wine ke <FONT color=#a82424>Warehouse Keeper Rupert</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-5" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-5-a" mid="67" select_type="0"><![CDATA[<html>(Kamu menjelaskannya ini pemberian dari Merchant May.)</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Ooooooh. Aku tidak bisa menyimpan barang itu <BR>(Dia melihat botol-botol itu.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-5-a" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-5-b" mid="69" select_type="0"><![CDATA[<html> Siap, pak. </html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Ah! Itu dari May? Pas sekali, Aku haus sekali. Ucapkan terima kasih ya pada May.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-5-b" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="70"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Ingatlah aku jika kamu butuh servis penyimpanan barang.<BR><FONT color=#7e12d2>(Berikutnya menuju Heraldry Scholar Bailey.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-6" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="72"><![CDATA[<html>$Merchant May$<BR>Kirimkan beberapa botol lagi ke <FONT color=#a82424>Heraldry Scholar Bailey</FONT> ya , tolong.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-6-a" mid="74" select_type="0"><![CDATA[<html>(Kamu memberikannya Dark Priestess Milk Wine.)</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Apa kamu punya sesuatu untukku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-6-a" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-6-b" mid="76" select_type="0"><![CDATA[<html>Dia mengikuti petunjuk resep itu.</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Heraldry Scholar Bailey${action:Talk}<BR>May membuat Dark Priestess Milk Wine? Wow, tidak terlihat seperti gadis muda yang tahu cara membuat minuman tua itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-6-b" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-6-c" mid="78" select_type="0"><![CDATA[<html> 50 tahun ... ya ... hehe. </html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Nenekku suka minuman ini, dan.. Itu sudah 50 tahun lalu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-6-c" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="79"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Ah! Minuman ini mengingatkanku pada nenekku.. Tolong ucapkan terima kasih untuk May.<BR><FONT color=#7e12d2>(Selanjutnya bicara pada Kevin.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-6" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="81"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Beritahu aku jika kamu butuh bantuan akan heraldy.<BR><FONT color=#7e12d2>(Berikutnya menuju ke Kevin.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-7" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="82"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Ah! Minuman ini mengingatkanku pada nenekku.. Tolong ucapkan terima kasih pada May.<BR><FONT color=#7e12d2>(Selanjutnya bicara pada Kevin.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-7" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="83"><![CDATA[<html>$Merchant May$<BR>List terakhir... <FONT color=#7e12d2>Tolong kirimkan yang ini untuk <FONT color=#a82424>Kevin</FONT></FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-a" mid="85" select_type="0"><![CDATA[<html> (Sambil minum kamu mendengarkan penjelasan) </html>]]></talk_answer>
+      <talk_question mid="84"><![CDATA[<html>$Kevin$<BR>Maaf, tidak ada penerbangan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-a" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-b" mid="87" select_type="0"><![CDATA[<html> Apa rasanya enak? </html>]]></talk_answer>
+      <talk_question mid="86"><![CDATA[<html>$Kevin$<BR>Aromanya seperti wine? Airship crew tidak boleh mabuk saat bertugas. <BR>(Dia mengendus minumannya.) <BR>Apa, maksudmu ini susu? Aku suka susu!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-kevinansw" mid="89" select_type="0"><![CDATA[<html>Apa kamu menunggu airship?</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Kevin$<BR>Yummy! Sangat enak! Akan aku sisakan untuk di minum saat di airship nanti. <BR>(Dia menghela nafas panjang.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-c" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-d" mid="92" select_type="0"><![CDATA[<html>Sepertinya aku bisa pergi sebentar lagi. </html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Kevin$<BR>Terima kasih untukmu, airship ini bisa terbang lagi! Aku mendengar ceritamu dari Airship Engineer Hubert. <BR><FONT color=#7e12d2>(Dia bergaya, layaknya jabatan tinggi.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-e" mid="94" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="93"><![CDATA[<html>$Kevin$<BR>Suatu saat aku akan menjadi airship crew! Aku akan menerbangkan Albatross! Heh heh!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-e" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-j" mid="96" select_type="0"><![CDATA[<html>Ya. Halo. </html>]]></talk_answer>
+      <talk_question mid="95"><![CDATA[<html>$Kevin$<BR>Mungkin May bisa menjual susu pada penumpang airship, Pasti penjualannya bagus! Aku akan memberitahunya jika bertemu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-f" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-g" mid="98" select_type="0"><![CDATA[<html>Aku yakin tidak lama lagi airship akan dapat di perbaiki...</html>]]></talk_answer>
+      <talk_question mid="97"><![CDATA[<html>$Kevin$<BR>Sepertinya Albatross sudah siap terbang lagi sekarang. Airship Engineer Hubert tidak mau memberitahuku permasalahannya, bahkan dia mengacuhkanku. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-g" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-j" mid="101" select_type="0"><![CDATA[<html>(Kevin menunggu mimpinya itu dengan gembira) </html>]]></talk_answer>
+      <talk_question mid="99"><![CDATA[<html>$Kevin$<BR>Mungkin May bisa menjual susu pada penumpang airship, Pasti penjualannya bagus! Aku akan memberitahunya jika bertemu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-h" image="QS_20.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-i" mid="103" select_type="0"><![CDATA[<html>Aku yakin tidak lama lagi airship akan dapat di perbaiki...</html>]]></talk_answer>
+      <talk_question mid="102"><![CDATA[<html>$Kevin$<BR>Aku sudah menunggu untuk terbang... setahun lalu. Airship Engineer Hubert bilang padaku dia menemukan orang mendapatkan bagian airship yang hilang. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-i" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-j" mid="105" select_type="0"><![CDATA[<html>(Kevin merasa gembira akan semuanya.)</html>]]></talk_answer>
+      <talk_question mid="104"><![CDATA[<html>$Kevin$<BR>Mungkin May bisa menjual susu pada penumpang airship, Pasti penjualannya bagus! Aku akan memberitahunya jika bertemu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-j" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n029_crew_kevin-7-k" mid="172" select_type="0"><![CDATA[<html>Akan kuberitahu mereka. </html>]]></talk_answer>
+      <talk_question mid="106"><![CDATA[<html>$Kevin$<BR>Oh! Hampir aku lupa. Tolong beritahu <FONT color=#a82424>May</FONT> kalau susunya enak!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-7-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="173"><![CDATA[<html>$Kevin$<BR>Aromanya mirip nenekku, semakin aku minum, rasanya makin enak! Jika May menjualnya, semua orang akan minum... Pasti!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n029_crew_kevin-8" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="107"><![CDATA[<html>$Kevin$<BR>Aromanya mirip nenekku, semakin aku minum, rasanya makin enak! Jika May menjualnya, semua orang akan minum... Pasti!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-8" image="QS_Default.dds" itemindex="300137" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-8-a" mid="110" select_type="0"><![CDATA[<html> Semua orang menyukainya. </html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html>$Merchant May$<BR>Kamu telah selesai mengirimkan Dark Priestess Milks? Bagaimana menurut mereka?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-8-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-8-b" mid="112" select_type="0"><![CDATA[<html> Uh ... Seratus tahun. </html>]]></talk_answer>
+      <talk_question mid="111"><![CDATA[<html>$Merchant May$<BR>Fiuh, untung resepnya pas. Aku sangat beruntung kali ini. Retro menjadi tren. Sejak 50 tahun, masih enak!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-8-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-9" mid="114" select_type="0"><![CDATA[<html> Thank you. </html>]]></talk_answer>
+      <talk_question mid="113"><![CDATA[<html>$Merchant May$<BR>Kemampuanku meningkat karena resep berumur 50 tahun ini.<BR>Oh! Aku hampir lupa, sisa dari Sweet Dark Priestess Milk Wine untukmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-9" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="115"><![CDATA[<html>$Merchant May$<BR>Daah! Sampai jumpa</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-a" mid="117" select_type="0"><![CDATA[<html>Tidak, Aku membuatnya sendiri.</html>]]></talk_answer>
+      <talk_question mid="116"><![CDATA[<html>$Argenta$<BR>Kenapa kamu lama sekali?<BR>cukup beli di toko! Saat kamu pergi, Aku hampir mati kelaparan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-b" mid="119" select_type="0"><![CDATA[<html> Minuman ini ada dan hanya populer 50 tahun lalu, sekarang tidak.. </html>]]></talk_answer>
+      <talk_question mid="118"><![CDATA[<html>$Argenta$<BR>Yeah... itu cukup populer..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-c" mid="121" select_type="0"><![CDATA[<html>Tidak lama, hanya 50 tahun adalah waktu yang cukup panjang...</html>]]></talk_answer>
+      <talk_question mid="120"><![CDATA[<html>$Argenta$<BR>Baiklah, Aku mengerti, 50! Sekarang, apa?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-d" mid="123" select_type="0"><![CDATA[<html> Cukup... ambil susunya. </html>]]></talk_answer>
+      <talk_question mid="122"><![CDATA[<html>$Argenta$<BR>Jika 50 tahun cukup lama, bagaimana dengan 500? Atau bahkan 5000 tahun lalu? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-d" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-e" mid="125" select_type="0"><![CDATA[<html> (Argenta menghabiskan susunya dalam hitungan detik) </html>]]></talk_answer>
+      <talk_question mid="124"><![CDATA[<html>$Argenta$<BR>Kamu pergi lama dan hanya mendapatkan sedikit? <BR><FONT color=#7e12d2>(Dia meminum botol demi botol dengan cepat..)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-f" mid="127" select_type="0"><![CDATA[<html><FONT color=#2b2723>(Setelah habis 10 botol, dia bilang masih haus, pasti ada yang tidak beres dengannya.)</FONT></html>]]></talk_answer>
+      <talk_question mid="126"><![CDATA[<html>$Argenta$<BR>terima kasih, meskipun ini tidak membuatku puas. Sekarang, budak <FONT color=#382000>{user_nick}</font>, terima ini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-9-g" mid="170" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="128"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-9-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="171"><![CDATA[<html>$Argenta$<BR>Ah... Sekarang aku ingat...<BR>Sebaiknya kamu sering ke sini, jangan malas. mengerti?!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">2611,2611,2612,2613,2614,2615,2616,2617,2618,2619</exe>
+         <exe type="setquest">261</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">,2611,2612,2613,2614,2615,2616,2617,,</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="questitem" num="5" op="]=">400409</chk>
+         <chk type="prob">300</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">444</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="delcount">.</exe>
+         <exe type="huntitem" num="5" exe="" onexe="">400409</exe>
+         <exe type="conexe" true="5,3,4" false="8,9">0</exe>
+         <exe type="addquestitem" num="1">400409</exe>
+         <exe type="conexe" true="5,3,4" false="">0</exe>
+         <exe type="conexe" true="8,9" false="">1</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">200444</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">445</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">200445</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">446</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">200446</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">400409</exe>
+         <exe type="addquestitem" num="3">300137</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="1">300137</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="1">300137</exe>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 218 ) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 208 ) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="talk" npc="n029_crew_kevin">c</exe>
+         <exe type="talk" npc="n029_crew_kevin">f</exe>
+         <exe type="talk" npc="n029_crew_kevin">h</exe>
+         <exe type="delquestitem" num="-1">300137</exe>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="10">300137</exe>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">8</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">2611,2611,2612,2613,2614,2615,2616,2617,2618,2619</exe>
+         <exe type="delquestitem" num="-1">300137</exe>
+         <exe type="complete" true="">261</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="g">0</exelink>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="h">1,2</exelink>
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="e" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="f" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="2">1</exelink>
+   <exelink qstep="2" npc="n026_trader_may" sub="b" />
+   <exelink qstep="2" npc="n026_trader_may" sub="c" />
+   <exelink qstep="2" npc="n026_trader_may" sub="d" />
+   <exelink qstep="2" npc="n026_trader_may" sub="3">2,11,12,13,14,15,6,0,1</exelink>
+   <exelink qstep="4" npc="n026_trader_may" sub="b" />
+   <exelink qstep="4" npc="n026_trader_may" sub="c" />
+   <exelink qstep="4" npc="n026_trader_may" sub="d">0,1,2,3</exelink>
+   <exelink qstep="5" npc="n323_warehouse_lupert" sub="b">0,1,2</exelink>
+   <exelink qstep="6" npc="n028_scholar_bailey" sub="b" />
+   <exelink qstep="6" npc="n028_scholar_bailey" sub="c">0,1,2</exelink>
+   <exelink qstep="7" npc="n029_crew_kevin" sub="b" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="kevinansw">0</exelink>
+   <exelink qstep="7" npc="n029_crew_kevin" sub="d" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="e" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="j" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="g" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="j" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="i" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="j" />
+   <exelink qstep="7" npc="n029_crew_kevin" sub="k">5,6,7</exelink>
+   <exelink qstep="8" npc="n026_trader_may" sub="b" />
+   <exelink qstep="8" npc="n026_trader_may" sub="9">0,1,2</exelink>
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="e" />
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="f">0</exelink>
+   <exelink qstep="9" npc="n164_argenta_wounded" sub="g">1,2</exelink>
+   <journal_data recompense="1:2611,2:2612,3:2613,4:2614,5:2615,6:2616,7:2617,8:2618,9:2619" quest_title="아르젠타와 우유" chapterid="" quest_level="14" quest_mark_type="10" use_item_list="300137,300129">
+      <journal index="1">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="131"><![CDATA[Argenta's hunger]]></title>
+         <contents mid="132"><![CDATA[<html><FONT color=#a82424>Argenta</FONT> menginginkan <FONT color=#a82424>Sweet Dark Priestess Milk Wine</FONT>. Mungkin kamu bisa mendapatkannya dari <FONT color=#a82424>Merchant May</FONT>.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="133"><![CDATA[Bicara pada Merchant May]]></destination>
+         <todo_msg mid="134"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_18.dds</contents_image>
+         <destination_pos>139,0,0</destination_pos>
+         <destination_mode>custom:136@3,137@3,138@3,139@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="135"><![CDATA[Merchant May's recipes]]></title>
+         <contents mid="136"><![CDATA[<html><FONT color=#2b2723>Merchant May membutuhkan <FONT color=#a82424>Fermented Nuts</FONT> untuk membuat Dark Priestess Milk Wine. Pergi ke <FONT color=#a82424> Catacomb Hall</FONT> dan dapatkan dari para kelelawar.</FONT><BR><BR><FONT color=#086171>Crystal Stream → Wind Forest (Catacomb Entrance)</FONT> <FONT color=#a82424>→ Catacomb Hall</FONT></html>]]></contents>
+         <destination mid="137"><![CDATA[Kumpulkan 5 Fermented Nuts]]></destination>
+         <todo_msg mid="138"><![CDATA[Berburulah Kobold di Raider's Ambush Point.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="139"><![CDATA[Bahan yang di butuhkan lengkap]]></title>
+         <contents mid="140"><![CDATA[<html>Kamu telah mengumpulkan <FONT color=#a82424>Fermented Nuts</FONT>. Kembali pada <FONT color=#a82424>Merchant May </FONT> di Calderock Village dan minta buatkan susu yang diminta Argenta. <BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Merchant May</FONT></html>]]></contents>
+         <destination mid="141"><![CDATA[Bicara pada Merchant May]]></destination>
+         <todo_msg mid="142"><![CDATA[Bicara pada Merchant May]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Guilian.dds</contents_image>
+         <destination_pos>8,n323</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>323</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="145"><![CDATA[Delivery Request from Merchant May]]></title>
+         <contents mid="146"><![CDATA[<html>Merchant May berhasil membuat <FONT color=#a82424>Sweet Dark Priestess Milk Wine</FONT>. Dia juga akan membagimu, secara gratis, jika kamu membantunya mengirim. Kirimkan pada <FONT color=#a82424>Warehouse Keeper Rupert</FONT>. <BR><BR><FONT color=#086171>Calderock Village</FONT> → <FONT color=#a82424>Warehouse Keeper Rupert</FONT></html>]]></contents>
+         <destination mid="147"><![CDATA[Bicara pada Warehouse Keeper Rupert]]></destination>
+         <todo_msg mid="148"><![CDATA[Kirimkan Sweet Dark Priestess Milk Wine kepada Warehouse Keeper Rupert]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Scholar_Baily.dds</contents_image>
+         <destination_pos>8,n28</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>28</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="149"><![CDATA[Delivery Request from Merchant May II]]></title>
+         <contents mid="150"><![CDATA[<html>Merchant May berhasil membuat <FONT color=#a82424>Sweet Dark Priestess Milk Wine</FONT>. Dia juga akan membagimu, secara gratis, jika kamu membantunya mengirimkan. Berikan kepada <FONT color=#a82424>Heraldry Scholar Bailey</FONT>. <BR><BR><FONT color=#086171>Calderock Village</FONT> → <FONT color=#a82424>Heraldry Scholar Bailey</FONT></html>]]></contents>
+         <destination mid="151"><![CDATA[Bicara pada Heraldry Scholar Bailey]]></destination>
+         <todo_msg mid="152"><![CDATA[Kirimkan Sweet Dark Priestess Milk Wine kepada Heraldry Scholar Bailey]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_crew_kevin.dds</contents_image>
+         <destination_pos>8,n29</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>29</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="153"><![CDATA[Delivery Request from Merchant May III]]></title>
+         <contents mid="154"><![CDATA[<html>Merchant May berhasil membuat <FONT color=#a82424>Sweet Dark Priestess Milk Wine</FONT>. Dia juga akan memberimu, secara gratis, jika kamu membantu mengirim. Berikan pada <FONT color=#a82424>Crew Kevin</FONT>. <BR><BR><FONT color=#086171>Calderock Village</FONT> → <FONT color=#a82424>Kevin</FONT></html>]]></contents>
+         <destination mid="155"><![CDATA[Bicara pada Kevin]]></destination>
+         <todo_msg mid="156"><![CDATA[Kirimkan Sweet Dark Priestess Milk Wine kepada Kevin]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="157"><![CDATA[Merchant May Delivery Request Completed]]></title>
+         <contents mid="158"><![CDATA[<html>Kamu telah selesai mengantarkan Sweet Dark Priestess Milk Wine. Sekarang, bicara pada <FONT color=#a82424>Merchant May</FONT> untuk mengambil jatah susumu.<BR><BR><FONT color=#086171>Calerock Village</FONT> → <FONT color=#a82424>Merchant May</FONT></html>]]></contents>
+         <destination mid="159"><![CDATA[Bicara pada Merchant May]]></destination>
+         <todo_msg mid="160"><![CDATA[Pengiriman selesai! Laporkan kepada Merchant May.]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="161"><![CDATA[Argenta's Milk]]></title>
+         <contents mid="162"><![CDATA[<html>Kamu telah mendapatkan beberapa botol <FONT color=#a82424>Sweet Dark Priestess Miok Wine</FONT> dari <FONT color=#a82424>Merchant May</FONT>. Sekarang kirimkan itu pada <FONT color=#a82424>Argenta</FONT> di <FONT color=#a82424>Gray Ruins</FONT>.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="163"><![CDATA[Bicara pada Argenta di Calderock Village]]></destination>
+         <todo_msg mid="164"><![CDATA[Kirimkan Sweet Dark Priestess Miok Wine kepada Argenta.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest>260,376,249</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

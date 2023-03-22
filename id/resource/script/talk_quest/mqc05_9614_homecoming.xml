@@ -1,0 +1,478 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc05_9614_homecoming</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>9614</qid>
+      <designer>이현진</designer>
+      <qlevel>38</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9727</nextqid>
+      <nextqname>mqc05_9727_rebirth_of_sepentra</nextqname>
+      <nextqnpc />
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Homecoming]]></qkname>
+      <qnpc>
+         <npcid>38</npcid>
+         <npcename>n038_royal_magician_kalaen</npcename>
+         <npckname>궁정 소서리스 칼라엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>41</npcid>
+         <npcename>n041_duke_stwart</npcename>
+         <npckname>공작 스튜어트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>44</npcid>
+         <npcename>n044_archer_master_ishilien</npcename>
+         <npckname>상급 아처 이실리엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1861</npcid>
+         <npcename>n1861_shaolong</npcename>
+         <npckname>샤오룽 </npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>213</npcid>
+         <npcename>n213_slave_david</npcename>
+         <npckname>아르젠타의 노예 데이비드</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$General Douglas$<BR>wajah kamu pucat. Mungkin karena terlalu lelah.<BR> aku jadi khawatir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting-a" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-accepting-acceptted" mid="8" select_type="3" />
+      <talk_question mid="7"><![CDATA[<html>$General Douglas$<BR>tidak mungkin keletihan melawan black dragon baru kelihatan sekarang... aneh.<BR>Coba bertemu dengan <FONT color=#a82424>Master Archer Eithain</FONT> untuk periksa.<BR>Mungkin dia bisa membantu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="QN_Npc_Duke_Stwart.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-a" mid="10" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$King Cassius$<BR>tidak bisa kupercaya dia pengkhianat. Sepertinya tidak ada yang bisa kupercaya kecuali Stuart.<BR><FONT color=#7e12d2>(Cassius menangis)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-a" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-" mid="12" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>$King Cassius$<BR>a, apakah kamu setia? Aku tetap tidak bisa percaya pada siapa pun...<BR>General Douglas bisa dipercaya? Aku yakin kamu baik. <FONT color=#7e12d2>(Cassius kelihatan gelisan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-1" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-1-a" mid="14" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Duke Stuart${action:Stand2}<BR>raja kita sangat kecewa dengan kejadian kali ini.<BR>padahal aku sudah mempersiapkan berita baik tentang golden dragon.<BR><FONT color=#7e12d2>(stuart menghembuskan nafas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-1-a" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-1-b" mid="16" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Duke Stuart$<BR>sebaiknya rahasiakan dulu kehilangan Prophet dan Golden Dragon.<BR>yang penting Black Dragon sudah kita kalahkan. Benar kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-1-b" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Stwart.dds" center_image="">
+      <talk_answer link_index="n041_duke_stwart-1-" mid="18" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$Duke Stuart$<BR>lebih baik selesaikan masalah bishop dengan diam-diam.<BR>Mengerti kan maksudku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-1" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Pergi ke Master Archer Eithain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="21" select_type="5" />
+      <talk_question mid="20"><![CDATA[<html>$General Douglas${action:Talk}<BR>Aku tahu kamu berusaha keras untuk Saint's Haven walaupun banyak yang meremhkan kamu.<BR>jangan pernah putus asa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-a" mid="23" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Master Archer Eithain$<BR>ada apa? Kamu datang untuk membantuku?<BR>…Oh, wajah kamu pucat sekali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-b" mid="25" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>sebenarnya… (jelaskan semua kecuali kamu daftar di Dragon Follower)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-b" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-c" mid="27" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Master Archer Eithain$<BR>begitu ya... <FONT color=#a82424>Gerraint</FONT> ...<BR>aneh sekali... Padahal dia kuat sekali… tapi bisa mati juga…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-d" mid="29" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Master Archer Eithain$<BR><FONT color=#387206>{user_nick}</FONT>, kamu dalam bahaya besar jika memang benar cerita kamu. <FONT color=#a82424>Disaster rain</FONT> akan membawa penyakit yang sangat kritis.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-e" mid="31" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>seperti orang yang tertular Black Dragon's blood?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-f" mid="33" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Master Archer Eithain$<BR>Betul. Aku tahu gejalanya karena sering aku urus.<BR>seperti yang kamu tahu, belum ditemukan cara penyembuhan, tapi memperlambat gejala bisa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-g" mid="35" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>bagaimana bisa percaya obat kamu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-h" mid="37" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Master Archer Eithain$<BR>False Purification... Kamu takut tertipu lagi. Aku akan buatkan obat di depan kamu, tenang saja.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2" mid="39" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>kalau begitu tolonglah.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2" image="QW_45.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-" mid="41" select_type="5" />
+      <talk_question mid="40"><![CDATA[<html>$Master Archer Eithain$<BR>Pergi ke <FONT color=#a82424>Ghost Town of Loney Forest</FONT> untuk mendapatkan <FONT color=#a82424>Lonely forest stone fragment</FONT>. Kamu harus minum obat itu secepatnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-a" mid="43" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Royal Sorceress Kalaen$<BR>Huh~ sudah kuduga dia ada maksud lain! Dan kamu bodoh!!<BR><FONT color=#7e12d2>(Kalaen bicara dengan lantang)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-b" mid="45" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Royal Sorceress Kalaen${action:Talk}<BR>aku memang selalu benar! Hohoho! Tapi kamu si bodoh yang membuat semua masalah ini! Hohoho.<BR>tapi kamu tidak bisa dihukum karena istana berusaha menutup masalah ini</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-c" mid="47" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ugh...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kalaen.dds" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-" mid="49" select_type="5" />
+      <talk_question mid="48"><![CDATA[<html>$Royal Sorceress Kalaen$<BR>Kenapa? Marah? Hohoho. Kamu harus bersyukur karena tidak perlu ke penjara.<BR>lebih baik kamu pergi sebelum raja berubah pikiran.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-a" mid="51" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Master Archer Eithain$<BR>kamu berhasil.<BR>aku akan buatkan kamu obat.<BR><FONT color=#7e12d2>(Eithain kelihatan sibuk)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-b" mid="53" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>$Master Archer Eithain$<BR>Terimalah obat ini.<BR><FONT color=#7e12d2>(dia memberikan obat wangi aneh)</FONT><BR>sisanya tergantung keberuntunganmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-c" mid="55" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Terimakasih.</FONT><BR>
+<FONT color=#7e12d2>(tubuh terasa bersih minum obat ini. Terasa tenang)</FONT><BR><BR>
+ </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-d" mid="57" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Master Archer Eithain$<BR>Semangatlah. Jangan sampai kalah oleh darah monster.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-e" mid="59" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Master Archer Eithain$<BR>sepertinya obat bisa menekan kegelapan di tubuhmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-4" mid="61" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>andai saja aku tahu kamu bisa membuat obat ini dari dulu...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-4" image="QN_Npc_Shaolong.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-4-" mid="63" select_type="5" />
+      <talk_question mid="62"><![CDATA[<html>$Master Archer Eithain$<BR><FONT color=#7e12d2>(Master Archer Eithain tersenyum)</FONT> <BR>aku akan buatkan lagi, <FONT color=#387206>{user_nick}</FONT> .<BR>Oh iya! Kamu ada master kan? bagaimana kalau ketemu lagi dengan dia?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-a" mid="65" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$Shaolong$<BR><FONT color=#387206>{user_nick}</FONT> , pantas kamu kelihatan kurang sehat. Kamu sudah menemukan Antidote? <BR>Kamu menangis? Darimana kamu tahu aku lemah terhadap airmata!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-b" mid="67" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Master... Aku ternyata bodoh sekali... Banyak yang berkorban gara-gara aku… rose… Gerraint… hanya aku yang masih hidup...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-c" mid="69" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>$Shaolong${sound:npc_Shaolung_9614_qu_01.ogg}<BR>Hmm, jelaskan lebih pelan-pelan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-d" mid="71" select_type="2" />
+      <talk_question mid="70"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(ceritakan tentang obat dan Gerraint)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-e" mid="73" select_type="2" />
+      <talk_question mid="72"><![CDATA[<html>$Shaolong$<BR>Begitu ya… ini rencana bishop! Dari awal dia memang ingin menggunakan kamu. Kamu dikerjain dan membangkitkan Serpentra...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-f" mid="75" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>aku adalah sampah. Seharusnya aku tidak ikut sebagai dragon follower.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-g" mid="77" select_type="2" />
+      <talk_question mid="76"><![CDATA[<html>$Shaolong$<BR>tidak apa-apa. Ada saat-saat seperti ini. Aku juga dulu tidak punya pendirian waktu muda. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-h" mid="79" select_type="2" />
+      <talk_question mid="78"><![CDATA[<html>$Shaolong${sound:npc_Shaolung_9614_qu_02.ogg}<BR>yang penting tidak putus asa. Nangislah! Tapi setelah itu harus bangkit lagi! <FONT color=#387206>{user_nick}</FONT> , kamu masih ada tugas untuk dilaksanakan! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-i" mid="81" select_type="2" />
+      <talk_question mid="80"><![CDATA[<html>$Shaolong${sound:npc_Shaolung_9614_qu_03.ogg}<BR>terimalah ini! <BR><FONT color=#7e12d2>(Shaolong menyerahkan sesuatu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-j" mid="83" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I, ini… pass untuk semua daerah?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-k" mid="85" select_type="2" />
+      <talk_question mid="84"><![CDATA[<html>$Shaolong$<BR>General Douglas memberikan ini. Sepertinya kamu boleh pulang ke kampung halaman kamu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-4-l" mid="87" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>$Shaolong$<BR>kamu ingat Suria pergi ke Lotus Marsh? Kamu ingin membiarkan dokter disana diserang oleh dia? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-4-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-5" mid="89" select_type="2" />
+      <talk_question mid="88"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Suria! Oh iya!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1861_shaolong-5" image="QW_HermaltePort.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1861_shaolong-5-" mid="91" select_type="5" />
+      <talk_question mid="90"><![CDATA[<html>$Shaolong$<BR>semangat itu! bagus. <FONT color=#387206>{user_nick}</FONT> , kembalilah ke Lotus Marsh! Naik kapal di <FONT color=#a82424>Hermalte Port</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-a" mid="93" select_type="2" />
+      <talk_question mid="92"><![CDATA[<html>$David$<BR>Apa? Kamu datang untuk menyambut aku? Huhuhu.<BR>Kamu baik juga!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-b" mid="95" select_type="2" />
+      <talk_question mid="94"><![CDATA[<html>$David${action:Stand01}<BR>kamu kelihatan lebih kurus sekarang. Huhuhu.<BR>Semua itu karena diabaikan oleh <FONT color=#a82424>Argenta</FONT> ~!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-c" mid="97" select_type="2" />
+      <talk_question mid="96"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>kenapa kamu kembali lagi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-c" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-d" mid="99" select_type="2" />
+      <talk_question mid="98"><![CDATA[<html>$David$<BR>Tentu saja aku datang atas perintah dari Argenta!<BR>Obat manjur untuk mata ini diminta berikan ke <FONT color=#a82424>Gerraint</FONT>.<BR>tolong antarkan!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-e" mid="137" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…sebenarnya… (sampaikan apa yang terjadi)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-f" mid="102" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>$David$<BR>A, a, apaa?! <FONT color=#7e12d2>(David terkejut)</FONT><BR>ka, kamu bilang apa? Je, Gerraint…<BR>Gerraint ma, mati? Be, benarkah?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-g" mid="104" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(.....…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-g" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-h" mid="106" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>$David$<BR>Kamu bercanda kan?<BR> Dia <FONT color=#382000>indah, </FONT><FONT color=#7e12d2>bersinar, </FONT><FONT color=#086171>lovely</FONT> seperti Argenta… mana mungkin mati?!<BR>dia mengalahkan Black Dragon!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-i" mid="108" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku tidak ingin percaya… tapi ini benar...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-i" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-j" mid="110" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>$David$<BR>Ugh… <FONT color=#7e12d2>(David meremas kepala)</FONT><BR>Aku yakin <FONT color=#a82424>Argenta</FONT> akan menghajar aku jika aku sampaikan berita ini… Pasti~!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-j" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-k" mid="112" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>$David$<BR> Gerraint mati… ini pasti mimpi…!<BR>Tidak bisa... Aku pasti tidak bisa selamat kalau kembali saat ini...<BR>kamu, <FONT color=#387206>{user_nick}</FONT>! Sampaikan berita ini sendiri ya!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-l" mid="114" select_type="4" />
+      <talk_question mid="113"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-m" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>aku akan pergi ke Lotus Marsh.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n213_slave_david-5-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_David.dds" center_image="">
+      <talk_answer link_index="n213_slave_david-5-" mid="140" select_type="5" />
+      <talk_question mid="139"><![CDATA[<html>$David$<BR>Oh? Tapi siapa dia?</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9614</exe>
+         <exe type="talk" npc="n042_general_duglars">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">1172</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">201172</exe>
+         <exe type="huntitem" num="1" exe="" onexe="6,7,8">300250</exe>
+         <exe type="addquestitem" num="1">300250</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="delcount">.</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">96140,,,,,,,,,</exe>
+         <exe type="complete" true="">9614</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n042_general_duglars" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n040_king_casius" sub="" />
+   <exelink qstep="1" npc="n041_duke_stwart" sub="b" />
+   <exelink qstep="1" npc="n041_duke_stwart" sub="" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="b" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="c" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="d" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="e" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="f" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="g" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="h" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="2">0,1,2,3,4</exelink>
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="b" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="c" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="" />
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="b" />
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="c" />
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="d" />
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="e" />
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n1861_shaolong" sub="b" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="c" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="d" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="e" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="f" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="g" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="h" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="i" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="j" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="k" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="l" />
+   <exelink qstep="4" npc="n1861_shaolong" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n213_slave_david" sub="b" />
+   <exelink qstep="5" npc="n213_slave_david" sub="c" />
+   <exelink qstep="5" npc="n213_slave_david" sub="d" />
+   <exelink qstep="5" npc="n213_slave_david" sub="e" />
+   <exelink qstep="5" npc="n213_slave_david" sub="f" />
+   <exelink qstep="5" npc="n213_slave_david" sub="g" />
+   <exelink qstep="5" npc="n213_slave_david" sub="h" />
+   <exelink qstep="5" npc="n213_slave_david" sub="i" />
+   <exelink qstep="5" npc="n213_slave_david" sub="j" />
+   <exelink qstep="5" npc="n213_slave_david" sub="k">0</exelink>
+   <exelink qstep="5" npc="n213_slave_david" sub="l">1</exelink>
+   <exelink qstep="5" npc="n213_slave_david" sub="m" />
+   <exelink qstep="5" npc="n213_slave_david" sub="" />
+   <journal_data recompense="96140" quest_title="귀향" chapterid="5" quest_level="38" quest_mark_type="1" use_item_list="300250">
+      <journal index="1">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="117"><![CDATA[Counselors]]></title>
+         <contents mid="118"><![CDATA[<html>Sepertinya badan jadi lemah karena <FONT color=#a82424>Serpentra's blood</FONT>. Pergi ke <FONT color=#a82424>Master Archer Eithain</FONT> untuk mencari solusi.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>- Master Archer Eithain</FONT></html>]]></contents>
+         <destination mid="119"><![CDATA[Bicara dengan Master Archer Eithain]]></destination>
+         <todo_msg mid="120"><![CDATA[Tanya tentang penyakit ke Master Archer Eithain.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_45.dds</contents_image>
+         <destination_pos>452,0,0</destination_pos>
+         <destination_mode>custom:451@1,452@3,453@0</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="121"><![CDATA[Lonely forest stone fragment]]></title>
+         <contents mid="122"><![CDATA[<html> Sepertinya Serpentra's blood sama seperti Black Dragon's blood. harus bikin obat untuk menekan gejala ini. Pergi ke <FONT color=#a82424>Ghost Town of Loney Forest</FONT> untuk mendapatkan <FONT color=#a82424>Lonely forest stone fragment</FONT>.<BR><BR><FONT color=#086171>Foothill of Black Mountain(Lonely Forest Path)</FONT> <FONT color=#a82424>- Ghost Town of Loney Forest</FONT></html>]]></contents>
+         <destination mid="123"><![CDATA[Ghost Town of Loney Forest]]></destination>
+         <todo_msg mid="124"><![CDATA[Pergi ke Ghost Town of Loney Forest untuk mendapatkan Lonely forest stone fragment.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="125"><![CDATA[medicine]]></title>
+         <contents mid="126"><![CDATA[<html>antarkan bahan obat ke Master Archer Eithain.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>- Master Archer Eithain</FONT></html>]]></contents>
+         <destination mid="127"><![CDATA[Bicara dengan Master Archer Eithain]]></destination>
+         <todo_msg mid="128"><![CDATA[Antarkan bahan ke Master Archer Eithain.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Shaolong.dds</contents_image>
+         <destination_pos>11,n1861</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1861</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="129"><![CDATA[Antidote]]></title>
+         <contents mid="130"><![CDATA[<html>Antidote sudah dimakan. Ceritakan ke Shaolong.<BR><BR><FONT color=#086171>Saint's Haven</FONT><FONT color=#a82424> - Shaolong</FONT></html>]]></contents>
+         <destination mid="131"><![CDATA[bicara dengan Shaolong]]></destination>
+         <todo_msg mid="132"><![CDATA[bicara dengan Shaolong.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_HermaltePort.dds</contents_image>
+         <destination_pos>12,n213</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>213</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="133"><![CDATA[ke Hermalte Port]]></title>
+         <contents mid="134"><![CDATA[<html>Harus pergi ke Lotus Marsh. Menuju Hermalte Port.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>- Hermalte Port</FONT></html>]]></contents>
+         <destination mid="135"><![CDATA[ke Hermalte Port]]></destination>
+         <todo_msg mid="136"><![CDATA[pergi ke Hermalte Port.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>9</user_class>
+      <prev_quest />
+      <have_quest>9613</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

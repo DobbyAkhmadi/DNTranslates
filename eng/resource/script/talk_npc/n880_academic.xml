@@ -1,0 +1,51 @@
+   <talk>
+      <npcename>n880_academic</npcename>
+      <npcid>880</npcid>
+      <startexe>17</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Academic Comelina]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#7e12d2></FONT><FONT color=#387206>${user_nick}$</FONT><BR><FONT color=#7e12d2>...She seems deep in thought.</FONT><BR><FONT color=#7e12d2>Don't bother her and leave. </FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html><FONT color=#387206>${user_nick}$</FONT><BR><FONT color=#7e12d2>You see illusions...</FONT><BR><FONT color=#7e12d2>You ask but there is no reply. </FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="6" false="2">0</exe>
+         <exe type="conexe" true="7" false="3">1</exe>
+         <exe type="conexe" true="8" false="4">2</exe>
+         <exe type="conexe" true="9" false="5">3</exe>
+         <exe type="conexe" true="10" false="11">4</exe>
+         <exe type="enterquest">sq15_4125_history_of_future</exe>
+         <exe type="enterquest">sq15_4126_history_of_future</exe>
+         <exe type="enterquest">sq15_4127_history_of_future</exe>
+         <exe type="enterquest">sq15_4128_history_of_future</exe>
+         <exe type="enterquest">sq15_4129_history_of_future</exe>
+         <exe type="conexe" true="12" false="13">5</exe>
+         <exe type="enterquest">sq15_4170_piece_of_future1</exe>
+         <exe type="conexe" true="14" false="15">6</exe>
+         <exe type="enterquest">mq15_9229_desert_storm</exe>
+         <exe type="conexe" true="16" false="19">7</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="18" false="1">8</exe>
+         <exe type="enterquest">sq15_4194_please_do_not</exe>
+         <exe type="conexe" true="21" false="20">9</exe>
+         <exe type="conexe" true="22" false="0">10</exe>
+         <exe type="enterquest">mq15_9382_by_time_for_time</exe>
+         <exe type="enterquest">sq15_4130_history_of_future</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">4125</chk>
+         <chk type="hasquest">4126</chk>
+         <chk type="hasquest">4127</chk>
+         <chk type="hasquest">4128</chk>
+         <chk type="hasquest">4129</chk>
+         <chk type="hasquest">4170</chk>
+         <chk type="hasquest">9229</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 4194) == 1</chk>
+         <chk type="hasquest">9382</chk>
+         <chk type="hasquest">4130</chk>
+      </conditions>
+   </talk>

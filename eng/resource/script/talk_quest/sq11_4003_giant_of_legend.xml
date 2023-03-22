@@ -1,0 +1,299 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_4003_giant_of_legend</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4003</qid>
+      <designer>나은하</designer>
+      <qlevel>50</qlevel>
+      <qdesc>로터스마쉬의 호세가 까치머리꼬마의 의뢰를 전함.
+세인트헤이븐의 군터가 까치머리 꼬마의 의뢰를 전함.
+
+까치머리 꼬마는 전설 속에 킹왕짱 쎈 거인에 대한 이야기를 읽었다고 한다. 아직 어린 자기는 시공의 정원 입구에서 문전박대를 당했으니 자신 대신에 그 거인이 있는지 봐달라고 한다.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Legendary Giant]]></qkname>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>49</npcid>
+         <npcename>n049_sainthaven_kid</npcename>
+         <npckname>까치머리 꼬마</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>715</npcid>
+         <npcename>n715_adventurer_guildmaster_hose</npcename>
+         <npckname>모험자 길드장 호세</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>775</npcid>
+         <npcename>n775_cleric_ilizer</npcename>
+         <npckname>신전기사 일라이저</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>776</npcid>
+         <npcename>n776_darklair_mardlen</npcename>
+         <npckname>어둠의 여신관 마들렌</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Another evil energy can be felt. To know what it is, I need to meditate. <BR>
+Please give me some time.<BR><FONT color=#7e12d2>(* You can get the quest from Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR><FONT color=#a82424>Unkempt Kid</FONT> The boy must have found some interesting thing again, he is excited all day. <BR>
+Go and take a look before he gets into trouble.<BR><FONT color=#7e12d2>(* You can get the quest from Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>It's a request from <FONT color=#a82424>Saint Haven</FONT>. You can look for the client to know about the details. The client says that he is <FONT color=#a82424>unkempt</FONT> so it'd be easy to find him. But I still don't understand why a person from Saint Haven made a request to me. <BR><FONT color=#7e12d2>(* You can get the quest from Saint Haven's Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Templar Knight Elizer$<BR>I had a hard time because the Unkempt Kid insisting of coming in here for a few days. I hope he gives up trying to go in here.<BR><FONT color=#7e12d2>(* You can get the quest from Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="130"><![CDATA[<html>$Unkempt Kid$<BR>
+Hehehe, have you been to <FONT color=#a82424>Adventurer's Guild Master Gunther</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting" image="QN_boy_tei.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-a" mid="53" select_type="0"><![CDATA[<html>What's the matter?</html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR><FONT color=#a82424>Unkempt Kid</FONT> said that he found something amazing and was making a big fuss. And he said that he had to see you. Why don't you go and see him?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-b" mid="55" select_type="0"><![CDATA[<html>(You say you will)</html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Well, why don't you go and take a look for yourself?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-acceptted" mid="57" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Legendary Giant$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting" image="QN_boy_tei.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-a" mid="60" select_type="0"><![CDATA[<html>What would it be about?</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>I received a strange request. Some kid from Saint Haven says that he must see you.<BR>
+He says you'll know the <FONT color=#a82424>Unkempt Kid</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-b" mid="62" select_type="0"><![CDATA[<html>(You say you will)</html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Well, it's about some amazing findings that he wants to tell you directly about. Why don't you go and ask him yourself? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-accepting-acceptted" mid="64" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="63"><![CDATA[<html>$Legendary Giant$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="QN_boy_tei.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="66"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>I don't know if the <FONT color=#a82424>Unkempt Kid</FONT> is scheming something again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1" image="QN_boy_tei.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="68"><![CDATA[<html>$Adventurer's Guild Master Jose$<BR>I don't understand why a kid from <FONT color=#a82424>Saint Haven</FONT> made a request to me.<BR>Anyways, go to <FONT color=#a82424>Saint Haven</FONT> and find that <FONT color=#a82424>Unkempt Kid</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n049_sainthaven_kid-1-a" mid="71" select_type="0"><![CDATA[<html>Have we met before?</html>]]></talk_answer>
+      <talk_answer link_index="n049_sainthaven_kid-1-b" mid="72" select_type="0"><![CDATA[<html>Oh, long time no see.</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Unkempt Kid$<BR>Wow! Hero <FONT color=#387206>{user_nick}</FONT>, nice to see you again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n049_sainthaven_kid-1-c" mid="74" select_type="0"><![CDATA[<html>Something huge?</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Unkempt Kid$<BR>Hehehe, I want to look like I'm close to the famous <FONT color=#387206>{user_nick}</FONT> from Saint Haven. Oh, not this! Actually, I found out something huge!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n049_sainthaven_kid-1-c" mid="76" select_type="0"><![CDATA[<html>Something huge?</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Unkempt Kid$<BR>Wah! You really remembered me!! Actually I found out something huge!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n049_sainthaven_kid-1-d" mid="78" select_type="0"><![CDATA[<html>That's just a story.</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Unkempt Kid$<BR>Recently, I was reading a book about the <FONT color=#a94407>Ancients</FONT>, and I read that the <FONT color=#a94407>Evil Ancients</FONT> created a humongous <FONT color=#a94407>powerful giant</FONT>. the Ancients rode that giant and fought like this and like this.<FONT color=#7e12d2>(Unkempt Kid swings his arms vigorously)</FONT> Isn't it fascinating?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-1-d" image="QW_SaintHaven_NestWorldZone01.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n049_sainthaven_kid-1-e" mid="80" select_type="0"><![CDATA[<html>Must be something like golems.</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Unkempt Kid$<BR>But the book is said to be based on archaeological findings! And some days ago, I overheard the Templar Knights talking in front of the <FONT color=#a82424>Garden of Time and Space</FONT>. and they said that the giant really appeared. So I wanted to sneak into <FONT color=#a82424>Garden of Time and Space</FONT> but the knights didn't let me in, saying that kids are not allowed to go in.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n049_sainthaven_kid-1-f" mid="83" select_type="0"><![CDATA[<html>(Was I too harsh on him) Hmm, do you want me to go and have a look?</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Unkempt Kid$<BR>Hmm, I'm disappointed. <FONT color=#387206>{user_nick}</FONT>, I thought you were interested in what I was saying.<BR><FONT color=#7e12d2>(Unkempt Kid looks dejected)</FONT> <FONT color=#387206>{user_nick}</FONT>, you think I'm just a kid too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-1-f" image="QW_SaintHaven_NestWorldZone01.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n049_sainthaven_kid-2" mid="85" select_type="0"><![CDATA[<html>(Unkempt Kid's eyes are glowing)</html>]]></talk_answer>
+      <talk_question mid="84"><![CDATA[<html>$Unkempt Kid$<BR>Wow! Please, please!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-1" image="QN_boy_tei.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="87"><![CDATA[<html>$Templar Knight Elizer$<BR>
+Since a few days ago, an <FONT color=#a82424>unkempt kid</FONT> made a scene saying that he wanted to go in. He might get into trouble if someone doesn't stop him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1" image="QN_boy_tei.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="89"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>
+Sometimes a child's speckless intuition surpasses an adult's insights.<BR>
+<FONT color=#7e12d2>(*Talk to Unkempt Kid)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-2" image="QW_SaintHaven_NestWorldZone01.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="86"><![CDATA[<html>$Unkempt Kid$<BR>Please go to <FONT color=#a82424>Garden of Time and Space</FONT> and see if the giant is there!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n775_cleric_ilizer-2" image="QW_SaintHaven_NestWorldZone01.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="91"><![CDATA[<html>$Templar Knight Elizer$<BR>I was waiting for you. Strange things must have happened in <FONT color=#a82424>Garden of Time and Space</FONT>. Why don't you go in first and meet <FONT color=#a82424>Priestess of Darkness Madeleine</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-a" mid="93" select_type="0"><![CDATA[<html>(Talk about Unkempt Kid)</html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>You're finally here, <FONT color=#387206>{user_nick}</FONT>. I was waiting for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-a" image="QM_GigantesMaha" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-b" mid="95" select_type="0"><![CDATA[<html>Gigantes?</html>]]></talk_answer>
+      <talk_question mid="94"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Huhu, that kid has a very strong intuition. <FONT color=#a94407>The evil ancients</FONT> infused a power that isn't supposed to exist in this world into a golem and created an enormous armour. They called that enormous armour, the weapon that they used, as <FONT color=#a94407>Gigantes</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-c" mid="97" select_type="0"><![CDATA[<html>Who could that be?</html>]]></talk_answer>
+      <talk_question mid="96"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>After the <FONT color=#a94407>War of the Ancients</FONT>, the victorious <FONT color=#a94407>Good Ancients</FONT> have sealed that evil creation in a place where only they know. However, someone seems to have broken that seal and is riding on the <FONT color=#a94407>Gigantes</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-d" mid="99" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="98"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Well, my eyes must have blurred. I can't see until there. But I can tell you one thing. That the person must be related to the <FONT color=#a94407>Ancients</FONT> in some way. The only one who can control <FONT color=#a94407>Gigantes</FONT> is the <FONT color=#a94407>descendent of the Ancients</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2-e" mid="102" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="100"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>It has been a long time since the <FONT color=#a94407>Ancients</FONT> disappeared after leaving us the role of safeguarding this world. If it hasn't been so long since the interaction with them has ended, I could have told you more. But the interaction has become too vague now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-3" mid="105" select_type="0"><![CDATA[<html>(Shall I go and tell the kid about Gigantes?)</html>]]></talk_answer>
+      <talk_question mid="103"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>You can only check what the creature beyond that door is by yourself, <FONT color=#387206>{user_nick}</FONT>. Prepare your weapons and gather some partners and come back. I don't think there's much time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="108"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>The door to the place where <FONT color=#a82424>Gigantes</FONT> was sealed is already open. Repair your weapons as soon as possible and gather your friends. And come back here and walk past that door of darkness.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n049_sainthaven_kid-3-a" mid="111" select_type="0"><![CDATA[<html>(Tell him what Priestess of Darkness Madeleine said)</html>]]></talk_answer>
+      <talk_question mid="110"><![CDATA[<html>$Unkempt Kid$<BR>Did you come back from Garden of Time and Space?! Was a giant really there?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n049_sainthaven_kid-3-b" mid="113" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="112"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n049_sainthaven_kid-3-b" image="QM_GigantesMaha" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="114"><![CDATA[<html>$Unkempt Kid$<BR>Wow! It really existed! <FONT color=#a82424>Gigantes</FONT>! Its name sounds like it's super strong!!<BR><FONT color=#7e12d2>(Unkempt Kid is excited) </FONT>If you happen to see <FONT color=#a82424>Gigantes</FONT> with your own eyes, please tell me how it looks like!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">40030,,,,,,,,,</exe>
+         <exe type="setquest">4003</exe>
+         <exe type="talk" npc="n036_adventurer_guildmaster_gunter">1</exe>
+         <exe type="talk" npc="n715_adventurer_guildmaster_hose">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">40030,,,,,,,,,</exe>
+         <exe type="complete" true="">4003</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="acceptted">1,2</exelink>
+   <exelink qstep="accepting" npc="n715_adventurer_guildmaster_hose" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n715_adventurer_guildmaster_hose" sub="acceptted">1,3</exelink>
+   <exelink qstep="1" npc="n049_sainthaven_kid" sub="c" />
+   <exelink qstep="1" npc="n049_sainthaven_kid" sub="c" />
+   <exelink qstep="1" npc="n049_sainthaven_kid" sub="d" />
+   <exelink qstep="1" npc="n049_sainthaven_kid" sub="e" />
+   <exelink qstep="1" npc="n049_sainthaven_kid" sub="f" />
+   <exelink qstep="1" npc="n049_sainthaven_kid" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="c" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="d" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="e" />
+   <exelink qstep="2" npc="n776_darklair_mardlen" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n049_sainthaven_kid" sub="a">0</exelink>
+   <exelink qstep="3" npc="n049_sainthaven_kid" sub="b">1</exelink>
+   <journal_data recompense="40030" quest_title="전설의 거인" chapterid="" quest_level="50" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_boy_tei.dds</contents_image>
+         <destination_pos>11,n49</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>49</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="116"><![CDATA[Unkempt Kid's request]]></title>
+         <contents mid="117"><![CDATA[<html>Meet Saint Haven's Unkempt Kid.<BR>
+ <BR>
+<FONT color=#086171>Saint Haven </FONT><FONT color=#a82424>→ Unkempt Kid</FONT></html>]]></contents>
+         <destination mid="118"><![CDATA[Talk with Unkempt Kid]]></destination>
+         <todo_msg mid="119"><![CDATA[New quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SaintHaven_NestWorldZone01.dds</contents_image>
+         <destination_pos>28,n776</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>776</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="121"><![CDATA[Legendary Giant]]></title>
+         <contents mid="122"><![CDATA[<html>Go to Garden of Time and Space and ask Priestess of Darkness Madeleine about the giant.<BR><BR><FONT color=#086171>Saint Haven(Garden of Time and Space Gate)</FONT> <FONT color=#a82424>→ Garden of Time and Space(Priestess of Darkness Madeleine)</FONT></html>]]></contents>
+         <destination mid="123"><![CDATA[Talk to Priestess of Darkness Madeleine]]></destination>
+         <todo_msg mid="124"><![CDATA[Talk to Garden of Time and Space's Priestess of Darkness Madeleine.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_boy_tei.dds</contents_image>
+         <destination_pos>11,n49</destination_pos>
+         <destination_mode />
+         <statemark_npcid>49</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="126"><![CDATA[Giant Gigantes]]></title>
+         <contents mid="127"><![CDATA[<html>Unkempt Kid's giant story was true. Go back to Unkempt Kid and tell him about the ancient giant Gigantes.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Unkempt Kid</FONT></html>]]></contents>
+         <destination mid="128"><![CDATA[Talk to Unkempt Kid]]></destination>
+         <todo_msg mid="129"><![CDATA[Talk to Unkempt Kid.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>50:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

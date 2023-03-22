@@ -1,0 +1,72 @@
+   <talk>
+      <npcename>n2905_kyle</npcename>
+      <npcid>2905</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Commander Kyle]]></npckname>
+      <talk_paragraph index="no_talk" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Commander Kyle$<BR>
+<FONT color=#7e12d2>(His face looks like he's looking at a bug)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="002" mid="7"><![CDATA[<html>Kyle? Why and how did you come here…….</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Commander Kyle$<BR>
+You are late.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="level_up" mid="9"><![CDATA[<html>Is there an order from the Supreme Commander?</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Commander Kyle$<BR>
+I heard you are joining the expedition to Monolith.<BR>
+You've been giving me a lot of excuses…… And you are joining all of a sudden?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="eq_check" mid="11"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Commander Kyle$<BR>
+Are you prepared?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_answer link_index="tuto_complete" mid="13"><![CDATA[<html>(End Conversation)</html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Commander Kyle$<BR>
+Don't forget I have lots of expectation from you, <FONT color=#387206>{user_nick}.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="005" image="" itemindex="">
+         <talk_question mid="14"><![CDATA[<html>$Commander Kyle$<BR>What are you waiting?<BR>
+<BR><FONT color=#7e12d2>※ Equip all the items that Kyle provided.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="talk">no_talk</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="conexe" true="" false="5">2</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">003</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 48, 0, 1, 1, 0);</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_user_SetLevel(userObjID,90,48);</exe>
+         <exe type="conexe" true="10" false="18">3</exe>
+         <exe type="conexe" true="11" false="18">4</exe>
+         <exe type="conexe" true="12" false="18">5</exe>
+         <exe type="conexe" true="13" false="18">6</exe>
+         <exe type="conexe" true="14" false="18">7</exe>
+         <exe type="conexe" true="15" false="18">8</exe>
+         <exe type="conexe" true="16" false="18">9</exe>
+         <exe type="talk">004</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 49, 0, 1, 1, 0);</exe>
+         <exe type="talk">005</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">10</chk>
+         <chk type="hascomq">48</chk>
+         <chk type="hascomq">49</chk>
+         <chk type="custom">api_trigger_EquipItemLevel( userObjID, 2) >= 90</chk>
+         <chk type="custom">api_trigger_EquipItemLevel( userObjID, 3) >= 90</chk>
+         <chk type="custom">api_trigger_EquipItemLevel( userObjID, 4) >= 90</chk>
+         <chk type="custom">api_trigger_EquipItemLevel( userObjID, 5) >= 90</chk>
+         <chk type="custom">api_trigger_EquipItemLevel( userObjID, 6) >= 90</chk>
+         <chk type="custom">api_trigger_EquipItemLevel( userObjID, 16) >= 90</chk>
+         <chk type="custom">api_trigger_EquipItemLevel( userObjID, 17) >= 90</chk>
+      </conditions>
+      <exelink idx="level_up">6,8</exelink>
+      <exelink idx="eq_check">9</exelink>
+      <exelink idx="tuto_complete">17</exelink>
+   </talk>

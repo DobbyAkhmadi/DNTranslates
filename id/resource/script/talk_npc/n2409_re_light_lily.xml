@@ -1,0 +1,39 @@
+   <talk>
+      <npcename>n2409_re_light_lily</npcename>
+      <npcid>2409</npcid>
+      <startexe>7</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Lily]]></npckname>
+      <talk_paragraph index="001" image="QW_PrairieTown.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Lily$<BR><FONT color=#7e12d2>(The little girl is terrified. </FONT><FONT color=#7e12d2>Take her to town.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="001" mid="6"><![CDATA[<html>(Take a careful look at the girl.)</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html><FONT color=#2b2723>${user_nick}$<BR>(Was it this girl's sister who was taken?)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="7"><![CDATA[<html><FONT color=#2b2723>${user_nick}$<BR>(Was it this girl's sister who was taken?)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_question mid="8"><![CDATA[<html>$Lily$<BR><FONT color=#7e12d2>(As you help the girl get up,</FONT><BR><FONT color=#7e12d2>you suddenly feel dizzy </FONT><FONT color=#7e12d2>and it feels as if the world is spinning...)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 12, 2);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 12, 1);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID,12, 1);</exe>
+         <exe type="conexe" true="0" false="10">0</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 24, 0, 1, 1, 0);</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="8" false="4">1</exe>
+         <exe type="conexe" true="9" false="6,5,1,2,3">0</exe>
+         <exe type="talk">003</exe>
+         <exe type="conexe" true="11" false="0,5,1,2,3">2</exe>
+         <exe type="talk">004</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">12</chk>
+         <chk type="hascomq">3610</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 80</chk>
+      </conditions>
+   </talk>

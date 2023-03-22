@@ -1,0 +1,27 @@
+   <talk>
+      <npcename>n1623_sorceress_yutz</npcename>
+      <npcid>1623</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Sorceress Yutz]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="14"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Sorceress Yutz$<BR>I'm the right arm of Court Sorceress Kayleen, and I'm proud to be her aide.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="15" link_target="sqc14_4574_conflict1.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Remaining Conflicts I</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="16"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Sorceress Yutz$<BR>I wonder why Lady Kayleen came to this kind of place....</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">sqc14_4573_karakule_decision</exe>
+         <exe type="conexe" true="1" false="4">0</exe>
+         <exe type="enterquest">sqc14_4577_integration_of_the_prognostic</exe>
+         <exe type="conexe" true="3" false="0">1</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">4573</chk>
+         <chk type="hasquest">4577</chk>
+      </conditions>
+   </talk>

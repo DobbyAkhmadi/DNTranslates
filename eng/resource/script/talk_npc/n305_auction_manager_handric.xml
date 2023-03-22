@@ -1,0 +1,20 @@
+   <talk>
+      <npcename>n305_auction_manager_handric</npcename>
+      <npcid>305</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Exchange Deacon Hendrick]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="auction" mid="3"><![CDATA[<html>[Trading House]</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="6"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Exchange Deacon Hendrick${action:Talk}<BR>Is there something you want?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenMarket(userObjID);</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,305);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="auction">1</exelink>
+      <exelink idx="guildms">2</exelink>
+   </talk>

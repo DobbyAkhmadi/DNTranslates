@@ -1,0 +1,409 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq25_5096_salvation_children</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>5096</qid>
+      <designer>김인정</designer>
+      <qlevel>30</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Support for the children]]></qkname>
+      <qnpc>
+         <npcid>100</npcid>
+         <npcename>n100_event_ilyn</npcename>
+         <npckname>이벤트 도우미 아이린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>70</npcid>
+         <npcename>n070_plane_ticketer_sorene</npcename>
+         <npckname>매표원 소렌느</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>87</npcid>
+         <npcename>n087_beggar</npcename>
+         <npckname>걸인 로피</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>88</npcid>
+         <npcename>n088_scholar_starshy</npcename>
+         <npckname>문장학자 스타쉬</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-noquest" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="95"><![CDATA[<html>$Ticket Agent Sorene $<BR><FONT color=#a82424>Irine </FONT> Anak-anak dari luar kota dirawat oleh istana bukan? <BR>
+Saudara perempuan Irine memiliki hati yang sangat hangat atau seperti itu yang aku dengar. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-noquest" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="96"><![CDATA[<html>$Beggar Loffy$<BR>... (Mengejar lalat tanpa berbicara)<BR>
+<BR><FONT color=#7e12d2>※ Kamu dapat memulai  quest dengan berbicara pada Events Planner Irine.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-noquest" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="97"><![CDATA[<html>$Heraldry Scholar Stas $<BR>... (Sepertinya dia sedang membaca buku)<BR>
+<BR><FONT color=#7e12d2>※ Kamu dapat memulai quest dengan berbicara pada Events Planner Irine.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-accepting-a" mid="30" select_type="0"><![CDATA[<html>Oh itu bagus!</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Events Planner Irine $<BR>
+<FONT color=#387206>{user_nick}</FONT> Tunggu! Aku punya kabar gembira. <BR>Ada lebih banyak orang yang mau menolong anak-anak yang dirawat oleh istana~!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-accepting-b" mid="99" select_type="0"><![CDATA[<html>Ok.</html>]]></talk_answer>
+      <talk_question mid="98"><![CDATA[<html>$Events Planner Irine$<BR>Jadi berbicara tentang hal itu. <BR>Maukah kamu pergi dan temui the sponsors untuk aku? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-accepting-c" mid="101" select_type="0"><![CDATA[<html>(Irine terlihat bahagia)</html>]]></talk_answer>
+      <talk_question mid="100"><![CDATA[<html>$Events Planner Irine $<BR>
+Aku sangat bersyukur kepada mereka, dan aku berharap dapat berterima kasih kepada mereka secara langsung... <BR>Tapi aku punya event yang harus dikerjakan. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-accepting-acceppted" mid="103" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="102"><![CDATA[<html>$Sponsor for the children$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1" image="QN_Npc_Woman_Tiketer_Sorene.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-1-a" mid="105" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="104"><![CDATA[<html>$Events Planner Irine $<BR><FONT color=#a82424>Ticket Agent Sorene </FONT> Saudara perempuanku akan menunggu. Tolong berikan padanya anting dan parfum ini. Dia pasti akan sangat senang menerima ini. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-a" image="QN_Npc_Woman_Tiketer_Sorene.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="106"><![CDATA[<html>$Events Planner Irine $<BR>
+<FONT color=#a82424>Sorene</FONT> pasti akan gembira jika kamu memberikan earrings and parfum ini. <BR>Aku penasaran apa yang akan dia berikan sebagai balasan. Hahaha! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="107"><![CDATA[<html>$Beggar Loffy $<BR>...<BR><FONT color=#7e12d2>(Dia mengejar lalat tanpa berkata apa-apa.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="108"><![CDATA[<html>$Heraldry Scholar Stas $<BR>...<BR>
+<FONT color=#7e12d2>(Sepertinya dia sedang membaca buku)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-a" mid="110" select_type="0"><![CDATA[<html>Ya.</html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html>$Ticket Agent Sorene $<BR>Apakah Irine yang mengirim kamu? <BR>
+Menolong anak-anak terlantar bukan? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-b" mid="112" select_type="0"><![CDATA[<html>(Sorene tersenyum)</html>]]></talk_answer>
+      <talk_question mid="111"><![CDATA[<html>$Ticket Agent Sorene $<BR>Aku tahu itu. <BR>
+Irine sepertinya sangat sibuk akhir-akhir ini. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-c" mid="114" select_type="0"><![CDATA[<html>Ini adalah pemikiran yang telah diperhitungkan.</html>]]></talk_answer>
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-c" mid="115" select_type="0"><![CDATA[<html>Aku mendengar kamu mempunyai sesuatu untuk didonasikan.</html>]]></talk_answer>
+      <talk_question mid="113"><![CDATA[<html>$Ticket Agent Sorene $<BR>Bagaimanakah anak-anak yang dibawa oleh Irine? Apakah mereka dirawat dengan baik? <BR>
+Aku mau melakukan sesuatu yang berguna untuk mereka, tapi aku tidak dapat memikirkan sesuatu yang spesial. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-d" mid="117" select_type="0"><![CDATA[<html>Irine mengatakan kepadaku untuk memberikan ini padamu.</html>]]></talk_answer>
+      <talk_question mid="116"><![CDATA[<html>$Ticket Agent Sorene$<BR>Hmm... Apa yang dapat aku berikan padamu? Aku punya kue ini dan... <BR><FONT color=#7e12d2>(Sorene melihat ke dalam tasnya.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1-d" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-e" mid="119" select_type="0"><![CDATA[<html>(Sorene tersenyum lebih ceria)</html>]]></talk_answer>
+      <talk_question mid="118"><![CDATA[<html>$Ticket Agent Sorene $<BR>Wow! Ini adalah Ghoul’s earring dan  Spit Flower perfume yang terkenal itu! <BR>Aku suka selera Irine! Aku akan melakukan apapun yang kumampu untuk menolong dia~!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-f" mid="121" select_type="0"><![CDATA[<html>(Menerima sebuah airship ticket secara gratis)</html>]]></talk_answer>
+      <talk_question mid="120"><![CDATA[<html>$Ticket Agent Sorene $<BR>Aku akan menolong dengan sepenuh hati. Hmm... Apa yang seharusnya aku berikan? <BR>Ah! Jika anak-anak merasa perlu untuk menggunakan <FONT color=#a82424>Airship </FONT>, Aku akan mengatur agar mereka dapat menggunaknnya secara gratsis!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1-f" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-1-g" mid="123" select_type="0"><![CDATA[<html>(Aku dapat memiliki kue itu...)</html>]]></talk_answer>
+      <talk_question mid="122"><![CDATA[<html>$Ticket Agent Sorene$<BR>Wow Aku suka warna dari anting-anting ini. Ini sangat memukau. Dan aku suka wangi dari parfum ini. <BR>Tolong sampaikan pada Irine rasa teima kasihku~!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1-g" image="QN_Npc_Beggar.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-2" mid="125" select_type="0"><![CDATA[<html>Aku tidak pernah mendengarnya.</html>]]></talk_answer>
+      <talk_question mid="124"><![CDATA[<html>$Ticket Agent Sorene $<BR>Ah, <FONT color=#a82424>Beggar Loffy</FONT> juga mau mendonasikan sesuatu. <BR> Apakah kamu mau menemuinya? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-2" image="QN_Npc_Beggar.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="126"><![CDATA[<html>$Ticket Agent Sorene$<BR>Oh~ Untuk berjaga-jaga, tolong pergi dan temui <FONT color=#a82424>Loffy</FONT>. Dia sesungguhnya sangat baik hati. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-2" image="QN_Npc_Beggar.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="127"><![CDATA[<html>$Events Planner Irine$ <BR>Apa? <FONT color=#a82424>Beggar Loffy</FONT> juga menolong dengan baik? <BR>
+Itu bagus. Dapatkah kamu mengunjunginya kembali? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-2-a" mid="130" select_type="0"><![CDATA[<html>(Buatlah sebuah glance setelah mengejar lalat)</html>]]></talk_answer>
+      <talk_question mid="128"><![CDATA[<html>$Beggar Loffy $<BR>
+Hahaha~Hahaha!!! <BR>
+...Siapa kamu? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-2-b" mid="132" select_type="0"><![CDATA[<html>Mohon maaf, yang sebenarnya adalah...</html>]]></talk_answer>
+      <talk_question mid="131"><![CDATA[<html>$Beggar Loffy$<BR>Aku harus mandi hari ini. Hari adalah hari liburku.<BR>Jadi jangan memberikan apapun dan langsung pergi sana! Hahaha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-2-c" mid="135" select_type="0"><![CDATA[<html>Aku dengar kamu mempunyai sesuatu untuk didonasikan.</html>]]></talk_answer>
+      <talk_question mid="133"><![CDATA[<html>$Beggar Loffy$<BR>Hari ini adalah hari liburku! Apa kamu tidak mengerti apa yang kukatakan? <BR>Seperti berbicara dengan Hound! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-2-d" mid="137" select_type="0"><![CDATA[<html>Right.(Kenapa kamu tidak mengatakannya sejak awal?)</html>]]></talk_answer>
+      <talk_question mid="136"><![CDATA[<html>$Beggar Loffy $<BR>Ah~ ya Aku mengetahui tentang donasi. <BR>Hound di kepalaku mengatakan tentang itu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2-d" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-2-e" mid="139" select_type="0"><![CDATA[<html>terima kasih.</html>]]></talk_answer>
+      <talk_question mid="138"><![CDATA[<html>$Beggar Loffy $<BR>Ini, ambillah. <BR>Ini seharusnya membantu<FONT color=#a82424>Irine </FONT> demi nama baiknya. Hahaha <BR>
+<FONT color=#7e12d2>(He hands me over some coins.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="140"><![CDATA[<html>$Beggar Loffy $<BR>Really? terima kasih.<BR>Ini adalah hari liburku, jadi kenapa kamu tidak kembali lagi nanti dan bawakan rotten apple untuk memberi makan Hound milikku? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="141"><![CDATA[<html>$Beggar Loffy$<BR>Aku harus mandi hari ini. Ini adalah hari liburku.<BR>Jadi jangan memberikanku apa-apa dan langsung pergi sana! Hahaha~!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-3-a" mid="143" select_type="0"><![CDATA[<html>Aku pergi dan melihat.</html>]]></talk_answer>
+      <talk_question mid="142"><![CDATA[<html>$Events Planner Irine $<BR>Apakah saudara perempuan Aku Sorene menyukai hadiahnya? <BR>
+Kunjungan itu menyita waktumu sebentar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-3-b" mid="145" select_type="0"><![CDATA[<html>(Menyerahkan barang kepada Irine)</html>]]></talk_answer>
+      <talk_question mid="144"><![CDATA[<html>$Events Planner Irine $<BR>Wow~ <FONT color=#a82424> Beggar Loffy</FONT> adalah orang yang sangat dermawan dan baik hati~</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-3-c" mid="147" select_type="0"><![CDATA[<html>(Irine menggeleng-gelengkan kepalanya)</html>]]></talk_answer>
+      <talk_question mid="146"><![CDATA[<html>$Events Planner Irine$<BR>Free airship tickets! Wow~ Sorene sangat bijaksana.<BR>Ini akan membantu anak-anak itu ketika mereka dewasa. Uhm dan ini...rugged coins? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-3-d" mid="149" select_type="0"><![CDATA[<html>Yes Aku akan melakukannya.</html>]]></talk_answer>
+      <talk_question mid="148"><![CDATA[<html>$Events Planner Irine $<BR>Koin-koin ini... terlalu tua dan sudah berlubang... Aku rasa ini tidak dapat menjadi barang collector. <BR>
+Baiklah, aku harus pergi dan memeriksanya. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-3-d" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="150"><![CDATA[<html>$Events Planner Irine$<BR><FONT color=#387206>{user_nick}</FONT>, Aku rasa sebaiknya menunjukkannya kepada <FONT color=#a82424>Heraldry Scholar Stas.</FONT> <BR>Baiklah Dapatkah kamu menolongku lagi? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-4" image="QN_Npc_Scholar_Starshy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="152"><![CDATA[<html>$Events Planner Irine$<BR>Kita tidak dapat mebuangnya begitu saja mengingat Loffytelah berniat baik memberikan ini. <BR> Aku rasa sebaiknya memeriksa koin-koin ini kepada <FONT color=#a82424>Stash </FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-a" mid="154" select_type="0"><![CDATA[<html>Ya. Ini adalah sesuatu.</html>]]></talk_answer>
+      <talk_question mid="153"><![CDATA[<html>$Heraldry Scholar Stas $<BR>Apa? <FONT color=#a82424> Beggar Loffy</FONT> membuat donasi? <BR>Hahaha. Ini adalah sesuatu~ </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-b" mid="156" select_type="0"><![CDATA[<html>Mungkin.</html>]]></talk_answer>
+      <talk_question mid="155"><![CDATA[<html>$Heraldry Scholar Stas${action:Talk}<BR>Donasi yang dibuat oleh weird beggar... <BR>Aku tidak pernah berpikir dia bisa waras lagi. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-c" mid="158" select_type="0"><![CDATA[<html>(Tunjukkan coins kepada dia.)</html>]]></talk_answer>
+      <talk_question mid="157"><![CDATA[<html>$Heraldry Scholar Stas $<BR>
+Jadi, apa yang Loffydonasikan? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-d" mid="160" select_type="0"><![CDATA[<html>(Huh? Apakah ini sungguh-sungguh antik?)</html>]]></talk_answer>
+      <talk_question mid="159"><![CDATA[<html>$Heraldry Scholar Stas $<BR>...Ini sedikit kotor tapi akan lebih baik setelah dicuci...Hmmm? <BR>
+<FONT color=#7e12d2>(Matanya semakin membesar)</FONT><BR>
+Tunggu dulu! Apakah ini adalah the gold coins of Pirate King Loffy? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-e" mid="162" select_type="0"><![CDATA[<html>Phew... (Dia kelihatannya tertarik...)</html>]]></talk_answer>
+      <talk_question mid="161"><![CDATA[<html>$Heraldry Scholar Stas$<BR>......Ini kelihatannya seperti itu tapi ini bukan. <BR>Hmm...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-4-f" mid="165" select_type="0"><![CDATA[<html>Sungguh.</html>]]></talk_answer>
+      <talk_question mid="163"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Tapi ini ditempa dengan baik. Aku menghargai teknologinya. <BR>
+Hey, dapatkah aku menggunakan ini dalam pelajaranku? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-4-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-5" mid="169" select_type="0"><![CDATA[<html>(Menerima Relationship antara Crest dan Jewelry I, II, III)</html>]]></talk_answer>
+      <talk_question mid="166"><![CDATA[<html>$Heraldry Scholar Stas${action:Talk}<BR>Aku akan memberikan ini sebagai gantinya. <FONT color=#7e12d2>(Dia meletakkan setumpukan buku tua)</FONT><BR>Aku sudah membacanya ketika aku masih muda, jadi ini kan membantu mendidik anak-anak itu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-5" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="170"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Aku harap akan ada lebih banyak sarjana sastra yang terIahir setelah membacanya. Hahaha! <BR>Baiklah, katakan halo kepada <FONT color=#a82424>Irine</FONT> silahkan. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-5-a" mid="173" select_type="0"><![CDATA[<html>(Menyerahkan the pile of books.)</html>]]></talk_answer>
+      <talk_question mid="171"><![CDATA[<html>$Events Planner Irine${action:Talk}<BR>Menempa gold coins of Pirate King Loffy? Aku pernah mendengarnya sebelumnya. <BR> Tapi itu hanyalah isu dan tidak pernah ada bukan? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-5-b" mid="175" select_type="0"><![CDATA[<html>Ya. Kamu tidak bercanda. </html>]]></talk_answer>
+      <talk_question mid="174"><![CDATA[<html>$Events Planner Irine$<BR>Baiklah, ini semua berhasil.<BR> Kita telah memecahkan masalah kita dan mendapat tambahan buku karena <FONT color=#a82424>Stas</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-5-c" mid="177" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="176"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="178"><![CDATA[<html>$Events Planner Irine$<BR>Tapi buku-buku itu <FONT color=#a82424>cukup </FONT> sulit untuk anak-anak. Semoga mereka akan tetap menyukainya. <BR>Terima kasih atas bantuanmu <FONT color=#387206> {user_nick}</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">5096</exe>
+         <exe type="talk" npc="n100_event_ilyn">1</exe>
+         <exe type="recompense_view">50960,,,,,,,,,</exe>
+         <exe type="addquestitem" num="1">300317</exe>
+         <exe type="addquestitem" num="1">300318</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="delquestitem" num="-1">300317</exe>
+         <exe type="delquestitem" num="-1">300318</exe>
+         <exe type="addquestitem" num="1">300320</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="addquestitem" num="1">300319</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="delquestitem" num="-1">300320</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300319</exe>
+         <exe type="addquestitem" num="1">300321</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300321</exe>
+         <exe type="complete" true="">5096</exe>
+         <exe type="recompense">50960,,,,,,,,,</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 100, 600 );</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n100_event_ilyn" sub="c">2</exelink>
+   <exelink qstep="accepting" npc="n100_event_ilyn" sub="acceppted">0,1,3,4</exelink>
+   <exelink qstep="1" npc="n070_plane_ticketer_sorene" sub="b" />
+   <exelink qstep="1" npc="n070_plane_ticketer_sorene" sub="c" />
+   <exelink qstep="1" npc="n070_plane_ticketer_sorene" sub="c" />
+   <exelink qstep="1" npc="n070_plane_ticketer_sorene" sub="d" />
+   <exelink qstep="1" npc="n070_plane_ticketer_sorene" sub="e" />
+   <exelink qstep="1" npc="n070_plane_ticketer_sorene" sub="f" />
+   <exelink qstep="1" npc="n070_plane_ticketer_sorene" sub="g" />
+   <exelink qstep="1" npc="n070_plane_ticketer_sorene" sub="2">0,2,3,4,1</exelink>
+   <exelink qstep="2" npc="n087_beggar" sub="b" />
+   <exelink qstep="2" npc="n087_beggar" sub="c" />
+   <exelink qstep="2" npc="n087_beggar" sub="d" />
+   <exelink qstep="2" npc="n087_beggar" sub="e">0,1,2</exelink>
+   <exelink qstep="3" npc="n100_event_ilyn" sub="b" />
+   <exelink qstep="3" npc="n100_event_ilyn" sub="c" />
+   <exelink qstep="3" npc="n100_event_ilyn" sub="d">0,1,2</exelink>
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="b" />
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="c" />
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="d" />
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="e" />
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="f" />
+   <exelink qstep="4" npc="n088_scholar_starshy" sub="5">2,0,1,3</exelink>
+   <exelink qstep="5" npc="n100_event_ilyn" sub="b">2</exelink>
+   <exelink qstep="5" npc="n100_event_ilyn" sub="c">0,1,3</exelink>
+   <journal_data recompense="0:50960" quest_title="아이들을 위한 후원" chapterid="" quest_level="30" quest_mark_type="10" use_item_list="300317,300318,300320">
+      <journal index="1">
+         <contents_image>QN_Npc_Woman_Tiketer_Sorene.dds</contents_image>
+         <destination_pos>11,n70</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>70</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="37"><![CDATA[Donasi dari Sorene]]></title>
+         <contents mid="38"><![CDATA[<html>Antarkan Irine’s earrings dan perfume ke Ticket Agent Sorene.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Ticket Agent Sorene </FONT></html>]]></contents>
+         <destination mid="39"><![CDATA[Bicaralah kepada Ticket Agent Sorene]]></destination>
+         <todo_msg mid="40"><![CDATA[Menerima donasi dari Ticket agent Sorene]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Beggar.dds</contents_image>
+         <destination_pos>11,n87</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>87</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Donasi dari  Beggar Loffy]]></title>
+         <contents mid="85"><![CDATA[<html>Menerima donasi dari Beggar Loffy.<BR><BR><FONT color=#086171>Saint's Haven </FONT> <FONT color=#a82424>→ Beggar Loffy </FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Bicara kepada Beggar Loffy]]></destination>
+         <todo_msg mid="87"><![CDATA[Menerima donasi dari Beggar Loffy]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Event_Red.dds</contents_image>
+         <destination_pos>11,n100</destination_pos>
+         <destination_mode>custom:11@1,1@1,5@1,8@1</destination_mode>
+         <statemark_npcid>100</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="88"><![CDATA[Kebahagiaan Irine]]></title>
+         <contents mid="89"><![CDATA[<html>Memperbaharui status ke Events Planner Irine <BR><BR><FONT color=#086171>Saint's Haven </FONT> <FONT color=#a82424>→ Events Planner Irine </FONT></html>]]></contents>
+         <destination mid="90"><![CDATA[Bicara  kepada Events Planner Irine]]></destination>
+         <todo_msg mid="91"><![CDATA[Kembali dan memperbaharui status kepada Irine]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>11,n88</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>88</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="180"><![CDATA[Pemeriksaan status]]></title>
+         <contents mid="181"><![CDATA[<html>Memeriksakan  Beggar Loffy’s coin kepada Heraldry Scholar Stas. <BR><BR><FONT color=#086171>Saint's Haven </FONT> <FONT color=#a82424>→ Heraldry Scholar Stas </FONT></html>]]></contents>
+         <destination mid="182"><![CDATA[Bicara kepada Heraldry Scholar Stas]]></destination>
+         <todo_msg mid="183"><![CDATA[Memeriksa coins dengan Heraldry Scholar Stas]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Event_Red.dds</contents_image>
+         <destination_pos>11,n100</destination_pos>
+         <destination_mode>custom:11@1,1@1,5@1,8@1</destination_mode>
+         <statemark_npcid>100</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="186"><![CDATA[Donasi penuh]]></title>
+         <contents mid="187"><![CDATA[<html>Mengantarkan Stas' books kepada Events Planner Irine.<BR><BR><FONT color=#086171>Saint's Haven </FONT> <FONT color=#a82424>→ Events Planner Irine </FONT></html>]]></contents>
+         <destination mid="184"><![CDATA[Bicara kepada Events Planner Irine]]></destination>
+         <todo_msg mid="185"><![CDATA[Kembalilah ke Events Planner Irine]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>30:-1</user_level>
+      <user_class />
+      <prev_quest>5095</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

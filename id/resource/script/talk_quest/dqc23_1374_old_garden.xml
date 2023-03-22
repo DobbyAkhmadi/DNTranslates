@@ -1,0 +1,142 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dqc23_1374_old_garden</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1374</qid>
+      <designer>안여옥</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Daily] Old Garden]]></qkname>
+      <qnpc>
+         <npcid>2522</npcid>
+         <npcename>n2522_merca_guard_lewis</npcename>
+         <npckname>특별 감시병 루이스</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2522_merca_guard_lewis-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2522_merca_guard_lewis-accepting-a" mid="17" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Special Sentry Louis$<BR><FONT color=#2b2723>I don’t understand what is happening... Whatever. I should just concentrate on my task.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2522_merca_guard_lewis-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2522_merca_guard_lewis-accepting-acceptted" mid="7" select_type="0"><![CDATA[<html><FONT color=#086171>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Old Garden$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2522_merca_guard_lewis-1" image="QW_130.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2522_merca_guard_lewis-1-back_npc" mid="9" select_type="0"><![CDATA[<html>(Back)</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Special Sentry Louis$<BR>Lord <FONT color=#a82424>Hirendel</FONT>’s force field barrier is dangerous. I’ve been ordered to stop any monster that comes this way from entering the port. Know that I’m allowing you to enter just this once because of President Vernicka’s orders.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2522_merca_guard_lewis-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2522_merca_guard_lewis-2-a" mid="11" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Special Sentry Louis$<BR>You’re safe! I was worried for nothing.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2522_merca_guard_lewis-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2522_merca_guard_lewis-2-b" mid="13" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Rewards)</FONT></html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Quest Rewards$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2522_merca_guard_lewis-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2522_merca_guard_lewis-2-back_end" mid="15" select_type="0"><![CDATA[<html>(Back)</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Special Sentry Louis$<BR>You were lucky to come back unscathed. You don’t know what waits for you tomorrow so don’t let your guard down!<BR>
+<BR><FONT color=#7e12d2>*Daily Quests can be taken only once a day.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">1374</exe>
+         <exe type="recompense_view">13740,,,,,,,,,,</exe>
+         <exe type="talk" npc="n2522_merca_guard_lewis">1</exe>
+         <exe type="checkStageClearRank" rand="안씀" num="1126" onexe="4,5,6" true="안씀" xsi:nil="true" />
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n2522_merca_guard_lewis.xml");</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">13740,,,,,,,,,,</exe>
+         <exe type="complete" true="">1374</exe>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n2522_merca_guard_lewis.xml");</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2522_merca_guard_lewis" sub="a">1</exelink>
+   <exelink qstep="accepting" npc="n2522_merca_guard_lewis" sub="acceptted">0,2,3</exelink>
+   <exelink qstep="1" npc="n2522_merca_guard_lewis" sub="back_npc">0</exelink>
+   <exelink qstep="2" npc="n2522_merca_guard_lewis" sub="a">0</exelink>
+   <exelink qstep="2" npc="n2522_merca_guard_lewis" sub="b">1</exelink>
+   <exelink qstep="2" npc="n2522_merca_guard_lewis" sub="back_end">2</exelink>
+   <journal_data recompense="13740" quest_title="[일일] 오래된 정원" chapterid="-1" quest_level="95" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_130.dds</contents_image>
+         <destination_pos>1126,0,0</destination_pos>
+         <destination_mode>custom:1126@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>24</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="19"><![CDATA[Investigate Old Garden]]></title>
+         <contents mid="20"><![CDATA[<html>Investigate Old Garden.<BR><BR><FONT color=#7e12d2>*Daily Quests can be taken only once a day.</FONT><BR><BR><FONT color=#086171>Merca’s Port (Hirendel's Barrier)</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>- Old Garden</FONT></html>]]></contents>
+         <destination mid="21"><![CDATA[Clear Old Garden]]></destination>
+         <todo_msg mid="22"><![CDATA[Investigate Old Garden.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_guard_seef.dds</contents_image>
+         <destination_pos>13043,n2522</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>2522</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="24"><![CDATA[Report on the Investigation]]></title>
+         <contents mid="25"><![CDATA[<html>Report to Special Sentry Louis at Merca’s Port.<BR><BR><FONT color=#7e12d2>*Daily Quests can be taken only once a day.</FONT><BR><BR><FONT color=#086171>Merca’s Port </FONT><FONT color=#a82424>- Special Sentry Louis</FONT></html>]]></contents>
+         <destination mid="26"><![CDATA[Report to Special Sentry Louis]]></destination>
+         <todo_msg mid="27"><![CDATA[Go back to Special Sentry Louis.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission>5002</complete_mission>
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,151 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc24_3643_box_open_check</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>3643</qid>
+      <designer>조설빈</designer>
+      <qlevel>95</qlevel>
+      <qdesc>특수보관함으로 이동되는 미션상자 보상을 기간 내 수령하지 못했을 경우 미션상자를 재지급 하는 스크립트.
+
+#276425 이슈 참고
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Did you open the box?]]></qkname>
+      <qnpc>
+         <npcid>2759</npcid>
+         <npcename>n2759_pale_ghost</npcename>
+         <npckname>흐릿한 유령</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2759_pale_ghost-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2759_pale_ghost-accepting-box_plz" mid="6" select_type="0"><![CDATA[<html><FONT color=#086171>[Request Box]</FONT></html>]]></talk_answer>
+      <talk_answer link_index="n2759_pale_ghost-accepting-b" mid="10" select_type="0"><![CDATA[<html><FONT color=#a82424>[Recall Box]</FONT></html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Cloudy Phantom$<BR>
+It says that once you open the Box of Sealed Memory, the items will move to  <FONT color=#387206>Special Storage.</FONT><BR>
+Items in Special Storage last for only <FONT color=#a82424>7 days</FONT> so check your storage more often.<BR>
+If the item is missing<FONT color=#086171> select [Request Box].</FONT><BR>
+If you requested the wrong box <FONT color=#a82424>you can delete it by selecting [Recall Box].</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2759_pale_ghost-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Cloudy Phantom$<BR>Please do not lose next time.<BR>It has a very precious memory for me…….<BR><BR><FONT color=#7e12d2>※ When you open the Box of Sealed Memory, items will move to Special Storage, lasting for 7 days. Please receive it before it expires.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2759_pale_ghost-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2759_pale_ghost-accepting-" mid="11" select_type="0"><![CDATA[<html>(Think once more)</html>]]></talk_answer>
+      <talk_answer link_index="n2759_pale_ghost-accepting-box_del" mid="12" select_type="0"><![CDATA[<html>(I am sure)</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Cloudy Phantom$<BR>
+<FONT color=#2b2723>Once it is recalled, you cannot roll back. </FONT><FONT color=#2b2723>Are you sure you want to recall?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2759_pale_ghost-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Cloudy Phantom$<BR><FONT color=#387206>Special Storage</FONT>contains the item<FONT color=#086171> if you choose [Request box]</FONT> once more <BR> Receive items from Special Storage<BR><FONT color=#a82424>And select [Recall Box].</FONT> <BR>
+ <BR>
+<FONT color=#7e12d2>※ If the box is not duplicate, it is impossible to recall.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2759_pale_ghost-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Cloudy Phantom$<BR>Don't you already have the box?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2759_pale_ghost-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="16"><![CDATA[<html>$Cloudy Phantom$<BR>
+Ok. I will get this box.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2759_pale_ghost-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="17"><![CDATA[<html>$Cloudy Phantom$<BR>
+Weird. I know my memory is fading…….<BR>
+But I do remember that you already opened the box.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2759_pale_ghost-accepting-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Cloudy Phantom$<BR>
+Are you sure you received the box?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2759_pale_ghost-accepting-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>$Cloudy Phantom$<BR>Can you check your inventory if there is any <FONT color=#a82424>'Box of Sealed Memory'?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="hascomq">3734</chk>
+         <chk type="item" num="1" op="]=">268484741</chk>
+         <chk type="missionAchieved">5083</chk>
+         <chk type="hascomq">3736</chk>
+         <chk type="item" num="1" op="]=">268484742</chk>
+         <chk type="missionAchieved">5084</chk>
+         <chk type="hascomq">3738</chk>
+         <chk type="item" num="1" op="]=">268484743</chk>
+         <chk type="missionAchieved">5085</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="12" false="1">8</exe>
+         <exe type="conexe" true="10" false="2">7</exe>
+         <exe type="conexe" true="15,27" false="3">6</exe>
+         <exe type="conexe" true="12" false="4">5</exe>
+         <exe type="conexe" true="10" false="5">4</exe>
+         <exe type="conexe" true="14,27" false="6">3</exe>
+         <exe type="conexe" true="12" false="7">2</exe>
+         <exe type="conexe" true="10" false="8">1</exe>
+         <exe type="conexe" true="13,27" false="25">0</exe>
+         <exe type="talk" npc="n2759_pale_ghost">c</exe>
+         <exe type="talk" npc="n2759_pale_ghost">d</exe>
+         <exe type="talk" npc="n2759_pale_ghost">e</exe>
+         <exe type="talk" npc="n2759_pale_ghost">f</exe>
+         <exe type="additem" num="1">268484741</exe>
+         <exe type="additem" num="1">268484742</exe>
+         <exe type="additem" num="1">268484743</exe>
+         <exe type="delitem" num="-1">268484741</exe>
+         <exe type="delitem" num="-1">268484742</exe>
+         <exe type="delitem" num="-1">268484743</exe>
+         <exe type="conexe" true="20" false="21">7</exe>
+         <exe type="conexe" true="18,11" false="9">8</exe>
+         <exe type="conexe" true="22" false="23">4</exe>
+         <exe type="conexe" true="17,11" false="9">5</exe>
+         <exe type="conexe" true="24" false="26">1</exe>
+         <exe type="conexe" true="16,11" false="9">2</exe>
+         <exe type="talk" npc="n2759_pale_ghost">g</exe>
+         <exe type="talk" npc="n2759_pale_ghost">h</exe>
+         <exe type="talk" npc="n2759_pale_ghost">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2759_pale_ghost" sub="box_plz">0</exelink>
+   <exelink qstep="accepting" npc="n2759_pale_ghost" sub="box_del">19</exelink>
+   <journal_data recompense="36430" quest_title="상자는 열어보셨소?" chapterid="-1" quest_level="95" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

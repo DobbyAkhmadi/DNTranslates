@@ -1,0 +1,48 @@
+   <talk>
+      <npcename>n1690_eltia</npcename>
+      <npcid>1690</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Eltia]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest_other" mid="65"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Eltia$<BR>Hello there! What a nice scenery this place has. <BR>I fall sick easily, so I always stay here. Please come and keep me company when you're bored.<BR><FONT color=#7e12d2>(A cute girl is looking at you with her big innocent eyes)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="quest" mid="17"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill" mid="18"><![CDATA[<html>[Learn Skill]</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Eltia$<BR>Sis! I hope you haven't forgotten about me...<BR>I was so bored!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="19" link_target="mqc02_9470_black_knight.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The Black Knight</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="36" link_target="mqc02_9471_masters_article.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>A Keepsake of Master</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="37" link_target="mqc02_9472_conflict.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The Clash</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="38" link_target="mqc03_9473_wreckage_of_the_ship.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Wreckage of the Airship</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="39" link_target="mqc03_9474_darkelf_elena.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407> Dark Elf Elena</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="40" link_target="mqc03_9476_research_of_sorceress.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Sorceresses' Research</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="41" link_target="mqc03_9477_cleanup.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407> Purification</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="52" link_target="sq08_245_change1_lencea.xml"><![CDATA[<html>[Specialization] <FONT color=#086171>The Path of Justice</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="55" link_target="sq08_4608_change_job8.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407> </FONT><FONT color=#086171>Irine's Specialization Gift</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_quest" mid="53"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Eltia$<BR>Anyway, how did things go? I can't come with you so tell me in full detail.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest_other" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="66" link_target="mqc02_9580_unexpected_encounter.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Unexpected Encounter</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="67" link_target="mqc02_9581_noisy_girl.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Noisy Girl</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="71" link_target="mqc04_9590_disappointing_palace_entrance.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Disappointing Royal Palace</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back" mid="72"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="59"><![CDATA[<html>$Eltia$<BR>My sister is not around right now...<BR>Is there anything you want to say to me?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">8</chk>
+      </conditions>
+      <exelink idx="skill">3</exelink>
+      <exelink idx="back_quest">1</exelink>
+      <exelink idx="back">1</exelink>
+   </talk>

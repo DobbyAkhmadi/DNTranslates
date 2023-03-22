@@ -1,0 +1,117 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_4210_princess_contest_3</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4210</qid>
+      <designer>김인정</designer>
+      <qlevel>70</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Picking Servant for the Princess III]]></qkname>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="9" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="175"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="179"><![CDATA[<html>(Remote Quest)</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">42100,,,,,,,,,</exe>
+         <exe type="setquest">4210</exe>
+         <exe type="talk" npc="n999_remote">1</exe>
+         <exe type="huntmon" num="1" party="1" exe="" onexe="4,5,6">900312</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">42100,,,,,,,,,</exe>
+         <exe type="complete" true="">4210</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">1,3</exelink>
+   <remotecomplete qstep="2">0,1</remotecomplete>
+   <journal_data recompense="42100" quest_title="공주님의 신하 뽑기Ⅲ" chapterid="" quest_level="70" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos>16317,0,0</destination_pos>
+         <destination_mode>custom:16301@0,16302@0,16304@0,16305@0,16307@0,16308@0,16309@0,16310@0,16311@0,16312@0,16313@0,16314@0,16315@0,16316@0,16317@3,16318@0,16319@0,16320@0,16321@0,16322@0,16323@0,16324@0,16325@0,16326@0,16327@0,16328@0,16329@0,16330@0,16331@0,16332@0,16333@0,16334@0,16335@0,16336@0</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="90"><![CDATA[Third Request]]></title>
+         <contents mid="91"><![CDATA[<html><FONT size=2 face=Arial>(</FONT>So I found another one? Go and show the monster what you've got?<BR>I will treat you handsomely if this goes well? Anything for my princess?!)<BR><BR><FONT color=#086171>Saint Haven (Garden of Time and Space)</FONT> <FONT color=#a82424>→ Garden of Time and Space (Dragon Fellowship) → Cooperative Fellowship : Lava Zone</FONT></html>]]></contents>
+         <destination mid="92"><![CDATA[Dragon Fellowship]]></destination>
+         <todo_msg mid="93"><![CDATA[Defeat the monster in Mobius World.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos>16301,0,0</destination_pos>
+         <destination_mode>custom:16301@3,16302@0,16304@0,16305@0,16307@0,16308@0,16309@0,16310@0,16311@0,16312@0,16313@0,16314@0,16315@0,16316@0,16317@0,16318@0,16319@0,16320@0,16321@0,16322@0,16323@0,16324@0,16325@0,16326@0,16327@0,16328@0,16329@0,16330@0,16331@0,16332@0,16333@0,16334@0,16335@0,16336@0</destination_mode>
+         <statemark_npcid>999</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="180"><![CDATA[Delik's Letter]]></title>
+         <contents mid="181"><![CDATA[<html>(I'm not satisfied this time again? It's all hot and molten here. Where is my cute little princess?<BR>This won't work. I need a smart and compact servant?)<BR><BR><FONT color=#086171>Saint Haven (Garden of Time and Space)</FONT> <FONT color=#a82424>→ Garden of Time and Space (Dragon Fellowship)</FONT></html>]]></contents>
+         <destination mid="182"><![CDATA[Read Delik's Letter]]></destination>
+         <todo_msg mid="183"><![CDATA[This monster has failed. Please take the next request.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>4209</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

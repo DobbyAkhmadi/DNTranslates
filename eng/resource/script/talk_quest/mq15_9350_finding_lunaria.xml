@@ -1,0 +1,492 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq15_9350_finding_lunaria</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>7</qchapter>
+      <qid>9350</qid>
+      <designer>정진호</designer>
+      <qlevel>45</qlevel>
+      <qdesc>유저는 루나를 찾아 나선다. 일루전이 마지막에 남긴 말, 루나의 진심이 궁금했기 때문이다.
+마을 npc와 모험자들에게 루나의 행방을 수소문한다.
+
+고대의 무기고 서쪽에서 벨스를 만나면(아카데믹, 미래에서 전하는 말의 벨스 사용) '또 그녀를 놓친 건가? 너도 참으로 집념이 강한 녀석이군.' 하고 중얼거린다.
+
+유저는 그녀에게 묻고 싶은 게 있다고. 그리고 그녀에게는 도움이 필요한 거라고 말한다.
+'네가 상대에게 필요하리라는 믿음은 그저 착각이며 오만일 뿐이지.' 하고 답하는 벨스커드.
+
+다음 맵으로 가면, 카라한과 그 앞에 쓰러진 시델+카라큘을 발견할 수 있다.
+말을 걸면 (기존 722 참조) 카라큘을 데리고 오두막으로 돌아간다.
+
+카라큘과 대화.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9351</nextqid>
+      <nextqname>mq15_9351_stray_sheep</nextqname>
+      <nextqnpc>n701_oldkarakule</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Finding Lunaria]]></qkname>
+      <qnpc>
+         <npcid>1188</npcid>
+         <npcename>n1188_velskud</npcename>
+         <npckname>벨스커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>575</npcid>
+         <npcename>n575_shadow_meow</npcename>
+         <npckname>그림자 냥</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>701</npcid>
+         <npcename>n701_oldkarakule</npcename>
+         <npckname>카라큘 페어리스타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>709</npcid>
+         <npcename>n709_trader_lucita</npcename>
+         <npckname>상인 루시타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>715</npcid>
+         <npcename>n715_adventurer_guildmaster_hose</npcename>
+         <npckname>모험자 길드장 호세</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>721</npcid>
+         <npcename>n721_sidel</npcename>
+         <npckname>시델</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>728</npcid>
+         <npcename>n728_karahan</npcename>
+         <npckname>카라한 </npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n575_shadow_meow-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n575_shadow_meow-accepting-acceptted" mid="9" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Shadow Neko$<BR>…Huh? You couldn't find the woman yet?<BR>Phew… <FONT color=#387206>{user_nick}</FONT> doesn't know something. If you cling on too much, the woman will run away. That's what my 12th older sister said.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n575_shadow_meow-1" image="QN_npc_Master_Jose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Shadow_Meow.dds" center_image="">
+      <talk_answer link_index="n575_shadow_meow-1-" mid="10" select_type="5" />
+      <talk_question mid="5"><![CDATA[<html>$Shadow Neko$<BR>I know that <FONT color=#a82424>Guild Master Jose</FONT> likes to look for people.<BR>Why don't you go and talk to him?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-1-" mid="12" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>$Merchant Lucita$<BR>Er… Can I help you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n728_karahan-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_karahan.dds" center_image="">
+      <talk_answer link_index="n728_karahan-1-" mid="15" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Karahan$<BR>Keke……Lowly fools.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-1-" mid="17" select_type="5" />
+      <talk_question mid="16"><![CDATA[<html>$Velskud$<BR>I have no time for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-1-" mid="19" select_type="5" />
+      <talk_question mid="18"><![CDATA[<html>$Karacule Fairystar$<BR>*Coughs*<BR>It's about time….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Jose.dds" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-1-a" mid="21" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Guild Master Jose$<BR>If only I was still single… I would have become famous by now…<BR>…Hmm? Hey you. Anything up?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Jose.dds" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-1-b" mid="23" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Guild Master Jose$<BR>You're looking for a person?<BR>Tell me the details.<BR><FONT color=#7e12d2>(Jose flips his notebook)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Jose.dds" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-1-c" mid="25" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Guild Master Jose$<BR>Huh? <FONT color=#a82424>A beautiful woman with long silver-white hair</FONT>?<BR>Hmm… there must be a record if such a beauty was seen, but unfortunately there's no such record.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1-c" image="QN_Npc_Lucita.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Jose.dds" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-1-d" mid="27" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Guild Master Jose$<BR>One tends to get demotivated when there are not many clues.<BR>Cheer up. Umm… If you are at a loss of what to do, why don't you go to <FONT color=#a82424>Merchant Lucita</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-1-d" image="QN_Npc_Lucita.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Jose.dds" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-1-" mid="150" select_type="5" />
+      <talk_question mid="149"><![CDATA[<html>$Guild Master Jose$<BR>Maybe she can't help you right now, but <FONT color=#a82424>Lucita</FONT> always talks to many adventurers visiting her shop, so she might have some useful information.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n715_adventurer_guildmaster_hose-2" image="QN_Npc_Lucita.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Jose.dds" center_image="">
+      <talk_answer link_index="n715_adventurer_guildmaster_hose-2-" mid="30" select_type="5" />
+      <talk_question mid="29"><![CDATA[<html>$Guild Master Jose$<BR><FONT color=#a82424>Merchant Lucita</FONT> is very observant, so she might be able to help.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-a" mid="32" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Merchant Lucita$<BR>Ahh! Hello. <BR>Are you looking for something?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-b" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Merchant Lucita$<BR> Oh. I see. You're looking fo a person.<BR>Hmm… A mysterious beauty with fair and clear skin… Hmm… <BR>I'm sorry. I haven't heard of any news about her.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-c" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Merchant Lucita$<BR>The other adventurers are having a hard time after losing Charti. <BR>Perhaps it's because of that they don't come here as often.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-d" mid="38" select_type="0"><![CDATA[<html>It's okay.</html>]]></talk_answer>
+      <talk_answer link_index="n709_trader_lucita-2-d" mid="39" select_type="0"><![CDATA[<html>…….</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Merchant Lucita$<BR>…It'd be great if everyone's happy.<BR>It'd be great if you could be with your loved one too…<BR>
+Oops! That was impudent of me. S-sorry.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-e" mid="41" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(To be with someone I love…? That's probaby not true.<BR>Lunaria asked me if I blame her, but….)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-f" mid="43" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(It's not about whether I blame or like her.<BR>It's just that her lasts words bother me. I don't know what they mean.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-g" mid="45" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I just want to meet her and hear from her directly….)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-2-h" mid="47" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Merchant Lucita$<BR>Erm, I'm not totally certain but perhaps you could try going to the Ancient Warehouse?<BR>I heard a strange person was spotted there a while back.<BR>
+I'm not sure what kind of 'strange' that is though….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-2-h" image="QW_56.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-3" mid="49" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Merchant Lucita$<BR>Oh, you mean which direction?<BR>It's to the direction of the <FONT color=#a82424>West Ancient armoury</FONT>. Someone with weird clothes was spotted.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-3" image="QW_56.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-3-" mid="52" select_type="5" />
+      <talk_question mid="51"><![CDATA[<html>$Merchant Lucita$<BR>I have someone I'd like to meet as well. I dream about the day we can all live happily together.<BR>… If he is at the <FONT color=#a82424>West Ancient armoury</FONT> now I'd rush anytime to find him no matter how dangerous it is….<BR><FONT color=#7e12d2>(Lucita tries to smile)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-a" mid="55" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>$Velskud$<BR>…You look free.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-b" mid="57" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Velskud$<BR>Ah look. Is this not Illusion but the chap who were with the other stupid adventurers?<BR>Why are you wandering alone again?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-c" mid="61" select_type="0"><![CDATA[<html>I just have something to ask her.</html>]]></talk_answer>
+      <talk_answer link_index="n1188_velskud-3-c" mid="62" select_type="0"><![CDATA[<html>I'm just worried.</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Velskud$<BR>Hmm. Looking for a woman?<BR>…You missed her again. You are so persistent.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-d" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…And she needs help.<BR>My help.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-e" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(She said she depends on me. Lunaria doesn't lie.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-f" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Velskud$<BR><FONT color=#a82424>Thinking that the others need you</FONT>- that's just delusion and arrogance.<BR>You're still an amateur if you still haven't figured that out.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-g" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Velskud$<BR>To obsess over the shadow of the past also suggests how foolish you are.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-h" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Do you have any rights to say that to me?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-i" mid="74" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Velskud$<BR>…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-j" mid="76" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aren't you looking for Karahan too?<BR>What do you have to settle with him?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-k" mid="78" select_type="2" />
+      <talk_question mid="77"><![CDATA[<html>$Velskud$<BR>So Illusion doesn't know…<BR>I thought the story was old enough to be rotting in your mind. But time must be such a vain thing.<BR>I believe you know about the "Apostles".</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-l" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Velskud$<BR>Yes. <FONT color=#a82424>The man</FONT> who is called the <FONT color=#a82424>King</FONT> and his seven Apostles.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-m" mid="153" select_type="2" />
+      <talk_question mid="152"><![CDATA[<html>$Velskud$<BR>Most of them were by <FONT color=#a82424>his</FONT> side for their own purpose, so the number didn't matter much.<BR>The place of Fourth Apostle that used to belong to you was quickly taken up by another person after you were gone.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-n" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Velskud$<BR>That man wanted the <FONT color=#a82424>dragon's jewel</FONT>. The jewel of Black Dragon Karas.<BR>That is why I joined the raid 50 years ago, and I managed to get the jewel. But…<BR>
+My body had absorbed its powers, and it couldn't be taken out from me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-o" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>$Velskud$<BR>So the man ordered Karahan to conduct a research on how to separate the dragon jewel from someone or how to become a dragon.<BR>That is how Karahan found out about those things.<BR>
+And he tried to take the Black Dragon's jewel from me so that he could become a dragon himself.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-p" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Velskud$<BR>I waited for the chance to escape from Karahan's lab and I succeeded one day.<BR>And I searched for the Ancient's descendant.<BR>To gain the dragon's powers and to take revenge.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-3-q" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Velskud$<BR>…Maybe I couldn't escape from the shadows of my past like what you've said.<BR>Hmph… That makes us on the same train.<BR>
+Clinging onto the past will not bring pleasant results.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-3-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Velskud.dds" center_image="">
+      <talk_answer link_index="n1188_velskud-4" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>$Velskud$<BR>……I talked unnecessarily too much.<BR>Get out of my way.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1188_velskud-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1188_velskud-4-" mid="94" select_type="5" />
+      <talk_question mid="92"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I should go further inside.<BR>Maybe I'll find something else…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n728_karahan-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_karahan.dds" center_image="">
+      <talk_answer link_index="n728_karahan-4-a" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>$Karahan$<BR>Keke… Lowly beings….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n728_karahan-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_karahan.dds" center_image="">
+      <talk_answer link_index="n728_karahan-4-b" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>$Karahan$<BR>Oh… It's you again, Illusion.<BR>Insignificant fools must be lacking of learning abilities. I don't understand how they dare to challenge the greatest genius of all time, the great Karahan.<BR>They are like moths flying into flames of fatality! Hahahaha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n728_karahan-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_karahan.dds" center_image="">
+      <talk_answer link_index="n728_karahan-4-c" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Cidel and Karacule…?<BR>…Oh no, so I'm back here…?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n728_karahan-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_karahan.dds" center_image="">
+      <talk_answer link_index="n728_karahan-4-d" mid="102" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>$Karahan$<BR><FONT color=#a82424>Back</FONT>…?<BR>Ah yes~ You used to spout nonsense about time warps from the past.<BR>That man used to show interest in that rubbish talk but… you good-for-nothing.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n728_karahan-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_karahan.dds" center_image="">
+      <talk_answer link_index="n728_karahan-4-e" mid="104" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$Karahan$<BR>Insignificant creatures will always be insignificant no matter where they go.<BR>Unless you become someone like me who superceeds time, you will always be the same useless scum.<BR>No matter where you go or which time you end up in.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n728_karahan-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_karahan.dds" center_image="">
+      <talk_answer link_index="n728_karahan-4-f" mid="106" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Now is not the time for fighting with him.<BR>I should take Cidel and Karacule back to the hut first.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n728_karahan-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_karahan.dds" center_image="">
+      <talk_answer link_index="n728_karahan-5" mid="108" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Karahan$<BR>If you don't want to challenge me, take those junks with you.<BR>I have work to do.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n728_karahan-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n728_karahan-5-" mid="111" select_type="6" />
+      <talk_question mid="110"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I should take them back to the hut first)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-5-a" mid="113" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>$Karacule Fairystar$<BR>Nobody can win age.<BR>It hits everyone, no matter how great your power is...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-5-b" mid="115" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>$Karacule Fairystar$<BR>*Cough*<BR>Karahan was stronger than I expected….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-5-c" mid="117" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>$Karacule Fairystar$<BR>I have been holding on to the name of Fairystar for too long..<BR>Now, it's time for me to free myself from this burden. (Coughs badly)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-5-c" image="" itemindex="" portrait_left="NPC_Left_Sidel.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n701_oldkarakule-5-d" mid="119" select_type="2" />
+      <talk_question mid="118"><![CDATA[<html>$Cidel$<BR>T…Teacher! Wake up!<BR>No…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-5-e" mid="121" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>$Karacule Fairystar$<BR>Don't make a big fuss, Cidel.<BR>It's just time for me to take the burden down…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-5-f" mid="123" select_type="4" />
+      <talk_question mid="122"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-5-!next" mid="125" select_type="2" />
+      <talk_question mid="124"><![CDATA[<html>$Karacule Fairystar$<BR>Cidel… Come closer.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9350</exe>
+         <exe type="talk" npc="n575_shadow_meow">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">93500,,,,,,,,,</exe>
+         <exe type="complete" true="">9350</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n575_shadow_meow" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n715_adventurer_guildmaster_hose" sub="b" />
+   <exelink qstep="1" npc="n715_adventurer_guildmaster_hose" sub="c" />
+   <exelink qstep="1" npc="n715_adventurer_guildmaster_hose" sub="d">0,1</exelink>
+   <exelink qstep="1" npc="n715_adventurer_guildmaster_hose" sub="" />
+   <exelink qstep="2" npc="n709_trader_lucita" sub="b" />
+   <exelink qstep="2" npc="n709_trader_lucita" sub="c" />
+   <exelink qstep="2" npc="n709_trader_lucita" sub="d" />
+   <exelink qstep="2" npc="n709_trader_lucita" sub="d" />
+   <exelink qstep="2" npc="n709_trader_lucita" sub="e" />
+   <exelink qstep="2" npc="n709_trader_lucita" sub="f" />
+   <exelink qstep="2" npc="n709_trader_lucita" sub="g" />
+   <exelink qstep="2" npc="n709_trader_lucita" sub="h" />
+   <exelink qstep="2" npc="n709_trader_lucita" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n1188_velskud" sub="b" />
+   <exelink qstep="3" npc="n1188_velskud" sub="c" />
+   <exelink qstep="3" npc="n1188_velskud" sub="c" />
+   <exelink qstep="3" npc="n1188_velskud" sub="d" />
+   <exelink qstep="3" npc="n1188_velskud" sub="e" />
+   <exelink qstep="3" npc="n1188_velskud" sub="f" />
+   <exelink qstep="3" npc="n1188_velskud" sub="g" />
+   <exelink qstep="3" npc="n1188_velskud" sub="h" />
+   <exelink qstep="3" npc="n1188_velskud" sub="i" />
+   <exelink qstep="3" npc="n1188_velskud" sub="j" />
+   <exelink qstep="3" npc="n1188_velskud" sub="k" />
+   <exelink qstep="3" npc="n1188_velskud" sub="l" />
+   <exelink qstep="3" npc="n1188_velskud" sub="m" />
+   <exelink qstep="3" npc="n1188_velskud" sub="n" />
+   <exelink qstep="3" npc="n1188_velskud" sub="o" />
+   <exelink qstep="3" npc="n1188_velskud" sub="p" />
+   <exelink qstep="3" npc="n1188_velskud" sub="q" />
+   <exelink qstep="3" npc="n1188_velskud" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n728_karahan" sub="b" />
+   <exelink qstep="4" npc="n728_karahan" sub="c" />
+   <exelink qstep="4" npc="n728_karahan" sub="d" />
+   <exelink qstep="4" npc="n728_karahan" sub="e" />
+   <exelink qstep="4" npc="n728_karahan" sub="f" />
+   <exelink qstep="4" npc="n728_karahan" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n701_oldkarakule" sub="b" />
+   <exelink qstep="5" npc="n701_oldkarakule" sub="c" />
+   <exelink qstep="5" npc="n701_oldkarakule" sub="d" />
+   <exelink qstep="5" npc="n701_oldkarakule" sub="e">0</exelink>
+   <exelink qstep="5" npc="n701_oldkarakule" sub="f">1</exelink>
+   <exelink qstep="5" npc="n701_oldkarakule" sub="!next" />
+   <journal_data recompense="93500" quest_title="루나리아를 찾아서" chapterid="7" quest_level="45" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_npc_Master_Jose.dds</contents_image>
+         <destination_pos>15,n715</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>715</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="127"><![CDATA[Finding Lunaria I]]></title>
+         <contents mid="128"><![CDATA[<html>Talk to Guild Master Jose at Lotus Marsh.<BR>
+ <BR>
+<FONT color=#086171>Lotus Marsh</FONT><FONT color=#a82424> - Guild Master Jose</FONT></html>]]></contents>
+         <destination mid="129"><![CDATA[Talk to Guild Master Jose at Lotus Marsh]]></destination>
+         <todo_msg mid="130"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Lucita.dds</contents_image>
+         <destination_pos>15,n709</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>709</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="131"><![CDATA[Finding Lunaria II]]></title>
+         <contents mid="132"><![CDATA[<html>Talk to Merchant Lucita at Lotus Marsh.<BR>
+ <BR>
+<FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>- Merchant Lucita</FONT></html>]]></contents>
+         <destination mid="133"><![CDATA[Talk to Merchant Lucita at Lotus Marsh]]></destination>
+         <todo_msg mid="134"><![CDATA[Talk to Merchant Lucita.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_56.dds</contents_image>
+         <destination_pos>561,n1188</destination_pos>
+         <destination_mode>custom:561@1</destination_mode>
+         <statemark_npcid>1188</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="135"><![CDATA[Finding Lunaria III]]></title>
+         <contents mid="136"><![CDATA[<html>Go to West Ancient armoury and find Lunaria.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Entrance to Ancient Warehouse)</FONT> <FONT color=#a82424>- West Ancient armoury</FONT></html>]]></contents>
+         <destination mid="137"><![CDATA[Talk to someone at West Ancient armoury]]></destination>
+         <todo_msg mid="138"><![CDATA[Go to West Ancient armoury.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_56.dds</contents_image>
+         <destination_pos>562,n728</destination_pos>
+         <destination_mode>custom:561@1,562@1</destination_mode>
+         <statemark_npcid>728</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="139"><![CDATA[Finding Lunaria IV]]></title>
+         <contents mid="140"><![CDATA[<html>Explore West Ancient armoury a little more.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Entrance to Ancient Warehouse)</FONT> <FONT color=#a82424>- West Ancient armoury</FONT></html>]]></contents>
+         <destination mid="141"><![CDATA[Talk to someone at West Ancient armoury]]></destination>
+         <todo_msg mid="142"><![CDATA[Explore West Ancient armoury a little more.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_Karakule_House.dds</contents_image>
+         <destination_pos>14,n701</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>701</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="144"><![CDATA[Finding Lunaria IV]]></title>
+         <contents mid="145"><![CDATA[<html>Cidel and Karacule had already been defeated by Karahan. Take them back to Karacule's Hut first.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Karacule's Hut)</FONT><FONT color=#a82424> - Karacule Fairystar</FONT></html>]]></contents>
+         <destination mid="146"><![CDATA[Back to Karacule's Hut]]></destination>
+         <todo_msg mid="147"><![CDATA[Go back to Karacule's Hut.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>7</user_class>
+      <prev_quest>9349</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

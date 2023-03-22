@@ -1,0 +1,21 @@
+   <talk>
+      <npcename>n2691_item_destroy</npcename>
+      <npcid>361</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Item Disassembler]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="opendisjointitem" mid="7"><![CDATA[<html>[Activate Item Disassembler]</html>]]></talk_answer>
+         <talk_answer link_index="opencashcrash" mid="10"><![CDATA[<html>[Activate Cash Item Disassembler]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html><FONT size=2 face=Arial>$Item Disassembler$</FONT><BR>An ancient mechanism.<BR>Dismantles inserted items using an ancient power.<BR>
+<BR>※ <FONT color=#7e12d2>Caution: Disassembly attempts are sometimes unsuccessful.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenDisjointItem(userObjID);</exe>
+         <exe type="custom">api_ui_OpenDisjointCashItem(userObjID);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="opendisjointitem">1</exelink>
+      <exelink idx="opencashcrash">2</exelink>
+   </talk>

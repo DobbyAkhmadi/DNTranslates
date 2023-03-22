@@ -1,0 +1,96 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq32_8705_lindsay_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>8705</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Ideal type]]></qkname>
+      <qnpc>
+         <npcid>62</npcid>
+         <npcename>n062_trainer_lindsay</npcename>
+         <npckname>조련사 린제이</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n062_trainer_lindsay-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n062_trainer_lindsay-accepting-a" mid="7" select_type="0"><![CDATA[<html> Siapa? Beritahu aku!</html>]]></talk_answer>
+      <talk_answer link_index="n062_trainer_lindsay-accepting-b" mid="8" select_type="0"><![CDATA[<html> Master Cleric Enoch </html>]]></talk_answer>
+      <talk_answer link_index="n062_trainer_lindsay-accepting-c" mid="9" select_type="0"><![CDATA[<html> Legendary Warrior David </html>]]></talk_answer>
+      <talk_answer link_index="n062_trainer_lindsay-accepting-d" mid="10" select_type="0"><![CDATA[<html> {user_nick}!! </html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Trainer Lindsay$<BR>
+Tipe yang ideal? Umm~~<BR>Tebak! Kamu tahu? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n062_trainer_lindsay-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Trainer Lindsay$<BR>
+Tahukah kamu? Aku kecewa. Kupikir kita berteman... Teman tahu semuanya! Aku membacanya di Oh My Goddess. <BR><FONT color=#7e12d2>(Dia membaca Oh My Goddess tapi katanya buta huruf!)</FONT> Lihat!! Kan?<BR>Jadi pikirkanlah! OK? Cobalah mengerti aku~ Pliss!<BR><FONT color=#7e12d2>(Lindsay </FONT><FONT color=#7e12d2> mengikuti sudut pandang majalah. Dia terlihat sedih.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n062_trainer_lindsay-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Trainer Lindsay$<BR>
+Siapa?<BR>(Dia tidak mengerti dirinya sendiri.)<BR>...Enoch? Ummm... Aku tak suka yang tua! <BR><FONT color=#7e12d2>(Lindsay terlihat tak nyaman.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n062_trainer_lindsay-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Trainer Lindsay$<BR>
+David? ...Oh, Aku tahu.<BR>David dari Biography : David’s Conquer of Monsterdom. Ya kan?<BR>Dia bukan tipeku. Aku suka yang baik. OK?<BR><FONT color=#7e12d2>(Lindsay menjadi tidak tertarik.) </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n062_trainer_lindsay-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Trainer Lindsay$<BR>
+...Apa? <FONT color=#7e12d2>(Lindsay menatapku lalu tertawa.) </FONT><BR>HAHAHAHA~ Lucu sekali!<BR>Oh, sayangku {user_nick}! Leluconmu lucu! Keren!!<BR><FONT color=#7e12d2>(Lindsay terus tertawa. Sepertinya dia suka hal itu.)<BR></FONT>Aku suka kamu~!! Tentu saja! Kamu teman yang baik! <BR><FONT color=#7e12d2>(Semakin dekat dengan Lindsay.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 8705, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 62, 100 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 62, 400 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 62, 200 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 62, 400 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n062_trainer_lindsay" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n062_trainer_lindsay" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n062_trainer_lindsay" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n062_trainer_lindsay" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 이상형" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>62:11000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

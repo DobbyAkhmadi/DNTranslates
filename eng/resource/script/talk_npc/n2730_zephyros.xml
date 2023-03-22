@@ -1,0 +1,54 @@
+   <talk>
+      <npcename>n2730_zephyros</npcename>
+      <npcid>2730</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Zephyros the Guide]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="party_check" mid="122"><![CDATA[<html><FONT color=#2b2723>[Storm of Time and Space Entry]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="141"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="150"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Zephyros the Guide${action:Talk}<BR>This is the most beautiful city I've ever laid eyes on.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="back" mid="142"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Zephyros the Guide$<BR>I'm supposed to be a guide and I don't even know the way... How embarrassing.<BR>Who knew such hidden scenic beauty existed in <FONT color=#086171>Alteia</FONT>?<BR>But... Where is this?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="go_quest" image="QS_Default.dds" itemindex="400600">
+         <talk_question mid="15"><![CDATA[<html><FONT color=#2b2723>$Zephyros the Guide$<BR></FONT><FONT color=#2b2723>Want one? It's a partnership contract.<BR></FONT><FONT color=#7e12d2>※ Can be used after completing the quest </FONT><FONT color=#086171>［Starting Battle, Temporal Storm］ </FONT><FONT color=#7e12d2>.</FONT><BR><FONT color=#7e12d2>Speak with Zephyros in Saint Haven to carry out the quest.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="not_matching" image="" itemindex="">
+         <talk_answer link_index="001" mid="54"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="23"><![CDATA[<html><FONT color=#2b2723>$Zephyros the Guide$<BR></FONT>You'd best take care of any other tasks on your plate before coming here.<BR>Get distracted even for a moment and you'll be blown away by the storm.<BR><BR><FONT color=#7e12d2>※ </FONT><FONT color=#7e12d2>You cannot enter if you have already registered for </FONT><FONT color=#a82424>Random Party Matching</FONT><FONT color=#7e12d2>, </FONT><FONT color=#a82424>Rumble Mode</FONT><FONT color=#7e12d2> or</FONT><FONT color=#7e12d2> </FONT><FONT color=#a82424>Ladder Matching</FONT><FONT color=#7e12d2>,</FONT><BR><FONT color=#7e12d2>or </FONT><FONT color=#a82424>if you are experiencing connectivity</FONT><FONT color=#7e12d2> issues.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="143" link_target="sqc24_3754_go_away1.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Wrong Encounter</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="147"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="151" link_target="sqc2_3818_gust2.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Enter, Storm of Time and Space</FONT></html>]]></talk_answer>
+         <talk_question mid="130"><![CDATA[<html>$Zephyros the Guide$<BR>
+I thought I saw a woman in there…<BR>
+Was I dreaming?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="go_quest2" image="" itemindex="">
+         <talk_question mid="152"><![CDATA[<html><FONT color=#2b2723>$Pathfinder Zephyros$<BR></FONT><FONT color=#2b2723>Do you need one? Companionship agreement.</FONT><BR>
+<FONT color=#2b2723><BR></FONT><FONT color=#7e12d2>※ Quest </FONT><FONT color=#086171>［Enter, Storm of Time and Space］ </FONT><FONT color=#7e12d2> You can continue after complete the quest.</FONT><BR><FONT color=#7e12d2>Start quest by talking with Zephyros.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">go_quest</exe>
+         <exe type="talk">go_quest2</exe>
+         <exe type="talk">not_matching</exe>
+         <exe type="conexe" true="6" false="5">0</exe>
+         <exe type="conexe" true="7" false="1">1</exe>
+         <exe type="conexe" true="7" false="2">2</exe>
+         <exe type="conexe" true="8" false="3">3</exe>
+         <exe type="custom">api_ui_OpenPartyMatching(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">10</chk>
+         <chk type="hascomq">3651</chk>
+         <chk type="hascomq">3818</chk>
+         <chk type="custom">api_user_IsPossiblePartyMatching(userObjID)</chk>
+      </conditions>
+      <exelink idx="party_check">4</exelink>
+   </talk>

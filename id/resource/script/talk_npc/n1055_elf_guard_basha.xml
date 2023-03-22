@@ -1,0 +1,44 @@
+   <talk>
+      <npcename>n1055_elf_guard_basha</npcename>
+      <npcid>1055</npcid>
+      <startexe>9</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Elf Guard Vasha]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="11"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Elf Guard Vasha$<BR>Pertemuan akan segera dimulai. Jangan mengotori tempat ini.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="12" link_target="mq34_9267_who_reject_theresia.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>The One Who Rejects Telesia</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="14" link_target="mq34_9268_dissonance.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Dissonance</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="23" link_target="mq34_9285_doubtful_encounter.xml"><![CDATA[<html>{quest_level}<FONT color=#a82424>Suspicious Encounter</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="24" link_target="mq34_9286_dissonance.xml"><![CDATA[<html>{quest_level}<FONT color=#a94407>Dissonance</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="28" link_target="sq34_4341_the_last_firefly.xml"><![CDATA[<html>{quest_level}<FONT color=#086171>The Last Firefly I</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="29" link_target="sq34_4342_the_last_firefly.xml"><![CDATA[<html>{quest_level}<FONT color=#086171>The Last Firefly II</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="33" link_target="sqc16_4656_noisy_and_powerful_fellow_2.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Energetic boys 2</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="34" link_target="sqc16_4657_butler_and_master.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>He's butler, I'm master</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="25"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Elf Guard Vasha$<BR>Aku harus menjaga tempat ini. Bukan tugas yang mudah.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mq34_9267_who_reject_theresia</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+         <exe type="enterquest">mq34_9268_dissonance</exe>
+         <exe type="conexe" true="6" false="7">2</exe>
+         <exe type="enterquest">mq34_9285_doubtful_encounter</exe>
+         <exe type="conexe" true="8" false="1">3</exe>
+         <exe type="enterquest">mq34_9286_dissonance</exe>
+         <exe type="conexe" true="1" false="10">4</exe>
+         <exe type="conexe" true="1" false="0">5</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9267</chk>
+         <chk type="hasquest">9268</chk>
+         <chk type="hasquest">9285</chk>
+         <chk type="hasquest">9286</chk>
+         <chk type="hasquest">4341</chk>
+         <chk type="hasquest">4342</chk>
+      </conditions>
+   </talk>

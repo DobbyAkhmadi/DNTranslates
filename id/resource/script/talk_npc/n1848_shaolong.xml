@@ -1,0 +1,43 @@
+   <talk>
+      <npcename>n1848_shaolong</npcename>
+      <npcid>1848</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Shaolong (Calderock Village)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="4"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill" mid="5"><![CDATA[<html>[Belajar Skill]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Shaolong${action:Talk}<BR>Kita datang sampai Calderock Village.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Shaolong${action:Talk}<BR>Aku bukan kucing. Tidak ada gunanya....<BR><FONT color=#7e12d2>(Shaolong kelihatan gelisah)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="8" link_target="mqc02_9577_entry_to_the_uninvited_guest.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Enter as unwanted guest</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="9" link_target="mqc02_9579_mysterious_silver_hair.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Mysterious blonde swordwomen</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="10" link_target="mqc02_9580_unexpected_encounter.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Unexpected meeting</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="11" link_target="mqc02_9581_noisy_girl.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Noisy girl</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="12" link_target="mqc02_9582_scary_agent.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Scary proposal</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="13" link_target="mqc03_9583_join_stomach.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>False sign up</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="14" link_target="mqc03_9586_wounded_elena.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Injured Elena</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="15" link_target="mqc03_9587_purification_equipment.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Purification device</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="16" link_target="mqc03_9589_secret_meeting.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Secret meeting</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="22" link_target="mqc04_9590_disappointing_palace_entrance.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Enter dissapointing palace</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="sq08_246_change1_machina.xml"><![CDATA[<html>[Class Specialization] <FONT color=#086171>Meditation time</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="26" link_target="sq08_4727_change_job9.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Irine's Class Specialization Gift</FONT></html>]]></talk_answer>
+		 <talk_answer link_index="back" mid="19"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Shaolong$<BR>
+baik, kita lakukan apa yang bisa kita lakukan.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">9</chk>
+      </conditions>
+      <exelink idx="skill">3</exelink>
+      <exelink idx="back">0</exelink>
+   </talk>

@@ -1,0 +1,83 @@
+   <talk>
+      <npcename>n991_special_global_shop</npcename>
+      <npcid>991</npcid>
+      <startexe>0</startexe>
+      <comment>1: 기부하기
+2: 기부보상
+3: 정령 성장시키기
+4: 골동품 상점
+5: 모험자 길드장의 은화 상점
+6~24: 전장 승부사의 금화 상점
+25~43: 계절의 수정석 상점
+</comment>
+      <npckname mid="1"><![CDATA[Special Store Helper Trisha]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="donation" mid="25"><![CDATA[<html>[Donate]</html>]]></talk_answer>
+         <talk_answer link_index="donation_shop" mid="26"><![CDATA[<html>[Donation Reward]</html>]]></talk_answer>
+         <talk_answer link_index="fairy" mid="27"><![CDATA[<html>[Grow Spirit]</html>]]></talk_answer>
+         <talk_answer link_index="arena_shop" mid="31"><![CDATA[<html>[Battlefield Points Store]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Special Store Helper Trisha$<BR>
+Hi, I'm Trisha. I'm here to provide special stores or functions that used to be provided by other NPCs. How may I help you?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenDonation(userObjID);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,46001,100);</exe>
+         <exe type="custom">api_ui_OpenGrowFairyDlg(userObjID);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,80066,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,89001,100);</exe>
+         <exe type="conexe" true="15" false="7">0</exe>
+         <exe type="conexe" true="16" false="8">1</exe>
+         <exe type="conexe" true="17" false="9">2</exe>
+         <exe type="conexe" true="18" false="10">3</exe>
+         <exe type="conexe" true="19" false="11">4</exe>
+         <exe type="conexe" true="20" false="12">5</exe>
+         <exe type="conexe" true="21" false="13">6</exe>
+         <exe type="conexe" true="22" false="14">7</exe>
+         <exe type="conexe" true="23" false="24">8</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88004,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88005,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88006,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88007,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88008,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88009,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,88010,100);</exe>
+         <exe type="conexe" true="34" false="26">0</exe>
+         <exe type="conexe" true="35" false="27">1</exe>
+         <exe type="conexe" true="36" false="28">2</exe>
+         <exe type="conexe" true="37" false="29">3</exe>
+         <exe type="conexe" true="38" false="30">4</exe>
+         <exe type="conexe" true="39" false="31">5</exe>
+         <exe type="conexe" true="40" false="32">6</exe>
+         <exe type="conexe" true="41" false="33">7</exe>
+         <exe type="conexe" true="42" false="43">8</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65004,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65005,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65006,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65007,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65008,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65009,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,65010,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="class" op="=">9</chk>
+      </conditions>
+      <exelink idx="donation">1</exelink>
+      <exelink idx="donation_shop">2</exelink>
+      <exelink idx="fairy">3</exelink>
+      <exelink idx="arena_shop">6</exelink>
+   </talk>

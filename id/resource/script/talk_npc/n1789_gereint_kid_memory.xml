@@ -1,0 +1,24 @@
+   <talk>
+      <npcename>n1789_gereint_kid_memory</npcename>
+      <npcid>1789</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Where Gerraint Was]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="23"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="15"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Tempat keberadaan Gerraint dahulu kala)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="24" link_target="mqc16_9567_mind_of_dragon.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Dragon's heart</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="27"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Gerraint, Kemana...)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="enterquest">mqc16_9567_mind_of_dragon</exe>
+         <exe type="conexe" true="0" false="2">0</exe>
+         <exe type="talk">001</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9567</chk>
+      </conditions>
+   </talk>

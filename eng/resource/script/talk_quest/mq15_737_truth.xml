@@ -1,0 +1,319 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq15_737_truth</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>6</qchapter>
+      <qid>737</qid>
+      <designer>곽노찬</designer>
+      <qlevel>43</qlevel>
+      <qdesc>해당 퀘스트는 퀘스트 완료시 레벨과 전직퀘 클리어 여부를 조회해서 다음 퀘스트를 지급함.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>738</nextqid>
+      <nextqname>mq15_738_tears</nextqname>
+      <nextqnpc />
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Truth]]></qkname>
+      <qnpc>
+         <npcid>394</npcid>
+         <npcename>n394_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>701</npcid>
+         <npcename>n701_oldkarakule</npcename>
+         <npckname>카라큘 페어리스타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>709</npcid>
+         <npcename>n709_trader_lucita</npcename>
+         <npckname>상인 루시타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>794</npcid>
+         <npcename>n794_angelica</npcename>
+         <npckname>소서리스 안젤리카</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n394_academic_station-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n394_academic_station-accepting-acceptted" mid="96" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Academic Station$<BR>▶ <FONT color=#086171>Network connection error.</FONT><BR>▷ <FONT color=#7e12d2>Mission Objective is being reset.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n394_academic_station-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n394_academic_station-1-" mid="98" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Academic Station$<BR>▶ <FONT color=#086171>Mission Objective.</FONT><BR>▷ <FONT color=#7e12d2>Talk to Karacule Fairystar.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-1" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-1-a" mid="99" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Karacule$<BR><FONT color=#387206>{user_nick}, </FONT> <FONT color=#a82424>Angelica</FONT> was looking for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-1-a" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-1-b" mid="101" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Angelica...? (I don't really want to see her face…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-1-b" image="QW_55.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-1-" mid="102" select_type="5" />
+      <talk_question mid="10"><![CDATA[<html>$Karacule$<BR>She's at the <FONT color=#a82424>East Ancient Armory</FONT>.<BR>If Angelica was as hardworking as you, she would have made it to be my successor with her talent...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-1" image="QN_Npc_OldKarakule.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-1-" mid="103" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Sorceress Angelica$<BR>Hey why are you here again?<BR>You left without a word just now!<BR><BR>* <FONT color=#7e12d2>Talk to Karacule.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n701_oldkarakule-2" image="QW_55.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_OldKarakule.dds" center_image="">
+      <talk_answer link_index="n701_oldkarakule-2-" mid="105" select_type="5" />
+      <talk_question mid="11"><![CDATA[<html>$Karacule$<BR>Angelica wanted to see you.<BR>She's at the <FONT color=#a82424>East Ancient Armory</FONT>. I hope she doesn't create any more trouble...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-a" mid="107" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! You took ages to come!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-b" mid="109" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I came here right after I heard from Karacule.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-c" mid="110" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Sorceress Angelica$<BR>I'm bored! Stupid <FONT color=#a82424>Edan</FONT> ran off somewhere and I didn't have anyone to chat with.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-d" mid="112" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>...You were just bored?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-e" mid="113" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Sorceress Angelica$<BR>That's just one reason. Karacule was nagging at me too!<BR>She wanted me to get trained together with Cidel. Why should I take classes with that little kid? Huh?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-f" mid="22" select_type="0"><![CDATA[<html>Well....</html>]]></talk_answer>
+      <talk_answer link_index="n794_angelica-2-f" mid="114" select_type="0"><![CDATA[<html>(……)</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Sorceress Angelica$<BR>Hey what's with that face. Did I say something wrong?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-g" mid="116" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Sorceress Angelica$<BR>Hey...I called you to relax but you're pissing me off even more!<BR><FONT color=#7e12d3>(Angelica snatches your old communicator)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-h" mid="118" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What are you doing?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-i" mid="26" select_type="0"><![CDATA[<html>(Snatch the communicator back from Angelica)</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Sorceress Angelica$<BR>I'm not going to give it back until you acknowledge that I'm right.<BR>Hmm by the way, this looks a little different.<BR>Did you redesign it? You must be into vintage style!<BR><FONT color=#7e12d2>(Warning beeps can be heard as Angelica presses any buttons)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-j" mid="119" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Sorceress Angelica$<BR>Hey I think it's broken. Did I break it?<BR>But I didn't even press a button.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-k" mid="121" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You did!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-l" mid="122" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$XD-24's Record$<BR><FONT color=#7e12d2>(Words appear on the communicator's screen)</FONT><BR><FONT color=#086171>All that you know are fake. Come and find me if you want to learn the truth.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-m" mid="123" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Sorceress Angelica$<BR>This thing is working fine.<BR>Anyways, <FONT color=#387206>{user_nick}</FONT>, do you have any idea what this is?<BR>I picked it up at the Ancient Library but I don't know what it is.<BR><FONT color=#7e12d2>(Angelica takes something out of her pocket)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-n" mid="125" select_type="2" />
+      <talk_question mid="124"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>This is…? A memory token…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-n" image="QN_Npc_Lucita.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-o" mid="126" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Sorceress Angelica$<BR>Hmm? Is it something expensive?<BR>I didn't know what it was, so I sold a few to <FONT color=#a82424>Lucita</FONT> at really cheap prices. Just tell me how much this would really cost!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-o" image="QN_Npc_Lucita.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-p" mid="128" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It's a useless junk. You can just give it to me.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-q" mid="129" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Sorceress Angelica$<BR>What…? No! This must be expensive...<BR>
+<FONT color=#7e12d2>(Take the token from her hand)</FONT><BR></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-r" mid="130" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Give it back!<BR><FONT color=#7e12d2>(Connect the token to the communicator and play what is inside)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-r" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n794_angelica-2-s" mid="131" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$XD-04's Record$<BR><FONT color=#086171>Made an emergency landing due to mechanical failures. Luckily I'm not too far from my original destination time period.</FONT><BR><FONT color=#086171>The Prophet is about to be born. I will find a way to return as soon as I find her.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-s" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n794_angelica-2-t" mid="132" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$XD-04's Record$<BR><FONT color=#086171>I have failed to get the Prophet.</FONT><BR><FONT color=#086171>I can't give up. I'm going to Calderock Village.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-t" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n794_angelica-2-clear_check" mid="133" select_type="4" />
+      <talk_question mid="79"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-u" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="134" select_type="5" />
+      <talk_question mid="66"><![CDATA[<html>${user_nick}$<BR><FONT color=#387206>(This must be the records of an investigator who was sent here. So herr task wasn't to test the Apocalypse, but to find Rose… Why did Jasmine lie to me? Just how many of them were here? I should go to Lucita and check the other memory tokens too)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-v" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="135" select_type="5" />
+      <talk_question mid="81"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Give it right back!!<BR><BR> <FONT color=#7e12d2>※ You need to complete all 2nd specialization quests to continue with the next main quest.</FONT><BR>
+<FONT color=#7e12d2>※ You can take it as a Remote quest at Lv44.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-w" image="QN_Npc_Sidel.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="136" select_type="5" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(It is a record left behind by a past investigator. Since you no longer have anything to do with her, it would be unnecessary to check her memory token too.)</FONT><BR><BR>* <FONT color=#7e12d2>You have already cleared 2nd specialization quest. Go back to Cidel and carry on with the main quests.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-x" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="137" select_type="5" />
+      <talk_question mid="83"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Give it right back!!<BR><BR>* <FONT color=#7e12d2>You need to complete 1st specialization quest to proceed to 2nd specialization quest and main quests.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-y" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="138" select_type="5" />
+      <talk_question mid="84"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Give it right back!!<BR><BR>* <FONT color=#7e12d2>You can take the 2nd specialization quest when you reach Lv44. You have to complete the specialization quest in order to continue with the main quests.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n794_angelica-2-z" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n794_angelica-2-" mid="139" select_type="5" />
+      <talk_question mid="93"><![CDATA[<html>$Sorceress Angelica$<BR><FONT color=#387206>{user_nick}</FONT>! Give it right back!!<BR><BR>* <FONT color=#7e12d2>You have too many quests in your list and could not attain the 2nd specialization quest. Please clear the quests and attain the 2nd specialization quest from Academic Station at Lotus Marsh.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">737</exe>
+         <exe type="talk" npc="n394_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment>8,1 : 747퀘 완료-2, 거짓-3 (747퀘 : 44렙 전직 시작퀘) 전직퀘 시작도 안했으면 레벨 체크
+2 : 750퀘 완료 (750퀘 : 44렙 전직 완료퀘) 전직퀘 완전 완료했으면 다음 퀘스트 세팅해줌
+3 : 44레벨이상 참-15, 거짓-12
+15 : 378퀘 완료-16, 거짓-17 (378퀘 : 옛날 아카데믹 전직퀘)
+16 :</comment>
+      <conditions>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 747) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 750) == 1</chk>
+         <chk type="lvl" op="]=">44</chk>
+         <chk type="custom">api_quest_IsPlayingQuestMaximum(userObjID) == 1</chk>
+         <chk type="custom">api_quest_IsMarkingCompleteQuest(userObjID, 378) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="recompense">7370,,,,,,,,,</exe>
+         <exe type="conexe" true="2" false="10">0</exe>
+         <exe type="conexe" true="9,13,14" false="10">1</exe>
+         <exe type="conexe" true="15" false="12">2</exe>
+         <exe type="setquest">738</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 747, 1);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 747, 1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 747, 1);</exe>
+         <exe type="complete" true="">737</exe>
+         <exe type="talk" npc="n794_angelica">w</exe>
+         <exe type="talk" npc="n794_angelica">v</exe>
+         <exe type="talk" npc="n794_angelica">u</exe>
+         <exe type="talk" npc="n794_angelica">y</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 738, 2);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 738, 2);</exe>
+         <exe type="conexe" true="16" false="17">4</exe>
+         <exe type="conexe" true="18" false="5,6,7,11">3</exe>
+         <exe type="talk" npc="n794_angelica">x</exe>
+         <exe type="talk" npc="n794_angelica">z</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n394_academic_station" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n701_oldkarakule" sub="b">0,1</exelink>
+   <exelink qstep="1" npc="n701_oldkarakule" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="b" />
+   <exelink qstep="2" npc="n794_angelica" sub="c" />
+   <exelink qstep="2" npc="n794_angelica" sub="d" />
+   <exelink qstep="2" npc="n794_angelica" sub="e" />
+   <exelink qstep="2" npc="n794_angelica" sub="f" />
+   <exelink qstep="2" npc="n794_angelica" sub="f" />
+   <exelink qstep="2" npc="n794_angelica" sub="g" />
+   <exelink qstep="2" npc="n794_angelica" sub="h" />
+   <exelink qstep="2" npc="n794_angelica" sub="i" />
+   <exelink qstep="2" npc="n794_angelica" sub="j" />
+   <exelink qstep="2" npc="n794_angelica" sub="k" />
+   <exelink qstep="2" npc="n794_angelica" sub="l" />
+   <exelink qstep="2" npc="n794_angelica" sub="m" />
+   <exelink qstep="2" npc="n794_angelica" sub="n" />
+   <exelink qstep="2" npc="n794_angelica" sub="o" />
+   <exelink qstep="2" npc="n794_angelica" sub="p" />
+   <exelink qstep="2" npc="n794_angelica" sub="q" />
+   <exelink qstep="2" npc="n794_angelica" sub="r" />
+   <exelink qstep="2" npc="n794_angelica" sub="s" />
+   <exelink qstep="2" npc="n794_angelica" sub="t">0</exelink>
+   <exelink qstep="2" npc="n794_angelica" sub="clear_check">8,1</exelink>
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <exelink qstep="2" npc="n794_angelica" sub="" />
+   <journal_data recompense="7370" quest_title="진실에 다가섭니다" chapterid="6" quest_level="43" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_OldKarakule.dds</contents_image>
+         <destination_pos>14,n701</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>701</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="85"><![CDATA[Truth I]]></title>
+         <contents mid="86"><![CDATA[<html>Talk to Karacule.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Karacule's Hut)</FONT> <FONT color=#a82424>→ Karacule Fairystar</FONT></html>]]></contents>
+         <destination mid="87"><![CDATA[Talk with Karacule]]></destination>
+         <todo_msg mid="88"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_55.dds</contents_image>
+         <destination_pos>551,n794</destination_pos>
+         <destination_mode>custom:551@1</destination_mode>
+         <statemark_npcid>794</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="89"><![CDATA[Truth II]]></title>
+         <contents mid="90"><![CDATA[<html>Angelica is waiting for you at the East Ancient Armory.<BR>
+Go and find her.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Ancient Warehouse Entrance)</FONT> <FONT color=#a82424>→ East Ancient Armory</FONT></html>]]></contents>
+         <destination mid="91"><![CDATA[Talk with Angelica in East Ancient Armory]]></destination>
+         <todo_msg mid="92"><![CDATA[Meet Angelica in East Ancient Armory]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>736</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

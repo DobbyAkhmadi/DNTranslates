@@ -1,0 +1,106 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq41_8305_yohan_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>8305</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About humans]]></qkname>
+      <qnpc>
+         <npcid>714</npcid>
+         <npcename>n714_cleric_yohan</npcename>
+         <npckname>상급 클레릭 요한</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-accepting-a" mid="8" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Cleric Johan$<BR>My kind are usually hostile towards humans.<BR>
+...Honestly, I also don't think that all the humans are good.<BR>
+But us, or the humans, or the elves, we are all children of the Goddess.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-accepting-b" mid="18" select_type="0"><![CDATA[<html>But natives and humans wouldn't be able to reconcile</html>]]></talk_answer>
+      <talk_answer link_index="n714_cleric_yohan-accepting-c" mid="19" select_type="0"><![CDATA[<html>You're too naïve</html>]]></talk_answer>
+      <talk_answer link_index="n714_cleric_yohan-accepting-d" mid="20" select_type="0"><![CDATA[<html>All the types of people are allies against the Dragon Followers</html>]]></talk_answer>
+      <talk_answer link_index="n714_cleric_yohan-accepting-e" mid="21" select_type="0"><![CDATA[<html>There are good people among the natives too</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Master Cleric Johan$<BR>I believe that the humans, us, and the elves.... We all have the light that Goddess gave us inside us.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Master Cleric Johan$<BR>
+Do you think so?<BR>
+Hmm, I know for sure that the conflict between the two will not be solved overnight.<BR>
+But I hope one day the we can live peacefully together.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Master Cleric Johan$<BR>
+I only believe and follow the truth.<BR>
+I don't know if that's something that I should be teased about.<BR>
+<FONT color=#7e12d2>(Johan looks at you like he's hurt)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Master Cleric Johan$<BR>
+That's right. We have to fight together until the evil Dragon Follower are gone!!<BR>
+Fighting among ourselves only helps that treacherous group.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="42"><![CDATA[<html>$Master Cleric Johan$<BR>
+<FONT color=#387206>{user_nick}</FONT>, if there are more people like you, there will be a day when the two will understand each other.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,8305, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 500 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="b">0,3</exelink>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="c">0,4</exelink>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="d">0,1</exelink>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="e">0,2</exelink>
+   <journal_data recompense="" quest_title="[대화] 인간들에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>714:7000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

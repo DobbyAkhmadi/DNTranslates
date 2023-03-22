@@ -1,0 +1,193 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_210_destruction_of_manufactory</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>3</qchapter>
+      <qid>210</qid>
+      <designer>김주연</designer>
+      <qlevel>14</qlevel>
+      <qdesc>[퀘스트 개요]
+1. 아르젠타는 엘레나에게 모든 것을 자백했다는 말을 들으면 플레이어를 쓸모 없는 노예라고 구박한다. 그녀는 그 제조시설은 그대로 두면 곧 캐더락 전체에 홉고블린들이 날뛰게 될 거라면서 제조시설을 파괴하라고 명령한다. 그녀에게 엘레나와의 관계를 물으면 엘레나를 무시하는 발언을 하면서, 생물체를 변형시키거나 오염시키는 것이 엘레나의 특기란 정보도 준다.
+
+2. 습격자들의 매복지에서 제조시설 파괴.
+
+3. 캐더락으로 귀환 후, 잿빛폐허로 이동.
+
+4. 아르젠타에게 보고하면 아르젠타는 엘레나가 그 정도로 일을 허술하게 하진 않을 테니 다른 대비를 하라며, 데커드에게 가서도 엘레나의 움직임에 대한 정보가 있는지 알아보라고 함</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>211</nextqid>
+      <nextqname>mq08_211_red_army</nextqname>
+      <nextqnpc>n164_argenta_wounded</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Destroy the Hobgoblin Production Unit.]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타(잿빛폐허)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-acceptted" mid="58" select_type="3" />
+      <talk_question mid="56"><![CDATA[<html>$Argenta$<BR>Apaa?! Kamu bilang...ogre MENELAN battery? Dan datang Dark Elf dan mengancammu? <BR>Kamu becanda...<BR>Gaswat. gaswat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-h" mid="72" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Argenta$<BR>Hmm... Kamu bilang apa waktu diancam? Jangan-jangan kamu bilang semuanya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-a" image="QM_Ogre_white.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-b" mid="59" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Argenta$<BR>Kamu ditendang oleh Puny Ogre dan lalu kamu mulai sebutin rencana kita seperti burung kecil?Wanita itu hanya akan menyebabkan masalah saat marah! Tapi apa yang dia lakukan disini... tidak mungkin dia mengejarku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-c" mid="61" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>Tapi! Aku bilang, aku hampir MATI!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-d" mid="62" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Argenta$<BR>Hmph! Jika itu aku, aku tidak masalah! Dasar budak tidak berguna!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-e" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Tapi apa kamu saling mengenal?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-e" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-f" mid="65" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Argenta$<BR>Elena? Belum lama ini dia mengganggu goblin dan aku memberinya pelajaran. Sudah 20 tahun dan dia masih membuat masalah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-f" image="QP_hobgoblin_maker.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-g" mid="66" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Argenta$<BR>Jika kamu tidak menghancurkan hobgoblin production units, Calderock akan dipenuhi dengan itu. Kamu bilang kamu melihatnya di Raider's Ambush Point? Pergi kesana sekarang dan <FONT color=#a82424>hancurkan production unit</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-" mid="67" select_type="5" />
+      <talk_question mid="43"><![CDATA[<html>$Argenta$<BR>Apa yang kamu lakukan?Pergi!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-1-a" mid="74" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Erm....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-2" image="QW_18.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-2-" mid="68" select_type="5" />
+      <talk_question mid="44"><![CDATA[<html>$Argenta$<BR>Kamu yakin melihatnya di <FONT color=#a82424>Raider's Ambush Point</FONT>? Mereka pasti merencanakan sesuatu... Pergi dan hancurkan production unit itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-a" mid="69" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Argenta$<BR>Kerja yang bagus. Okay, <FONT Color=#a82424>Elena</FONT> mempunyai kemampuan <FONT color=#a82424>bermutasi atau mengkontaminasi tubuh makhluk hidup</FONT>. Walaupun semua mesin hancur, aku tahu dia masih mencoba menjalankan rencananya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-a" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-!next" mid="70" select_type="4" />
+      <talk_question mid="52"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">210</exe>
+         <exe type="talk" npc="n164_argenta_wounded">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">210</exe>
+         <exe type="recompense">2101,2101,2102,2103,2104,2105,2105,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="e" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="f" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="g">0,1</exelink>
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="" />
+   <exelink qstep="1" npc="n164_argenta_wounded" sub="a" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="a">1</exelink>
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="!next">0</exelink>
+   <journal_data recompense="1:2101,2:2102,3:2103,4:2104,6:2105" quest_title="제조공장 파괴" chapterid="3" quest_level="14" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="22"><![CDATA[Melapor ke Argenta]]></title>
+         <contents mid="23"><![CDATA[<html>Peringati Argenta tentang apa yang kamu lihat dan dengar.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="24"><![CDATA[Melapor ke Argenta]]></destination>
+         <todo_msg mid="25"><![CDATA[Bicara dengan Argenta.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QP_hobgoblin_maker.dds</contents_image>
+         <destination_pos>139,1782.59,-497.14</destination_pos>
+         <destination_mode>custom:136@1,137@1,138@1,139@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="26"><![CDATA[Hancurkan mesin mesin di Raider's Ambush Point]]></title>
+         <contents mid="27"><![CDATA[<html>Kalahkan semua monster di <FONT color=#a82424>Raider's Ambush Point</FONT>, dan hancurkan <FONT color=#a82424>Hobgoblin</FONT> <FONT color=#a82424>Machines</FONT>.<BR><BR><FONT color=#086171>Crystal Stream</FONT> <FONT color=#a82424>→ Raider's Ambush Point</FONT></html>]]></contents>
+         <destination mid="28"><![CDATA[Hancurkan mesin mesin di Raider's Ambush Point]]></destination>
+         <todo_msg mid="29"><![CDATA[Hancurkan mesin mesin di Raider's Ambush Point.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="30"><![CDATA[Melapor lagi ke Argenta]]></title>
+         <contents mid="31"><![CDATA[<html>Kamu telah menghabisi para monster dan menghancurkan generator. Laporkan ke <FONT color=#a82424>Argenta</FONT> di Gray Ruins.<BR><FONT color=#086171><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT><BR></FONT></html>]]></contents>
+         <destination mid="32"><![CDATA[Melapor ke Argenta]]></destination>
+         <todo_msg mid="33"><![CDATA[Melapor ke Argenta.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>209</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

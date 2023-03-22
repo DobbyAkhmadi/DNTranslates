@@ -1,0 +1,94 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq27_6807_duglars_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>6807</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Mengenai Lena]]></qkname>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n042_general_duglars-accepting-a" mid="7" select_type="0"><![CDATA[<html>Hmm, Aku penasasaran jika ia seorang wanita yang baik. </html>]]></talk_answer>
+      <talk_answer link_index="n042_general_duglars-accepting-b" mid="8" select_type="0"><![CDATA[<html> Bagaimana mungkin dia belum menikah? </html>]]></talk_answer>
+      <talk_answer link_index="n042_general_duglars-accepting-c" mid="9" select_type="0"><![CDATA[<html> Ya, Sepertinya dia adalah sosok yang baik </html>]]></talk_answer>
+      <talk_answer link_index="n042_general_duglars-accepting-d" mid="10" select_type="0"><![CDATA[<html> Itu semua karena seorang ayah yang baik seperti mu. </html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$General Douglas$<BR>Dia adalah gadis yang patut dikasihani. Aku tidak dapat melupakan tatapannya ketika ia kehilangan orang tuanya. Dengan semua kecelakaan itu, dia tumbuh menjadi wanita yang bijak. Itu adalah sebuah berkat. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$General Douglas$<BR>Apa yang kamu bicarakan? Jangan katakan hal yang buruk tentang orangtuaku. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$General Douglas$<BR>
+Aku tidak dapat menemukan orang yang cocok untuk putriku. Tidak ada orang orang disekitar kota ini yang cocok untuk putriku. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$General Douglas$<BR>
+Ya, dia terlalu baik dan sangat sopan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$General Douglas$<BR>
+Haha. Benarkah? Aku telah menjadi ayah yang buruk untuknya. Karena dulu berada medan perang sepanjang waktu. Itu semua karena kepribadian, bukan aku yang sebenarnya. </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 6807, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 42, 220 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 42, 110 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 42, 110 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 42, 220 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n042_general_duglars" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n042_general_duglars" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n042_general_duglars" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n042_general_duglars" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 레나에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>42:6050:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

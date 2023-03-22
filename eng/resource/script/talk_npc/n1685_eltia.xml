@@ -1,0 +1,22 @@
+   <talk>
+      <npcename>n1685_eltia</npcename>
+      <npcid>1685</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Eltia]]></npckname>
+      <talk_paragraph index="001" image="QW_ManaRidge.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Eltia$<BR>
+Ouch....<BR>
+<FONT color=#7e12d2>(The bruises on her leg look painful. Go to the town first.</FONT><FONT color=#7e12d2>)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,3,4,0" false="0">0</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,9460, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 9460, 1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 9460, 1);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">8</chk>
+      </conditions>
+   </talk>

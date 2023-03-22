@@ -1,0 +1,498 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc27_9919_infinite_battlefield</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>27</qchapter>
+      <qid>9919</qid>
+      <designer>양희주</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9920</nextqid>
+      <nextqname>mqc27_9920_butterfly</nextqname>
+      <nextqnpc>n2067_nophee</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Infinite Battlefield]]></qkname>
+      <qnpc>
+         <npcid>2067</npcid>
+         <npcename>n2067_nophee</npcename>
+         <npckname>노르페</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3070</npcid>
+         <npcename>n3070_swamp_arc</npcename>
+         <npckname>아르크</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3071</npcid>
+         <npcename>n3071_swamp_arc</npcename>
+         <npckname>아르크</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Norfe$<BR>Since supplies are lacking, we are not in the best position to accommodate so many refugees.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-b" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9918_sp_03.ogg}<BR>Refugees continue to pour in, and our stocks here in Rhadames are not without limit.<BR>We're having a hard time securing additional supplies to meet the sudden surge of refugees.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting-b" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-c" mid="10" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Anna said something similar as well. Does that mean you won't be able to take everyone in?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-d" mid="12" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9918_sp_04.ogg}<BR>No, that will not be the case. Rhadames has no intention of abandoning the refugees of Aergal Kingdom, in spite of our shortages.<BR>No matter what the number is, we intend to accommodate everyone.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting-d" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-acceptted" mid="14" select_type="3" />
+      <talk_question mid="13"><![CDATA[<html>$Norfe$<BR>Before you came, <FONT color=#387206>{user_nick}</FONT>, we got the supplies we needed from the Honest Merchant Guild.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="15"><![CDATA[<html>$Arc$<BR>……………….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="16"><![CDATA[<html>$Arc$<BR>………………………</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1" image="QN_Arc.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-a" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Norfe$<BR>Oh, come to think of it, Arc, who was investigating the situation in Western Territory, asked for a meeting with you.<BR>He'll be waiting at <FONT color=#a82424>Vulcan Swamp</FONT>, so you should go there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-b" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>In Vulcan Swamp? Why won't he come to Rhadames…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-b" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-c" mid="22" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Norfe$<BR>It seems that something may have happened.<BR>
+<FONT color=#387206>{user_nick}</FONT>, please go find out what happened and then let me know.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-d" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay, will do.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2067_nophee-1-e" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Grele$<BR>Wait. You will be asking Arc about the Cup of Healing Lid when you meet, right? Then I'm going too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2067_nophee-2" mid="28" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Sure, then Grele and I will be back soon.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-2" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-2-" mid="30" select_type="5" />
+      <talk_question mid="29"><![CDATA[<html>$Norfe$<BR>Be careful.<BR><BR><FONT color=#7e12d2>※ </FONT>Meet with Arc in <FONT color=#a82424>Vulcan Swamp</FONT><FONT color=#7e12d2>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-a" mid="32" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Arc$<BR>My apologies for requiring you to come all the way here for our meeting. After leaving Aergal I got the distinct feeling that I was being followed,<BR>
+so I thought it would be best to have you come to me, <FONT color=#387206>{user_nick}</FONT>, rather than going to Rhadames.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-a" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-b" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>That's all right. It wasn't as if it was difficult coming here.</FONT><BR>
+<FONT color=#662500>But who would be following you…? Don't tell me the Goddess is on to you...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-b" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-c" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Arc${sound:npc_Arc_qu9919_sp_01.ogg}<BR>That wouldn't be it. If the Goddess was on the move, we'd see far more activity among the commanders.<BR>Whoever it was, they are no longer on my tail, so you have nothing to worry about.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-c" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-d" mid="38" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>That's a relief…</FONT><BR>
+<FONT color=#662500>Oh, were you able to look into the Cup of Healing Lid?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-d" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-e" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Arc$<BR>Yes, the Ancient Book I told you about earlier was in the Aergal Kingdom... So I returned to Aergal,<BR>
+the secret city built underground. But when I went back, somehow the whole of Aergal was buried<BR>
+and I couldn't find the text.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-e" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-f" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Arc$<BR><FONT color=#a82424>Aergal Kingdom has one and only princess</FONT>… I believe she might know something, but I cannot find her...<BR>There hasn’t been any news about her whereabouts since the collapse of the kingdom…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-f" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-g" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A princess…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-g" image="QN_sylviana.dds" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-h" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Arc${sound:npc_Arc_qu9919_sp_02.ogg}<BR><FONT color=#7e12d2>(Nods)</FONT> She is the <FONT color=#a82424>only daughter of the Grand Duke of Aergal Kingdom</FONT>. Her name is Sylvania.<BR>If anyone knows about the Cup of Healing, it would be her.<BR>If you learn her whereabouts, you may be one step closer to learning more about the cup.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-h" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-i" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Arc$<BR>I will also attempt to learn more about the contents of the Ancient Book, but it will be difficult.<BR>
+It seems impossible to ignore the possibility that the lid was buried in debris.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-i" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-j" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I asked the refugees flooding into Rhadames and, according to them, Aergal was invaded by Childs.</FONT><BR>
+<FONT color=#662500>I believe this is why it collapsed…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-j" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-k" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Arc${sound:npc_Arc_qu9919_sp_03.ogg}<BR>Those who survived the collapse must have arrived safely in Rhadames. It is a relief to hear that,<BR>but Aergal Kingdom was a city located deep underground. Many would have been killed when it caved in.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-k" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-l" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Who would have done such a cruel thing…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-l" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-m" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Arc$<BR><FONT color=#7e12d2>(Shakes his head.)</FONT> I was unable to determine who was involved in the attack, or how many survived.<BR>However… The entrance to Aergal Kingdom was sealed and completely hidden, so there were very few who knew of its location.<BR>Perhaps… <FONT color=#7e12d2>(Stops talking.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-m" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-n" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Arc?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-n" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-o" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Grele$<BR>… Someone is approaching.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-o" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-2-p" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What? Who could possibly…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-2-p" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-3" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$Arc$<BR>It's my fault. I can't rule out the possibility that it's the one who was following me. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3070_swamp_arc-3" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3070_swamp_arc-3-" mid="66" select_type="5" />
+      <talk_question mid="65"><![CDATA[<html>$Arc$<BR>I think it would be better to move to another location. Let's go a little further inside.<BR>Grele and I will try to lose the tracker,<BR>
+so please take your time following us, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-a" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Arc$<BR>Nobody will have been able to follow us here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-a" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-b" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But who would be tailing us in the first place…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-b" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-c" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Arc$<BR>Unfortunately, I haven’t been able to determine their identity.<BR>They may be related to the collapse of Aergal Kingdom somehow…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-c" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-d" mid="74" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Arc$<BR>As I said earlier, the number of people aware of Aergal’s location was tiny.<BR>
+So the number of Childs who might have destroyed it is also limited.<BR>
+There are also some Childs who stand out as the candidates most likely to have destroyed the place.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-d" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-e" mid="76" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Really?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-e" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-f" mid="78" select_type="2" />
+      <talk_question mid="77"><![CDATA[<html>$Arc${sound:npc_Arc_qu9919_sp_04.ogg}<BR>Yes, the Western Territory has become a battleground for the Childs to consume one another since Jade's death.<BR>And there are three Childs who stand out. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-f" image="QN_quanos.dds" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-g" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Arc${sound:npc_Arc_qu9919_sp_05.ogg}<BR>First of all, <FONT color=#a82424>Strong Blade Kaunos</FONT> likes to travel alone and is now known as the strongest Child in the Western Territory.<BR>Rumor has it he is to be the successor of the former commander Jade.<BR>In truth, Kaunos is said to be the most suitable candidate.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-g" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-h" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Arc${sound:npc_Arc_qu9919_sp_06.ogg}<BR>There was also <FONT color=#a82424>Domineering Nephrite</FONT>, who possessed powerful magic abilities and everyone said was no slouch, despite being weaker physically than Kaunos...<BR>But recently she was killed by a third Child.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-h" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-i" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR>A <FONT color=#662500>third Child?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-i" image="QN_Child_hiver.dds" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-j" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Arc${sound:npc_Arc_qu9919_sp_07.ogg}<BR><FONT color=#7e12d2>(Nods.)</FONT> <FONT color=#a82424>Bewitching Hiver</FONT>,<BR>a Child said to be a skillful manipulator who has gained power by luring numerous Childs into her traps.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-j" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-k" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Grele$<BR>………….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-k" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-l" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hiver?! </FONT><FONT color=#7e12d2>(Grele must be shocked.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-l" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-m" mid="92" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Grele, are you okay? Do you want to go back?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-n" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>$Grele$<BR>No, I'm okay. I want… to hear more.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-n" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-o" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>$Arc${sound:npc_Arc_qu9919_sp_08.ogg}<BR>After consuming Nephrite, she quickly became the second most powerful Child in the race.<BR>But she is unwilling to come into the open because of Kaunos. I don't know how long this standstill will last, but...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-o" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-p" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Are you saying…. Hiver was the Child who destroyed Aergal Kingdom?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-p" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-q" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>$Arc${sound:npc_Arc_qu9919_sp_09.ogg}<BR>That's a possibility, given the circumstances. Aergal Kingdom, like Rhadames, was a place where people<BR>harbored the will to rebel against the Goddess from their secret location.<BR>There is a good chance Hiver knew its location since she was once a member of the Anti-Goddess Faction.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-q" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-r" mid="102" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>$Arc$<BR>And if Hiver really is such a Child... Rhadames, like Aergal Kingdom, is part of the Anti-Goddess Faction, so we should be careful. Even if it's hidden like Aergal, we don't know when it's location could be exposed,<BR>
+so something needs to be done.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-r" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-3-s" mid="104" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No way…… </FONT><FONT color=#7e12d2>(Come to think of it, the fact things are so quiet even though Hiver knows the location of Rhadames is unsettling. Does this mean she's planning something?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-3-s" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-4" mid="106" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I think we should return to Norfe for now.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-a" mid="153" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Norfe! Norfe!! We have a problem!! Listen to this!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-b" mid="110" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>$Norfe$<BR><FONT color=#387206>{user_nick}</FONT>? What problem…?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-b" image="QN_Child_hiver.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-c" mid="112" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Arc says Hiver may have been behind the collapse of Aergal Kingdom!</FONT><BR>
+<FONT color=#662500>If it was really Hiver…!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-d" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>$Norfe$<BR>Please calm down and speak more clearly, <FONT color=#387206>{user_nick}</FONT>. What are you trying to say?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-d" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-e" mid="118" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well.... There was a power struggle between the Childs in the Western Territory, which includes Aergal. And the Child thought to have done it... Was Hiver.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-e" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-f" mid="120" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>$Norfe$<BR>Did you say... Hiver?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-f" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-g" mid="122" select_type="2" />
+      <talk_question mid="121"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yes, according to Arc, she is known as Bewitching Hiver. She has already become known as one of the power players in the West.</FONT><BR>
+<FONT color=#662500>Apparently she has used a variety of tricks to steal the jewels of other Childs and cultivate power.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-g" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-h" mid="124" select_type="2" />
+      <talk_question mid="123"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What if Hiver targets Rhadames after Aergal? Arc seems worried about that very thing.</FONT><BR>
+<FONT color=#662500>Rhadames may be attacked liked Aergal soon.</FONT><BR>
+<FONT color=#662500>Hiver actually knows where Rhadames is.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-h" image="QW_Merca_Heart.dds" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-i" mid="126" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Don't you want to take refuge in Merca's Heart? It's safe against an attack from the Childs.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-i" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-j" mid="128" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>$Norfe$<BR>That would be difficult, <FONT color=#387206>{user_nick}</FONT>. Even now, the Aergal refugees are still pouring in,<BR>
+and it would be next to impossible to move this many people to Merca's Heart all at once without being noticed.<BR>
+There are also the wounded to consider.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-j" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-k" mid="130" select_type="2" />
+      <talk_question mid="129"><![CDATA[<html>$Norfe$<BR>I am also well aware that even though Hiver hasn't made any significant moves against Rhadames yet,<BR>
+that won't always be the case. Rhadames has its own countermeasures in place for that very reason,<BR>
+so you don't need to worry.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-k" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-4-l" mid="132" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>That's good to hear, but…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-l" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2067_nophee-4-m" mid="134" select_type="2" />
+      <talk_question mid="133"><![CDATA[<html>$Grele${sound:npc_Grele_qu9919_sp_01.ogg}<BR>It'll be okay. I really don't like the idea of fighting my sister, but...<BR>I'll stop anyone who tries to bring down Rhadames.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-4-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2067_nophee-4-!next" mid="136" select_type="4" />
+      <talk_question mid="135"><![CDATA[<html>$Quest Complete$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3071_swamp_arc-4" image="" itemindex="" portrait_left="NPC_Left_arc.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3071_swamp_arc-4-" mid="155" select_type="5" />
+      <talk_question mid="154"><![CDATA[<html>$Arc$<BR>For the time being, I will continue to look for more information on the Ancient Book and the Cup of Healing Lid.<BR>Take care of yourself until we meet again.<BR><FONT color=#7e12d2>※ Go to Norfe in Rhadames and tell him what you heard from Arc.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9919</exe>
+         <exe type="talk" npc="n2067_nophee">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">9919</exe>
+         <exe type="recompense">99190,,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2067_nophee" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n2067_nophee" sub="b" />
+   <exelink qstep="1" npc="n2067_nophee" sub="c" />
+   <exelink qstep="1" npc="n2067_nophee" sub="d" />
+   <exelink qstep="1" npc="n2067_nophee" sub="e" />
+   <exelink qstep="1" npc="n2067_nophee" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="b" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="c" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="d" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="e" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="f" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="g" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="h" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="i" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="j" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="k" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="l" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="m" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="n" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="o" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="p" />
+   <exelink qstep="2" npc="n3070_swamp_arc" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="b" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="c" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="d" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="e" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="f" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="g" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="h" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="i" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="j" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="k" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="l" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="m" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="n" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="o" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="p" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="q" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="r" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="s" />
+   <exelink qstep="3" npc="n3071_swamp_arc" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n2067_nophee" sub="b" />
+   <exelink qstep="4" npc="n2067_nophee" sub="c" />
+   <exelink qstep="4" npc="n2067_nophee" sub="d" />
+   <exelink qstep="4" npc="n2067_nophee" sub="e" />
+   <exelink qstep="4" npc="n2067_nophee" sub="f" />
+   <exelink qstep="4" npc="n2067_nophee" sub="g" />
+   <exelink qstep="4" npc="n2067_nophee" sub="h" />
+   <exelink qstep="4" npc="n2067_nophee" sub="i" />
+   <exelink qstep="4" npc="n2067_nophee" sub="j" />
+   <exelink qstep="4" npc="n2067_nophee" sub="k" />
+   <exelink qstep="4" npc="n2067_nophee" sub="l" />
+   <exelink qstep="4" npc="n2067_nophee" sub="m">1</exelink>
+   <exelink qstep="4" npc="n2067_nophee" sub="!next">0</exelink>
+   <journal_data recompense="99190" quest_title="무한의 전장" chapterid="27" quest_level="95" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Nophee.dds</contents_image>
+         <destination_pos>175,n2067</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2067</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="137"><![CDATA[Warning of an Impending Threat]]></title>
+         <contents mid="138"><![CDATA[<html>It seems Aergal Kingdom really has fallen. Norfe will know how this happened. Go to Norfe and learn the details of the situation from him.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Norfe</FONT></html>]]></contents>
+         <destination mid="139"><![CDATA[Talk to Norfe in Rhadames]]></destination>
+         <todo_msg mid="140"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_117.dds</contents_image>
+         <destination_pos>1102,n3070</destination_pos>
+         <destination_mode>custom:1102@4</destination_mode>
+         <statemark_npcid>3070</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="141"><![CDATA[About the Cup of Healing Ⅰ]]></title>
+         <contents mid="142"><![CDATA[<html>Arc has returned after surveying the Western Territory. Go meet him in Vulcan Swamp and talk about the Cup of Healing Lid.<BR><BR><FONT color=#086171>Rhadames (Anti-Goddess Faction Secret Passage)</FONT> - <FONT color=#a82424>Vulcan Swamp (Arc)</FONT></html>]]></contents>
+         <destination mid="143"><![CDATA[Talk to Arc in Vulcan Swamp]]></destination>
+         <todo_msg mid="144"><![CDATA[Go to Vulcan Swamp.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Arc.dds</contents_image>
+         <destination_pos>1102,n3071</destination_pos>
+         <destination_mode>custom:1102@4</destination_mode>
+         <statemark_npcid>3071</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="145"><![CDATA[About the Cup of Healing Ⅱ]]></title>
+         <contents mid="146"><![CDATA[<html>While speaking with Arc, you felt the presence of an onlooker. Who could it be? You should lose them and meet Arc deeper within Vulcan Swamp.<BR><BR><FONT color=#086171>Rhadames (Anti-Goddess Faction Secret Passage)</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Vulcan Swamp (Arc)</FONT></html>]]></contents>
+         <destination mid="147"><![CDATA[Talk to Arc inside Vulcan Swamp]]></destination>
+         <todo_msg mid="148"><![CDATA[Head deeper into Vulcan Swamp.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Nophee.dds</contents_image>
+         <destination_pos>175,n2067</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2067</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="149"><![CDATA[Infinite Battlefield]]></title>
+         <contents mid="150"><![CDATA[<html>According to Arc, Hiver is the prime suspect in the destruction of Aergal Kingdom. You can't believe Hiver has already become a power player in the West. What's going to happen to Rhadames? Talk to Norfe about Rhadames' survival.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Norfe</FONT></html>]]></contents>
+         <destination mid="151"><![CDATA[Talk to Norfe in Rhadames]]></destination>
+         <todo_msg mid="152"><![CDATA[Talk to Norfe.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest>9918</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

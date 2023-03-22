@@ -1,0 +1,310 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_9312_trace_black_knight</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>9312</qid>
+      <designer>김인정</designer>
+      <qlevel>30</qlevel>
+      <qdesc xml:space="preserve">
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9313</nextqid>
+      <nextqname>mq11_9313_entangled_time</nextqname>
+      <nextqnpc>n1151_academic</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Tracking the Black Knight]]></qkname>
+      <qnpc>
+         <npcid>1139</npcid>
+         <npcename>n1139_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1151</npcid>
+         <npcename>n1151_academic</npcename>
+         <npckname>아카데믹 코멜리나 </npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>216</npcid>
+         <npcename>n216_geraint_wounded</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>519</npcid>
+         <npcename>n519_cian</npcename>
+         <npckname>워리어 시안</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-accepting-acceptted" mid="671" select_type="3" />
+      <talk_question mid="75"><![CDATA[<html>$General Douglas$<BR>Hmm… I heard that the Prophet we managed to save after so much after is still asleep.<BR>What could the problem be?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-a" mid="1167" select_type="2" />
+      <talk_question mid="1147"><![CDATA[<html>$General Douglas$<BR>…Ah it's you.<BR>You've done a great job this time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-a" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-b" mid="1169" select_type="2" />
+      <talk_question mid="1168"><![CDATA[<html>$General Douglas$<BR>Thanks to Bishop Ignacio's devoted efforts and the help of the adventurers, we could achieve our goal even when the deployment was rather sudden. Excellent work.<BR><FONT color=#7e12d2>(Douglas pats your shoulder)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-b" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-c" mid="1171" select_type="2" />
+      <talk_question mid="1170"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(That Bishop Ignacio must be an Apostle... Judging from Elena's case, Apostles can't be that friendly to humans. But it's strange to hear praises about the Bishop coming from the General.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-d" mid="1174" select_type="2" />
+      <talk_question mid="1173"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Have you searched for remains of the Black Dragon?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-d" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-e" mid="1176" select_type="2" />
+      <talk_question mid="1175"><![CDATA[<html>$General Douglas$<BR>Black Dragon? I heard that he crashed after a fatal attack from the Gold Dragon...<BR>
+His remains were not found at Dark Overlord Keep.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-e" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-f" mid="1178" select_type="0"><![CDATA[<html>Contamination at the Foothills of Black Mountain?</html>]]></talk_answer>
+      <talk_answer link_index="n042_general_duglars-1-f" mid="1179" select_type="0"><![CDATA[<html>Where were they found?</html>]]></talk_answer>
+      <talk_question mid="1177"><![CDATA[<html>$General Douglas$<BR>But perhaps because of the blood from the Black Dragon's wounds, the contamination at the Foothills of Black Mountain is getting worse again. It's a pity we can't concentrate on finding the Black Dragon's remains at the moment.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-g" mid="1181" select_type="2" />
+      <talk_question mid="1180"><![CDATA[<html>$General Douglas$<BR>I'm talking about the Lonely Forest Path. Dark Overlord Gates is situated a little higher than that area, so geographically, it would be hard for the <FONT color=#a82424>Lonely Forest Path</FONT> to escape the impact of the blood.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-g" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-h" mid="1183" select_type="2" />
+      <talk_question mid="1182"><![CDATA[<html>$General Douglas$<BR>Ah, come to think of it, there was an adventurer who was asking the same questions as you.<BR>Seeing the Black Dragon's powers with own eyes must have been the wake up call.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-2" mid="1185" select_type="2" />
+      <talk_question mid="1184"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Another adventurer...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-1-a" mid="1154" select_type="2" />
+      <talk_question mid="1148"><![CDATA[<html>$Warrior Xian$<BR>Okay then. <FONT color=#387206>{user_nick}</FONT>.<BR>
+I'll see you again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-1-a" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-1-" mid="1156" select_type="5" />
+      <talk_question mid="1155"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I should talk to General Douglas first then scout the other areas too.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-a" mid="1158" select_type="2" />
+      <talk_question mid="1149"><![CDATA[<html>$King Cassius$<BR>I got the report already, <FONT color=#387206>{user_nick}</FONT>.<BR>I'm so glad you are doing your best.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-a" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-b" mid="1160" select_type="2" />
+      <talk_question mid="1159"><![CDATA[<html>$King Cassius$<BR>And the other adventurers… I think they are doing s-something under the… Bishop's orders.<BR>General Douglas was worried that the losses we suffered were quite a lot...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-b" image="QN_Npc_Duke_Stwart.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-" mid="1162" select_type="5" />
+      <talk_question mid="1161"><![CDATA[<html>$King Cassius$<BR>My uncle is busy with all the Royal Castle issues… And the General is busy with tending the losses incurred. So the other things are being done by the Bishop...<BR>
+I'm glad that the Bishop has volunteered to help out. He's a... loyal s-subject. Don't you think so...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-1-" mid="1163" select_type="5" />
+      <talk_question mid="1150"><![CDATA[<html>$Geraint$<BR>I will guard the descendent of the Ancients. You should go and do what you need to do.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-1-" mid="1164" select_type="5" />
+      <talk_question mid="1151"><![CDATA[<html>$Strange Academic$<BR>Huh? …It's a stranger.<BR>Hmm......?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1139_lunaria-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1139_lunaria-1-" mid="1165" select_type="5" />
+      <talk_question mid="1152"><![CDATA[<html>$Lunaria$<BR>I don't like crowded places...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-2" image="QW_SkirtOfBlackMountain.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-2-a" mid="1188" select_type="2" />
+      <talk_question mid="1187"><![CDATA[<html>$General Douglas$<BR>I'm talking about the <FONT color=#a82424>young adventurer</FONT>. Hurhur.<BR>She hopped out like a rabbit just now saying that she's going to scout the <FONT color=#a82424>Foothills of Black Mountain</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-2-a" image="QN_NPC_Lunaria.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-2-" mid="1190" select_type="5" />
+      <talk_question mid="1189"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Shall I go to the Foothills of Black Mountain and take a look...?</FONT><BR>
+<FONT color=#662500>I need to go to Lunaria anyway.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1139_lunaria-2" image="QN_Npc_Academic_Commelina.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1139_lunaria-2-" mid="1192" select_type="5" />
+      <talk_question mid="1191"><![CDATA[<html>$Lunaria$<BR>
+Another adventurer?<BR>
+Hmm… Are you talking about that little girl over there?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-a" mid="1194" select_type="2" />
+      <talk_question mid="1193"><![CDATA[<html>$Strange Academic$<BR>Oh...!<BR>w-who are you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-a" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-b" mid="1196" select_type="2" />
+      <talk_question mid="1195"><![CDATA[<html>$Strange Academic$<BR>Hmm? You participated in the Black Dragon raid with the other adventurers?<BR>Huh...?! I never saw any of such records…!<BR><FONT color=#7e12d2>(The girl looks flustered)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-b" image="QN_Npc_Academic_Normal.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-c" mid="1199" select_type="2" />
+      <talk_question mid="1198"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(She looks familiar… Hmm...</FONT><BR>
+<FONT color=#662500>Isn't she the girl who told me about the White Purity Orb at Calderock Village...?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-d" mid="1202" select_type="2" />
+      <talk_question mid="1201"><![CDATA[<html>$Strange Academic$<BR>Excuse me? White Purity Orb? …Me?<BR><FONT color=#7e12d2>(The girl doesn't seem to know anything about it)</FONT><BR>I don't think it was me...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-e" mid="1205" select_type="2" />
+      <talk_question mid="1204"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(How can this be?<BR>Is this a side effect of the time warps? I don't know...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-f" mid="1208" select_type="2" />
+      <talk_question mid="1207"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I think I haven't seen you around during the Black Dragon raid.<BR>May I have your name...?</FONT><BR>
+</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-g" mid="1210" select_type="2" />
+      <talk_question mid="1209"><![CDATA[<html>$Strange Academic$<BR>I'm Academic <FONT color=#a82424>Comelina</FONT>.<BR>You are... oh, <FONT color=#387206>{user_nick}</FONT>. Nice to meet you.<BR><FONT color=#7e12d2>(Comelina says politely)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-h" mid="1212" select_type="2" />
+      <talk_question mid="1211"><![CDATA[<html>$Academic Comelina$<BR>Hmm...?<BR>
+I don't have any data on this person… This is strange....<BR><FONT color=#7e12d2>(Comelina looks confused)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-i" mid="1214" select_type="2" />
+      <talk_question mid="1213"><![CDATA[<html>$Academic Comelina$<BR>Anyway, what are you doing here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-j" mid="1216" select_type="2" />
+      <talk_question mid="1215"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Actually I was looking for remains of the Black Dragon.<BR>I was curious whether it has been slain completely.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-k" mid="1218" select_type="2" />
+      <talk_question mid="1217"><![CDATA[<html>$Academic Comelina$<BR>I see.<BR><FONT color=#7e12d2>(Comelina seems to be a little on guard against you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-l" mid="1220" select_type="2" />
+      <talk_question mid="1219"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I heard that the contamination at the Lonely Forest Path has become worse. I thought maybe I can find clues there.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-m" mid="1224" select_type="4" />
+      <talk_question mid="1223"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1151_academic-2-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Academic_Commelina.dds" center_image="">
+      <talk_answer link_index="n1151_academic-2-!next" mid="1236" select_type="2" />
+      <talk_question mid="1235"><![CDATA[<html>$Academic Comelina$<BR>What? …Oh!!<BR>You're right. Dried Marissa Spring, or somewhere near there...!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9312</exe>
+         <exe type="talk" npc="n042_general_duglars">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">93120,,,,,,,,</exe>
+         <exe type="complete" true="">9312</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n042_general_duglars" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n042_general_duglars" sub="b" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="c" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="d" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="e" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="f" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="f" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="g" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="h" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="2">0,1</exelink>
+   <exelink qstep="1" npc="n519_cian" sub="" />
+   <exelink qstep="1" npc="n040_king_casius" sub="b" />
+   <exelink qstep="1" npc="n040_king_casius" sub="" />
+   <exelink qstep="2" npc="n042_general_duglars" sub="" />
+   <exelink qstep="2" npc="n1151_academic" sub="b" />
+   <exelink qstep="2" npc="n1151_academic" sub="c" />
+   <exelink qstep="2" npc="n1151_academic" sub="d" />
+   <exelink qstep="2" npc="n1151_academic" sub="e" />
+   <exelink qstep="2" npc="n1151_academic" sub="f" />
+   <exelink qstep="2" npc="n1151_academic" sub="g" />
+   <exelink qstep="2" npc="n1151_academic" sub="h" />
+   <exelink qstep="2" npc="n1151_academic" sub="i" />
+   <exelink qstep="2" npc="n1151_academic" sub="j" />
+   <exelink qstep="2" npc="n1151_academic" sub="k" />
+   <exelink qstep="2" npc="n1151_academic" sub="l">0</exelink>
+   <exelink qstep="2" npc="n1151_academic" sub="m">1</exelink>
+   <exelink qstep="2" npc="n1151_academic" sub="!next" />
+   <journal_data recompense="93120" quest_title="검은 기사의 행방" chapterid="5" quest_level="30" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Genaral_Duglas.dds</contents_image>
+         <destination_pos>11,n42</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>42</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="1227"><![CDATA[Tracking the Black Knight I]]></title>
+         <contents mid="1228"><![CDATA[<html>Talk to General Douglas at Saint Haven Royal Castle.<BR>
+ <BR>
+<FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>- General Douglas</FONT></html>]]></contents>
+         <destination mid="1229"><![CDATA[Talk to General Douglas inside the Royal Castle]]></destination>
+         <todo_msg mid="1230"><![CDATA[Talk to General Douglas.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SkirtOfBlackMountain.dds</contents_image>
+         <destination_pos>13,n1151</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1151</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="1231"><![CDATA[Tracking the Black Knight II]]></title>
+         <contents mid="1232"><![CDATA[<html>While you were asking about the Black Dragon, you have found out that another adventurer had asked the same questions as you. Go to the Foothills of Black Mountain to meet that adventurer.<BR>
+ <BR>
+<FONT color=#086171>Foothills of Black Mountain</FONT> <FONT color=#a82424>- ???</FONT></html>]]></contents>
+         <destination mid="1233"><![CDATA[Talk to an adventurer at the Foothills of Black Mountain]]></destination>
+         <todo_msg mid="1234"><![CDATA[Talk to an adventurer at the Foothills of Black Mountain.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>9311</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

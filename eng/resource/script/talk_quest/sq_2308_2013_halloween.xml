@@ -1,0 +1,134 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_2308_2013_halloween</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2308</qid>
+      <designer>이한나</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Event] Halloween Special Ghoul Play]]></qkname>
+      <qnpc>
+         <npcid>1228</npcid>
+         <npcename>n1228_hanloween</npcename>
+         <npckname>한로윈 백작</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1228_hanloween-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1228_hanloween-accepting-a" mid="6" select_type="0"><![CDATA[<html><FONT color=#2b2723>A little suspicious… but I'll try it out!</FONT></html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Count Suckurblud$<BR>
+Special Halloween for <FONT color=#a82424>{user_nick}</FONT>~<BR>
+Welcome~</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1228_hanloween-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1228_hanloween-accepting-acceptted" mid="19" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Halloween Special Ghoul Play$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1228_hanloween-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1228_hanloween-1-a" mid="20" select_type="0"><![CDATA[<html>Ghoul Mode??</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Count Suckurblud$<BR>
+Happy Halloween~!<BR>
+I have prepared a special <FONT color=#7e12d2>Event Mission</FONT> that goes well with the Halloween season. That is... the <FONT color=#a82424>Ghoul Mode</FONT>!! Hehehe....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1228_hanloween-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1228_hanloween-1-b" mid="22" select_type="0"><![CDATA[<html>What kind of rewards?</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Count Suckurblud$<BR>
+Play the ghoul mode once a day during the event period, and you will get <FONT color=#a82424>{item:805308294}</FONT> for completing your daily mission. Bring the <FONT color=#a82424>{item:805308294}</FONT> items to me, and you can exchange them for rewards!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1228_hanloween-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1228_hanloween-1-c" mid="24" select_type="0"><![CDATA[<html>So the point is to get as many coins as possible...</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Count Suckurblud$<BR>
+<FONT color=#a82424>{user_nick}</FONT>, whatever reward you are thinking of right now, it will be better!<BR>
+Of course, they come with a price. Please remember to do the event missions everyday.<BR>
+Please remember that it is a daily mission, so no matter how many times you play it in one day, you will get the coin only once.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1228_hanloween-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1228_hanloween-1-d" mid="26" select_type="0"><![CDATA[<html><FONT color=#2b2723>(Continue)</FONT></html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Count Suckurblud$<BR>
+I'm done with the introduction of the event.<BR>
+Please go and enjoy the Halloween Event, <FONT color=#a82424>{user_nick}</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1228_hanloween-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1228_hanloween-1-end" mid="39" select_type="0"><![CDATA[<html>(Go to Ghoul Mode)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Count Suckurblud$<BR>Remember to play the Ghoul Mode once everyday.<BR><BR><FONT color=#7e12d2>* You can enter Ghoul Mode easily by opening the Colosseum lobby in town.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">2308</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="recompense_view">23080,,,,,,,</exe>
+         <exe type="talk" npc="n1228_hanloween">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">2308</exe>
+         <exe type="custom">api_trigger_ShowPVPVillageAccessDlg( userObjID );</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="recompense">23080,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1228_hanloween" sub="a">2</exelink>
+   <exelink qstep="accepting" npc="n1228_hanloween" sub="acceptted">0,1,3</exelink>
+   <exelink qstep="1" npc="n1228_hanloween" sub="b" />
+   <exelink qstep="1" npc="n1228_hanloween" sub="c" />
+   <exelink qstep="1" npc="n1228_hanloween" sub="d">0</exelink>
+   <exelink qstep="1" npc="n1228_hanloween" sub="end">1</exelink>
+   <journal_data recompense="23080" quest_title="[이벤트] 할로윈 맞이 구울모드 플레이" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos />
+         <destination_mode>custom:1@2,5@2,8@2,11@2,15@2</destination_mode>
+         <statemark_npcid>1228</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="9"><![CDATA[Halloween Ghoul Mode Event]]></title>
+         <contents mid="10"><![CDATA[<html>Count Suckurblud is visiting the town for the Halloween. He seems to have something to say to you.<BR>
+ <BR>
+<FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ </FONT><FONT color=#a82424>Count Suckurblud</FONT><BR>
+<FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Count Suckurblud</FONT> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Count Suckurblud</FONT><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Count Suckurblud</FONT><BR>
+<FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→</FONT> <FONT color=#a82424>Count Suckurblud</FONT></html>]]></contents>
+         <destination mid="11"><![CDATA[Talk to Count Suckurblud]]></destination>
+         <todo_msg mid="12"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

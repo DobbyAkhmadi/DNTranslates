@@ -1,0 +1,66 @@
+   <talk>
+      <npcename>n1686_eltia</npcename>
+      <npcid>1686</npcid>
+      <startexe>3</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Eltia]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Eltia$<BR>Hello there! What a nice scenery this place has. <BR>I fall sick easily, so I always stay here. Please come and keep me company when you're bored.<BR><FONT color=#7e12d2>(A cute girl is looking at you with her big innocent eyes)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="quest" mid="17"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill" mid="18"><![CDATA[<html>[Learn Skill]</html>]]></talk_answer>
+         <talk_answer link_index="tuto" mid="30"><![CDATA[<html>[Get Tutorial]</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Eltia$<BR>Sis~~!<BR>I was waiting for you!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="19" link_target="mqc01_9460_curious_mission.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Strange Mission</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="20" link_target="mqc01_9461_proof.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Proof of Innocence</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="mqc01_9462_doubtful_motion.xml"><![CDATA[<html>{quest_level}  <FONT color=#a94407>Suspicious Movements</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="22" link_target="mqc01_9463_orb_to_find.xml"><![CDATA[<html>{quest_level}  <FONT color=#a94407>Find the Orb</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="23" link_target="mqc01_9464_first_mission.xml"><![CDATA[<html>{quest_level}  <FONT color=#a94407>First Mission</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="24" link_target="mqc01_9465_where_is_the_wand.xml"><![CDATA[<html>{quest_level}  <FONT color=#a94407>Where is the Staff?</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="mqc01_9466_take_back_and_lose.xml"><![CDATA[<html>{quest_level}  <FONT color=#a94407>Found and Lost</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="26" link_target="mqc01_9467_cant_go_back.xml"><![CDATA[<html>{quest_level}  <FONT color=#a94407>No Place To Return To</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="27" link_target="mqc02_9468_cataract.xml"><![CDATA[<html>{quest_level}  <FONT color=#a94407>Calderock Village</FONT></html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Eltia$<BR>How did it go? Please tell me everything! I wish I could come with you...</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="tuto" image="" itemindex="">
+         <talk_answer link_index="party" mid="32"><![CDATA[<html>I'll be right back!</html>]]></talk_answer>
+         <talk_answer link_index="002" mid="33"><![CDATA[<html>Hmm? Oh… I don't feel like going anymore.</html>]]></talk_answer>
+         <talk_question mid="31"><![CDATA[<html>$Eltia$<BR>
+What? You still want to train even when you're travelling?? Haha… Well, I knew you'd say that!<BR>
+I'll wait for you to finish the [<FONT color=#a82424>Tutorial</FONT>] first.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="gogotuto" image="" itemindex="">
+         <talk_answer link_index="gotuto" mid="35"><![CDATA[<html>(Go)</html>]]></talk_answer>
+         <talk_question mid="34"><![CDATA[<html>$Eltia$<BR>Don't fall down, and be careful!<BR>You can [<FONT color=#a82424>Get Tutorial</FONT>] anytime, so you don't have to rush!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="notalone" image="" itemindex="">
+         <talk_answer link_index="002" mid="37"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="36"><![CDATA[<html>$Eltia$<BR>
+You're planning to take all these friends along?<BR>
+Hmph! Come back to [Get Tutorial] when you're alone! You didn't even ask if I wanted to come along...<BR>
+(Eltia grumbles with jealousy)</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="4" false="1">1</exe>
+         <exe type="enterquest">mqc01_9460_curious_mission</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+         <exe type="conexe" true="7" false="8">2</exe>
+         <exe type="talk">gogotuto</exe>
+         <exe type="talk">notalone</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13511,1);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">8</chk>
+         <chk type="hasquest">9460</chk>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="skill">5</exelink>
+      <exelink idx="party">6</exelink>
+      <exelink idx="gotuto">9</exelink>
+   </talk>

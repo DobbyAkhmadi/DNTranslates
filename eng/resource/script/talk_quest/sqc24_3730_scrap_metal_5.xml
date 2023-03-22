@@ -1,0 +1,108 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc24_3730_scrap_metal_5</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>3730</qid>
+      <designer />
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Collecting Scrap Iron Pieces 5]]></qkname>
+      <qnpc>
+         <npcid>2754</npcid>
+         <npcename>n2754_scrapmetal</npcename>
+         <npckname>주인 없는 수레</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2754_scrapmetal-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2754_scrapmetal-accepting-iron_chk" mid="6" select_type="0"><![CDATA[<html>(It looks like the owner isn’t here. Let’s take a look.)</html>]]></talk_answer>
+      <talk_answer link_index="n2754_scrapmetal-accepting-back" mid="15" select_type="0"><![CDATA[<html>(No... I shouldn’t go through other people’s stuff.)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Abandoned Wagon$<BR>(Should I take a look?)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2754_scrapmetal-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2754_scrapmetal-1-no" mid="12" select_type="0"><![CDATA[<html>Hm... There’s no one around.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Abandoned Wagon$<BR>(There’s nothing I can take back.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2754_scrapmetal-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2754_scrapmetal-2-yes" mid="14" select_type="0"><![CDATA[<html>What luck!</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Abandoned Wagon$<BR>(There’s a scrap of rusty iron under a stack of straw!)</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="prob">300</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">3730</exe>
+         <exe type="talk" npc="n2754_scrapmetal">1</exe>
+         <exe type="talk" npc="n2754_scrapmetal">2</exe>
+         <exe type="conexe" true="1,4" false="2,5">0</exe>
+         <exe type="setstep">1</exe>
+         <exe type="setstep">2</exe>
+         <exe type="talk" npc="n2754_scrapmetal">001</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3730, 0, 1, 1, 0);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="prob">500</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3730, 0, 1, 1, 0);</exe>
+         <exe type="addquestitem" num="3">400659</exe>
+         <exe type="addquestitem" num="1">400659</exe>
+         <exe type="addquestitem" num="5">400659</exe>
+         <exe type="conexe" true="1" false="5">0</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2754_scrapmetal" sub="iron_chk">3</exelink>
+   <exelink qstep="accepting" npc="n2754_scrapmetal" sub="back">6</exelink>
+   <exelink qstep="1" npc="n2754_scrapmetal" sub="no">0</exelink>
+   <exelink qstep="2" npc="n2754_scrapmetal" sub="yes">0,4</exelink>
+   <journal_data recompense="" quest_title="고철 조각 모으기 5" chapterid="-1" quest_level="95" quest_mark_type="23" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

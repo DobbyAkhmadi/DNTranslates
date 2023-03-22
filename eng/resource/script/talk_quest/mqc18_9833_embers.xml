@@ -1,0 +1,326 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc18_9833_embers</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>18</qchapter>
+      <qid>9833</qid>
+      <designer>조설빈</designer>
+      <qlevel>90</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9834</nextqid>
+      <nextqname>mqc18_9834_remember_the_warmth</nextqname>
+      <nextqnpc>n1836_sarah</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Glowing Fire]]></qkname>
+      <qnpc>
+         <npcid>2662</npcid>
+         <npcename>n2662_grele</npcename>
+         <npckname>그렐</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2665</npcid>
+         <npcename>n2665_blood_report</npcename>
+         <npckname>피 묻은 보고서</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1836</npcid>
+         <npcename>n1836_sarah</npcename>
+         <npckname>상인 사라</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Grele, do you remember anything about </FONT><FONT color=#086171>Guy</FONT><FONT color=#662500>? What he looked like or what he used to do... Any little detail is fine.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-accepting-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-accepting-b" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Grele$<BR>Why are you suddenly asking about big brother?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-accepting-c" mid="10" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I mean Guy, the one who looked like your big brother. The man you helped to hide in the shed.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-accepting-acceptted" mid="94" select_type="3" />
+      <talk_question mid="11"><![CDATA[<html>$Grele$<BR>Are you talking about that<FONT color=#a82424>Child who ran off</FONT>? My family died because of him! And I don’t want to think about it!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2665_blood_report-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2665_blood_report-1-" mid="16" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Bloodstained Report$<BR><FONT color=#7e12d2>(The blood has dried up and it’s difficult to read what’s written)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-1-a" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I don’t want to use this trick but…) Grele, listen to me. That Child is looking for </FONT><FONT color=#086171>Hiver</FONT><FONT color=#662500>. And I need to find him in order to figure out his plan.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-1-b" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Grele$<BR>Is he… looking for my sister? But why? Don’t tell me… Is he after her jewel?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-1-c" mid="22" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(It makes me feel guilty lying to him) I’m not sure. But I need to find </FONT><FONT color=#086171>Guy</FONT><FONT color=#662500> in order to figure that out. Grele, don’t you remember anything about him?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-1-d" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Grele$<BR>Urgh… that he looked like big brother and that he was always sitting at one corner of the shed talking alone. It sounded like he were having a quarrel with someone else. Once I was so scared that I told my sister about it, and since then he didn’t speak even once.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-1-e" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Grele$<BR>By the way <FONT color=#387206>{user_nick}</FONT>, I can feel the <FONT color=#a82424>energy of a Child</FONT> from you… What’s this? <FONT color=#387206>{user_nick}</FONT>, have you beocme a Child too?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1-e" image="QS_Default.dds" itemindex="400638" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-1-f" mid="28" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Huh? Oh…! I visited your family grave and found this. </FONT><FONT color=#7e12d2>(Show him the ice flower wrapped in cloth)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-1-g" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Grele$<BR>This energy… I’ve felt it before. It is the energy that used to surround me when I just became a Child.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-1-h" mid="32" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Which means… (Guy used to follow Grele? But wait, then… the </FONT><FONT color=#086171>Blue-haired Man</FONT><FONT color=#662500> who supposedly killed the Child Investigator was not Grele but Guy?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-1-i" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(They said the Child Investigator was killed at </FONT><FONT color=#a82424>Twisted Spring</FONT><FONT color=#662500>. It’s the hideout where Grele used to stay for a while. Maybe I could find something there.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-1-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-2" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Grele, do you remember the exact location you used to stay in  </FONT><FONT color=#a82424>Twisted Spring</FONT><FONT color=#662500>?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-2" image="QW_110.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-2-" mid="38" select_type="5" />
+      <talk_question mid="37"><![CDATA[<html>$Grele$<BR>There is a <FONT color=#a82424> Ruin </FONT> past a big tree. I was there until someone followed me.<BR><FONT color=#387206>{user_nick}</FONT>, if you find him… please avenge our family’s death. If you don’t I may lose my sister this time. I… I don’t want to live without her......<BR>
+<BR><FONT color=#7e12d2>※ Find Grele’s Hideout in Twisted Spring.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2665_blood_report-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2665_blood_report-2-a" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Bloodstained Report$<BR><FONT color=#7e12d2>(Some parts that are extremely wrinkled and tattered. The letters are vaguely visible because of the dirt and dried up blood )</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2665_blood_report-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2665_blood_report-2-b" mid="92" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The front page is severely damaged... but the back page is fairly readable. It looks like a report on the new Childs…….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2665_blood_report-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2665_blood_report-2-c" mid="43" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A report written by </FONT><FONT color=#086171>Child Investigator Anser</FONT><FONT color=#662500>? Huh……?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2665_blood_report-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2665_blood_report-2-d" mid="45" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Bloodstained Report$<BR><FONT color=#7e12d2>(Only the page where the names of Hiver and Grele were written is torn and cannot be read. There is a trace that indicates someone ripped it on purpose.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2665_blood_report-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2665_blood_report-3" mid="47" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>This… Guy’s the one who did this. (But why? To have Hiver and Grele’s </FONT><FONT color=#a82424>jewels</FONT><FONT color=#662500> to himself? Or was it really to protect them?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2665_blood_report-3" image="QN_Child_Grele.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2665_blood_report-3-" mid="49" select_type="5" />
+      <talk_question mid="48"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I need more information on Guy to find out what he is thinking. First, let’s return to </FONT><FONT color=#086171>Grele</FONT><FONT color=#662500>.)</FONT><BR>
+<FONT color=#662500><BR></FONT><FONT color=#7e12d2>※ Go to Go to Merca's Heart and talk to Grele.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-3" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-3-a" mid="51" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Grele$<BR><FONT color=#387206>{user_nick}</FONT>!! Why did you take so long!?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-3-b" mid="53" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Did anything happen, Grele?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-3-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-3-c" mid="55" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>$Grele$<BR>I think <FONT color=#086171>big brother</FONT> is alive! Granny Sarrah just tole me that a group of merchants that passed by<FONT color=#a82424> Blue Wind Plains </FONT> saw him near my uncle’s house.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-3-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-3-d" mid="57" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Grele$<BR>I think he went to uncle’s house because our house was burnt down, but there is no one there too. <FONT color=#387206>{user_nick}</FONT>, could you go there and make sure big brother doesn’t lose his way?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-3-e" mid="59" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Wait, calm down Grele! Your brother Guy died at the mine. How could a dead person ?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-3-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-3-f" mid="61" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Grele$<BR><FONT color=#387206>{user_nick}</FONT>, are you a fool?! Look at me, I’m alive. Sister is alive… It’s the same with big brother! He has returned to life!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-3-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n2662_grele-4" mid="63" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$Grele$<BR>So please, find big brother for me… And if he is in the same condition as me, tell him that sister and I are alive. I’m begging you. Please?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2662_grele-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2662_grele-4-" mid="65" select_type="5" />
+      <talk_question mid="64"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>All right. But before that, I will need to talk to </FONT><FONT color=#086171>Sarrah</FONT><FONT color=#662500> first.</FONT><BR>
+<FONT color=#662500><BR></FONT><FONT color=#7e12d2>※ Talk to Merchant Sarrah who is on the opposite side.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1836_sarah-4" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_sarah.dds" center_image="">
+      <talk_answer link_index="n1836_sarah-4-a" mid="67" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>$Merchant Sarrah$<BR>I’m so sorry… It seems like I said something unnecessary.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1836_sarah-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1836_sarah-4-b" mid="69" select_type="4" />
+      <talk_question mid="68"><![CDATA[<html>$Complete Quest$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1836_sarah-4-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_sarah.dds" center_image="">
+      <talk_answer link_index="n1836_sarah-4-c" mid="71" select_type="2" />
+      <talk_question mid="70"><![CDATA[<html>$Merchant Sarrah$<BR>Even though I was aware of what happened Guy, hearing such a rumour made me… well, I couldn’t help but hope it could be true.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1836_sarah-4-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_sarah.dds" center_image="">
+      <talk_answer link_index="n1836_sarah-4-d" mid="73" select_type="2" />
+      <talk_question mid="72"><![CDATA[<html>$Merchant Sarrah$<BR>Accoriding to those merchants that passed by <FONT color=#a82424>Blue Wind Plains</FONT>, they saw a <FONT color=#086171>Blue-haired Man</FONT> wandering near <FONT color=#086171>the house of Hiver's uncle</FONT>…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1836_sarah-4-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_sarah.dds" center_image="">
+      <talk_answer link_index="n1836_sarah-4-!next" mid="75" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>$Merchant Sarrah$<BR>They thought he was a guest and approached him to let him know that no one lived there anymore, but the man left the place without looking back even once, they said.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9833</exe>
+         <exe type="talk" npc="n2662_grele">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">98330,,,,,,,,,</exe>
+         <exe type="complete" true="">9833</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2662_grele" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n2662_grele" sub="b" />
+   <exelink qstep="1" npc="n2662_grele" sub="c" />
+   <exelink qstep="1" npc="n2662_grele" sub="d" />
+   <exelink qstep="1" npc="n2662_grele" sub="e" />
+   <exelink qstep="1" npc="n2662_grele" sub="f" />
+   <exelink qstep="1" npc="n2662_grele" sub="g" />
+   <exelink qstep="1" npc="n2662_grele" sub="h" />
+   <exelink qstep="1" npc="n2662_grele" sub="i" />
+   <exelink qstep="1" npc="n2662_grele" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n2665_blood_report" sub="b" />
+   <exelink qstep="2" npc="n2665_blood_report" sub="c" />
+   <exelink qstep="2" npc="n2665_blood_report" sub="d" />
+   <exelink qstep="2" npc="n2665_blood_report" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n2662_grele" sub="b" />
+   <exelink qstep="3" npc="n2662_grele" sub="c" />
+   <exelink qstep="3" npc="n2662_grele" sub="d" />
+   <exelink qstep="3" npc="n2662_grele" sub="e" />
+   <exelink qstep="3" npc="n2662_grele" sub="f" />
+   <exelink qstep="3" npc="n2662_grele" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n1836_sarah" sub="a">0</exelink>
+   <exelink qstep="4" npc="n1836_sarah" sub="b">1</exelink>
+   <exelink qstep="4" npc="n1836_sarah" sub="c" />
+   <exelink qstep="4" npc="n1836_sarah" sub="d" />
+   <exelink qstep="4" npc="n1836_sarah" sub="!next" />
+   <journal_data recompense="98330" quest_title="피어난 불씨" chapterid="18" quest_level="90" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Child_Grele.dds</contents_image>
+         <destination_pos>54,n2662</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>2662</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="76"><![CDATA[Whereabouts]]></title>
+         <contents mid="77"><![CDATA[<html>Grele reacted to the ice flower brought from his family grave. It seems like Child Guy was hovering around Grele and his sister.<BR><BR><FONT color=#086171>Merca’s Heart</FONT> - <FONT color=#a82424>Grele</FONT></html>]]></contents>
+         <destination mid="78"><![CDATA[Talk to Grele]]></destination>
+         <todo_msg mid="79"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_110.dds</contents_image>
+         <destination_pos>1095,n2665</destination_pos>
+         <destination_mode>custom:1095@1,54@1,11@1</destination_mode>
+         <statemark_npcid>2665</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="80"><![CDATA[Tracking]]></title>
+         <contents mid="81"><![CDATA[<html>Child Investigator Anser was found dead around Grele’s hideout while he was going after Grele. Maybe there still could be some clues left around the hideout.<BR><BR><FONT color=#086171>Merca's Heart (Distorted Zone)</FONT> - <FONT color=#a82424>Twisted Spring (???)</FONT></html>]]></contents>
+         <destination mid="82"><![CDATA[Explore the surrounding areas of Grele’s Hideout]]></destination>
+         <todo_msg mid="83"><![CDATA[Find Grele’s Hideout in Twisted Spring.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Child_Grele.dds</contents_image>
+         <destination_pos>54,n2662</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>2662</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Wicked Scheme]]></title>
+         <contents mid="85"><![CDATA[<html>It’s impossible to figure out what Child Guy wants and what he plans to do from a series of clues only. You need more clues.<BR><BR><FONT color=#086171>Merca's Heart</FONT> - <FONT color=#a82424>Grele</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Talk to Grele]]></destination>
+         <todo_msg mid="87"><![CDATA[Talk to Grele in Merca's Heart.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_Merca_Heart.dds</contents_image>
+         <destination_pos>54,n1836</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1836</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="88"><![CDATA[False Rumour]]></title>
+         <contents mid="89"><![CDATA[<html>Some merchants who passed by Blue Wind Plains said they saw someone who looked like Guy. However, no one said he was Guy himself…….<BR><BR><FONT color=#086171>Merca's Heart</FONT> - <FONT color=#a82424>Merchant Sarrah</FONT></html>]]></contents>
+         <destination mid="90"><![CDATA[Talk to Merchant Sarrah]]></destination>
+         <todo_msg mid="91"><![CDATA[Talk to Merchant Sarrah in Merca's Heart.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>90:-1</user_level>
+      <user_class />
+      <prev_quest>9832</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission>5026</complete_mission>
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

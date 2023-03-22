@@ -1,0 +1,78 @@
+   <talk>
+      <npcename>n2859_changejob_ilyn</npcename>
+      <npcid>2859</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Specialization Helper Irine]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quick_job1" mid="11"><![CDATA[<html>[Quick Specialization]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Specialization Helper Irine${action:Talk}<BR>Hello, <FONT color=#387206>{user_class} {user_nick}</FONT><FONT color=#382000> </FONT>.<BR>I'm Helper Irine, and I'm here to help warriors change their specialization.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quick_job1" image="" itemindex="">
+         <talk_answer link_index="quick_job2" mid="27"><![CDATA[<html>Yes, I want to specialize right now.</html>]]></talk_answer>
+         <talk_answer link_index="non_quick" mid="28"><![CDATA[<html>No, I'll choose a specialization once I have more experience.</html>]]></talk_answer>
+         <talk_question mid="21"><![CDATA[<html>$Specialization Helper Irine${action:Talk}<BR>In the Test Room, you can try out different specializations before choosing a <FONT color=#a82424>2nd specialization</FONT>, and you can also get help from a Specialization Helper to <FONT color=#086171>skip the experience and complete your specialization</FONT>, then return to town. Would you like to specialize and return to town right away?<BR>
+ <BR>
+</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quick_job2" image="" itemindex="">
+         <talk_answer link_index="job_ui" mid="29"><![CDATA[<html>[Select a specialization]</html>]]></talk_answer>
+         <talk_question mid="24"><![CDATA[<html>$Specialization Helper Irine${action:Talk}<BR>
+Good! Then I'll help you specialize right away. Which job would you like?<BR>
+ <BR>
+<FONT color=#7e12d2>※ Select [Specialize] to end the story here. To see all specialization stories, be sure to play the [Specialization Trial].</FONT><BR>
+ <BR>
+</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="non_quick" image="" itemindex="">
+         <talk_question mid="26"><![CDATA[<html>$Specialization Helper Irine${action:Talk}<BR>It's also a great idea to take your time and get some experience before deciding!<BR>I'll wait for you here. Come talk to me whenever you need me.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="change" image="" itemindex="">
+         <talk_question mid="32"><![CDATA[<html>$Specialization Helper Irine$<BR>2nd specialization complete.<BR><BR><FONT color=#387206>▶ {user_class}</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenJobChange(userObjID,1)</exe>
+         <exe type="conexe" true="3" false="0">0 / 1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 9 / 10 / 11 / 12 / 13 / 14 / 15 / 16 / 17 / 18 / 19 / 20 / 21 / 22 / 23 / 24 / 25 / 26 / 27 / 28 / 29 / 30 / 31 / 32 / 33 / 34 / 35</exe>
+         <exe type="talk">change</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 23</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 24</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 25</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 26</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 29</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 30</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 31</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 32</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 35</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 36</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 37</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 38</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 41</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 42</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 43</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 44</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 47</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 48</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 50</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 51</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 55</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 56</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 58</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 59</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 63</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 64</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 68</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 69</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 73</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 74</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 93</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 94</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 78</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 79</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 96</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 97</chk>
+      </conditions>
+      <exelink idx="job_ui">1</exelink>
+   </talk>

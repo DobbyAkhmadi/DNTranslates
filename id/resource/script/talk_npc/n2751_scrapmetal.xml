@@ -1,0 +1,27 @@
+   <talk>
+      <npcename>n2751_scrapmetal</npcename>
+      <npcid>2751</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Furtive Guard]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#2b2723>$Furtive Guard$<BR></FONT><FONT color=#2b2723>I don't want to catch anyone's attention...</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_3726" mid="15"><![CDATA[<html>Do you have something for me?</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Furtive Guard$<BR>Shh, be quiet and come over here. You're looking for scrap iron, right?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="2" false="1">1</exe>
+         <exe type="conexe" true="3,5" false="2">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 3727, 1);</exe>
+         <exe type="enterquest">sqc24_3727_scrap_metal_2</exe>
+         <exe type="talk">quest</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">3721</chk>
+         <chk type="hascomq">3727</chk>
+      </conditions>
+      <exelink idx="q_3726">4</exelink>
+   </talk>

@@ -1,0 +1,277 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq01_051_nourishing_meal</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>51</qid>
+      <designer>김주연</designer>
+      <qlevel>1</qlevel>
+      <qdesc>300065(하운드의 먹이),300066(하운드 영양식)</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Hound's Nutrition]]></qkname>
+      <qnpc>
+         <npcid>2</npcid>
+         <npcename>n002_trader_dorin</npcename>
+         <npckname>대장장이 도린 (프레리 무기상)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3</npcid>
+         <npcename>n003_trader_dolis</npcename>
+         <npckname>상인 도리스 (프레리 잡화상)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-noquest" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Merchant Doris$<BR>Hai! Ada yang bisa ku bantu?<BR>(Kamu harus Menerima Quest dari <FONT color=#a82424>Blacksmith Dorin</FONT> untuk melanjutkan.)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-a" mid="7" select_type="0"><![CDATA[<html>Tentu. Ada apa?</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Blacksmith Dorin$<BR>Permisi. Ada waktu sebentar?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-b" mid="9" select_type="0"><![CDATA[<html>Tentu saja.</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Blacksmith Dorin$<BR>Aku butuh sedikit bantuanmu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-b" image="QM_HoundNormal_2.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-c" mid="11" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Blacksmith Dorin$<BR>Lihat? Aku membeli Hound ini dari <FONT color=#a82424>Merchant Doris</FONT> kemarin, tapi terlihat lemah untuk memompa furnace dengan baik...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-c" image="QM_HoundNormal_2.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-d" mid="13" select_type="0"><![CDATA[<html>Uh huh...?</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Blacksmith Dorin$<BR>Merchant Doris bilang ini adalah Hound terbaik untuk bekerja, tapi lihatlah sekarang... Mungkin Doris mencoba berbuat curang! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-d" image="QN_Npc_Woman_Trader_Doris.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-e" mid="15" select_type="0"><![CDATA[<html>Um... ok.</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Blacksmith Dorin$<BR>Bisakah kamu membawa Hound ini ke <FONT color=#a82424>Merchant Doris</FONT> untuk di kembalikan? atau...di tukar dengan yang lebih bagus? Aku tak bisa meninggalkan tokoku! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Hound's Nutrition$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-1" image="QN_Npc_Woman_Trader_Doris.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Blacksmith Dorin$<BR>Sip! Bagus! Sekarang, pergi ke <FONT color=#a82424>Merchant Doris</FONT> dan coba menawar, mengerti?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-a" mid="20" select_type="0"><![CDATA[<html>Blacksmith Dorin lebih memilih di tukar atau di kembalikan.</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Merchant Doris${action:Talk}<BR><FONT color=#7e12d2>(Merchant Doris heran saat kamu menjelaskan.)</FONT><BR>Tidak ada yang aneh dengan Hound itu! Tokoku menjual semua dengan kualitas tinggi! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-b" mid="22" select_type="0"><![CDATA[<html>Tapi--</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Maaf tapi toko ini tidak dapat mengembalikan atau menukar. Beritahu pada Dorin</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-c" mid="24" select_type="0"><![CDATA[<html>Tapi bukankah ini tokomu?</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Merchant Doris$<BR>... tapi itulah peraturannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-d" mid="26" select_type="0"><![CDATA[<html>Bagaimana jika kamu ubah peraturan itu?</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Merchant Doris$<BR>Halo, apa kamu tak mengerti? Tidak ada pengembalian. Dan tidak ada penukaran. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-e" mid="28" select_type="0"><![CDATA[<html>Hmm, Aku membayangkan Vigilante Leader Steve berkata apa jika customer tidak senang.</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Merchant Doris$<BR>Hei! Kamu mau berulah dengan bisnisku? Lapor sana ke Vigilante Leader Steve dan beritahu dia betapa mengganggunya kamu!<BR><FONT color=#7e12d2>(Kamu melihat dia gentar saat di sebut nama Vigilante Leader Steve.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-f" mid="30" select_type="0"><![CDATA[<html>Aku hanya meminta uang kembali...</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Merchant Doris$<BR><FONT color=#7e12d2>(Merchant Doris cemas.)</FONT><BR>Kamu...Kamu tidak berani!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-g" mid="32" select_type="0"><![CDATA[<html>Ok, Sepertinya aku akan bicara dengan Vigilante Leader Steve kalau begitu...</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Dengar, Aku tidak bisa mengubah peraturan itu. Akan tidak adil bagi customer lainnya. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-h" mid="34" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Merchant Doris$<BR>Tunggu! Aku bisa membantu. Jika tebakanku benar, Hound itu sakit dan makannya tidak teratur. Jadi, sangat lemah.<FONT color=#a82424><FONT color=#a82424></FONT></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-h" image="QW_1.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-i" mid="36" select_type="0"><![CDATA[<html>Dan aku yang akan mengurusnya?</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Kita hanya perlu mencari sesuatu dari tempat tinggalnya, Di <FONT color=#a82424>Shadow Forest Outskirt</FONT>. Dengan aroma makanan dari habitatnya dia akan semangat untuk makan dan kembali sehat. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-i" image="QW_1.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-2" mid="38" select_type="0"><![CDATA[<html>Baiklah kalau begitu...</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Merchant Doris$<BR>Lakukanlah demi dirimu sendiri, bagaimana? Jika kamu membawakan bahan yang tepat, Aku dapat membuat makanan Hound dalam sekejap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-2" image="QW_1.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="39"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Pergi dapatkan <FONT color=#a82424>Hound Feed</FONT> dari <FONT color=#a82424>Shadow Forest Outskirt</FONT>. Dari mana mendapatkan Hound feed? Yah, tentu saja dari Hound! Hahaha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-3" image="QS_Default.dds" itemindex="300065" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-3-a" mid="41" select_type="0"><![CDATA[<html>(Kamu memberikan Hound Feed.)</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Merchant Doris$<BR>Apa kamu sudah menemukan feed?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-3-a" image="QS_Default.dds" itemindex="300065" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-3-b" mid="43" select_type="0"><![CDATA[<html>(Kamu menatap campuran itu, sesuatu yang lengket di campur.)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Merchant Doris$<BR>Nah. Sekarang aku tinggal mengaduk, dan menambahkan itu... ah ha!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-3-b" image="QS_Default.dds" itemindex="300066" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-4" mid="45" select_type="0"><![CDATA[<html>(Kamu menerima makanan aneh untuk hound.)</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Merchant Doris$<BR>Satu happy meal untuk Hound! Berikan ini ke Hound <FONT color=#a82424>Blacksmith Dorin</FONT> dan houndnya akan kembali segar! <FONT color=#a82424></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-4" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="46"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Berikan ini pada <FONT color=#a82424>Blacksmith Dorin</FONT>. Jadi... apakah <FONT color=#a82424>Vigilante Leader Steve</FONT> berkata sesuatu tentangku? Adakah?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-4-a" mid="48" select_type="0"><![CDATA[<html>(Kamu menjelaskan situasinya)</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Blacksmith Dorin$<BR>Jadi dia menolak di kembalikan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-4-b" mid="50" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Blacksmith Dorin$<BR>Waw! Di luar dugaanku. Kamu pandai dalam menyelesaikan masalah. Thanks! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-4-c" mid="52" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-4-c" image="QM_HoundNormal_2.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="53"><![CDATA[<html>$Blacksmith Dorin$<BR>Terima kasih. Sampai jumpa lagi.<BR><FONT color=#7e12d2>(Blacksmith Dorin memberikan makanan itu pada Hound.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment xml:space="preserve">
+</comment>
+      <conditions />
+      <executions>
+         <exe type="setquest">51</exe>
+         <exe type="recompense_view">511,511,512,512,512,,516,517,,</exe>
+         <exe type="talk" npc="n002_trader_dorin">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="">111</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="8">105</exe>
+         <exe type="huntitem" num="10" exe="7,5,6" onexe="">300065</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="delcount">.</exe>
+         <exe type="addquestitem" num="1">300065</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="delquestitem" num="-1">300065</exe>
+         <exe type="addquestitem" num="1">300066</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">511,511,512,512,512,,516,517,,</exe>
+         <exe type="delquestitem" num="-1">300066</exe>
+         <exe type="complete" true="">51</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n002_trader_dorin" sub="e">1</exelink>
+   <exelink qstep="accepting" npc="n002_trader_dorin" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n003_trader_dolis" sub="b" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="c" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="d" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="e" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="f" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="g" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="h" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="i" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="2">1,2,3,4</exelink>
+   <exelink qstep="3" npc="n003_trader_dolis" sub="b" />
+   <exelink qstep="3" npc="n003_trader_dolis" sub="4">0,1,2,3</exelink>
+   <exelink qstep="4" npc="n002_trader_dorin" sub="b">0</exelink>
+   <exelink qstep="4" npc="n002_trader_dorin" sub="c">1,2</exelink>
+   <journal_data recompense="1:511,2:512,6:516,7:517" quest_title="하운드의 영양식" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="300065,300066">
+      <journal index="1">
+         <contents_image>QN_Npc_Woman_Trader_Doris.dds</contents_image>
+         <destination_pos>1,755.95,1811.22</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>3</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="54"><![CDATA[Merchant Doris keras kepala]]></title>
+         <contents mid="55"><![CDATA[<html><FONT color=#a82424>Blacksmith Dorin</FONT> ingin komplain kepada <FONT color=#a82424>Merchant Doris</FONT> untuk Hound yang baru saja di beli.<BR> <BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ Merchant Doris</FONT></html>]]></contents>
+         <destination mid="56"><![CDATA[Bicara pada Merchant Doris]]></destination>
+         <todo_msg mid="57"><![CDATA[Quest telah di tambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_1.dds</contents_image>
+         <destination_pos>52,0,0</destination_pos>
+         <destination_mode>custom:51@3,52@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="58"><![CDATA[Super Slop]]></title>
+         <contents mid="59"><![CDATA[<html>Merchant Doris menawarkan membuat makanan untuk Hound Blacksmith Dorin. Dia merasa Hound itu sakit dan butuh bahan untuk meningkatkan nafsu makannya.<BR>Buru <FONT color=#a82424>Hounds</FONT> di <FONT color=#a82424>Shadow Forest Outskirt</FONT> dan bawalah Hound Feed.<BR> <BR><FONT color=#086171>Shadow Forest</FONT> <FONT color=#a82424>→ Shadow Forest Outskirt</FONT></html>]]></contents>
+         <destination mid="60"><![CDATA[Kumpulkan 10 Hound Feed dalam Shadow Forest Outskirt]]></destination>
+         <todo_msg mid="61"><![CDATA[Buru Hounds untuk Hound Feed dalam Shadow Forest Outskirt.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Woman_Trader_Doris.dds</contents_image>
+         <destination_pos>1,755.95,1811.22</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>3</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="62"><![CDATA[Hound Provisions]]></title>
+         <contents mid="63"><![CDATA[<html>Bawakan Hound Feed dari Shadow Forest Outskirt ke <FONT color=#a82424>Merchant Doris</FONT>.<BR><BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ Merchant Doris</FONT></html>]]></contents>
+         <destination mid="64"><![CDATA[Bicara pada Merchant Doris]]></destination>
+         <todo_msg mid="65"><![CDATA[Semua Hound Feed telah terkumpul. Kembalilah pada Merchant Doris.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>1,-962.33,49.29</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>2</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="66"><![CDATA[Merkhandise yang salah II]]></title>
+         <contents mid="67"><![CDATA[<html>Bawalah <FONT color=#a82424>Hound Provisions</FONT> yang di buat Merchant Doris ke <FONT color=#a82424>Blacksmith Dorin</FONT>.<BR><BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ Blacksmith Dorin</FONT></html>]]></contents>
+         <destination mid="68"><![CDATA[Bicara pada Blacksmith Dorin]]></destination>
+         <todo_msg mid="69"><![CDATA[Bawakan Hound Provisions ke Blacksmith Dorin.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>1:2:6:7</user_class>
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

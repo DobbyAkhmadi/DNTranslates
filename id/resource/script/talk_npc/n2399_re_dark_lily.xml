@@ -1,0 +1,39 @@
+   <talk>
+      <npcename>n2399_re_dark_lily</npcename>
+      <npcid>2399</npcid>
+      <startexe>7</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Lily]]></npckname>
+      <talk_paragraph index="001" image="QW_PrairieTown.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Lily$<BR><FONT color=#7e12d2>(She's terrified. </FONT><FONT color=#7e12d2>Take her to town now.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="001" mid="7"><![CDATA[<html>(Take a careful look at the girl.)</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html><FONT color=#662500>${user_nick}$<BR>(Grape……</FONT><BR><FONT color=#662500>Stay in there until</FONT><BR><FONT color=#662500>you're fully recovered.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html><FONT color=#662500>${user_nick}$<BR>(Grape……</FONT><BR><FONT color=#662500>Stay in there until</FONT><BR><FONT color=#662500>you're fully recovered.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_question mid="10"><![CDATA[<html>$Lily$<BR><FONT color=#7e12d2>(The moment you try to help her get up,</FONT><BR><FONT color=#7e12d2>you sense danger.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 12, 2);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 12, 1);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID,12, 1);</exe>
+         <exe type="conexe" true="0" false="10">0</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 24, 0, 1, 1, 0);</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="8" false="4">1</exe>
+         <exe type="conexe" true="9" false="6,5,1,2,3">0</exe>
+         <exe type="talk">003</exe>
+         <exe type="conexe" true="11" false="5,0,1,2,3">2</exe>
+         <exe type="talk">004</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">12</chk>
+         <chk type="hascomq">998</chk>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 75</chk>
+      </conditions>
+   </talk>

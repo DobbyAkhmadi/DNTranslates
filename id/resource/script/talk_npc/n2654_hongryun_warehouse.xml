@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n2654_hongryun_warehouse</npcename>
+      <npcid>2654</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Old Warehouse Guard]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="warehouse_001" mid="3"><![CDATA[<html>[Open warehouse]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="19"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="25"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Old Warehouse Guard${action:Talk}<BR>You see that iron door behind me?<BR>Our warehouse has never been broken into! Heck no!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="001" mid="14"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="22" link_target="sqc25_3772_mystery_cargo2.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Suspicious Cargo Ⅱ</FONT></html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Old Warehouse Guard$<BR>Hmm?<BR>
+The gilding has been scratched off?<BR>I felt an itch I needed to scratch, heh-heh!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenWareHouse(userObjID);</exe>
+         <exe type="conexe" true="3" false="1">0</exe>
+         <exe type="custom">api_ui_OpenGuildWareHouse (userObjID);</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,2654);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_guild_HasGuildWare(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="warehouse_001">2</exelink>
+      <exelink idx="guildms">4</exelink>
+   </talk>

@@ -1,0 +1,100 @@
+   <talk>
+      <npcename>n2779_portal_rabbit</npcename>
+      <npcid>2779</npcid>
+      <startexe>14</startexe>
+      <comment>#275020 버그로 인해 api 인자값이 추가되었습니다.
+
+*기존 맵 이동 시 : 10~13번 실행문처럼 쓰면 됩니다.
+*스테이지에서 월드존 이동 시 : 인자값 '1'을 더 추가해 줍니다. (예시-실행문 1~9번) >> 여기서 추가된 '1'은 스테이지에서 저장된 정보를 리셋해주는 기능을 수행합니다. (빌리지는 해당사항 X)</comment>
+      <npckname mid="1"><![CDATA[Dimensional Rabbit]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Dimensional Rabbit$<BR>There is Order – but if a great many Orders are lumped together... that is Chaos.<BR>But then, you see, this means that within Chaos... there is Order.<BR>What do I mean? I mean: Line up. Nice and orderly, got it?<BR><BR><FONT color=#7e12d2>※ Dimensional Portal usage privileges are instilled in the [Party Leader].</FONT> </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="portal" image="" itemindex="">
+         <talk_answer link_index="altheia" mid="20"><![CDATA[<html><FONT color=#086171>[Lagendia Region]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="mistland" mid="21"><![CDATA[<html><FONT color=#7e12d2>[Mistland Region]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="town" mid="22"><![CDATA[<html><FONT color=#a82424>[Town]</FONT></html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Dimension Rabbit$<BR>Hehehe... Look here again, <FONT color=#387206>{user_nick}</FONT>.<BR>Wouldn’t you like to take a trip through this Chaos Opening?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="altheia" image="" itemindex="">
+         <talk_answer link_index="silver" mid="24"><![CDATA[<html>[Silver Dragon's Forcefield]</html>]]></talk_answer>
+         <talk_answer link_index="anu_arendel" mid="25"><![CDATA[<html>[Anu Arendel Gate]</html>]]></talk_answer>
+         <talk_answer link_index="riverwart" mid="26"><![CDATA[<html>[Riverwort Wharf]</html>]]></talk_answer>
+         <talk_answer link_index="hermalte_port" mid="27"><![CDATA[<html>[Hermalte Port]</html>]]></talk_answer>
+         <talk_answer link_index="black_mountain" mid="28"><![CDATA[<html>[Foothills of Black Mountain]</html>]]></talk_answer>
+         <talk_answer link_index="grey_ruin" mid="44"><![CDATA[<html>[Gray Ruins]</html>]]></talk_answer>
+         <talk_answer link_index="thaw_forest" mid="61"><![CDATA[<html>[Blizzard Plain]</html>]]></talk_answer>
+         <talk_answer link_index="wind_forest" mid="58"><![CDATA[<html>[Wind Forest]</html>]]></talk_answer>
+         <talk_answer link_index="crystal_brook" mid="53"><![CDATA[<html>[Crystal Stream]</html>]]></talk_answer>
+         <talk_answer link_index="portal" mid="64"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="23"><![CDATA[<html>$Dimension Rabbit$<BR><FONT color=#086171>In the Lagendia Region</FONT>, choose a place.<BR>Take care – once you choose, you can’t go back. Krrgh.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="mistland" image="" itemindex="">
+         <talk_answer link_index="redlotus_world" mid="30"><![CDATA[<html>[Streets of Red Lotus Palace]</html>]]></talk_answer>
+         <talk_answer link_index="redlotus_inside" mid="31"><![CDATA[<html>[Taeryeong Shrine]</html>]]></talk_answer>
+         <talk_answer link_index="merca" mid="32"><![CDATA[<html>[Merca's Heart]</html>]]></talk_answer>
+         <talk_answer link_index="ladames" mid="33"><![CDATA[<html>[Rhadames]</html>]]></talk_answer>
+         <talk_answer link_index="merca_port" mid="54"><![CDATA[<html>[Merca's Port]</html>]]></talk_answer>
+         <talk_answer link_index="portal" mid="55"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="29"><![CDATA[<html>$Dimension Rabbit$<BR><FONT color=#7e12d2>In the region of Mistland</FONT>, choose a place.<BR>
+Take care – once you choose, you can’t go back. Krrgh.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="town" image="" itemindex="">
+         <talk_answer link_index="saintheaven" mid="35"><![CDATA[<html>[Saint Haven]</html>]]></talk_answer>
+         <talk_answer link_index="redlotus" mid="36"><![CDATA[<html>[Red Lotus Palace Main Street]</html>]]></talk_answer>
+         <talk_answer link_index="prairie" mid="62"><![CDATA[<html>[Prairie Town]</html>]]></talk_answer>
+         <talk_answer link_index="mana" mid="38"><![CDATA[<html>[Mana Ridge]</html>]]></talk_answer>
+         <talk_answer link_index="catherock" mid="37"><![CDATA[<html>[Calderock Village]</html>]]></talk_answer>
+         <talk_answer link_index="lotusmarsh" mid="46"><![CDATA[<html>[Lotus Marsh Town]</html>]]></talk_answer>
+         <talk_answer link_index="portal" mid="67"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="34"><![CDATA[<html>$Dimension Rabbit$<BR>Hehehe, There’s no shame in going back to regroup.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">portal</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,9,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,14,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,34,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,54,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,175,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,12,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,188,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13043,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,11,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,187,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,15,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,8,1);</exe>
+         <exe type="conexe" true="0" false="15">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,176,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,193,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,4,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,3,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,1,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,7,1,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,5,1,1);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_trigger_IsPartyLeader(userObjID) == true</chk>
+      </conditions>
+      <exelink idx="silver">16</exelink>
+      <exelink idx="anu_arendel">4</exelink>
+      <exelink idx="riverwart">3</exelink>
+      <exelink idx="hermalte_port">7</exelink>
+      <exelink idx="black_mountain">2</exelink>
+      <exelink idx="grey_ruin">1</exelink>
+      <exelink idx="thaw_forest">21</exelink>
+      <exelink idx="wind_forest">19</exelink>
+      <exelink idx="crystal_brook">18</exelink>
+      <exelink idx="redlotus_world">8</exelink>
+      <exelink idx="redlotus_inside">17</exelink>
+      <exelink idx="merca">5</exelink>
+      <exelink idx="ladames">6</exelink>
+      <exelink idx="merca_port">9</exelink>
+      <exelink idx="saintheaven">10</exelink>
+      <exelink idx="redlotus">11</exelink>
+      <exelink idx="prairie">20</exelink>
+      <exelink idx="mana">22</exelink>
+      <exelink idx="catherock">13</exelink>
+      <exelink idx="lotusmarsh">12</exelink>
+   </talk>

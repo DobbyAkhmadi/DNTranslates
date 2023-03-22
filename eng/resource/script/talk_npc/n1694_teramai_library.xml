@@ -1,0 +1,49 @@
+   <talk>
+      <npcename>n1694_teramai_library</npcename>
+      <npcid>1694</npcid>
+      <startexe>9</startexe>
+      <comment>서브퀘(전직퀘)가 있을 때에는 001 인덱스로 들어가서 퀘스트 목록 출력.
+메인퀘스트만 있는 경우에는 0, 6, 7, 8 실행 조건을 확인해서 메인퀘스트 대화로 바로 진입하게 적용</comment>
+      <npckname mid="1"><![CDATA[Terrence Terramai]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="15"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Terrence Terramai$<BR>Nice to see you, <FONT color=#387206>{user_nick}.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="16" link_target="mqc06_9505_secret_helper.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Secret Helper</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="17" link_target="mqc06_9508_catch_ignasio.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Get Ignacio</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="18" link_target="mqc06_9509_regained_the_prophet.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Prophet Rescued</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="19" link_target="mqc07_9521_waking_up_to_prophet.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Awakened Prophet</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="20" link_target="sqc06_4605_what_you_want.xml"><![CDATA[<html>[Specialization] <FONT color=#086171>Skills or Stories</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="sqc06_4606_while_the_teacher.xml"><![CDATA[<html>[Specialization] <FONT color=#086171>Learn From the Mistakes</FONT></html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Terrence Terramai$<BR>Do you have something to tell me?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="14"><![CDATA[<html>$Terrence Terramai$<BR>
+<FONT color=#7e12d2>Terrence Terramai is quietly staring at the floor.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="6">0</exe>
+         <exe type="enterquest">mqc06_9505_secret_helper</exe>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mqc06_9508_catch_ignasio</exe>
+         <exe type="enterquest">mqc06_9509_regained_the_prophet</exe>
+         <exe type="enterquest">mqc07_9521_waking_up_to_prophet</exe>
+         <exe type="conexe" true="3" false="7">1</exe>
+         <exe type="conexe" true="4" false="8">2</exe>
+         <exe type="conexe" true="5" false="13">3</exe>
+         <exe type="conexe" true="2" false="11">4</exe>
+         <exe type="enterquest">sqc06_4605_what_you_want</exe>
+         <exe type="conexe" true="2" false="0">5</exe>
+         <exe type="enterquest">sqc06_4606_while_the_teacher</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9505</chk>
+         <chk type="hasquest">9508</chk>
+         <chk type="hasquest">9509</chk>
+         <chk type="hasquest">9521</chk>
+         <chk type="hasquest">4605</chk>
+         <chk type="hasquest">4606</chk>
+      </conditions>
+   </talk>

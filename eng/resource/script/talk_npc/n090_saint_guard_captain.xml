@@ -1,0 +1,68 @@
+   <talk>
+      <npcename>n090_saint_guard_captain</npcename>
+      <npcid>90</npcid>
+      <startexe>2</startexe>
+      <comment>커스텀 조건 0부터 8: 세인트헤이븐 퀘스트 컷씬 실행을 위한 퀘스트 감지
+커스텀 조건 9: 파티체크. 옛날 형식으로 해야 이것들과 맞물려 잘 돌아감.
+실행문 2번부터 7번: 퀘스트 감지, 컷씬 플레이와 파티체크, 맵 이동
+실행문 8번부터 16번: 강제 저널 이동 조건실행
+실행문 17번부터 25번: 강제 스텝 저널 이동 커스텀 코드</comment>
+      <npckname mid="1"><![CDATA[Captain Richard]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="guildms" mid="6"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Captain Richard$<BR>Welcome to Saint Haven Royal Castle. <BR>Please be mindful of your behaviour within the palace premise.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="sainthaven" image="" itemindex="">
+         <talk_answer link_index="cutsceneplay" mid="33"><![CDATA[<html>Upon entering, you think of the scenery of the city you saw.</html>]]></talk_answer>
+         <talk_answer link_index="completecutscene" mid="34"><![CDATA[<html></html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Captain Richard$<BR>Welcome. His Majesty has been expecting you.<BR>
+You mentioned the scenery of this city...</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="sainthaven_p" image="" itemindex="">
+         <talk_question mid="12"><![CDATA[<html>$Captain Richard$<BR>His Majesty has asked <FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723> to enter alone.</FONT><BR>
+<FONT color=#7e12d2>※This quest cannot be carried out in a party.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,90);</exe>
+         <exe type="conexe" true="3" false="0">0 / 1 / 2 / 3 / 4 / 5 / 6 / 7 / 8</exe>
+         <exe type="conexe" true="4" false="5">9</exe>
+         <exe type="talk">sainthaven</exe>
+         <exe type="talk">sainthaven_p</exe>
+         <exe type="custom">api_user_PlayCutScene(userObjID,npcObjID,135,true);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,11,1);</exe>
+         <exe type="conexe" true="17" false="9">0</exe>
+         <exe type="conexe" true="18" false="10">1</exe>
+         <exe type="conexe" true="19" false="11">2</exe>
+         <exe type="conexe" true="20" false="12">3</exe>
+         <exe type="conexe" true="21" false="13">4</exe>
+         <exe type="conexe" true="22" false="14">5</exe>
+         <exe type="conexe" true="23" false="15">6</exe>
+         <exe type="conexe" true="24" false="16">7</exe>
+         <exe type="conexe" true="25" false="">8</exe>
+         <exe type="custom">api_quest_SetQuestStepAndJournalStep(userObjID,3843,10,2);</exe>
+         <exe type="custom">api_quest_SetQuestStepAndJournalStep(userObjID,3846,10,2);</exe>
+         <exe type="custom">api_quest_SetQuestStepAndJournalStep(userObjID,3849,10,2);</exe>
+         <exe type="custom">api_quest_SetQuestStepAndJournalStep(userObjID,3852,10,2);</exe>
+         <exe type="custom">api_quest_SetQuestStepAndJournalStep(userObjID,3855,10,2);</exe>
+         <exe type="custom">api_quest_SetQuestStepAndJournalStep(userObjID,3858,10,2);</exe>
+         <exe type="custom">api_quest_SetQuestStepAndJournalStep(userObjID,3861,10,2);</exe>
+         <exe type="custom">api_quest_SetQuestStepAndJournalStep(userObjID,3864,10,2);</exe>
+         <exe type="custom">api_quest_SetQuestStepAndJournalStep(userObjID,3867,10,2);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 3843) == 1</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 3846) == 1</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 3849) == 1</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 3852) == 1</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 3855) == 1</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 3858) == 1</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 3861) == 1</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 3864) == 1</chk>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 3867) == 1</chk>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+      </conditions>
+      <exelink idx="guildms">1</exelink>
+      <exelink idx="cutsceneplay">6</exelink>
+      <exelink idx="completecutscene">7,8</exelink>
+   </talk>

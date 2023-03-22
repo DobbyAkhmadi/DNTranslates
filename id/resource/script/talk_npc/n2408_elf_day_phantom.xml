@@ -1,0 +1,53 @@
+   <talk>
+      <npcename>n2408_elf_day_phantom</npcename>
+      <npcid>2408</npcid>
+      <startexe>1</startexe>
+      <comment>3 : 실버 직업 구분을 위한 공용 퀘스트
+4,6,7,8,9,10 : 아처 15레벨 45레벨 전직 퀘스트 완료 
+(239,341,764,765,766,767 )
+실버: 80 실버헌터 :81</comment>
+      <npckname mid="1"><![CDATA[Daylline's Phantom]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Daylline's Phantom$<BR>.......</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="003" mid="5"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Daylline's Phantom$<BR>.......</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="004" mid="7"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><BR><FONT color=#086171>(No, Daylline is... dead...)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="004" image="" itemindex="">
+         <talk_answer link_index="005" mid="9"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Daylline's Phantom$<BR>.......</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="005" image="" itemindex="">
+         <talk_answer link_index="006" mid="13"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><BR><FONT color=#086171>(Daylline, she.......)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="006" image="" itemindex="">
+         <talk_answer link_index="go_map" mid="17"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="16"><![CDATA[<html><FONT color=#2b2723>${user_nick}$</FONT><BR>
+<FONT color=#7e12d2>(It feels like a thick fog that clouded your mind is clearing.</FONT><BR>
+<FONT color=#7e12d2>From a distant memory, a sad flashback is replayed...)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 997, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 239, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill(userObjID, 81);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 341, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 764, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 765, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 766, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 767, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 40, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 80</chk>
+      </conditions>
+      <exelink idx="go_map">4,5,6,7,8,9,10,11</exelink>
+   </talk>

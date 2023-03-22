@@ -1,0 +1,515 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc16_4695_red_dragon_nest</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>16</qchapter>
+      <qid>4695</qid>
+      <designer>최지은</designer>
+      <qlevel>80</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Nest] Final Battle With The Red King]]></qkname>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>776</npcid>
+         <npcename>n776_darklair_mardlen</npcename>
+         <npckname>어둠의 여신관 마들렌</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1838</npcid>
+         <npcename>n1838_rubinat</npcename>
+         <npckname>레드 드래곤 루비나트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1839</npcid>
+         <npcename>n1839_gereint_kid</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1840</npcid>
+         <npcename>n1840_velskud</npcename>
+         <npckname>벨스커드</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="6" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Remote Quest$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-1" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Velskud$<BR>…Idiot.<BR><FONT color=#7e12d2>(Velskud looks rather perplexed)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-1" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Geraint$<BR>I got this for you but you can't even chew this…<BR><FONT color=#7e12d2>(Geraint is looking at the volcanic rocks in his hand)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1838_rubinat-1" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Red Dragon Rubinart$<BR>Oh you Ancient Dragons are so slow.<BR><FONT color=#7e12d2>(Talk to Priestess of Darkness Madeleine)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1" image="QN_darklair_castia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-a" mid="11" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Welcome, <FONT color=#387206>{user_class}</FONT> <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-a" image="QN_darklair_castia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-b" mid="13" select_type="0"><![CDATA[<html>How can I not know them.</html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-1-c" mid="14" select_type="0"><![CDATA[<html>Erm not really... Especially that red-haired guy.</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>May I know if you have already met the people around me?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-b" image="QN_darklair_castia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-d" mid="16" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>I see. I guess that question was irrelevant.<BR>Red Dragon Rubinart, Geraint, and Velskud have been waiting for you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-5" mid="18" select_type="0"><![CDATA[<html>Skip the details.</html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-1-d" mid="19" select_type="0"><![CDATA[<html>Continue with the quest.</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Though you can still take part in the battle even if you don't know them, I suggest making yourself comfortable with them first if you want to know more about their story.<BR><BR><FONT color=#7e12d2>*Stories of Extra Chapter 4. The Red King and the Red Dragon are included. <BR>You can skip and carry on with the quest.<BR>You can still enter the Red Dragon Nest even if you have not done the quests.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-d" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-e" mid="21" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Red Dragon Rubinart$<BR>Those stupid Ancient Dragons delayed us for too long.<BR>Did you go there for a tour? What took you so long?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-e" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-f" mid="23" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Geraint$<BR>Of course not! All we did was to scout the area...<BR>B-besides, we wouldn't have been late if he didn't pick a fight!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-f" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-g" mid="25" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Velskud$<BR>Well that's because you...! Nevermind.<BR><FONT color=#7e12d2>(Velskud looks tired)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-g" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-h" mid="27" select_type="0"><![CDATA[<html>Haha...</html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-1-i" mid="28" select_type="0"><![CDATA[<html>No, I feel safe with them around.</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Red Dragon Rubinart$<BR>What? Don't tell me you guys were brawling at a critical time like this. I knew you Ancient Dragons were stupid, but your idiocy must be far worse than I expected. Oh, I worry about Lagendia leaving it in your hands... Don't you agree, <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-h" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-j" mid="30" select_type="0"><![CDATA[<html>Why would that be a surprise...</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Red Dragon Rubinart$<BR>All right, all right. I would have taught them some manners too if I had time. Well, you can do that for me. Maybe you'll surprisingly be a good parent.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-i" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-j" mid="32" select_type="0"><![CDATA[<html>Uselessly...?</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Red Dragon Rubinart$<BR>You know how things work. <FONT color=#7e12d2>(Red Dragon Rubinart shrugs)</FONT><BR>You're a uselessly mature kid.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-j" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-k" mid="34" select_type="0"><![CDATA[<html>Are you all right, Rubinart?</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Red Dragon Rubinart$<BR>Let's cut the small talk. Are you ready to fight Feder?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-k" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-l" mid="36" select_type="0"><![CDATA[<html>....</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Red Dragon Rubinart$<BR>Me? Why would that matter? Feder is our enemy now.<BR>Do you think I would watch him destroy this world? No, I wouldn't want to see that…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-l" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-m" mid="38" select_type="0"><![CDATA[<html>Rubinart...</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Red Dragon Rubinart$<BR>I don't want to see him. It would be too painful. Imagining him being like that is enough to make me crazy...<BR>I would probably lose my senses like the time I destroyed Lunascent. But I shouldn't... I don't have the power now and you're around to deal with him too...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-m" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-n" mid="40" select_type="0"><![CDATA[<html>Owww!</html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-1-n" mid="41" select_type="0"><![CDATA[<html>That hurts!</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Red Dragon Rubinart$<BR>You! You're the one who's going to battle! Why are you worried about me... You naughty child!<BR><FONT color=#7e12d2>(Red Dragon Rubinart flicks your forehead)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-n" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-o" mid="43" select_type="0"><![CDATA[<html>(Nice?!)</html>]]></talk_answer>
+      <talk_answer link_index="n776_darklair_mardlen-1-o" mid="44" select_type="0"><![CDATA[<html>(Was that a guide...)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Red Dragon Rubinart$<BR>Because you were being cheeky. Anyways, I'm not going with you. I've done what I could in Memoria. Tell me, which dragon would be so friendly and nice enough to guide you to his nest?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-o" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-p" mid="46" select_type="0"><![CDATA[<html>...Yeah.</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Red Dragon Rubinart$<BR>Just to double check, you know the plan don't you?<BR>You'll probably fight Feder one on one. <BR>You defeat him and get the jewel.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-p" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-q" mid="48" select_type="0"><![CDATA[<html>You mean you, the Red Dragon Rubinart, will come?</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Red Dragon Rubinart$<BR>Those two Ancient Dragons can't join in because of the barrier. But they'll enter as soon as the barrier breaks when Feder is almost dead. Well... if things don't look too good, I'll go too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-q" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-1-r" mid="50" select_type="0"><![CDATA[<html>(I don't know if he means it or if he's joking)</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Red Dragon Rubinart$<BR>I can't fight in this weak form but I can't rest in peace if I leave things to those two stupid Ancient Dragons.<FONT color=#7e12d2>(Red Dragon Rubinart smiles jokingly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-1-r" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-2" mid="52" select_type="0"><![CDATA[<html>...I know.</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Red Dragon Rubinart$<BR>So be worried about yourself if you have the time to worry about me.<BR>I hope you're ready. Prepare whatever you can to stay alive.<BR>Even though he's injured and has only half a jewel, he still is the Conqueror Feder.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-2" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="53"><![CDATA[<html>$Red Dragon Rubinart$<BR>I like the determination in your eyes.<BR>Now stop caring about me and go and take care of that kid instead.<BR>Don't make him have nightmares.<FONT color=#7e12d2>(Rubinart points to Geraint. Talk to him.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-a" mid="114" select_type="0"><![CDATA[<html>Erm, Geraint...</html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Geraint$<BR>….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-a" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-b" mid="115" select_type="0"><![CDATA[<html>Don't say that. You'll be coming too, won't you?</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Geraint$<BR>...Why didn't you tell me about this earlier? Why do you have to go alone? WHY?!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-b" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-c" mid="116" select_type="0"><![CDATA[<html>But I'm the only one who can do this job.</html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Geraint$<BR>…But... I've fought with him before... He's…<BR><FONT color=#7e12d2>(Geraint bites his lips)</FONT><BR>He's unbelievably strong...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-c" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-d" mid="117" select_type="0"><![CDATA[<html>What promise?</html>]]></talk_answer>
+      <talk_answer link_index="n1839_gereint_kid-2-e" mid="118" select_type="0"><![CDATA[<html>Of course I do.</html>]]></talk_answer>
+      <talk_question mid="57"><![CDATA[<html>$Geraint$<BR>…You...! You didn't forget our promise, did you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-d" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-f" mid="119" select_type="0"><![CDATA[<html>Of course I remember! I remember it now.</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Geraint$<BR>…You idiot!! You promised me you won't die!! How can you forget that? Stupid idiot jellyfish!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-e" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-f" mid="120" select_type="0"><![CDATA[<html>Of course. We promised each other that we won't die.</html>]]></talk_answer>
+      <talk_question mid="59"><![CDATA[<html>$Geraint$<BR>…Really?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-f" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-g" mid="121" select_type="0"><![CDATA[<html>Of course. I'll keep my promise.</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Geraint$<BR>…Will you keep your promise?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-g" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-h" mid="122" select_type="0"><![CDATA[<html>Yes, I promise.</html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Geraint$<BR>…Fine then. Don't you ever forget it. You'll come back and talk to me again. You'll come back alive!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-h" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-i" mid="123" select_type="0"><![CDATA[<html>(Now he listens to Rubinart too. That makes me relieved.)</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Geraint$<BR>…Honestly, I have a lot of things to tell you but Rubinart told me I shouldn't talk to much to a person who's about to go to an important battle. So I'm being considerate...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-i" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-2-j" mid="124" select_type="0"><![CDATA[<html>Of course!</html>]]></talk_answer>
+      <talk_answer link_index="n1839_gereint_kid-2-j" mid="164" select_type="0"><![CDATA[<html>I promise.</html>]]></talk_answer>
+      <talk_question mid="63"><![CDATA[<html>$Geraint$<BR>…So come back alive! Let me tell you once again that you're not supposed to die!<BR>We'll talk again and travel again like we used to!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-2-j" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1839_gereint_kid-3" mid="126" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>$Geraint$<BR>…All right then. Why don't you go to the Black Knight? He seems to have something to say to you too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1838_rubinat-2" image="" itemindex="" portrait_left="NPC_Left_rubinat.dds" portrait_right="" center_image="">
+      <talk_question mid="166"><![CDATA[<html>$Red Dragon Rubinart$<BR>I like the determination in your eyes.<BR>Now stop caring about me and go and take care of that kid instead.<BR>Don't make him have nightmares.<FONT color=#7e12d2>(Rubinart points to Geraint. Talk to him.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1839_gereint_kid-3" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="65"><![CDATA[<html>$Geraint$<BR>…Hey, why are you looking at me like that... Go on.<BR><FONT color=#7e12d2>(What did he see in my eyes? Anyway, go to Velskud.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-a" mid="131" select_type="0"><![CDATA[<html>Erm, Velskud….</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Velskud$<BR>….<FONT color=#7e12d2>(Velskud looks rather tired)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-a" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-b" mid="132" select_type="0"><![CDATA[<html>But this is the final battle….</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Velskud$<BR>…Did that stupid kid tell you to talk to me? I've already said it's unnecessary.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-b" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-c" mid="133" select_type="0"><![CDATA[<html>(But he still didn't scold him)</html>]]></talk_answer>
+      <talk_answer link_index="n1840_velskud-3-c" mid="134" select_type="0"><![CDATA[<html>(So he carried on talking for the whole day…)</html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Velskud$<BR>…A fool is still a fool even when he resurrects. I've had enough. I'm not so free to listen to his complaints for the whole day. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-c" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-d" mid="135" select_type="0"><![CDATA[<html>…!</html>]]></talk_answer>
+      <talk_question mid="69"><![CDATA[<html>$Velskud$<BR>…That woman left behind not only her jewel but a nuisance with me too.<BR>So that's what she thought of me. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-d" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-e" mid="136" select_type="0"><![CDATA[<html>….Velskud…</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Velskud$<BR>…I don't deny vengeance was what kept me going until now. It was everything I had and hatred doesn't go away easily.<BR>If I think about all the things I lost because of him...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-e" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-f" mid="137" select_type="0"><![CDATA[<html>Me…?</html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Velskud$<BR>…How about you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-f" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-g" mid="138" select_type="0"><![CDATA[<html>….</html>]]></talk_answer>
+      <talk_question mid="72"><![CDATA[<html>$Velskud$<BR>…I told you to run away but you didn't listen, and here you are facing a battle with the enemy of this world all alone. This is what you've brought upon yourself.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-g" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-h" mid="139" select_type="0"><![CDATA[<html>To prove that Argenta was right.</html>]]></talk_answer>
+      <talk_answer link_index="n1840_velskud-3-h" mid="140" select_type="0"><![CDATA[<html>To protect this world.</html>]]></talk_answer>
+      <talk_answer link_index="n1840_velskud-3-h" mid="141" select_type="0"><![CDATA[<html>For everyone.</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Velskud$<BR>…Now that doesn't look like you're trying to be a hero anymore.<BR>Why did you make such a choice?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-h" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-i" mid="142" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="74"><![CDATA[<html>$Velskud$<BR>…….<FONT color=#7e12d2>(Velskud frowns a little)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-i" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-j" mid="143" select_type="0"><![CDATA[<html>…Yes.</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Velskud$<BR>…Do you mean it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-j" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-3-k" mid="144" select_type="0"><![CDATA[<html>Velskud…?</html>]]></talk_answer>
+      <talk_question mid="76"><![CDATA[<html>$Velskud$<BR>…That's fine then.<BR><FONT color=#7e12d2>(Velskud's expression can't be seen very well)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-3-k" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1840_velskud-4" mid="145" select_type="0"><![CDATA[<html>…Okay.</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Velskud$<BR>…That's all.<BR>Don't forget my advice, <FONT color=#387206>{user_nick}</FONT>. <BR>Never be swayed by something... Always be true to yourself and keep going forward.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1840_velskud-4" image="QN_knight_velskud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="78"><![CDATA[<html>$Velskud$<BR>…Because you can never turn back what you have done.<BR><FONT color=#7e12d2>(Velskud looks tired. Talk to Rubinart now.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1838_rubinat-4" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1838_rubinat-4-a" mid="147" select_type="0"><![CDATA[<html>Yup. </html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Red Dragon Rubinart$<BR>Have you finished talking to them?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1838_rubinat-4-a" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1838_rubinat-4-b" mid="148" select_type="0"><![CDATA[<html>Me? I'm good.</html>]]></talk_answer>
+      <talk_question mid="80"><![CDATA[<html>$Red Dragon Rubinart$<BR><FONT color=#7e12d2>(He glances at Velskud)</FONT><BR>Well, he looks fine for now. How about you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1838_rubinat-4-b" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1838_rubinat-4-c" mid="149" select_type="0"><![CDATA[<html>Don't you want to meet him...?</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Red Dragon Rubinart$<BR>…All right then... We'll leave it to you. <BR>Defeat foolish Feder and save this world. Please don't let me hear any more news about his crazy endeavours...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1838_rubinat-4-c" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1838_rubinat-4-d" mid="150" select_type="0"><![CDATA[<html>…Rubinart….</html>]]></talk_answer>
+      <talk_question mid="82"><![CDATA[<html>$Red Dragon Rubinart$<BR>…Are you crazy? I said I can't, stupid.<BR>I don't have the confidence to control myself. Besides, the moment he opened the Monolith with his own sword, the very Monolith that was barely closed with everyone's sacrifice, Feder that we knew already didn't exist anymore...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1838_rubinat-4-d" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1838_rubinat-4-e" mid="151" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="83"><![CDATA[<html>$Red Dragon Rubinart$<BR>…So don't worry about me and fight him! You'll fight and win, and you'll come back alive. Maybe you're too young to understand this, but the fate of this world depends on you right now.<FONT color=#7e12d2>(Rubinart pats your head)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1838_rubinat-4-e" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1838_rubinat-5" mid="152" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="84"><![CDATA[<html>$Red Dragon Rubinart$<BR>…Feder was my old friend, but the one I knew is no longer around. You're the one I'm worried about now.<BR>So go and come back alive, you idiot.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1838_rubinat-5" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="85"><![CDATA[<html>$Red Dragon Rubinart$<BR>…Now go to that woman called Madeleine or something. She seems to know the fastest way to the nest.<BR><FONT color=#7e12d2>(Talk to Priestess of Darkness Madeleine)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-5-a" mid="154" select_type="0"><![CDATA[<html>(Can that be called friendship...??)</html>]]></talk_answer>
+      <talk_question mid="86"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>…<FONT color=#7e12d2>(Madeleine is smiling)</FONT> I've not had any feelings for a long time.<BR>But the close friendship you have with the dragons makes me remember the feelings I had when I was still a human.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-5-b" mid="155" select_type="0"><![CDATA[<html>(Would that be all right...) </html>]]></talk_answer>
+      <talk_question mid="87"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>…By right, they can't stay here.<BR>But since they are here to help you, the Priestesses of Darkness have agreed to make an exception.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-5-c" mid="156" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>…We will help you to the best we can too. All the entrances here are openings in dimensions that were created due to the Goddess' nightmare... It hasn't been long since the entrance to Ayrn Island, where the Red Dragon's Nest is, has appeared. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-5-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-5-d" mid="157" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="89"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>…The fear, investigation and the truth...<BR>The ominous rumours about the place are already spreading in Lagendia like wildfire.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-5-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-5-e" mid="158" select_type="0"><![CDATA[<html>(Is that a joke...?)</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>Maybe that place has turned into a dream that even the Goddess can't bear... But it's good news since you don't have to go all the way there on a dragon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-5-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-5-f" mid="159" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="91"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>…<FONT color=#7e12d2>(Madeleine smiles)</FONT><BR>The one who stands in the center of the giant storm yet stays undeterred will lead this world...<BR>…Please remember that you're not alone.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-5-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-5-g" mid="161" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="160"><![CDATA[<html><FONT color=#2b2723>$Quest Reward$</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-5-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n776_darklair_mardlen-5-h" mid="162" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR>…Please make your way now. The poor tyrant has forgotten what is precious when he drowned in despair and grief...<BR>It's your time to let him rest in peace...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n776_darklair_mardlen-5-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="163"><![CDATA[<html>$Priestess of Darkness Madeleine$<BR><BR><FONT color=#7e12d2>*You can enter the Red Dragon Nest from the entrance at the Garden of Time and Space.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">4695</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="talk" npc="n776_darklair_mardlen">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">46950,,,,,,,,,</exe>
+         <exe type="complete" true="">4695</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">0</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="c" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="d" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="5">2,3,4</exelink>
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="d" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="e" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="f" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="g" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="h" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="i" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="j" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="j" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="k" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="l" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="m" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="n" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="n" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="o" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="o" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="p" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="q" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="r" />
+   <exelink qstep="1" npc="n776_darklair_mardlen" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="b" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="c" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="d" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="e" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="f" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="f" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="g" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="h" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="i" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="j" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="j" />
+   <exelink qstep="2" npc="n1839_gereint_kid" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n1840_velskud" sub="b" />
+   <exelink qstep="3" npc="n1840_velskud" sub="c" />
+   <exelink qstep="3" npc="n1840_velskud" sub="c" />
+   <exelink qstep="3" npc="n1840_velskud" sub="d" />
+   <exelink qstep="3" npc="n1840_velskud" sub="e" />
+   <exelink qstep="3" npc="n1840_velskud" sub="f" />
+   <exelink qstep="3" npc="n1840_velskud" sub="g" />
+   <exelink qstep="3" npc="n1840_velskud" sub="h" />
+   <exelink qstep="3" npc="n1840_velskud" sub="h" />
+   <exelink qstep="3" npc="n1840_velskud" sub="h" />
+   <exelink qstep="3" npc="n1840_velskud" sub="i" />
+   <exelink qstep="3" npc="n1840_velskud" sub="j" />
+   <exelink qstep="3" npc="n1840_velskud" sub="k" />
+   <exelink qstep="3" npc="n1840_velskud" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n1838_rubinat" sub="b" />
+   <exelink qstep="4" npc="n1838_rubinat" sub="c" />
+   <exelink qstep="4" npc="n1838_rubinat" sub="d" />
+   <exelink qstep="4" npc="n1838_rubinat" sub="e" />
+   <exelink qstep="4" npc="n1838_rubinat" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n776_darklair_mardlen" sub="b" />
+   <exelink qstep="5" npc="n776_darklair_mardlen" sub="c" />
+   <exelink qstep="5" npc="n776_darklair_mardlen" sub="d" />
+   <exelink qstep="5" npc="n776_darklair_mardlen" sub="e" />
+   <exelink qstep="5" npc="n776_darklair_mardlen" sub="f">0</exelink>
+   <exelink qstep="5" npc="n776_darklair_mardlen" sub="g">1</exelink>
+   <exelink qstep="5" npc="n776_darklair_mardlen" sub="h" />
+   <journal_data recompense="46950" quest_title="[네스트]붉은 왕과의 결전" chapterid="" quest_level="80" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_SaintHaven_NestWorldZone01.dds</contents_image>
+         <destination_pos>180,n776</destination_pos>
+         <destination_mode>custom:27@4,28@4,33@4,36@4,37@4,55@1</destination_mode>
+         <statemark_npcid>776</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="93"><![CDATA[Final Battle With The Red King 1]]></title>
+         <contents mid="94"><![CDATA[<html>Velskud and Geraint are back.<BR>Go to the Garden of Time and Space and talk to Priestess of Darkness Madeleine.<BR><BR><FONT color=#086171>Saint Haven </FONT><FONT color=#a82424>- Garden of Time and Space (Priestess of Darkness Madeleine)</FONT><BR><BR><FONT color=#7e12d2>*You must accept the remote quest before you enter the Garden of Time and Space.</FONT></html>]]></contents>
+         <destination mid="95"><![CDATA[Talk to Madeleine at the Garden of Time and Space]]></destination>
+         <todo_msg mid="96"><![CDATA[Meet Priestess of Darkness Madeleine at the Garden of Time and Space.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_geraint_Kid.dds</contents_image>
+         <destination_pos>180,n1839</destination_pos>
+         <destination_mode>custom:27@4,28@4,33@4,36@4,37@4,55@1</destination_mode>
+         <statemark_npcid>1839</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="97"><![CDATA[Final Battle With The Red King 2]]></title>
+         <contents mid="98"><![CDATA[<html>Talk to Geraint.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- Garden of Time and Space (Geraint)</FONT></html>]]></contents>
+         <destination mid="99"><![CDATA[Talk to Geraint at the Garden of Time and Space]]></destination>
+         <todo_msg mid="100"><![CDATA[Talk to Geraint.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_knight_velskud.dds</contents_image>
+         <destination_pos>180,n1840</destination_pos>
+         <destination_mode>custom:27@4,28@4,33@4,36@4,37@4,55@1</destination_mode>
+         <statemark_npcid>1840</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="101"><![CDATA[Final Battle With The Red King 3]]></title>
+         <contents mid="102"><![CDATA[<html>You have talked with Geraint. Talk to Velskud now.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- Garden of Time and Space (Velskud)</FONT></html>]]></contents>
+         <destination mid="103"><![CDATA[Talk to Velskud at the Garden of Time and Space]]></destination>
+         <todo_msg mid="104"><![CDATA[Talk to Velskud.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_NPC_rubinat.dds</contents_image>
+         <destination_pos>180,n1838</destination_pos>
+         <destination_mode>custom:27@4,28@4,33@4,36@4,37@4,55@1</destination_mode>
+         <statemark_npcid>1838</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="105"><![CDATA[Final Battle With The Red King 4]]></title>
+         <contents mid="106"><![CDATA[<html>You have talked with Velskud. Talk to Rubinart now.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- Garden of Time and Space (Red Dragon Rubinart)</FONT></html>]]></contents>
+         <destination mid="107"><![CDATA[Talk to Rubinart at the Garden of Time and Space]]></destination>
+         <todo_msg mid="108"><![CDATA[Talk to Rubinart.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_SaintHaven_NestWorldZone01.dds</contents_image>
+         <destination_pos>180,n776</destination_pos>
+         <destination_mode>custom:27@4,28@4,33@4,36@4,37@4,55@1</destination_mode>
+         <statemark_npcid>776</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="109"><![CDATA[Final Battle With The Red King 5]]></title>
+         <contents mid="110"><![CDATA[<html>You have talked with Rubinart. Talk to Madeleine now.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>- Garden of Time and Space (Priestess of Darkness Madeleine)</FONT></html>]]></contents>
+         <destination mid="111"><![CDATA[Talk to Madeleine at the Garden of Time and Space]]></destination>
+         <todo_msg mid="112"><![CDATA[Talk to Madeleine.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>80:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

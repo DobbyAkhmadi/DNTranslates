@@ -1,0 +1,492 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq34_9285_doubtful_encounter</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>12</qchapter>
+      <qid>9285</qid>
+      <designer>강지영</designer>
+      <qlevel>63</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9286</nextqid>
+      <nextqname>mq34_9286_dissonance</nextqname>
+      <nextqnpc>n1055_elf_guard_basha</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Suspicious Encounter]]></qkname>
+      <qnpc>
+         <npcid>1047</npcid>
+         <npcename>n1047_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1054</npcid>
+         <npcename>n1054_azelia</npcename>
+         <npckname>아젤리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1055</npcid>
+         <npcename>n1055_elf_guard_basha</npcename>
+         <npckname>엘프 경비병 바샤</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1056</npcid>
+         <npcename>n1056_yuvenciel</npcename>
+         <npckname>아처 유벤시엘</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1083</npcid>
+         <npcename>n1083_triana</npcename>
+         <npckname>아처 트리아나</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1084</npcid>
+         <npcename>n1084_triana</npcename>
+         <npckname>아처 트리아나</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-accepting" image="QN_Npc_Triana.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-accepting-acceptted" mid="6" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Argenta$<BR>The poison could be a little dangerous. Let the other elves in  Anu Arendel know about the poison too.<BR><FONT color=#7e12d2>(Talk to Archer Triana at the Forest of New Moon Entrance)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-accepting-chk_j1" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Archer Triana$<BR>Hello, <FONT color=#387206> {user_nick}</FONT>.<BR>I heard that the apostles appeared near Anu Arendel. Did you hear about it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-accepting-acceptted" mid="106" select_type="3" />
+      <talk_question mid="9"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yeah. I'm here because of that.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-accepting-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-accepting-acceptted" mid="107" select_type="3" />
+      <talk_question mid="11"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yes. That's what brought me here.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-1" image="QN_Npc_Triana.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n1047_argenta-1-" mid="14" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Argenta$<BR>Why are you still standing around? Is it so hard to talk to an elf?<BR>There's an elf over there whom you see to know?<BR><FONT color=#7e12d2>(Talk to Archer Triana at Anu Arendel)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-1" image="QN_Npc_Triana.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-1-" mid="16" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Archer Triana$<BR>I was taking a walk at the Forest of New Moon since I came back after a long journey.<BR>I have something to tell you, but it may be uncomfortable for you to talk here. Let's go back to the Forest of New Moon Entrance.<BR><FONT color=#7e12d2>(Talk to Archer Triana at Anu Arendel)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-1-" mid="18" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$Archer Yuvenciel$<BR>I don't have anything to talk to you about.<BR><FONT color=#7e12d2>(Yuvenciel seems uninterested in you)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1054_azelia-1" image="QN_Npc_Triana.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Azelia.dds" center_image="">
+      <talk_answer link_index="n1054_azelia-1-" mid="20" select_type="5" />
+      <talk_question mid="19"><![CDATA[<html>$Agelia$<BR>Hush. This is an important period for us. Please keep your voices down.<BR><FONT color=#7e12d2>(Talk to Archer Triana at Anu Arendel)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1055_elf_guard_basha-1" image="QN_Npc_Triana.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Basha.dds" center_image="">
+      <talk_answer link_index="n1055_elf_guard_basha-1-" mid="22" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Elf Guard Basha$<BR>Huh? A new adventurer? <BR>Hey you look a little suspicious. What are you doing here?<BR><FONT color=#7e12d2>(She keeps asking you questions. Talk to someone else)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-1-l" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Archer Triana$<BR>Ah, you came because you were worried about the Forest of New Moon. <BR>I'm always grateful for your concerns for the elves. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-a" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-1-c" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What? I saw Ignacio</FONT><FONT color=#662500>.<BR>I saw him transporting pots of poison from the desert and chased after him, but I lost him in the end.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-b" image="QN_Npc_Bishop.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-1-c" mid="28" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I saw Ignacio</FONT><FONT color=#662500>.<BR>I saw him transporting pots of poison from the desert and chased after him, but I lost him in the end.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-1-job3" mid="36" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Archer Triana$<BR>Poison? You mean the one that was used in Calderock Village?<BR>Well, that's okay. The elves' forest is being protected by the Queen. It recovers much faster than forests of humans.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-1-f" mid="38" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yeah I know about that.<BR>But Argenta said it could be a little dangerous after she tasted it.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-1-f" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>That's what I have heard too.<BR>But Argenta said it could be a little dangerous after she tasted it.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-f" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-1-g" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Archer Triana${sound:npc_AN_Archer Triana_qu_9285_02.ogg}<BR>Really? If Argenta said so, we must be careful.<BR><FONT color=#7e12d2>(Archer Triana turns around and looks at Agelia)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-1-h" mid="147" select_type="2" />
+      <talk_question mid="146"><![CDATA[<html>$Archer Triana$<BR>Agelia, have you heard my conversation with <FONT color=#387206>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-h" image="" itemindex="" portrait_left="NPC_Left_Azelia.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1083_triana-1-i" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Agelia${sound:npc_AN_Archer Agelia_qu_9267_02.ogg}<BR>How can such evil people do whatever they want in Anu Arendel!?<BR><FONT color=#7e12d2>(Agelia looks very suprised)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-i" image="" itemindex="" portrait_left="NPC_Left_Azelia.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1083_triana-1-j" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Agelia$<BR>There is no time to waste. We should let the Elder know....<BR><FONT color=#7e12d2>(She hesitates for a while)<BR></FONT>Erm… Actually, the Elder must be very busy now. We should learn more about the situation first.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-j" image="" itemindex="" portrait_left="NPC_Left_Azelia.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1083_triana-1-k" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Agelia$<BR>It's not because I don't trust <FONT color=#387206>{user_nick} </FONT>.<BR>I should check how far the forest is affected first before informing him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-k" image="QW_77.dds" itemindex="" portrait_left="NPC_Left_Azelia.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1083_triana-1-" mid="50" select_type="5" />
+      <talk_question mid="49"><![CDATA[<html>$Agelia$<BR>Since the forest is huge, we should go separately. <BR>I will check out the Golden Meadow. <FONT color=#387206>{user_nick}</FONT>, please go to the <FONT color=#a82424>Disappearing Half Moon Desert</FONT> with Triana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-1-l" image="QN_Npc_Rosalin.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-1-job2" mid="143" select_type="2" />
+      <talk_question mid="142"><![CDATA[<html>$Archer Triana${sound:npc_AN_Archer Triana_qu_9285_01.ogg}<BR>I saw Rozalinde while I was taking a walk in the forest. She was engrossed in looking for something. I was going to let the ranger know.<BR><FONT color=#7e12d2>(Triana points to the elf Ranger Agelia beside her)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-2" image="QW_77.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-2-" mid="51" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$Archer Triana$<BR>Let's go now. <FONT color=#a82424>Disappearing Half Moon Desert</FONT>....<BR>Can we find them there?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1054_azelia-2" image="QW_77.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Azelia.dds" center_image="">
+      <talk_answer link_index="n1054_azelia-2-" mid="53" select_type="5" />
+      <talk_question mid="52"><![CDATA[<html>$Agelia$<BR>Don't worry about me. I'm a ranger of the forest. I know how to protect myself.<BR><FONT color=#7e12d2>(Go to the Disappearing Half Moon Desert)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1047_argenta-2" image="QW_77.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_question mid="54"><![CDATA[<html>$Argenta$<BR>Going to look for something with the elves? Always travelling in packs. How human.<BR><FONT color=#7e12d2>(Go to Disappearing Half Moon Desert)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-a" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Archer Yuvenciel$<BR><FONT color=#2b2723>Triana</FONT>? I never thought I would see you again.<BR><FONT color=#7e12d2>(Yuvenciel is staring at Triana's face)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-a" image="" itemindex="" portrait_left="NPC_Left_Triana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-b" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Archer Triana${sound:npc_AN_Archer Triana_qu_9285_03.ogg}<BR>You're Yuvenciel. What are you doing here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-c" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Archer Yuvenciel$<BR>It has to do with my fate. The fate that I created for letting go of myself in the past.<BR>But I feel as if all of that didn't happen when I see you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-d" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Huh? What's happening? That man… he looks like he doesn't even know I'm here)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-d" image="" itemindex="" portrait_left="NPC_Left_Triana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-e" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$Archer Triana$<BR>You...<BR><FONT color=#7e12d2>(Triana blushes a little)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-e" image="" itemindex="" portrait_left="NPC_Left_Triana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-f" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(He's hitting on Triana</FONT><BR>
+<FONT color=#662500> Should I leave the two of them alone for a while?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-g" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Archer Yuvenciel$<BR><FONT color=#a82424>Destiny</FONT> will hit you too. Maybe it would be cruel, as it was to me.<BR>What choice will you make? Like her, will you...<BR><FONT color=#7e12d2>(Yuvenciel looks at Triana with sad eyes)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-h" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Archer Yuvenciel$<BR>If your choice differs from mine, I may fall into despair again.<BR>Meeting you at this point of time makes me so confused.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-h" image="" itemindex="" portrait_left="NPC_Left_Triana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-i" mid="151" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Archer Triana$<BR>I don't even know what my own fate entails, yet you are talking like you know what will happen.<BR>But that is not the important matter. I'm looking for <FONT color=#a82424>traces of the Dragon Followers</FONT> here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-j" mid="152" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Archer Yuvenciel$<BR>Triana, you are always more concerned about other people's affairs.<BR>To me, your affairs are the most important...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-3-" mid="154" select_type="5" />
+      <talk_question mid="153"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9285_01.ogg}<BR>They have already passed through this place and headed to the forest. That's all I can tell you.<BR><FONT color=#7e12d2>(Yuvenciel looks away)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-3-" mid="76" select_type="5" />
+      <talk_question mid="75"><![CDATA[<html>$Archer Triana$<BR>That man is....<BR><FONT color=#7e12d2>(Triana is looking at a male elf. Try talking to him)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1056_yuvenciel-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1056_yuvenciel-4-" mid="78" select_type="5" />
+      <talk_question mid="77"><![CDATA[<html>$Archer Yuvenciel$<BR><FONT color=#7e12d2>(Yuvenciel looks like his feelings were hurt while talking to Triana)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-4" image="QN_Npc_Azelia.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-4-job4_2" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Archer Triana${sound:npc_AN_Archer Triana_qu_9285_04.ogg}<BR>I'm sorry. My private conversation got too long.<BR>Anyway, since we have found out that they have already left this place, we should go and meet <FONT color=#a82424>Agelia</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-4-a" image="QN_Npc_yubaensiael.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-4-c" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yuvenciel... I've met him before but he's a little peculiar. Are you close to him?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-4-b" image="QN_Npc_yubaensiael.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-4-c" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I saw him before together with Velskud.<BR>Do you know him too?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-4-job4_3" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Archer Triana$<BR>Not really. I've received help from him once during my journey.<BR>I don't know much about him too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-4-f" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>He seemed interested in you. You're so popular~</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-4-f" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>He seemed interested in you.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-4-g" mid="92" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>$Archer Triana$<BR>He said I look like his ex-lover. His interest is not towards me.<BR>Anyway, we should be more concerned about the poison.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-4-g" image="QN_Npc_Azelia.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-4-" mid="94" select_type="5" />
+      <talk_question mid="93"><![CDATA[<html>$Archer Triana${sound:npc_AN_Archer Triana_qu_9285_05.ogg}<BR>Since we found out that they have left this place already, we should go back to <FONT color=#a82424>Anu Arendel</FONT> and discuss with <FONT color=#a82424>Agelia</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1083_triana-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1083_triana-5-" mid="96" select_type="5" />
+      <talk_question mid="95"><![CDATA[<html>$Archer Triana$<BR>It seems like Agelia is not back yet.<BR>I thought we would come back later since we spent some time talking to Yuvenciel.<BR>Shall we ask the <FONT color=#a82424>Guard</FONT> over there if Agelia was here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1055_elf_guard_basha-5" image="QN_Npc_Azelia.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Basha.dds" center_image="">
+      <talk_answer link_index="n1055_elf_guard_basha-5-job5_2" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>$Elf Guard Basha$<BR>You're looking for Agelia?<BR>Didn't she leave with you guys just now? You didn't see her?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1055_elf_guard_basha-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Basha.dds" center_image="">
+      <talk_answer link_index="n1055_elf_guard_basha-5-c" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>We promised to meet here.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1055_elf_guard_basha-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Basha.dds" center_image="">
+      <talk_answer link_index="n1055_elf_guard_basha-5-c" mid="102" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>We promised to meet here.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1055_elf_guard_basha-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Basha.dds" center_image="">
+      <talk_answer link_index="n1055_elf_guard_basha-5-d" mid="133" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$Elf Guard Basha$<BR>Then did something happen to her?<BR>She must have explored the Golden Meadow at least twice by now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1055_elf_guard_basha-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Basha.dds" center_image="">
+      <talk_answer link_index="n1055_elf_guard_basha-5-!next" mid="135" select_type="4" />
+      <talk_question mid="134"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1084_triana-5" image="QN_Npc_Azelia.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Triana.dds" center_image="">
+      <talk_answer link_index="n1084_triana-5-" mid="111" select_type="5" />
+      <talk_question mid="110"><![CDATA[<html>$Archer Triana${sound:npc_AN_Archer Triana_qu_9285_05.ogg}<BR>Since we found out that they have left this place already, we should go back to <FONT color=#a82424>Anu Arendel</FONT> and discuss with <FONT color=#a82424>Agelia</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment>0번 조건 - 소서리스 구분</comment>
+      <conditions>
+         <chk type="class" op="=">3</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="setquest">9285</exe>
+         <exe type="talk" npc="n1083_triana">1</exe>
+         <exe type="talk" npc="n1083_triana">a</exe>
+         <exe type="talk" npc="n1083_triana">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>2, 3 : 소서리스 반말 말투 구분 (a, d) </comment>
+      <conditions>
+         <chk type="class" op="=">3</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="conexe" true="6" false="7">0</exe>
+         <exe type="talk" npc="n1083_triana">a</exe>
+         <exe type="talk" npc="n1083_triana">b</exe>
+         <exe type="talk" npc="n1083_triana">d</exe>
+         <exe type="talk" npc="n1083_triana">e</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>2, 3 : 소서리스 직업체크 (결과 a, d)</comment>
+      <conditions>
+         <chk type="class" op="=">3</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="conexe" true="6" false="7">0</exe>
+         <exe type="talk" npc="n1084_triana">a</exe>
+         <exe type="talk" npc="n1084_triana">b</exe>
+         <exe type="talk" npc="n1084_triana">d</exe>
+         <exe type="talk" npc="n1084_triana">e</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment>2 : 소서리스 직업 체크 (결과  a)</comment>
+      <conditions>
+         <chk type="class" op="=">3</chk>
+      </conditions>
+      <executions>
+         <exe type="recompense">92850,92851,,92853,92854,92855,92856,92857,92858,92859</exe>
+         <exe type="complete" true="">9285</exe>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="talk" npc="n1055_elf_guard_basha">a</exe>
+         <exe type="talk" npc="n1055_elf_guard_basha">b</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1047_argenta" sub="acceptted">1</exelink>
+   <exelink qstep="accepting" npc="n1083_triana" sub="chk_j1">0</exelink>
+   <exelink qstep="accepting" npc="n1083_triana" sub="acceptted">1,2</exelink>
+   <exelink qstep="accepting" npc="n1083_triana" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n1083_triana" sub="c" />
+   <exelink qstep="1" npc="n1083_triana" sub="c" />
+   <exelink qstep="1" npc="n1083_triana" sub="job3">3</exelink>
+   <exelink qstep="1" npc="n1083_triana" sub="f" />
+   <exelink qstep="1" npc="n1083_triana" sub="f" />
+   <exelink qstep="1" npc="n1083_triana" sub="g" />
+   <exelink qstep="1" npc="n1083_triana" sub="h" />
+   <exelink qstep="1" npc="n1083_triana" sub="i" />
+   <exelink qstep="1" npc="n1083_triana" sub="j" />
+   <exelink qstep="1" npc="n1083_triana" sub="k">0,1</exelink>
+   <exelink qstep="1" npc="n1083_triana" sub="" />
+   <exelink qstep="1" npc="n1083_triana" sub="job2">2</exelink>
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="b" />
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="c" />
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="d" />
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="e" />
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="f" />
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="g" />
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="h" />
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="i" />
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="j">0,1</exelink>
+   <exelink qstep="3" npc="n1056_yuvenciel" sub="" />
+   <exelink qstep="4" npc="n1084_triana" sub="job4_2">2</exelink>
+   <exelink qstep="4" npc="n1084_triana" sub="c" />
+   <exelink qstep="4" npc="n1084_triana" sub="c" />
+   <exelink qstep="4" npc="n1084_triana" sub="job4_3">3</exelink>
+   <exelink qstep="4" npc="n1084_triana" sub="f" />
+   <exelink qstep="4" npc="n1084_triana" sub="f" />
+   <exelink qstep="4" npc="n1084_triana" sub="g">0,1</exelink>
+   <exelink qstep="4" npc="n1084_triana" sub="" />
+   <exelink qstep="5" npc="n1055_elf_guard_basha" sub="job5_2">2</exelink>
+   <exelink qstep="5" npc="n1055_elf_guard_basha" sub="c" />
+   <exelink qstep="5" npc="n1055_elf_guard_basha" sub="c" />
+   <exelink qstep="5" npc="n1055_elf_guard_basha" sub="d">0</exelink>
+   <exelink qstep="5" npc="n1055_elf_guard_basha" sub="!next">1</exelink>
+   <journal_data recompense="1:92851,3:92853,4:92854,5:92855,6:92856,7:92857,8:92858,9:92859" quest_title="미심쩍은 만남" chapterid="12" quest_level="63" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Triana.dds</contents_image>
+         <destination_pos>34,n1083</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1083</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="113"><![CDATA[Suspicious Encounter I]]></title>
+         <contents mid="114"><![CDATA[<html>Talk to Triana about Ignacio and the poison. <BR>
+ <BR>
+<FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Archer Triana</FONT><BR>
+ </html>]]></contents>
+         <destination mid="115"><![CDATA[Talk to Triana at Anu Arendel]]></destination>
+         <todo_msg mid="116"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_77.dds</contents_image>
+         <destination_pos>771,0,0</destination_pos>
+         <destination_mode>custom:771@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="117"><![CDATA[Suspicious Encounter II]]></title>
+         <contents mid="118"><![CDATA[<html>You have decided to chase after the apostles together with the elves. Go to the Disappearing Half Moon Desert with Archer Triana.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Disappearing Half Moon Desert(???)</FONT></html>]]></contents>
+         <destination mid="119"><![CDATA[Explore Disappearing Half Moon Desert]]></destination>
+         <todo_msg mid="120"><![CDATA[Go to Disappearing Half Moon Desert.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>771,n1056</destination_pos>
+         <destination_mode>custom:771@1</destination_mode>
+         <statemark_npcid>1056</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="121"><![CDATA[Suspicious Encounter III]]></title>
+         <contents mid="122"><![CDATA[<html>While you were looking for clues about the Dragon Followers, you met Archer Yuvenciel at the end of the Golden Meadow.<BR>Try talking to him.<BR>
+ <BR>
+<FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Disappearing Half Moon Desert(Archer Yuvenciel)</FONT><BR>
+<BR>
+ </html>]]></contents>
+         <destination mid="123"><![CDATA[Talk to Yuvenciel at the Disappearing Half Moon Desert]]></destination>
+         <todo_msg mid="124"><![CDATA[Talk to Yuvenciel.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Triana.dds</contents_image>
+         <destination_pos>771,n1084</destination_pos>
+         <destination_mode>custom:771@1</destination_mode>
+         <statemark_npcid>1084</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="125"><![CDATA[Suspicious Encounter IV]]></title>
+         <contents mid="126"><![CDATA[<html>You have met a strange man called Yuvenciel. Triana seems to know him. Talk to Triana.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Disappearing Half Moon Desert(Archer Triana)</FONT></html>]]></contents>
+         <destination mid="127"><![CDATA[Talk to Triana at the Disappearing Half Moon Desert]]></destination>
+         <todo_msg mid="128"><![CDATA[Talk to Triana.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Azelia.dds</contents_image>
+         <destination_pos>34,n1055</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="129"><![CDATA[Suspicious Encounter V]]></title>
+         <contents mid="130"><![CDATA[<html>You didn't find any clues at the Disappearing Half Moon Desert.<BR>
+Go back to Anu Arendel and meet Agelia who went to explore the other direction. <BR>
+ <BR>
+<FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- ???</FONT><BR>
+<BR>
+<BR>
+<BR>
+ </html>]]></contents>
+         <destination mid="131"><![CDATA[Return to Anu Arendel]]></destination>
+         <todo_msg mid="132"><![CDATA[Go back to Anu Arendel and report.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Basha.dds</contents_image>
+         <destination_pos>34,n1055</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1055</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="138"><![CDATA[Suspicious Encounter VI]]></title>
+         <contents mid="139"><![CDATA[<html>You returned to Anu Arendel but could not see Agelia. It's time she came back... Could the guard know where she is?<BR><BR><FONT color=#086171>Anu Arendel</FONT><FONT color=#a82424> - Elf Guard Basha</FONT></html>]]></contents>
+         <destination mid="140"><![CDATA[Talk to Elf Guard Basha at Anu Arendel]]></destination>
+         <todo_msg mid="141"><![CDATA[Agelia is not around. Talk to the guard.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9284</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

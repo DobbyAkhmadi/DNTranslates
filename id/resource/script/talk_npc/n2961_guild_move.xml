@@ -1,0 +1,21 @@
+   <talk>
+      <npcename>n2961_guild_move</npcename>
+      <npcid>2961</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Guild Base Entrance Guard]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="go_guild" mid="7"><![CDATA[<html><FONT color=#a82424>[Go to Guild Base]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="talk_1" mid="8"><![CDATA[<html>[Talk] <FONT color=#086171>What is the Guild Base?</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Guild Base Entrance Guard$<BR>Stop right there!<BR>Only those authorized to enter the base are allowed in here.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_1" image="" itemindex="">
+         <talk_question mid="9"><![CDATA[<html>$Guild Base Entrance Guard$<BR>This is a special base that only guilds ranked 1st to 16th may enter.<BR>If you belong to a guild, why not try to reach the top 16?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_user_EnterToGuildAgit(userObjID) </exe>
+      </executions>
+      <conditions />
+      <exelink idx="go_guild">1</exelink>
+   </talk>

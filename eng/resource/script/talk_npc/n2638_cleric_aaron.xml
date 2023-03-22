@@ -1,0 +1,77 @@
+   <talk>
+      <npcename>n2638_cleric_aaron</npcename>
+      <npcid>2638</npcid>
+      <startexe>24</startexe>
+      <comment>#286016 슬레이어 상점 제거</comment>
+      <npckname mid="1"><![CDATA[Temple Knight Aaron]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest_choice" mid="6"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Temple Knight Aaron$<BR>I’m here to fill in for Temple Knight Elizer.<BR>He’ll probably join me in this Training Ground too.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="51" link_target="sqc23_3703_slayer2.xml"><![CDATA[<html>[Slayer] <FONT color=#086171>Slayer Equipment</FONT><FONT color=#2b2723> </FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="52" link_target="sqc23_3704_slayer3.xml"><![CDATA[<html>[Slayer] <FONT color=#086171>Conditions For Entering Slayer Mode </FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="76"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Temple Knight Aaron$<BR>Pope Terramai has devoted himself to train the Temple Knights.<BR>
+I hope I can be of any help to him however little it may be.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest_slayer" image="" itemindex="">
+         <talk_question mid="79"><![CDATA[<html>$Temple Knight Aaron$<BR>
+Oh, so you’ve already been informed of the Slayer Mode. Then there’s no need for you to participate in the trainings at the new Training Ground. Thank you for your effort.<BR>
+ <BR>
+<FONT color=#7e12d2>(You don’t need to take [</FONT><FONT color=#086171>Missing! Slayer Mode</FONT><FONT color=#7e12d2>], [<FONT color=#086171>Intense Training! Slayer Mode</FONT>], and [<FONT color=#086171>Challenge! Slayer Mode</FONT>] quests)</FONT><BR>
+ </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="quest_choice" mid="83"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="82"><![CDATA[<html>$Temple Knight Aaron$<BR>I am the substitute for Temple Knight Ilizer.<BR>He will probably be joining this training soon.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="9" false="2">0</exe>
+         <exe type="conexe" true="10" false="3">1</exe>
+         <exe type="conexe" true="11" false="4">2</exe>
+         <exe type="conexe" true="12" false="5">3</exe>
+         <exe type="conexe" true="13" false="6">4</exe>
+         <exe type="conexe" true="14" false="7">5</exe>
+         <exe type="conexe" true="15" false="8">6</exe>
+         <exe type="conexe" true="16" false="17">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,92001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,92002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,92003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,92004,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,92005,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,92006,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,92007,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,92008,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,92009,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,89021,100);</exe>
+         <exe type="conexe" true="22" false="20">8</exe>
+         <exe type="conexe" true="21" false="22">9 / 10</exe>
+         <exe type="conexe" true="23" false="22">11 / 12 / 13</exe>
+         <exe type="talk">quest</exe>
+         <exe type="talk">quest_slayer</exe>
+         <exe type="conexe" true="25" false="0">15</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="hascomq">4902</chk>
+         <chk type="hasquest">4901</chk>
+         <chk type="hasquest">4902</chk>
+         <chk type="hasquest">3702</chk>
+         <chk type="hasquest">3703</chk>
+         <chk type="hasquest">3704</chk>
+         <chk type="class" op="=">9</chk>
+         <chk type="class" op="=">10</chk>
+      </conditions>
+      <exelink idx="quest_choice">19</exelink>
+      <exelink idx="quest_choice">19</exelink>
+   </talk>

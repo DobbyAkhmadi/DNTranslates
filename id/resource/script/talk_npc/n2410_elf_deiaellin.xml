@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n2410_elf_deiaellin</npcename>
+      <npcid>2410</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Daylline]]></npckname>
+      <talk_paragraph index="talk_1" image="" itemindex="">
+         <talk_answer link_index="002" mid="4"><![CDATA[<html><FONT color=#086171>(Daylline is acting weird)</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html><FONT color=#2b2723>$Daylline Corrupted by Nightmare$</FONT><BR><FONT color=#a82424>Haha...</FONT><BR><BR><FONT color=#7e12d2>(She has a smile that gives goosebumps)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="skill_set" mid="6"><![CDATA[<html><FONT color=#086171>(This aura...)</FONT> Get away from her, Maylline!</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html><FONT color=#2b2723>$Maylline$</FONT><BR><FONT color=#2b2723>Oh, </FONT><FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723>! Please help Day.</FONT><BR><FONT color=#2b2723>She was attacked by strange monsters... I think she's seriously injured.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">talk_1</exe>
+         <exe type="conexe" true="0" false="">0</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 997, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 239, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill(userObjID, 81);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 341, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 764, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 765, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 766, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 767, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 40, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 80</chk>
+      </conditions>
+      <exelink idx="skill_set">2,3,4,5,6,7,8,9,10</exelink>
+   </talk>

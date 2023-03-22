@@ -1,0 +1,726 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc27_9922_disappeared_books</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>27</qchapter>
+      <qid>9922</qid>
+      <designer>양희주</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9923</nextqid>
+      <nextqname>mqc27_9923_the_coming_threat</nextqname>
+      <nextqnpc>n3076_sylviana</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[To Find the Ancient Book]]></qkname>
+      <qnpc>
+         <npcid>2067</npcid>
+         <npcename>n2067_nophee</npcename>
+         <npckname>노르페</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3054</npcid>
+         <npcename>n3054_refugee</npcename>
+         <npckname>부상당한 난민</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3056</npcid>
+         <npcename>n3056_sylviana</npcename>
+         <npckname>실비아나 공녀</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3068</npcid>
+         <npcename>n3068_geraint</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3076</npcid>
+         <npcename>n3076_sylviana</npcename>
+         <npckname>실비아나 공녀</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Norfe$<BR>If you didn't step forward... I would have approached the matter in a different way to conciliate the princess.<BR>
+But I never intended to abandon the refugees. All refugees from the Aergal Kingdom are welcome here.<BR>
+Just as I said to you earlier, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-b" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Norfe${sound:npc_Nophee_qu9921_sp_05.ogg}<BR>I know that you have a good will, <FONT color=#387206>{user_nick}</FONT>. <BR>However, I had to make use that good will, and for that I am sorry.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-accepting-b" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-accepting-acceptted" mid="10" select_type="3" />
+      <talk_question mid="9"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh, not at all! I'm happy to know you have such a high opinion of me… I was just surprised to see you so apparently willing</FONT><BR>
+<FONT color=#662500>to coldly abandon the people of Aergal…… But it was all a deliberate negotiation tactic. I'm glad to hear that.</FONT><BR>
+<FONT color=#7e12d2>(I should have known. I almost got Norfe completely wrong.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Princess Sylvania$<BR>………….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Geraint$<BR>………………</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Injured Refugee$<BR>……………..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-a" mid="15" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Norfe$<BR>I'm glad we were able to resolve this misunderstanding. But more importantly… we learned that Princess Sylvania<BR>
+clearly knows something about the Cup of Healing Lid. She brought it up as a trade chip on her own, after all.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-a" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-b" mid="17" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Right. Considering she said she would help look into the matter... It's a shame to have had to use the refugees, but...</FONT><BR>
+<FONT color=#662500>it's also nice to know we have another potential lead. We need to find out how to use it as soon as possible...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-b" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-1-c" mid="19" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Norfe$<BR>There's no need to be impatient. We'll find a way soon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-1-c" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-2" mid="21" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Norfe$<BR>By now, all the refugees in Aergal who came with the princess would have received supplies.<BR>This is a good time to go to the princess and find out about the lid, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3076_sylviana-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="228"><![CDATA[<html>$Princess Sylvania$<BR>………….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2067_nophee-2" image="" itemindex="" portrait_left="Npc_Left_Nophee.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2067_nophee-2-" mid="23" select_type="5" />
+      <talk_question mid="22"><![CDATA[<html>$Norfe$<BR>I will be listening in on the conversation from here through the hologram. <BR><BR><FONT color=#7e12d2>※ Find Princess Sylvania and ask her about the Cup of Healing Lid.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-a" mid="25" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Hologram Norfe$<BR>We will take care of the refugees who arrived with you, so you have no need to worry.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-a" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-b" mid="27" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Princess Sylvania$<BR>I'll skip going out of my way to thank you. It's not as if you're doing this out of the kindness of your heart.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-c" mid="29" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Hologram Norfe$<BR>Please allow me to apologize for that. We simply needed some kind of guarantee of our own safety.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-c" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-d" mid="31" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Princess Sylvania$<BR>Tsk. Well, anyway… Oh, <FONT color=#387206>{user_nick}</FONT>, were you off somewhere? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-d" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-e" mid="33" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I had somewhere to be momentarily… Were you looking for me?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-e" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-f" mid="35" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9922_sp_01.ogg}<BR>I realized that I forget to express my gratitude for earlier. Thank you.<BR>Because of you, the people of Aergal are safe. I know this isn't much, but…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-f" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-g" mid="37" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Don't mention it. My role was minor... Your determination to look after your people was critical.<BR>Besides… It isn't as if we just accepted the refugees for nothing… </FONT><FONT color=#7e12d2>(In a way, I played a part in tricking the princess.…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-g" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-h" mid="39" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Princess Sylvania$<BR>But it was thanks to you that I found my courage!<BR>
+And I remembered you mentioning the Cup of Healing Lid.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-h" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-i" mid="41" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Is that so…?<BR>Then does that mean you will help us find the Cup of Healing Lid now? We have been looking for the lid for some time...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-i" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-j" mid="43" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Princess Sylvania$<BR>Actually, I was wondering why you were seeking such a thing in the first place.<BR>They call it a relic, but in reality it's just a lump of metal with a few frills.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-j" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-k" mid="45" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well... </FONT><FONT color=#7e12d2>(Just how much should I tell her?)</FONT><FONT color=#662500> There is someone we want to try healing using the cup.<BR></FONT><FONT color=#7e12d2>(Actually, it's a dragon, but… There's also Shalica, too.)</FONT><FONT color=#662500> And to do that……</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-k" image="QS_Default.dds" itemindex="400752" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-l" mid="47" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9922_sp_02.ogg}<BR>Ahhh... Then it's for a good cause? <FONT color=#7e12d2>(She takes out something that looks like a key.)</FONT><BR>Here, this is the Cup of Healing Lid. It's what you were looking for, right?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-l" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-m" mid="49" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Huh??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-n" mid="51" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Hologram Norfe$<BR>……….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-n" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-o" mid="53" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Hey… Wait a minute! Does this mean you were playing dumb and had it the whole time?!!?!?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-o" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-p" mid="55" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9922_sp_03.ogg}<BR>I didn't know why you wanted the lid, so how could I hand it over so easily,<BR>even if it is just an old relic? Whatever my reasons, isn't the fact that you have it now all that matters?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-p" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-q" mid="57" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well… Yeah, but...!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-q" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-r" mid="59" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9922_sp_04.ogg}<BR>Anyway, you got what you wanted, right?<BR>Go ahead, take it. I feel comfortable entrusting it to you. I like you.<BR>There aren't many good people like you in this world. Just don't tell me you planned that speech in advance to win me over.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-r" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-s" mid="61" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Well, the speech was authentic, but… I guess that was Norfe's plan…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-s" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-t" mid="63" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$Princess Sylvania$<BR>What are you doing? Aren't you going to take it?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-t" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-u" mid="65" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9922_sp_01.ogg}<BR>Well, well, well… You had the Cup of Healing Lid the whole time.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-u" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-2-v" mid="67" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9922_sp_05.ogg}<BR>Oh, did I not mention that I had the lid?<BR>I said I would help you find it, so I wasn't lying or anything.<BR>Didn't you guys try to manipulate me into this in the first place? In that case, I'd say we're even.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-2-v" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-3" mid="69" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>$Hologram Norfe$<BR>… True enough. <FONT color=#387206>{user_nick}</FONT>, Geraint has already departed, so take the lid and go meet him.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-3" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-3-" mid="71" select_type="5" />
+      <talk_question mid="70"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(I never imagined getting the lid would be this easy...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-3" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3068_geraint-3-a" mid="73" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Attaches the lid to the cup.)</FONT></html>]]></talk_answer>
+      <talk_question mid="72"><![CDATA[<html>$Geraint$<BR>Is that the lid? Here's the cup. Let's put them together.<BR>Then we can see about actually using the cup.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-3-a" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3068_geraint-3-b" mid="75" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>……….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-3-b" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3068_geraint-3-c" mid="77" select_type="2" />
+      <talk_question mid="76"><![CDATA[<html>$Geraint$<BR>……….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-3-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3068_geraint-3-d" mid="79" select_type="2" />
+      <talk_question mid="78"><![CDATA[<html>$Grele$<BR>……….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-3-d" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3068_geraint-3-e" mid="81" select_type="2" />
+      <talk_question mid="80"><![CDATA[<html>$Cup of Healing$<BR><FONT color=#7e12d2>(Nothing happened.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-3-e" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3068_geraint-3-f" mid="83" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Why isn't it doing anything?? I'm sure we assembled it properly. </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-3-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3068_geraint-3-g" mid="85" select_type="2" />
+      <talk_question mid="84"><![CDATA[<html>$Grele$<BR>Don't tell me it's missing another part?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-3-g" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3068_geraint-3-h" mid="87" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Geraint, do we need something else?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-3-h" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3068_geraint-4" mid="89" select_type="2" />
+      <talk_question mid="88"><![CDATA[<html>$Geraint$<BR>Beats me. Maybe that princess is just lying. The lid might be a forgery, or...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3068_geraint-4" image="" itemindex="" portrait_left="NPC_Left_geraint_Kid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3068_geraint-4-" mid="91" select_type="5" />
+      <talk_question mid="90"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I can't imagine it's fake…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-a" mid="93" select_type="2" />
+      <talk_question mid="92"><![CDATA[<html>$Princess Sylvania$<BR>Hey, do you honestly think I would give you a forgery?<BR>The suggestion alone is insulting, you know. You think my word as a negotiator means so little?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-a" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-b" mid="95" select_type="2" />
+      <talk_question mid="94"><![CDATA[<html>$Princess Sylvania$<BR>Actually, I was wondering why you were only asking for the lid specifically...<BR>You guys had the body the whole time, huh?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-b" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-c" mid="97" select_type="2" />
+      <talk_question mid="96"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Somehow... Wait, do you know why it isn't working?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-c" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-d" mid="99" select_type="2" />
+      <talk_question mid="98"><![CDATA[<html>$Princess Sylvania$<BR>I've never seen the cup before either…<BR>
+So all I know about it is that it was kept in safekeeping in Aergal for a long time.<BR>And, considering you finally got the Cup of Healing Lid you wanted, isn't that enough? I think my work here is done.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-d" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-e" mid="101" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But you promised to get information on the Cup of Healing for us. We don't know anything about it,</FONT><BR>
+<FONT color=#662500>and we heard that information on its usage could be found in Aergal Kingdom... Please help us look into how to use the cup.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-e" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-f" mid="103" select_type="2" />
+      <talk_question mid="102"><![CDATA[<html>$Princess Sylvania$<BR>If I do... What will you give me? I already traded the lid for the refugees.<BR>Don't you agree that I deserve something in return?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-f" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-g" mid="105" select_type="2" />
+      <talk_question mid="104"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well... </FONT><FONT color=#7e12d2>(I can't exactly make any commitments on behalf of Rhadames…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-g" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-h" mid="107" select_type="2" />
+      <talk_question mid="106"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9922_sp_06.ogg}<BR>If you can't decide, how about I make the first proposal? I want to know why Aergal collapsed.<BR>If you help me investigate the cause and who did it, I'll help you too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-h" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-i" mid="109" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>That actually might work… We may find that out naturally as we continue to look into the cup anyway...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-j" mid="111" select_type="2" />
+      <talk_question mid="110"><![CDATA[<html>$Hologram Norfe$<BR>Indeed. Like <FONT color=#387206>{user_nick}</FONT> said, as we investigate the usage of the Cup of Healing Lid, we may be able to learn<BR>
+concrete details about who destroyed Aergal Kingdom. If we do, we will be sure to let you know.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-j" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-k" mid="113" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>$Princess Sylvania$<BR>Good then. I trust you won't change your tune later on?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-k" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-l" mid="115" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>$Princess Sylvania$<BR>There is something I can tell you from the outset...<BR>
+Information on the use of Cup of Healing would have been engraved on the stone tablets of the Aergal Museum.<BR>I actually remember some of them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-l" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-m" mid="117" select_type="2" />
+      <talk_question mid="116"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9922_sp_07.ogg}<BR>There was one that seemed like a warning… Something like, <FONT color=#a82424>"Do not use the cup if you are not prepared to lose everything."</FONT><BR><FONT color=#a82424>In fact, my father pointed to it and said it would be better to call it a "Cup of Curses" than of healing.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-m" image="QS_Default.dds" itemindex="400751" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-n" mid="119" select_type="2" />
+      <talk_question mid="118"><![CDATA[<html>$Princess Sylvania$<BR>There is probably a lot more written down on those tablets.<BR>
+Unfortunately, those tablets would have been buried in the rubble when Aergal caved in.<BR>And the same goes for the ancient books where the content of the stone tablets was transcribed.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-n" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-o" mid="121" select_type="2" />
+      <talk_question mid="120"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No way… Then what about people who are knowledgeable about the Cup of Healing Lid?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-o" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-p" mid="123" select_type="2" />
+      <talk_question mid="122"><![CDATA[<html>$Princess Sylvania$<BR>There probably aren't any. Why would anyone bother memorizing those tablets?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-p" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-q" mid="125" select_type="2" />
+      <talk_question mid="124"><![CDATA[<html>$Princess's Maid$<BR>Beggin' your pardon, Princess… But I don't think the ancient books would have all been destroyed. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-q" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-r" mid="127" select_type="2" />
+      <talk_question mid="126"><![CDATA[<html>$Princess Sylvania${sound:npc_Sylviana_qu9922_sp_08.ogg}<BR>What? … Oh, that's right! How could I have forgotten? It's not like there's no hope.<BR>Aergal Kingdom always stored valuable documents in its archive.<BR>Just in case.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-r" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-s" mid="129" select_type="2" />
+      <talk_question mid="128"><![CDATA[<html>$Princess Sylvania$<BR>If they were in the archive… It's quite possible they weren't destroyed!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-s" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-t" mid="131" select_type="2" />
+      <talk_question mid="130"><![CDATA[<html>$Hologram Norfe$<BR>In that case, we just need to find someone familiar with the archive.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-t" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-u" mid="133" select_type="2" />
+      <talk_question mid="132"><![CDATA[<html>$Princess Sylvania$<BR>Sure, anyone who worked at the archive would know what happened to the documents.<BR>Maybe they brought some with them. After all, the scholars who worked at the archive... were pretty crazy about books.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-u" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-v" mid="135" select_type="2" />
+      <talk_question mid="134"><![CDATA[<html>$Hologram Norfe$<BR>We will have to look into the refugees in Rhadames, then.<BR>Just in case, Geraint, please check the Nest in Foggy Black Lake.<BR>
+There might be some records left behind there by Rubinart.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-v" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-w" mid="137" select_type="2" />
+      <talk_question mid="136"><![CDATA[<html>$Hologram Norfe$<BR>Grele, please check to see if there were any refugees left behind in Vulcan Swamp,<BR>and if any of them know about the ancient books or the archive.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-w" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Hologram.dds" center_image="">
+      <talk_answer link_index="n3056_sylviana-4-x" mid="139" select_type="2" />
+      <talk_question mid="138"><![CDATA[<html>$Hologram Norfe$<BR>And <FONT color=#387206>{user_nick}</FONT> and the princess should ask around among the refugees in Rhadames.<BR>Someone may have a lead, obviously.<BR>You probably won't find it difficult to ask around since you've already become acquainted with some refugees.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-4-x" image="" itemindex="" portrait_left="Npc_Left_child_grele.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-5" mid="141" select_type="2" />
+      <talk_question mid="140"><![CDATA[<html>$Grele$<BR>Sure, will do.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-5" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-5-a" mid="143" select_type="2" />
+      <talk_question mid="142"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Princess, do you know anyone who worked in the archive? Maybe some of their characteristics to look for...?<BR>It would be great if we could narrow the search down with so many refugees here.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-5-a" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-5-b" mid="145" select_type="2" />
+      <talk_question mid="144"><![CDATA[<html>$Princess Sylvania$<BR>Characteristics? Well... There were a lot of people who worked in the archive, so it would be hard to identify any particular characteristics.<BR>
+Still, many of the scholars there were crazy about books. So much so that they <BR>
+might even put themselves at risk to protect those old tomes.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-5-b" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-5-c" mid="147" select_type="2" />
+      <talk_question mid="146"><![CDATA[<html>$Princess Sylvania$<BR>Their obsession with books... It's actually kind of frightening. <FONT color=#7e12d2>(Sighs briefly and shakes head.)</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-5-c" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-5-d" mid="149" select_type="2" />
+      <talk_question mid="148"><![CDATA[<html>$Princess Sylvania$<BR>Besides, they tend to spend most of their time transcribing books. That's the main purpose of the archive, after all.<BR>Maybe that's why some people think of them as librarians.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-5-d" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-5-e" mid="151" select_type="2" />
+      <talk_question mid="150"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>They sacrifice themselves for their books? And transcribe texts... Could it be?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-5-e" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-5-f" mid="153" select_type="2" />
+      <talk_question mid="152"><![CDATA[<html>$Princess Sylvania$<BR>Oh? Do you have someone in mind?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-5-f" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-5-g" mid="155" select_type="2" />
+      <talk_question mid="154"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Indeed! I'm not certain, but there was one refugee who hurt his back trying to protect some books!<BR>He even said he worked as a transcriber of texts…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-5-g" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-6" mid="157" select_type="2" />
+      <talk_question mid="156"><![CDATA[<html>$Princess Sylvania$<BR>He sacrificed himself for his books?<BR>Then he might be an employee of the archive! We have nothing to lose, so let's just go!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3056_sylviana-6" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3056_sylviana-6-" mid="159" select_type="5" />
+      <talk_question mid="158"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay!!</FONT><BR>
+<FONT color=#662500><BR></FONT><FONT color=#7e12d2>※ Talk to the refugee of Aergal in Rhadames.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-a" mid="161" select_type="2" />
+      <talk_question mid="160"><![CDATA[<html>$Injured Refugee${sound:npc_Refugee4_qu9922_sp_01.ogg}<BR>Oh, it's my benefactor from before. Thanks to the medicine you gave me earlier, my back feels a little better.<BR>But…. What brings you here? And isn't that… the princess!?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_sylviana.dds" center_image="">
+      <talk_answer link_index="n3054_refugee-6-b" mid="163" select_type="2" />
+      <talk_question mid="162"><![CDATA[<html>$Princess Sylvania$<BR>Huh? Oh, who's this? Well, if it isn't Tom! You're safe!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-b" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-c" mid="165" select_type="2" />
+      <talk_question mid="164"><![CDATA[<html>$Injured Refugee$<BR>Fortunately, I was able to get out before it collapsed. The most important thing is you're safe, Princess.<BR>I was so worried when I saw your handmaid going to Aergal the other day. But, what brings you two here together...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_sylviana.dds" center_image="">
+      <talk_answer link_index="n3054_refugee-6-d" mid="167" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>$Princess Sylvania$<BR>We're here looking for an archivist... It seems our search is over!<BR>
+Tom here held quite a lofty position in the archive, <FONT color=#387206>{user_nick}</FONT>. He may know something!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-d" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-e" mid="169" select_type="2" />
+      <talk_question mid="168"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Really? </FONT><FONT color=#7e12d2>(But I already basically asked him about this when I was applying the medicine…)<BR></FONT><FONT color=#662500>Do you happen to have a copy of one of the ancient books on the Cup of Healing in your collection? I heard they were kept at the archive…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-e" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-f" mid="171" select_type="2" />
+      <talk_question mid="170"><![CDATA[<html>$Injured Refugee$<BR>A copy of such a book... I'm sure it must be among the luggage I packed before the fall of Aergal<BR>and the collapse of the archive and palace.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-f" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-g" mid="173" select_type="2" />
+      <talk_question mid="172"><![CDATA[<html>$Injured Refugee$<BR>Give me a moment. <FONT color=#7e12d2>(Searches luggage.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-g" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-h" mid="175" select_type="2" />
+      <talk_question mid="174"><![CDATA[<html>$Injured Refugee${sound:npc_Refugee4_qu9922_sp_02.ogg}<BR>Uh… Huh? Where did it go?<BR>… AHHHHH!!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-h" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-i" mid="177" select_type="2" />
+      <talk_question mid="176"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What's wrong!?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-i" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-j" mid="179" select_type="2" />
+      <talk_question mid="178"><![CDATA[<html>$Injured Refugee$<BR>The box with the ancient book transcriptions…… The box….!!<BR>No! Was that the box that I dropped while passing through the Red Waste!?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-j" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-k" mid="181" select_type="2" />
+      <talk_question mid="180"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What??! You dropped it???</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-k" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_sylviana.dds" center_image="">
+      <talk_answer link_index="n3054_refugee-6-l" mid="183" select_type="2" />
+      <talk_question mid="182"><![CDATA[<html>$Princess Sylvania$<BR>What do you mean, you dropped it while passing through the Waste? Did you lose the book?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-l" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-6-m" mid="185" select_type="2" />
+      <talk_question mid="184"><![CDATA[<html>$Injured Refugee$<BR>It seems so... AHHHH!! I thought it was just a box of daily necessities and let it go!! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-6-m" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-7" mid="187" select_type="2" />
+      <talk_question mid="186"><![CDATA[<html>$Injured Refugee${sound:npc_Refugee4_qu9922_sp_03.ogg}<BR>Please find that box! You have no idea how precious those books are…<BR>If those ignorant brigands find the box they'll likely just use the books as fire-starter. We must stop them!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3054_refugee-7" image="" itemindex="" portrait_left="Npc_Left_Scholar_Baily.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3054_refugee-7-" mid="189" select_type="5" />
+      <talk_question mid="188"><![CDATA[<html>$Injured Refugee$<BR>My benefactor! Can you go to the Red Waste and find those ancient books?!<BR>They're in a very small, red box.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3076_sylviana-7" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3076_sylviana-7-a" mid="191" select_type="2" />
+      <talk_question mid="190"><![CDATA[<html>$Princess Sylvania$<BR>So we found the archivist quickly, only to find out the ancient books might have been lost for good…?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3076_sylviana-7-a" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3076_sylviana-7-b" mid="193" select_type="2" />
+      <talk_question mid="192"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Now what do we do?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3076_sylviana-7-b" image="QW_116.dds" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3076_sylviana-7-c" mid="195" select_type="2" />
+      <talk_question mid="194"><![CDATA[<html>$Princess Sylvania$<BR>What else? We must go look for the book! The <FONT color=#a82424>Red Waste</FONT> is that<BR>
+desert over there, right? Is it dangerous?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3076_sylviana-7-c" image="" itemindex="" portrait_left="Npc_Left_sylviana.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3076_sylviana-7-d" mid="197" select_type="2" />
+      <talk_question mid="196"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It's not that. It's those stupid brigands there...</FONT><BR>
+<FONT color=#662500>I just hope they don't do something dumb with the books….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3076_sylviana-7-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3076_sylviana-7-e" mid="199" select_type="2" />
+      <talk_question mid="198"><![CDATA[<html>$Grele$<BR>What is this? A clue, perhaps?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3076_sylviana-7-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3076_sylviana-7-f" mid="201" select_type="2" />
+      <talk_question mid="200"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Huh? Grele?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3076_sylviana-7-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_child_grele.dds" center_image="">
+      <talk_answer link_index="n3076_sylviana-7-!next" mid="203" select_type="4" />
+      <talk_question mid="202"><![CDATA[<html>$Quest Complete$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9922</exe>
+         <exe type="talk" npc="n2067_nophee">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="addquestitem" num="1">400752</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="delquestitem" num="1">400752</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">9922</exe>
+         <exe type="recompense">99220,,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2067_nophee" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n2067_nophee" sub="b" />
+   <exelink qstep="1" npc="n2067_nophee" sub="c" />
+   <exelink qstep="1" npc="n2067_nophee" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n3056_sylviana" sub="b" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="c" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="d" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="e" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="f" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="g" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="h" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="i" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="j" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="k" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="l" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="m" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="n" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="o" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="p" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="q" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="r" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="s" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="t" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="u" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="v" />
+   <exelink qstep="2" npc="n3056_sylviana" sub="3">0,1,2</exelink>
+   <exelink qstep="3" npc="n3068_geraint" sub="b" />
+   <exelink qstep="3" npc="n3068_geraint" sub="c" />
+   <exelink qstep="3" npc="n3068_geraint" sub="d" />
+   <exelink qstep="3" npc="n3068_geraint" sub="e" />
+   <exelink qstep="3" npc="n3068_geraint" sub="f" />
+   <exelink qstep="3" npc="n3068_geraint" sub="g" />
+   <exelink qstep="3" npc="n3068_geraint" sub="h" />
+   <exelink qstep="3" npc="n3068_geraint" sub="4">0,1,2</exelink>
+   <exelink qstep="4" npc="n3056_sylviana" sub="b" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="c" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="d" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="e" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="f" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="g" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="h" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="i" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="j" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="k" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="l" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="m" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="n" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="o" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="p" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="q" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="r" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="s" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="t" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="u" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="v" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="w" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="x" />
+   <exelink qstep="4" npc="n3056_sylviana" sub="5">0</exelink>
+   <exelink qstep="5" npc="n3056_sylviana" sub="b" />
+   <exelink qstep="5" npc="n3056_sylviana" sub="c" />
+   <exelink qstep="5" npc="n3056_sylviana" sub="d" />
+   <exelink qstep="5" npc="n3056_sylviana" sub="e" />
+   <exelink qstep="5" npc="n3056_sylviana" sub="f" />
+   <exelink qstep="5" npc="n3056_sylviana" sub="g" />
+   <exelink qstep="5" npc="n3056_sylviana" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n3054_refugee" sub="b" />
+   <exelink qstep="6" npc="n3054_refugee" sub="c" />
+   <exelink qstep="6" npc="n3054_refugee" sub="d" />
+   <exelink qstep="6" npc="n3054_refugee" sub="e" />
+   <exelink qstep="6" npc="n3054_refugee" sub="f" />
+   <exelink qstep="6" npc="n3054_refugee" sub="g" />
+   <exelink qstep="6" npc="n3054_refugee" sub="h" />
+   <exelink qstep="6" npc="n3054_refugee" sub="i" />
+   <exelink qstep="6" npc="n3054_refugee" sub="j" />
+   <exelink qstep="6" npc="n3054_refugee" sub="k" />
+   <exelink qstep="6" npc="n3054_refugee" sub="l" />
+   <exelink qstep="6" npc="n3054_refugee" sub="m" />
+   <exelink qstep="6" npc="n3054_refugee" sub="7">0,1</exelink>
+   <exelink qstep="7" npc="n3076_sylviana" sub="b" />
+   <exelink qstep="7" npc="n3076_sylviana" sub="c" />
+   <exelink qstep="7" npc="n3076_sylviana" sub="d" />
+   <exelink qstep="7" npc="n3076_sylviana" sub="e" />
+   <exelink qstep="7" npc="n3076_sylviana" sub="f">1</exelink>
+   <exelink qstep="7" npc="n3076_sylviana" sub="!next">0</exelink>
+   <journal_data recompense="99220" quest_title="고서를 찾아서" chapterid="27" quest_level="95" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Nophee.dds</contents_image>
+         <destination_pos>175,n2067</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2067</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="204"><![CDATA[A Resolved Misunderstanding]]></title>
+         <contents mid="205"><![CDATA[<html>Luckily, negotiations between Princess Sylvania and Norfe ended well. But why did Norfe say what he said to Princess Sylvania? Go to Norfe and ask him about it.<BR><BR><FONT color=#086171>Rhadames</FONT> -<FONT color=#a82424> Norfe</FONT></html>]]></contents>
+         <destination mid="206"><![CDATA[Talk to Norfe in Rhadames]]></destination>
+         <todo_msg mid="207"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_sylviana.dds</contents_image>
+         <destination_pos>175,n3056</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3056</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="208"><![CDATA[Cup of Healing Lid]]></title>
+         <contents mid="209"><![CDATA[<html>You resolved the misunderstanding with Norfe. Now go to Princess Sylvania and find out more information about the Cup of Healing Lid.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Princess Sylvania</FONT></html>]]></contents>
+         <destination mid="210"><![CDATA[Learn about the Cup of Healing from Princess Sylvania]]></destination>
+         <todo_msg mid="211"><![CDATA[Ask Princess Sylvania about the Cup of Healing.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image />
+         <destination_pos>175,n3068</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3068</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="212"><![CDATA[Cup of Healing]]></title>
+         <contents mid="213"><![CDATA[<html>The princess had the Cup of Healing Lid the whole time! You got the lid from the princess. Speak with Geraint. The time has come to attach the lid to the Cup of Healing!<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Geraint</FONT></html>]]></contents>
+         <destination mid="214"><![CDATA[Assemble the Cup of Healing]]></destination>
+         <todo_msg mid="215"><![CDATA[Get the Cup of Healing from Geraint.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_sylviana.dds</contents_image>
+         <destination_pos>175,n3056</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3056</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="216"><![CDATA[Unresponsive Cup of Healing]]></title>
+         <contents mid="217"><![CDATA[<html>Even after attaching the lid to the Cup of Healing, nothing happened. Is it missing yet another part? Ask Princess Sylvania if she knows how to use the Cup of Healing Lid.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Princess Sylvania</FONT></html>]]></contents>
+         <destination mid="218"><![CDATA[Talk to Princess Sylvania]]></destination>
+         <todo_msg mid="219"><![CDATA[Ask Princess Sylvania about the Cup of Healing.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image />
+         <destination_pos>175,n3054</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3054</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="220"><![CDATA[Finding the Ancient Book Ⅰ]]></title>
+         <contents mid="221"><![CDATA[<html>According to Princess Sylvania, the archive of Aergal Kingdom was home to various transcripts of ancient books. Maybe a copy of the Ancient Book was in the archives, too! You recently met a refugee who matched the characteristics of an employees at the archives. Go ask the Injured Refugee about the archive and the Ancient Book!<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Injured Refugee</FONT></html>]]></contents>
+         <destination mid="222"><![CDATA[Talk to Injured Refugee]]></destination>
+         <todo_msg mid="223"><![CDATA[Find the archive employee.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_sylviana.dds</contents_image>
+         <destination_pos>175,n3076</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3076</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="224"><![CDATA[Finding the Ancient Book Ⅱ]]></title>
+         <contents mid="225"><![CDATA[<html>You found out the location of the Ancient Book transcript, and it turns out it was dropped in the Red Waste, of all places. Speak with Princess Sylvania about what to do next.<BR><BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Princess Sylvania</FONT></html>]]></contents>
+         <destination mid="226"><![CDATA[Talk to Princess Sylvania]]></destination>
+         <todo_msg mid="227"><![CDATA[Discuss the situation with Princess Sylvania.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest>9921</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

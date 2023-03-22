@@ -1,0 +1,42 @@
+   <talk>
+      <npcename>n1235_wanderer_elf_riana</npcename>
+      <npcid>1235</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Wandering Elf Lianna]]></npckname>
+      <talk_paragraph index="001" image="QN_Npc_Elf_riana.dds" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Wandering Elf Lianna$<BR>I hope you can leave... It's really messy here as you can see.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest1" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="24" link_target="mq34_9394_efforts_for_legend.xml"><![CDATA[<html>[Lv70] <FONT color=#a82424>Efforts for Legend</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="sq34_4423_poisoning_1.xml"><![CDATA[<html>[Lv70] <FONT color=#086171>Poisoning 1</FONT></html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Wandering Elf Lianna$<BR>
+You seem to have much things to say to me.<BR>
+Tell me in 3 seconds, if not I'll shoot you.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest2" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="26" link_target="mq34_9395_end_of_legend.xml"><![CDATA[<html>[Lv70] <FONT color=#a94407>Memories of the Fateful Day</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="27" link_target="sq34_4423_poisoning_1.xml"><![CDATA[<html>[Lv70] <FONT color=#086171>Poisoning 1</FONT></html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Wandering Elf Lianna$<BR>
+You seem to have much things to say to me.<BR>
+Tell me in 3 seconds, if not I'll shoot you.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0 and 1</exe>
+         <exe type="talk">quest1</exe>
+         <exe type="conexe" true="3" false="4">0 and 2</exe>
+         <exe type="talk">quest2</exe>
+         <exe type="conexe" true="5" false="6">0</exe>
+         <exe type="enterquest">sq34_4423_poisoning_1</exe>
+         <exe type="conexe" true="7" false="8">1</exe>
+         <exe type="enterquest">mq34_9394_efforts_for_legend</exe>
+         <exe type="conexe" true="9" false="10">2</exe>
+         <exe type="enterquest">mq34_9395_end_of_legend</exe>
+         <exe type="talk">001</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">4423</chk>
+         <chk type="hasquest">9394</chk>
+         <chk type="hasquest">9395</chk>
+      </conditions>
+   </talk>

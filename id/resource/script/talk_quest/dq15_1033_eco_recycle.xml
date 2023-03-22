@@ -1,0 +1,141 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dq15_1033_eco_recycle</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1033</qid>
+      <designer>김인정</designer>
+      <qlevel>46</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <qkname mid="1"><![CDATA[Eco Recycle]]></qkname>
+      <qnpc>
+         <npcid>713</npcid>
+         <npcename>n713_soceress_tamara</npcename>
+         <npckname>상급 소서리스 타마라</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting" image="" itemindex="">
+      <talk_answer link_index="n713_soceress_tamara-accepting-a" mid="6"><![CDATA[<html>(Kamu tidak perlu... memasak...)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Master Sorceress Tamara$<BR>Aku baru saja menemukan kantung sampah untuk membuang sisa makanan setiap hari.<BR>Aku memasak dengan tetap memikirkan alam sekitar. Haha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting-a" image="" itemindex="">
+      <talk_answer link_index="n713_soceress_tamara-accepting-b" mid="15"><![CDATA[<html>Baiklah.</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Master Sorceress Tamara$<BR>Kantung sampah ini menggunakan atribut mushroom spore untuk membuang sampah dengan sempurna.<BR>Terdengar sangat alami?<BR>Jadi, Aku minta kamu untuk mengambil bahannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-accepting-b" image="" itemindex="">
+      <talk_answer link_index="n713_soceress_tamara-accepting-acceptted" mid="17"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Eco Recycle$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-1" image="QW_51.dds" itemindex="">
+      <talk_question mid="86"><![CDATA[<html>$Master Sorceress Tamara${action:Talk}<BR>Pergi ke <FONT color=#a82425>Riverwort Ruins</FONT> untuk mendapat mushroom spore eco-friendly.<BR>Jika kamu tidak menghancurkan Mushroom, kamu tidak dapat memperoleh mushroom spore.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-2" image="QS_Default.dds" itemindex="300481">
+      <talk_answer link_index="n713_soceress_tamara-2-a" mid="89"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Master Sorceress Tamara${action:Talk}<BR>Kamu membawanya <FONT color=#387207> {user_nick}</FONT>.<BR>
+Kamu orang yang rajin.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-2-a" image="" itemindex="">
+      <talk_answer link_index="n713_soceress_tamara-2-b" mid="93"><![CDATA[<html><FONT color=#086172>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n713_soceress_tamara-2-b" image="" itemindex="">
+      <talk_question mid="94"><![CDATA[<html>$Master Sorceress Tamara$<BR>Aku bosan melihat hewan yang lemah itu memakan makananku.<BR>Jika aku membuang makanan dengan benar, tidak ada yang perlu aku khawatirkan. Benar??<BR>Haha~  Ok aku akan memulai memasak lagi~<BR><FONT color=#7e12d3>(Tamara membuka resepnya dengan bernyanyi)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">1033</exe>
+         <exe type="talk" npc="n713_soceress_tamara">1</exe>
+         <exe type="recompense_view">10330,,,,,,</exe>
+         <exe type="huntmon" num="5" party="1" exe="5,6,7" onexe="">1381</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="8">201381</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="custom">api_quest_IncCounting(userObjID, 2, 1381);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">10330,,,,,,</exe>
+         <exe type="complete">1033</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n713_soceress_tamara" sub="b">2</exelink>
+   <exelink qstep="accepting" npc="n713_soceress_tamara" sub="acceptted">0,3,4,1</exelink>
+   <exelink qstep="2" npc="n713_soceress_tamara" sub="a">0</exelink>
+   <exelink qstep="2" npc="n713_soceress_tamara" sub="b">1</exelink>
+   <journal_data recompense="10330" quest_title="친환경 분리수거" chapterid="" quest_level="46" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_51.dds</contents_image>
+         <destination_pos>511,0,0</destination_pos>
+         <destination_mode>custom:511@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="60"><![CDATA[Eco-friendly Mushroom Spore]]></title>
+         <contents mid="61"><![CDATA[<html>Pergi ke Riverwort Ruins untuk menghancurkan mushroom dan mengambil eco-friendly mushroom spores.<BR>
+<BR><FONT color=#086171>Riverwort Wharf (Riverwort Ruins)</FONT> <FONT color=#a82425>→ Riverwort Ruins</FONT></html>]]></contents>
+         <destination mid="62"><![CDATA[Riverwort Ruins]]></destination>
+         <todo_msg mid="63"><![CDATA[Dapatkan eco-friendly mushroom spore di Riverwort Ruins.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_SoceressTamara.dds</contents_image>
+         <destination_pos>15,n713</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>713</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Melapor ke Master Sorceress Tamara]]></title>
+         <contents mid="65"><![CDATA[<html>Lapor ke Master Sorceress Tamara di Lotus Marsh.<BR><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82425>→ Master Sorceress Tamara</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Berbicara dengan Master Sorceress Tamara]]></destination>
+         <todo_msg mid="67"><![CDATA[Pergi ke Master Sorceress Tamara dan laporkan.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>46:49</user_level>
+      <user_worldzone_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <have_symbol_item />
+      <quest_date />
+      <quest_day />
+      <npc_favor />
+      <npc_malice />
+   </condition_data>
+</quest>

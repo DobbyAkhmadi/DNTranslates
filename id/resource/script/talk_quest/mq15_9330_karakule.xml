@@ -1,0 +1,215 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq15_9330_karakule</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>6</qchapter>
+      <qid>9330</qid>
+      <designer>정진호</designer>
+      <qlevel>40</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9331</nextqid>
+      <nextqname>mq15_9331_old_fellowship</nextqname>
+      <nextqnpc>n754_cian</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Karacule of Lotus Marsh]]></qkname>
+      <qnpc>
+         <npcid>1147</npcid>
+         <npcename>n1147_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>147</npcid>
+         <npcename>n147_mailbox</npcename>
+         <npckname>우편함</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>754</npcid>
+         <npcename>n754_cian</npcename>
+         <npckname>워리어 시안</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n147_mailbox-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n147_mailbox-accepting-acceptted" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Mailbox$<BR><FONT color=#7e12d2>(Kamu menerima mail)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n147_mailbox-1" image="QN_Npc_Cian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n147_mailbox-1-a" mid="9" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Mailbox$<BR><FONT color=#7e12d2>(Didalamnya terdapat surat dari Xian)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n147_mailbox-1-a" image="QN_Npc_Cian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n147_mailbox-1-b" mid="11" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Xian's Letter$<BR>Dear <FONT color=#387206>{user_nick}</FONT>.<BR>Maaf karena telah meninggalkan Saint's Haven tanpa pamit.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n147_mailbox-1-b" image="QN_Npc_Cian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n147_mailbox-1-letter_0" mid="13" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>$Xian's Letter$<BR>Kudengar dari Triana bahwa kamu juga akan mengunjungi Lotus Marsh.<BR>Jika begitu, surat ini mungkin dapat membantumu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1147_lunaria-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1147_lunaria-1-" mid="53" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Lunaria$<BR>Okay, Pergilah keLotus Marsh.<BR>Aku berada dibelakangmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-1-cian_0" mid="59" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Warrior Xian$<BR>Ah, <FONT color=#387206>{user_nick}</FONT>!<BR>
+Kudengar kamu akan datang.<BR>
+Tapi tidak kukira secepat ini! Mungkin kita berjodoh ya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n147_mailbox-2" image="QN_Npc_Cian.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n147_mailbox-2-" mid="55" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$Xian's Letter$<BR>Pergilah ke Riverwort Wharf jika kamu ingin bantuan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-a" mid="20" select_type="0"><![CDATA[<html>Tidak juga.</html>]]></talk_answer>
+      <talk_answer link_index="n754_cian-2-a" mid="21" select_type="0"><![CDATA[<html>Syukurlah kamu baik-baik saja.</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Warrior Xian$<BR>Pikiranku terlalu diliputi oleh banyak masalah di Saint's Haven... dan aku tidak dapat berpamitan selayaknya.<BR>
+Kamu telah banyak membantuku... Kamu mungkin berpikir aku jahat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-b" mid="23" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Warrior Xian$<BR>Aku banyak memiliki kekurangan namun... Aku tidak boleh selalu bersedih.<BR>Aku akan mencoba melakukan apapun yang aku mampu untuk menebus hutangku pada Gerraint.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-c" mid="25" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Sudahkah kamu bertemu dengan Karacule?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-d" mid="27" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Warrior Xian$<BR>Yah, Argenta juga berada disana.<BR>Didalam Karacule's hut.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-e" mid="29" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Warrior Xian$<BR>Tapi Argenta sangat dingin.<BR>Yah... sudah kukira.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-f" mid="31" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kemudian apa yang akan kamu lakukan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-g" mid="33" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Warrior Xian$<BR>Dengan kematian Gerraint, semua segel pada seluruh dragon akan hilang. Aku harus menghentikannya.<BR>Dan... Aku serta para adventurers lain harus mengobati luka akibat keracunan darah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-h" mid="35" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Warrior Xian$<BR>Banyak sekali yang mesti kulakukan. Kuharap aku mampu menyelamatkan Rose sesuai janjiku pada Lily. Aku juga bertekad menjadi warrior yang melampaui Barnac.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-i" mid="37" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Warrior Xian$<BR>Aku tidak memiliki waktu untuk bersedih.<BR><FONT color=#387206>{user_nick}</FONT>, Aku telah banyak menerima budi darimu. Tolong beritahu aku jika ada yang kamu perlukan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-j" mid="39" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dimanakah Karacule?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-k" mid="58" select_type="4" />
+      <talk_question mid="57"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n754_cian-2-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n754_cian-2-!next" mid="41" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Warrior Xian$<BR>Jika kamu berjalan ke arah sana, kamu akan menemukan hut.<BR>Apakah kamu lihat jalan kecil disebelah sana?</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9330</exe>
+         <exe type="talk" npc="n147_mailbox">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="talk" npc="n754_cian">2</exe>
+         <exe type="talk" npc="n147_mailbox">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">93300,,,,,,,,,</exe>
+         <exe type="complete" true="">9330</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n147_mailbox" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n147_mailbox" sub="b" />
+   <exelink qstep="1" npc="n147_mailbox" sub="letter_0">0,1,3</exelink>
+   <exelink qstep="1" npc="n754_cian" sub="cian_0">0,1,2</exelink>
+   <exelink qstep="2" npc="n754_cian" sub="b" />
+   <exelink qstep="2" npc="n754_cian" sub="c" />
+   <exelink qstep="2" npc="n754_cian" sub="d" />
+   <exelink qstep="2" npc="n754_cian" sub="e" />
+   <exelink qstep="2" npc="n754_cian" sub="f" />
+   <exelink qstep="2" npc="n754_cian" sub="g" />
+   <exelink qstep="2" npc="n754_cian" sub="h" />
+   <exelink qstep="2" npc="n754_cian" sub="i" />
+   <exelink qstep="2" npc="n754_cian" sub="j">0</exelink>
+   <exelink qstep="2" npc="n754_cian" sub="k">1</exelink>
+   <exelink qstep="2" npc="n754_cian" sub="!next" />
+   <journal_data recompense="93300" quest_title="로터스마쉬의 카라큘" chapterid="6" quest_level="40" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_LotusMarshTown.dds</contents_image>
+         <destination_pos>15,n147</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>147</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="45"><![CDATA[Karacule of Lotus Marsh I]]></title>
+         <contents mid="46"><![CDATA[<html>Kamu telah memutuskan untuk pergi ke Lotus Marsh. Pikirkan tindakan selanjutnya.<BR>
+ <BR>
+<FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>- Mailbox</FONT></html>]]></contents>
+         <destination mid="47"><![CDATA[Pergilah ke Lotus Marsh]]></destination>
+         <todo_msg mid="48"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Cian.dds</contents_image>
+         <destination_pos>14,n754</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>754</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="49"><![CDATA[Karacule of Lotus Marsh II]]></title>
+         <contents mid="50"><![CDATA[<html><FONT color=#2b2723>Kamu sudah sampai di Lotus Marsh. Kamu telah membaca surat Xian, jadi pergilah menuju Riverwort Wharf dan temuiWarrior Xian.</FONT><BR>
+<FONT color=#2b2723></FONT> <BR>
+<FONT color=#a82424></FONT><FONT color=#086171>Riverwort Wharf</FONT><FONT color=#a82424> - Warrior Xian</FONT><BR>
+<FONT color=#a82424></FONT></html>]]></contents>
+         <destination mid="51"><![CDATA[Bicara dengan Warrior Xian]]></destination>
+         <todo_msg mid="52"><![CDATA[Temui Warrior Xian di Riverwort Wharf.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>7</user_class>
+      <prev_quest>9329</prev_quest>
+      <have_quest>9729</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,38 @@
+   <talk>
+      <npcename>n909_warp_stone</npcename>
+      <npcid>909</npcid>
+      <startexe>0</startexe>
+      <comment>실행문 2는 리버워트 선착장에서 컷신 진행을 위한 트리거</comment>
+      <npckname mid="1"><![CDATA[Warp Guide in front of the fountain]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Warp Guide in front of the fountain$<BR>Open the map [<FONT color=#a82424>M</FONT>] and select [In front of the fountain] to be transported to the Warp Guide in front of the fountain.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="q702" image="" itemindex="">
+         <talk_question mid="10"><![CDATA[<html>$Warp Guide in front of the fountain$<BR>You can travel faster with the help of the Warp Guides.<BR><BR><FONT color=#7e12d2>*You need to clear the main quest [Witch of the Swamp] to use warp.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="q9503" image="" itemindex="">
+         <talk_question mid="11"><![CDATA[<html>$Warp Guide in front of the fountain$<BR>You can travel faster with the help of the Warp Guides.<BR>
+ <BR>
+<FONT color=#7e12d2>*You need to clear the main quest [Meet Karacule] to use warp.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="q9616" image="" itemindex="">
+         <talk_question mid="12"><![CDATA[<html>$Warp Guide in front of the fountain$<BR>You can travel faster with the help of the Warp Guides.<BR>
+ <BR>
+<FONT color=#7e12d2>*You need to clear the main quest [Witch Karacule] to use warp.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenWarpListDlg(userObjID);</exe>
+         <exe type="conexe" true="5" false="3">0</exe>
+         <exe type="conexe" true="6" false="4">1</exe>
+         <exe type="conexe" true="7" false="0">2</exe>
+         <exe type="talk">q702</exe>
+         <exe type="talk">q9503</exe>
+         <exe type="talk">q9616</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">702</chk>
+         <chk type="hasquest">9503</chk>
+         <chk type="hasquest">9616</chk>
+      </conditions>
+   </talk>

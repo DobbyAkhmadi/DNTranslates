@@ -1,0 +1,38 @@
+   <talk>
+      <npcename>n1050_academic</npcename>
+      <npcid>1050</npcid>
+      <startexe>10</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Academic Comelina]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Academic Comelina$<BR>
+Jasmine… I never thought I could see you here....</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Academic Comelina$<BR><FONT color=#7e12d2>(She seems delighted)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="2" false="1">0</exe>
+         <exe type="conexe" true="3" false="5">1</exe>
+         <exe type="enterquest">mq15_9256_decision_for_future</exe>
+         <exe type="enterquest">mq15_9258_restart</exe>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="8" false="6">2</exe>
+         <exe type="conexe" true="9" false="4">3</exe>
+         <exe type="conexe" true="10" false="4">4</exe>
+         <exe type="enterquest">mq15_9386_shadow_for_you</exe>
+         <exe type="enterquest">mq15_9387_choice_of_history</exe>
+         <exe type="conexe" true="11" false="0">4</exe>
+         <exe type="conexe" true="12" false="13">5</exe>
+         <exe type="enterquest">mqc10_9554_future_in_the_hand</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9256</chk>
+         <chk type="hasquest">9258</chk>
+         <chk type="hasquest">9386</chk>
+         <chk type="hasquest">9387</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="hasquest">9554</chk>
+      </conditions>
+   </talk>

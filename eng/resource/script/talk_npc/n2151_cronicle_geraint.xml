@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n2151_cronicle_geraint</npcename>
+      <npcid>2151</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Geraint (Returned Hero Main)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="18"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Geraint$<BR>
+<FONT color=#7e12d2>(A familiar blond-haired man is staring at you.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="19" link_target="sq_cronicle_2921_return_hero_01.xml"><![CDATA[<html>(Listen)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="20" link_target="sq_cronicle_2922_return_hero_02.xml"><![CDATA[<html>(Listen)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="23" link_target="sq_cronicle_2912_return_hero_1.xml"><![CDATA[<html>(Listen)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="24" link_target="sq_cronicle_2913_return_hero_2.xml"><![CDATA[<html>(Listen)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="sq_cronicle_2914_return_hero_3.xml"><![CDATA[<html>(Listen)</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="21"><![CDATA[<html>(Give up)</html>]]></talk_answer>
+         <talk_question mid="15"><![CDATA[<html>$Geraint${sound:npc_Gereint_2051_sp_01.ogg}<BR>What story do you want to hear?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="0" false="2">0</exe>
+         <exe type="conexe" true="4" false="0">1</exe>
+         <exe type="enterquest">sq_cronicle_2921_return_hero_01</exe>
+         <exe type="enterquest">sq_cronicle_2922_return_hero_02</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">2922</chk>
+         <chk type="hascomq">2921</chk>
+      </conditions>
+   </talk>

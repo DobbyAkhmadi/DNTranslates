@@ -1,0 +1,595 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq34_9281_queens_seat</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>12</qchapter>
+      <qid>9281</qid>
+      <designer>강지영</designer>
+      <qlevel>69</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Queen's Throne]]></qkname>
+      <qnpc>
+         <npcid>1061</npcid>
+         <npcename>n1061_yuvenciel</npcename>
+         <npckname>아처 유벤시엘</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1067</npcid>
+         <npcename>n1067_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1079</npcid>
+         <npcename>n1079_yuvenciel</npcename>
+         <npckname>아처 유벤시엘</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1080</npcid>
+         <npcename>n1080_elf_queen</npcename>
+         <npckname>여왕 나르실리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1081</npcid>
+         <npcename>n1081_elf_queen</npcename>
+         <npckname>여왕 아마릴리스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1082</npcid>
+         <npcename>n1082_cian</npcename>
+         <npckname>워리어 시안</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-accepting-party_check" mid="6" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Elf Elder$<BR>Yuvenciel sejak awal pasti sudah merencanakan untuk masuk kedalam Tree.<BR>Hentikan dia....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="129"><![CDATA[<html>$Elf Elder$<BR>Yuvenciel sejak awal pasti sudah merencanakan untuk masuk kedalam Tree.<BR>Hentikan dia....<BR><FONT color=#7e12d2>(Kamu tidak bisa mengambil Quest ini dalam party)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-" mid="8" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Elf Elder$<BR><FONT color=#a82424>Yuvenciel</FONT> sudah masuk kedalam tree.<BR>Queen berada dalam bahaya. Cepat!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-1-" mid="10" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Warrior Xian$<BR>Kamu harus menghentikannya!!<BR><FONT color=#7e12d2>(Bicara pada Yuvenciel)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-a" mid="12" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Archer Yuvenciel$<BR>.......<BR><FONT color=#7e12d2>(Yuvenciel perlahan melihat ke {user_nick})</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-b" mid="172" select_type="0"><![CDATA[<html>Pergilah!</html>]]></talk_answer>
+      <talk_answer link_index="n1061_yuvenciel-1-b" mid="173" select_type="0"><![CDATA[<html>Apa yang kamu lakukan?</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yuvenciel!</FONT><BR>
+<FONT color=#662500>Kamu seharusnya tidak disini.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-c" mid="16" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_01.ogg}<BR>Kurasa... Aku takkan bisa lepas darimu.<BR><FONT color=#7e12d2>(Yuvenciel memandang dengan melamun)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-d" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ngapain kamu disini?</FONT><BR>
+<FONT color=#662500>Aku percaya padamu deh walau cuma sebentar.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-e" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Archer Yuvenciel$<BR>Bukankah aku sudah bilang bahwa diriku memiliki tujuan lain?<BR>Lihatlah sang Queen.<BR>
+ia terikat oleh akar pohon, kebebasan dan kebahagiaan yang semu, menanti kematiannya dengan menyedihkan....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-f" mid="148" select_type="2" />
+      <talk_question mid="147"><![CDATA[<html>$Archer Yuvenciel$<BR>Lingkaran takdir yang mengikat para Elf untuk saat ini dan seterusnya sudah terbebaskan.<BR>Semuanya akan lenyap bersamaan dengan Tree ini yang merupakan asal dari semua pengekangan tersebut.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-" mid="22" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_02.ogg}<BR>Jangan mengganggu lagi.<BR>Aku tak ingin melukaimu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-2-a" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_03.ogg}<BR>Tempat ini...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-2-b" mid="175" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku tidak tahu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-2-" mid="177" select_type="5" />
+      <talk_question mid="176"><![CDATA[<html>$Archer Yuvenciel$<BR>
+...Sepertinya kamu hendak melindungiku saat aku diserang Rozalinde.<BR>
+Maafkan diriku karena merasakan senang pada situasi yang tidak tepat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_question mid="137"><![CDATA[<html>$Archer Yuvenciel$<BR>Ughh....<BR><FONT color=#7e12d2>(Yuvenciel memegangi lukanya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-3-a" mid="178" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Archer Yuvenciel$<BR>Sepertinya kita terhisap kedalam Tree of Life.<BR>Aku melihat seseorang disana. Sebaiknya kita periksa saja ya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_question mid="179"><![CDATA[<html>$Archer Yuvenciel$<BR>...Kelihatannya seperti <FONT color=#a82424>Queen Narcilia</FONT>.<BR>
+Apa ia ingin menyampaikan sesuatu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-a" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Cahaya terang berkilauan. Cahaya apa ini?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-b" mid="151" select_type="2" />
+      <talk_question mid="150"><![CDATA[<html>$Queen Narcilia$<BR>Kita bertemu lagi disini, anakku.<BR>Aku dapat merasakan bahwa kamu berada dalam bahaya, jadi aku membawamu kesini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-c" mid="153" select_type="2" />
+      <talk_question mid="152"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dimana aku?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-d" mid="155" select_type="2" />
+      <talk_question mid="154"><![CDATA[<html>$Queen Narcilia${sound:npc_Queen_Narsilia_qu_9281_01.ogg}<BR>kita berada didalam Tree of Life... Ini adalah <FONT color=#a82424>Queen's Altar</FONT>.<BR>Dimana jiwa Queen terlelap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-e" mid="180" select_type="0"><![CDATA[<html>Kamu tak sadarkan diri?</html>]]></talk_answer>
+      <talk_answer link_index="n1080_elf_queen-3-e" mid="181" select_type="0"><![CDATA[<html>Apakah Tree of Life mati?</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Sang Queen....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-f" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Queen Narcilia$<BR>Tidak sekarang.<BR>Bahkan akupun tidak dapat mengontrol tempat yang sunyi dan dalam ini dengan kehendakku sendiri. <BR>Cepat atau lambat, cahaya yang menerangi tempat ini juga akan lenyap.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-g" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa-apaan monster-monster itu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-h" mid="38" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Queen Narcilia$<BR>Kenangan dan kesedihan queen terdahulu menarik minat para monster.<BR>
+Setelah menggunakan energiku untuk mengeluarkanmu, aku takkan bisa mencegah mereka datang kesini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-" mid="42" select_type="5" />
+      <talk_question mid="41"><![CDATA[<html>$Queen Narcilia${sound:npc_Queen_Narsilia_qu_9281_02.ogg}<BR>Queen of Elves yang mati disini tidak dapat menjadi pohon, pasir atau....<BR>Oh tidak! Mereka kembali....<BR><FONT color=#7e12d2>(Bayangan Narcilia menghilang dan terjadi suatu gangguan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-a" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Queen Amarilith${sound:npc_AN_Queen Amarilith_qu_9281_01.ogg}<BR>Yuvenciel.... Yuvenciel....<BR>Kamu telah kembali.<BR><FONT color=#7e12d2>(Sebuah suara memanggil Yuvenciel)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-a" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-b" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Archer Yuvenciel$<BR>Serenciel... Oh Serenciel!<BR>
+Apakah ini benar-benar dirimu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-c" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Queen Amarilith$<BR>Ya, ini aku Serenciel.... Partnermu yang menjadi Queen <FONT color=#a82424>Amarilith</FONT>.<BR>Aku tak menyangka pilihanku menjadi queen memberikan penderitaan padamu sehingga meninggalkan Elf.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-d" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Queen Amarilith${sound:npc_AN_Queen Amarilith_qu_9281_02.ogg}<BR>Tapi aku percaya bahwa itu adalah <FONT color=#a82424>Telesia</FONT> mu, Yuvenciel....<BR>Dan aku juga percaya kita akan bertemu lagi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-d" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-e" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Archer Yuvenciel$<BR>Serenciel... Aku tidak pernah membayangkan bisa bertemu denganmu lagi....<BR>
+Bagaimana ini bisa terjadi....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-f" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Queen Amarilith$<BR>Yuvenciel. Apa kamu mengerti?<BR>Jangan berpaling dari Telesia mu. Cobalah mendengarkannya.<BR><FONT color=#7e12d2>(Pandangan Amarilit mengarah ke {user_nick})</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-f" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-g" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Archer Yuvenciel$<BR>Serenciel... Siapa yang kamu lihat?<BR><FONT color=#7e12d2>(Yuvenciel melihat ke {user_nick} dengan terkejut)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-g" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-h" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Yuvenciel's Telesia?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-h" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-i" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Archer Yuvenciel$<BR>Aku sudah bertekad sejak lama.<BR>Untuk bersamamu selamanya, dan membebaskan para Elf, aku akan menapaki jalanku sendiri.<BR>Dan aku.......</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-i" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-j" mid="198" select_type="2" />
+      <talk_question mid="197"><![CDATA[<html>$Archer Yuvenciel$<BR>Dan aku ingin memberikan <FONT color=#387206>{user_nick} </FONT>...hidup... yang berbeda darimu....<BR><FONT color=#7e12d2>(wajah Yuvenciel memucat)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-k" mid="183" select_type="2" />
+      <talk_question mid="182"><![CDATA[<html>$Queen Amarilith$<BR>
+Aku selalu berdoa agar kamu bahagia, Yuvenciel.<BR>
+Kedamaian dan kebebasan sejati... Kuharap kebebasanmu akan memberikan kebahagiaan.<BR>
+Apa kamu sudah melihat kemana kamu harus pergi, Yuvenciel?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-k" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-l" mid="185" select_type="2" />
+      <talk_question mid="184"><![CDATA[<html>$Archer Yuvenciel$<BR>Kebebasan sejati....<BR>...Sekarang aku sudah menyadari kemana tujuan hidupku.<BR>
+Serenciel ku... Ratu ku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-" mid="125" select_type="5" />
+      <talk_question mid="63"><![CDATA[<html>$Queen Amarilith$<BR>Akhirnya Yuvenicel sedang menghadapi takdirnya. Terima kasih.<BR>Terima kasih, anak dari Narcilia.<BR><FONT color=#7e12d2>(Amarilith tersenyum)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-a" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_04.ogg}<BR>Semua ini adalah Telesia ku...?<BR><FONT color=#7e12d2>(Archer Yuvenciel terlihat bingung)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-b" mid="187" select_type="0"><![CDATA[<html>Apa kamu baik-baik saja?</html>]]></talk_answer>
+      <talk_answer link_index="n1079_yuvenciel-5-b" mid="188" select_type="0"><![CDATA[<html>Kamu menghilang.</html>]]></talk_answer>
+      <talk_question mid="158"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yuvenciel, kamu...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-c" mid="161" select_type="2" />
+      <talk_question mid="160"><![CDATA[<html>$Archer Yuvenciel$<BR><FONT color=#7e12d2>(Setelah memperhatikan sejenak, Yuvenciel mengangguk dan mencoba untuk menyentuh pipi {user_nick})</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-d" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_05.ogg}<BR>Itu benar, berharga. Aku sekarat.<BR>Tapi jangan khawatir.<BR>Karena kamu, kini aku menerima takdirku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-e" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Archer Yuvenciel$<BR>Saat hidup Queen Narcilia berakhir, kamu akan menanggung takdir Queen seperti  Serenciel.<BR>Dan aku terpaksa harus melihat takdir orang yang aku sayang terikat kembali dengan Tree ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-f" mid="163" select_type="2" />
+      <talk_question mid="162"><![CDATA[<html>$Archer Yuvenciel$<BR>Aku takkan membiarkannya terjadi kali ini.<BR>Menyalamatkan masa depanmu yang suram karena aku adalah penebusan kesalahanku padamu, dan bukti sayangku kepada Serenciel.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-g" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Menebus kesalahan?</FONT><BR>
+<FONT color=#662500>Apa yang hendak kamu lakukan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-h" mid="165" select_type="2" />
+      <talk_question mid="164"><![CDATA[<html>$Archer Yuvenciel$<BR>Aku akan menjadi ayah untuk semua Elf dan mengawasimu.<BR>Milikilah masa depan yang cerah....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-i" mid="167" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ayah dari semua Elf?</FONT><BR><FONT color=#662500>Apa maksudmu adalah... kamu akan menjadi King?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-j" mid="168" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_06.ogg}<BR>kamu, yang memiliki mata Serenciel, memiliki takdir yang berbeda darinya.<BR>Kembalilah kedunia petualanganmu dengan bebas.<BR><FONT color=#7e12d2>(Segera setelah Archer Yuvenciel selesai berbicara, tubuhnya ditutupi akar pepohonan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-k" mid="191" select_type="2" />
+      <talk_question mid="190"><![CDATA[<html>$Archer Yuvenciel$<BR>Bukannya mau membuang masa depanku sendiri, namun aku melakukan ini demi menggantikanmu.<BR>Aku mengembalikan kebebasan padamu.<BR>Ini adalah takdir yang aku pilih.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-" mid="170" select_type="5" />
+      <talk_question mid="169"><![CDATA[<html>$Archer Yuvenciel$<BR>Sekarang aku akan mendapatkan kedamaian sejati.<BR>Kuharap jalan yang kamu ambil akan selalu bebas....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-5-a" mid="193" select_type="2" />
+      <talk_question mid="138"><![CDATA[<html>$Amarilith$<BR>
+Aku selalu mengharapkan kebahagiaan Yuvenciel.<BR>
+Akhirnya harapanku terkabul.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-5-b" mid="200" select_type="2" />
+      <talk_question mid="199"><![CDATA[<html>$Amarilith$<BR>
+Yuvenciel akhirnya menerima takdirnya.<BR>Dia memang lemot...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-5-" mid="195" select_type="5" />
+      <talk_question mid="194"><![CDATA[<html>$Amarilith$<BR>Child of Narcilia,pergi dan bicaralah padanya.<BR>
+Sepertinya ada yang ingin dikatakannya padamu.<BR><FONT color=#7e12d2>(Queen Amarilith sepertinya tersenyum</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-a" mid="76" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>$Warrior Xian$<BR><FONT color=#387206>{user_nick} </FONT>! Apa yang terjadi?<BR>Kamu menghilang bersama Elf bernama Yuvenciel....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-b" mid="78" select_type="2" />
+      <talk_question mid="77"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku kembali ke Tree of Life...?</FONT><BR><FONT color=#7e12d2>(Narcilia tidak lagi berada di Queen's Throne)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-c" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Narcilia akan segera mengalami tidur abadi.</FONT><BR>
+<FONT color=#662500>Dan Queen berikutnya... maksudku King , adalah...<BR>Yuvenciel. Dialah yang menjadi King berikutnya dari Tree of Life.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-d" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Warrior Xian$<BR>Huh? Jadi dia adalah Queen laki-laki pertama, maksudku King?<BR>Apakah ini berarti adalah sebuah perayaan...?<BR><FONT color=#7e12d2>(Xian cengengesan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-e" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa yang terjadi pada Rozalinde?</FONT><BR>
+<FONT color=#662500>Lalu gimana Argenta dan Gerraint...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-f" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Warrior Xian$<BR>Oh, rumit banget.<BR>Rozalinde mendapatkan prophetic powers.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-g" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Warrior Xian$<BR>Baguslah ada King baru... tapi Tree of Life masih tidak stabil.<BR>
+Kekuatan Prophet mungkin bisa membuka <FONT color=#a82424>jalan ke Monolith</FONT>.<BR>Argenta dan Gerraint harus bergegas untuk menghentikannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-h" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kemana mereka pergi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-" mid="92" select_type="5" />
+      <talk_question mid="91"><![CDATA[<html>$Warrior Xian$<BR>Jalan menuju Monolith ada didalam ikatan hutan, dimana hidup dari Tree of Life dimulai.<BR>Elder tahu jalannya. Yuk buruan!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-6-" mid="143" select_type="5" />
+      <talk_question mid="142"><![CDATA[<html>$Archer Yuvenciel$<BR>kamu, yang memiliki mata Serenciel, memiliki takdir yang berbeda darinya.<BR>Kembalilah kedunia petualanganmu dengan bebas..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-7" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-7-a" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>$Elf Elder${sound:npc_AN_Elf Elder_qu_9281_01.ogg}<BR>Darimana kehidupan pada Tree of Life dimulai... mencari asal muasal para Elf?<BR><FONT color=#387206>{user_nick} </FONT>, kamu sudah tahu tapi masih saja bertanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-7-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-7-b" mid="96" select_type="4" />
+      <talk_question mid="95"><![CDATA[<html>$Quest rewards$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-7-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-7-" mid="98" select_type="5" />
+      <talk_question mid="97"><![CDATA[<html>$Elf Elder$<BR><FONT color=#2b2723>Monolith... dimana semua kehidupan pada Tree dimulai... Aku tidak tahu apakah sudah bisa memberitahukan ini padamu.</FONT><BR><BR><FONT color=#7e12d2>(Itulah yang tertulis pada Chapter 10. Telesia. Lihatlah chapter berikutnya!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-7" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-7-" mid="146" select_type="5" />
+      <talk_question mid="145"><![CDATA[<html>$Warrior Xian$<BR>Jalan menuju Monolith ada didalam ikatan hutan, dimana hidup dari Tree of Life dimulai.<BR>Elder tahu jalannya. Yuk buruan!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">9281</exe>
+         <exe type="talk" npc="n1067_elder_elf">1</exe>
+         <exe type="conexe" true="0,1" false="">0</exe>
+         <exe type="talk" npc="n1067_elder_elf">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">8</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">92810,,,,,,,,,</exe>
+         <exe type="complete" true="">9281</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1067_elder_elf" sub="party_check">2</exelink>
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="b" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="b" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="c" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="d" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="e" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="f">0,1</exelink>
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="" />
+   <exelink qstep="2" npc="n1079_yuvenciel" sub="b" />
+   <exelink qstep="2" npc="n1079_yuvenciel" sub="" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="b" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="c" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="d" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="e" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="e" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="f" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="g" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="h" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="b" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="c" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="d" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="e" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="f" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="g" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="h" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="i" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="j" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="k" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="l">0,1</exelink>
+   <exelink qstep="4" npc="n1081_elf_queen" sub="" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="b" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="b" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="c" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="d" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="e" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="f" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="g" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="h" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="i" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="j" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="k">0,1</exelink>
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="" />
+   <exelink qstep="5" npc="n1081_elf_queen" sub="b" />
+   <exelink qstep="5" npc="n1081_elf_queen" sub="" />
+   <exelink qstep="6" npc="n1082_cian" sub="b" />
+   <exelink qstep="6" npc="n1082_cian" sub="c" />
+   <exelink qstep="6" npc="n1082_cian" sub="d" />
+   <exelink qstep="6" npc="n1082_cian" sub="e" />
+   <exelink qstep="6" npc="n1082_cian" sub="f" />
+   <exelink qstep="6" npc="n1082_cian" sub="g" />
+   <exelink qstep="6" npc="n1082_cian" sub="h">0,1</exelink>
+   <exelink qstep="6" npc="n1082_cian" sub="" />
+   <exelink qstep="7" npc="n1067_elder_elf" sub="a">0</exelink>
+   <exelink qstep="7" npc="n1067_elder_elf" sub="b">1</exelink>
+   <exelink qstep="7" npc="n1067_elder_elf" sub="" />
+   <journal_data recompense="92810" quest_title="여왕의 자리" chapterid="12" quest_level="69" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>34,n1061</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1061</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="99"><![CDATA[Queen's Throne I]]></title>
+         <contents mid="100"><![CDATA[<html>Yuvenciel sepertinya sudah memasuki Tree of Life. Bicara pada Elder.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Queen's Throne(Yuvenciel)</FONT><BR><BR><FONT color=#7e12d2>(Kamu tidak bisa menjalankan quest ini dalam party)</FONT></html>]]></contents>
+         <destination mid="101"><![CDATA[(Solo) Bicara dengan Yuvenciel]]></destination>
+         <todo_msg mid="102"><![CDATA[Ikuti Yuvenciel ke Tree of Life.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>34,n1061</destination_pos>
+         <destination_mode>custom:34@1</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="103"><![CDATA[Queen's Throne II]]></title>
+         <contents mid="104"><![CDATA[<html>Yuvenciel terlihat sudah menentukan tujuannya.<BR>Hentikan dia untuk mendekat ke Tree of Life - the Queen of Elves.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Queen's Throne</FONT><BR><BR><FONT color=#7e12d2>(Kamu tidak bisa menjalankan quest ini dalam party)</FONT></html>]]></contents>
+         <destination mid="105"><![CDATA[(Solo) Stop Yuvenciel]]></destination>
+         <todo_msg mid="106"><![CDATA[Kamu harus menghentikan Yuvenciel.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>11110,n1079</destination_pos>
+         <destination_mode>custom:34@2,11110@1</destination_mode>
+         <statemark_npcid>1079</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="132"><![CDATA[Queen's Throne III]]></title>
+         <contents mid="133"><![CDATA[<html>Kamu telah berpindah ke tempat asing melalui Tree of Life.<BR>Bicara pada Yuvenciel.<BR><BR><FONT color=#086171>Anu Arendel - Queen's Throne </FONT> <FONT color=#a82424>- Unknown Zone (Archer Yuvenciel)</FONT><BR><BR><FONT color=#7e12d2>(Kamu tidak bisa menjalankan quest ini dalam party)</FONT></html>]]></contents>
+         <destination mid="134"><![CDATA[(Solo) Bicara dengan Yuvenciel]]></destination>
+         <todo_msg mid="135"><![CDATA[Bicara pada Yuvenciel.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Elf_Narsilia.dds</contents_image>
+         <destination_pos>11110,n1080</destination_pos>
+         <destination_mode>custom:34@2,11110@1</destination_mode>
+         <statemark_npcid>1080</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="107"><![CDATA[Queen's Throne IV]]></title>
+         <contents mid="108"><![CDATA[<html>Kamu telah berpindah ke tempat asing melalui Tree of Life.<BR>Bicaralah pada sosok Elf yang muncul.<BR><BR><FONT color=#086171>Anu Arendel - Queen's Throne </FONT><FONT color=#a82424>- Unknown Zone (Queen Narcilia)</FONT><BR><BR><FONT color=#7e12d2>(Kamu tidak bisa menjalankan quest ini dalam party)</FONT></html>]]></contents>
+         <destination mid="109"><![CDATA[(Solo) Bicara dengan Queen Narcilia]]></destination>
+         <todo_msg mid="110"><![CDATA[Bicara pada Queen Narcilia.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image />
+         <destination_pos>11110,n1081</destination_pos>
+         <destination_mode>custom:34@2,11110@1</destination_mode>
+         <statemark_npcid>1081</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="111"><![CDATA[Queen's Throne V]]></title>
+         <contents mid="112"><![CDATA[<html>Kamu telah berpindah ke tempat asing melalui Tree of Life.<BR>Bicaralah pada sosok Elf yang muncul.<BR><BR><FONT color=#086171>Anu Arendel - Queen's Throne </FONT><FONT color=#a82424>- Unknown Zone (Queen Amarilith)</FONT><BR><BR><FONT color=#7e12d2>(Kamu tidak dapat menjalankan quest ini dalam party)</FONT></html>]]></contents>
+         <destination mid="113"><![CDATA[(Solo) Bicara dengan Queen Amarilith]]></destination>
+         <todo_msg mid="114"><![CDATA[Bicara pada Queen Amarilith.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>11110,n1079</destination_pos>
+         <destination_mode>custom:34@2,11110@4</destination_mode>
+         <statemark_npcid>1079</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="115"><![CDATA[Queen's Throne VI]]></title>
+         <contents mid="116"><![CDATA[<html>Yuvenciel sepertinya sekarat.<BR>Dengarkanlah takdir yang dimilikinya.<BR><BR><FONT color=#086171>Anu Arendel - Queen's Throne </FONT><FONT color=#a82424>- Unknown Zone (Archer Yuvenciel)</FONT><BR><BR><FONT color=#7e12d2>(Kamu tidak bisa menjalankan quest ini dalam party)</FONT></html>]]></contents>
+         <destination mid="117"><![CDATA[(Solo) Bicara dengan Archer Yuvenciel]]></destination>
+         <todo_msg mid="118"><![CDATA[Bicara pada Archer Yuvenciel tentang takdirnya.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Cian.dds</contents_image>
+         <destination_pos>34,n1082</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1082</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="119"><![CDATA[Queen's Throne VII]]></title>
+         <contents mid="120"><![CDATA[<html>Kamu telah berpindah ke tempat asing melalui Tree of Life.<BR>Bicaralah pada Warrior Xian yang menunggu di depan Tree. <BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Queen's Throne (Warrior Xian)</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>(Kamu tidak bisa menjalankan quest ini dalam party)</FONT></html>]]></contents>
+         <destination mid="121"><![CDATA[(Solo) Bicara dengan Warrior Xian]]></destination>
+         <todo_msg mid="122"><![CDATA[Kembali ke Queen's Throne dan temui Xian.]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Npc_Elder_elf.dds</contents_image>
+         <destination_pos>34,n1067</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1067</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="123"><![CDATA[Queen's Throne VIII]]></title>
+         <contents mid="124"><![CDATA[<html>Cegah jalan ke Monolith terbuka.<BR>Dengarkan Elf Elder mengenai tujuan kepergian Argenta dan Gerraint.<BR><BR><FONT color=#086171>Anu Arendel</FONT><FONT color=#a82424> - didepan Tree of Life (Elf Elder)</FONT><BR><BR><FONT color=#7e12d2>(Itulah yang tertulis pada Chapter 10. Telesia. Lihatlah chapter berikutnya!)</FONT></html>]]></contents>
+         <destination mid="127"><![CDATA[Bicara pada Elf Elder]]></destination>
+         <todo_msg mid="128"><![CDATA[Temui Elf Elder diluar Tree of Life.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9280</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

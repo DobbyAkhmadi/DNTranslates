@@ -1,0 +1,481 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_642_relic_destroyer</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>642</qid>
+      <designer>김인정</designer>
+      <qlevel>38</qlevel>
+      <qdesc>*조이의 영원한 사랑	300357
+*에녹의 영원한 사랑	300358
+*낡은 묵주	300359
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>643</nextqid>
+      <nextqname>sq11_643_new_clue</nextqname>
+      <nextqnpc>n041_duke_stwart</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Destroying the Relic]]></qkname>
+      <qnpc>
+         <npcid>252</npcid>
+         <npcename>n252_saint_guard</npcename>
+         <npckname>왕성 근위병 조이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>41</npcid>
+         <npcename>n041_duke_stwart</npcename>
+         <npckname>공작 스튜어트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>423</npcid>
+         <npcename>n423_triana</npcename>
+         <npckname>아처 트리아나</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>46</npcid>
+         <npcename>n046_cleric_master_enoc</npcename>
+         <npckname>상급 클레릭 에녹</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>98</npcid>
+         <npcename>n098_warrior_master_lodrigo</npcename>
+         <npckname>상급 워리어 로드리고</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="53"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Kucing yang sedang tertidur akan mendesis ketika dibangunkan.<BR> Aku sedang membaca, jadi jangan ganggu aku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n423_triana-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="54"><![CDATA[<html>$Archer Triana$<BR>
+Hmm. Dimana buku itu?<BR>
+<FONT color=#7e12d2>(Triana sedang mencari sesuatu.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-noquest" image="QN_Npc_Cl_master_Enoc.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="55"><![CDATA[<html>$Duke Stuart$<BR>Kita harus menemukan Celestine's Rosary.<BR><BR><FONT color=#7e12d2>※ Selesaikan percakapan dengan Master Cleric Enoch.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="56"><![CDATA[<html>$Royal Guard Joey$<BR>Aku sedang bertugas.<BR>...Ada sekitar 7 atau 8 buku yang belum ku kembalikan...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-accepting-a" mid="8" select_type="0"><![CDATA[<html>Aku ingin menanyakan mengenai Celestine's Rosary.</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Cleric Enoch$<BR>
+Hmm? Apa mereka datang untuk berdoa?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-accepting-b" mid="23" select_type="0"><![CDATA[<html>Relic Artifact Raja?</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Master Cleric Enoch$<BR>Celestine's Rosary... Bukankah itu Relic Artifact yang telah disimpan di dalamRoyal Chamber?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-accepting-acceptted" mid="25" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Destroying the Relic$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-a" mid="57" select_type="0"><![CDATA[<html>(Jelaskan alasannya)</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Master Cleric Enoch$<BR>
+Hmm. Aku tidak tahu kenapa mereka menginginkan Relic Artifact yang telah disimpan di Royal Chamber.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-b" mid="59" select_type="0"><![CDATA[<html>Dragon Followers membuat kekacauan?</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Master Cleric Enoch$<BR>Apa? Celestine's Rosary menghilang?<BR> Mungkin rosary itu hilang saat Dragon Followers membuat kericuhan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-c" mid="61" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Master Cleric Enoch$<BR>Walaupun semua cara yang telah dilakukan untuk menghancurkan Kelompok Pemujaan itu, Dragon Followers masih dapat menyusup ke dalam lingkungan Royal Palace untuk melakukan kejahatan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-d" mid="63" select_type="0"><![CDATA[<html>Ya~</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Master Cleric Enoch$<BR>Dikarenakan oleh masalah yang disebabkan oleh Dragon Followers akhir-akhir ini, laporan terus menerus masuk. Tunggu sebentar.<BR><FONT color=#7e12d2>(Enoch membaca buku yang sangat tebal.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-e" mid="65" select_type="0"><![CDATA[<html>Apa yang salah?</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>$Master Cleric Enoch$<BR>Hmm Coba kulihat... huh?!<BR>
+Huh, ini adalah berita gawat!! Astaga gawat sekali!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-f" mid="67" select_type="0"><![CDATA[<html>Dimana itu sekarang?</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Master Cleric Enoch$<BR>Ah aku pasti salah menaruh catatan itu ketika Dragon Followers membuat heboh terkait Relic Artifact. Oh, aku telah melakukan kesalahan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-f" image="QN_NPC_Warrior_Lodrigo.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-g" mid="69" select_type="0"><![CDATA[<html>Kenapa?</html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Master Cleric Enoch$<BR>Sepertinya aku sudah memberikan buku itu kepada <FONT color=#a82424>Rodrigo</FONT>. Maaf, dapatkah kamu kunjungi Rodrigo dan minta kembali buku itu? Jangan membicarakan tentang pesan itu kalau kamu bisa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-g" image="QN_NPC_Warrior_Lodrigo.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2" mid="71" select_type="0"><![CDATA[<html>(Jadi kamu harus menjaganya)</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Master Cleric Enoch$<BR>Itu adalah informasi yang penting. Aku tahu <FONT color=#a82424>Rodrigo</FONT> bukan orang seperti itu. Tapi ini akan menjadi masalah besar kalau informasi itu sampai diketahui orang banyak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="72"><![CDATA[<html>$Duke Stuart$<BR>Harus menemukan Celestine's Rosary.<BR><BR><FONT color=#7e12d2>※ Harus menyelesaikan percakapan dengan Master Cleric Enoch.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n423_triana-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="73"><![CDATA[<html>$Archer Triana$<BR>
+Hmmm. Dimana buku itu?<BR>
+<FONT color=#7e12d2>(Triana sedang mencari sesuatu.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="74"><![CDATA[<html>$Master Warrior Rodrigo$<BR>
+Kucing akan mendesis kalau diganggu. Aku sedang membaca, jangan ganggu aku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="75"><![CDATA[<html>$Royal Guard Joey$<BR>Aku sedang tugas.<BR>...Aku belum mengembalikan antara 7 sampai 8 buku, seingat ku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2" image="QN_NPC_Warrior_Lodrigo.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="76"><![CDATA[<html>$Master Cleric Enoch$<BR>Oh, buku itu berjudul <FONT color=#a82424>Eternity Love</FONT>.<BR>Jangan tanya kenapa aku memberi judul seperti itu.<BR>Uh... pergilah ke <FONT color=#a82424>Rodrigo</FONT> sekarang juga. Uhhmm.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-2-a" mid="78" select_type="0"><![CDATA[<html>Enoch memberikanmu buku berjudul Eternity Love?</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Hmm. Aku sedang membaca sekarang. Aku memegang pedang pada siang hari, dan memabca pada malam hari. <BR>Inilah hidup seorang Warrior.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-2-b" mid="80" select_type="0"><![CDATA[<html>Maaf, dapatkah kamu mengembalikannya kepadaku?</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Ok, aku sedang membaca buku.<BR>
+<FONT color=#7e12d2>(Rodrigo menyembunyikan buku dengan gambar bunga warna pink di sampulnya.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-2-c" mid="82" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Aku tidak dapat mengembalikannya!<BR>Buku ini sangat populer jadi selalu dipinjam. Dan buku ku masih ada di <FONT color=#7e12d2>Royal Guard Joey</FONT>!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-3" mid="84" select_type="0"><![CDATA[<html>Aku akan memberitahukan Joey untuk meminjamkan bukunya.</html>]]></talk_answer>
+      <talk_question mid="83"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Baru saja aku meminjam buku dari Enoch. Sekarang aku harus mengembalikannya!! Ini sudah hampir puncaknya!! Aku sudah menunggu adegan...err...  (berbisik) adegan ciuman!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="85"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Ok. Aku akan memberikan buku Enoch kalau kamu mendapatkan buku ku dari <FONT color=#a82424>Royal Guard Joey</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n252_saint_guard-3-a" mid="87" select_type="0"><![CDATA[<html>(Gambarkan keadaannya)</html>]]></talk_answer>
+      <talk_question mid="86"><![CDATA[<html>$Royal Guard Joey$<BR>
+Apa yang terjadi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n252_saint_guard-3-b" mid="89" select_type="0"><![CDATA[<html>(Menerima buku)</html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Royal Guard Joey${action:Talk}<BR>Ah, baru saja aku akan mengembalikan buku itu karena aku sudah membacanya puluhan kali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n252_saint_guard-4" mid="156" select_type="0"><![CDATA[<html>(Oh, dia menulis namanya di buku!)</html>]]></talk_answer>
+      <talk_question mid="155"><![CDATA[<html>$Royal Guard Joey$<BR>
+Ketika aku membawa-bawa buku itu, aku menuliskan nama ku di sana. Itu dapat dihapus kok dengan penghapus. Hahaha.<BR>
+<FONT color=#7e12d2>(Judul buku itu sekarang "Joey's Eternity Love".)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-4" image="QN_NPC_Warrior_Lodrigo.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="90"><![CDATA[<html>$Royal Guard Joey$<BR>Kembalikan buku itu ke perpustakaan setelah <FONT color=#a82424>Master Warrior Rodrigo</FONT> selesai membacanya.<BR>
+Ah, dan hapus namaku yang ada di sebelah judul buku dengan penghapus. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-4-a" mid="92" select_type="0"><![CDATA[<html>(Menukar buku)</html>]]></talk_answer>
+      <talk_question mid="91"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Apa buku itu kamu bawa?<BR>Menyebalkan, aku akan menukarnya dengan mu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n098_warrior_master_lodrigo-5" mid="159" select_type="0"><![CDATA[<html>(Ada nama di sini!)</html>]]></talk_answer>
+      <talk_question mid="158"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Di sini ada nama Enoch. Yah aku melihatnya karena buku itu mencolok dibanding 10 buku lainnya.<BR>
+Buku dengan nama pastinya sangat berharga.<BR>
+<FONT color=#7e12d2>(Judul buku itu Enoch's Eternity Love)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n098_warrior_master_lodrigo-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="93"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Sekarang jangan ganggu aku, pergilah, ini adalah bagian akhir yang paling penting.<BR>
+Syuhh! Pergi sana kamu bocah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-5-a" mid="95" select_type="0"><![CDATA[<html>Ini dia.</html>]]></talk_answer>
+      <talk_question mid="94"><![CDATA[<html>$Master Cleric Enoch$<BR>
+Dimana buku itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-5-b" mid="97" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="96"><![CDATA[<html>$Master Cleric Enoch$<BR>Whoa, itu sangat bahaya sekali.<BR><FONT color=#7e12d2>(Enoch menemukan sesuatu dari buku yang sedang dia baca.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-5-c" mid="99" select_type="0"><![CDATA[<html>Ayo selidiki.</html>]]></talk_answer>
+      <talk_question mid="98"><![CDATA[<html>$Master Cleric Enoch$<BR>Hmm~ beberapa Relic Artifacts telah dihancurkan dengan sengaja oleh pembentuk Dragon Followers.<BR>Tempat-tempat yang belum diberi nama dibicarakan ada di Explosion Zone in Withered Leaves Forest.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-5-c" image="QW_41.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-5-d" mid="101" select_type="0"><![CDATA[<html>Aku hanya mengikuti perintah.</html>]]></talk_answer>
+      <talk_question mid="100"><![CDATA[<html>$Master Cleric Enoch$<BR>Tapi kalau itu terkait dengan Relic Artifact, bukankah lebih mudah untuk menemukannya dari pihak kita?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-5-d" image="QN_Npc_Duke_Stwart.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-6" mid="103" select_type="0"><![CDATA[<html>Ya, Aku akan segera pergi.</html>]]></talk_answer>
+      <talk_question mid="102"><![CDATA[<html>$Master Cleric Enoch$<BR>
+Hmm. Akan lebih cepat untuk berbicara kepada Duke.<BR>
+Yah sudah, kamu harus menyelidikinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-6-a" mid="105" select_type="0"><![CDATA[<html>Tidak ada apa-apa.</html>]]></talk_answer>
+      <talk_answer link_index="n046_cleric_master_enoc-6-b" mid="106" select_type="0"><![CDATA[<html>Mau kemana kamu bilang?</html>]]></talk_answer>
+      <talk_question mid="104"><![CDATA[<html>$Master Cleric Enoch$<BR>
+Hmm. Apa? Apa lagi yang kamu ingin tahu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="107"><![CDATA[<html>$Master Cleric Enoch$<BR>Ok? Pergilah.<BR>
+Hmm... Rasanya akan lebih baik menerima Relic Artifact dari Royal Chamber daripada dari Duke.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-6-b" image="QW_41.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="108"><![CDATA[<html>$Master Cleric Enoch$<BR>Tempat yang paling mungkin adalah <FONT color=#a82424>Explosion zone in Withered Leaves Forest</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n423_triana-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n423_triana-6-a" mid="110" select_type="0"><![CDATA[<html>Aku juga terkejut.</html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html>$Strange Elf${action:Talk}<BR>Oh, aku tidak tahu ada orang lain di sini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n423_triana-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n423_triana-6-b" mid="112" select_type="0"><![CDATA[<html>Enoch memilikinya.</html>]]></talk_answer>
+      <talk_question mid="111"><![CDATA[<html>$Archer Triana$<BR>Aku <FONT color=#a82424>Archer Triana</FONT>.<BR>Apa kamu pernah melihat sebuah buku berjudul Eternity Love di sekitar sini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n423_triana-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n423_triana-6-c" mid="114" select_type="0"><![CDATA[<html>(elf yang aneh sedang mencari buku)</html>]]></talk_answer>
+      <talk_question mid="113"><![CDATA[<html>$Archer Triana$<BR>Haha! Aku mengerti.<BR>
+Aku tidak tahu itu akan ada di kota. Terima kasih.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n423_triana-6-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n423_triana-6-d" mid="116" select_type="0"><![CDATA[<html>Aku mencari Relic Artifact yang hilang.</html>]]></talk_answer>
+      <talk_question mid="115"><![CDATA[<html>$Archer Triana$<BR>Apa yang <FONT color=#387206> {user_class}</FONT> lakukan di sini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n423_triana-6-d" image="QS_Default.dds" itemindex="300359" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n423_triana-7" mid="118" select_type="0"><![CDATA[<html>(Berikan Old Rosary)</html>]]></talk_answer>
+      <talk_question mid="117"><![CDATA[<html>$Archer Triana$<BR>Relic Artifact? Hmm~ Apa yang kamu maksud Relic Artifact seperti ini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n423_triana-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="119"><![CDATA[<html>$Archer Triana${action:Talk}<BR>Ada di sekitar sini. Semoga ini adalah barang yang kamu cari.<BR><FONT color=#7e12d2>(Periksa ke Duke Stuart untuk memeriksa apakah ini barang yang benar.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n041_duke_stwart-7-a" mid="121" select_type="0"><![CDATA[<html>(Berikan apa yang telah kamu temukan)</html>]]></talk_answer>
+      <talk_question mid="120"><![CDATA[<html>$Duke Stuart$<BR>Apa kamu sudah menemukan Celestine's Rosary?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-7-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n041_duke_stwart-7-b" mid="123" select_type="0"><![CDATA[<html>Aku mengerti...</html>]]></talk_answer>
+      <talk_question mid="122"><![CDATA[<html>$Duke Stuart${action:Stand2}<BR>
+Hmm? Tidak tidak, memang ini sudah tua, tapi harganya terlalu murah...<BR>
+Hmm Hmm. Uhhmm! Maaf tapi bukan ini item yang sedang ku cari.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n041_duke_stwart-7-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n041_duke_stwart-7-!next" mid="125" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="124"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">642</exe>
+         <exe type="recompense_view">6420,,,,,,,,,</exe>
+         <exe type="talk" npc="n046_cleric_master_enoc">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="addquestitem" num="1">300357</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="delquestitem" num="-1">300357</exe>
+         <exe type="addquestitem" num="1">300358</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="delquestitem" num="-1">300358</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+         <exe type="addquestitem" num="1">300359</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300359</exe>
+         <exe type="complete" true="">642</exe>
+         <exe type="recompense">6420,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n046_cleric_master_enoc" sub="b">1</exelink>
+   <exelink qstep="accepting" npc="n046_cleric_master_enoc" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="b" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="c" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="d" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="e" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="f" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="g" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n098_warrior_master_lodrigo" sub="b" />
+   <exelink qstep="2" npc="n098_warrior_master_lodrigo" sub="c" />
+   <exelink qstep="2" npc="n098_warrior_master_lodrigo" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n252_saint_guard" sub="b" />
+   <exelink qstep="3" npc="n252_saint_guard" sub="4">0,1,2</exelink>
+   <exelink qstep="4" npc="n098_warrior_master_lodrigo" sub="5">0,1,2,3</exelink>
+   <exelink qstep="5" npc="n046_cleric_master_enoc" sub="b" />
+   <exelink qstep="5" npc="n046_cleric_master_enoc" sub="c" />
+   <exelink qstep="5" npc="n046_cleric_master_enoc" sub="d" />
+   <exelink qstep="5" npc="n046_cleric_master_enoc" sub="6">0,1,2</exelink>
+   <exelink qstep="6" npc="n423_triana" sub="b" />
+   <exelink qstep="6" npc="n423_triana" sub="c" />
+   <exelink qstep="6" npc="n423_triana" sub="d" />
+   <exelink qstep="6" npc="n423_triana" sub="7">0,1,2</exelink>
+   <exelink qstep="7" npc="n041_duke_stwart" sub="b">2</exelink>
+   <exelink qstep="7" npc="n041_duke_stwart" sub="!next">0,1</exelink>
+   <journal_data recompense="0:6420" quest_title="성물파괴 사건" chapterid="" quest_level="38" quest_mark_type="10" use_item_list="300357,300358,300359">
+      <journal index="1">
+         <contents_image>QN_Npc_Cl_master_Enoc.dds</contents_image>
+         <destination_pos>11,n46</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>46</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="126"><![CDATA[Conversation goes on]]></title>
+         <contents mid="127"><![CDATA[<html> Berbicara dengan Master Cleric Enoch.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Cleric Enoch</FONT></html>]]></contents>
+         <destination mid="128"><![CDATA[Berbicara dengan Cleric Trainer Enoch]]></destination>
+         <todo_msg mid="129"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Warrior_Lodrigo.dds</contents_image>
+         <destination_pos>11,n98</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>98</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="130"><![CDATA[Eternity LoveⅠ]]></title>
+         <contents mid="131"><![CDATA[<html>Kembalikan buku Eternity Love milik Enoch dari Master Warrior Rodrigo.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Warrior Rodrigo</FONT></html>]]></contents>
+         <destination mid="132"><![CDATA[Berbicara dengan Master Warrior Rodrigo]]></destination>
+         <todo_msg mid="133"><![CDATA[Berbicara dengan Master Warrior Rodrigo.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>11,n252</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>252</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="134"><![CDATA[Eternity LoveⅡ]]></title>
+         <contents mid="135"><![CDATA[<html>Pinjam buku Eternity Love dari Royal Guard Joey.<BR>
+<BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Royal Guard Joey</FONT></html>]]></contents>
+         <destination mid="136"><![CDATA[Berbicara dengan Royal Guard Joey ]]></destination>
+         <todo_msg mid="137"><![CDATA[Berbicara dengan Royal Guard Joey ]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_NPC_Warrior_Lodrigo.dds</contents_image>
+         <destination_pos>11,n98</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>98</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="138"><![CDATA[Eternity LoveⅢ]]></title>
+         <contents mid="139"><![CDATA[<html>Berikan buku Joey's Eternity Love kepada Master Warrior Rodrigo.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Warrior Rodrigo</FONT></html>]]></contents>
+         <destination mid="140"><![CDATA[Berbicara dengan Master Warrior Rodrigo ]]></destination>
+         <todo_msg mid="141"><![CDATA[Give Master Warrior Rodrigo the book.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Cl_master_Enoc.dds</contents_image>
+         <destination_pos>11,n46</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>46</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="142"><![CDATA[Return]]></title>
+         <contents mid="143"><![CDATA[<html>Kembalikan buku Eternity Love milik Enoch dari Master Warrior Rodrigo.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Warrior Rodrigo</FONT></html>]]></contents>
+         <destination mid="144"><![CDATA[Berbicara dengan Cleric Trainer Enoch]]></destination>
+         <todo_msg mid="145"><![CDATA[Give the book to Master Cleric Enoch.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QW_41.dds</contents_image>
+         <destination_pos>413,n423</destination_pos>
+         <destination_mode>custom:411@1,412@1,413@1</destination_mode>
+         <statemark_npcid>423</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="146"><![CDATA[Explosion Zone in Withered Leaves Forest]]></title>
+         <contents mid="147"><![CDATA[<html>Temukan Holy Relic yang disembunyikan oleh Dragon Follower di Explosion zone in Withered Leaves Forest.<BR><BR><FONT color=#086171>Foothills of Black Mountain (Lonely Forest Path)</FONT> <FONT color=#a82424>→ Explosion zone in Withered Leaves Forest</FONT></html>]]></contents>
+         <destination mid="148"><![CDATA[Temukan Holy Relic di Explosion zone in Withered Leaves Forest]]></destination>
+         <todo_msg mid="149"><![CDATA[Finding the Relic Artifact at the Explosion Zone in Withered Leaves Forest.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Duke_Stwart.dds</contents_image>
+         <destination_pos>11,n41</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>41</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="150"><![CDATA[To Duke Stuart]]></title>
+         <contents mid="151"><![CDATA[<html>Mendapatkan Ancient Rosary. Berikan ini ke Duke Stuart di Saint's Haven Royal Palace.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven Royal Palace</FONT> <FONT color=#a82424>→ Duke Stuart</FONT></html>]]></contents>
+         <destination mid="152"><![CDATA[Berbicara dengan Duke Stuart]]></destination>
+         <todo_msg mid="153"><![CDATA[Give the ancient rosary to Duke Stuart .]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>38:-1</user_level>
+      <user_class>1</user_class>
+      <prev_quest>641</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

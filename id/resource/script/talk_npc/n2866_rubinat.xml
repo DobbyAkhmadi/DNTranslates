@@ -1,0 +1,42 @@
+   <talk>
+      <npcename>n2866_rubinat</npcename>
+      <npcid>2866</npcid>
+      <startexe>0</startexe>
+      <comment>664 : 농장 가이드 오픈 퀘스트</comment>
+      <npckname mid="1"><![CDATA[Red Dragon Rubinart]]></npckname>
+      <talk_paragraph index="no_talk" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Red Dragon Rubinart$<BR>……………………………….</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="002" mid="7"><![CDATA[<html>Argh….</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Red Dragon Rubinart$<BR>
+How dare that human roam around? Do you wish to die?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="003" mid="9"><![CDATA[<html>(Smell? What smell?)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Red Dragon Rubinart$<BR>
+Yes, I know it is suffering.<BR>But you…… look very familiar. This smell, I smelled this before…….</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="003" image="" itemindex="">
+         <talk_answer link_index="tuto_complete" mid="11"><![CDATA[<html>(Sight and consciousness are fading….)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Red Dragon Rubinart$<BR>
+Come close to let me smell you, human. Hey are you…… listening?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="conexe" true="3" false="2">1</exe>
+         <exe type="talk">no_talk</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 50, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 664, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 9866, 2);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 9866, 1);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID,9866, 1);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">10</chk>
+         <chk type="hascomq">3804</chk>
+         <chk type="hascomq">50</chk>
+      </conditions>
+      <exelink idx="tuto_complete">4,5,6,7,8</exelink>
+   </talk>

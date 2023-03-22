@@ -1,0 +1,145 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dqc21_1364_kairon_beach</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1364</qid>
+      <designer>정진호</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Daily] Kairon Beach]]></qkname>
+      <qnpc>
+         <npcid>735</npcid>
+         <npcename>n735_darklair_mocha</npcename>
+         <npckname>어둠의 여신관 모카</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-accepting" image="QW_125.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Lanjut)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Dark Priestess Mocha$<BR>Dunia ini terhubung dengan Mistland, jadi <FONT color=#387206>{user_nick}</FONT> pun akan melihat perubahan tanpa henti dari kedua dunia tersebut. Terutama bila ada sesuatu yang dapat menyebabkan masalah, harus segera diatasi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html><FONT color=#086171>(Terima Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Kairon Beach$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-1" image="QW_125.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-1-back_npc" mid="25" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Dark Priestess Mocha$<BR>Hanya kamulah yang dapat pergi menuju ke Mistland. Tolong investigasi <FONT color=#a82424>Kairon Beach</FONT>.<BR>
+ <BR>
+<FONT color=#7e12d2>*Harus menyelesaikan tingkat kesulitan Abyss.</FONT><BR>
+ </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-2-a" mid="12" select_type="0"><![CDATA[<html>(Lanjut)</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Dark Priestess Mocha$<BR>Kamu sudah kembali. Sepertinya kamu baik-baik saja.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-2-b" mid="14" select_type="0"><![CDATA[<html><FONT color=#086171>(Terima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n735_darklair_mocha-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n735_darklair_mocha-2-back_end" mid="27" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Dark Priestess Mocha$<BR>Terima kasih. Hari ini nampaknya tidak ada masalah. Kalau begitu, mohon bantuannya besok.<BR><BR><FONT color=#7e12d2>*Daily Quest dapat diselesaikan 1 kali sehari.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="stageConstructionLevel" op="]=">4</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">1364</exe>
+         <exe type="recompense_view">13640,,,,,,,,,</exe>
+         <exe type="talk" npc="n735_darklair_mocha">1</exe>
+         <exe type="checkStageClearRank" rand="안씀" num="1121" onexe="4" true="안씀" xsi:nil="true" />
+         <exe type="conexe" true="5,6,7" false="">0</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n735_darklair_mocha.xml");</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">13640,,,,,,,,,</exe>
+         <exe type="complete" true="">1364</exe>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "quest", "n735_darklair_mocha.xml");</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n735_darklair_mocha" sub="a">1</exelink>
+   <exelink qstep="accepting" npc="n735_darklair_mocha" sub="acceptted">0,2,3</exelink>
+   <exelink qstep="1" npc="n735_darklair_mocha" sub="back_npc">0</exelink>
+   <exelink qstep="2" npc="n735_darklair_mocha" sub="a">0</exelink>
+   <exelink qstep="2" npc="n735_darklair_mocha" sub="b">1</exelink>
+   <exelink qstep="2" npc="n735_darklair_mocha" sub="back_end">2</exelink>
+   <journal_data recompense="13640" quest_title="[일일] 카이론 해변" chapterid="" quest_level="95" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_125.dds</contents_image>
+         <destination_pos>1121,0,0</destination_pos>
+         <destination_mode>custom:1121@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>24</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="15"><![CDATA[Kairon Beach Investigation]]></title>
+         <contents mid="16"><![CDATA[<html>Selesaikan Kairon Beach pada tingkat kesulitan Abyss.<BR><BR><FONT color=#7e12d2>*Daily Quest dapat diselesaikan 1 kali sehari.</FONT><BR>
+<FONT color=#7e12d2>*Harus menyelesaikan tingkat kesulitan Abyss.</FONT><BR><BR><FONT color=#086171>Heart of Merkha(Kairon Island)</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>- Kairon Beach</FONT></html>]]></contents>
+         <destination mid="17"><![CDATA[(Abyss) Kairon Beach Clear]]></destination>
+         <todo_msg mid="18"><![CDATA[Selesaikan Kairon Beach pada tingkat kesulitan Abyss.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n735</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>735</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="19"><![CDATA[Melapor kepada Dark Priestess Mocha]]></title>
+         <contents mid="20"><![CDATA[<html>Laporkan kepada Dark Priestess Mocha di Saint's Haven.<BR><BR><FONT color=#7e12d2>*Daily Quest dapat diselesaikan 1 kali sehari.</FONT><BR><BR><FONT color=#086171>Saint's Haven </FONT><FONT color=#a82424>- Dark Priestess Mocha</FONT></html>]]></contents>
+         <destination mid="21"><![CDATA[Melapor kepada Dark Priestess Mocha]]></destination>
+         <todo_msg mid="22"><![CDATA[Kembalilah kepada Dark Priestess Mocha]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

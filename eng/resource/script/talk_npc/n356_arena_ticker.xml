@@ -1,0 +1,139 @@
+   <talk>
+      <npcename>n356_arena_ticker</npcename>
+      <npcid>356</npcid>
+      <startexe>29</startexe>
+      <comment>[콜로세움 상점 (Lv70)] 사용안함 (#148778) 실행번호 47,48,49 안씀
+콜로세움 상점 삭제 참조 (#298074) 단계 001의 상점대화창을 trade에서 tradeoff로 변경</comment>
+      <npckname mid="1"><![CDATA[Colosseum Manager Royen]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="gogogo" mid="4"><![CDATA[<html>[Enter the Colosseum]</html>]]></talk_answer>
+         <talk_answer link_index="tradeoff" mid="33"><![CDATA[<html>[Browse Colosseum Shops]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="24"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="60"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Colosseum Manager Royen${action:Talk}<BR>
+Welcome, adventurer.<BR><FONT color=#a82424>Colosseum </FONT>is the place to test people's skills from across <FONT color=#a82424>Altea continent</FONT>.<BR>Did you also come here to test yourself?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="9"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Colosseum Manager Royen${action:Talk}<BR><FONT color=#a82424>Colosseum</FONT>is <FONT color=#a82424>PvP Colosseum</FONT> which adventurer can fight each other to test oneself, is built by kingdom. How to get into Colosseum is on talking menu, you can enter into there through choosing [<FONT color=#086171>enter colosseum</FONT>] or right side in the village UI's [<FONT color=#086171>Moving channel</FONT>].</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="trade" image="QS_Default.dds" itemindex="268494501">
+         <talk_answer link_index="trade_1" mid="34"><![CDATA[<html>[The Colosseum Market]</html>]]></talk_answer>
+         <talk_answer link_index="trade_2" mid="35"><![CDATA[<html>[Ladder shop]</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="37"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="28"><![CDATA[<html>$Colosseum Manager Royen$<BR>You can use <FONT color=#a82424>Goddess's Medal </FONT>and ladder points to buy items. <BR><BR>※ <FONT color=#7e12d2>At last season ladder shop, you can buy last season ladder equipments with Goddess's Medal.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="level" image="" itemindex="">
+         <talk_question mid="40"><![CDATA[<html>$Colosseum Manager Royen$<BR>
+<FONT color=#a82424>Colosseum</FONT>is an <FONT color=#a82424>PvP areana</FONT> which is built by kingdom to provide to the adventurers to test oneself. <BR>
+ <BR>
+※ <FONT color=#7e12d2> Above 10Lv can Enter the Colosseum.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="colosseum" image="" itemindex="">
+         <talk_question mid="43"><![CDATA[<html>$Colosseum Manager Royen$<BR><FONT color=#a82424>Colosseum</FONT> is <FONT color=#a82424> the PvP Colosseum</FONT> which made by the Royal Palace to enable Adventurers' to fight each other. <BR>※ <FONT color=#7e12d2>You can move to Colosseum Lobby by using [<FONT color=#086171>Change Channel</FONT>] located at the upper right UI in village.]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="party" image="" itemindex="">
+         <talk_question mid="46"><![CDATA[<html>$Colosseum Manager Royen$<BR>You have to leave your party to enter the Colosseum.<BR>
+ <BR>
+※ <FONT color=#7e12d2>You cannot enter Colosseum in a party.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="not70" image="" itemindex="">
+         <talk_answer link_index="back_not70" mid="57"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="50"><![CDATA[<html>$Colosseum Shopkeeper Royen$<BR><FONT color=#387206>{user_nick}</FONT>, you can't use the Colosseum Store (Lv70) yet.<BR><BR>※ <FONT color=#7e12d2>Please come back after you have reached Lv70.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="tradeoff" image="QS_Default.dds" itemindex="268494501">
+         <talk_answer link_index="trade_2" mid="66"><![CDATA[<html>[Ladder Shop]</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="67"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="63"><![CDATA[<html>$Colosseum Shopkeeper Royen$<BR>You can use <FONT color=#a82424>Goddess's Medals</FONT> and Ladder Points obtained in battle to buy items</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_user_ChangeChannel( userObjID, 1 );</exe>
+         <exe type="conexe" true="6" false="3">0</exe>
+         <exe type="conexe" true="7" false="4">1</exe>
+         <exe type="conexe" true="8" false="5">2</exe>
+         <exe type="conexe" true="9" false="33">3</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5004,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5005,100);</exe>
+         <exe type="conexe" true="15" false="12">0</exe>
+         <exe type="conexe" true="16" false="13">1</exe>
+         <exe type="conexe" true="17" false="14">2</exe>
+         <exe type="conexe" true="18" false="36">3</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5101,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5102,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5103,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5104,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5105,101);</exe>
+         <exe type="conexe" true="24" false="21">0</exe>
+         <exe type="conexe" true="25" false="22">1</exe>
+         <exe type="conexe" true="26" false="23">2</exe>
+         <exe type="conexe" true="27" false="39">3</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5201,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5202,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5203,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5204,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5205,100);</exe>
+         <exe type="conexe" true="0" false="30">4</exe>
+         <exe type="talk">level</exe>
+         <exe type="conexe" true="0" false="32">5</exe>
+         <exe type="talk">colosseum</exe>
+         <exe type="conexe" true="10" false="34">6</exe>
+         <exe type="conexe" true="35" false="50">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5006,100);</exe>
+         <exe type="conexe" true="19" false="37">6</exe>
+         <exe type="conexe" true="38" false="54">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5106,101);</exe>
+         <exe type="conexe" true="28" false="40">6</exe>
+         <exe type="conexe" true="41" false="58">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5206,100);</exe>
+         <exe type="conexe" true="1" false="43">8</exe>
+         <exe type="talk">party</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5007,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5107,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5207,100);</exe>
+         <exe type="conexe" true="48" false="49">9</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5051,100);</exe>
+         <exe type="talk">not70</exe>
+         <exe type="conexe" true="44" false="51">10</exe>
+         <exe type="conexe" true="52" false="63">11</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5008,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5009,100);</exe>
+         <exe type="conexe" true="45" false="55">10</exe>
+         <exe type="conexe" true="56" false="65">11</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5108,101);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5109,101);</exe>
+         <exe type="conexe" true="46" false="59">10</exe>
+         <exe type="conexe" true="60" false="61">11</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5208,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5209,100);</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,356);</exe>
+         <exe type="conexe" true="53" false="64">12</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5010,100);</exe>
+         <exe type="conexe" true="57" false="66">12</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,5110,101);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="lvl" op=">=">10</chk>
+         <chk type="custom">api_user_IsMissionAchieved(userObjID, 728) == 1</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+         <chk type="lvl" op=">=">70</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="class" op="=">9</chk>
+      </conditions>
+      <exelink idx="gogogo">42</exelink>
+      <exelink idx="guildms">62</exelink>
+      <exelink idx="trade_1">2</exelink>
+      <exelink idx="trade_2">11</exelink>
+      <exelink idx="back_not70">29</exelink>
+      <exelink idx="trade_2">11</exelink>
+   </talk>

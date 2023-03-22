@@ -1,0 +1,34 @@
+   <talk>
+      <npcename>n1619_sidel</npcename>
+      <npcid>1619</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Sidel]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="38"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Sidel$<BR>Hei! Aku datang ke Anu Arendel untuk membantu Sorceresses.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="39" link_target="sqc14_4569_rose_to_her.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>A Rose for Kayleen</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="40" link_target="sqc14_4570_viva.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Celebrations!</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="41" link_target="sqc14_4571_reasonable_cause.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Legitimate Reason</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="42" link_target="sqc14_4572_dangerous_monsters.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Dangerous Monsters</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="47" link_target="sqc14_4576_unexpected_development.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Unexpected Development</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="48"><![CDATA[<html>(Kembali) </html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Sidel$<BR>Aku senang kamu bersama dengan Kayleen.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">sqc14_4568_disagreement_heart</exe>
+         <exe type="conexe" true="1" false="4">0</exe>
+         <exe type="enterquest">sqc14_4575_conflict2</exe>
+         <exe type="conexe" true="3" false="6">1</exe>
+         <exe type="enterquest">sqc14_4576_unexpected_development</exe>
+         <exe type="conexe" true="5" false="0">2</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">4568</chk>
+         <chk type="hasquest">4575</chk>
+         <chk type="hasquest">4576</chk>
+      </conditions>
+   </talk>

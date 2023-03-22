@@ -1,0 +1,589 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_390_monoris_guardian</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>390</qid>
+      <designer>김인정</designer>
+      <qlevel>34</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>391</nextqid>
+      <nextqname>mq11_391_black_medicine</nextqname>
+      <nextqnpc>n393_academic_station</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Siapakah Guardian of Monolith]]></qkname>
+      <qnpc>
+         <npcid>216</npcid>
+         <npcename>n216_geraint_wounded</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>393</npcid>
+         <npcename>n393_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>44</npcid>
+         <npcename>n044_archer_master_ishilien</npcename>
+         <npckname>상급 아처 이실리엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>528</npcid>
+         <npcename>n528_acamedic_jasmin</npcename>
+         <npckname>아카데믹 자스민</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>88</npcid>
+         <npcename>n088_scholar_starshy</npcename>
+         <npckname>문장학자 스타쉬</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-noquest" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-noquest-" mid="345" select_type="5" />
+      <talk_question mid="5"><![CDATA[<html>$Gerraint$<BR>Velskud?<BR>…Aku tidak tahu kenapa nama itu keluar dari mulut aku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-noquest-" mid="346" select_type="5" />
+      <talk_question mid="6"><![CDATA[<html>$Master Archer Eithain$<BR>Satu tahun atau sepuluh tahun, masa depan yg sama.<BR>Yg penting adalah, apa yg diingat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-noquest" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-noquest-" mid="347" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_06.ogg}<BR>Bagi dunia kita, ini adalah jawaban yg benar...<BR>Sulit untuk dicapai.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-accepting-acceptted" mid="140" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Gerraint ada di Royal Palace Basement...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-a" mid="142" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Mendengar mereka baik-baik saja, pikiranku menjadi tenang.<BR>Maaf tapi aku ingin meminta bantuan lagi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-1-a" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-1-" mid="143" select_type="5" />
+      <talk_question mid="12"><![CDATA[<html>$Heraldry Scholar Stas$<BR>Bukan aku satu-satunya yang tidak bisa keluar dari bayangan 50 tahun yang lalu.<BR>Kurasa <FONT color=#2b2723>dia</FONT> juga berhak mendapat kesempatan.<BR>Aku ingin kamu menemui <FONT color=#a82424>Master Archer Eithain</FONT>. Please.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-1-" mid="145" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Gerraint$<BR>Anak kecil dengan banyak pertanyaan.<BR>Aku dengar anak manusia adalah makhluk yang ingin tahu.<BR>
+Kamu pasti anak manusia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-" mid="146" select_type="5" />
+      <talk_question mid="16"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_06.ogg}<BR>Ada solusi pasti untuk dunia kita...<BR>Tapi sangat sulit untuk dicapai.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-" mid="147" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$Master Archer Eithain$<BR>Setahun atau sepuluh tahun yang lalu ada sama-sama masa lalu.<BR>Yang kamu ingatlah yang terpenting.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n088_scholar_starshy-2" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Starshy.dds" center_image="">
+      <talk_answer link_index="n088_scholar_starshy-2-" mid="148" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Heraldry Scholar Stas${action:Talk}<BR><FONT color=#a82424>Master Archer Eithain</FONT> mengikuti Nerwin ke pertempuran itu 50 tahun yang lalu.<BR>Dia juga menjalani hidupnya dengan pertanyaan yang masih misteri.<BR>
+Aku ingin kamu mendengarkan cerita itu. Please.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-a" mid="150" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Master Archer Eithain$<BR>Aku mendengar cerita itu dari Stas. <FONT color=#a82424>Seseorang</FONT> yang sudah lama ingin aku temui saat ini ada di Saint's Haven Royal Palace.<BR>
+Dan... Hanya adventurer yang membantu yang bisa bertemu dengannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-b" mid="152" select_type="2" />
+      <talk_question mid="151"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Bisakah kamu menceritakan lagi ceritamu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-b" image="QN_archer_nerwin_silhouette.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-c" mid="153" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Master Archer Eithain$<BR>50 tahun lalu, aku menemani Queen Narcilia ke Black Dragon Raid....<BR>Well, dia masih dipanggil <FONT color=#a82424>Nerwin</FONT> saat itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-c" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-d" mid="154" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Master Archer Eithain$<BR>Pasukan yang merupakan gabungan manusia dan elf. Saat <FONT color=#a82424>dragon</FONT> muncul diantara kami, kami kacau.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-d" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-e" mid="155" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Master Archer Eithain$<BR>Gold Dragon... Kami sangat terkejut saat kami sadar pemimpin kami, <FONT color=#a82424>Gerraint</FONT> berubah menjadi dragon.<BR>
+Setelah perang, Karacule dan Barnac disebut-sebut sebagai pengkhianat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-e" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-f" mid="156" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Master Archer Eithain$<BR>Banyak orang mati dan terluka.<BR>But <FONT color=#a82424>Gerraint</FONT> menghilang dengan <FONT color=#a82424>Argenta</FONT> tanpa minta maaf atau penjelasan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-f" image="QN_archer_nerwin_silhouette.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-g" mid="157" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Master Archer Eithain$<BR><FONT color=#a82424>Lady Nerwin</FONT> terluka karena dia <FONT color=#a82424>terkontaminasi </FONT> oleh Black darah Dragon, dan langsung dikirim ke <FONT color=#a82424>Anu Arendel</FONT>. Setelah itu, dia tidak pernah meninggalkan Anu Arendel.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-g" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-h" mid="158" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Master Archer Eithain$<BR>Bahkan sampai saat terakhir dia pergi, Lady Nerwin ingin tahu...<BR>
+Apa <FONT color=#a82424>yang mereka berdua</FONT> coba lakukan...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2-h" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2-" mid="159" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$Master Archer Eithain$<BR>Please, bantu aku pecahkan pertanyaan lama yang selama ini mengganggu Lady Nerwin dan aku.<BR>Please tanyakan <FONT color=#a82424>Gerraint</FONT> apa yang sampai saat ini ia lakukan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-" mid="162" select_type="5" />
+      <talk_question mid="36"><![CDATA[<html>$Master Archer Eithain$<BR>Tanyakan <FONT color=#a82424>Gerraint</FONT> untukku.<BR>Aku ingin tahu apa yang ia telah lakukan selama 50 tahun ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-" mid="164" select_type="5" />
+      <talk_question mid="37"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_05.ogg}<BR><FONT color=#a82424>Master Archer Eithain</FONT> memintamu bertanya pada <FONT color=#a82424>Gerraint </FONT> beberapa pertanyaan?<BR>Hmm... Penyerangan Black Dragon Karas masih terkenang di ingatan banyak orang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-a" mid="170" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Gerraint$<BR>...Orang lain <FONT color=#a82424>dari penyerangan 50 tahun lalu</FONT>?<BR>Walaupun waktu sudah berlalu, semua orang sepertinya masih teringat dengan kejadian itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-b" mid="171" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Kamu juga sama.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-c" mid="172" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Gerraint$<BR>......Ya. Aku juga begitu....<BR>Mungkin tidak ada satupun di dunia ini yang benar-benar bebas dari masa lalu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-c" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-d" mid="173" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Gerraint$<BR>Setelah 50 tahun lalu, <FONT color=#a82424>Velskud</FONT> menghilang dengan Black Dragon Jewel.<BR>
+Aku mengelilingi benua untuk mengejar Velskud, dan juga untuk menemukan <FONT color=#a82424>fragment Chaos Dragon</FONT> dan mensealnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-e" mid="175" select_type="2" />
+      <talk_question mid="174"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Bagaimana dengan Argenta?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-e" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-f" mid="176" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Gerraint$<BR>Setelah Goddess' Dream dipengaruhi oleh racun, dunia semakin tidak stabil. Pencemaran menyebar diseluruh dunia dan para mosnter menjadi lebih kuat dari sebelumnya. Argenta harus menggunakan seluruh energinya untuk membantu <FONT color=#a94407>Monolith</FONT> yang tumbuh semakin lemah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-g" mid="178" select_type="2" />
+      <talk_question mid="177"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Apa kamu bisa membawaku ke Monolith?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-h" mid="179" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Gerraint$<BR>Seperti yang aku bilang, itu tidak mungkin. <FONT color=#a82424>Monolith</FONT> adalah mediasi penghubung Goddess dan dunia ini.<BR>Merupakan skala untuk mengukur dunia seperti tangga yang menuju ke Goddess.<BR>Tidak mungkin manusia bisa menahan kekuatan seperti itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-i" mid="181" select_type="2" />
+      <talk_question mid="180"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Tapi aku masih membutuhkannya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-i" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-j" mid="50" select_type="0"><![CDATA[<html>Ya.</html>]]></talk_answer>
+      <talk_answer link_index="n216_geraint_wounded-3-j" mid="51" select_type="0"><![CDATA[<html>Kamu sudah mengetahuinya.</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Gerraint$<BR>Orang yang mengetahui tempatnya adalah  <FONT color=#a82424>Argenta</FONT> dan <FONT color=#a82424>aku</FONT>... Dan <FONT color=#a82424>gadis kecil itu</FONT> yang mampu meliha mimpi Sang Dewi.<BR>itulah kenapa kamu ingin membawanya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-j" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-k" mid="189" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>$Gerraint$<BR>Aku bisa merasakan energimu berbeda dengan adventurer lain. Murni, tapi tidak stabil....<BR>
+Aku bisa merasakannya disuaramu yang kebingungan.<BR>Apa kamu berencana untuk mencapai <FONT color=#a82424>Monolith</FONT> dengan menggunakan gadis Prophet?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-l" mid="190" select_type="2" />
+      <talk_question mid="182"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Ya, itu misiku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-m" mid="191" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>$Gerraint$<BR>Apa yang Argenta dan aku, atau Ancient Dragon harapkan untuk lindungi adalah <FONT color=#a82424>keseimbangan dunia</FONT>.<BR>Jika seseorang bersentuhan dengan Monolith, akan menyebabkan perubahan keseimbangan yang besar.<BR>
+Aku tidak akan membiarkan itu terjadi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-n" mid="192" select_type="2" />
+      <talk_question mid="183"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Kamu akan membunuhku?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-o" mid="193" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Gerraint$<BR>Kamu bebas melakukan keinginanmu.<BR>Tapi kalau kamu mencoba mengacaukan keseimbangan dunia ini, aku akan membunuhmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-p" mid="194" select_type="2" />
+      <talk_question mid="184"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Tapi aku juga misi yang harus diselesaikan.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-p" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-q" mid="195" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Gerraint$<BR>......Kalau ada pilihan aku tidak ingin membunuhmu. Semua adventurer lain menganggapmu sebebagai teman.<BR>
+Kalau aku membunuhmu, lalu aku akan menjadi <FONT color=#a82424>pengkhianat</FONT> bagi mereka.<BR>
+<FONT color=#7e12d2>(Gerraint terlihat sakit)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-q" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-r" mid="187" select_type="2" />
+      <talk_question mid="185"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa dianggap pengkhinat membuatmu kesal?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-r" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-s" mid="293" select_type="2" />
+      <talk_question mid="285"><![CDATA[<html>$Gerraint$<BR>...Aku tidak bisa mengatakan apa-apa walaupun mereka memanggilku pengkhianat.<BR>Mereka cedera berat karena sesuatu yang tidak bisa disembuhkan saat bertempur, dan aku tidak punya kekuatan untuk menyembuhkan mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-s" image="QN_knight_velskud_silhouette.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-t" mid="294" select_type="2" />
+      <talk_question mid="286"><![CDATA[<html>$Gerraint$<BR>Bukankah lebih baik pergi meninggalkan dan dibenci, karena aku tidak bisa menyelamatkan mereka?<BR>Katanya, <FONT color=#a82424>kebencian juga sumber kekuatan untuk manusia</FONT>...<BR>
+Seseorang pernah mengatakan itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-t" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-u" mid="295" select_type="2" />
+      <talk_question mid="287"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apakah itu Velskud?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-u" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-v" mid="296" select_type="2" />
+      <talk_question mid="288"><![CDATA[<html>$Gerraint$<BR>Ya. 50 tahun lalu, setelah Velskud lari bersama <FONT color=#a82424>Black Dragon's Jewel</FONT> apakah aku tahu bahwa ada <FONT color=#a82424>orang lain</FONT> yang mengincar jewel. Velskud sudah menyusupi tim yang ada dipengaruhnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-v" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-w" mid="297" select_type="2" />
+      <talk_question mid="289"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Siapa?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-w" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-3-x" mid="298" select_type="2" />
+      <talk_question mid="290"><![CDATA[<html>$Gerraint$<BR>Aku tidak tahu. Aku hanya menebak....<BR>Aku tidak ingin mengganggu masa depanmu dengan ketidakpastian.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-3-x" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-4" mid="299" select_type="2" />
+      <talk_question mid="291"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Mungkinkah orang itu sasaran balas dendam Velskud?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-4" image="QN_Npc_Archer_Ishilien.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-4-a" mid="301" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Gerraint$<BR>...Aku tidak tahu kenapa dia mengkhianati yang lain.<BR>
+Juga, bagaimana dia hidup selanjutnya.<BR>Keinginan yang kuat terkadang menjadi energi jahat yang kuat dalam cara yang tidak bisa dijelaskan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-4-b" mid="303" select_type="2" />
+      <talk_question mid="302"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Di masa depan dia orang yang baik...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-4-c" mid="305" select_type="2" />
+      <talk_question mid="304"><![CDATA[<html>$Gerraint$<BR>Kamu  juga mengaku bahwa kamu dari <FONT color=#a82424>masa depan</FONT>. <FONT color=#7e12d2>(Gerraint sempat terdiam)</FONT><BR>
+Walaupun dia temanmu di masa depan, bukan berarti mengubah kenyataan bahwa dia ancaman bagi dunia di saat ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-4-d" mid="307" select_type="2" />
+      <talk_question mid="306"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tapi dia tetap orang baik.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-4-e" mid="309" select_type="2" />
+      <talk_question mid="308"><![CDATA[<html>$Gerraint$<BR>....<BR>Aku tidak pernah membayangkan dia akan sebaik itu pada anak kecil</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-4-f" mid="311" select_type="2" />
+      <talk_question mid="310"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Apakah itu sesuatu yang mengejutkan?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-4-g" mid="313" select_type="2" />
+      <talk_question mid="312"><![CDATA[<html>$Gerraint$<BR>Kamu masih manusia muda. Semoga kamu hidup sehat tanpa memikirkan tentang Monolith atau kejahatan yang lain.<BR>Karena itu pula kenapa Argenta dan aku mencoba sebaik mungkin untuk melindungi keseimbangan dunia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-5" mid="320" select_type="2" />
+      <talk_question mid="314"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Maaf, tapi aku masih harus menyelesaikan misiku.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-a" mid="216" select_type="2" />
+      <talk_question mid="80"><![CDATA[<html>$Master Archer Eithain$<BR>Beritahu aku jawabannya.<BR>Aku sudah menunggu mereka selama 50 tahun.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-b" mid="217" select_type="2" />
+      <talk_question mid="214"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Beritahu apa yang dikatakan Gerraint)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-c" mid="254" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>$Master Archer Eithain$<BR>Untuk menjaga keseimbangan dunia ini....<BR><FONT color=#7e12d2>(Eithain merenung)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-d" mid="331" select_type="2" />
+      <talk_question mid="255"><![CDATA[<html>$Master Archer Eithain$<BR>Aku mengerti. <FONT color=#7e12d2>(Eithain menghela napas)</FONT><BR>Mereka berdua ada untuk melindungi dunia ini, jadi aku kira mereka akan melewatkan banyak cobaan. Tetep....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-e" mid="332" select_type="2" />
+      <talk_question mid="323"><![CDATA[<html>$Master Archer Eithain$<BR>Tetap akan berlebihan untuk meminta dragon untuk mengerti apa yang kita rasakan?<BR>Aku tidak bicara tentang hal sulit seperti cinta atau persahabatan.<BR>Aku, Nerwin... bahkan semua orang merasakan yang sama.<BR><FONT color=#7e12d2>(Eithain terlihat bingung)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-f" mid="333" select_type="2" />
+      <talk_question mid="324"><![CDATA[<html>$Master Archer Eithain$<BR><FONT color=#a82424>Gerraint</FONT> adalah pemimpin kita. Semua orang percaya dan menyukainya. Karena itulah Karacule dan Barnac lebih marah saat mereka tahu kebenarannya.<BR>Mereka mempercayainya sebagai <FONT color=#a82424>komandan</FONT>mereka, tapi telah <FONT color=#a82424>dikhianati</FONT>... Mereka pasti merasa seperti itu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-g" mid="334" select_type="2" />
+      <talk_question mid="325"><![CDATA[<html>$Master Archer Eithain$<BR>Tapi Gerraint dan Argenta pergi tanpa mengatakan apapun.<BR>Yang ditinggalkan lebih merasa tersiksa dengan pengkhianatan daripada pencemaran yang menyakitkan.<BR>Mereka  merasa dimanfaatkan dan dicampakkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-h" mid="335" select_type="2" />
+      <talk_question mid="326"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Tapi Gerraint, dia juga....</FONT><BR>
+<FONT color=#662500>(Ceritakan padanya cerita Gerraint)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-5-i" mid="336" select_type="2" />
+      <talk_question mid="327"><![CDATA[<html>$Master Archer Eithain$<BR>
+...Gerraint adalah seseorang yang tidak bisa aku benci.<BR>Akan lebih mudah jika dia benar-benar mengkhianati kita....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-5-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-6" mid="339" select_type="2" />
+      <talk_question mid="328"><![CDATA[<html>$Master Archer Eithain$<BR>Aku bisa menduga dia mengatakan itu.<BR>AKu yakin di hati yang terdalam tidak ada yang benar-benar membencinya.. Setidaknya aku tidak, dan aku yakin yang lain juga begitu.<FONT color=#7e12d2>(Eithain tersenyum)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-5-" mid="318" select_type="5" />
+      <talk_question mid="83"><![CDATA[<html>$Gerraint$<BR>...Aku terlalu banyak bicara.<BR>Pergilah kedunia yang lebih luas dan lakukan tugasmu daripada berlarut-larut dengan masa lalu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-" mid="230" select_type="5" />
+      <talk_question mid="102"><![CDATA[<html>$Gerraint$<BR>...Aku terlalu banyak bicara.<BR>Pergilah kedunia yang lebih luas dan lakukan tugasmu daripada berlarut-larut dengan masa lalu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-6" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ishilien.dds" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-6-" mid="329" select_type="5" />
+      <talk_question mid="103"><![CDATA[<html>$Master Archer Eithain$<BR>
+Kalau dia membagi sedikit saja apa yang kita rasakan, mungkin kita tidak akan sesedih ini.<BR>
+Anyway, terimakasih telah memberikan jawaban atas pertanyaan lamaku, <FONT color=#387206>{user_nick}</FONT>.<BR>
+ <BR>
+<FONT color=#7e12d2>*Talk to Tinkerer Station.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-a" mid="271" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_01.ogg}<BR>Aku mengerti. Pasti itu yang terjadi sekitar 100 tahun yang lalu. Penyerangan <FONT color=#a82424>Black Dragon Karas</FONT> pasti mempengaruhi banyak kehidupan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-b" mid="272" select_type="2" />
+      <talk_question mid="110"><![CDATA[<html>$Tinkerer Jasmine$<BR>Prophet sepertinya masih tidur. Bagaimana bisa <FONT color=#a82424>Gold Dragon Nest</FONT> dinonaktifkan?<BR>Aku masih tidak mengerti. Aku tidak menemukan catatan apapun... Aku sedikit khawatir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-c" mid="267" select_type="2" />
+      <talk_question mid="265"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Aku akan mengawasi itu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n393_academic_station-6-d" mid="273" select_type="4" />
+      <talk_question mid="112"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-!next" mid="274" select_type="2" />
+      <talk_question mid="269"><![CDATA[<html>$Tinkerer Jasmine$<BR>Ya tolong.<BR>Lalu sebeluumnya....<BR><FONT color=#7e12d2>(Jasmine berpikir sesaat)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">390</exe>
+         <exe type="talk" npc="n088_scholar_starshy">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">390</exe>
+         <exe type="recompense">3900,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n088_scholar_starshy" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="a">0,1</exelink>
+   <exelink qstep="1" npc="n088_scholar_starshy" sub="" />
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="b" />
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="c" />
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="d" />
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="e" />
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="f" />
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="g" />
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="h">0,1</exelink>
+   <exelink qstep="2" npc="n044_archer_master_ishilien" sub="" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="b" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="c" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="d" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="e" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="f" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="g" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="h" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="i" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="j" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="j" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="k" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="l" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="m" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="n" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="o" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="p" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="q" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="r" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="s" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="t" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="u" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="v" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="w" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="x" />
+   <exelink qstep="3" npc="n216_geraint_wounded" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n216_geraint_wounded" sub="b" />
+   <exelink qstep="4" npc="n216_geraint_wounded" sub="c" />
+   <exelink qstep="4" npc="n216_geraint_wounded" sub="d" />
+   <exelink qstep="4" npc="n216_geraint_wounded" sub="e" />
+   <exelink qstep="4" npc="n216_geraint_wounded" sub="f" />
+   <exelink qstep="4" npc="n216_geraint_wounded" sub="g" />
+   <exelink qstep="4" npc="n216_geraint_wounded" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n044_archer_master_ishilien" sub="b" />
+   <exelink qstep="5" npc="n044_archer_master_ishilien" sub="c" />
+   <exelink qstep="5" npc="n044_archer_master_ishilien" sub="d" />
+   <exelink qstep="5" npc="n044_archer_master_ishilien" sub="e" />
+   <exelink qstep="5" npc="n044_archer_master_ishilien" sub="f" />
+   <exelink qstep="5" npc="n044_archer_master_ishilien" sub="g" />
+   <exelink qstep="5" npc="n044_archer_master_ishilien" sub="h" />
+   <exelink qstep="5" npc="n044_archer_master_ishilien" sub="i" />
+   <exelink qstep="5" npc="n044_archer_master_ishilien" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n393_academic_station" sub="b" />
+   <exelink qstep="6" npc="n393_academic_station" sub="c">1</exelink>
+   <exelink qstep="6" npc="n393_academic_station" sub="d">0</exelink>
+   <exelink qstep="6" npc="n393_academic_station" sub="!next" />
+   <journal_data recompense="3900" quest_title="모노리스의 수호자는 누구입니까" chapterid="5" quest_level="34" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Scholar_Starshy.dds</contents_image>
+         <destination_pos>11,n88</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>88</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="115"><![CDATA[Who's the Guardian of Monolith I]]></title>
+         <contents mid="116"><![CDATA[<html>Selesai mendengarkan cerita Heraldry Scholar Stas.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Heraldry Scholar Stas</FONT></html>]]></contents>
+         <destination mid="117"><![CDATA[Bicara pada Heraldry Scholar Stas]]></destination>
+         <todo_msg mid="118"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="119"><![CDATA[Who's the Guardian of Monolith II]]></title>
+         <contents mid="120"><![CDATA[<html>Temui Master Archer Eithain, yang telah berperang pada 50 tahun yang lalu dan dengarkan ceritanya.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Archer Eithain</FONT></html>]]></contents>
+         <destination mid="121"><![CDATA[Bicara pada Master Archer Eithain]]></destination>
+         <todo_msg mid="122"><![CDATA[Bicara pada Master Archer Eithain.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Geraint_Closeeye.dds</contents_image>
+         <destination_pos>13014,n216</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>216</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="123"><![CDATA[Who's the Guardian of Monolith III]]></title>
+         <contents mid="124"><![CDATA[<html>Master Archer Eithain menyimpan banyak pertanyaan selama 50 tahun. Katakan pada Gerraint tentang pertanyaannya.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven Royal Palace(Secret Basement Area)</FONT> <FONT color=#a82424>→ Gerraint</FONT></html>]]></contents>
+         <destination mid="125"><![CDATA[Bicara pada Gerraint di Secret Basement Area Royal Palace]]></destination>
+         <todo_msg mid="126"><![CDATA[Pergilah ke lantai dasar Saint's Haven Royal Palace dan bicara pada Gerraint.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Geraint_Closeeye.dds</contents_image>
+         <destination_pos>13014,n216</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="127"><![CDATA[Who's the Guardian of Monolith IV]]></title>
+         <contents mid="128"><![CDATA[<html>Kembali ke Master Archer Eithain sampaikan jawaban Gerraint.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Master Archer Eithain</FONT></html>]]></contents>
+         <destination mid="129"><![CDATA[Bicara pada Master Archer Eithain]]></destination>
+         <todo_msg mid="130"><![CDATA[Kembali ke Master Archer Eithain.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="131"><![CDATA[Who's the Guardian of Monolith V]]></title>
+         <contents mid="132"><![CDATA[<html>Sepertinya Master Archer Eithain tidak punya pertanyaan lagi. Kembalilah ke Gerraint dan dengarkan sisa ceritanya.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven Royal Palace(Secret Basement Area)</FONT> <FONT color=#a82424>→ Gerraint</FONT></html>]]></contents>
+         <destination mid="133"><![CDATA[Bicara pada Gerraint di Secret Basement Area Royal Palace]]></destination>
+         <todo_msg mid="134"><![CDATA[Kembali ke  Gerraint dan dengarkan sisa ceritanya.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="135"><![CDATA[Who's the Guardian of Monolith VI]]></title>
+         <contents mid="136"><![CDATA[<html>Setiap orang yang terlibat dalam peperangan 50 tahun yang lalu masih belum bisa lepas dari masa lalu.Sekarang, kembalilah ke Tinkerer Station dan bicara pada Jasmine dan perhatikan jika ada kabar.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="137"><![CDATA[Terhubung ke Tinkerer Station]]></destination>
+         <todo_msg mid="138"><![CDATA[Terhubung ke Tinkerer Station dan lapor ke Jasmine.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>389</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

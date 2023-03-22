@@ -1,0 +1,91 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq13_6006_lupert_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>6006</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] The Future]]></qkname>
+      <qnpc>
+         <npcid>323</npcid>
+         <npcename>n323_warehouse_lupert</npcename>
+         <npckname>창고지기 루퍼트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-accepting-a" mid="7" select_type="0"><![CDATA[<html>Kamu orang yang cukup hemat.</html>]]></talk_answer>
+      <talk_answer link_index="n323_warehouse_lupert-accepting-b" mid="8" select_type="0"><![CDATA[<html>Rencanamu cukup sedeerhana.</html>]]></talk_answer>
+      <talk_answer link_index="n323_warehouse_lupert-accepting-c" mid="9" select_type="0"><![CDATA[<html>Apakah kamu berencana untuk berganti pekerjaan?</html>]]></talk_answer>
+      <talk_answer link_index="n323_warehouse_lupert-accepting-d" mid="10" select_type="0"><![CDATA[<html>Bagaimana kalau pergi bertualang bersamaku?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Karena aku mengambil uangku dari Bank, aku berpikir menggunakannya untuk membeli rumah yang lebih besar lalu menikah. Setelah itu, mungkin aku akan melakukan hal lain yang lebih berguna daripada menjaga Storage..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Menurutmu demikian? Kupikir aku dapat lebih hemat. Aku selalu berpikir bahwa aku dapat bertahan hidup dengan hanya memiliki 2 buah pakaian dalam satu tahun, tapi sepertinya itu mustahil. Apa kamu punya nasihat untuk menjaga agar pakaian tetap awet?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Mungkin akan terdengar seperti harapan yang membosankan untukmu, {user_nick}, tapi aku lebih memilih hidup yang stabil. Setiap orang memiliki gaya hidup yang sesuai dengan gaya mereka masing-masing.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Ya, jika anak-anak lahir, akan bagus jika ayah mereka memiliki pekerjaan yang bagus. Sungguh menyedihkan jika mereka diperolok anakl-anak lain hanya karena ayah mereka adalah penjaga Storage</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Haha, maaf, tapi aku benci bahaya. terima kasih atas ajakannya, {user_nick}.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 6006, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 323, 220 );</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 323, 220 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 323, 110 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 323, 60 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 앞으로의 일에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>323:4950:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

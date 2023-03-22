@@ -1,0 +1,36 @@
+   <talk>
+      <npcename>n1023_academic</npcename>
+      <npcid>1023</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Academic Comelina]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#387206>${user_nick}$<BR></FONT><FONT color=#7e12d2>You see a mirage…</FONT><BR>
+<FONT color=#7e12d2>It looks lonely.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="4"><![CDATA[<html>$Academic Comelina$<BR>
+An ancient temple where the hero lays asleep...<BR>
+I guess he didn't realise this temple would be used like this.<BR>
+He would be sad if he knew...<BR>
+ </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">3</exe>
+         <exe type="enterquest">mq15_9248_smiling_promise</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="enterquest">sq15_4230_destiny_in_destiny</exe>
+         <exe type="conexe" true="5" false="7">2</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="8" false="6">4</exe>
+         <exe type="enterquest">mq15_9385_promise_of_start</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, 4248) == 1</chk>
+         <chk type="hasquest">4230</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="hasquest">9248</chk>
+         <chk type="hasquest">9385</chk>
+      </conditions>
+   </talk>

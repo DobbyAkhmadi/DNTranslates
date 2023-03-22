@@ -1,0 +1,91 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq13_6004_lupert_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>6004</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Recent Interests]]></qkname>
+      <qnpc>
+         <npcid>323</npcid>
+         <npcename>n323_warehouse_lupert</npcename>
+         <npckname>창고지기 루퍼트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n323_warehouse_lupert-accepting-a" mid="7" select_type="0"><![CDATA[<html>Jadi... itu hanyalah alat untuk Storage.</html>]]></talk_answer>
+      <talk_answer link_index="n323_warehouse_lupert-accepting-b" mid="8" select_type="0"><![CDATA[<html>Hmm... Entahlah, tapi terlihat menakjubkan!</html>]]></talk_answer>
+      <talk_answer link_index="n323_warehouse_lupert-accepting-c" mid="9" select_type="0"><![CDATA[<html>Terlihat menakjubkan!</html>]]></talk_answer>
+      <talk_answer link_index="n323_warehouse_lupert-accepting-d" mid="10" select_type="0"><![CDATA[<html>Jadi kalau begitu, ada MK1?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Akhir-akhir ini, aku memiliki hobi lain selain membaca buku. <FONT color=#7e12d2>(Warehouse Keeper Rupert menunjukkanmu jebakan tikus yang dibuatnya dengan sangat teliti)</FONT> Bagaimana menurutmu? Ini adalah jebakan yang sangat unik. Aku berpikir untuk menyebutnya Warehouse Keeper Rupert MK2.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Aku baru saja menemukan hobi yang berhubungan dengan pekerjaanku di sini. Kurasa kamu tidak mengerti, {user_nick}, tapi pekerjaan akan lebih menyenangkan jika kamu menemukan hobi yang melengkapinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Kalau tidak salah, kamu tidak memiliki banyak pengetahuan dalam bidang ini kan? Walaupun begitu, aku berterima kasih karena kamu memberikan tanggapan yang tidak bias.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Ah, jadi benda ini... <FONT color=#7e12d2>(Warehouse Keeper Rupert menjelaskan cara kerja perangkap tersebut dengan sangat terperinci.)</FONT> Ah, pegasnya rusak! Maafkan aku. Aku akan memperbaikinya dan menunjukkannya lagi padamu setelah memperbaharuinya menjadi Warehouse Keeper Rupert MK3.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n323_warehouse_lupert-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Warehouse Keeper Rupert$<BR>Tentu saja! Ada MK0 dan MK1. Model pertama, MK0, berwarna putih. Model kedua adalah model yang lebih mutakhir dengan warna ungu dan hijai. Dan yang ini... berwarna merah. Huh? Warnanya tampak sama? Itu mungkin anggapanmu saja.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 6004, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 323, 220 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 323, 220 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 323, 60 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 323, 110 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n323_warehouse_lupert" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 최근의 관심사에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>323:2750:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

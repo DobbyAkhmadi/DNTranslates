@@ -1,0 +1,88 @@
+   <talk>
+      <npcename>n2697_promisehall_grace</npcename>
+      <npcid>2697</npcid>
+      <startexe>12</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Oath Assistant Grace]]></npckname>
+      <talk_paragraph index="basic" image="" itemindex="">
+         <talk_answer link_index="explain" mid="13"><![CDATA[<html><FONT color=#387206>[Oath Ceremony]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="exit" mid="14"><![CDATA[<html><FONT color=#387206>[Leave Oath Hall]</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Oath Assistant Grace$<BR>The Oath Ceremony is underway. Be quiet.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_out" image="" itemindex="">
+         <talk_question mid="8"><![CDATA[<html>$Oath Assistant Grace$<BR>Sorry, but you cannot leave right now.<BR><BR><FONT color=#7e12d2>※ You cannot travel to other locations while a party is formed or when undergoing random matching.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="explain_guest" image="" itemindex="">
+         <talk_answer link_index="basic_talk" mid="28"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Oath Assistant Grace$<BR>Do you mind waiting until the invited oath-taker comes?<BR>Actually, they might have already arrived.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="explain_host" image="" itemindex="">
+         <talk_answer link_index="explain_celebration" mid="40"><![CDATA[<html>A blessing for guests?</html>]]></talk_answer>
+         <talk_answer link_index="explain_hall" mid="41"><![CDATA[<html>What could be done at Oath Hall?</html>]]></talk_answer>
+         <talk_answer link_index="basic_talk2" mid="29"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Oath Assistant Grace$<BR>If you want to take an oath, go speak with <FONT color=#a82424>Irine</FONT>.<BR>She will help you take part in the Oath Ceremony.<BR>Also, <FONT color=#a82424>Terramai</FONT> is in charge of administering <FONT color=#a82424>blessings for guests</FONT> who have accepted our invitation.<BR>You can provide repayment once it appears all the guests have arrived.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="go_lv8" image="" itemindex="">
+         <talk_answer link_index="001" mid="35"><![CDATA[<html><FONT color=#387206>[Calderock Village]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="basic_talk3" mid="36"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="16"><![CDATA[<html>$Oath Assistant Grace$<BR>Leaving already?<BR>Then I'll send you to Calderock Village.<BR>See you later!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="go_lv24" image="" itemindex="">
+         <talk_answer link_index="002" mid="37"><![CDATA[<html><FONT color=#387206>[To Saint Haven]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="basic_talk4" mid="38"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="17"><![CDATA[<html>$Oath Assistant Grace$<BR>Leaving already?<BR>Then I'll send you to Saint Haven.<BR>See you later!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="explain_celebration" image="" itemindex="">
+         <talk_answer link_index="explain_host" mid="45"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="42"><![CDATA[<html>$Oath Assistant Grace$<BR>Oath Ceremony is a very important party!<BR>You can't just go through such a happy and good day?<BR><FONT color=#a82424>If you request Terramai</FONT> <FONT color=#a82424>gift</FONT>will given to guests.<BR>If you take a Perfect Oath <FONT color=#a82424>Additional Benefits</FONT>will be given too.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="explain_hall" image="" itemindex="">
+         <talk_answer link_index="explain_host" mid="46"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="43"><![CDATA[<html>$Oath Assistant Grace$<BR>If I go to see Irine, you will be able be on the place where Terramai locates.<BR>And if you are standing there, your guests will see you better!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="basic_addquest" image="" itemindex="">
+         <talk_answer link_index="explain" mid="54"><![CDATA[<html><FONT color=#387206>[Oath Ceremony]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="exit" mid="55"><![CDATA[<html><FONT color=#387206>[Leave Oath Hall]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="addquest" mid="56"><![CDATA[<html><FONT color=#7e12d2>[Oath]</FONT> I would never forget how happy I was today!</html>]]></talk_answer>
+         <talk_question mid="48"><![CDATA[<html>$Oath Assistant Grace$<BR>Would you mind lowering your voice during Oath Ceremony?.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="addquest" image="" itemindex="">
+         <talk_answer link_index="basic_addquest" mid="57"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="52"><![CDATA[<html>$Oath Assistant Grace$<BR>
+Oh! Maybe we can talk about it later?<BR>
+The Oath Ceremony is more important now.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">basic</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,11,15);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,8,13);</exe>
+         <exe type="conexe" true="4" false="6">1</exe>
+         <exe type="conexe" true="6" false="5">2</exe>
+         <exe type="conexe" true="11" false="10">0</exe>
+         <exe type="talk">no_out</exe>
+         <exe type="conexe" true="8" false="9">3</exe>
+         <exe type="talk">explain_host</exe>
+         <exe type="talk">explain_guest</exe>
+         <exe type="talk">go_lv8</exe>
+         <exe type="talk">go_lv24</exe>
+         <exe type="conexe" true="13" false="0">4</exe>
+         <exe type="talk">basic_addquest</exe>
+      </executions>
+      <conditions>
+         <chk type="lvl" op=">=">24</chk>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+         <chk type="custom">api_user_IsMatching(userObjID) == 1</chk>
+         <chk type="custom">api_user_IsPromiseUserInHall(userObjID) == 1</chk>
+         <chk type="hasquest">3741</chk>
+      </conditions>
+      <exelink idx="explain">7</exelink>
+      <exelink idx="exit">3</exelink>
+      <exelink idx="basic_talk">12</exelink>
+      <exelink idx="basic_talk2">12</exelink>
+      <exelink idx="001">2</exelink>
+      <exelink idx="basic_talk3">12</exelink>
+      <exelink idx="002">1</exelink>
+      <exelink idx="basic_talk4">12</exelink>
+      <exelink idx="explain">7</exelink>
+      <exelink idx="exit">3</exelink>
+   </talk>

@@ -1,0 +1,94 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq09_7704_saint_guardjoy_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>7704</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Recent Interests]]></qkname>
+      <qnpc>
+         <npcid>252</npcid>
+         <npcename>n252_saint_guard</npcename>
+         <npckname>왕성 근위병 조이</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n252_saint_guard-accepting-a" mid="7" select_type="0"><![CDATA[<html>Siapakah Harori?</html>]]></talk_answer>
+      <talk_answer link_index="n252_saint_guard-accepting-b" mid="8" select_type="0"><![CDATA[<html>Hebat sekali, pertemuan para penggemar Harori.</html>]]></talk_answer>
+      <talk_answer link_index="n252_saint_guard-accepting-c" mid="9" select_type="0"><![CDATA[<html>Aku juga ingin pergi ke sana.</html>]]></talk_answer>
+      <talk_answer link_index="n252_saint_guard-accepting-d" mid="10" select_type="0"><![CDATA[<html>Jika aku punya tiketnya, akan kuberikan padamu.</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Royal Guard Joey$<BR>
+Hmm, pertemuan para penggemar Harori sebentar lagi akan diselenggarakan. Banyak prajurit yang tertarik pada acara tersebut tapi sulit sekali mendapatkan tiket. Aku benar-benar ingin memilikinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Royal Guard Joey$<BR>Apa, kamu tidak tahu Harori? Dia adalah idola para prajurit. Dia sangat cantik... oh, maaf. Jika kamu tidak tertarik padanya, sudahlah. Lupakan saja.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$Royal Guard Joey$<BR>
+Ya, aku cukup mengharapkannya. Aku dapat bertemu Harori secara langsung. Pasti dia lebih cantik daripada di fotonya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Royal Guard Joey$<BR>
+Aku ingin pergi ke sana. Tapi aku tidak mampu membeli tiketnya. Jadi aku mengikuti acara klub penggemar. Semoga aku menang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n252_saint_guard-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Royal Guard Joey$<BR>Oh, benarkah?! Tapi jika aku mendapatkannya dengan gratis, aku akan memberikan hadiah untukmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 7704, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 252, 180 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 252,80 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 252, 120 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 252, 180 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n252_saint_guard" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n252_saint_guard" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n252_saint_guard" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n252_saint_guard" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 최근의 관심사에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>252:2250:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

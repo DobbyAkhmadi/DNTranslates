@@ -1,0 +1,260 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq01_053_hound_digester</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>53</qid>
+      <designer>김주연</designer>
+      <qlevel>5</qlevel>
+      <qdesc>300084(썩은 나무 곰팡이),300085(하운드 소화제)</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Barking Mad]]></qkname>
+      <qnpc>
+         <npcid>2</npcid>
+         <npcename>n002_trader_dorin</npcename>
+         <npckname>대장장이 도린 (프레리 무기상)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3</npcid>
+         <npcename>n003_trader_dolis</npcename>
+         <npckname>상인 도리스 (프레리 잡화상)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-noquest" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Merchant Doris$<BR>Halo Adventurers. Ada yang bisa kubantu?<BR><FONT color=#7e12d2>(Mendapatkan quest dari Blacksmith Dorin)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-a" mid="7" select_type="0"><![CDATA[<html>Yup, ada apa ya?</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Blacksmith Dorin$<BR>Kemarilah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-a" image="QN_Npc_Woman_Trader_Doris.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-b" mid="9" select_type="0"><![CDATA[<html>Sebuah item yang aku kembalikan?</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Blacksmith Dorin$<BR>Benda aneh macam apa itu yang kamu dapatkan dari <FONT color=#a82424>Merchant Doris</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-b" image="QM_HoundNormal_1.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-c" mid="11" select_type="0"><![CDATA[<html>Bagaimana ini bisa terjadi... harusnya tidak begini...</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Blacksmith Dorin$<BR>Bukankah kamu dapat <FONT color=#a82424>Nutritious Food</FONT> dari <FONT color=#a82424>Doris</FONT>! Hound jadi aneh dan mulutnya berbusa! Kenapa seperti ini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-c" image="QM_HoundNormal_1.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-d" mid="15" select_type="0"><![CDATA[<html>... Tidak... Kupikir dia akan segera mati...</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Blacksmith Dorin$<BR>Menyembuhkan sakitnya? Apa dia gila?! Apakah kini houndnya terlihat normal dan sehat?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-d" image="QN_Npc_Woman_Trader_Doris.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-e" mid="17" select_type="0"><![CDATA[<html>Ah... Ok. (Sabar saja...)</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Blacksmith Dorin$<BR>Temui <FONT color=#a82424>Merchant Doris</FONT> secepatnya dan carikan solusi!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-accepting-acceptted" mid="19" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Hound Digestant$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-1" image="QN_Npc_Woman_Trader_Doris.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Blacksmith Dorin$<BR>Argh, darah tinggiku...<BR>Kenapa masih di sini? Minta solusi dari <FONT color=#a82424>Merchant Doris</FONT> sekarang!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-a" mid="23" select_type="0"><![CDATA[<html>... Houndnya sakit setelah memakannya.</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Oh, kamu. Ada apa lagi?<BR>Apakah <FONT color=#a82424>Blacksmith Dorin</FONT> butuh perawatan telitiku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-a" image="QS_Default.dds" itemindex="300066" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-b" mid="25" select_type="0"><![CDATA[<html>(Kamu menjelaskan situasinya)</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Tidak mungkin. Ramuan <FONT color=#a82424>Nutritious Food</FONT> menggunakan bahan terbaik, sebuah potion yang dapat membangkitkan Hound, jadi kenapa...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-b" image="QM_HoundNormal_1.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-c" mid="29" select_type="0"><![CDATA[<html>Tidak penting soal itu, dia tidak punya waktu banyak...</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Houndnya kejang dan pingsan?<BR>Kamu yakin houndnya bukan sedang makan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-c" image="QM_HoundNormal_1.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-d" mid="31" select_type="0"><![CDATA[<html>Bukankah aku bilang mulutnya berbusa...</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Merchant Doris$<BR>Hmm... Aku yaking Hound belum terbiasa dengan <FONT color=#a82424>taste of home</FONT> pencernaanya tidak cocok.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-d" image="QS_Default.dds" itemindex="300085" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-1-e" mid="33" select_type="0"><![CDATA[<html>(Kelihatannya bukan masalah perut...)</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Baiklah! Yang di butuhkan adalah <FONT color=#a82424>Hound Digestant</FONT> untuk mengembalikan energy. Tolong carikan bahannya sementara aku meramu resepnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-1-e" image="QS_Default.dds" itemindex="300084" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-2" mid="35" select_type="0"><![CDATA[<html>... Baiklah kalau begitu, akan ku cari.</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Merchant Doris$<BR>Bahan terbaik untuk <FONT color=#a82424>Hound Digestant</FONT> adalah <FONT color=#a82424>Rotten Tree Fungi</FONT>. Tumbuh di tempat gelap dan lembab, yang terdekat di...<BR>Cobalah di <FONT color=#a82424>Catacomb</FONT> dari <FONT color=#a82424>Wind Forest</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-2" image="QW_3.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Terima kasih, sekarang pergilah ke. <FONT color=#a82424>Catacombs</FONT>di<FONT color=#a82424>Wind Forest</FONT>dan kumpulkan <FONT color=#a82424>Rotten Tree Fungi</FONT>untukku. <FONT color=#a82424>Rotten Tree Fungi</FONT>kemungkinan berada disana karena merupakan sumber kejahatan yang paling kuat.</html> ]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-3" image="QS_Default.dds" itemindex="300084" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-3-a" mid="40" select_type="0"><![CDATA[<html>Ini dia. (Memberikan Rotten Tree Fungi)</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Merchant Doris$<BR>Sudah menemukan jamurnya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-3-a" image="QS_Default.dds" itemindex="300084" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-3-b" mid="42" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Bagus. Fermentasi <FONT color=#a82424>jamurnya</FONT> dan tambahkan sedikit <FONT color=#a82424>ramuan kimia</FONT>, dan <FONT color=#a82424>Hound Digestant</FONT> telah siap! <BR><FONT color=#7e12d2>(Doris menaburkan bubuk di atasnya...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-3-b" image="QS_Default.dds" itemindex="300085" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n003_trader_dolis-4" mid="44" select_type="0"><![CDATA[<html>... Oh... yang benar?</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Merchant Doris$<BR>Ok, selesai. Sebuah <FONT color=#a82424>Hound Digestant</FONT> di buat dengan <FONT color=#a82424>teknologi tinggi</FONT> dan pengetahuan dari <FONT color=#a82424>ilmu obat-obatan terkini</FONT>.<BR><FONT color=#7e12d2>(Merchant Doris mulai mencampur serbuk aneh dengan fungi)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n003_trader_dolis-4" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Merchant Doris${action:Talk}<BR>Bawa ini dan berikan ke <FONT color=#a82424>Hound</FONT><FONT color=#a82424>Blacksmith Dorin</FONT>. Houndnya akan kembali normal!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-4" image="QS_Default.dds" itemindex="300085" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-4-a" mid="67" select_type="0"><![CDATA[<html>Ini adalah obat pencernaan Hound...</html>]]></talk_answer>
+      <talk_question mid="65"><![CDATA[<html>$Blacksmith Dorin$<BR>Apa itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-4-a" image="QS_Default.dds" itemindex="300085" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-4-b" mid="70" select_type="0"><![CDATA[<html>(tidak terlihat seperti masalah pencernaan...)</html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Blacksmith Dorin$<BR><FONT color=#a82424>Digestant</FONT>? Ah, brillian! Mungkin Hound makan berlebihan dan jadi sakit. Kenapa tidak terpikirkan olehku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-4-c" mid="73" select_type="0"><![CDATA[<html>... Terima kasih.</html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Blacksmith Dorin$<BR>Tidak apa-apa, lupakan saja. Terima kasih atas bantuannya. Ini hadiah kecil sebagai terima kasihku.<FONT color=#a82424></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n002_trader_dorin-4-d" mid="75" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="74"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n002_trader_dorin-4-d" image="QM_HoundNormal_1.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="76"><![CDATA[<html>$Blacksmith Dorin$<BR>Aku harus memberikannya pada Hound sekarang. Daaah.<BR><FONT color=#7e12d2>(Dorin memberi obat pada Hound)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">53</exe>
+         <exe type="recompense_view">531,531,532,532,532,,536,537,,</exe>
+         <exe type="talk" npc="n002_trader_dorin">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="huntitem" num="1" exe="3,4,5" onexe="">300084</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">148</exe>
+         <exe type="addquestitem" num="1">300084</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="addquestitem" num="1">300085</exe>
+         <exe type="delquestitem" num="-1">300084</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">531,531,532,532,532,,536,537,,</exe>
+         <exe type="delquestitem" num="-1">300085</exe>
+         <exe type="complete" true="">53</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n002_trader_dorin" sub="e">1</exelink>
+   <exelink qstep="accepting" npc="n002_trader_dorin" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n003_trader_dolis" sub="b" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="c" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="d" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="e" />
+   <exelink qstep="1" npc="n003_trader_dolis" sub="2">6,0,1,2</exelink>
+   <exelink qstep="3" npc="n003_trader_dolis" sub="b" />
+   <exelink qstep="3" npc="n003_trader_dolis" sub="4">2,3,0,1</exelink>
+   <exelink qstep="4" npc="n002_trader_dorin" sub="b" />
+   <exelink qstep="4" npc="n002_trader_dorin" sub="c">0</exelink>
+   <exelink qstep="4" npc="n002_trader_dorin" sub="d">1,2</exelink>
+   <journal_data recompense="1:531,2:532,6:536,7:537" quest_title="하운드의 소화제" chapterid="" quest_level="5" quest_mark_type="10" use_item_list="300084,300085">
+      <journal index="1">
+         <contents_image>QN_Npc_Woman_Trader_Doris.dds</contents_image>
+         <destination_pos>1,755.95,1811.22</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>3</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Houndnya pingsan!]]></title>
+         <contents mid="79"><![CDATA[<html><FONT color=#a82424>Blacksmith Dorin</FONT> bilang hound pingsan setelah di berikan ramuan dari<FONT color=#a82424>Merchant Doris</FONT>. Cari tahu apa yang terjadi.<BR><BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ Merchant Doris</FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[Bicara pada Merchant Doris]]></destination>
+         <todo_msg mid="81"><![CDATA[Quest telah di tambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_3.dds</contents_image>
+         <destination_pos>64,0,0</destination_pos>
+         <destination_mode>custom:61@1,62@1,64@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="83"><![CDATA[Rotten Tree Fungi]]></title>
+         <contents mid="84"><![CDATA[<html>Merchant Doris yakin bahwa Hound terkena masalah pencernaan dan ia memintamu mencari Wooden Tree Fungi sebagai bahan ramuan obat.<BR><FONT color=#a82424>Pergi ke</FONT>Catacomb<FONT color=#a82424>Dan kalahkan</FONT><FONT color=#2b2723>monster terkuat disana.</FONT><BR><BR><FONT color=#086171>Wind Forest (Catacomb Entrance)</FONT> <FONT color=#a82424>→ Catacomb</FONT></html>]]></contents>
+         <destination mid="85"><![CDATA[Carilah Rotten Tree Fungi di Catacomb]]></destination>
+         <todo_msg mid="86"><![CDATA[Tolong pergi ke Catacomb untuk mencari Rotten Tree Fungi.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Woman_Trader_Doris.dds</contents_image>
+         <destination_pos>1,755.95,1811.22</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>3</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="91"><![CDATA[Obat percernaan Hound I]]></title>
+         <contents mid="92"><![CDATA[<html>Berikan <FONT color=#a82424>Rotten Tree Fungi</FONT> yang di dapatkan dari Catacomb ke <FONT color=#a82424>Merchant Doris</FONT>.<BR><BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ Merchant Doris</FONT></html>]]></contents>
+         <destination mid="93"><![CDATA[Bicara pada Merchant Doris]]></destination>
+         <todo_msg mid="94"><![CDATA[Rotten Tree Fungi terkumpul. Kembali dan temui Merchant Doris.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>1,-962.33,49.29</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>2</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="95"><![CDATA[Obat pencernaan Hound II]]></title>
+         <contents mid="96"><![CDATA[<html>Bawa <FONT color=#a82424>Hound Digestant</FONT> ke <FONT color=#a82424>Blacksmith Dorin</FONT>.<BR> <BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ Blacksmith Dorin</FONT></html>]]></contents>
+         <destination mid="97"><![CDATA[Bicara pada Blacksmith Dorin]]></destination>
+         <todo_msg mid="98"><![CDATA[Tolong berikan Hound Digestant ke Blacksmith Dorin.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>5:-1</user_level>
+      <user_class>1:2:6:7</user_class>
+      <prev_quest>51</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

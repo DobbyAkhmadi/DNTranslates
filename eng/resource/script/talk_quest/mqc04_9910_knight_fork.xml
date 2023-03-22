@@ -1,0 +1,588 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc04_9910_knight_fork</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>104</qchapter>
+      <qid>9910</qid>
+      <designer>조설빈</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9911</nextqid>
+      <nextqname>mqc04_9911_blunder</nextqname>
+      <nextqnpc>n2872_kanna</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Forbidden Chest]]></qkname>
+      <qnpc>
+         <npcid>2978</npcid>
+         <npcename>n2978_hwaran</npcename>
+         <npckname>사령관 화란</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2995</npcid>
+         <npcename>n2995_kali</npcename>
+         <npckname>칼리</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2872</npcid>
+         <npcename>n2872_kanna</npcename>
+         <npckname>치유사 칸나</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2994</npcid>
+         <npcename>n2994_maid_of_honor</npcename>
+         <npckname>태령전 궁녀</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2990</npcid>
+         <npcename>n2990_hear</npcename>
+         <npckname>엿들어 보기</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2989</npcid>
+         <npcename>n2989_hole</npcename>
+         <npckname>움푹 패인 곳</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2996</npcid>
+         <npcename>n2996_look</npcename>
+         <npckname>잘 보이는 곳</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-accepting" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-accepting-acceptted" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Commander Hwaran$<BR>Haha... Even if that doesn't mean anything to you,<BR>
+the more pieces I remove from the board, the more meaningful it is to me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Kali$<BR>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-1-a" mid="136" select_type="0"><![CDATA[<html>I accept the mission.</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(What the heck is she talking about?</FONT><BR>
+<FONT color=#7e12d2>Well, who cares what her reasons are anyway? She told me to return it, so let's just think of it like I'm borrowing it temporarily.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-1-a" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-2" mid="13" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>$Commander Hwaran${sound:npc_Hwaran_qu9910_sp_01.ogg}<BR>Then we'll have to establish a signal.<BR>When I say Plentiful Gold Trove, you can create a distraction.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-1-" mid="152" select_type="5" />
+      <talk_question mid="151"><![CDATA[<html>$Healer Kanna$<BR>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-2" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$Commander Hwaran$<BR>Then I'll send the girl to you, pretending I don't know anything.<BR>
+<BR><FONT color=#7e12d2>※ You hear footsteps. Hurry up and hide.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2990_hear-2" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2990_hear-2-a" mid="16" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Commander Hwaran${sound:npc_Hwaran_qu9900_sp_01.ogg}<BR>How very interesting. You brought back the most useless and the most precious items from the Silver Treasure Vault.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2990_hear-2-a" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2990_hear-2-b" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(I can't hear what she's saying... Damn it, I should've picked a closer hiding place!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2990_hear-2-b" image="QS_Default.dds" itemindex="400730" portrait_left="Npc_Left_hwaran.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n2990_hear-2-c" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Kali${sound:npc_Kali_qu9910_sp_01.ogg}<BR>Is this precious?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2990_hear-2-c" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n2990_hear-2-d" mid="22" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Commander Hwaran$<BR>Of course it's precious. We need that stone to go into the treasure vault.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2990_hear-2-d" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n2990_hear-2-e" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Stone…? Is that what she said earlier? And the girl is... a Lagendian adventurer?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2990_hear-2-e" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_answer link_index="n2990_hear-3" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Commander Hwaran${sound:npc_Hwaran_qu9900_sp_03.ogg}<BR>Heheh… The Plentiful Gold Trove... Not many people know this name.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2990_hear-3" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="Npc_Right_Kali.dds" center_image="">
+      <talk_question mid="27"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(That's the signal! Time to make a scene.)</FONT><BR>
+<FONT color=#7e12d2><BR>※ Speak with the Taeryeong Shrine Maid and get Kali's attention.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-3-a" mid="29" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Taeryeong Shrine Maid${sound:npc_Maid_qu9910_sp_01.ogg}<BR>Can I help you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3-a" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-3-b" mid="31" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>This palace is huuuuge and full of beautiful women!</FONT><BR>
+<FONT color=#662500>The lady of the palace has a refined eye when it comes to choosing the staff.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3-b" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-3-c" mid="33" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Taeryeong Shrine Maid${sound:npc_Maid_qu9910_sp_02.ogg}<BR>It's only outsiders like you who harass the palace maids.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3-c" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-3-d" mid="35" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Well as to that... I spent my entire childhood in Red Lotus Palace.</FONT><BR>
+<FONT color=#662500>I guess I didn't notice back then because I only ever saw beggars in the dirty alleys where I grew up.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3-d" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-3-e" mid="37" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Taeryeong Shrine Maid$<BR><FONT color=#7e12d2>(She stares at you sharply.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3-e" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-3-f" mid="39" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(I feel bad for her, but I need to do a little more. I better raise my voice.)</FONT><BR>
+<FONT color=#662500>Compared to those dirty allies, this palace is like a paradise. I guess the lady put of lot of time into choosing the maids.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3-f" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-3-g" mid="41" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Taeryeong Shrine Maid${sound:npc_Maid_qu9910_sp_03.ogg}<BR>How rude. I can call the guards right now and have you arrested.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3-g" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-3-h" mid="43" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh my, I guess got too chatty. </FONT><FONT color=#7e12d2>(That should be enough)</FONT><BR>
+<FONT color=#662500>If you ever need any help, please call me. I'll take care of anything if it's for you.</FONT><BR>
+<FONT color=#662500>I'm a pretty famous mercenary, you know.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3-h" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-3-i" mid="45" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Taeryeong Shrine Maid${sound:npc_Maid_qu9910_sp_04.ogg}<BR>Anything?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-3-i" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2994_maid_of_honor-4" mid="47" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yes! Just ask me.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2994_maid_of_honor-4" image="" itemindex="" portrait_left="Npc_Left_palace_maid.dds" portrait_right="" center_image="">
+      <talk_question mid="48"><![CDATA[<html>$Taeryeong Shrine Maid${sound:npc_Maid_qu9910_sp_05.ogg}<BR>Please leave now.<BR><BR><FONT color=#7e12d2>※ You successfully drew her attention! Now speak with Kali.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-a" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh, aren't you that Kali? The whole town is talking about you...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-a" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-b" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Kali${sound:npc_Kali_qu9910_sp_02.ogg}<BR>Who are you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-b" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-c" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh... sorry, my apologies! I thought you would know me for sure.</FONT><BR>
+<FONT color=#662500>Well, maybe you don't know me since you haven't been here long.</FONT><BR>
+<FONT color=#662500>Wait a second.</FONT> <FONT color=#7e12d2>(Takes a flyer out of his pocket.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-c" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-d" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Kali$<BR>……?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-d" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-e" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Reads the flyer.)</FONT><BR>
+Have you ever seen a mercenary like this? The <FONT color=#a82424>best mercenary</FONT> in the <FONT color=#a82424>Mistland Human Network</FONT>. Has a large number of regular customers.<BR>
+<FONT color=#a82424>A mercenary who carries out </FONT> your missions like his own. What more could you ask?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-e" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-f" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Kali${sound:npc_Kali_qu9910_sp_03.ogg}<BR>……??? You're... a mercenary?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-f" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-g" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Quickly folds the flyer.)</FONT> Right, a mercenary. I guess that's enough with the flyer. Now you know who I am, right?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-g" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-h" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>${user_nick}$<BR>My name is<FONT color=#387206> {user_nick}</FONT>. If you have any missions for me, you are always welcome.<BR>
+Hire me today and I'll give you<FONT color=#a82424> a special 30% dis-...</FONT>. No, never mind.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-h" image="QN_hwaran.dds" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-i" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$Kali${sound:npc_Kali_qu9910_sp_04.ogg}<BR>I see... <FONT color=#7e12d2>(Expression of disgust.)</FONT><BR>Anyway... Lady Hwaran asked me to tell you to be quiet.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-i" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-j" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ahem! Well! I can't offend the lady of the palace.</FONT><BR>
+<FONT color=#662500>Ah, just take this.</FONT><FONT color=#7e12d2> (Hands over the folded flyer.)</FONT><BR>
+<FONT color=#662500>You never know when you might need a mercenary like me to deal with the trials and tribulations of life in Mistland.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-j" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-k" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Kali${sound:npc_Kali_qu9910_sp_05.ogg}<BR>Uh, okay…. <FONT color=#7e12d2>(Carefully takes the end of the flyer.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-k" image="" itemindex="" portrait_left="Npc_Left_Kali.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-4-l" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(This is the time! I'll steal the stone while she's eying the flyer...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-4-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2995_kali-5" mid="74" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Watching the back of the girl as she walks away.)</FONT> <FONT color=#662500>Phew... That was close.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2995_kali-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="75"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But my skills are still sharp.</FONT><FONT color=#7e12d2>(Takes out the Jade Stone.)</FONT><BR>
+<FONT color=#662500>Shall I enter the treasure vault before she knows the stone is gone?</FONT><BR><FONT color=#662500><BR></FONT><FONT color=#7e12d2>※ Examine the Sunken Area at the end of the Taeryeong Shrine Secret Path.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-5-check" mid="77" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Insert Finest Stone Jade)</FONT></html>]]></talk_answer>
+      <talk_question mid="76"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-5-" mid="140" select_type="5" />
+      <talk_question mid="139"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>※This quest cannot be carried out in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2978_hwaran-6" image="" itemindex="" portrait_left="Npc_Left_hwaran.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2978_hwaran-6-" mid="141" select_type="5" />
+      <talk_question mid="78"><![CDATA[<html>$Commander Hwaran$<BR>That red lotus flower. Doesn't it look like a flame blooming on the water?<BR>
+I quite like that contrast.<BR>
+<BR><FONT color=#7e12d2>※ (Solo) Clear the Plentiful Gold Trove Nest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-6-check" mid="92" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Insert Finest Stone Jade)</FONT></html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-6-" mid="143" select_type="5" />
+      <talk_question mid="142"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone.)</FONT><BR><BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-7-check" mid="93" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Insert Finest Stone Jade)</FONT></html>]]></talk_answer>
+      <talk_question mid="80"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-7-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-7-" mid="145" select_type="5" />
+      <talk_question mid="144"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>※This quest cannot be carried out in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2996_look-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2996_look-7-a" mid="94" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Perfect. I think I'm done here. Shall I head back?</FONT><FONT color=#662500>I might as well take some treasure, and...</FONT><BR>
+<FONT color=#662500>Wait… where is the Cup of Healing…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2996_look-7-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2996_look-7-b" mid="95" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ugh…! </FONT><FONT color=#7e12d2>(Grabs face with one hand)</FONT><BR>
+<FONT color=#662500>Why… is this happening again? Urgh!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2996_look-7-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2996_look-8" mid="96" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#7e12d2>(Why… now all of a sudden? I'm not even in the Monolith!)</FONT><FONT color=#662500> No… I better… get out…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2996_look-8" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="84"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Urgh, I have to hurry... Kanna...</FONT><BR>
+<FONT color=#662500><BR></FONT><FONT color=#7e12d2>※ Speak with Healer Kanna in Red Lotus Palace Main Street.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-8" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-8-a" mid="97" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Healer Kanna$<BR><FONT color=#387206>{user_nick}</FONT>? What happened to you? Didn't you go to the treasure vault?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-8-a" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-8-b" mid="98" select_type="2" />
+      <talk_question mid="86"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kan… na…… Take this.</FONT><FONT color=#662500> </FONT><FONT color=#7e12d2>(Hands over an old cloth sack.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-8-b" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-8-c" mid="99" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Healer Kanna${sound:npc_Kanna_qu9910_sp_01.ogg}<BR>What's this?<FONT color=#7e12d2> (Looks in the sack)</FONT><BR>Goddess... Where did you get all this...? So you really went to the treasure vault? Did you find the Cup of Healing?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-8-c" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-8-d" mid="100" select_type="2" />
+      <talk_question mid="88"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Cough, cough! It is really… a treasure vault… but the cup is…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-8-d" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-8-e" mid="101" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>$Healer Kanna$<BR>What's wrong with you?! It looks like you were just crawling through the Monolith!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2872_kanna-8-e" image="" itemindex="" portrait_left="Npc_Left_Kanna.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2872_kanna-8-!next" mid="102" select_type="4" />
+      <talk_question mid="90"><![CDATA[<html>$Quest Complete$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-9" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2989_hole-9-check" mid="148" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Insert Finest Stone Jade)</FONT></html>]]></talk_answer>
+      <talk_question mid="147"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2989_hole-9-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="149"><![CDATA[<html>$Sunken Area$<BR><FONT color=#7e12d2>(There's an empty space in the middle of a large rock that seems to have been deliberately created by someone.)</FONT><BR><BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9910</exe>
+         <exe type="recompense_view">99100,,,,,,,,,,</exe>
+         <exe type="talk" npc="n2978_hwaran">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="addquestitem" num="1">400730</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment>3은 쓰지 않고 193에서 트리거로 넘겨줌
+193에서 트리거로 아이템 400725 추가</comment>
+      <conditions>
+         <chk type="questitem" num="1" op="]=">400730</chk>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="conexe" true="0,1,4" false="5">0 / 1</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,14970,1);</exe>
+         <exe type="checkStageClearRank" rand="안씀" num="14971" onexe="6,7" true="안씀" xsi:nil="true" />
+         <exe type="talk" npc="n2989_hole">a</exe>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment>2 : 이동은 193 맵에서 트리거로 시켜줌</comment>
+      <conditions>
+         <chk type="questitem" num="1" op="]=">400730</chk>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,14970,1);</exe>
+         <exe type="talk" npc="n2989_hole">a</exe>
+         <exe type="conexe" true="" false="1">0 / 1</exe>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment>2,3: 이동은 맵 193에서 트리거로 시켜줌</comment>
+      <conditions>
+         <chk type="questitem" num="1" op="]=">400730</chk>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">8</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,14970,1);</exe>
+         <exe type="conexe" true="" false="4">0 / 1</exe>
+         <exe type="talk" npc="n2989_hole">a</exe>
+         <exe type="delquestitem" num="-1">400730</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">9910</exe>
+         <exe type="recompense">99100,,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment />
+      <conditions>
+         <chk type="questitem" num="1" op="]=">400730</chk>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="custom">api_user_ChangeMap(userObjID,14970,1);</exe>
+         <exe type="conexe" true="" false="2">0 / 1</exe>
+         <exe type="talk" npc="n2989_hole">a</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2978_hwaran" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n2978_hwaran" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n2990_hear" sub="b" />
+   <exelink qstep="2" npc="n2990_hear" sub="c" />
+   <exelink qstep="2" npc="n2990_hear" sub="d" />
+   <exelink qstep="2" npc="n2990_hear" sub="e" />
+   <exelink qstep="2" npc="n2990_hear" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n2994_maid_of_honor" sub="b" />
+   <exelink qstep="3" npc="n2994_maid_of_honor" sub="c" />
+   <exelink qstep="3" npc="n2994_maid_of_honor" sub="d" />
+   <exelink qstep="3" npc="n2994_maid_of_honor" sub="e" />
+   <exelink qstep="3" npc="n2994_maid_of_honor" sub="f" />
+   <exelink qstep="3" npc="n2994_maid_of_honor" sub="g" />
+   <exelink qstep="3" npc="n2994_maid_of_honor" sub="h" />
+   <exelink qstep="3" npc="n2994_maid_of_honor" sub="i" />
+   <exelink qstep="3" npc="n2994_maid_of_honor" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n2995_kali" sub="b" />
+   <exelink qstep="4" npc="n2995_kali" sub="c" />
+   <exelink qstep="4" npc="n2995_kali" sub="d" />
+   <exelink qstep="4" npc="n2995_kali" sub="e" />
+   <exelink qstep="4" npc="n2995_kali" sub="f" />
+   <exelink qstep="4" npc="n2995_kali" sub="g" />
+   <exelink qstep="4" npc="n2995_kali" sub="h" />
+   <exelink qstep="4" npc="n2995_kali" sub="i" />
+   <exelink qstep="4" npc="n2995_kali" sub="j" />
+   <exelink qstep="4" npc="n2995_kali" sub="k" />
+   <exelink qstep="4" npc="n2995_kali" sub="l" />
+   <exelink qstep="4" npc="n2995_kali" sub="5">0,1,2</exelink>
+   <exelink qstep="5" npc="n2989_hole" sub="check">2</exelink>
+   <exelink qstep="5" npc="n2989_hole" sub="" />
+   <exelink qstep="6" npc="n2989_hole" sub="check">2</exelink>
+   <exelink qstep="6" npc="n2989_hole" sub="" />
+   <exelink qstep="7" npc="n2989_hole" sub="check">3</exelink>
+   <exelink qstep="7" npc="n2989_hole" sub="" />
+   <exelink qstep="7" npc="n2996_look" sub="b" />
+   <exelink qstep="7" npc="n2996_look" sub="8">0,1,5</exelink>
+   <exelink qstep="8" npc="n2872_kanna" sub="b" />
+   <exelink qstep="8" npc="n2872_kanna" sub="c" />
+   <exelink qstep="8" npc="n2872_kanna" sub="d" />
+   <exelink qstep="8" npc="n2872_kanna" sub="e">1</exelink>
+   <exelink qstep="8" npc="n2872_kanna" sub="!next">0</exelink>
+   <journal_data recompense="99100" quest_title="금단의 궤" chapterid="104" quest_level="95" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos>193,n2978</destination_pos>
+         <destination_mode>custom:193@1</destination_mode>
+         <statemark_npcid>2978</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="104"><![CDATA[It's Called the Plentiful Gold Trove]]></title>
+         <contents mid="105"><![CDATA[<html>Hwaran really is a tough nut to crack. She has given you the mysterious mission to steal the treasure vault key, use it, and then bring it back. But what can you do? Hwaran is the Commander Hwaran of the Southern Territory, after all.<BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT> - <FONT color=#a82424>Commander Hwaran</FONT></html>]]></contents>
+         <destination mid="106"><![CDATA[Speak with Hwaran in Red Lotus Palace Taeryeong Shrine]]></destination>
+         <todo_msg mid="107"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos>193,n2990</destination_pos>
+         <destination_mode>custom:193@1</destination_mode>
+         <statemark_npcid>2990</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="108"><![CDATA[Hiding in the Shadows]]></title>
+         <contents mid="109"><![CDATA[<html>You decided to do as Hwaran said. Stay hidden in a place that won't stand out for now.<BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT> - <FONT color=#a82424>Eavesdrop</FONT></html>]]></contents>
+         <destination mid="110"><![CDATA[Eavesdropping in the Taeryeong Shrine]]></destination>
+         <todo_msg mid="111"><![CDATA[Hide yourself and listen to them talk.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image />
+         <destination_pos>193,n2994</destination_pos>
+         <destination_mode>custom:193@1</destination_mode>
+         <statemark_npcid>2994</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="112"><![CDATA[To Approach the Target]]></title>
+         <contents mid="113"><![CDATA[<html>Kali, the adventurer from Lagendia, has the key. You have to cause a ruckus to distract her from the treasure vault... Get moving.<BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT><FONT color=#2b2723> -</FONT><FONT color=#086171> </FONT><FONT color=#a82424>Taeryeong Shrine Maid</FONT></html>]]></contents>
+         <destination mid="114"><![CDATA[Speak with the Taeryeong Shrine Maid]]></destination>
+         <todo_msg mid="115"><![CDATA[Speak with the Taeryeong Shrine Maid and get Kali's attention.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image />
+         <destination_pos>193,n2995</destination_pos>
+         <destination_mode>custom:193@1</destination_mode>
+         <statemark_npcid>2995</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="116"><![CDATA[Without an Alpaca Costume]]></title>
+         <contents mid="117"><![CDATA[<html>You succeeded in drawing the attention of Kali. Now, it's time to distract her with conversation and sneak away the stone. You can manage that.<BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Kali</FONT></html>]]></contents>
+         <destination mid="118"><![CDATA[Speak with Kali]]></destination>
+         <todo_msg mid="119"><![CDATA[You successfully drew her attention! Now speak with Kali.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image />
+         <destination_pos>193,n2989</destination_pos>
+         <destination_mode>custom:193@1</destination_mode>
+         <statemark_npcid>2989</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="120"><![CDATA[Secret at the End of the Road]]></title>
+         <contents mid="121"><![CDATA[<html>You finally got the key to the treasure vault. If there is a key, it means there is a lock, so you should be able to find the treasure vault somewhere. Perhaps at the end of the Secret Path of Taeryeong Shrine.<BR>
+<FONT color=#7e12d2>※ You cannot do this quest while in a party.</FONT><BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Sunken Area</FONT></html>]]></contents>
+         <destination mid="122"><![CDATA[(Solo) Examine the Sunken Area at the end of the Secret Path.]]></destination>
+         <todo_msg mid="123"><![CDATA[Examine the Sunken Area at the end of the Taeryeong Shrine Secret Path.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image />
+         <destination_pos>193,n2989</destination_pos>
+         <destination_mode>custom:19026@3,193@1</destination_mode>
+         <statemark_npcid>2989</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="124"><![CDATA[Clean up the Storage]]></title>
+         <contents mid="125"><![CDATA[<html>At last, you entered the Plentiful Gold Trove, the treasure vault of Hwaran, only to find Hwaran's guards waiting there. "Who?" "The intruder who just came in."<BR>"Let's wipe him out."<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.<BR></FONT><FONT color=#7e12d2>※ You must find the Sunken Area in Taeryeong Shrine to access the Plentiful Gold Trove.</FONT><BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Plentiful Gold Trove Nest</FONT></html>]]></contents>
+         <destination mid="126"><![CDATA[(Solo) Clear Plentiful Gold Trove Nest]]></destination>
+         <todo_msg mid="127"><![CDATA[Clear the Plentiful Gold Trove Nest.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image />
+         <destination_pos>193,n2989</destination_pos>
+         <destination_mode>custom:19026@4,193@1</destination_mode>
+         <statemark_npcid>2996</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="128"><![CDATA[Where is the Cup of Healing?]]></title>
+         <contents mid="129"><![CDATA[<html>At last, you defeated the final guard. Now you can take as much treasure as you want. Yet... where is that Cup of Healing?<BR><FONT color=#7e12d2>※ You cannot do this quest while in a party.<BR></FONT><FONT color=#7e12d2>※ You must find the Sunken Area in Taeryeong Shrine to access the Plentiful Gold Trove.</FONT><BR><BR><FONT color=#086171>Red Lotus Palace Main Street (Taeryeong Shrine)</FONT><FONT color=#2b2723> - </FONT><FONT color=#a82424>Plentiful Gold Trove Nest (Place With a View)</FONT></html>]]></contents>
+         <destination mid="130"><![CDATA[(Solo) Inspect the Stone Statue from a Place With a View]]></destination>
+         <todo_msg mid="131"><![CDATA[Inspect the stone statue from a place that offers a good view.]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image />
+         <destination_pos>187,n2872</destination_pos>
+         <destination_mode>custom:187@1</destination_mode>
+         <statemark_npcid>2872</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="132"><![CDATA[Narrow Return]]></title>
+         <contents mid="133"><![CDATA[<html>You didn't even get a chance to find the Cup of Healing and yet once again the curse ravaging your body has flared up. The only thing that comes to mind as your consciousness fades is 'going back.' Return to the place where you can rest.<BR><BR><FONT color=#086171>Red Lotus Palace Main Street</FONT> - <FONT color=#a82424>Healer Kanna</FONT></html>]]></contents>
+         <destination mid="134"><![CDATA[Talk to Kanna at Red Lotus Palace Main Street]]></destination>
+         <todo_msg mid="135"><![CDATA[Talk to Healer Kanna at Red Lotus Palace Main Street.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>9909</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

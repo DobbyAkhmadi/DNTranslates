@@ -1,0 +1,127 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>eq_3777_honbul_fake</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>25</qchapter>
+      <qid>3777</qid>
+      <designer>안여옥</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Daily] Everlasting Lamplight]]></qkname>
+      <qnpc>
+         <npcid>2656</npcid>
+         <npcename>n2656_hongryun_talker</npcename>
+         <npckname>풍설주 소봉</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2850</npcid>
+         <npcename>n2850_goblinson</npcename>
+         <npckname>술 취한 요괴</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2656_hongryun_talker-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2656_hongryun_talker-accepting-acceptted" mid="6" select_type="0"><![CDATA[<html><FONT color=#086171>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Storyteller Sobong$<BR>Welcome, <FONT color=#387206>{user_nick}</FONT>. Are you traveling to the Haunted Village today?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2656_hongryun_talker-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2656_hongryun_talker-2" mid="8" select_type="0"><![CDATA[<html>Yes! I'll be right there.</html>]]></talk_answer>
+      <talk_answer link_index="n2656_hongryun_talker-1-a" mid="9" select_type="0"><![CDATA[<html>No, wait for a moment, please.</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Storyteller Sobong$<BR>Then, would you like to depart now?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2656_hongryun_talker-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="10"><![CDATA[<html>$Storyteller Sobong$<BR>Sounds good. Just let me know when you need my help.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2656_hongryun_talker" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n2656_hongryun_talker" sub="2">0,1</exelink>
+   <journal_data recompense="" quest_title="[일일] 끝없는 등불" chapterid="25" quest_level="95" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos>187,n2656</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>2656</statemark_npcid>
+         <statemark_type>24</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="15"><![CDATA[Conjurer Hunting 1]]></title>
+         <contents mid="16"><![CDATA[<html>Talk to Sobong and go to the Conjuring Village.<BR><BR>Red Lotus Palace Main Street - Storyteller Sobong</html>]]></contents>
+         <destination mid="17"><![CDATA[Talk with Storyteller Sobong]]></destination>
+         <todo_msg mid="18"><![CDATA[Talk with Storyteller Sobong.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos />
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid />
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="19"><![CDATA[Conjurer Hunting 2]]></title>
+         <contents mid="20"><![CDATA[<html>Defeat the Conjurer<BR><BR>Conjuring Village - Conjurer</html>]]></contents>
+         <destination mid="21"><![CDATA[]]></destination>
+         <todo_msg mid="22"><![CDATA[Light the lanterns and defeat the Conjurer.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image />
+         <destination_pos>187,n2656</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>2656</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="23"><![CDATA[Conjuring Village 3]]></title>
+         <contents mid="24"><![CDATA[<html>Return to Storyteller Sobong.<BR><BR>Red Lotus Palace Main Street - Storyteller Sobong</html>]]></contents>
+         <destination mid="25"><![CDATA[]]></destination>
+         <todo_msg mid="26"><![CDATA[Talk with Storyteller Sobong.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

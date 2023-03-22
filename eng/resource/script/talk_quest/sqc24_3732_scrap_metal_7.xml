@@ -1,0 +1,107 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc24_3732_scrap_metal_7</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>3732</qid>
+      <designer />
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Collecting Scrap Iron Pieces 7]]></qkname>
+      <qnpc>
+         <npcid>2651</npcid>
+         <npcename>n2651_hongryun_trainer</npcename>
+         <npckname>조련사 밍밍</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2651_hongryun_trainer-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2651_hongryun_trainer-accepting-iron_chk" mid="6" select_type="0"><![CDATA[<html>(You wait patiently.)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Trainer Ming-ming$<BR>*Sigh* That old man is always asking me for old horseshoes.<BR>
+Something like that doesn’t happen everyday. Just a moment!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2651_hongryun_trainer-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2651_hongryun_trainer-1-no" mid="12" select_type="0"><![CDATA[<html>That’s a shame. I’ll catch you later.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Trainer Ming-ming$<BR>No, no. All the horsehoes shine like new ones.<BR>
+Why don’t you stop by sometime!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2651_hongryun_trainer-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2651_hongryun_trainer-2-yes" mid="14" select_type="0"><![CDATA[<html>That’s great!</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>$Trainer Ming-ming$<BR>What great timing! I’ve got just the thing for you!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="prob">300</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">3732</exe>
+         <exe type="talk" npc="n2651_hongryun_trainer">1</exe>
+         <exe type="talk" npc="n2651_hongryun_trainer">2</exe>
+         <exe type="conexe" true="1,4" false="2,5">0</exe>
+         <exe type="setstep">1</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3732, 0, 1, 1, 0);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions>
+         <chk type="prob">500</chk>
+      </conditions>
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3732, 0, 1, 1, 0);</exe>
+         <exe type="addquestitem" num="3">400659</exe>
+         <exe type="addquestitem" num="1">400659</exe>
+         <exe type="addquestitem" num="5">400659</exe>
+         <exe type="conexe" true="1" false="5">0</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2651_hongryun_trainer" sub="iron_chk">3</exelink>
+   <exelink qstep="1" npc="n2651_hongryun_trainer" sub="no">0</exelink>
+   <exelink qstep="2" npc="n2651_hongryun_trainer" sub="yes">0,4</exelink>
+   <journal_data recompense="" quest_title="고철 조각 모으기 7" chapterid="-1" quest_level="95" quest_mark_type="23" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

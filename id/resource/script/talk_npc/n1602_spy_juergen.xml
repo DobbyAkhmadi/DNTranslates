@@ -1,0 +1,20 @@
+   <talk>
+      <npcename>n1602_spy_juergen</npcename>
+      <npcid>1602</npcid>
+      <startexe>0</startexe>
+      <comment>4550 퀘스트를 받을 수 있는 조건 (4550 완료 안함, 4549 완료함) 을 만족하면 4550으로 바로 꽂아준다.</comment>
+      <npckname mid="1"><![CDATA[Undercover Spy]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(Seperti ada seseorang di sana tapi tidak ada apa-apa)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="3">1</exe>
+         <exe type="conexe" true="3" false="2">0</exe>
+         <exe type="enterquest">sqc14_4550_unexpected_meeting</exe>
+         <exe type="talk">001</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">4550</chk>
+         <chk type="hascomq">4549</chk>
+      </conditions>
+   </talk>

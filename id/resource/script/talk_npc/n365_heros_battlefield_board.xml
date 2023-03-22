@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n365_heros_battlefield_board</npcename>
+      <npcid>365</npcid>
+      <startexe>0</startexe>
+      <comment>#164282 영웅의 전장 MAPID : 13693 로 변경 (이전mapid:13631)
+
+#196207 영웅의 전장 계시판에 길드 네스트 랭킹 보기 추가</comment>
+      <npckname mid="1"><![CDATA[Hero's Battlefield ranking bulletin board]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="ranking" mid="7"><![CDATA[<html>[lihat ranking Hero's Battlefield]</html>]]></talk_answer>
+         <talk_answer link_index="guild_rank" mid="12"><![CDATA[<html>[Guild Nest Ranking View]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Hero's Battlefield ranking bulletin board$<BR>
+Bisa periksa info ranking tentang <FONT color=#a82424>Hero's Battlefield</FONT>.<BR><BR>※ <FONT color=#7e12d2>Hero's Battlefield reset setiap Sabtu pagi. Tidak bisa cek ranking dan mask stage selama waktu reset.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="001_no" image="" itemindex="">
+         <talk_question mid="5"><![CDATA[<html>$Hero's Battlefield ranking bulletin board$<BR>
+Sedang reset info ranking  <FONT color=#a82424>Hero's Battlefield</FONT>.<BR><BR>※ <FONT color=#7e12d2>Hero's Battlefield reset setiap Sabtu pagi. Tidak bisa cek ranking dan mask stage selama waktu reset.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="3" false="1">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenAllStarBattleRankBoard( userObjID, 13693 );</exe>
+         <exe type="talk">001_no</exe>
+         <exe type="custom">api_ui_OpenGuildNestRankingBoard( userObjID, 14751 );</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_env_CheckCloseGateByTime(13693) == 1</chk>
+      </conditions>
+      <exelink idx="ranking">2</exelink>
+      <exelink idx="guild_rank">4</exelink>
+   </talk>

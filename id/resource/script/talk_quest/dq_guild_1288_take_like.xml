@@ -1,0 +1,142 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dq_guild_1288_take_like</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1288</qid>
+      <designer>정진호</designer>
+      <qlevel>24</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Guild] Menerima Like]]></qkname>
+      <qnpc>
+         <npcid>996</npcid>
+         <npcename>n996_guild_quest_helper</npcename>
+         <npckname>엘리트 길드원 기무르</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n996_guild_quest_helper-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n996_guild_quest_helper-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Elite Group Guild Monroe$<BR>Daily Guild Quest. Menerima <FONT color=#a82424>[Like]</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n996_guild_quest_helper-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n996_guild_quest_helper-accepting-b" mid="8" select_type="0"><![CDATA[<html><FONT color=#2b2723>(Lanjutkan)</FONT></html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Elite Group Guild Monroe$<BR>Guild Quest, tidak dapat dijalankan oleh mereka yang tidak memiliki Guild.<BR>
+Dapatkan <FONT color=#a82424>[Like]</FONT> sebanyak <FONT color=#a82424> 5 kali</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n996_guild_quest_helper-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n996_guild_quest_helper-accepting-acceptted" mid="10" select_type="0"><![CDATA[<html><FONT color=#086171>Menerima Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$[Guild] Menerima Like$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n996_guild_quest_helper-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$Elite Group Guild Monroe$<BR>Kamu telah menyelesaikan semua quest Guild. Selamat melanjutkan pertualanganmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n996_guild_quest_helper-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n996_guild_quest_helper-2-a" mid="13" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Elite Group Guild Monroe$<BR><FONT color=#a82424>[Like]</FONT>Terima 5 Like.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n996_guild_quest_helper-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n996_guild_quest_helper-2-b" mid="15" select_type="0"><![CDATA[<html><FONT color=#086171>Reward</FONT></html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n996_guild_quest_helper-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n996_guild_quest_helper-2-back" mid="17" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Elite Group Guild Monroe$<BR>Semoga kamu senang bergabung dalam guild.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">12880,,,,,,,,,</exe>
+         <exe type="setquest">1288</exe>
+         <exe type="talk" npc="n996_guild_quest_helper">1</exe>
+         <exe type="like_get" num="5" exe="4,5,6" onexe="">8</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">12880,,,,,,,,,</exe>
+         <exe type="complete" true="">1288</exe>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "talk", "n996_guild_quest_helper.xml");</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n996_guild_quest_helper" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n996_guild_quest_helper" sub="acceptted">1,2,3</exelink>
+   <exelink qstep="2" npc="n996_guild_quest_helper" sub="a">0</exelink>
+   <exelink qstep="2" npc="n996_guild_quest_helper" sub="b">1</exelink>
+   <exelink qstep="2" npc="n996_guild_quest_helper" sub="back">2</exelink>
+   <journal_data recompense="12880" quest_title="[길드] 좋아요 받기" chapterid="" quest_level="24" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>hide</destination_pos>
+         <destination_mode>hide</destination_mode>
+         <statemark_npcid />
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="19"><![CDATA[Menerima 5 Like]]></title>
+         <contents mid="20"><![CDATA[<html>Dapatkan <FONT color=#a82424>5 Like</FONT> dari teman Guild. <BR>
+ <BR>
+<FONT color=#7e12d2>*Kamu harus bergabung dalam Guild.</FONT></html>]]></contents>
+         <destination mid="21"><![CDATA[Menerima 5 Like]]></destination>
+         <todo_msg mid="22"><![CDATA[Berikan 5 Like]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n996</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>996</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="23"><![CDATA[Selesai menerima Like]]></title>
+         <contents mid="24"><![CDATA[<html>Telah menerima 5 Like. Bicaralah pada Elite Group Guild Monroe.<BR>
+<BR><FONT color=#086171>Saint's Haven</FONT><FONT color=#a82424> - Elite Group Guild Monroe</FONT></html>]]></contents>
+         <destination mid="25"><![CDATA[Bicaralah pada Elite Group Guild Monroe]]></destination>
+         <todo_msg mid="26"><![CDATA[Quest Selesai. Bicara pada Elite Group Guild Monroe]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>1287</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

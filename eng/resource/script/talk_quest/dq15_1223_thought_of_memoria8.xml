@@ -1,0 +1,113 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dq15_1223_thought_of_memoria8</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1223</qid>
+      <designer>정진호</designer>
+      <qlevel>60</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Remnant Memories of Memoria's Master]]></qkname>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="6" select_type="0"><![CDATA[<html>(Accept Quest)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Remote Quest$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Remote Quest$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Remote Quest$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">1223</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">12230,,,,,,,,,</exe>
+         <exe type="complete" true="">1223</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">0</exelink>
+   <remotecomplete qstep="2">0,1</remotecomplete>
+   <journal_data recompense="12230" quest_title="메모리아 주인의 잔류사념" chapterid="" quest_level="60" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Desert_Dragon.dds</contents_image>
+         <destination_pos>14213,0,0</destination_pos>
+         <destination_mode>custom:14213@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="11"><![CDATA[Remnant Memories of Memoria's Master]]></title>
+         <contents mid="12"><![CDATA[<html>Garden of Time and Space is full of memories flowing out of Memoria. <BR><BR>
+To purify the thoughts, you have to activate all the Eyes of Life at once during the battle with Desert Dragon.<BR>
+<BR><FONT color=#7e12d2>* You can only receive and complete Daily Quests once per day.</FONT><BR><BR><FONT color=#086171>Saint Haven (Garden of Time and Space) - Garden of Time and Space (Desert Dragon Nest Extra Chapter: Memoria)<FONT color=#2b2723> </FONT><FONT color=#a82424>- Memoria Part 4</FONT></FONT></html>]]></contents>
+         <destination mid="13"><![CDATA[Successfully clicked Eye of Life pattern at once]]></destination>
+         <todo_msg mid="14"><![CDATA[Successfully click Eye of Life pattern at once at Memoria Part 4.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image />
+         <destination_pos />
+         <destination_mode />
+         <statemark_npcid />
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="15"><![CDATA[Goal achieved!]]></title>
+         <contents mid="16"><![CDATA[<html>Quest goal has been achieved. Open the Remote Quest window to complete the quest and receive the rewards.<BR><BR><FONT color=#7e12d2>* You can complete Remote Quests immediately after you have achieved the quest goals.</FONT><BR><FONT color=#7e12d2>* You can only receive and complete Daily Quests once per day.</FONT></html>]]></contents>
+         <destination mid="17"><![CDATA[Remote Quest Completed]]></destination>
+         <todo_msg mid="18"><![CDATA[Open the Remote Quest window to complete the quest.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

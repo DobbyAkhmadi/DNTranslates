@@ -1,0 +1,33 @@
+   <talk>
+      <npcename>n566_kali_totem</npcename>
+      <npcid>566</npcid>
+      <startexe>2</startexe>
+      <npckname mid="1"><![CDATA[Hermit's Totem]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="14"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill" mid="15"><![CDATA[<html>[Belajar Skill]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Hermit's Totem$ {action:Talk}<BR><FONT color=#7e12d2>(Totem yang pernah lihat di kampung halaman. Sepertinya bisa mendapatkan pencerahan jika meditasi di depan ini)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="quest" mid="16"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Hermit's Totem$<BR>
+<FONT color=#7e12d2>(Bentuk yang aneh. Memancarkan energi yang tidak biasa tapi tidak tahu fungsinya)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="21" link_target="sq15_4073_master_of_power.xml"><![CDATA[<html>[Change Job] <FONT color=#086171>Master of Power</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_quest" mid="22"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Hermit's Totem$<BR>
+<FONT color=#7e12d2>(Hermit's Totem seperti ingin mengatakan sesuatu)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="0" false="1">0</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">6</chk>
+      </conditions>
+      <exelink idx="skill">3</exelink>
+      <exelink idx="back_quest">2</exelink>
+   </talk>

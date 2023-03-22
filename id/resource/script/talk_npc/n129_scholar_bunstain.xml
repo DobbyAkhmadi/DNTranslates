@@ -1,0 +1,68 @@
+   <talk>
+      <npcename>n129_scholar_bunstain</npcename>
+      <npcid>129</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Heraldry Scholar Bernstein [Prairie Town]]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="3"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill_crest" mid="4"><![CDATA[<html>[Skill Heraldry Shop]</html>]]></talk_answer>
+         <talk_answer link_index="jewel" mid="42"><![CDATA[<html>[Talk] Hear stories about Bernstein</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="45"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Heraldry Scholar Bernstein$<BR>Hello there!<BR>I study Jewels and Heraldry. Unraveling their mystery is a great adventure to me... kinda like the one you're having now. Ahhh, the excitement!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="jewel" image="" itemindex="">
+         <talk_answer link_index="jewel2" mid="7"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Heraldry Scholar Bernstein$<BR>Jewels contain the essence of this world we live in. Combine the power of seals and the jewels together and you may have amazing results.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="jewel2" image="" itemindex="">
+         <talk_answer link_index="001" mid="9"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Heraldry Scholar Bernstein$<BR>The true origins of Jewels and Heraldrys still baffle the best of scholars. Ahhh, what a mystery!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="21" link_target="mq01_005_red_emblem2.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The Red Seal Part 2</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="24" link_target="mq01_006_escape_of_the_catacomb.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The Catacombs Escape</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="32" link_target="mq01_017_red_emblem2.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The Red Seal Part 2</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="33" link_target="mq01_018_escape_of_the_catacomb.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The Catacombs Escape</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="38" link_target="mqc01_9573_misunderstanding.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Misunderstanding</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="39" link_target="mqc01_9574_antagonism.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Antagonism</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="35"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Heraldry Scholar Bernstein$<BR>Are you bored?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="9" false="2">0</exe>
+         <exe type="conexe" true="10" false="3">1</exe>
+         <exe type="conexe" true="11" false="4">2</exe>
+         <exe type="conexe" true="12" false="5">3</exe>
+         <exe type="conexe" true="13" false="6">4</exe>
+         <exe type="conexe" true="14" false="7">5</exe>
+         <exe type="conexe" true="15" false="8">6</exe>
+         <exe type="conexe" true="16" false="19">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200004,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200005,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200006,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200007,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200008,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200009,100);</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,129);</exe>
+         <exe type="conexe" true="17" false="20">8</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,200010,100);</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="class" op="=">9</chk>
+      </conditions>
+      <exelink idx="skill_crest">1</exelink>
+      <exelink idx="guildms">18</exelink>
+   </talk>

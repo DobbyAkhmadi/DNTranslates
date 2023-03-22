@@ -1,0 +1,181 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc21_4920_strange_meet_alpaca</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>21</qchapter>
+      <qid>4920</qid>
+      <designer />
+      <qlevel>93</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Strange Alpaca]]></qkname>
+      <qnpc>
+         <npcid>1871</npcid>
+         <npcename>n1871_trader_april</npcename>
+         <npckname>상인 에이프릴</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-accepting-a" mid="651" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="630"><![CDATA[<html>$Merchant April$<BR><FONT color=#387206>{user_nick}</FONT>, I've been having difficulty in getting fodder for alpacas these days.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-accepting-acceptted" mid="652" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="631"><![CDATA[<html>$Strange Alpaca $</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-a" mid="653" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="632"><![CDATA[<html>$Merchant April$<BR>Normally, alpacas grow well on ordinary grass but top grade alpaca needs to eat <FONT color=#086171>alpagrass</FONT>. <BR>Those that are fed with alpagrass have shinier hair and tastier meat. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-1-b" mid="655" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="633"><![CDATA[<html>$Merchant April$<BR>You can earn a decent amount of money by selling alpagrass to alpaca merchants. <BR>It's hard to get them around here but I heard that there is a whole field of alpagrass in Phantom Forest Core. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-2" mid="656" select_type="0"><![CDATA[<html>I see.</html>]]></talk_answer>
+      <talk_question mid="634"><![CDATA[<html>$Merchant April$<BR>If you sell alpagrass at times like this when supply is short, you can earn as much as striking a lottery. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-2" image="QW_127.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="635"><![CDATA[<html>$Merchant April$<BR><FONT color=#387206>{user_nick}</FONT>, please go to <FONT color=#a82424>Phantom Forest Core</FONT> and get <FONT color=#086171>alpagrass</FONT>.<BR>I'll pay you well.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-3-a" mid="657" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="636"><![CDATA[<html>$Merchant April$<BR>Wow, this is fresh top grade alpagrass. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1871_trader_april-3-b" mid="658" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="637"><![CDATA[<html>$Receive Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1871_trader_april-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="638"><![CDATA[<html>$Merchant April$<BR>Here's your commission. It was calculated based on the market price. </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">49200,,,,,,,,,</exe>
+         <exe type="setquest">4920</exe>
+         <exe type="talk" npc="n1871_trader_april">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment>604718 피쳐 플랜트 앨리트</comment>
+      <conditions>
+         <chk type="questitem" num="1" op="]=">400562</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntitem" num="1" exe="" onexe="">400562</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="conexe" true="3,4,5" false="">0</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="9,6">604718</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="9,6">704718</exe>
+         <exe type="addquestitem" num="1">400562</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">49200,,,,,,,,,</exe>
+         <exe type="complete" true="">4920</exe>
+         <exe type="delquestitem" num="-1">400562</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1871_trader_april" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n1871_trader_april" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n1871_trader_april" sub="b" />
+   <exelink qstep="1" npc="n1871_trader_april" sub="2">0,1,2,7,8</exelink>
+   <exelink qstep="3" npc="n1871_trader_april" sub="a">0</exelink>
+   <exelink qstep="3" npc="n1871_trader_april" sub="b">1,2</exelink>
+   <journal_data recompense="49200" quest_title="알파카와의 이상한 조우 " chapterid="" quest_level="93" quest_mark_type="10" use_item_list="400562">
+      <journal index="1">
+         <contents_image>QN_april.dds</contents_image>
+         <destination_pos>54,n1871</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1871</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="639"><![CDATA[Talk to Merchant April]]></title>
+         <contents mid="640"><![CDATA[<html>Merchant April seems to have something to say. Talk to her.<BR>
+<BR>
+<FONT color=#086171>Merca's Heart</FONT> <FONT color=#a82424>- Merchant April</FONT></html>]]></contents>
+         <destination mid="641"><![CDATA[Talk to Merchant April]]></destination>
+         <todo_msg mid="642"><![CDATA[Quest has started.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_127.dds</contents_image>
+         <destination_pos>1123,0,0</destination_pos>
+         <destination_mode>custom:1123@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="643"><![CDATA[Alpagrass for Alpacas]]></title>
+         <contents mid="644"><![CDATA[<html>To rear top grade alpacas, you need alpagrass. Get them from Phantom Forest Core.<BR>
+<BR>
+<FONT color=#086171>Merca's Heart (Chiron Island)</FONT><FONT color=#a82424> - Phantom Forest Core</FONT><BR>
+<BR>
+</html>]]></contents>
+         <destination mid="645"><![CDATA[Get alpagrass from Phantom Forest Core]]></destination>
+         <todo_msg mid="646"><![CDATA[Get alpagrass from Phantom Forest Core.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_april.dds</contents_image>
+         <destination_pos>54,n1871</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1871</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="647"><![CDATA[Talk to Merchant April]]></title>
+         <contents mid="648"><![CDATA[<html>You have collected alpagrass. Go back to Merca's Heart and give them to Merchant April.<BR>
+<BR>
+<FONT color=#086171>Merca's Heart</FONT> <FONT color=#a82424>- Merchant April</FONT></html>]]></contents>
+         <destination mid="649"><![CDATA[Report to Merchant April]]></destination>
+         <todo_msg mid="650"><![CDATA[Go back to Merca's Heart and talk to Merchant April]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>93:-1</user_level>
+      <user_class />
+      <prev_quest>9787</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

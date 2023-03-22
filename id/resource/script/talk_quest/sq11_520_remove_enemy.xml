@@ -1,0 +1,201 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_520_remove_enemy</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>520</qid>
+      <designer>손원호</designer>
+      <qlevel>24</qlevel>
+      <qdesc>검은 광산은 전쟁물자를 만드는데 꼭 필요한 광석이 나는 중요한 장소인데, 현재 마물들에게 점령당해 그들의 연구기지가 되어 버렸다. 검은 군대의 병참선을 차단하기 위해 사전에 검은 광산을 습격해 적의 전력을 약화 시키고 광산을 되찾을 필요가 있다. 폭탄 기술 연구의 핵심이 되는 폐광 고블린 기술병을 해치워라. (100마리가 많아 보이긴 하지만 여러가지 첩보 임무를 하다보면 손쉽게 처리할 수 있을 것이다.)  </qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Pulling out the roots]]></qkname>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>
+Gerakan makhluk itu tidak biasa.<BR>
+Aku merasa ingin meminjam tangan kucing.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-a" mid="8" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Makhluk-makhluk ini bertambah kuat, tetapi kita harus menunggu perintah dari para atasan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-b" mid="122" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="121"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Untuk meyakinkan keluarga kerajaan agar mengerahkan Soldier kerajaan adalah tugas <FONT color=#a82424>General Douglas </FONT>jadi aku hanya menunggu, tapi dengan berbagai tugas yang aku miliki sekarang ini membuatku gelisah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-c" mid="124" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="123"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Sekarang ini kita hanya bisa menunggu Guild kita melakukan apa yang dapat kita lakukan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-c" image="QW_27.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-d" mid="126" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="125"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR><FONT color=#a82424>Dark Mine</FONT> di dekat Saint's Haven adalah tempat yang penting untuk menumpuk keperluan Soldier istana. Tapi monster-monster itu mengambil alih tempat itu dan sekarang digunakan untuk menyimpan perlengkapan mereka. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-e" mid="128" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="127"><![CDATA[<html>$Adventurer's Guild Master Gunther $<BR>Berdasarkan informasi terakhir yang aku terima, <FONT color=#a82424>Goblin Technicians</FONT> sedang membuat senjata untuk black monarch. Aku tidak tahu bagaimana jadinya kita kalau mereka menyerang dengan senjata yang lebih kuat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-f" mid="130" select_type="0"><![CDATA[<html>Cara kejam?</html>]]></talk_answer>
+      <talk_question mid="129"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Untuk menghentikan pasokan senjata mereka, kita harus menggunakan <FONT color=#a82424>cara kejam</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-g" mid="132" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="131"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR><FONT color=#a82424>Bunuh semua </FONT>Goblin Technician di Dark Mine.<BR>
+Kalau mereka semua mati, pasokan senjata pastinya akan terhenti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$remove_enemy$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-1-a" mid="135" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="134"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Pergilah ke Dark Mine dan jelajahi semua <FONT color=#a82424>Gua yang ada</FONT>.<BR>Kalau kamu dapat membantai <FONT color=#a82424>10</FONT><FONT color=#a82424> goblin</FONT>, mereka akan cukup terpukul. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-1-b" mid="137" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="136"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Aku tahu ini adalah tugas yang berat, tapi menghentikan pasokan senjata mereka adalah satu-satunya pilihan yang kita miliki.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="138"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Memang sepertinya susah tapi kalau kamu sudah sering melakukan pekerjaan yang berhubungan dengan informasi, kamu akan dapat mengerjakannya dengan mudah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="139"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Dia adalah <FONT color=#a82424>goblin technicians </FONT> di Dark Mine. Jangan terkecoh oleh monster lainnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-a" mid="141" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="140"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Ah, reputasimu memang bukan omongan semata, kamu telah membuktikannya sendiri.<BR> Cepat sekali kamu mengatasi mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-b" mid="143" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="142"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-3-c" mid="145" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="144"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Kalau memang kita membutuhkan bantuan dari Adventurer's Guild untuk melindungi istana, aku akan memintanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="146"><![CDATA[<html>$Adventurer's Guild Gunther$<BR>Monster-monster semakin kuat jadi jangan lengah.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">520</exe>
+         <exe type="recompense_view">5207,5201,5202,5203,5204,5205,5206,5207,5208,5209</exe>
+         <exe type="talk" npc="n036_adventurer_guildmaster_gunter">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="huntmon" num="10" party="1" exe="3,4,5" onexe="">803</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="delcount">.</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">200803</exe>
+         <exe type="custom">api_quest_IncCounting(userObjID, 2, 803);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">5207,5201,5202,5203,5204,5205,5206,5207,5208,5209</exe>
+         <exe type="complete" true="">520</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="g">1</exelink>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="acceptted">0,2</exelink>
+   <exelink qstep="1" npc="n036_adventurer_guildmaster_gunter" sub="b">0,2,6,1</exelink>
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="a">0</exelink>
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="b">1</exelink>
+   <exelink qstep="3" npc="n036_adventurer_guildmaster_gunter" sub="c" />
+   <journal_data recompense="1:5201,2:5202,3:5203,4:5204,5:5205,6:5206,7:5207,8:5208,9:5209" quest_title="뿌리뽑기" chapterid="" quest_level="24" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Master_Gunter.dds</contents_image>
+         <destination_pos>11,n36</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>36</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="148"><![CDATA[Talk with Adventurer's Guild Master Gunther]]></title>
+         <contents mid="149"><![CDATA[<html>Bicara dengan Saint's Haven's Adventurer's Guild Master Gunther.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Gunther</FONT></html>]]></contents>
+         <destination mid="150"><![CDATA[Talk with Adventurer's Guild Master Gunther]]></destination>
+         <todo_msg mid="151"><![CDATA[Menerima Quest ]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_27.dds</contents_image>
+         <destination_pos>274,0,0</destination_pos>
+         <destination_mode>custom:271@3,272@3,273@3,274@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="152"><![CDATA[Membasmi Goblin Technicians]]></title>
+         <contents mid="153"><![CDATA[<html>Pergilah ke Dark Mine untuk melenyapkan setidaknya <FONT color=#a82424>10 Goblin Technician</FONT> untuk melemahkan mereka.<BR><BR><FONT color=#086171> Hermalte Port (Dark Mine Access)</FONT> <FONT color=#a82424>→ Dark Mine</FONT></html>]]></contents>
+         <destination mid="154"><![CDATA[Membasmi Goblin Technicians]]></destination>
+         <todo_msg mid="155"><![CDATA[Pergilah ke Dark Mine kalahkan goblin technicians]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Master_Gunter.dds</contents_image>
+         <destination_pos>11,n36</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>36</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="156"><![CDATA[Lapor ke Adventurer's Guild Master Gunther]]></title>
+         <contents mid="157"><![CDATA[<html>10 Goblin Technicians telah dikalahkan! Ayo kembali ke Saint's Haven's Adventurer's Guild Master Gunther.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Gunther</FONT></html>]]></contents>
+         <destination mid="158"><![CDATA[Lapor ke Adventurer's Guild Master Gunther]]></destination>
+         <todo_msg mid="159"><![CDATA[Go back to Saint's Haven dan Lapor ke Adventurer's Guild Master Gunther]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>24:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>402,433,9301,9480,9591</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,35 @@
+   <talk>
+      <npcename>n1765_summer_2014</npcename>
+      <npcid>1765</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Zoffy the Space Pirate]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="21"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="summer" mid="22"><![CDATA[<html>[Space Pirate's Rarity Store]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Zoffy the Space Pirate$<BR>
+I'm the great <FONT color=#a82424>Zoffy the Space Pirate</FONT>!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="23" link_target="eq_2367_2014_summer.xml"><![CDATA[<html>[Event] <FONT color=#086171>The Most Beautiful Woman In Town</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="24" link_target="eq_2368_2014_summer.xml"><![CDATA[<html>[Event] <FONT color=#086171>I’m Hungry!!</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="eq_2369_2014_summer.xml"><![CDATA[<html>[Event] <FONT color=#086171>Zoffy’s Gift</FONT></html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Zoffy the Space Pirate$<BR>
+I'm a busy man.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="10"><![CDATA[<html>$Zoffy the Space Pirate$<BR>
+My rarity store is not open to everyone.<BR>
+<FONT color=#a94407>Only the bravest ones who completed all my missions can use it!</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,795000,100);</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">2369</chk>
+      </conditions>
+      <exelink idx="summer">1</exelink>
+   </talk>

@@ -1,0 +1,490 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_266_argenta_darkelf</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>266</qid>
+      <designer>김인정</designer>
+      <qlevel>21</qlevel>
+      <qdesc>300115(다크엘프의 목걸이)
+아르젠타에게 의뢰 수락
+1번맵에서 데이비드와 조우.
+2번 맵에서 다시 데이비드와 대화.
+3번 맵에서 보스맵 가기 전의 데이비드와 대화.
+보스전 마친 후 데이비드와 대화. 목걸이 습득.
+아르젠타에게 보고.
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>267</nextqid>
+      <nextqname>sq08_267_crisis_of_david</nextqname>
+      <nextqnpc>n164_argenta_wounded</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Argenta and the Dark Elf]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타(잿빛폐허)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>190</npcid>
+         <npcename>n190_slave_david</npcename>
+         <npckname>아르젠타의 두번째 노예 데이비드(돌아오지 못하는 길)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>191</npcid>
+         <npcename>n191_slave_david</npcename>
+         <npckname>아르젠타의 두번째 노예 데이비드(잿빛 폐허)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-noquest" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Adventurer David$<BR>Sepertinya kamu menunggu tanda tanganku. Heh. <BR><FONT color=#7e12d2>(Kamu harus Menerima Quest dari Argenta di Calderock Village untuk melanjutkan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-noquest" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n191_slave_david-noquest-a" mid="183" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Hanya orang terpilih sepertiku yang bisa menjadi <FONT color=#a82424>Argenta</FONT>'s Great Knight. Sekarang, jangan iri yah. Heh.<BR><FONT color=#7e12d2>(Adventurer David berandai-andai.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-noquest-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="111"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Argenta tergila kepadaku? Heh... Aku sangat mempesona belakangan ini. Heh. Heh. Heh.<BR><FONT color=#7e12d2>(Kamu harus mendapatkan Quest dari Argenta di Calderock Village untuk melanjutkan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting" image="QM_Ellena.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-a" mid="9" select_type="0"><![CDATA[<html> Ini belum selesai. </html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Argenta$<BR>Ada rumor, <FONT color=#a82424>Elena</FONT> kabur seperti orang lemah? Pasti <FONT color=#a82424>Dark Elf</FONT> itu mulai tidak benar. Hehe.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-c" mid="11" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Argenta$<BR>Tentu saja tidak. Siapa bilang begitu?<BR>Lagipula, <FONT color=#a82424>anak kecil</FONT> akan selalu jadi arrogan saat aku melepasnya sebentar. Hmm.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="129"><![CDATA[<html>$Argenta$<BR>Aku punya sesuatu untukmu, hanya untukmu. Temui aku jika kamu sedang sendirian.<BR><FONT color=#7e12d2>(Kamu tidak dapat menjalankan quest jika dalam party.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-c" image="QW_23.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-d" mid="13" select_type="0"><![CDATA[<html> Dark Elves? </html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Argenta$<BR>Polusi masih bisa di tangani saat ini, namun ini belum berakhir. Jadi kamu, <FONT color=#086171>{user_nick}</FONT>!! Pergilah ke <FONT color=#a82424>Road of No Return</FONT> dan kalahkan para <FONT color=#a82424>Dark Elves</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-d" image="QS_Default.dds" itemindex="300115" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-e" mid="15" select_type="0"><![CDATA[<html>Dark Elf's Necklace? Apa itu?</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Argenta$<BR>Ya. Bawakan aku <FONT color=#a82424>Dark Elf's Necklace</FONT> dari <FONT color=#a82424>Dark Elves</FONT> sebagai bukti.<BR>Aku yakin kamu dapat melakukannya, bukan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-e" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-f" mid="17" select_type="0"><![CDATA[<html> Ya. Ya, baiklah. </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Argenta$<BR>Necklace terbuat dari jewel yang baik, tapi aku tidak membutuhkannya. Aku hanya mau kamu membawanya sebagai bukti <FONT color=#a82424>dari kemampuanmu. </FONT>. Berhentilah bertanya lagi! Cukup lakukan, sekarang!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-accepting-acceptted" mid="19" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Argenta and Dark Elf$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Argenta$<BR><FONT color=#086171><FONT color=#382000>{user_nick}</FONT></FONT>!!<BR>Jangan jadi pemalas!<BR><FONT color=#7e12d2>(Kamu tidak bisa melakukannya dalam Abyss Difficulty.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-1" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-1-a" mid="23" select_type="0"><![CDATA[<html> (Tidak bisakah kita acuhkan orang ini..) </html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Adventurer David$<BR>Kamu tidak tahu sudah berapa lama aku menunggumu,<FONT color=#086171><FONT color=#382000>{user_nick}</FONT></FONT>!!!<BR><FONT color=#7e12d2>(Adventurer David memanggil dengan keras.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-1-a" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-1-b" mid="25" select_type="0"><![CDATA[<html> Kamu melihatku ...? </html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Kamu tidak bisa kabur. Karena aku punya <FONT color=#086171><FONT color=#a82424>mata setajam falcon!</FONT></FONT> Tak ada, satupun yang bisa kabur dariku!!!<BR><FONT color=#7e12d2>(Adventurer David menunjuk matanya.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-1-c" mid="27" select_type="0"><![CDATA[<html> Huh? Belle? ... Siapa? Dimana? Apa? </html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Adventurer David$<BR>Aku melihat <FONT color=#a82424>wanita cantik ini</FONT>. Mataku hampir buta saat melihatnya! Dia terlihat seperti <FONT color=#a82424>mawar yang jatuh di selokan</FONT>atau <FONT color=#a82424>berlian yang jatuh di lumpur</FONT>... Bukan <FONT color=#a82424>Ruby</FONT>... Bukan... maksudku... Oh iya... <FONT color=#a82424>Aku pernah melihatmu bersama wanita cantik</FONT>!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-1-c" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-1-d" mid="29" select_type="0"><![CDATA[<html>Hah? mimpi? Argenta? Kamu pasti bercanda, bukan?.</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Adventurer David$<BR>Sang <FONT color=#a82424>wanita cantik</FONT> yang <FONT color=#a82424>kasihan</FONT> sering ada di pohon di <FONT color=#a82424>Gray Ruins</FONT>, dan menatapmu dengan mata yang <FONT color=#a82424>merenung</FONT> !<BR>Kenapa kamu menolaknya? Kamu bocah tak bermoral!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-1-d" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-1-e" mid="31" select_type="0"><![CDATA[<html> Apa salahnya punya nama... <FONT color=#382000>{user_nick}!</font> </html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Adventurer David$<BR>Ooh, Apa barusan kamu bilang wanita<FONT color=#7e12d2>cantik</FONT>, <FONT color=#382000>kasihan</FONT>, dan <FONT color=#a94407>termenung</FONT> namanya <FONT color=#a82424>Argenta</FONT>? Heh. Heh. Heh. Aku sudah mencium aroma menawan dari namanya!! Namanya sangat berbeda dari namamu, <FONT color=#382000>{user_nick}</FONT>!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-1-f" mid="33" select_type="0"><![CDATA[<html>(Dia mulai bergerak menjauh...)</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Adventurer David${action:Talk}<BR>Heh. Heh. Heh. Selama ini aku berpikir kenapa kamu sangat <FONT color=#a82424>tidak</FONT>baik padanya. Tapi <FONT color=#a82424>misteri telah dipecahkan</FONT> Baru saja!! Ahah~ Aku sangat terkesan dengan <FONT color=#a82424>kepintaranku</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-1-f" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-1-g" mid="35" select_type="0"><![CDATA[<html>(Kamu menjelaskan permintaan Argenta.)</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Adventurer David$<BR>Jadi. Apa yang aku bisa lakukan untukmu hari ini? Apakah wanita <FONT color=#7e12d2>cantik</FONT>, <FONT color=#382000>kasihan</FONT>, dan <FONT color=#a94407>termenung</FONT> itu meminta <FONT color=#a82424>Pemula</FONT> sepertimu melakukan sesuatu dengan mata berlinang?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-1-g" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-1-h" mid="37" select_type="0"><![CDATA[<html>Aku tidak butuh bantuan apapun. </html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Adventurer David$<BR>jadi <FONT color=#a82424>Dark Elf</FONT>, huh... Heh. Aku, Great Adventurer David bisa <FONT color=#a82424>tidak hanya Dark Elf</FONT> hanya dengan <FONT color=#a82424>menatap</FONT> padanya. Heh. Heh. Heh. Hei kamu, Pemula! Harusnya kamu merasa beruntung karena harini bertemu aku. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-1-h" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="38"><![CDATA[<html>$Adventurer David$<BR>Heh! Apa kamu mencoba menyembunyikan <FONT color=#a82424>Argenta</FONT> untuk dirimu sendiri? Aku tidak bisa membiarkan kamu melakukannya! Lebih baik kamu di sini menyaksikan skillku yang<FONT color=#a82424>brillan</FONT> ? <FONT color=#7e12d2>(Dia menatap langit dengan percaya diri)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="125"><![CDATA[<html>$Adventurer David${action:Talk}<BR>Heh. Heh. Heh. Jika kamu mau bersaing denganku, Aku yakin kamu tidak akan menang. Tidak akan pernah! Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-2" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="40"><![CDATA[<html>$Adventurer David$<BR>Heh! Apa kamu mencoba menyembunyikan <FONT color=#a82424>Argenta</FONT> untuk dirimu sendiri? Aku tidak bisa membiarkan kamu melakukannya! Lebih baik kamu di sini menyaksikan skillku yang<FONT color=#a82424>brillan</FONT> ? <FONT color=#7e12d2>(Dia menatap langit dengan percaya diri)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-3-a" mid="42" select_type="0"><![CDATA[<html> (Kelihatannya dia takut melakukan itu) </html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. <FONT color=#a82424>Takut? Aku tidak pernah takut akan monster</FONT>!!<BR>Tak pernah!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-3-b" mid="44" select_type="0"><![CDATA[<html> Bisa aku mulai sekarang? </html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Adventurer David$<BR>Seorang <FONT color=#a82424>Pemula</FONT> sepertimu bilang aku <FONT color=#a82424>Pengecut</FONT>! Dalam nama <FONT color=#a82424>strategi dan tactik</FONT>!</html> itulah alasan mengapa aku di sini.]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-3-b" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-3-c" mid="46" select_type="0"><![CDATA[<html>Kenapa kamu tidak pergi dan mengalahkan mereka daripada buang waktu?</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Tidak perlu aku bilang, kamu tidak perlu masuk sini, akulah yang akan membasmi para Dark Elves.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-3-c" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-3-d" mid="48" select_type="0"><![CDATA[<html> (Menganga, terkejut) </html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Adventurer David${action:Talk}<BR>Betapa <FONT color=#a82424>Pemulanya</FONT> kamu. Heh. Aku sedang bersiap menyerang <FONT color=#a82424>Dark Elves</FONT>. Kamu mengagumi <FONT color=#a82424>kesabaranku</FONT>? Sepertinya sudah daritadi sejak kamu membuka mulutmu. Heh. Heh. Heh. Kamu boleh <FONT color=#a82424>kagum</FONT> selama yang kamu suka. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-3-e" mid="50" select_type="0"><![CDATA[<html> Jika kamu tidak keberatan, biar aku yang melakukan. </html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Adventurer David$<BR>Yaa, ada pepatah bilang jika kamu mau <FONT color=#a82424>mengalahkan Naga maka kamu harus pergi ke Sarang Naga </FONT>. Bukan ide yang buruk untuk mencari Dark Elves daripada menunggunya datang. Ha. Ha. Ha. Karena aku murah hati, <FONT color=#a82424>jika kamu ingin pergi denganku</FONT>, Aku akan pergi denganmu. Ha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-3-f" mid="52" select_type="0"><![CDATA[<html>Kamu menghalangi jalanku!</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Adventurer David$<BR><FONT color=#086171><FONT color=#382000>{user_nick}</FONT></FONT>, karena kamu memohon aku tidak punya pilihan  <FONT color=#a82424>selain.</FONT> membantumu. Ayo pergi! Heh Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-3-f" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="53"><![CDATA[<html>$Adventurer David$<BR>Tidak perlu mengagumiku seperti itu. Heh. Heh. Heh. Sudah takdirku <FONT color=#a82424>untuk selalu</FONT> membantu seorang <FONT color=#a82424>Pemula</FONT>, dan ini kewajibanku sebagai <FONT color=#a82424>Great Adventurer</FONT>. Heh heh heh. <BR><FONT color=#7e12d2>(Adventurer David sudah tidak mendengarkan kamu lagi.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="54"><![CDATA[<html>$Adventurer David$<BR><FONT color=#382000>{user_nick}</FONT>, aku akan membuat <FONT color=#a82424>pengecualian</FONT> dan menemani kamu karena sepertinya kamu sangat membutuhkan bantuan.<BR>Hehe... Baiklah, ayo pergi. Heh Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-5" image="QS_Default.dds" itemindex="300115" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-5-a" mid="56" select_type="0"><![CDATA[<html> Aku mencoba menyelamatkan? </html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Adventurer David${action:talk}Hei Pemula, sepertinya kamu belum mendapatkan <FONT color=#a82424>Dark Elf's Necklace</FONT>. Heh heh heh.<BR>tapi jangan khawatir!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-5-b" mid="128" select_type="0"><![CDATA[<html> Oh ... yeah .... (Sepertinya tidak ada pilihan lain selain mengalahkan mereka) </html>]]></talk_answer>
+      <talk_question mid="127"><![CDATA[<html><FONT color=#a82424><FONT color=#2b2723>$Adventurer David$</FONT></FONT><BR>Heh. Percayalah padaku! Heh. Heh. Heh. Kamu bisa mendapatkan necklace itu dari <FONT color=#a82424>Ogre Chubaka</FONT> di <FONT color=#a82424>Fort Headquarters Dark Elf</FONT>. Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-5-b" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="57"><![CDATA[<html>$Adventurer David$<BR>Lihatlah <FONT color=#a82424>keberhasilanku</FONT> dan biarkan <FONT color=#a82424>Argenta</FONT> tahu!! Heh. Heh. Heh.<BR><FONT color=#7e12d2>(Adventurer David acting norak lagi.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-6" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="59"><![CDATA[<html>$Adventurer David$<BR>Lihatlah <FONT color=#a82424>keberhasilanku</FONT> dan biarkan <FONT color=#a82424>Argenta</FONT> tahu!! Heh. Heh. Heh.<BR><FONT color=#7e12d2>(Adventurer David acting norak lagi.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-a" mid="61" select_type="0"><![CDATA[<html>Apa kamu bersembunyi? Daritadi aku tidak melihatmu. </html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Sepertinya kamu sudah mendapatkan <FONT color=#a82424>Necklace</FONT> saat aku bertarung dengan <FONT color=#a82424>Ogre Chubaka</FONT>. <FONT color=#a82424>Dark Elf</FONT> bukan apa-apa dibanding Ogre Chubaka. Ha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-b" mid="63" select_type="0"><![CDATA[<html>Kamu bodoh.</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Adventurer David$<BR>Apa maksudmu? Kamu tidak memperhatikan <FONT color=#a82424>kecepatan kilatku</FONT>! A <FONT color=#a82424>Pemula</FONT> sepertimu tidak akan bisa menyamai kecepatanku!!! Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-b" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-c" mid="66" select_type="0"><![CDATA[<html>(Apakah Argenta ada hubungannya dengan semua ini?)</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>$Adventurer David$<BR>Kenapa kamu memamerkan <FONT color=#a82424>kebodohan</FONT> pada orang lain? Lagipula, aku yakin kamu tahu betapa <FONT color=#a82424>Hebatnya</FONT> Aku. Heh. Heh. Heh. Si <FONT color=#a82424>Agrenta</FONT> akan berpikir aku lebih baik daripadamu. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-c" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-david89" mid="68" select_type="0"><![CDATA[<html>(Argenta sayangku? )</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Adventurer David$<BR>Cepat beritahu <FONT color=#a82424>Sayangku</FONT> Argenta setiap detil dari <FONT color=#382000>kehebatan</FONT> <FONT color=#7e12d2> Kecepatan</FONT> <FONT color=#a94407>tiada banding</FONT> <FONT color=#a82424>serta keberhasilanku</FONT>. Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-david90" mid="118" select_type="0"><![CDATA[<html>(Kamu pikir siapa kamu?)</html>]]></talk_answer>
+      <talk_question mid="117"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Ada perbedaan besar antara kamu dan aku I! <FONT color=#a82424>Jika kamu pemula yang lemah , akulah pahlawannya</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-david91" mid="133" select_type="0"><![CDATA[<html>(Keindahan dari Elves dan Orcs sangat berbeda.)</html>]]></talk_answer>
+      <talk_question mid="119"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Kelihatannya kamu iri. Hmm, kamu sih lumayan. Tapi jika di bandingkan dengan Argenta, jadi Argenta itu langit dan kamu bumi! Itu seperti <FONT color=#a82424>antara Hero Nerwin dan Orc</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-david92" mid="122" select_type="0"><![CDATA[<html>(Tidak ada untungnya marah pada dia)</html>]]></talk_answer>
+      <talk_question mid="121"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Ada perbedaan besar antara kamu dan I! <FONT color=#a82424>Jika kamu pemula dan aku pahlawannya</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-david93" mid="124" select_type="0"><![CDATA[<html> (Bocah ini harus di beri pelajaran!) </html>]]></talk_answer>
+      <talk_question mid="123"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Kelihatannya kamu iri. Hmm, kamu sih lumayan. Tapi jika di bandingkan dengan Argenta, jadi Argenta itu langit dan kamu buminya! Seperti <FONT color=#a82424>antara Hero Nerwin dan Orc</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-h" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="69"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Akan sangat aneh jika Argenta jatuh cinta padaku. Tapi aku tidak seharusnya menolaknya karena sikap pahlawanku. Haeh.<BR><FONT color=#7e12d2>(Adventurer David hidup dalam angannya.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-david95" mid="137" select_type="0"><![CDATA[<html>(Huh? Cemburu?)</html>]]></talk_answer>
+      <talk_question mid="136"><![CDATA[<html>$Self-styled Adventuer David$<BR>Hoho, kamu cemburu? Heh..kamu lumayan tapi masih jauh dari cukup!!<BR>
+Berbeda!!! Seperti langit dan bumi! Berbeda Jauh!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-david96" mid="162" select_type="0"><![CDATA[<html>(..Apa maksudnya?)</html>]]></talk_answer>
+      <talk_question mid="161"><![CDATA[<html>$Self Claimed Adventurer David$<BR>Huhuhu, kamu iri dengan aku kan? Walaupun badan kamu lebih bagus, Argenta tetap terlalu indah buat kamu!!<BR>Tidak bisa dibandingkan!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-7-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n190_slave_david-7-david97" mid="164" select_type="0"><![CDATA[<html>(Kenapa hanya ada manusia seperti ini di sekitarku?!)</html>]]></talk_answer>
+      <talk_question mid="163"><![CDATA[<html>$Self Claimed Adventurer David$<BR>Huhuhu menyedihkan... Argenta akan memilih aku pada akhirnya!<BR>
+Kamu pasti iri dengan aku!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n190_slave_david-8" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="70"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Kamu tidak perlu <FONT color=#a82424>cemburu</FONT> meskipun aku menjadi <FONT color=#a82424>Argenta</FONT>'s Personal <FONT color=#a82424>Knight</FONT>. Dunia <FONT color=#a82424>memang adil<FONT color=#a82424>. Heh.<BR><FONT color=#7e12d2>(Adventurer David masih berangan-angan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-a" mid="72" select_type="0"><![CDATA[<html> ... Aku tidak begitu peduli. </html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Argenta$<BR>Lambat! Kenapa lama sekali? Apa itu? Kenapa kamu membawa <FONT color=#a82424>lumpur</FONT> itu?<BR><FONT color=#7e12d2>(Argenta menunjuk arah lain</FONT>. Kamu bisa melihat <FONT color=#a82424>orang</FONT> dengan <FONT color=#7e12d2>wajah familiar bersembunyi.)</FONT><BR>Kamu tidak tahu "dia" mengikutimu. ya kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-a" image="QS_Default.dds" itemindex="300115" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-b" mid="74" select_type="0"><![CDATA[<html>(Kamu memberikannya Dark Elf's Necklace.)</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Argenta$<BR>Simpan saja penjelasanmu, lagipula itu tidak penting. Aku tidak tertarik pada orang lain selain<FONT color=#a82424> budakku</FONT>.<BR>Sekarang, ayo kita lihat apa yang kamu bawa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-c" mid="76" select_type="0"><![CDATA[<html> Apa yang kamu khawatirkan? </html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Argenta$<BR>Kenapa sekali kamu membawa necklace ini?<BR>Aku pikir kamu sudah mati.<BR>Ok, karena kamu masih hidup, Aku maafkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-d" mid="78" select_type="0"><![CDATA[<html> ... Yaa aku masih belum selesai juga. </html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Argenta$<BR>Tentu saja. Siapa lagi yang akan menjalankan </FONT>tugasku</FONT> saat aku hanya punya satu <FONT color=#a82424>budak</FONT> yaitu kamu?<BR>Jangan malas, mengerti?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-e" mid="80" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-8-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-8-!next" mid="82" select_type="0"><![CDATA[<html> Kenapa lagi sekarang? </html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Argenta$<BR>Tentu, masih ada lagi. Kenapa? Kamu merasa lelah?<BR>Kamu masih terlalu mudah untuk lelah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-8" image="QN_Slave_David.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n191_slave_david-8-a" mid="114" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="113"><![CDATA[<html>$Adventurer David$<BR>Heh. Heh. Heh. Apa kamu <FONT color=#a82424>iri</FONT> jika aku menjadi <FONT color=#a82424>Argenta</FONT>'s Great Knight. Dunia memang<FONT color=#a82424>adil<FONT color=#a82424>. Heh.<BR><FONT color=#7e12d2>(Adventurer David masih terjebak di mimipinya.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n191_slave_david-8-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="115"><![CDATA[<html>$Adventurer David${action:Talk}<BR>Heh. Heh. Heh. Apakah <FONT color=#a82424>Argenta</FONT> telah jatuh cinta padaku?<BR>Tidak ada yang tahan pesonaku. Heh. Heh. Heh.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment>#39316 
+1인 퀘스트 제한 해제로 인하여 조건실행문 3 사용하지 않음</comment>
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">266</exe>
+         <exe type="talk" npc="n164_argenta_wounded">1</exe>
+         <exe type="recompense_view">2667,2661,2662,2663,2664,2665,2666,2667,2668,2669</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="talk" npc="n164_argenta_wounded">c</exe>
+         <exe type="talk" npc="n164_argenta_wounded">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setjornal">2</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="3">612</exe>
+         <exe type="addquestitem" num="1">300115</exe>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="delcount">.</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="8">200612</exe>
+         <exe type="custom">api_quest_IncCounting(userObjID, 2, 612);</exe>
+         <exe type="huntitem" num="1" exe="" onexe="6,4,5">300115</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="8">608</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="8">200608</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">6</exe>
+         <exe type="conexe" true="5" false="3">0</exe>
+         <exe type="conexe" true="6" false="4">1</exe>
+         <exe type="conexe" true="8" false="10">2</exe>
+         <exe type="talk" npc="n190_slave_david">d</exe>
+         <exe type="talk" npc="n190_slave_david">e</exe>
+         <exe type="talk" npc="n190_slave_david">f</exe>
+         <exe type="talk" npc="n190_slave_david">g</exe>
+         <exe type="talk" npc="n190_slave_david">h</exe>
+         <exe type="conexe" true="7" false="12">3</exe>
+         <exe type="talk" npc="n190_slave_david">i</exe>
+         <exe type="conexe" true="11" false="13">4</exe>
+         <exe type="conexe" true="14" false="16">5</exe>
+         <exe type="talk" npc="n190_slave_david">j</exe>
+         <exe type="talk" npc="n190_slave_david">k</exe>
+         <exe type="conexe" true="15" false="15">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300115</exe>
+         <exe type="recompense">2667,2661,2662,2663,2664,2665,2666,2667,2668,2669</exe>
+         <exe type="complete" true="">266</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="f">2</exelink>
+   <exelink qstep="accepting" npc="n164_argenta_wounded" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n190_slave_david" sub="b" />
+   <exelink qstep="1" npc="n190_slave_david" sub="c" />
+   <exelink qstep="1" npc="n190_slave_david" sub="d" />
+   <exelink qstep="1" npc="n190_slave_david" sub="e" />
+   <exelink qstep="1" npc="n190_slave_david" sub="f" />
+   <exelink qstep="1" npc="n190_slave_david" sub="g" />
+   <exelink qstep="1" npc="n190_slave_david" sub="h">0,1</exelink>
+   <exelink qstep="3" npc="n190_slave_david" sub="b" />
+   <exelink qstep="3" npc="n190_slave_david" sub="c" />
+   <exelink qstep="3" npc="n190_slave_david" sub="d" />
+   <exelink qstep="3" npc="n190_slave_david" sub="e" />
+   <exelink qstep="3" npc="n190_slave_david" sub="f">0,1</exelink>
+   <exelink qstep="5" npc="n190_slave_david" sub="b">2,7,9,10,11,0,1</exelink>
+   <exelink qstep="7" npc="n190_slave_david" sub="b" />
+   <exelink qstep="7" npc="n190_slave_david" sub="c" />
+   <exelink qstep="7" npc="n190_slave_david" sub="david89">2</exelink>
+   <exelink qstep="7" npc="n190_slave_david" sub="david90">0,1,9</exelink>
+   <exelink qstep="7" npc="n190_slave_david" sub="david91">0,1,9</exelink>
+   <exelink qstep="7" npc="n190_slave_david" sub="david92">0,1,9</exelink>
+   <exelink qstep="7" npc="n190_slave_david" sub="david93">0,1,9</exelink>
+   <exelink qstep="7" npc="n190_slave_david" sub="david95">0,1,9</exelink>
+   <exelink qstep="7" npc="n190_slave_david" sub="david96">0,1,9</exelink>
+   <exelink qstep="7" npc="n190_slave_david" sub="david97">0,1,9</exelink>
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="d">1</exelink>
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="e">0,2</exelink>
+   <exelink qstep="8" npc="n164_argenta_wounded" sub="!next" />
+   <journal_data recompense="1:2661,2:2662,3:2663,4:2664,5:2665,6:2666,7:2667,8:2668,9:2669" quest_title="아르젠타와 다크엘프" chapterid="" quest_level="21" quest_mark_type="10" use_item_list="300115">
+      <journal index="1">
+         <contents_image>QW_23.dds</contents_image>
+         <destination_pos>172,n190</destination_pos>
+         <destination_mode>custom:171@1,172@1</destination_mode>
+         <statemark_npcid>190</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="85"><![CDATA[Elena's trail]]></title>
+         <contents mid="86"><![CDATA[<html>Meskipun <FONT color=#a82424>Elena</FONT> menghilang, <FONT color=#a82424>Argenta</FONT> pikir sepertinya ada yang harus di bereskan di <FONT color=#a82424>Road of No Return</FONT>. Pergi kalahkan Dark Elves dan bawa <FONT color=#a82424>Dark Elf's Necklace</FONT> sebagai bukti.<BR><FONT color=#7e12d2></FONT><BR><FONT color=#7e12d2>※Kamu tidak bisa menjalankan quest dalam party<BR></FONT><BR><FONT color=#086171>Crystal Stream (Sigh Canyon Entrance)</FONT> <FONT color=#a82424>→ Road of No Return</FONT></html>]]></contents>
+         <destination mid="87"><![CDATA[(Solo) Jelajahi Road of No Return.]]></destination>
+         <todo_msg mid="88"><![CDATA[Quest telah di tambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_23.dds</contents_image>
+         <destination_pos>172,n190</destination_pos>
+         <destination_mode>custom:171@1,172@1</destination_mode>
+         <statemark_npcid>190</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="89"><![CDATA[Adventurer David's Lady]]></title>
+         <contents mid="90"><![CDATA[<html>Tidak disangka, wanita Adventurer David's <FONT color=#a82424> yang cantik, kasihan, dan impiannya</FONT> adalah <FONT color=#a82424>Argenta</FONT>. Mungkin dia akan melakukan hal bodoh, untuk saat ini, hiraukanlah dan maju terus.<BR><BR><FONT color=#086171>Crystal Stream (Sigh Canyon Entrance)</FONT> <FONT color=#a82424>→ Road of No Return</FONT></html>]]></contents>
+         <destination mid="91"><![CDATA[Jelahahi Road of No Return.]]></destination>
+         <todo_msg mid="92"><![CDATA[Necklace itu tidak di sini. Pergilah Periksa tempat lain.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_23.dds</contents_image>
+         <destination_pos>173,n190</destination_pos>
+         <destination_mode>custom:172@1,173@1</destination_mode>
+         <statemark_npcid>190</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="93"><![CDATA[Dimana necklace itu?]]></title>
+         <contents mid="94"><![CDATA[<html>Sepertinya<FONT color=#a82424>Adventurer David</FONT> juga mencari <FONT color=#a82424>Dark Elf's Necklace</FONT>. Tapi dia takut pergi sendirian.Adventurer David mungkin membuntutimu lagi tapi kamu harus tetap maju hingga mendapatkan necklace yang Argenta minta.<BR><BR><FONT color=#086171>Crystal Stream (Sigh Canyon Entrance)</FONT> <FONT color=#a82424>→ Road of No Return.</FONT></html>]]></contents>
+         <destination mid="95"><![CDATA[Jelajahi Road of No Return.]]></destination>
+         <todo_msg mid="96"><![CDATA[Necklace itu tidak di sini. Pergilah Periksa tempat lain.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QM_DarkelfGray.dds</contents_image>
+         <destination_pos>174,0,0</destination_pos>
+         <destination_mode>custom:173@1,174@3</destination_mode>
+         <statemark_npcid>190</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="97"><![CDATA[Dark Elf Necklace]]></title>
+         <contents mid="98"><![CDATA[<html>Sesuai perkataan Adventurer David, kamu bisa mendapatkan Necklace dari <FONT color=#a82424>Ogre Chubaka</FONT>'s servant, <FONT color=#a82424>Dark Elves</FONT>. Ayo kalahkan Dark Elves di markasnya dan dapatkan necklace.<BR><BR><FONT color=#086171>Crystal Stream (Sigh Canyon Entrance)</FONT> <FONT color=#a82424>→ Road of No Return</FONT></html>]]></contents>
+         <destination mid="99"><![CDATA[Kalahkan Dark Elf]]></destination>
+         <todo_msg mid="100"><![CDATA[Tolong kalahkan Dark Elf, anak buah Ogre Chubaka.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Slave_David.dds</contents_image>
+         <destination_pos>174,n190</destination_pos>
+         <destination_mode>custom:174@1</destination_mode>
+         <statemark_npcid>190</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="101"><![CDATA[Necklace telah di dapatkan.]]></title>
+         <contents mid="102"><![CDATA[<html>Kamu telah mendapatkan <FONT color=#a82424>Dark Elf's Necklace</FONT>. Setelah mengalahkan semua monster, bicaralah pada <FONT color=#a82424>Adventurer David</FONT> yang sembunyi dan tidak membantumu.<BR><BR><FONT color=#086171>Road of No Return</FONT> <FONT color=#a82424>→ Adventurer David</FONT></html>]]></contents>
+         <destination mid="103"><![CDATA[Bicara pada Adventurer David]]></destination>
+         <todo_msg mid="104"><![CDATA[Kamu telah mendapatkan Dark Elf's Necklace. Bicaralah pada Adventurer David.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom:174@1,9@1</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="105"><![CDATA[Safe Return]]></title>
+         <contents mid="106"><![CDATA[<html>Adventurer David tidak membantu sama sekali. Hebatnya, kamu mendapatkan <FONT color=#a82424>Dark Elf's Necklace</FONT>, jadi sekarang kembalilah ke <FONT color=#a82424>Gray Ruins</FONT> dan laporkan pada Argenta.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="107"><![CDATA[Bicara pada Argenta]]></destination>
+         <todo_msg mid="108"><![CDATA[Tolong laporkan pada Argenta di Calderock Village.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>20:-1</user_level>
+      <user_class />
+      <prev_quest>265</prev_quest>
+      <have_quest>214,234,196,9585</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

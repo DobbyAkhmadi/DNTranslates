@@ -1,0 +1,293 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_changejob_3601_lost_elf</qename>
+      <qtype>changejobquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>3601</qid>
+      <designer>조설빈</designer>
+      <qlevel>50</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>3602</nextqid>
+      <nextqname>sq_changejob_3602_loss_forgotten</nextqname>
+      <nextqnpc>n044_archer_master_ishilien</nextqnpc>
+      <custommark>40,41,42</custommark>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Spinoff] Lost Elf]]></qkname>
+      <qnpc>
+         <npcid>2402</npcid>
+         <npcename>n2402_elf_meiaellin</npcename>
+         <npckname>메이엘린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>44</npcid>
+         <npcename>n044_archer_master_ishilien</npcename>
+         <npckname>상급 아처 이실리엔</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>999</npcid>
+         <npcename>n999_remote</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="6" select_type="0"><![CDATA[<html>Accept Quest</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Remote quest$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-job_check" mid="56" select_type="0"><![CDATA[<html>What’s the matter?</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Master Archer lthilien$<BR><FONT color=#387206>{user_nick}</FONT>, do you have a second?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-complete_quest" mid="57" select_type="0"><![CDATA[<html>(End Conversation)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Archer lthilien$<BR>I'm sorry. You must be busy.<BR><BR><FONT color=#7e12d2>* Only </FONT> <FONT color=#a82424>Hunter</FONT> <FONT color=#7e12d2> characters can take this quest.</FONT><BR><FONT color=#a82424>Silver Hunter</FONT> <FONT color=#7e12d2>characters who have already completed Specialization cannot take this quest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="61"><![CDATA[<html>$Master Cleric Enoch$<BR>Oh... I’m sorry for stopping you when you’re so busy.<BR>
+ <BR>
+<FONT color=#7e12d2>※ This quest cannot be taken if you have accepted </FONT><FONT color=#a82424>Specialization Quest before the revamp</FONT><FONT color=#7e12d2>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n999_remote-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n999_remote-accepting-acceptted" mid="54" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html><FONT color=#2b2723>$Lost Elf$</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2402_elf_meiaellin-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="9"><![CDATA[<html>$Maylline$<BR>Who said you could talk to me?<BR><BR>
+<FONT color=#7e12d2>(She's glaring at you angrily.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-check_class" mid="11" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Master Archer lthilien$<BR><FONT color=#387206>{user_nick}</FONT>, as you might already know…<BR>The path to find Telesia, the destiny given to each elf, is a treacherous and arduous journey. <BR>That is why only elves who have come of age are allowed to embark on their search for Telesia. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-b" mid="13" select_type="0"><![CDATA[<html>A young elf…?</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Master Archer lthilien$<BR>However, a young elf came to see me not long ago.<BR>She was too young to start her voyage to find her Telesia...<BR>But for some reason, she was obsessed about finding it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-c" mid="15" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Master Archer lthilien$<BR>No matter how young, elves are elves.<BR>I couldn't stop her.<BR>But I've lost contact with her ever since she went to <FONT color=#a82424>Mutant's Habitat</FONT> and it's making me worried.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-c" image="QW_59.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-2" mid="17" select_type="0"><![CDATA[<html>All right, I'll go and take a look.</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Master Archer lthilien$<BR><FONT color=#387206>{user_nick}</FONT>, would you be kind enough to see if she's still in <FONT color=#a82424>Mutant's Habitat</FONT>?<BR>If she's in trouble, please save her. If she's lost, please guide her to the right path.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-1-compete_quest" mid="59" select_type="0"><![CDATA[<html>(End Conversation)</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Master Warrior Rodrigo$<BR>Oh... I’m sorry for stopping you when you’re so busy.<BR><BR><FONT color=#7e12d2>※ Only </FONT><FONT color=#a82424>Hunter</FONT><FONT color=#7e12d2> class characters can take this quest.</FONT><BR><FONT color=#a82424>Silver Hunter </FONT><FONT color=#7e12d2>characters who have already completed Specialization cannot take this quest.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="62"><![CDATA[<html>$Master Cleric Enoch$<BR>Oh... I’m sorry for stopping you when you’re so busy.<BR>
+ <BR>
+<FONT color=#7e12d2>※ This quest cannot be taken if you have accepted </FONT><FONT color=#a82424>Specialization Quest before the revamp</FONT><FONT color=#7e12d2>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Master Archer lthilien$<BR>People who have only one goal in mind tend to neglect what is around them.<BR>That is why they become lost easily. <FONT color=#7e12d2>(Ithilien's face shows no emotions but she seems to be worried inside.)</FONT><BR>I hope the young elf is safe…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2402_elf_meiaellin-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2402_elf_meiaellin-2-a" mid="20" select_type="0"><![CDATA[<html>Maylline...?!</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Maylline$<BR>So it really was you.<BR>I didn't want to see you ever again…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2402_elf_meiaellin-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2402_elf_meiaellin-2-b" mid="22" select_type="0"><![CDATA[<html>But you're hurt.</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Maylline$<SPAN lang=en-US>{action:No</SPAN><SPAN lang=en-US>}</SPAN><BR><FONT color=#7e12d2>(She stares angrily.)</FONT> Who said you could call me by my name?<BR>And I don't need your help. Are you taking me for an idiot who can't even stand on my own?<BR>I don't need your sympathy!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2402_elf_meiaellin-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2402_elf_meiaellin-2-c" mid="24" select_type="0"><![CDATA[<html>That's...</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Maylline$<BR>This is nothing.<BR>Compared to <FONT color=#086171>Daylline</FONT> who lost her life…<BR>Oh, I hope you didn't forget that it was you who killed her.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2402_elf_meiaellin-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2402_elf_meiaellin-2-d" mid="26" select_type="0"><![CDATA[<html>I was trying to protect you.</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Maylline$<BR>I heard stories about you on my way here. Outrageous.<BR>The murderer who killed my little sister <FONT color=#086171>Day</FONT><BR>is being praised as a hero!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2402_elf_meiaellin-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2402_elf_meiaellin-2-e" mid="28" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Maylline$<SPAN lang=en-US>{action:Angry</SPAN><SPAN lang=en-US>}</SPAN><BR>Protect me? No, you didn't protect anyone. I still remember that day clearly.<BR>When Day's body turned cold and crumbled into dust,<BR>I tried to grab whatever was left of her with my hands...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2402_elf_meiaellin-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2402_elf_meiaellin-2-f" mid="30" select_type="0"><![CDATA[<html>I'm sorry, I...</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Maylline$<BR>But when I opened my fist, all that was left was the fragrance of violets.<BR>She was attacked while picking my favourite flowers for me.<BR>But I... I couldn't do anything…!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2402_elf_meiaellin-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2402_elf_meiaellin-3" mid="32" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Maylline$<BR>Don't apologise. I will never forgive you.<BR>This is my last warning. Leave me alone.<BR>If I ever see you again, I'll... avenge Day's death.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-a" mid="34" select_type="0"><![CDATA[<html>(Tell her about Maylline.)</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Master Archer lthilien$<BR>I was waiting for you. <BR>You look troubled. Did something happen?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-b" mid="36" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Master Archer lthilien$<BR>I see. A wisp in Mutant's Habitat…….<BR>I remember hearing that attacks from wisps were on the rise recently.<BR>I will warn the others about this.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-c" mid="38" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Quest Completed$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n044_archer_master_ishilien-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n044_archer_master_ishilien-3-!next" mid="40" select_type="0"><![CDATA[<html>Maylline did?</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Master Archer lthilien$<BR>Anyway, I'm surprised you two already know each other. <BR>Actually… she was here looking for me before you came back.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 80</chk>
+         <chk type="hasquest">4766</chk>
+         <chk type="hasquest">4767</chk>
+         <chk type="hasquest">4768</chk>
+         <chk type="hasquest">4769</chk>
+         <chk type="hascomq">4769</chk>
+      </conditions>
+      <executions>
+         <exe type="recompense_view">36010,,,,,,,,,</exe>
+         <exe type="setquest">3601</exe>
+         <exe type="talk" npc="n044_archer_master_ishilien">1</exe>
+         <exe type="conexe" true="5" false="0,4">5</exe>
+         <exe type="talk" npc="n044_archer_master_ishilien">d</exe>
+         <exe type="talk" npc="n044_archer_master_ishilien">b</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3601, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3602, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3603, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3604, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="14" false="11">1</exe>
+         <exe type="conexe" true="14" false="12">2</exe>
+         <exe type="conexe" true="14" false="13">3</exe>
+         <exe type="conexe" true="14" false="3">4</exe>
+         <exe type="talk" npc="n044_archer_master_ishilien">c</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 80</chk>
+         <chk type="hasquest">4766</chk>
+         <chk type="hasquest">4767</chk>
+         <chk type="hasquest">4768</chk>
+         <chk type="hasquest">4769</chk>
+         <chk type="hascomq">4769</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="4" false="3">5</exe>
+         <exe type="talk" npc="n044_archer_master_ishilien">a</exe>
+         <exe type="talk" npc="n044_archer_master_ishilien">d</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3601, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3602, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3603, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 3604, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="13" false="10">1</exe>
+         <exe type="conexe" true="13" false="11">2</exe>
+         <exe type="conexe" true="13" false="12">3</exe>
+         <exe type="conexe" true="13" false="2">4</exe>
+         <exe type="talk" npc="n044_archer_master_ishilien">e</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">36010,,,,,,,,,</exe>
+         <exe type="complete" true="">3601</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">1</exelink>
+   <exelink qstep="accepting" npc="n999_remote" sub="job_check">10</exelink>
+   <exelink qstep="accepting" npc="n999_remote" sub="complete_quest">6,7,8,9</exelink>
+   <exelink qstep="accepting" npc="n999_remote" sub="acceptted">1</exelink>
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="check_class">9</exelink>
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="b" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="c" />
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="2">0,1</exelink>
+   <exelink qstep="1" npc="n044_archer_master_ishilien" sub="compete_quest">5,6,7,8</exelink>
+   <exelink qstep="2" npc="n2402_elf_meiaellin" sub="b" />
+   <exelink qstep="2" npc="n2402_elf_meiaellin" sub="c" />
+   <exelink qstep="2" npc="n2402_elf_meiaellin" sub="d" />
+   <exelink qstep="2" npc="n2402_elf_meiaellin" sub="e" />
+   <exelink qstep="2" npc="n2402_elf_meiaellin" sub="f" />
+   <exelink qstep="2" npc="n2402_elf_meiaellin" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="b">0</exelink>
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="c">1</exelink>
+   <exelink qstep="3" npc="n044_archer_master_ishilien" sub="!next" />
+   <journal_data recompense="36010" quest_title="[외전] 길 잃은 엘프" chapterid="-1" quest_level="50" quest_mark_type="40" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="41"><![CDATA[Ithilien's Request]]></title>
+         <contents mid="42"><![CDATA[<html>Master Archer lthilien seems to have something to say.<BR>Listen to her story.<BR><BR><FONT color=#086171>Saint Haven</FONT> - <FONT color=#a82424>Master Archer lthilien</FONT></html>]]></contents>
+         <destination mid="43"><![CDATA[Talk to Master Archer lthilien]]></destination>
+         <todo_msg mid="44"><![CDATA[Talk to Master Archer lthilien.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_59.dds</contents_image>
+         <destination_pos>591,n2402</destination_pos>
+         <destination_mode>custom:591@4</destination_mode>
+         <statemark_npcid>2402</statemark_npcid>
+         <statemark_type>41</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="45"><![CDATA[Search]]></title>
+         <contents mid="46"><![CDATA[<html>Scout Mutant's Habitat to relieve Ithilien's worries.<BR><BR>
+<FONT color=#7e12d2>* You cannot take this quest in a party.</FONT><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> - <FONT color=#a82424>Mutant's Habitat</FONT></html>]]></contents>
+         <destination mid="47"><![CDATA[(Solo) Find a young elf at Mutant's Habitat]]></destination>
+         <todo_msg mid="48"><![CDATA[Find a young elf at Mutant's Habitat.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Archer_Ishilien.dds</contents_image>
+         <destination_pos>11,n44</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>44</statemark_npcid>
+         <statemark_type>42</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="49"><![CDATA[Young elf's Whereabouts]]></title>
+         <contents mid="50"><![CDATA[<html>You met Maylline but she still harboured deep resentment towards you.<BR>Return to Ithilien to tell her you've found the young elf.<BR><BR><FONT color=#086171>Saint Haven</FONT> - <FONT color=#a82424>Master Archer lthilien</FONT></html>]]></contents>
+         <destination mid="51"><![CDATA[Talk to Master Archer lthilien]]></destination>
+         <todo_msg mid="52"><![CDATA[Talk to Master Archer lthilien.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>50:-1</user_level>
+      <user_class>2</user_class>
+      <prev_quest>997</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

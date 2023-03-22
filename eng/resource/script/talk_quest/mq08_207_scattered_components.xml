@@ -1,0 +1,353 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_207_scattered_components</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>3</qchapter>
+      <qid>207</qid>
+      <designer>김주연</designer>
+      <qlevel>13</qlevel>
+      <qdesc>300040 비행선 부품
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>208</nextqid>
+      <nextqname>mq08_208_depleting_fuel</nextqname>
+      <nextqnpc>n099_engineer_hubert</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Scattered Parts]]></qkname>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드의 길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>54</npcid>
+         <npcename>n054_elite_soldier_wounded</npcename>
+         <npckname>부상당한 정예병사1</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>55</npcid>
+         <npcename>n055_elite_soldier</npcename>
+         <npckname>정예병사 클림드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>99</npcid>
+         <npcename>n099_engineer_hubert</npcename>
+         <npckname>비행정 엔지니어 휴버트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n054_elite_soldier_wounded-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n054_elite_soldier_wounded-noquest-" mid="136" select_type="5" />
+      <talk_question mid="32"><![CDATA[<html>$Wounded Elite Soldier$<BR>Ah… It all happened so quickly. There was a loud BANG! And I don't remember anything after that.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-noquest-" mid="137" select_type="5" />
+      <talk_question mid="33"><![CDATA[<html>$Elite Soldier Calrim$<BR>I need to save my injured soldiers. We must find the culprit who's responsible for this…!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-noquest-" mid="138" select_type="5" />
+      <talk_question mid="34"><![CDATA[<html>$Airship Engineer Hubert$<BR>The damn airship is giving me a headache so don't disturb me! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-acceptted" mid="91" select_type="0"><![CDATA[<html>(You explain the situation)</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>What happened to the <FONT color=#a82424>silver-haired woman</FONT>? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-a" mid="95" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Deckard${action:Talk}<BR>So we've lost the <FONT color=#a82424>Black Knight</FONT> in the end…<BR>The swordswoman is injured, and the <FONT color=#a82424>Prophet</FONT> girl is still in the evil hands…<BR>Things are getting worse and worse.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-b" mid="97" select_type="2" />
+      <talk_question mid="96"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>I'm sorry I have nothing to say…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-b" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-c" mid="98" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Well… it's not your fault anyway. <BR>So, Argenta told you to go to <FONT color=#a82424>Saint Haven</FONT> to look for a <FONT color=#a82424>blond-haired swordsman</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-c" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2" mid="99" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>To go to <FONT color=#a82424>Saint Haven</FONT>… <BR>You have to take an airship to go to the <FONT color=#a82424>Saint Haven Royal Castle</FONT>… But it was destroyed by the <FONT color=#a82424>Black Knight</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-" mid="100" select_type="5" />
+      <talk_question mid="40"><![CDATA[<html>$Airship Engineer Hubert$<BR>I'm busy with the airship now so go away! <BR>If you have questions, go to <FONT color=#a82424>Adventurer's Guild Master Deckard</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-1-" mid="101" select_type="5" />
+      <talk_question mid="41"><![CDATA[<html>$Elite Soldier Calrim$<BR>I need to save at least one more of my injured soldiers before we return home. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n054_elite_soldier_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n054_elite_soldier_wounded-1-" mid="102" select_type="5" />
+      <talk_question mid="42"><![CDATA[<html>$Wounded Elite Soldier$<BR>Ah...the accident happened in an instant. It went BAM! And I don't remember anything else...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-a" mid="103" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Airship Engineer Hubert$<BR>You're asking about the progress with the airship? Are you adding fuel to my irritation?!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-2-b" mid="105" select_type="2" />
+      <talk_question mid="104"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>I'm sorry...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-2-b" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_question mid="45"><![CDATA[<html>$Airship Engineer Hubert$<BR><FONT color=#a82424>The operation of the airship is temporarily closed</FONT>. You're asking why? I've already explained hundreds of times. Go and ask those soldiers why. I'm busy so stop asking me questions!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-" mid="106" select_type="5" />
+      <talk_question mid="46"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>You can take a look at the airship yourself to see the state it's in.<BR>Go to the airship dock and speak to <FONT color=#a82424>Airship Engineer Hubert</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-3" image="QP_AirShip_part .dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-3-" mid="107" select_type="5" />
+      <talk_question mid="47"><![CDATA[<html>$Airship Engineer Hubert$<BR>Oh, really now...how am I supposed to fix this heap of junk without proper parts! I can't possibly go to the <FONT color=#a82424>Forest of Death</FONT> to collect the scattered parts, can I? With a name like that, who'd want to go in there?<BR>If you have questions, then ask the soldiers. I've got an airship to fix.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-a" mid="108" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Elite Soldier Calrim$<BR>(He's shouting loudly to the soldiers.)<BR>Alright, gentlemen. Listen up! The airship will soon be repaired. Until then, all of you keep it up!<BR>Hey, you there! Why do you keep loitering around here?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-b" mid="110" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ah… I'm </FONT> <FONT color=#419300>{user_nick}</FONT> <FONT color=#662500>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-b" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-c" mid="111" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Elite Soldier Calrim$<BR>So you're an adventurer chasing after the <FONT color=#a82424>Black Knight</FONT>? We were deployed by the Saint Haven Royal Castle but ended up getting stuck here because of that Black Knight…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-c" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-d" mid="113" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Is there no other way I can go to Saint Haven?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-d" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-e" mid="114" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>$Elite Soldier Calrim$<BR>Currently there is no other way besides the airship.<BR>I want to help with the repairs but… my soldiers were injured when the airship was destroyed and I have to take care of them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-f" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>I should ask if I can help out with anything.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-3-" mid="117" select_type="5" />
+      <talk_question mid="54"><![CDATA[<html>$Elite Soldier Calrim$<BR>Sure. You do that. Excuse me, I have wounded soldiers to tend to.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n055_elite_soldier-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n055_elite_soldier-4-" mid="118" select_type="5" />
+      <talk_question mid="55"><![CDATA[<html>$Elite Soldier Calrim$<BR>Listen up people! Once the airship is repaired, we're going to return to Saint Haven! Hang in there!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4" image="QW_AirShip.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-a" mid="120" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Airship Engineer Hubert$<BR>You want to help repair the ship?<BR>Excellent!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-a" image="QW_CataractGateway.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-4-b" mid="121" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Airship Engineer Hubert$<BR>As far as I know, two airships were attacked in this area. The first airship crashed in the Forest of Death. The second one is behind me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-4-b" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-5" mid="122" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Airship Engineer Hubert$<BR>We're going to need to get some parts from the other airship that crashed in the <FONT color=#a82424>Forest of Death</FONT> to fix this one. I'm happy to have an assistant.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-5" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-5-" mid="123" select_type="5" />
+      <talk_question mid="62"><![CDATA[<html>$Airship Engineer Hubert$<BR><FONT color=#a82424>Forest of Death</FONT>'s <FONT color=#a82424>Spiders</FONT> <FONT color=#2b2723>and </FONT> <FONT color=#a82424>Ghouls</FONT><FONT color=#2b2723> are</FONT> dangerous monsters. But you can handle them. Get <FONT color=#a82424>3</FONT> <FONT color=#a82424>Airship Parts</FONT> for me. It should be scattered here and there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-6-a" mid="124" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$Airship Engineer Hubert$<BR>Amazing! Here, take this. You deserve it!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-6-b" mid="126" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Wow thank you.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-6-!next" mid="127" select_type="4" />
+      <talk_question mid="66"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">207</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions>
+         <chk type="questitem" num="3" op="]=">300040</chk>
+      </conditions>
+      <executions>
+         <exe type="huntitem" num="3" exe="" onexe="1">300040</exe>
+         <exe type="conexe" true="4,5,6" false="">0</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">2071,2071,2072,2073,2074,2076,2076,,</exe>
+         <exe type="complete" true="">207</exe>
+         <exe type="delquestitem" num="-1">300040</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n099_engineer_hubert" sub="b">0,1</exelink>
+   <exelink qstep="3" npc="n055_elite_soldier" sub="b" />
+   <exelink qstep="3" npc="n055_elite_soldier" sub="c" />
+   <exelink qstep="3" npc="n055_elite_soldier" sub="d" />
+   <exelink qstep="3" npc="n055_elite_soldier" sub="e" />
+   <exelink qstep="3" npc="n055_elite_soldier" sub="f">0,1</exelink>
+   <exelink qstep="3" npc="n055_elite_soldier" sub="" />
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="b" />
+   <exelink qstep="4" npc="n099_engineer_hubert" sub="5">0,2,3</exelink>
+   <exelink qstep="6" npc="n099_engineer_hubert" sub="b">0</exelink>
+   <exelink qstep="6" npc="n099_engineer_hubert" sub="!next">1,2</exelink>
+   <journal_data recompense="1:2071,2:2072,3:2073,4:2074,6:2076" quest_title="흩어진 부품들" chapterid="3" quest_level="13" quest_mark_type="1" use_item_list="300040">
+      <journal index="1">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="20"><![CDATA[To Saint Haven]]></title>
+         <contents mid="21"><![CDATA[<html><FONT color=#2b2723>The airship is the only way to get to Saint Haven. Talk to Adventurer's Guild Master Deckard for more details about the airship.</FONT><BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Deckard</FONT></html>]]></contents>
+         <destination mid="22"><![CDATA[Talk to Adventurer's Guild Master Deckard]]></destination>
+         <todo_msg mid="23"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="70"><![CDATA[Talk to Airship Engineer Hubert]]></title>
+         <contents mid="71"><![CDATA[<html><FONT color=#2b2723>Deckard said that the airship is the only way to get to Saint Haven. Go ask Hubert about the status of the airship, and when it will be departing.</FONT><BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="72"><![CDATA[Talk to Airship Engineer Hubert]]></destination>
+         <todo_msg mid="73"><![CDATA[Talk to Airship Engineer Hubert.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>8,n55</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>55</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="74"><![CDATA[Talk to Elite Soldier Calrim]]></title>
+         <contents mid="75"><![CDATA[<html><FONT color=#2b2723>Engineer Hubert was busy and he asked you to ask an elite soldier on how the airship got destroyed. Talk to Elite Soldier Calrim next to the tent.</FONT><BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Elite Soldier Calrim</FONT></html>]]></contents>
+         <destination mid="76"><![CDATA[Talk to Elite Soldier Calrim]]></destination>
+         <todo_msg mid="77"><![CDATA[Talk to Elite Soldier Calrim.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Talk to Airship Engineer Hubert]]></title>
+         <contents mid="79"><![CDATA[<html><FONT color=#2b2723>Deckard said that to go to Saint Haven, the broken airship has to be repaired.<BR>Help Airship Engineer Hubert repair the airship.</FONT><BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[Talk to Airship Engineer Hubert]]></destination>
+         <todo_msg mid="81"><![CDATA[Talk to Airship Engineer Hubert.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_17.dds</contents_image>
+         <destination_pos>134,0,0</destination_pos>
+         <destination_mode>custom:131@4,132@4,133@4,134@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="82"><![CDATA[Collect Airship Parts at the Forest of Death]]></title>
+         <contents mid="83"><![CDATA[<html><FONT color=#2b2723>Collect 3 airship parts for Hubert.</FONT><BR><BR><FONT color=#086171>Cristal Stream (Raider's Den Entrance)</FONT><FONT color=#086171>)</FONT> <FONT color=#a82424>- Forest of Death</FONT></html>]]></contents>
+         <destination mid="84"><![CDATA[Collect Airship Parts at the Forest of Death]]></destination>
+         <todo_msg mid="85"><![CDATA[Search the Forest of Death for Airship Parts.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QP_AirShip_part .dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="86"><![CDATA[Recovered Components]]></title>
+         <contents mid="87"><![CDATA[<html><FONT color=#2b2723>You have found all the airship parts. <BR>Take them to Calderock Village's Engineer Hubert.</FONT> <BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>- Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="88"><![CDATA[Talk to Airship Engineer Hubert.]]></destination>
+         <todo_msg mid="89"><![CDATA[Deliver the parts to Airship Engineer Hubert.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>206</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

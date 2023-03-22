@@ -1,0 +1,387 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq01_003_red_emblem1</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>3</qid>
+      <designer>김주연</designer>
+      <qlevel>3</qlevel>
+      <qdesc>300058 지도
+(워리어 전용 퀘스트)
+1. 고대의 신전 유적지 1층에서 마을 사람과 대화, 사람들이 안에 잡혀 있다는 정보를 입수.
+2. 안쪽의 사람들을 구출하지만 로제가 없다는 사실을 알게 됨.
+3. 티모시는 로제가 카타콤으로 끌려간듯하다는 말을 함.
+4. 프레리 타운의 촌장 해롤드에게 그 사실을 전하면 촌장은 매우 불안해하는 모습을 보임.
+(로제가 고대인의 후예라는 것을 유일하게 알고 있고, 과거에 고대인 부부를 통해 마물들이 고대인을 쫓고 있는 것을 알고 있기 때문에 마물들이 로제의 정체를 알아낸 것은 아닌지 두려워 하는 것.)</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>5</nextqid>
+      <nextqname>mq01_005_red_emblem2</nextqname>
+      <nextqnpc>n001_elder_harold</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[The Red Seal Part 1]]></qkname>
+      <qnpc>
+         <npcid>1</npcid>
+         <npcename>n001_elder_harold</npcename>
+         <npckname>촌장 해롤드   (프레리)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>106</npcid>
+         <npcename>n106_prairie_wounded</npcename>
+         <npckname>부상당한 마을 사람1</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>107</npcid>
+         <npcename>n107_prairie_prison</npcename>
+         <npckname>감옥에 갇힌 마을 사람1</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>120</npcid>
+         <npcename>n120_prairie_prison</npcename>
+         <npckname>감옥에 갇힌 마을 사람2</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>121</npcid>
+         <npcename>n121_prairie_prison</npcename>
+         <npckname>감옥에 갇힌 마을 사람3</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>122</npcid>
+         <npcename>n122_prairie_wounded</npcename>
+         <npckname>부상당한 마을 사람2</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>123</npcid>
+         <npcename>n123_prairie_wounded</npcename>
+         <npckname>부상당한 마을 사람3</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>131</npcid>
+         <npcename>n131_guard_timose</npcename>
+         <npckname>가드 티모시 (mp003)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>4</npcid>
+         <npcename>n004_guard_steave</npcename>
+         <npckname>가드 스티브 </npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>8</npcid>
+         <npcename>n008_guard_timose</npcename>
+         <npckname>가드 티모시 </npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>9</npcid>
+         <npcename>n009_warrior_master_dunken</npcename>
+         <npckname>상급 워리어 던컨  (프레리 워려 스킬)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="200"><![CDATA[<html>$Mayor Harold$<BR>Uhuk uhuk... Kamu tidak menemukan dan membawa kembali Rose... Namun aku tetap menghargai yang telah kamu lakukan untuk mencarinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n106_prairie_wounded-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="201"><![CDATA[<html>$Wounded Villager$<BR>T-terima kasih telah menyelamatkanku...<BR>Yang lain masih disana. Bantu selamatkan para penduduk yang lain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-noquest" image="QN_Guard_Steave.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="202"><![CDATA[<html>$Master Warrior Duncan$<BR><FONT color=#a82424>Vigilante Leader Steve</FONT> sedang mencarimu...<BR>Sebaiknya kamu pergi menemui Steve.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n008_guard_timose-noquest" image="QN_Guard_Steave.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="203"><![CDATA[<html>$Timothy$<BR>K-kembali  ke kota dan serahkan peta ke <FONT color=#a82424>Vigilante Leader Steve</FONT> yang diambil dari <FONT color=#a82424>Ancient Temple Ruins</FONT>...<BR>Ta-tapi kamu harus cepat-cepat datang! <FONT color=#a82424>Rose</FONT> pas-ti dalam bahaya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-accepting" image="QS_Default.dds" itemindex="300057" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n004_guard_steave-accepting-acceptted" mid="199" select_type="0"><![CDATA[<html>(Serahkan peta kepada Steve)</html>]]></talk_answer>
+      <talk_question mid="198"><![CDATA[<html>$Vigilante Leader Steve$<BR>Aku harap kamu sudah menemukan semua Map Fragment?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n008_guard_timose-1" image="QN_Guard_Steave.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Timothy$<BR>K-kembali  ke kota dan serahkan peta ke <FONT color=#a82424>Vigilante Leader Steve</FONT> yang diambil dari <FONT color=#a82424>Ancient Temple Ruins</FONT>...<BR>Ta-tapi kamu harus cepat-cepat datang! <FONT color=#a82424>Rose</FONT> pas-ti dalam bahaya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-1" image="QS_Default.dds" itemindex="300057" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n004_guard_steave-1-a" mid="57" select_type="0"><![CDATA[<html>(Serahkan peta ke Steve)</html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Vigilante Leader Steve$<BR>Aku harap kamu sudah menemukan semua Map Fragment?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-1-a" image="QN_Guard_Timose.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n004_guard_steave-1-b" mid="138" select_type="0"><![CDATA[<html>Dia meninggalkan Ancient Temple Ruins lebih dulu.</html>]]></talk_answer>
+      <talk_question mid="137"><![CDATA[<html>$Vigilante Leader Steve$<BR>Berdasarkan peta, ini menunjuk ke <FONT color=#a82424>Ancient Temple Ruins</FONT>. Mungkin kita dapat menemukan Rose dan para penduduk yang hilang disana...<BR>Mmm? Tapi... Aku tidak melihat <FONT color=#a82424>Timothy</FONT>. Apakah dia datang bersamamu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-1-b" image="QW_2.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n004_guard_steave-2" mid="140" select_type="0"><![CDATA[<html>Aku akan membantu.</html>]]></talk_answer>
+      <talk_question mid="139"><![CDATA[<html>$Vigilante Leader Steve$<BR>Apakah itu benar? Mmm... Walaupun dia ceroboh tapi dia penjaga dan teman yang baik. Tapi mengingat <FONT color=#a82424>Rose</FONT>, Aku tidak yakin dengan kemampuannya. Akan sangat bagus jika kamu bisa pergi ke <FONT color=#a82424>Ancient Temple Ruins</FONT> dan memeriksanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n131_guard_timose-1" image="QN_Guard_Steave.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="105"><![CDATA[<html>$Timothy$<BR>K-kembali  ke kota dan serahkan peta ke <FONT color=#a82424>Vigilante Leader Steve</FONT>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-1" image="QN_Guard_Steave.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="106"><![CDATA[<html>$Master Warrior Duncan$<BR><FONT color=#a82424>Vigilante Leader Steve</FONT> sedang mencari mu...<BR>Sebaiknya kamu pergi menemui Steve.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n106_prairie_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="121"><![CDATA[<html>$Wounded Villager$<BR>T-terima kasih telah menyelamatkanku...<BR>Yang lain masih disana. Bantu selamatkan para penduduk yang lain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n107_prairie_prison-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="122"><![CDATA[<html>$Imprisoned Villager$<BR>Aku...Aku masih hidup! terima kasih!<BR>Masih ada yang lainnya di dalam yang juga telah diculik. Aku mohon selamatkan mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n120_prairie_prison-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="123"><![CDATA[<html>$Imprisoned Villager$<BR>Kamu kesini untuk menyelamatkanku!<BR>terima kasih... Sob... Aku yakin itu adalah akhirnya untukku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n121_prairie_prison-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="124"><![CDATA[<html>$Imprisoned Villager$<BR>Phew... terima kasih telah menyelamatkanku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n122_prairie_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="125"><![CDATA[<html>$Wounded Villager$<BR>Kamu telah mengalahkan monster yang menyeramkan ... Berkat kamu aku masih hidup!<BR>Aku tidak akan pernah melupakan kebaikanmu. terima kasih!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n123_prairie_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="126"><![CDATA[<html>$Wounded Villager$<BR>Uhh... Huh? Dimana... Dimana aku? Kenapa aku ada disini?<BR><FONT color=#7e12d2>(Sepertinya dia tidak sadarkan diri selama penculikan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="155"><![CDATA[<html>$Mayor Harold$<BR>Uhuk uhuk... Kamu tidak menemukan dan membawa kembali Rose... Namun aku tetap menghargai apa yang telah kamu lakukan untuk menemukannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-2" image="QN_Npc_Warrior_Dunken.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="58"><![CDATA[<html>$Vigilante Leader Steve$<BR>terima kasih. Sebelum kamu pergi, temui <FONT color=#a82424>Master Warrior Duncan</FONT> dari <FONT color=#a82424>Adventurer's Guild</FONT>. Dia ingin berbicara denganmu,<FONT color=#387206>{user_nick}</FONT> .</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-a" mid="142" select_type="0"><![CDATA[<html>Rumahku...sekarang hancur.</html>]]></talk_answer>
+      <talk_question mid="141"><![CDATA[<html>$Master Warrior Duncan$<BR>Kamu Adventurer yang menyelamatkan Lily?<BR>Aku tidak pernah melihatmu di tempat ini, darimana kamu berasal?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-b" mid="180" select_type="0"><![CDATA[<html>Aku mempelajarinya dari ayahku.</html>]]></talk_answer>
+      <talk_question mid="179"><![CDATA[<html>$Master Warrior Duncan$<BR>Pasti kamu punya alasan sendiri...<BR>Tapi, tidaklah mudah mengalahkan semua kekuatan jahat sendirian.<BR>Siapa yang mengajarkan kamu berkelahi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-c" mid="182" select_type="0"><![CDATA[<html>Namanya Lambert.</html>]]></talk_answer>
+      <talk_question mid="181"><![CDATA[<html>$Master Warrior Duncan$<BR>Oh...? Ayahmu dulu prajurit yang hebat.<BR>Siapa namanya?<BR>Mungkin aku mengenalnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-d" mid="184" select_type="0"><![CDATA[<html>Aku tidak tahu tentang Blue Wolf of the Desert, tapi benar itu nama ayahku.</html>]]></talk_answer>
+      <talk_question mid="183"><![CDATA[<html>$Master Warrior Duncan$<BR>Lambert? Kamu berbicara tentang <FONT color=#a82424>Blue Wolf of the Desert Lambert</FONT>?<BR>Anaknya, kamu bilang?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-e" mid="186" select_type="0"><![CDATA[<html>(Ayahku meninggalkanku tanpa mengatakan apa-apa)</html>]]></talk_answer>
+      <talk_question mid="185"><![CDATA[<html>$Master Warrior Duncan$<BR>Kejutan sekali.<BR>Jadi bagaimana kabarnya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-e" image="QN_warrior_barnak_silhouette.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-f" mid="188" select_type="0"><![CDATA[<html>Siapa Barnac ini?</html>]]></talk_answer>
+      <talk_question mid="187"><![CDATA[<html>$Master Warrior Duncan$<BR>Dia bilang kalau kamu dapat bertemu dengannya lagi setelah kamu menjadi Warrior yang lebih baik dari <FONT color=#a82424>Barnac</FONT>...? Pasti itulah orang yang aku kenal.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-f" image="QN_warrior_barnak_silhouette.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-g" mid="190" select_type="0"><![CDATA[<html>Mencari tahu untuk kepentinganku?</html>]]></talk_answer>
+      <talk_question mid="189"><![CDATA[<html>$Master Warrior Duncan$<BR>Siapa <FONT color=#a82424>Barnac</FONT>...? Hahaha.<BR>Pasti kamu satu-satunya warrior di dunia ini yang tidak tahu siapa dia.<BR>Sepertinya ayahmu ingin kamu untuk mengetahuinya sendiri.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-g" image="QN_warrior_barnak_silhouette.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-h" mid="193" select_type="0"><![CDATA[<html>Barnac...</html>]]></talk_answer>
+      <talk_question mid="192"><![CDATA[<html>$Master Warrior Duncan$<BR>Saat kamu tumbuh menjadi  seorang warrior kamu pasti akan bertemu <FONT color=#a82424>Barnac</FONT>. Inilah yang dialami semua warrior, termasuk ayahmu, kamu dan aku akan alami. Whoo...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-h" image="QN_warrior_barnak_silhouette.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-i" mid="195" select_type="0"><![CDATA[<html>... Baiklah.</html>]]></talk_answer>
+      <talk_question mid="194"><![CDATA[<html>$Master Warrior Duncan$<BR>Rupanya terlalu dini bagimu untuk bertemu <FONT color=#a82424>Barnac</FONT>. Walaupun dengan kemajuan Lambert, yang dapat dipelajari oleh seseorang sangatlah terbatas.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-i" image="QM_TrollBlue.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-j" mid="197" select_type="0"><![CDATA[<html>Maksudmu... Sisi pinggir?</html>]]></talk_answer>
+      <talk_question mid="196"><![CDATA[<html>$Master Warrior Duncan$<BR>Cukup dengan cerita panjangku. Konsentrasilah dalam menghadapi musuh di depan. tempat yang akan kamu datangi sekarang dikuasai oleh <FONT color=#a82424>Jukanook</FONT>. Satu saranku, menghindarlah ke samping saat dia berguling.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-j" image="QM_TrollBlue.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-k" mid="146" select_type="0"><![CDATA[<html>Aku akan ingat itu.</html>]]></talk_answer>
+      <talk_question mid="145"><![CDATA[<html>$Master Warrior Duncan$<BR>Ya. Kamu harus tahu bahwa kamu bisa melakukan <FONT color=#a82424>Tumble</FONT> dengan menekan dua kali tombol arah atau menahan tombol [<FONT color=#a82424>Shift</FONT>] dan sekaligus tombol arah.<BR>Waktunya harus tepat, dan carilah waktu yang tepat untuk membalas serangannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-l" mid="148" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="147"><![CDATA[<html>$Master Warrior Duncan$<BR>Terlebih lagi, jika kamu ingin menjadi Warrior yang legendaris seperti ayahmu, kamu tidak boleh lupa untuk belajar <FONT color=#a82424>Skill</FONT>. Aku masih bisa mengajarkanmu skill dasar Warrior jika kamu mau.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-2-l" image="QM_TrollBlue.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n009_warrior_master_dunken-2-_skill_trade_1" mid="178" select_type="0"><![CDATA[<html>[Belajar Skill]</html>]]></talk_answer>
+      <talk_question mid="177"><![CDATA[<html>$Master Warrior Duncan$<BR><FONT color=#a82424><FONT color=#2b2723>Skill dapat dipelajari melalui Skill Window; kamu harus mendapatkan</FONT> <FONT color=#a82424>Rising Slash</FONT>.</FONT>Akan sangat membantu jika berhadapan dengan <FONT color=#a82424>Jukanook</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-3" image="QN_Npc_Warrior_Dunken.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="67"><![CDATA[<html>$Vigilante Leader Steve$<BR>Sebelum kamu pergi ke, temui <FONT color=#a82424>Master Warrior Duncan</FONT> dari <FONT color=#a82424>Adventurer's Guild</FONT>. Dia ingin berbicara denganmu, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n131_guard_timose-3" image="QN_Npc_Warrior_Dunken.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="70"><![CDATA[<html>$Guard Timothy$<BR>A-apa kamu mencari <FONT color=#a82424>Master Archer Deanna</FONT>?<BR>Se-sekarang di-dia di kota!<BR>Cepat te-temui dia sebelum kamu pergi ke <FONT color=#a82424>Ancient Temple Ruins</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n008_guard_timose-3" image="QN_Npc_Warrior_Dunken.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="129"><![CDATA[<html>$Guard Timothy$<BR>A-apa kamu mencari <FONT color=#a82424>Master Warrior Duncan</FONT>?<BR>Se-sekarang di-dia di kota!<BR>Cepat te-temui dia sebelum kamu pergi ke <FONT color=#a82424>Ancient Temple Ruins</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n009_warrior_master_dunken-4" image="QW_2.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="85"><![CDATA[<html>$Master Warrior Duncan$<BR>Sekarang, pergi ke <FONT color=#a82424>Ancient Temple Ruins</FONT>.<BR>Banyak orang yang menunggu bantuanmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n131_guard_timose-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n131_guard_timose-4-a" mid="108" select_type="0"><![CDATA[<html>Tapi... Dimana Rose?</html>]]></talk_answer>
+      <talk_question mid="86"><![CDATA[<html>$Guard Timothy$<BR>Ah... akhirnya kamu datang. Te-terima kasih kamu ce-cepat datang....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n131_guard_timose-4-a" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n131_guard_timose-4-b" mid="110" select_type="0"><![CDATA[<html>Kenapa hanya Rose yang dibawa?</html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html>$Timothy$<BR>Ahh... Aku... Aku rasa kita terlambat... Mereka telah memindahkan <FONT color=#a82424>R-Rose</FONT> ke tempat lain...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n131_guard_timose-4-b" image="QS_Default.dds" itemindex="300009" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n131_guard_timose-4-c" mid="112" select_type="0"><![CDATA[<html>Apa ini?</html>]]></talk_answer>
+      <talk_question mid="111"><![CDATA[<html>$Guard Timothy$<BR>...O-oh iya.... Am-ambil ini...<BR>Ini dijatuhkan oleh <FONT color=#a82424>Troll </FONT><FONT color=#a82424>Jukanook</FONT> saat sedang melawanmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n131_guard_timose-4-c" image="QS_Default.dds" itemindex="300009" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n131_guard_timose-4-d" mid="114" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="113"><![CDATA[<html>$Guard Timothy$<BR>I-ini adalah <FONT color=#a82424>Evil Seal Fragment</FONT>... Kalau dilihat dari ukirannya... Pasti ini seal untuk <FONT color=#a82424>Minotaur Umrak</FONT> dari <FONT color=#a82424>Catacombs</FONT>... Mungkin R-rose dibawa ke <FONT color=#a82424>Catacombs</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n131_guard_timose-4-d" image="QN_Elder_Harold.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="115"><![CDATA[<html>$Timothy$<BR>Aku pergi ke <FONT color=#a82424>Catacomb</FONT> duluan... Kamu harus mampir di kota dan temui <FONT color=#a82424>Mayor</FONT>. Jika kamu mencari informasi tentang <FONT color=#a82424>Minotaur Umrak</FONT> di <FONT color=#a82424>Catacomb</FONT>... D-dia pasti tahu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n008_guard_timose-4" image="QW_2.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="131"><![CDATA[<html>$Timothy$<BR>K-kamu sudah  menyelesaikan urusanmu di kota?<BR>J-jadi cepatlah, kita harus pergi ke <FONT color=#a82424>Ancient Temple Ruins</FONT>. Kenapa kamu masih bengong disini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-5" image="QW_3.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n001_elder_harold-5-a" mid="159" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="158"><![CDATA[<html>$Mayor Harold${action:Talk}<BR><FONT color=#a82424>Kenapa dia hanya mengambil Rose?</FONT> Uhuk uhuk, itu tidak mungkin. Tapi aku tidak bisa. Sayangnya. Ini masalah besar. Rose ditangan orang orang jahat .. Uhuk, uhuk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n001_elder_harold-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n001_elder_harold-5-!next" mid="161" select_type="0"><![CDATA[<html><FONT color=#a94407>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="160"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n131_guard_timose-5" image="QN_Elder_Harold.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="167"><![CDATA[<html>$Timothy$<BR>Aku pergi ke <FONT color=#a82424>Catacomb</FONT> duluan... Kamu harus mampir di kota dan temui <FONT color=#a82424>Mayor</FONT>. Jika kamu mencari informasi tentang <FONT color=#a82424>Minotaur Umrak</FONT> di <FONT color=#a82424>Catacomb</FONT>... D-dia pasti tahu.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">3</exe>
+         <exe type="custom">npc_talk_index = "n004_guard_steave-1-a";</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="delquestitem" num="-1">300058</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>감옥에 갇힌 마을사람 프랍 클릭하면 스텝/저널 변경 4->5</comment>
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="1">300009</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">31,,,,,,,,</exe>
+         <exe type="complete" true="">3</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n004_guard_steave" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n004_guard_steave" sub="b" />
+   <exelink qstep="1" npc="n004_guard_steave" sub="2">0,1,2</exelink>
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="b" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="c" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="d" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="e" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="f" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="g" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="h" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="i" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="j" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="k" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="l" />
+   <exelink qstep="2" npc="n009_warrior_master_dunken" sub="_skill_trade_1">0,1,2</exelink>
+   <exelink qstep="4" npc="n131_guard_timose" sub="b" />
+   <exelink qstep="4" npc="n131_guard_timose" sub="c" />
+   <exelink qstep="4" npc="n131_guard_timose" sub="d">0,1,2</exelink>
+   <exelink qstep="5" npc="n001_elder_harold" sub="a">0</exelink>
+   <exelink qstep="5" npc="n001_elder_harold" sub="!next">1</exelink>
+   <journal_data recompense="31" quest_title="붉은 인장Ⅰ" chapterid="1" quest_level="3" quest_mark_type="1" use_item_list="300058">
+      <journal index="1">
+         <contents_image>QN_Guard_Steave.dds</contents_image>
+         <destination_pos>1,-384,1911</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>4</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="38"><![CDATA[Bicaralah dengan Vigilante Leader Steve]]></title>
+         <contents mid="39"><![CDATA[<html>Peta digabungkan kembali dengan bantuan Timothy. Serahkan <FONT color=#a82424>Map</FONT> ke <FONT color=#a82424>Vigilante Leader Steve</FONT> di Prairie Town.<BR><BR><FONT color=#086171>Prairie Town</FONT><FONT color=#a82424>→ Vigilante Leader Steve</FONT></html>]]></contents>
+         <destination mid="40"><![CDATA[Bicaralah dengan Vigilante Leader Steve]]></destination>
+         <todo_msg mid="41"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Warrior_Dunken.dds</contents_image>
+         <destination_pos>1,-984,1202</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>9</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="42"><![CDATA[Bicaralah dengan Master Warrior Duncan]]></title>
+         <contents mid="43"><![CDATA[<html>Vigilante Leader Steve menyuruhmu menemui <FONT color=#a82424>Master Warrior Duncan</FONT> sebelum pergi ke <FONT color=#a82424>Ancient Temple Ruins</FONT>.<BR>Bicaralah dengan <FONT color=#a82424>Master Warrior Duncan</FONT>.<BR><BR><FONT color=#086171>Prairie Town</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Master Warrior Duncan</FONT></FONT></html>]]></contents>
+         <destination mid="44"><![CDATA[Bicaralah dengan Master Warrior Duncan]]></destination>
+         <todo_msg mid="45"><![CDATA[Bicaralah dengan Master Warrior Duncan.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Guard_Timose.dds</contents_image>
+         <destination_pos>58,430,924</destination_pos>
+         <destination_mode>custom:56@1,57@1,58@1</destination_mode>
+         <statemark_npcid>131</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="46"><![CDATA[Bicaralah dengan Timothy di Ancient Temple Ruins]]></title>
+         <contents mid="47"><![CDATA[<html>Temui<FONT color=#a82424>Timothy</FONT> di <FONT color=#a82424>Ancient Temple Ruins</FONT>.<BR><BR><FONT color=#086171>Wind Forest (Wind Forest Temple) → Ancient Temple Ruins </FONT><FONT color=#a82424>→ Timothy</FONT></html>]]></contents>
+         <destination mid="48"><![CDATA[Bicaralah dengan Timothy di Ancient Temple Ruins]]></destination>
+         <todo_msg mid="49"><![CDATA[Cari Timothy di Ancient Temple Ruins di Wind Forest.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Elder_Harold.dds</contents_image>
+         <destination_pos>1,-1390,-629</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="163"><![CDATA[Bicaralah dengan Mayor Harold]]></title>
+         <contents mid="164"><![CDATA[<html><FONT color=#a82424>Timothy</FONT> bilang <FONT color=#a82424>Rose</FONT> sudah dibawa ke Catacomb. Informasikan ke Mayor Harold tentang informasi ini.<BR><FONT color=#086171>Prairie Town</FONT> <FONT color=#a82424>→ Mayor Harold</FONT></html>]]></contents>
+         <destination mid="165"><![CDATA[Bicaralah dengan Mayor Harold]]></destination>
+         <todo_msg mid="166"><![CDATA[Kembali ke Prairie Town dan Bicaralah dengan Mayor Harold.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>1</user_class>
+      <prev_quest>2</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

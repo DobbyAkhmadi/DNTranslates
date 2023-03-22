@@ -1,0 +1,335 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_205_ancient_relic</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>2</qchapter>
+      <qid>205</qid>
+      <designer>김주연</designer>
+      <qlevel>12</qlevel>
+      <qdesc>300030 순종의 팬던트는 당장 지우지 않음</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>206</nextqid>
+      <nextqname>mq08_206_surprise_attack</nextqname>
+      <nextqnpc>n034_cleric_master_germain</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Ancient Relic]]></qkname>
+      <qnpc>
+         <npcid>28</npcid>
+         <npcename>n028_scholar_bailey</npcename>
+         <npckname>문장학자 베일리</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>34</npcid>
+         <npcename>n034_cleric_master_germain</npcename>
+         <npckname>상급 클레릭 저메인  (캐더락 클레릭 스킬)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-noquest" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-noquest-" mid="143" select_type="5" />
+      <talk_question mid="86"><![CDATA[<html>$Master Cleric Jermain$<BR><FONT color=#a82424>Heraldry Scholar Bailey</FONT memiliki ilmu sangat tinggi sepertinya. <BR>Sepertinya mendapatkan arahan dari Bailey bukanlah sesuatu yang buruk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-accepting-acceptted" mid="88" select_type="0"><![CDATA[<html>(Bertanya tentang Pendant of the Pure.)</html>]]></talk_answer>
+      <talk_question mid="87"><![CDATA[<html>$Heraldry Scholar Bailey${action:Talk}<BR>Ah, Kamu adalah {user_class} {user_nick}, kan?<BR>Bagaimana dengan pengejaran Black Knight go? Aku dengar tidak berakhir dengan baik...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1" image="QS_Default.dds" itemindex="300030" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-a" mid="91" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Heraldry Scholar Bailey${action:Talk}<BR><FONT color=#a82424>Pendant of the Pure</FONT>? Aku ingat Cleric William punya. Coba tanyakan muridnya, Master Cleric Jermain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-a" image="QW_16.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-b" mid="8" select_type="0"><![CDATA[<html>(Bertanya tentang Ancient Relic.)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Heraldry Scholar Bailey$<BR><FONT color=#a82424>Pendant of the Pure</FONT>... Black Knight pasti mengincar Ancient Relic...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-2" mid="92" select_type="2" />
+      <talk_question mid="9"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Ancient relic adalah harta karun yang ditinggalkan oleh Ancient.<BR>Dibawah berkah Goddess, mereka mendapatkan pengetahuan mendalam tentang <FONT color=#a82424>heraldry</FONT> dan <FONT color=#a82424>jewels</FONT>, namun mereka menghilang dalam sejarah karena alasan yang tidak diketahui. Yang tersisa dari mereka hanyalah relic mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-1" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-1-" mid="93" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Master Cleric Jermain$<BR><FONT color=#a82424>Heraldry Scholar Bailey</FONT> berpengalaman dalam banyak aspek. <BR>Ide yang bagus untuk meminta sarannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-2" image="QN_Npc_Cl_master_Germain.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-2-" mid="94" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Mungkin kamu bisa bertanya <FONT color=#a82424>Master Cleric Jermain</FONT> tentang item karena dia adalah murid Cleric William.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-a" mid="95" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Master Cleric Jermain$<BR>Halo adventurer.<BR>Jantungku berdebar setiap aku berpikir betapa takutnya <FONT color=#a82424>Prophet</FONT> saat ini setelah diculik oleh Black Knight.<BR>Kita harus menyelamatkan mereka secepatnya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-b" mid="97" select_type="2" />
+      <talk_question mid="96"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>kamu mendapatkan Pendant of the Pure?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-b" image="QS_Default.dds" itemindex="300030" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-c" mid="98" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Master Cleric Jermain$<BR>Pendant of the Pure... Itu yang dibawa oleh masterku, <FONT color=#a82424>Master Cleric William</FONT>....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-d" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Dimana dia sekarang?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-d" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-e" mid="101" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Master Cleric Jermain${action:Talk}<BR>Masterku... Dia ikut dalam Monster Struggle untuk melawan monster di <FONT color=#a82424>Forest of Death</FONT> dulu... Dan dia mati disana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-e" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-f" mid="102" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Master Cleric Jermain$<BR>Forest of Death dipenuhi dengan awan racun saat itu. Karena itu, aku tidak bisa memulihkan tubuh  masterku...<BR>Awan racun bahkan mengubah beberapa yang gugur  menjadi ghoul...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-g" mid="104" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Oke. Aku akan mencarinya sendiri di Forest of Death.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-3" mid="105" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$Master Cleric Jermain$<BR>Seharusnya aku  bisa memulihkan jasadnya...<BR>Saat kamu disana, bisakah kamu membawa kembali jasadnya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="129"><![CDATA[<html>$Master Cleric Jermain$<BR><FONT color=#7e12d2>Muka Master Cleric Jermain terlihat sedih.</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>※ Setidaknya kamu harus Level 12 untuk melanjutkan.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-3" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-3-" mid="106" select_type="5" />
+      <talk_question mid="28"><![CDATA[<html>$Master Cleric Jermain$<BR>Masterku <FONT color=#a82424>Pendant of the Pure</FONT> pasti ada di <FONT color=#a82424>Forest of Death</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4" image="QS_Default.dds" itemindex="300030" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-a" mid="30" select_type="0"><![CDATA[<html>(Kamu menceritakan tentang apa yang terjadi di Forest of Death.)</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Master Cleric Jermain$<BR>Apakah kamu menemukan jasadnya dan <FONT color=#a82424>Pendant of the Pure</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-b" mid="126" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Aku menemukannya, tapi ghoul memakai Pendant of the Pure di kalungnya.</FONT><BR>
+<FONT color=#662500>Tapi aku berhasil mendapatkannya.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-b" image="QM_GhoulBlue.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-c" mid="107" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Master Cleric Jermain$<BR>Apa...?<BR><FONT color=#a82424>Ghoul Burnessa</FONT> mengenakan <FONT color=#a82424>Pendant of the Pure</FONT>? Bagaimana bisa? Maksudmu monster itu memainkan jasad masterku dan mengambil darinya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-d" mid="109" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Monster itu menolak melepaskannya....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-e" mid="110" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Master Cleric Jermain$<BR>Oh... tidak...<BR><FONT color=#7e12d2>(Jermain sedih)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-f" mid="111" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Master Cleric Jermain$<BR>(hiks)... Master... Kenapa kamu berakhir sebagai arwah yang bergentayangan di dunia ini...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-g" mid="113" select_type="2" />
+      <talk_question mid="112"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Maksudmu ghoul yang berwarna biru itu adalah William?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-g" image="QM_GhoulBlue.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-h" mid="114" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Master Cleric Jermain$<BR>Sepertinya hanya itu satu-satunya cara ghoul bisa mengenakan <FONT color=#a82424>Pendant of the Pure</FONT>yang suci.<BR>Walaupun mereka menjadi undead, keyakinan dalamnya pasti melindunginya dari hancur oleh kekuatan suci.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-i" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Oke... Maaf...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-j" mid="117" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Master Cleric Jermain${action:Talk}<BR>baiklah...<BR>Dia pasti tenang di sisi  Goddess sekarang...<BR>(Dia berpaling ke awan sambil berteriak) Master, istirahatlah dengan tenang...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-k" mid="118" select_type="4" />
+      <talk_question mid="45"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-l" mid="119" select_type="2" />
+      <talk_question mid="82"><![CDATA[<html>$Master Cleric Jermain$<BR>Kita masih harus mencari tahu bagaimana ini bisa terjadi. Kadang-kadang, kepedihan dan penyesalan yang besar bisa menyebabkan yang telah mati terus berkeliaran di bumi...namuan, untuk cleric...tidak terdengar seperti itu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-4-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-4-!next" mid="120" select_type="2" />
+      <talk_question mid="84"><![CDATA[<html>$Master Cleric Jermain$<BR>Jelas, monster yang rusak atau penyihir gila berhubungan dengan ini.<BR>Kita harus menemukan dalangnya, dan menghukum mereka atas kesombongannya.<BR><FONT color=#7e12d2>(Jermain memohon padamu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-4-" mid="144" select_type="5" />
+      <talk_question mid="141"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Mungkin kamu bisa meminta <FONT color=#a82424>Master Cleric Jermain</FONT> tentang item itu karena dia adalah murid Cleric William.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-5-a" mid="121" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>$Master Cleric Jermain$<BR>Kita masih harus mencari tahu bagaimana ini bisa terjadi. Kadang-kadang, kepedihan dan penyesalan yang besar bisa menyebabkan yang mati bergentayangan di dunia...namun, untuk cleric...tidak pernah terjadi. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-5-!next" mid="122" select_type="4" />
+      <talk_question mid="79"><![CDATA[<html>$Master Cleric Jermain$<BR>Jelas, monster yang rusak atau penyihir gila berhubungan dengan ini.<BR>Kita harus menemukan dalangnya, dan menghukum mereka atas kesombongannya.<BR><FONT color=#7e12d2>(Jermain memohon padamu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="questitem" num="0" op="]">300030</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">205</exe>
+         <exe type="talk" npc="n028_scholar_bailey">1</exe>
+         <exe type="conexe" true="0,4,5,3" false="0,1">0</exe>
+         <exe type="talk" npc="n028_scholar_bailey">4</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment>300030 - 순종의 팬던트 
+</comment>
+      <conditions>
+         <chk type="lvl" op="]=">12</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">433</exe>
+         <exe type="huntitem" num="1" exe="" onexe="4,5,6">300030</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="delcount">.</exe>
+         <exe type="addquestitem" num="1">300030</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="7">200433</exe>
+         <exe type="conexe" true="10" false="11">0</exe>
+         <exe type="talk" npc="n034_cleric_master_germain">a</exe>
+         <exe type="talk" npc="n034_cleric_master_germain">h</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">2051,2051,2052,2053,2054,2056,2056,,</exe>
+         <exe type="complete" true="">205</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">205</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n028_scholar_bailey" sub="acceptted">2</exelink>
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="b" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="a">9</exelink>
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="b" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="c" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="d" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="e" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="f" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="g" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="3">2,8,3,0,1</exelink>
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="b" />
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="c" />
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="d" />
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="e" />
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="f" />
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="g" />
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="h" />
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="i" />
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="j">0</exelink>
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="k">1</exelink>
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="l" />
+   <exelink qstep="4" npc="n034_cleric_master_germain" sub="!next" />
+   <exelink qstep="5" npc="n034_cleric_master_germain" sub="!next">0</exelink>
+   <journal_data recompense="1:2051,2:2052,3:2053,4:2054,6:2056" quest_title="고대인의 유물" chapterid="2" quest_level="12" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Scholar_Baily.dds</contents_image>
+         <destination_pos>8,-2694,-3175</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>28</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="47"><![CDATA[Bicara dengan Heraldry Scholar Bailey]]></title>
+         <contents mid="48"><![CDATA[<html>Bicara dengan <FONT color=#a82424>Heraldry Scholar Bailey </FONT> tentang <FONT color=#a82424>Pendant of the Pure</FONT>. Benda itu berfungsi sebagai kunci menuju Sleepers' Temple.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424> → Heraldry Scholar Bailey </FONT></html>]]></contents>
+         <destination mid="49"><![CDATA[Bicara dengan Heraldry Scholar Bailey]]></destination>
+         <todo_msg mid="50"><![CDATA[Bicara dengan Heraldry Scholar Bailey.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Cl_master_Germain.dds</contents_image>
+         <destination_pos>8,-2383,2325</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>34</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="51"><![CDATA[Bicara dengan Master Cleric Jermain]]></title>
+         <contents mid="52"><![CDATA[<html>Bicara dengan <FONT color=#a82424>Jermain</FONT> tentang <FONT color=#a82424>Pendant of the Pure</FONT>.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>? Master Cleric Jermain</FONT></html>]]></contents>
+         <destination mid="53"><![CDATA[Bicara dengan Master Cleric Jermain]]></destination>
+         <todo_msg mid="54"><![CDATA[Bicara dengan Master Cleric Jermain.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QM_GhoulBlue.dds</contents_image>
+         <destination_pos>134,-11.58,698.30</destination_pos>
+         <destination_mode>custom:131@1,132@1,133@1,134@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="55"><![CDATA[Carilah Pendant of the Pure]]></title>
+         <contents mid="56"><![CDATA[<html>Dapatkan kembali <FONT color=#a82424>jasad</FONT> Priest William dan <FONT color=#a82424>Pendant of the Pure</FONT> miliknya dari <FONT color=#a82424>Forest of Death</FONT>.<BR><BR><FONT color=#086171>Lower Ridge</FONT> <FONT color=#a82424> → Forest of Death</FONT><BR><FONT color=#a82424></FONT></html>]]></contents>
+         <destination mid="57"><![CDATA[Temukan Pendant of the Pure]]></destination>
+         <todo_msg mid="58"><![CDATA[Temukan Pendant of the Pure di Forest of Death.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Cl_master_Germain.dds</contents_image>
+         <destination_pos>8,-2383,2325</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>34</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="59"><![CDATA[Bicara dengan Master Cleric Jermain]]></title>
+         <contents mid="60"><![CDATA[<html>Kamu telah mendapatkan Pendant of the Pure dari Burnessa di Forest Of Death.<BR>Kembali ke <FONT color=#a82424>Calderock Village</FONT> dan bicara dengan <FONT color=#a82424>Master Cleric Jermain</FONT>.<BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> → Master Cleric Jermain</FONT></html>]]></contents>
+         <destination mid="61"><![CDATA[Bicara dengan Master Cleric Jermain]]></destination>
+         <todo_msg mid="62"><![CDATA[Kembali ke Master Cleric Jermain.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>204</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

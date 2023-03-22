@@ -1,0 +1,29 @@
+   <talk>
+      <npcename>n2974_timur</npcename>
+      <npcid>2974</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Battle Training Ground Master Timur]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="training_1" mid="9"><![CDATA[<html>[Enter Combat Training Area]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Timur$<BR>
+Hello! I'm Timur, in charge of the Battle Training Ground.<BR>
+Watching you hone your strength is a beautiful sight to behold!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_training" image="" itemindex="">
+         <talk_answer link_index="back" mid="10"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Timur$<BR>Competing by yourself is the best way to achieve self-mastery!<BR>
+Not in pairs! Not as a trio! All by yourself!<BR><FONT color=#7e12d2>*You are not allowed to enter the Combat Training Area in a party.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID, 11111, 1);</exe>
+         <exe type="talk">no_training</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+      </conditions>
+      <exelink idx="training_1">1</exelink>
+      <exelink idx="back">0</exelink>
+   </talk>

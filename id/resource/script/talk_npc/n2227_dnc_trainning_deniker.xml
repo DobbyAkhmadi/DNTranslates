@@ -1,0 +1,24 @@
+   <talk>
+      <npcename>n2227_dnc_trainning_deniker</npcename>
+      <npcid>2227</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Battle Training Center Manager]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="go" mid="4"><![CDATA[<html>[Masuk Battle Training Ground]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Battle Training Center Manager$<BR>Ini adalah tempat untuk mengecek equipment dan skill kamu, yaitu <FONT color=#a82424>'Battle Training Center</FONT>'. Kamu tidak dapat masuk bila berada di dalam party. <BR><BR>Masuk ke Battle Training center?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_trainning" image="" itemindex="">
+         <talk_question mid="5"><![CDATA[<html>$Battle Training Center Manager$<BR>Tidak dapat masuk saat berada di dalam party.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="3" false="2">0</exe>
+         <exe type="talk">no_trainning</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID, 18043, 1);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+      </conditions>
+      <exelink idx="go">1</exelink>
+   </talk>

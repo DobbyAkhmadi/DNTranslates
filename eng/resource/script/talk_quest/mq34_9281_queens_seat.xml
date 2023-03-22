@@ -1,0 +1,595 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq34_9281_queens_seat</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>12</qchapter>
+      <qid>9281</qid>
+      <designer>강지영</designer>
+      <qlevel>69</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Queen's Throne]]></qkname>
+      <qnpc>
+         <npcid>1061</npcid>
+         <npcename>n1061_yuvenciel</npcename>
+         <npckname>아처 유벤시엘</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1067</npcid>
+         <npcename>n1067_elder_elf</npcename>
+         <npckname>엘프 장로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1079</npcid>
+         <npcename>n1079_yuvenciel</npcename>
+         <npckname>아처 유벤시엘</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1080</npcid>
+         <npcename>n1080_elf_queen</npcename>
+         <npckname>여왕 나르실리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1081</npcid>
+         <npcename>n1081_elf_queen</npcename>
+         <npckname>여왕 아마릴리스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1082</npcid>
+         <npcename>n1082_cian</npcename>
+         <npckname>워리어 시안</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-accepting-party_check" mid="6" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Elf Elder$<BR>Yuvenciel must have been waiting to enter the Tree from the beginning.<BR>Please stop him....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="129"><![CDATA[<html>$Elf Elder$<BR>Yuvenciel must have been waiting to enter the Tree from the beginning.<BR>Please stop him....<BR><FONT color=#7e12d2>(You cannot take this quest in a party)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-1-" mid="8" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Elf Elder$<BR><FONT color=#a82424>Yuvenciel</FONT> already went inside the tree.<BR>The Queen is in danger. Please hurry!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-1-" mid="10" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Warrior Xian$<BR>You have to stop him!!<BR><FONT color=#7e12d2>(Talk to Yuvenciel)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-a" mid="12" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Archer Yuvenciel$<BR>.......<BR><FONT color=#7e12d2>(Yuvenciel quietly looks at {user_nick})</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-b" mid="172" select_type="0"><![CDATA[<html>Please leave!</html>]]></talk_answer>
+      <talk_answer link_index="n1061_yuvenciel-1-b" mid="173" select_type="0"><![CDATA[<html>What do you think you're doing?</html>]]></talk_answer>
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yuvenciel!</FONT><BR>
+<FONT color=#662500>You shouldn't be here.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-c" mid="16" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_01.ogg}<BR>I guess… I just can't escape you.<BR><FONT color=#7e12d2>(Yuvenciel's gaze falters for a while)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-d" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What are you doing here?</FONT><BR>
+<FONT color=#662500>I trusted you even if it was for a while.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-e" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Archer Yuvenciel$<BR>Didn't I tell you that I had another motive?<BR>Look at the Queen.<BR>
+She is bound by the tree, void of freedom and happiness, pitifully waiting for her death....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-f" mid="148" select_type="2" />
+      <talk_question mid="147"><![CDATA[<html>$Archer Yuvenciel$<BR>The shackles of fate that is weighing all the elves down shall be gone from today onwards.<BR>It shall disappear together with this Tree which is the origin of all the restraint.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1061_yuvenciel-1-" mid="22" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_02.ogg}<BR>Please don't interfere anymore.<BR>I don't want to hurt you...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-2-a" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_03.ogg}<BR>This place is...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-2-b" mid="175" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I don't know.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-2-" mid="177" select_type="5" />
+      <talk_question mid="176"><![CDATA[<html>$Archer Yuvenciel$<BR>
+…You seemed to be trying to shield me when I was attacked by Rozalinde.<BR>
+Please pardon me for being happy about such things at this kind of situation.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1061_yuvenciel-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_question mid="137"><![CDATA[<html>$Archer Yuvenciel$<BR>Ughh....<BR><FONT color=#7e12d2>(Yuvenciel grabs his injury)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-3-a" mid="178" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Archer Yuvenciel$<BR>It looks like we were sucked into the Tree of Life.<BR>I see someone there. Shall we go and take a look?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_question mid="179"><![CDATA[<html>$Archer Yuvenciel$<BR>…It looks like <FONT color=#a82424>Queen Narcilia</FONT>.<BR>
+Does she have something to say to us?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-a" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(A particularly bright light is shimmering. What is this light?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-b" mid="151" select_type="2" />
+      <talk_question mid="150"><![CDATA[<html>$Queen Narcilia$<BR>Here we meet again, my child.<BR>I could sense that you were in danger, so I have brought you here for a moment.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-c" mid="153" select_type="2" />
+      <talk_question mid="152"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Where am I?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-d" mid="155" select_type="2" />
+      <talk_question mid="154"><![CDATA[<html>$Queen Narcilia${sound:npc_Queen_Narcilia_qu_9281_01.ogg}<BR>We're inside the Tree of Life... This is the <FONT color=#a82424>Queen's Altar</FONT>.<BR>It's where the soul of a queen lays asleep.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-e" mid="180" select_type="0"><![CDATA[<html>Have you passed away?</html>]]></talk_answer>
+      <talk_answer link_index="n1080_elf_queen-3-e" mid="181" select_type="0"><![CDATA[<html>Is the Tree of Life dead?</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The Queen is….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-f" mid="34" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Queen Narcilia$<BR>Not yet.<BR>But I can't even control this deep and quiet place with my willpower alone. <BR>Soon, the light of life that brightens this place will be gone too.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-g" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What are these monsters?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-h" mid="38" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Queen Narcilia$<BR>The memories and grief of the past queens attract these monsters.<BR>
+After using my energy to bring you here, I can't even prevent these monsters from entering this place.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1080_elf_queen-3-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1080_elf_queen-3-" mid="42" select_type="5" />
+      <talk_question mid="41"><![CDATA[<html>$Queen Narcilia${sound:npc_Queen_Narcilia_qu_9281_02.ogg}<BR>Queen of Elves who die below this tree cannot become a tree nor sand and....<BR>Oh no! They are back....<BR><FONT color=#7e12d2>(Narcilia's image becomes faint and a distorted one appears)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-a" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Queen Amaryllis${sound:npc_AN_Queen Amaryllis_qu_9281_01.ogg}<BR>Yuvenciel…. Yuvenciel….<BR>You have come back.<BR><FONT color=#7e12d2>(A moanful voice is calling for Yuvenciel)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-a" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-b" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Archer Yuvenciel$<BR>Serenciel… Oh Serenciel!<BR>
+Is that really you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-c" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Queen Amaryllis$<BR>Yes, it's me Serenciel…. Your partner who has become Queen <FONT color=#a82424>Amaryllis</FONT>.<BR>I never thought my choice of becoming the queen would give you so much pain that would make you leave the elves.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-d" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Queen Amaryllis${sound:npc_AN_Queen Amaryllis_qu_9281_02.ogg}<BR>But I believed that it must be your <FONT color=#a82424>Telesia</FONT>, Yuvenciel….<BR>And I also believed that we would meet again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-d" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-e" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Archer Yuvenciel$<BR>Serenciel… I never thought I could see you again….<BR>
+How did this happen….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-f" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Queen Amaryllis$<BR>Yuvenciel. Don't you get it?<BR>Don't try to turn away from your Telesia. Try listening to it.<BR><FONT color=#7e12d2>(Amaryllis's gaze falls on {user_nick})</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-f" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-g" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Archer Yuvenciel$<BR>Serenciel… Who are you looking at?<BR><FONT color=#7e12d2>(Yuvenciel looks at {user_nick} with suprised eyes)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-g" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-h" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Yuvenciel's Telesia?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-h" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-i" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Archer Yuvenciel$<BR>I made up my mind long time ago.<BR>To be with you forever, and to give freedom to the elves, I will take my own path.<BR>And I…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-i" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-j" mid="198" select_type="2" />
+      <talk_question mid="197"><![CDATA[<html>$Archer Yuvenciel$<BR>And I wanted to give <FONT color=#387206>{user_nick} </FONT>… a life that was… different from yours….<BR><FONT color=#7e12d2>(Yuvenciel's face starts to pale)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-k" mid="183" select_type="2" />
+      <talk_question mid="182"><![CDATA[<html>$Queen Amaryllis$<BR>
+I always prayed for you to enjoy true peace, Yuvenciel.<BR>
+True peace and true freedom… I hoped your choice would give you joy.<BR>
+Do you see the way you should go now, Yuvenciel?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-k" image="" itemindex="" portrait_left="NPC_Left_Yubaensiael.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-l" mid="185" select_type="2" />
+      <talk_question mid="184"><![CDATA[<html>$Archer Yuvenciel$<BR>True freedom….<BR>…Now I finally realize where my passionate feelings are pointing to.<BR>
+My Serenciel… My Queen.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-4-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-4-" mid="125" select_type="5" />
+      <talk_question mid="63"><![CDATA[<html>$Queen Amaryllis$<BR>Finally Yuvenicel is facing is fate. It's all thanks to you.<BR>Thank you, child of Narcilia.<BR><FONT color=#7e12d2>(Amaryllis seems to be smiling brightly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-a" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_04.ogg}<BR>Everything is my Telesia…?<BR><FONT color=#7e12d2>(Archer Yuvenciel looks confused)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-b" mid="187" select_type="0"><![CDATA[<html>Are you okay?</html>]]></talk_answer>
+      <talk_answer link_index="n1079_yuvenciel-5-b" mid="188" select_type="0"><![CDATA[<html>You're disappearing.</html>]]></talk_answer>
+      <talk_question mid="158"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yuvenciel, you...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-c" mid="161" select_type="2" />
+      <talk_question mid="160"><![CDATA[<html>$Archer Yuvenciel$<BR><FONT color=#7e12d2>(After staring quietly for a while, Yuvenciel nods his head and tries to touch {user_nick}'s cheek)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-d" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_05.ogg}<BR>That's right, precious. I'm dying right now.<BR>But please don't be worried about me.<BR>Because of you, now I finally realize the fate that I had been rejecting.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-e" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>$Archer Yuvenciel$<BR>When Queen Narcilia's life ends, you will have to carry on with the Queen's fate like Serenciel.<BR>I would have to see the future of someone dear to me being bound by this tree again.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-f" mid="163" select_type="2" />
+      <talk_question mid="162"><![CDATA[<html>$Archer Yuvenciel$<BR>I can't let that happen this time.<BR>Saving your future that was lost due to my mistakes would be my way of atonement for you and my lingering affection for Serenciel.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-g" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Atonemet?</FONT><BR>
+<FONT color=#662500>What are you trying to do?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-h" mid="165" select_type="2" />
+      <talk_question mid="164"><![CDATA[<html>$Archer Yuvenciel$<BR>I will become the father of all the elves and watch over you.<BR>Watch over your future….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-i" mid="167" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>The father of all elves?</FONT><BR><FONT color=#662500>Are you saying… you'll become the King?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-j" mid="168" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Archer Yuvenciel${sound:npc_AN_Yuvenciel_qu_9281_06.ogg}<BR>You, who have Serenciel's eyes, have a different path from her.<BR>Please go back to the free world and carry on with your adventures.<BR><FONT color=#7e12d2>(As soon as Archer Yuvenciel ended his sentence, the roots coil up his body)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-k" mid="191" select_type="2" />
+      <talk_question mid="190"><![CDATA[<html>$Archer Yuvenciel$<BR>I'm not getting robbed of my future, but I'm taking this burden in your place.<BR>I'm returning you the endless possibilities you can enjoy in the free world.<BR>That is the choice I make with my own free will.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-5-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-5-" mid="170" select_type="5" />
+      <talk_question mid="169"><![CDATA[<html>$Archer Yuvenciel$<BR>I can now obtain true peace.<BR>I hope the path you take will always stay free….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-5-a" mid="193" select_type="2" />
+      <talk_question mid="138"><![CDATA[<html>$Amaryllis$<BR>
+I always longed for peace for Yuvenciel.<BR>
+My wish has finally been answered.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-5-b" mid="200" select_type="2" />
+      <talk_question mid="199"><![CDATA[<html>$Amaryllis$<BR>
+Yuvenciel has finally realized his fate.<BR>He's always so slow...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1081_elf_queen-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1081_elf_queen-5-" mid="195" select_type="5" />
+      <talk_question mid="194"><![CDATA[<html>$Amaryllis$<BR>Child of Narcilia, go and talk to him.<BR>
+He seems to have something to say to you.<BR><FONT color=#7e12d2>(Queen Amaryllis seems to be smiling</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-a" mid="76" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>$Warrior Xian$$ {sound:npc_AN_Warrior Sian_qu_9281_01.ogg}<BR><FONT color=#387206>{user_nick} </FONT>! What happened?<BR>You disappeared with that elf called Yuvenciel....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-b" mid="78" select_type="2" />
+      <talk_question mid="77"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I'm back to the Tree of Life...?</FONT><BR><FONT color=#7e12d2>(Narcilia is no longer on the Queen's Throne)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-c" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Narcilia will soon go into eternal sleep.</FONT><BR>
+<FONT color=#662500>And the next Queen… no I mean King is...<BR>Yuvenciel. He has become the next King of the Tree of Life.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-d" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Warrior Xian$<BR>Huh? Then he's the first male Queen, I mean a King?<BR>Is this a cause for celebration…?<BR><FONT color=#7e12d2>(Xian smiles like he is confused)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-e" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What happened to Rozalinde?</FONT><BR>
+<FONT color=#662500>And how about Argenta and Geraint…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-f" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>$Warrior Xian${sound:npc_AN_Warrior Sian_qu_9281_02.ogg}<BR>Oh, it's a little tricky.<BR>Rozalinde regained her prophetic powers.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-g" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Warrior Xian$<BR>It's a relief that there is a new queen... I mean, a new king… but the Tree of Life is still unstable.<BR>
+The power of the Prophet may be able to open the <FONT color=#a82424>way to the Monolith</FONT>.<BR>Argenta and Geraint have rushed over to stop her.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-h" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Which way did they go?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-6-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-6-" mid="92" select_type="5" />
+      <talk_question mid="91"><![CDATA[<html>$Warrior Xian${sound:npc_AN_Warrior Sian_qu_9281_03.ogg}<BR>The way to the Monolith is at the boundaries of the forest, where the life of the Tree of Life began.<BR>The Elder knows the way. Let's hurry!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1079_yuvenciel-6" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Yubaensiael.dds" center_image="">
+      <talk_answer link_index="n1079_yuvenciel-6-" mid="143" select_type="5" />
+      <talk_question mid="142"><![CDATA[<html>$Archer Yuvenciel$<BR>You, who have Serenciel's eyes, have a different path from her.<BR>Please go back to the free world and carry on with your adventures..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-7" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-7-a" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>$Elf Elder${sound:npc_AN_Elf Elder_qu_9281_01.ogg}<BR>Where the life of the Tree of Life began… Looking for the root of all elves?<BR><FONT color=#387206>{user_nick} </FONT>, you know where it is yourself yet you have come to me to ask for directions.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-7-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-7-b" mid="96" select_type="4" />
+      <talk_question mid="95"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1067_elder_elf-7-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elder_elf.dds" center_image="">
+      <talk_answer link_index="n1067_elder_elf-7-" mid="98" select_type="5" />
+      <talk_question mid="97"><![CDATA[<html>$Elf Elder$<BR><FONT color=#2b2723>The Monolith… Where the life of the Tree began... I don't know if I can tell you this yet.</FONT><BR><BR><FONT color=#7e12d2>(That's it for Chapter 10. Telesia. Please look out for the next chapter!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1082_cian-7" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n1082_cian-7-" mid="146" select_type="5" />
+      <talk_question mid="145"><![CDATA[<html>$Warrior Xian$<BR>The way to the Monolith is at the boundaries of the forest, where the life of the Tree of Life began.<BR>The Elder knows the way. Let's hurry!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+      </conditions>
+      <executions>
+         <exe type="setquest">9281</exe>
+         <exe type="talk" npc="n1067_elder_elf">1</exe>
+         <exe type="conexe" true="0,1" false="">0</exe>
+         <exe type="talk" npc="n1067_elder_elf">a</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">8</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">92810,,,,,,,,,</exe>
+         <exe type="complete" true="">9281</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1067_elder_elf" sub="party_check">2</exelink>
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="b" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="b" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="c" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="d" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="e" />
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="f">0,1</exelink>
+   <exelink qstep="1" npc="n1061_yuvenciel" sub="" />
+   <exelink qstep="2" npc="n1079_yuvenciel" sub="b" />
+   <exelink qstep="2" npc="n1079_yuvenciel" sub="" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="b" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="c" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="d" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="e" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="e" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="f" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="g" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="h" />
+   <exelink qstep="3" npc="n1080_elf_queen" sub="" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="b" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="c" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="d" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="e" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="f" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="g" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="h" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="i" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="j" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="k" />
+   <exelink qstep="4" npc="n1081_elf_queen" sub="l">0,1</exelink>
+   <exelink qstep="4" npc="n1081_elf_queen" sub="" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="b" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="b" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="c" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="d" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="e" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="f" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="g" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="h" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="i" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="j" />
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="k">0,1</exelink>
+   <exelink qstep="5" npc="n1079_yuvenciel" sub="" />
+   <exelink qstep="5" npc="n1081_elf_queen" sub="b" />
+   <exelink qstep="5" npc="n1081_elf_queen" sub="" />
+   <exelink qstep="6" npc="n1082_cian" sub="b" />
+   <exelink qstep="6" npc="n1082_cian" sub="c" />
+   <exelink qstep="6" npc="n1082_cian" sub="d" />
+   <exelink qstep="6" npc="n1082_cian" sub="e" />
+   <exelink qstep="6" npc="n1082_cian" sub="f" />
+   <exelink qstep="6" npc="n1082_cian" sub="g" />
+   <exelink qstep="6" npc="n1082_cian" sub="h">0,1</exelink>
+   <exelink qstep="6" npc="n1082_cian" sub="" />
+   <exelink qstep="7" npc="n1067_elder_elf" sub="a">0</exelink>
+   <exelink qstep="7" npc="n1067_elder_elf" sub="b">1</exelink>
+   <exelink qstep="7" npc="n1067_elder_elf" sub="" />
+   <journal_data recompense="92810" quest_title="여왕의 자리" chapterid="12" quest_level="69" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>34,n1061</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1061</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="99"><![CDATA[Queen's Throne I]]></title>
+         <contents mid="100"><![CDATA[<html>Yuvenciel seems to have entered the Tree of Life already. Talk to the Elder.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Queen's Throne(Yuvenciel)</FONT><BR><BR><FONT color=#7e12d2>(You cannot take this quest in a party)</FONT></html>]]></contents>
+         <destination mid="101"><![CDATA[(Solo) Talk to Yuvenciel]]></destination>
+         <todo_msg mid="102"><![CDATA[Follow Yuvenciel into the Tree of Life.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>34,n1061</destination_pos>
+         <destination_mode>custom:34@1</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="103"><![CDATA[Queen's Throne II]]></title>
+         <contents mid="104"><![CDATA[<html>Yuvenciel looks like he has made up his mind.<BR>Stop him from getting to the Tree of Life - the Queen of Elves.<BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Queen's Throne</FONT><BR><BR><FONT color=#7e12d2>(You cannot take this quest in a party)</FONT></html>]]></contents>
+         <destination mid="105"><![CDATA[(Solo) Stop Yuvenciel]]></destination>
+         <todo_msg mid="106"><![CDATA[You have to stop Yuvenciel.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>11110,n1079</destination_pos>
+         <destination_mode>custom:34@2,11110@1</destination_mode>
+         <statemark_npcid>1079</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="132"><![CDATA[Queen's Throne III]]></title>
+         <contents mid="133"><![CDATA[<html>You have been moved to an unknown place through the Tree of Life.<BR>Talk to Yuvenciel.<BR><BR><FONT color=#086171>Anu Arendel - Queen's Throne </FONT> <FONT color=#a82424>- Unknown Zone (Archer Yuvenciel)</FONT><BR><BR><FONT color=#7e12d2>(You cannot take this quest in a party)</FONT></html>]]></contents>
+         <destination mid="134"><![CDATA[(Solo) Talk to Yuvenciel]]></destination>
+         <todo_msg mid="135"><![CDATA[Talk to Yuvenciel.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Elf_Narsilia.dds</contents_image>
+         <destination_pos>11110,n1080</destination_pos>
+         <destination_mode>custom:34@2,11110@1</destination_mode>
+         <statemark_npcid>1080</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="107"><![CDATA[Queen's Throne IV]]></title>
+         <contents mid="108"><![CDATA[<html>You have been moved to an unknown place through the Tree of Life.<BR>Try talking to an elf's silhouette which has appeared.<BR><BR><FONT color=#086171>Anu Arendel - Queen's Throne </FONT><FONT color=#a82424>- Unknown Zone (Queen Narcilia)</FONT><BR><BR><FONT color=#7e12d2>(You cannot take this quest in a party)</FONT></html>]]></contents>
+         <destination mid="109"><![CDATA[(Solo) Talk to Queen Narcilia]]></destination>
+         <todo_msg mid="110"><![CDATA[Talk to Queen Narcilia.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image />
+         <destination_pos>11110,n1081</destination_pos>
+         <destination_mode>custom:34@2,11110@1</destination_mode>
+         <statemark_npcid>1081</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="111"><![CDATA[Queen's Throne V]]></title>
+         <contents mid="112"><![CDATA[<html>You have been moved to an unknown place through the Tree of Life.<BR>Try talking to an elf's silhouette which has appeared.<BR><BR><FONT color=#086171>Anu Arendel - Queen's Throne </FONT><FONT color=#a82424>- Unknown Zone (Queen Amaryllis)</FONT><BR><BR><FONT color=#7e12d2>(You cannot take this quest in a party)</FONT></html>]]></contents>
+         <destination mid="113"><![CDATA[(Solo) Talk to Queen Amaryllis]]></destination>
+         <todo_msg mid="114"><![CDATA[Talk to Queen Amaryllis.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_yubaensiael.dds</contents_image>
+         <destination_pos>11110,n1079</destination_pos>
+         <destination_mode>custom:34@2,11110@4</destination_mode>
+         <statemark_npcid>1079</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="115"><![CDATA[Queen's Throne VI]]></title>
+         <contents mid="116"><![CDATA[<html>Yuvenciel seems to be dying.<BR>Listen to him about his fate.<BR><BR><FONT color=#086171>Anu Arendel - Queen's Throne </FONT><FONT color=#a82424>- Unknown Zone (Archer Yuvenciel)</FONT><BR><BR><FONT color=#7e12d2>(You cannot take this quest in a party)</FONT></html>]]></contents>
+         <destination mid="117"><![CDATA[(Solo) Talk to Archer Yuvenciel]]></destination>
+         <todo_msg mid="118"><![CDATA[Talk to Archer Yuvenciel about his fate.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_Cian.dds</contents_image>
+         <destination_pos>34,n1082</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1082</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="119"><![CDATA[Queen's Throne VII]]></title>
+         <contents mid="120"><![CDATA[<html>You have returned to in front of the Tree of Life.<BR>Talk to Warrior Xian who is waiting in front of the Tree. <BR><BR><FONT color=#086171>Anu Arendel</FONT> <FONT color=#a82424>- Queen's Throne(Warrior Xian)</FONT><BR>
+ <BR>
+<FONT color=#7e12d2>(You cannot take this quest in a party)</FONT></html>]]></contents>
+         <destination mid="121"><![CDATA[(Solo) Talk to Warrior Xian]]></destination>
+         <todo_msg mid="122"><![CDATA[Go back to Queen's Throne and meet Xian.]]></todo_msg>
+      </journal>
+      <journal index="8">
+         <contents_image>QN_Npc_Elder_elf.dds</contents_image>
+         <destination_pos>34,n1067</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1067</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="123"><![CDATA[Queen's Throne VIII]]></title>
+         <contents mid="124"><![CDATA[<html>Stop the path to the Monolith from being opened.<BR>Listen to the Elf Elder about where Argenta and Geraint headed to.<BR><BR><FONT color=#086171>Anu Arendel</FONT><FONT color=#a82424> - In front of the Tree of Life (Elf Elder)</FONT><BR><BR><FONT color=#7e12d2>(That's it for Chapter 10. Telesia. Please look out for the next chapter!)</FONT></html>]]></contents>
+         <destination mid="127"><![CDATA[Talk to Elf Elder]]></destination>
+         <todo_msg mid="128"><![CDATA[Meet Elf Elder outside the Tree of Life.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9280</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

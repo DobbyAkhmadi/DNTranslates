@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n1402_guild_board_new</npcename>
+      <npcid>1402</npcid>
+      <startexe>4</startexe>
+      <comment>리부트 미적용시 0</comment>
+      <npckname mid="1"><![CDATA[Adventurer's Guild Bulletin Board : Monastery Gates]]></npckname>
+      <talk_paragraph index="001" image="QN_guild_board.dds" itemindex="">
+         <talk_answer link_index="stage_1" mid="26"><![CDATA[<html>[Lv8] Hall of Marian</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Adventurer's Guild Bulletin Board${action:Talk}<BR>Pilih stage untuk melanjutkan misimu.<BR><BR><FONT color=#086171>*Be bold, not bald! Try the Orc brand Growhair today! Even the orcs love it!</FONT><FONT color=#2b2723> </FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="stage_1" image="QN_guild_board.dds" itemindex="">
+         <talk_answer link_index="q_enter" mid="27" link_target="gq05_3011_n400_marion_normal.xml"><![CDATA[<html>[Normal] <FONT color=#086171>Way of Magic I</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="28" link_target="gq05_3012_n400_marion_hunt.xml"><![CDATA[<html>[Hunt]<FONT color=#086171>The Lost Sword</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_stage_1" mid="29"><![CDATA[<html>(Kembali) </html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Bulletin Board$<BR>Misi ini dapat diambil di <FONT color=#a82424>Ancient Temple Excavation Site</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_quest" image="QN_guild_board.dds" itemindex="">
+         <talk_question mid="13"><![CDATA[<html>$Adventurer's Guild Bulletin Board${action:Talk}<BR>Tidak ada permintaan yang diterima saat ini.<BR><BR><FONT color=#086171>*Jadi berani, bukan botak! Coba penumbuh rambut merk Orc hari ini! Para orc aja pada suka!</FONT><FONT color=#2b2723> </FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="enterquest">sq05_165_enter_adventure</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">no_quest</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">165</chk>
+         <chk type="lvl" op=">=">8</chk>
+      </conditions>
+      <exelink idx="back_stage_1">0</exelink>
+   </talk>

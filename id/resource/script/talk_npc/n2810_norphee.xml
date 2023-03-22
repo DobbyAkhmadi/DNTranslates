@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n2810_norphee</npcename>
+      <npcid>2810</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Norfe]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="11"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Norfe${action:Talk}<BR>You have to be calm even if it's urgent.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="12" link_target="mqc25_9856_hongryun_2.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>Open the Sluice on the Dead Pond</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="mqc25_9865_hongryun_11.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>A Triumphant Song That Was Never Sung</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="22"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Norfe$<BR>Let's hear all your opinions.<BR>
+Ah, what about this?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="4" false="1">0</exe>
+         <exe type="conexe" true="5" false="2">1</exe>
+         <exe type="conexe" true="6" false="3">2</exe>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">mqc25_9855_hongryun_1</exe>
+         <exe type="enterquest">mqc25_9856_hongryun_2</exe>
+         <exe type="enterquest">mqc25_9865_hongryun_11</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9855</chk>
+         <chk type="hasquest">9856</chk>
+         <chk type="hasquest">9865</chk>
+      </conditions>
+   </talk>

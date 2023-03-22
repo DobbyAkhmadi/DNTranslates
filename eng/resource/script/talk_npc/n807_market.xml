@@ -1,0 +1,109 @@
+   <talk>
+      <npcename>n807_market</npcename>
+      <npcid>807</npcid>
+      <startexe>0</startexe>
+      <comment>36: 월드컵 상점 
+38: 크리스탈 상점
+
+#289115 [SIN] 반다르에게 스페셜 상점이 노출되는 현상 : 반다르 전용 대사창 추가로 해결
+#294379 [USA] 반다르 스페셜 상점 추가 요청</comment>
+      <npckname mid="1"><![CDATA[Merchant Pania]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="9"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="trade" mid="10"><![CDATA[<html>[Special Store]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Merchant Pania${action:Talk}<BR>Welcome.<BR>I am a merchant, Pania, hello.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="19" link_target="sq_2109_exchange_dark_mainweapon.xml"><![CDATA[<html>(Event) <FONT color=#086171>Darkness Weapon</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="20" link_target="sq_2110_exchange_dark_subweapon.xml"><![CDATA[<html>(Event) <FONT color=#086171>Darkness Off-hand</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="sq_2055_exchange_dreamdrop_kor.xml"><![CDATA[<html>(Event) <FONT color=#086171>Pandora Coin Shop</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="22" link_target="sq_2056_exchange_dreamdrop_kor.xml"><![CDATA[<html>(Event) <FONT color=#086171>Exchange Pandora Coin</FONT></html>]]></talk_answer>
+         <talk_answer link_index="go_back" mid="23"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Merchant Pania$<BR>These events are currently being held.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="as" image="" itemindex="">
+         <talk_question mid="8"><![CDATA[<html>$Merchant Pania$<BR>We do not have a store for Assassin class yet.<BR>Please visit us next time.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="quest" mid="31"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="30"><![CDATA[<html>$Merchant Pania${action:Talk}<BR>Welcome.<BR>I am a merchant, Pania, hello.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="9" false="2">0</exe>
+         <exe type="conexe" true="10" false="3">1</exe>
+         <exe type="conexe" true="11" false="4">2</exe>
+         <exe type="conexe" true="12" false="5">3</exe>
+         <exe type="conexe" true="13" false="6">4</exe>
+         <exe type="conexe" true="14" false="7">5</exe>
+         <exe type="conexe" true="15" false="8">6</exe>
+         <exe type="conexe" true="16" false="56">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76004,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76005,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76006,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76007,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76008,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76009,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,90001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,70601,100);</exe>
+         <exe type="conexe" true="28" false="21">0</exe>
+         <exe type="conexe" true="29" false="22">1</exe>
+         <exe type="conexe" true="30" false="23">2</exe>
+         <exe type="conexe" true="31" false="24">3</exe>
+         <exe type="conexe" true="32" false="25">4</exe>
+         <exe type="conexe" true="33" false="26">5</exe>
+         <exe type="conexe" true="34" false="27">6</exe>
+         <exe type="conexe" true="35" false="37">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,68501,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,68502,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,68503,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,68504,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,68505,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,68506,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,68507,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,68508,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,70602,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,68509,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,96001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77004,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77005,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77006,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77007,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77008,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77009,100);</exe>
+         <exe type="conexe" true="39" false="49">0</exe>
+         <exe type="conexe" true="40" false="50">1</exe>
+         <exe type="conexe" true="41" false="51">2</exe>
+         <exe type="conexe" true="42" false="52">3</exe>
+         <exe type="conexe" true="43" false="53">4</exe>
+         <exe type="conexe" true="44" false="54">5</exe>
+         <exe type="conexe" true="45" false="55">6</exe>
+         <exe type="conexe" true="46" false="57">7</exe>
+         <exe type="conexe" true="17" false="58">8</exe>
+         <exe type="conexe" true="47" false="59">8</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,76010,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77010,100);</exe>
+         <exe type="conexe" true="61" false="0">9</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="class" op="=">9</chk>
+         <chk type="class" op="=">10</chk>
+      </conditions>
+      <exelink idx="trade">1</exelink>
+      <exelink idx="go_back">60</exelink>
+   </talk>

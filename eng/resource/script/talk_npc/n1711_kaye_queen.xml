@@ -1,0 +1,30 @@
+   <talk>
+      <npcename>n1711_kaye_queen</npcename>
+      <npcid>1711</npcid>
+      <startexe>7</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Kay]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Kay${sound:npc_Kaye_1739_sp_01.ogg}<BR>Hush! Keep quiet. I'm on duty.<BR>Why are you becoming more and more brainless?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Kay${sound:npc_Kaye_1687_sp_06.ogg}<BR>Don't talk to me if there's nothing important.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="3">0</exe>
+         <exe type="enterquest">mqc08_9526_mystery_swordman</exe>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="5" false="4">1</exe>
+         <exe type="conexe" true="6" false="2">2</exe>
+         <exe type="enterquest">mqc08_9527_prophetic_omen</exe>
+         <exe type="enterquest">mqc08_9528_traces_of_comrades</exe>
+         <exe type="conexe" true="0" false="8">3</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9526</chk>
+         <chk type="hasquest">9527</chk>
+         <chk type="hasquest">9528</chk>
+         <chk type="class" op="=">8</chk>
+      </conditions>
+   </talk>

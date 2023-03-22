@@ -1,0 +1,532 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_237_rouse</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>3</qchapter>
+      <qid>237</qid>
+      <designer>김인정</designer>
+      <qlevel>22</qlevel>
+      <qdesc>정화장치 가동열쇠	300063
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>432</nextqid>
+      <nextqname>mq11_432_here_sainthaven</nextqname>
+      <nextqnpc>n099_engineer_hubert</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Arousal]]></qkname>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>392</npcid>
+         <npcename>n392_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>557</npcid>
+         <npcename>n557_edan</npcename>
+         <npckname>클레릭 에단</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>558</npcid>
+         <npcename>n558_angelica</npcename>
+         <npckname>소서리스 안젤리카</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>99</npcid>
+         <npcename>n099_engineer_hubert</npcename>
+         <npckname>비행선 엔지니어 휴버트</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-noquest-" mid="409" select_type="5" />
+      <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Master Deckard$<BR>Hari ini juga bekerja keras untuk Calderock!<BR>Kamu sungguh hebat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n557_edan-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n557_edan-noquest-" mid="410" select_type="5" />
+      <talk_question mid="6"><![CDATA[<html>$Cleric Ethan$<BR>Haa... Angelica bukan orang yg jahat. Ia cuman nakal...<BR>
+Agak sulit.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-noquest-" mid="411" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Sorceress Angelica$<BR>Ya? Meskipun aku terlihat main-main, aku kerja dengan sungguh-sungguh jika dibutuhkan.<BR>
+Aku orang yang serius~!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-noquest-" mid="412" select_type="5" />
+      <talk_question mid="160"><![CDATA[<html>$Airship Engineer Hubert$<BR>Hmm… Sepertinya sudah bisa berangkat.<BR>
+Tunggulah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-accepting" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-accepting-acceptted" mid="343" select_type="3" />
+      <talk_question mid="8"><![CDATA[<html>$Tinkerer Station$<BR><FONT color=#7e12d2>(Percakapan dengan Jasmine masih terekam dalam memory alat.<BR>Ulangi percakapan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-a" mid="344" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Recorded conversation with Jasmine$<BR>Ada alat purification yang dibuat oleh Ancient di Prayer's Refugee.<BR>
+Tapi, untuk mengaktifkan mesin ini, kita membutuhkan Purity White Orb dan kunci mesin itu....<BR><FONT color=#a82424>Purity White Orb</FONT> ada di <FONT color=#a82424>Sanctuary Core</FONT>...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-a" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-b" mid="345" select_type="2" />
+      <talk_question mid="236"><![CDATA[<html>$Recorded conversation with Jasmine$<BR>
+<FONT color=#a82424>Manticore Keruru</FONT> di <FONT color=#a82424>Prayer's Refugee</FONT> punya kuncinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-2" mid="347" select_type="2" />
+      <talk_question mid="346"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(Hanya itu yang terekam..)</FONT><BR>
+ </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-" mid="348" select_type="5" />
+      <talk_question mid="93"><![CDATA[<html>$Adverturer's Guild Master Deckard$<BR>Masih bekerja keras untuk Calderock, eh?<BR>Kamu wanita yang baik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n557_edan-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n557_edan-1-" mid="349" select_type="5" />
+      <talk_question mid="94"><![CDATA[<html>$Cleric Ethan$<BR>Kamu menjadi terkenal.<BR>
+<FONT color=#387206>{user_nick}</FONT>, kamu hebat di lapangan.<BR>Kamu sangat kuat walaupun kamu gadis kecil.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-1-" mid="350" select_type="5" />
+      <talk_question mid="95"><![CDATA[<html>$Sorceress Angelica$<BR>Huh? Untuk sebagian orang, mungkin aku seperti selalu bermain, tapi saat diperlukan aku bekerja.<BR>
+Aku orang yang sangat serius~!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-1-" mid="351" select_type="5" />
+      <talk_question mid="166"><![CDATA[<html>$Airship Engineer Hubert$<BR>Hmm... Kurasa tidak lama lagi airship bisa terbang.<BR>
+Tunggu saja!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-2" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-2-" mid="352" select_type="5" />
+      <talk_question mid="260"><![CDATA[<html><FONT color=#7e12d2>(Beritahu Adverturer's Guild Master Deckard tentang kunci untuk alat purification)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="QS_Default.dds" itemindex="300063" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-a" mid="353" select_type="2" />
+      <talk_question mid="261"><![CDATA[<html>$Adverturer's Guild Master Deckard${action:Refusal}<BR>Manticore Keruru punya <FONT color=#a82424>kunci untuk alat purification</FONT>?<BR>Wow... Terimakasih atas informasi pentingnya, gadis kecil.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-a" image="QM_Manticore.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-b" mid="354" select_type="2" />
+      <talk_question mid="264"><![CDATA[<html>$Adverturer's Guild Master Deckard$<BR>Menurut kamu, kita harus mengalahkan Manticore Keruru di <FONT color=#a82424>Prayer's Refugee</FONT> dan mengambil kunci sebelum menyalakan alat purification.<BR>
+Kita akan bisa membersihkan racun yang menyebar sekitar Calderock.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-b" image="QM_Manticore.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-c" mid="355" select_type="2" />
+      <talk_question mid="266"><![CDATA[<html>$Adverturer's Guild Master Deckard$<BR>Manticore diciptakan oleh Ancient menggunakan dark magic.<BR>Semacam bentuk <FONT color=#a82424>chimera</FONT>, dengan kepala singa, tubuh domba, dan ekor ular.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-d" mid="357" select_type="2" />
+      <talk_question mid="356"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Aku bisa membantu.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-d" image="QW_26.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-e" mid="358" select_type="2" />
+      <talk_question mid="268"><![CDATA[<html>$Adverturer's Guild Master Deckard$<BR>Terlalu berbahaya untukmu. Aku akan mencari adventurer lain.<BR>Kalau aku mengirimkan gadis kecil sendirian ke Prayer's Refugee, aku akan dikritik semua orang. Kamu sudah melakukan tugas dengan baik dengan memberikanku informasi tersebut.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-f" mid="360" select_type="2" />
+      <talk_question mid="359"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(Misi rahasia lagi!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2-f" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-2-" mid="361" select_type="5" />
+      <talk_question mid="270"><![CDATA[<html>$Adverturer's Guild Master Deckard${action:Talk}<BR>Manticore Keruru di Prayer's Refugee...<BR>Siapa yang akan mampu menyelesaikan tugas ini?<BR>
+<FONT color=#7e12d2>(Deckard mencari daftar Adventurers' Guild)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-" mid="362" select_type="5" />
+      <talk_question mid="271"><![CDATA[<html>$Adverturer's Guild Master Deckard${action:Talk}<BR>Prayer's Refugee's Manticore Keruru...<BR>Siapa yang akan mampu menyelesaikan tugas ini?<BR>
+<FONT color=#7e12d2>(Deckard mencari daftar Adventurers' Guild)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-3-" mid="363" select_type="5" />
+      <talk_question mid="272"><![CDATA[<html>$Sorceress Angelica$<BR>Huh? Untuk sebagian orang, mungkin terlihat seperti aku hanya bermain terus, tapi jika diperlukan aku berkerja.<BR>
+Aku orang yang sangat serius~!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n557_edan-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n557_edan-3-" mid="364" select_type="5" />
+      <talk_question mid="273"><![CDATA[<html>$Cleric Ethan$<BR>Ha... Angelica bukan orang jahat, tapi dia bisa sedikit terlalu periang.<BR>
+Dia membuat hidupku susah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-4" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-4-a" mid="365" select_type="2" />
+      <talk_question mid="274"><![CDATA[<html>$Sorceress Angelica${action:Talk}<BR>Apa! Bukankah kamu <FONT color=#387206>{user_nick}</FONT>?!<BR>Apa yang kamu lakukan disini gadis kecil? Kamu sudah gila!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-4-b" mid="367" select_type="2" />
+      <talk_question mid="366"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Apa yang KAMU lakukan disini, Angelica?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-4-b" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-4-c" mid="368" select_type="2" />
+      <talk_question mid="276"><![CDATA[<html>$Sorceress Angelica$<BR>Huh? Untuk sebagian orang, mungkin terlihat aku hanya terus bermain, tapi jika diperlukan aku bekerja. Aku orang yang sangat serius~!!<BR>Ethan dan aku datang kesini setelah mendengar dari <FONT color=#a82424>Adventurer's Guild Master</FONT> itu... huh?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-4-c" image="QS_Default.dds" itemindex="300063" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-4-d" mid="369" select_type="2" />
+      <talk_question mid="278"><![CDATA[<html>$Sorceress Angelica$<BR>Oh! Kamu mendapatkannya?<BR>
+Kamu kah yang memberikan informasi ke Adventurers' Guild Master?<BR>Bagaimana kamu bisa tahu <FONT color=#a82424>kunci alat purification</FONT> akan ada disini?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-4-e" mid="371" select_type="2" />
+      <talk_question mid="370"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Well...(Dia akan mencoba mencuri communicator lagi jika dia tahu alat itu bekerja.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-4-f" mid="372" select_type="2" />
+      <talk_question mid="280"><![CDATA[<html>$Sorceress Angelica$<BR>Kamu menggunakan alat aneh itu kan?! Kukira aku merusaknya...... Oh!<BR>Kukira rusak, ternyata tidak ya?<BR>Oh baguslah!<BR>
+<FONT color=#387206>{user_nick}</FONT>, boleh aku lihat?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-4-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-4-g" mid="374" select_type="2" />
+      <talk_question mid="373"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>TIDAAAAK!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-4-g" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-4-" mid="375" select_type="5" />
+      <talk_question mid="282"><![CDATA[<html>$Sorceress Angelica$<BR>Ayolah... Biarkan aku melihatnya.<BR>
+Huh? Toh tidak akan rusak... Oww!!<BR>Ethan! Jangan tarik aku!!<BR><FONT color=#7e12d2>(Cleric Ethan mengirimkan sinyal)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-5" image="QN_Npc_Edan.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-5-" mid="376" select_type="5" />
+      <talk_question mid="283"><![CDATA[<html>$Sorceress Angelica$<BR>Oh~ serius!! <FONT color=#a82424>Ethan</FONT>, sampai kapan kamu akan memperlakukanku seperti anak kecil?!!<BR>Karena itlah para cleric...<BR>
+Lupakan. Aku pergi bersamamu karena aku baik hati!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n557_edan-5" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n557_edan-5-a" mid="377" select_type="2" />
+      <talk_question mid="284"><![CDATA[<html>$Cleric Ethan${action:Talk}<BR>Hmm... Aku tidak yakin...<BR>
+Tapi, sepertinya Angelica tertarik dengan sesuatu yang aneh lagi.<BR><FONT color=#7e12d2>(Ethan menarik napas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n557_edan-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n557_edan-5-b" mid="379" select_type="2" />
+      <talk_question mid="378"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Ini communicatorku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n557_edan-5-b" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n557_edan-5-c" mid="380" select_type="2" />
+      <talk_question mid="286"><![CDATA[<html>$Cleric Ethan$<BR>Communicator? Oh... Bukankah itu alat yang memunculkan data?<BR>Para sorceress bertingkah aneh saat mereka melihat mesin.<BR><FONT color=#a82424>Angelica</FONT> penasaran.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n557_edan-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n557_edan-5-d" mid="382" select_type="2" />
+      <talk_question mid="381"><![CDATA[<html>${user_nick}$<BR>
+Ya, dia sangat berbeda....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n557_edan-5-d" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n557_edan-6" mid="383" select_type="2" />
+      <talk_question mid="288"><![CDATA[<html>$Cleric Ethan$<BR>Haha.... Anyway, saat aku menahan Angelica, kamu lari...... Tidak, pergi dari sini. Kamu bisa memberikan kunci alat purification ke <FONT color=#a82424>Adverturer's Guild Master Deckard</FONT>.<BR>Thank you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n557_edan-6" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Edan.dds" center_image="">
+      <talk_answer link_index="n557_edan-6-" mid="384" select_type="5" />
+      <talk_question mid="290"><![CDATA[<html>$Cleric Ethan$<BR>Angelica~ Ayo kembali ke Calderock Village.<BR>Alat itu punya <FONT color=#387206> {user_nick}</FONT>, jadi berhenti mengincarnya.<BR><FONT color=#7e12d2>(Ethan mulai mencaci Angelica)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n558_angelica-6" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n558_angelica-6-" mid="385" select_type="5" />
+      <talk_question mid="291"><![CDATA[<html>$Sorceress Angelica$<BR>Aku tidak tahu kenapa aku pergi dengan Cleric.<BR>Ahh... Karena aku baik hati, aku akan memakluminya!!<BR>
+<FONT color=#7e12d2>(Kembali dan laporkan ke Adverturer's Guild Master Deckard)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-6" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-6-" mid="386" select_type="5" />
+      <talk_question mid="292"><![CDATA[<html>$Tinkerer Jasmine$<BR>Pergi ke Saint's Haven? Bagus. Kamu harus cepat.<BR>Akan lebih baik kalau kamu bisa menemukan Prophet disana....<BR>
+Tidak, kamu harus bertemu dengannya!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6" image="QM_Manticore.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-a" mid="387" select_type="2" />
+      <talk_question mid="293"><![CDATA[<html>$Adverturer's Guild Master Deckard${action:Talk}<BR>Gadis kecil ini mengalahkan <FONT color=#a82424>Manticore Keruru</FONT>. Dunia akan takjub!<BR>
+Kerja yang bagus! Ini harus dituliskan dalam sejarah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-b" mid="389" select_type="2" />
+      <talk_question mid="388"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Well itu bukan apa-apa... (malu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6-b" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-6-c" mid="390" select_type="2" />
+      <talk_question mid="295"><![CDATA[<html>$Adverturer's Guild Master Deckard$<BR>Jangan malu.<BR>Kamulah <FONT color=#a82424>hero yang menyelamatkan Calderock</FONT>!<BR>Haha~<BR>
+<FONT color=#7e12d2>(Deckard tertawa keras)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-6-c" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-7" mid="391" select_type="2" />
+      <talk_question mid="297"><![CDATA[<html>$Adverturer's Guild Master Deckard$<BR>Oh, ya. Perbaikan Nautilus sudah hampir mendekati tahap final.<BR>Kalau kamu ingin pergi ke Saint's Haven, pergilah bicara dengan <FONT color=#a82424>Airship Engineer Hubert</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-7" image="QN_NPC_Engineer_Hubert.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Master_Decud.dds" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-7-" mid="392" select_type="5" />
+      <talk_question mid="299"><![CDATA[<html>$Adverturer's Guild Master Deckard${action:Refusal}<BR>Kabut beracun sudah hilang. Sekarang semua orang merasa aman. Terimakasih.<BR>Sekarang, <FONT color=#a82424>Airship Engineer Hubert</FONT> bisa dengan senang menerbangkan airship.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-7" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-7-" mid="393" select_type="5" />
+      <talk_question mid="300"><![CDATA[<html>$Tinkerer Station$<BR>▶ <FONT color=#086171>Mission Objective.<BR></FONT>▷ Temui Airship Engineer Hubert.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-7" image="QN_crew_kevin.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-7-a" mid="394" select_type="2" />
+      <talk_question mid="301"><![CDATA[<html>$Airship Engineer Hubert$<BR>Oh,apakah kamu <FONT color=#387206>{user_nick}</FONT> yang terkenal itu?<BR>Kamu gadis kecil yang luar biasa!<BR>
+Kevinku seusiamu tapi dia masih anak bayi. Hahaha.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-7-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-7-b" mid="396" select_type="2" />
+      <talk_question mid="395"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(Kakek Kevin masih anak muda disini...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-7-b" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-7-c" mid="397" select_type="2" />
+      <talk_question mid="303"><![CDATA[<html>$Airship Engineer Hubert$<BR>Elite Soldier  sudah ditemukan, jadi mereka berencana kembali ke Saint's Haven dengan airship ini.<BR>
+Aku dengar mereka harus melaporkan tentang jatuhnya airship, <FONT color=#a82424>Black Knight</FONT>, dan insiden lain yang terjadi di Calderock....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-7-c" image="QW_SaintHaven.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-7-d" mid="398" select_type="2" />
+      <talk_question mid="305"><![CDATA[<html>$Airship Engineer Hubert$<BR>BUkan tempat untuk engineer sepertiku, tapi aku yakin kamulah yang terbaik untuk pekerjaan itu. Adventurer lain pergi bersama mereka ke <FONT color=#a82424>Saint's Haven</FONT> untuk lapor ke Royal Palace.<BR>
+Kenapa kamu tidak menemani mereka?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-7-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-7-e" mid="400" select_type="2" />
+      <talk_question mid="399"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Mereka lapor ke Royal Palace?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-7-e" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-7-f" mid="401" select_type="2" />
+      <talk_question mid="307"><![CDATA[<html>$Airship Engineer Hubert$<BR>Sepertinya begitu. Petugas terbunuh dalam pertempuran, jadi Elite Soldier Carlrim akan memimpin sisa tentara dan melapor.<BR>Saat kamu sampai di <FONT color=#a82424>Saint's Haven</FONT>, bicara dengan <FONT color=#a82424>Elite Soldier Carlrim</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-7-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Hubert.dds" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-7-g" mid="403" select_type="2" />
+      <talk_question mid="402"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>(Mungkin aku akan mendapatkan informasi lain)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n099_engineer_hubert-7-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n099_engineer_hubert-7-!next" mid="404" select_type="4" />
+      <talk_question mid="309"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">237</exe>
+         <exe type="talk" npc="n392_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">762</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">200762</exe>
+         <exe type="addquestitem" num="1">300063</exe>
+         <exe type="huntitem" num="1" exe="" onexe="6,7,8">300063</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">7</exe>
+         <exe type="setjornal">7</exe>
+         <exe type="delquestitem" num="-1">300063</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">2370,,,,,,,,</exe>
+         <exe type="complete" true="">237</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n392_academic_station" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n392_academic_station" sub="b" />
+   <exelink qstep="1" npc="n392_academic_station" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="d" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="e" />
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="f">0,2,3,5,1</exelink>
+   <exelink qstep="2" npc="n024_adventurer_guildmaster_decud" sub="" />
+   <exelink qstep="4" npc="n558_angelica" sub="b" />
+   <exelink qstep="4" npc="n558_angelica" sub="c" />
+   <exelink qstep="4" npc="n558_angelica" sub="d" />
+   <exelink qstep="4" npc="n558_angelica" sub="e" />
+   <exelink qstep="4" npc="n558_angelica" sub="f" />
+   <exelink qstep="4" npc="n558_angelica" sub="g">0,1</exelink>
+   <exelink qstep="4" npc="n558_angelica" sub="" />
+   <exelink qstep="5" npc="n557_edan" sub="b" />
+   <exelink qstep="5" npc="n557_edan" sub="c" />
+   <exelink qstep="5" npc="n557_edan" sub="d" />
+   <exelink qstep="5" npc="n557_edan" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="6" npc="n024_adventurer_guildmaster_decud" sub="c" />
+   <exelink qstep="6" npc="n024_adventurer_guildmaster_decud" sub="7">0,1,2</exelink>
+   <exelink qstep="7" npc="n099_engineer_hubert" sub="b" />
+   <exelink qstep="7" npc="n099_engineer_hubert" sub="c" />
+   <exelink qstep="7" npc="n099_engineer_hubert" sub="d" />
+   <exelink qstep="7" npc="n099_engineer_hubert" sub="e" />
+   <exelink qstep="7" npc="n099_engineer_hubert" sub="f" />
+   <exelink qstep="7" npc="n099_engineer_hubert" sub="g">0</exelink>
+   <exelink qstep="7" npc="n099_engineer_hubert" sub="!next">1</exelink>
+   <journal_data recompense="2370" quest_title="눈을 떴습니다" chapterid="3" quest_level="22" quest_mark_type="1" use_item_list="300063">
+      <journal index="1">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>8,n392</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>392</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="311"><![CDATA[Arousal I]]></title>
+         <contents mid="312"><![CDATA[<html>Hubungi lagi Tinkerer Station dan konfirmasikan data kepada Jasmine.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="313"><![CDATA[Menyambungkan ke Tinkerer Station]]></destination>
+         <todo_msg mid="314"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="315"><![CDATA[Arousal II]]></title>
+         <contents mid="316"><![CDATA[<html>Ada beberapa item khusus untuk mengaktifkan alat pensucian. Manticore Keruru memiliki kunci ke Alat Pensucian. Tanyakan kepada Adventurer 's Guild Master Deckard tentang apa yang telah terjadi.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Adventurer 's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="317"><![CDATA[Bicara ke Adventurer 's Guild Master Deckard]]></destination>
+         <todo_msg mid="318"><![CDATA[Berikan Informasi kepada Adventurer 's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_26.dds</contents_image>
+         <destination_pos>264,0,0</destination_pos>
+         <destination_mode>custom:262@1,263@1,264@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="319"><![CDATA[Arousal III]]></title>
+         <contents mid="320"><![CDATA[<html>Manticore di Tempat Pemujaan has the key to the Alat Pensucian. Kalahkan Manticore Keruru, dapatkan kunci ke Alat Pensucian dan aktifkan Alat Pensucian tersebut.<BR>
+ <BR>
+<FONT color=#086171>Lower Ridge(Forgotten Temple Entrance)</FONT> <FONT color=#a82424>→ Tempat Pemujaan</FONT></html>]]></contents>
+         <destination mid="321"><![CDATA[Aktifkan Alat Pensucian di Tempat Pemujaan]]></destination>
+         <todo_msg mid="322"><![CDATA[Dapatkan Alat Pensucian di Tempat Pemujaan.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Angelica.dds</contents_image>
+         <destination_pos>264,n558</destination_pos>
+         <destination_mode>custom:262@1,263@1,264@1</destination_mode>
+         <statemark_npcid>558</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="323"><![CDATA[Arousal IV]]></title>
+         <contents mid="324"><![CDATA[<html>Kalahkan Manticore Keruru. Angelica dan Ethan akan muncul. aktifkan Alat Pensucian, dan bicaralah kepada mereka.<BR>
+ <BR>
+<FONT color=#086171>Lower Ridge(Forgotten Temple Entrance)</FONT> <FONT color=#a82424>→ Tempat Pemujaan(Sorceress Angelica)</FONT></html>]]></contents>
+         <destination mid="325"><![CDATA[Bicara kepada Angelica diTempat Pemujaan]]></destination>
+         <todo_msg mid="326"><![CDATA[Aktifkan Alat Pensucian. Bicara pada Angelica.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Edan.dds</contents_image>
+         <destination_pos>264,n557</destination_pos>
+         <destination_mode>custom:262@1,263@1,264@1</destination_mode>
+         <statemark_npcid>557</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="327"><![CDATA[Arousal V]]></title>
+         <contents mid="328"><![CDATA[<html>Ada yang perlu dikatakan pada Cleric Ethan.<BR>
+ <BR>
+<FONT color=#086171>Lower Ridge(Forgotten Temple Entrance)</FONT> <FONT color=#a82424>→ Tempat Pemujaan(Cleric Ethan)</FONT></html>]]></contents>
+         <destination mid="329"><![CDATA[Bicara pada Ethan di Tempat Pemujaan]]></destination>
+         <todo_msg mid="330"><![CDATA[Bicara pada Cleric Ethan.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="331"><![CDATA[Arousal VI]]></title>
+         <contents mid="332"><![CDATA[<html>Melapor kepada Adventurer 's Guild Master Deckard bahwa Manticore telah dikalahkan dan alat pensucian telah diaktifkan.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Adventurer 's Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="333"><![CDATA[Bicara pada Adventurer 's Guild Master Deckard]]></destination>
+         <todo_msg mid="334"><![CDATA[Melapor pada Adventurer 's Guild Master Deckard.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_NPC_Engineer_Hubert.dds</contents_image>
+         <destination_pos>8,n99</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>99</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="335"><![CDATA[Arousal VII]]></title>
+         <contents mid="336"><![CDATA[<html>Tanyakan pada Airship Engineer Hubert bisakah pergi ke Saint's Haven.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Airship Engineer Hubert</FONT></html>]]></contents>
+         <destination mid="337"><![CDATA[Bicara pada Airship Engineer Hubert]]></destination>
+         <todo_msg mid="338"><![CDATA[Bicara pada Airship Engineer Hubert.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>236</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

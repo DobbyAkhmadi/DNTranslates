@@ -1,0 +1,80 @@
+   <talk>
+      <npcename>n002_trader_dorin</npcename>
+      <npcid>2</npcid>
+      <startexe>0</startexe>
+      <comment>23 : 용옥 강화 해방 조건 체크</comment>
+      <npckname mid="1"><![CDATA[Blacksmith Dorin]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="wbuy" mid="61"><![CDATA[<html>[Purchase/Repair Items]</html>]]></talk_answer>
+         <talk_answer link_index="trader" mid="51"><![CDATA[<html>[Blacksmith Store/Item Repair]</html>]]></talk_answer>
+         <talk_answer link_index="quest" mid="3"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="guildms" mid="64"><![CDATA[<html>[Guild Mission Delivery]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Blacksmith Dorin$<BR>If you need anything to do with iron, I'm just the right person.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="57" link_target="mqc01_9571_suspicious_teacher.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Strange Master</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="58" link_target="mqc01_9572_whereabouts_airship.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>The Airship's Location</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="54" link_target="nq12_7216_substitute.xml"><![CDATA[<html>{quest_level} <FONT color=#086171> In A Pinch</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="41" link_target="sq01_062_secret_health_dorin.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>[Title] [Immortal Lv.1] Blacksmith Dorin's Health Tips</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="28" link_target="sq01_060_dorins_amazing_box2.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Dorin's Request Part II</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="27" link_target="sq01_059_dorins_amazing_box1.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Dorin's Request Part I</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="sq01_053_hound_digester.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Barking Mad</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="10" link_target="sq01_051_nourishing_meal.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Hound's Nutrition</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="42"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Blacksmith Dorin$<BR>If you need anything to do with iron, I'm just the right person.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="trader" image="" itemindex="">
+         <talk_answer link_index="itemupgrade" mid="5"><![CDATA[<html>[Enhance Item]</html>]]></talk_answer>
+         <talk_answer link_index="dragonstone" mid="48"><![CDATA[<html>[Enhance Dragon Jade]</html>]]></talk_answer>
+         <talk_answer link_index="001" mid="67"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="44"><![CDATA[<html>$Blacksmith Dorin$<BR>If you need anything to do with iron, I'm just the right person.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="level_check" image="" itemindex="">
+         <talk_question mid="68"><![CDATA[<html>$Blacksmith Doreen<BR>I'm sorry to say this, but...<BR>You don't look ready to do this yet...<BR>
+<BR><FONT color=#7e12d2>※ [Dragon Jade Enhancement] You can use this after Level 95.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79001,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79002,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79003,100);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79004,100);</exe>
+         <exe type="conexe" true="1" false="6">0</exe>
+         <exe type="conexe" true="2" false="7">1</exe>
+         <exe type="conexe" true="3" false="8">2</exe>
+         <exe type="conexe" true="4" false="10">3</exe>
+         <exe type="custom">api_ui_OpenUpgradeItem(userObjID);</exe>
+         <exe type="conexe" true="11" false="12">4</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79005,100);</exe>
+         <exe type="conexe" true="13" false="16">5</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79006,100);</exe>
+         <exe type="custom">api_ui_OpenGrowFairyDlg(userObjID);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79007,100);</exe>
+         <exe type="conexe" true="15" false="18">6</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79008,100);</exe>
+         <exe type="conexe" true="17" false="21">7</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79009,100);</exe>
+         <exe type="custom">api_ui_open_guildms(userObjID,2);</exe>
+         <exe type="conexe" true="19" false="22">8</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,79010,100);</exe>
+         <exe type="conexe" true="24" false="25">9</exe>
+         <exe type="custom">api_ui_OpenUpgradeDragonGem(userObjID);</exe>
+         <exe type="talk">level_check</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">1</chk>
+         <chk type="class" op="=">2</chk>
+         <chk type="class" op="=">3</chk>
+         <chk type="class" op="=">4</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="class" op="=">6</chk>
+         <chk type="class" op="=">7</chk>
+         <chk type="class" op="=">8</chk>
+         <chk type="class" op="=">9</chk>
+         <chk type="lvl" op=">=">95</chk>
+      </conditions>
+      <exelink idx="wbuy">5</exelink>
+      <exelink idx="guildms">20</exelink>
+      <exelink idx="itemupgrade">9</exelink>
+      <exelink idx="dragonstone">23</exelink>
+   </talk>

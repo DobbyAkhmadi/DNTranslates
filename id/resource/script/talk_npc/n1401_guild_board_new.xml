@@ -1,0 +1,32 @@
+   <talk>
+      <npcename>n1401_guild_board_new</npcename>
+      <npcid>1401</npcid>
+      <startexe>4</startexe>
+      <comment>리부트 미적용시 0</comment>
+      <npckname mid="1"><![CDATA[Adventurer's Guild Bulletin Board : Wind Forest Temple Entrance]]></npckname>
+      <talk_paragraph index="001" image="QN_guild_board.dds" itemindex="">
+         <talk_answer link_index="stage_1" mid="14"><![CDATA[<html>[Lv8] Ancient Temple Excavation Site</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Adventurer's Guild Bulletin Board${action:Talk}<BR>Pilih stage untuk melanjutkan misimu.<BR><BR><FONT color=#086171>*Harori Fanclub is recruiting! Join now and get a FREE Harori's Lolli Lolli t-shirt! Stand a chance to win Harori's "Dancing with the Dragons" summer concert!</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="stage_1" image="QN_guild_board.dds" itemindex="">
+         <talk_answer link_index="q_enter" mid="15" link_target="gq01_3001_n402_dig_normal.xml"><![CDATA[<html>[Normal] <FONT color=#086171>Way of Magic I</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="16" link_target="gq01_3002_n402_dig_hunt.xml"><![CDATA[<html>[Hunt]<FONT color=#086171>The Lost Sword</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_stage_1" mid="17"><![CDATA[<html>(Kembali) </html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Adventurer's Guild Bulletin Board$<BR>Misi ini dapat diambil di <FONT color=#a82424>Ancient Temple Excavation Site</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_quest" image="QN_guild_board.dds" itemindex="">
+         <talk_question mid="13"><![CDATA[<html>$Adventurer's Guild Bulletin Board${action:Talk}<BR>Tidak ada permintaan yang diterima saat ini.<BR><BR><FONT color=#086171>*Harori Fanclub menerima anggota! Gabung sekarang dan dapatkan kaos Harori's Lolli Lolli gratis! Dan kesempatan untuk memenangkan tiket konser Harori "Dancing with the Dragons"! </FONT> </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="enterquest">sq01_063_enter_adventure</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">no_quest</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">63</chk>
+         <chk type="lvl" op=">=">8</chk>
+      </conditions>
+      <exelink idx="back_stage_1">0</exelink>
+   </talk>

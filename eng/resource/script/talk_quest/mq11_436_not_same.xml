@@ -1,0 +1,453 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_436_not_same</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>4</qchapter>
+      <qid>436</qid>
+      <designer>김인정</designer>
+      <qlevel>26</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>437</nextqid>
+      <nextqname>mq11_437_cooperatively</nextqname>
+      <nextqnpc>n042_general_duglars</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Different from what I had imagined]]></qkname>
+      <qnpc>
+         <npcid>210</npcid>
+         <npcename>n210_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>211</npcid>
+         <npcename>n211_geraint</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>212</npcid>
+         <npcename>n212_argenta</npcename>
+         <npckname>아르젠타</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>393</npcid>
+         <npcename>n393_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>42</npcid>
+         <npcename>n042_general_duglars</npcename>
+         <npckname>장군 더글라스</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Argenta$<BR>What? You shouldn't be here<BR>Don't disturb me and be on your way.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n211_geraint-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Blond Knight$<BR>....<BR><FONT color=#7e12d2>(Seems to be talking to Argenta.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Argenta$<BR>What? You shouldn't be here<BR>Don't disturb me and be on your way.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-noquest" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$Academic Station$<BR>* Mission Object.<BR><FONT color=#7e12d2>* Find someone at the Royal Castle who will go to Dark Overlord Keep with you.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-accepting-acceptted" mid="89" select_type="3" />
+      <talk_question mid="9"><![CDATA[<html>$General Douglas${action:Talk}<BR>We've finished convening the troops.<BR>Let's go and find the Prophet.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-a" mid="91" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$General Douglas${action:Talk}<BR>I just came back.<BR>I see you have also returned safely.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-b" mid="156" select_type="2" />
+      <talk_question mid="155"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I need to go to Dark Overlord Keep.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-b" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-c" mid="158" select_type="2" />
+      <talk_question mid="157"><![CDATA[<html>$General Douglas$<BR>Hmm, not even the strongest adventurer can win a large group of monsters by himself.<BR>Don't worry. While I was coming back, I ordered my troops to get ready.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-c" image="QW_28.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-d" mid="160" select_type="2" />
+      <talk_question mid="159"><![CDATA[<html>$General Douglas$<BR>It's less than what I had expected, but they are all Elite Soldiers who had trained themselves in many battles.<BR>
+We must hurry and go to the <FONT color=#a82424>Dark Overlord Keep</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-d" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-e" mid="162" select_type="2" />
+      <talk_question mid="161"><![CDATA[<html>$General Douglas$<BR>Destination is the <FONT color=#a82424>Dark Overlord Keep</FONT>... While we were fighting the Black Knight, we didn't succeed in penetrating deep into his base. If we gather some more information this time, it may help us in future battles.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-e" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-f" mid="92" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$General Douglas$<BR>Then let's get going.<BR>We will do our best, so don't relax until we rescue the <FONT color=#a82424>Prophet</FONT> and do your best until this is over.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-f" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-g" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-1-g" image="QW_28.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-1-" mid="95" select_type="5" />
+      <talk_question mid="16"><![CDATA[<html>$General Douglas$<BR>The first group of the Elite Forces have already headed out. As soon as you are ready, head towards the <FONT color=#a82424>Dark Overlord Keep</FONT> and meet the troops.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-1-" mid="96" select_type="5" />
+      <talk_question mid="18"><![CDATA[<html>$Argenta$<BR>What? You shouldn't be here<BR>Don't disturb me and be on your way.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n211_geraint-1" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint.dds" center_image="">
+      <talk_answer link_index="n211_geraint-1-" mid="97" select_type="5" />
+      <talk_question mid="19"><![CDATA[<html>$Blond-haired Swordsman$<BR>…I have nothing to say to you.<BR><FONT color=#7e12d2>(He seems to be talking to Argenta)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-1-" mid="98" select_type="5" />
+      <talk_question mid="20"><![CDATA[<html>$Argenta$<BR>Why are you still here?<BR>Don't disturb me and be on your way.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-" mid="99" select_type="5" />
+      <talk_question mid="21"><![CDATA[<html>$Academic Station$<BR>* Mission Objective.<BR><FONT color=#7e12d2>* Find someone at the Royal Castle who will go to Dark Overlord Keep with you.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_question mid="153"><![CDATA[<html>$King Cassius$<BR>
+<FONT color=#7e12d2>(Talk to General Douglas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-2" image="QW_28.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-2-" mid="100" select_type="5" />
+      <talk_question mid="22"><![CDATA[<html>$General Douglas$<BR>The first group of the Elite Forces have already headed out. As soon as you are ready, head towards the <FONT color=#a82424>Dark Overlord Keep</FONT> and meet the troops.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-2-a" mid="102" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Argenta$<BR>I knew you came from hearing your footsteps. <FONT color=#382000>{user_nick}</FONT>.<BR>You've managed to come all the way here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-2-b" mid="104" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You've met Geraint.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-2-b" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-2-c" mid="105" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Argenta$<BR>I haven't even introduced Geraint to you before. How do you know him?<BR><FONT color=#7e12d2>(Argenta looks at the Blond Knight for a moment.)</FONT><BR>
+Oh... Because of the Abandoned Welton Hollow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-2-c" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-2-d" mid="107" select_type="2" />
+      <talk_question mid="106"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Yes I was there too.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-2-d" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-2-e" mid="108" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Argenta$<BR>Then you saw? This fool lost him.<BR>Geraint, how could you let him get away from you?!<BR>
+I don't understand.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-2-e" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-2-f" mid="109" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Argenta$<BR>Geraint! Are you listening?!!<BR>
+<FONT color=#7e12d2>(Argenta raises her voice.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-2-f" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="NPC_Left_Geraint.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n210_argenta-2-chgstep" mid="111" select_type="2" />
+      <talk_question mid="110"><![CDATA[<html>$Geraint$<BR><FONT color=#7e12d2>(Geraint sighs)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-3" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-3-" mid="113" select_type="5" />
+      <talk_question mid="32"><![CDATA[<html>$Academic Jasmine${sound:npc_SH_Jasmin_sp_06.ogg}<BR>So, you're heading out to the <FONT color=#a82424>Dark Overlord Keep</FONT>. You have to keep a constant lookout for the Prophet.<BR>After you find the Prophet, you have to make her lead you to the Monolith.<BR>That's the only thing we can do.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-3" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-3-a" mid="114" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Argenta$<BR>Geraint! Are you listening?!!<BR>
+<FONT color=#7e12d2>(Argenta raises her voice.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-3-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="NPC_Left_Geraint.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n210_argenta-3-talk3" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>$Geraint$<BR><FONT color=#7e12d2>(Geraint sighs)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-4" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-4-a" mid="118" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Argenta$<BR>Wait, kid.<BR>
+You shouldn't follow Geraint.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-4-a" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-4-b" mid="120" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I want to ask you something.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-4-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-4-c" mid="121" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Argenta$<BR>Something to ask?<BR>What is it? Say it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-4-d" mid="123" select_type="2" />
+      <talk_question mid="122"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Why are you fighting Velskud?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-4-d" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-4-e" mid="124" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Argenta$<BR>Seriously, that's your question?<BR>Then do you expect me to hold that weasel's hand and smile at each other?<BR>I'm out of words!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-4-e" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-4-f" mid="126" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>He's not an evil man...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-4-f" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-4-g" mid="127" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Argenta$<BR>Even if it's true that you're from the future, nothing changes in the present. No matter who he is in the future, he is <FONT color=#a82424>someone who is trying to break the balance of the world using the descendant of the Ancients</FONT> at the present!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-4-g" image="QW_SkirtOfBlackMountain.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-4-" mid="128" select_type="5" />
+      <talk_question mid="44"><![CDATA[<html>$Argenta$<BR>I don't have any more business here, so I'm going to the <FONT color=#a82424>Foothills of Black Mountain</FONT>.<BR>You better get out of here before you get hurt.<BR>
+<FONT color=#7e12d2>(Talk to Argenta at the Foothills of Black Mountain.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n210_argenta-5" image="QW_SkirtOfBlackMountain.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n210_argenta-5-" mid="130" select_type="5" />
+      <talk_question mid="45"><![CDATA[<html>$Argenta$<BR>I don't have any more business here, so I'm going to the <FONT color=#a82424>Foothills of Black Mountain</FONT>.<BR>You better get out of here before you get hurt.<BR>
+<FONT color=#7e12d2>(Talk to Argenta at the Foothills of Black Mountain.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-5" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-5-a" mid="131" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Argenta$<BR>I wonder if Geraint is having any progress.<BR>That fool is so soft-hearted even after what he has gone through. He suffered so much from <FONT color=#a82424>Velskud</FONT>, and he still hasn’t learnt his lesson… Tsk tsk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-5-a" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-5-b" mid="133" select_type="2" />
+      <talk_question mid="132"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>He knows Velskud is not a bad person...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-5-b" image="QN_six_heroes_silhouette.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-5-c" mid="134" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Argenta$<BR>Hah! Here is another fool who would get her head chopped off for being too naive!<BR>When we were doing that funny <FONT color=#a82424>Six Heroes</FONT> thing in the past, Geraint considered Velskud his comrade.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-5-c" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-5-d" mid="135" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Argenta$<BR>But in the end, Velskud stole the <FONT color=#a82424>Black Dragon Karas' Jewel</FONT> and ran away! That's why we're going through this hardship for 50 years.<BR>
+If we hadn't trusted a human in the first place, this never would have happened!<BR>
+<FONT color=#7e12d2>(Argenta frowns)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-5-e" mid="136" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>$Argenta$<BR>To think that I'm compaining to a human kid now…<BR>I must have grown weak too. Hmph..</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-5-f" mid="138" select_type="2" />
+      <talk_question mid="137"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It would be good if you can join forces….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-6" mid="139" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Argenta$<BR>That will NEVER happen.<BR>Now go away. You're annoying me so much that I have a headache.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n212_argenta-6" image="QN_Npc_Genaral_Duglas.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Argenta.dds" center_image="">
+      <talk_answer link_index="n212_argenta-6-" mid="140" select_type="5" />
+      <talk_question mid="57"><![CDATA[<html>$Argenta$<BR>Why are you trying to get hep from the humans or the Royal Castle? I don't understand this.<BR><FONT color=#7e12d2>(Return to General Douglas and report.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-a" mid="141" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Academic Jasmine$<BR>
+I see. <FONT color=#a82424>Geraint</FONT> chased <FONT color=#a82424>Velskud</FONT> deep into Dark Overlord Keep ....<BR>That's too much for you right now. If you train yourself, it would be different.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-b" mid="143" select_type="2" />
+      <talk_question mid="142"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What should I do?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-b" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-" mid="144" select_type="5" />
+      <talk_question mid="60"><![CDATA[<html>$Academic Jasmine${sound:npc_CG_Jasmin_sp_05.ogg}<BR>Obtain cooperation from the Royal Castle. With many Elite Soldiers, you may be able to penetrate deep into Dark Mine.<BR>I'm worried about the well-being of the Prophet. Without her, our future is....<BR><FONT color=#7e12d2>(Jasmine sighs)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6" image="QN_Npc_Velskud1.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-a" mid="146" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$General Douglas${action:Talk}<BR>I received your report that a Blond Knight is chasing the Black Knight into the <FONT color=#a82424>Dark Overlord Keep</FONT>.<BR>Due to lack of information, we cannot dispatch large troops into that area.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-b" mid="147" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$General Douglas$<BR>But with the help of the Adventurers' Guild, we obtained a part of a map of the inside.<BR>I've dispatched a group of scouts, so we'll be able to go inside soon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-c" mid="149" select_type="2" />
+      <talk_question mid="148"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Really?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n042_general_duglars-6-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Duglars.dds" center_image="">
+      <talk_answer link_index="n042_general_duglars-6-!next" mid="151" select_type="4" />
+      <talk_question mid="65"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">436</exe>
+         <exe type="talk" npc="n042_general_duglars">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">4360,,,,,,,,</exe>
+         <exe type="complete" true="">436</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n042_general_duglars" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n042_general_duglars" sub="b" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="c" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="d" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="e" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="f" />
+   <exelink qstep="1" npc="n042_general_duglars" sub="g">0,1</exelink>
+   <exelink qstep="1" npc="n042_general_duglars" sub="" />
+   <exelink qstep="2" npc="n210_argenta" sub="b" />
+   <exelink qstep="2" npc="n210_argenta" sub="c" />
+   <exelink qstep="2" npc="n210_argenta" sub="d" />
+   <exelink qstep="2" npc="n210_argenta" sub="e" />
+   <exelink qstep="2" npc="n210_argenta" sub="f" />
+   <exelink qstep="2" npc="n210_argenta" sub="chgstep">0</exelink>
+   <exelink qstep="3" npc="n210_argenta" sub="talk3" />
+   <exelink qstep="4" npc="n210_argenta" sub="b" />
+   <exelink qstep="4" npc="n210_argenta" sub="c" />
+   <exelink qstep="4" npc="n210_argenta" sub="d" />
+   <exelink qstep="4" npc="n210_argenta" sub="e" />
+   <exelink qstep="4" npc="n210_argenta" sub="f" />
+   <exelink qstep="4" npc="n210_argenta" sub="g">0,1</exelink>
+   <exelink qstep="4" npc="n210_argenta" sub="" />
+   <exelink qstep="5" npc="n212_argenta" sub="b" />
+   <exelink qstep="5" npc="n212_argenta" sub="c" />
+   <exelink qstep="5" npc="n212_argenta" sub="d" />
+   <exelink qstep="5" npc="n212_argenta" sub="e" />
+   <exelink qstep="5" npc="n212_argenta" sub="f" />
+   <exelink qstep="5" npc="n212_argenta" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n393_academic_station" sub="b" />
+   <exelink qstep="6" npc="n393_academic_station" sub="" />
+   <exelink qstep="6" npc="n042_general_duglars" sub="b" />
+   <exelink qstep="6" npc="n042_general_duglars" sub="c">0</exelink>
+   <exelink qstep="6" npc="n042_general_duglars" sub="!next">1</exelink>
+   <journal_data recompense="0:4360" quest_title="생각과 다릅니다" chapterid="4" quest_level="26" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Genaral_Duglas.dds</contents_image>
+         <destination_pos>11,n42</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>42</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="68"><![CDATA[Different from what I had imagined I]]></title>
+         <contents mid="69"><![CDATA[<html>Talk to the General and listen to the problem with regards to heading out to Dark Overlord Keep.<BR><BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ General Douglas</FONT></html>]]></contents>
+         <destination mid="70"><![CDATA[Talk to General Douglas]]></destination>
+         <todo_msg mid="71"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_28.dds</contents_image>
+         <destination_pos>284,n210</destination_pos>
+         <destination_mode>custom:281@1,283@1,284@1</destination_mode>
+         <statemark_npcid>210</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="72"><![CDATA[Different from what I had imagined II]]></title>
+         <contents mid="73"><![CDATA[<html>Find traces of Velskud at Dark Overlord Keep and rescue the Prophet.<BR><BR><FONT color=#086171>Foothills of Black Mountain (Dark Overlord Gates)</FONT> <FONT color=#a82424>→ Dark Overlord Keep</FONT></html>]]></contents>
+         <destination mid="74"><![CDATA[Dark Overlord Keep]]></destination>
+         <todo_msg mid="75"><![CDATA[Go to Dark Overlord Keep.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>284,n210</destination_pos>
+         <destination_mode>custom:281@1,283@1,284@1</destination_mode>
+         <statemark_npcid>210</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="76"><![CDATA[Different from what I had imagined III]]></title>
+         <contents mid="77"><![CDATA[<html>Geraint left by himself to chase Velskud. Talk to Argenta and discuss what to do next.<BR>
+<BR><BR>
+<FONT color=#086171></FONT><BR>
+<FONT color=#086171>Foothills of Black Mountain (Dark Overlord Gates)</FONT> <FONT color=#a82424>→ Dark Overlord Keep(Argenta)</FONT></html>]]></contents>
+         <destination mid="78"><![CDATA[Talk to Argenta at Dark Overlord Keep]]></destination>
+         <todo_msg mid="79"><![CDATA[Talk to Argenta again.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>13,n212</destination_pos>
+         <destination_mode>custom:13@1</destination_mode>
+         <statemark_npcid>212</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="80"><![CDATA[Different from what I had imagined IV]]></title>
+         <contents mid="81"><![CDATA[<html>Can't chase Geraint right away. First, go to Foothills of Black Mountain and talk to Argenta.<BR>
+ <BR>
+<FONT color=#086171>Foothills of Black Mountain</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="82"><![CDATA[Talk to Argenta at the Foothills of Black Mountain]]></destination>
+         <todo_msg mid="83"><![CDATA[Talk to Argenta at the Foothills of Black Mountain.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Genaral_Duglas.dds</contents_image>
+         <destination_pos>11,n42</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>42</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Different from what I had imagined V]]></title>
+         <contents mid="85"><![CDATA[<html>Report to the Royal Castle about what happened while chasing Velskud, and discuss what to do next.<BR>
+<BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ General Douglas</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Talk to General Douglas at the Saint Haven Royal Castle]]></destination>
+         <todo_msg mid="87"><![CDATA[Return to the Royal Castle and report to General Douglas.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>435</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

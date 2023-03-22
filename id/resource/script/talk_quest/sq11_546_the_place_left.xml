@@ -1,0 +1,213 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_546_the_place_left</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>546</qid>
+      <designer>나은하</designer>
+      <qlevel>24</qlevel>
+      <qdesc>매표원 소렌느는 클레릭에게 상급 클레릭 에녹이 찾는다는 말을 전해준다.
+상급 클레릭 에녹은 클레릭의 가족들의 소식을 전해준다.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[The place left]]></qkname>
+      <qnpc>
+         <npcid>46</npcid>
+         <npcename>n046_cleric_master_enoc</npcename>
+         <npckname>상급 클레릭 에녹</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>70</npcid>
+         <npcename>n070_plane_ticketer_sorene</npcename>
+         <npckname>매표원 소렌느</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Ticket Seller Sorene$<BR>Hmm, Kamu terlihat tidak asing.<BR>Oh, maaf. Sepertinya aku salah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Silahkan datang lagi nanti kalau kamu ingin berbicara karena sekarang sudah hampir waktunya untuk melakukan upacara.<BR><FONT color=#7e12d2>(Harus berbicara dengan Ticket Seller Sorene.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-a" mid="9" select_type="0"><![CDATA[<html>Apa kamu tahu aku?</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Ticket Seller Sorene$ Semoga perjalananmu dari <BR><FONT color=#a82424>Saint's Haven</FONT> menyenangkan. Hmmmm.. Apa kamu <FONT color=#382000>{user_nick}</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-b" mid="11" select_type="0"><![CDATA[<html>(Ticket Seller Sorene tertawa malu-malu)</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Ticket Seller Sorene$<BR>Ya aku pernah melihatmu dari jauh ketika kamu sedang pergi ke sekolah. Tapi mungkin kamu tidak mengingat aku <FONT color=#382000>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting-b" image="QN_Npc_Cl_master_Enoc.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-c" mid="13" select_type="0"><![CDATA[<html>Ada apa dengan Enoch?</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Ticket Seller Sorene$<BR>Oh lihat aku!<BR><FONT color=#a82424>Cleric Trainer Enoch</FONT> memberitahuku kalau <FONT color=#382000>{user_nick}</FONT> datang, kamu harus mengunjunginya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting-c" image="QN_Npc_Cl_master_Enoc.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-d" mid="15" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Ticket Seller Sorene$<BR>Dia tidak memberitahuku tentang itu. Mungkin kamu harus tanya ke <FONT color=#a82424>Cleric Trainer Enoch</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n070_plane_ticketer_sorene-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$the place left$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n070_plane_ticketer_sorene-1" image="QN_Npc_Cl_master_Enoc.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Ticket Seller Sorene$<BR>Aku dengar kamu adalah <FONT color=#a94407>Calderock Hero</FONT>.<BR><FONT color=#a82424>Cleric Trainer Enoch</FONT> juga senang mendengarnya.<BR>Temuilah dia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-a" mid="23" select_type="0"><![CDATA[<html>Lama tidak bertemu.</html>]]></talk_answer>
+      <talk_question mid="22"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Oh, <FONT color=#382000>{user_nick}</FONT>. Aku mendengar kisahmu di Calderock Village. Aku tidak percaya seseorang yang sebelumnya <FONT color=#a82424>pengacau di biara</FONT> sekarang menjadi Cleric.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-b" mid="25" select_type="0"><![CDATA[<html>Tadinya seperti itu.  Tapi Jake ada di Mana Ridge...</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Ketika aku menjadi intruktur, kamu dan <FONT color=#a94407>Jake</FONT> banyak memberi ku masalah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-c" mid="27" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="26"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Shh! <FONT color=#a94407>Jake</FONT> melawan monster di Mana Ridge dan memperoleh gelar <FONT color=#a82424>Honorable Soldier</FONT>. Situasi kita akan menjadi sulit apabila sesuatu sememalukan itu terjadi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-d" mid="29" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="28"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Persaudaraan kami banyak mengalami masalah ketika sebuah grup bernama <FONT color=#a94407>dragon followers</FONT> terbentuk. Banyak pandangan negatif diarahkan kepada kami dari para Sorceress dan orang-orang lain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-e" mid="31" select_type="0"><![CDATA[<html>...Ok. Aku akan berhati-hati.</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Banyak Cleric harus menumpahkan darahnya untuk merebut kembali persaudaraan kami. Kami tidak dapat merusak reputasi kami dengan semua masalah yang kami lalui. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-1-f" mid="33" select_type="0"><![CDATA[<html>(Cleric Trainer Enoch memberikan surat dengan lambang Royal Family)</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Oh iya, ketika kami mendengar tentang apa yang sudah kamu capai di Calderock Village, <FONT color=#a82424>ayah mu  </FONT> datang. Dia memberikan ku ini. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2" mid="35" select_type="0"><![CDATA[<html>(Buka surat itu)</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Dia terlihat seperti mengkhawatirkan mu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2-a" mid="38" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Father's Letter$<BR><FONT color=#7e12d2>Aku mendengar cerita mengenai diri mu dari Calderock Village. <BR>Aku senang kamu baik-baik saja. </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2-b" mid="40" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Father's Letter$<BR><FONT color=#7e12d2>Sebagai anggota dari keluarga kita, aku tidak dapat menampung mu.<BR>Itulah sebabnya aku harus mengusirmu.<BR>Aku tidak akan memberikan mu janji palsu ataupun alasan yang buruk.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2-c" mid="42" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Father's Letter$<BR><FONT color=#7e12d2>Sebagai kepala keluarga kita, aku tidak dapat memberikan mu posisi ku ataupun uang. Tapi kalau aku dapat memberikanmu kasih sayang selayaknya ayah dari golongan menengah, aku akan memberikannya kepada mu.</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2-d" mid="44" select_type="0"><![CDATA[<html>(Merebut surat itu) Dia selalu berbicara sesuka dia!</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Father's Letter$<BR><FONT color=#7e12d2>Kemanapun kamu pergi, aku ingin kamu ingat kalau kamu adalah anak ku. Bukan karena nama keluarga kitam tapi sebagai anak, aku ingin kamu tumbuh menjadi orang yang hebat.</FONT><BR><FONT color=#7e12d2></FONT><BR><FONT color=#7e12d2>- Dari ayah mu yang buruk</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2-e" mid="46" select_type="0"><![CDATA[<html>Kenapa dia sangat khawatir?</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Cleric Trainer Enoch$<BR>... Ayah mu berusaha untuk memberikan saudara tiri mu uang dan posisinya. Tetapi ada beberapa anggota keluarga yang menentangnya. Jadi ibu tiri mu menjadi khawatir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2-f" mid="49" select_type="0"><![CDATA[<html>Tapi aku tidak menderita bersama keluarga itu lagi.</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Yah itu karena kamu mulai mendapatkan perhatian dan memperoleh ketenaran. Saudara-saudara mu mengharapkan kamu untuk segera menjadi Cleric.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2-g" mid="51" select_type="0"><![CDATA[<html>Aku sudah menemukan caranya.</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Tetapi itu adalah keinginan mu.<BR>Dunia ini tidak selalu berjalan seperti apa yang kamu inginkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-2-h" mid="53" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Kami sudah memberikan seluruh hidup kami untuk Goddess. Hidup bukanlah dalam hitungan detik, tetapi sangat panjang. Masa depan hanya bergantung kepada <FONT color=#a94407>Prophet </FONT>dan  <FONT color=#a94407>Goddess  Althea</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n046_cleric_master_enoc-3" mid="55" select_type="0"><![CDATA[<html><FONT color=#086171 size=2 face=Arial>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n046_cleric_master_enoc-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="56"><![CDATA[<html>$Cleric Trainer Enoch$<BR>Kalau kamu hidup, anggota keluargamu akan meminta pertolonganmu. Terserah kamu untuk menolong mereka atau bertindak seperti yang ayah mu lakukan terhadap mereka, itu semua adalah <FONT color=#a82424>pilihan kamu</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">5460,,,,,,,,,</exe>
+         <exe type="setquest">546</exe>
+         <exe type="talk" npc="n070_plane_ticketer_sorene">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">5460,,,,,,,,,</exe>
+         <exe type="complete" true="">546</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n070_plane_ticketer_sorene" sub="d">0</exelink>
+   <exelink qstep="accepting" npc="n070_plane_ticketer_sorene" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="b" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="c" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="d" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="e" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="f" />
+   <exelink qstep="1" npc="n046_cleric_master_enoc" sub="2">0</exelink>
+   <exelink qstep="2" npc="n046_cleric_master_enoc" sub="b" />
+   <exelink qstep="2" npc="n046_cleric_master_enoc" sub="c" />
+   <exelink qstep="2" npc="n046_cleric_master_enoc" sub="d" />
+   <exelink qstep="2" npc="n046_cleric_master_enoc" sub="e" />
+   <exelink qstep="2" npc="n046_cleric_master_enoc" sub="f" />
+   <exelink qstep="2" npc="n046_cleric_master_enoc" sub="g" />
+   <exelink qstep="2" npc="n046_cleric_master_enoc" sub="h">0</exelink>
+   <exelink qstep="2" npc="n046_cleric_master_enoc" sub="3">1</exelink>
+   <journal_data recompense="5460" quest_title="떠나온 자리" chapterid="" quest_level="24" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_Cl_master_Enoc.dds</contents_image>
+         <destination_pos>11,n46</destination_pos>
+         <destination_mode />
+         <statemark_npcid>46</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="57"><![CDATA[Talk with Cleric Trainer Enoch]]></title>
+         <contents mid="58"><![CDATA[<html>Temui <FONT color=#a82424>Cleric Trainer Enoch</FONT>.<BR><BR><FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→Cleric Trainer Enoch</FONT></html>]]></contents>
+         <destination mid="59"><![CDATA[Talk with Cleric Trainer Enoch]]></destination>
+         <todo_msg mid="60"><![CDATA[Talk with Cleric Trainer Enoch]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>24:-1</user_level>
+      <user_class>4</user_class>
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

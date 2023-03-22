@@ -1,0 +1,21 @@
+   <talk>
+      <npcename>n2179_warehouse_grant</npcename>
+      <npcid>2179</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Warehouse Keeper Grant]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="warehouse_001" mid="3"><![CDATA[<html>[Storage]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Warehouse Keeper Grant${action:Talk}<BR>Your bag looks pretty heavy.<BR>You should empty your bag from time to time to get more loots.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenWareHouse(userObjID);</exe>
+         <exe type="conexe" true="3" false="1">0</exe>
+         <exe type="custom">api_ui_OpenGuildWareHouse (userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_guild_HasGuildWare(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="warehouse_001">2</exelink>
+   </talk>

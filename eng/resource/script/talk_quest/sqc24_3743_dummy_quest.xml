@@ -1,0 +1,99 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc24_3743_dummy_quest</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>3743</qid>
+      <designer>조설빈</designer>
+      <qlevel>1</qlevel>
+      <qdesc>봉인상자퀘스트 아이템 회수용 스크립트
+(#276425 참고)</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Why is it located there?]]></qkname>
+      <qnpc>
+         <npcid>2766</npcid>
+         <npcename>n2766_ghost_alberto</npcename>
+         <npckname>유령 알베르토</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2766_ghost_alberto-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2766_ghost_alberto-accepting-item_del_1" mid="102" select_type="0"><![CDATA[<html><FONT color=#086171>[Find Faded Adventure Journal]</FONT></html>]]></talk_answer>
+      <talk_answer link_index="n2766_ghost_alberto-accepting-item_del_2" mid="104" select_type="0"><![CDATA[<html><FONT color=#086171>[Find Dull Portrait]</FONT></html>]]></talk_answer>
+      <talk_answer link_index="n2766_ghost_alberto-accepting-item_del_3" mid="105" select_type="0"><![CDATA[<html><FONT color=#086171>[Find Bamboo Letter]</FONT></html>]]></talk_answer>
+      <talk_question mid="96"><![CDATA[<html>$Phantom Alberto$<BR><FONT color=#387206>{user_nick}</FONT>, after I checked your inventory, I saw some familiar items.<BR>
+It looks like you were a having hard time removing these… Don't you need my help?<BR><BR><FONT color=#7e12d2>※ If you have any remaining [Faded Adventure Jornal], [Dulled Portrait], [Bamboo Letter], choosing this selection can delete these items.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2766_ghost_alberto-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="106"><![CDATA[<html>$Phantom Alberto$<BR>
+Ok. I will take these items</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2766_ghost_alberto-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="107"><![CDATA[<html>$Phantom Alberto$<BR>
+Were you confused with another item?<BR>
+ <BR>
+<FONT color=#7e12d2>※ Item you selected is not in your inventory. Please check your inventory.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="item" num="1" op="]=">400660</chk>
+         <chk type="item" num="1" op="]=">400661</chk>
+         <chk type="item" num="1" op="]=">400662</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="3,6" false="7">0</exe>
+         <exe type="conexe" true="4,6" false="7">1</exe>
+         <exe type="conexe" true="5,6" false="7">2</exe>
+         <exe type="delitem" num="-1">400660</exe>
+         <exe type="delitem" num="-1">400661</exe>
+         <exe type="delitem" num="-1">400662</exe>
+         <exe type="talk" npc="n2766_ghost_alberto">a</exe>
+         <exe type="talk" npc="n2766_ghost_alberto">b</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2766_ghost_alberto" sub="item_del_1">0</exelink>
+   <exelink qstep="accepting" npc="n2766_ghost_alberto" sub="item_del_2">1</exelink>
+   <exelink qstep="accepting" npc="n2766_ghost_alberto" sub="item_del_3">2</exelink>
+   <journal_data recompense="37430" quest_title="그게 왜 거기 있소?" chapterid="-1" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,30 @@
+   <talk>
+      <npcename>n2948_overhear</npcename>
+      <npcid>2948</npcid>
+      <startexe>0</startexe>
+      <comment>http://pms.eyedentitygames.com/issues/292113 에 따라 메인퀘스트를 우선으로 체크하고 서브퀘스트로 넘어가도록 수정.</comment>
+      <npckname mid="1"><![CDATA[Clear your thought]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(…….)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="10" false="9">4</exe>
+         <exe type="enterquest">sq_3821_dream_catcher</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="enterquest">sq_3822_catch_you</exe>
+         <exe type="conexe" true="5" false="7">2</exe>
+         <exe type="enterquest">sq_3874_hero_skills</exe>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="8" false="6">3</exe>
+         <exe type="enterquest">sq_3876_hero_skills</exe>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="enterquest">mqc03_9891_vandar_07</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">3821</chk>
+         <chk type="hasquest">3822</chk>
+         <chk type="hasquest">3874</chk>
+         <chk type="hasquest">3876</chk>
+         <chk type="hasquest">9891</chk>
+      </conditions>
+   </talk>

@@ -1,0 +1,281 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sqc23_3682_mystery_cargo</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>23</qchapter>
+      <qid>3682</qid>
+      <designer>조설빈</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Suspicious Cargo]]></qkname>
+      <qnpc>
+         <npcid>2632</npcid>
+         <npcename>n2632_trader_shylo</npcename>
+         <npckname>교역상인 샤일로</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>2633</npcid>
+         <npcename>n2633_freight</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>2634</npcid>
+         <npcename>n2634_freight</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-accepting-c" mid="6" select_type="0"><![CDATA[<html><FONT color=#086171>(Find out what’s happening.)</FONT></html>]]></talk_answer>
+      <talk_answer link_index="n2632_trader_shylo-accepting-a" mid="7" select_type="0"><![CDATA[<html><FONT color=#086171>(Don’t create more work for yourself and quietly walk away.)</FONT></html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Trader Shylock$<BR>Sigh... Oh Goddess... How can this happen?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-accepting-b" mid="9" select_type="0"><![CDATA[<html>Huh?</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Trader Shylock$<BR>Hey you, stop there!<BR>I know you heard my desperate sighs. Where do you think you’re going?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-accepting-c" mid="11" select_type="0"><![CDATA[<html>So... What happened?</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Trader Shylock$<BR>Aren’t you even curious to know what happened?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-accepting-party_check" mid="13" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Trader Shylock$<BR>Listen, I was unloading my goods from the trade ship and one of the <FONT color=#a82424>cargoes</FONT> went missing!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-accepting-e" mid="69" select_type="5" />
+      <talk_question mid="68"><![CDATA[<html>$Trader Shylock$<BR>
+Wait... There are too many people around now. This is an important matter so come back later when you’re alone.<BR>
+ <BR>
+<FONT color=#7e12d2>* You cannot proceed with this quest in a party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-accepting-acceptted" mid="15" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(Accept Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Suspicious Cargo$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2633_freight-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="16"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(It looks like an ordinary box but this must be Shylock’s cargo since it has the mark Shylock mentioned.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-1-a" mid="18" select_type="0"><![CDATA[<html>Something bad? Why? What’s inside the cargo?</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Trader Shylock$<BR>Something bad will happen if I don’t find it soon…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-1-b" mid="20" select_type="0"><![CDATA[<html>How did you lose something so important?</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Trader Shylock$<BR>Well… <FONT color=#7e12d2>(His nostrils twitch.)</FONT> It’s a trade secret! Ehem!<BR>Anyway, if we don’t find it quickly enough, this place will turn into shambles.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-1-c" mid="22" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Trader Shylock$<BR>Fudge the inspections... Ehem! Did I just say an F-word? No, you heard it wrong.<BR>Anyway, my <FONT color=#a82424>cargo</FONT> disappeared during one of those inspections…….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-1-d" mid="24" select_type="0"><![CDATA[<html>What do you mean it’s packaged convincingly?</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Trader Shylock$<BR>It’s packaged convincingly so the Empire couldn’t have confiscated it…<BR>I’m sure it must still be somewhere in this port.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-1-e" mid="26" select_type="0"><![CDATA[<html><FONT color=#7e12d2>(He seems to be trying to divert the topic</FONT><FONT color=#7e12d2>…)</FONT><FONT color=#086171> </FONT>Er... Okay</FONT>.</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Trader Shylock$<BR>We don’t have time!!!<BR>Hurry up and find my cargo now!!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-2" mid="28" select_type="0"><![CDATA[<html><FONT color=#086171>(Strange sounds…?)</FONT></html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Trader Shylock$<BR>By the way, my lost <FONT color=#a82424>cargo</FONT> looks just like an ordinary <FONT color=#086171>wooden crate</FONT><FONT color=#2b2723>. But if you go near it, you’ll hear strange </FONT><FONT color=#a82424>sounds</FONT><FONT color=#2b2723> coming from it so I’m sure you can find it easily.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="29"><![CDATA[<html>$Trader Shylock$<BR>It took so much effort to bring it all the way here…<BR><BR><FONT color=#7e12d2>* Search all </FONT><FONT color=#086171>wooden crates</FONT><FONT color=#7e12d2> in Merca’s Port to find the missing </FONT><FONT color=#a82424>cargo</FONT><FONT color=#7e12d2>.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2633_freight-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2633_freight-2-a" mid="31" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(It looks like an ordinary crate made of wood.</FONT><BR><FONT color=#7e12d2>Bizarre sound is coming from inside the crate.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2633_freight-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2633_freight-2-b" mid="33" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Could this be the </FONT><FONT color=#a82424>cargo</FONT><FONT color=#662500> Shylock told me about? </FONT><FONT color=#7e12d2>(Try lifting the crate)</FONT><FONT color=#662500> It’s so heavy!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2633_freight-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2633_freight-3" mid="35" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(The moment you put the crate down, it shook a little and </FONT><FONT color=#7e12d2>slid away from sight at a lightning speed.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2634_freight-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2634_freight-3-a" mid="37" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(It looks like an ordinary crate made of wood.<BR></FONT><FONT color=#7e12d2>Bizarre sound is coming from inside the crate.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2634_freight-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2634_freight-3-b" mid="39" select_type="0"><![CDATA[<html><FONT color=#086171>(Lift the crate)</FONT></html>]]></talk_answer>
+      <talk_answer link_index="n2634_freight-3-b" mid="40" select_type="0"><![CDATA[<html><FONT color=#086171>(Don’t lift the crate)</FONT></html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>*Gulp* </FONT><FONT color=#7e12d2>(I hope it doesn’t disappear again when I touch it.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2634_freight-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2634_freight-4" mid="42" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$???$<BR><FONT color=#7e12d2>(The crate violently shakes and slides away from sight again.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-4-a" mid="44" select_type="0"><![CDATA[<html>No, the crate ran away!</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Trader Shylock$<BR>I saw you running up and down. Did you find my cargo?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-4-b" mid="46" select_type="0"><![CDATA[<html>I’m not joking! What is that thing?</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Trader Shylock$<BR>The crate ran...? Hahaha! Are you seeing things?<BR>Don’t work too hard until you sputter nonsense like that. <FONT color=#7e12d2>(For some reason, Shylock seems to be sweating nervously.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-4-c" mid="48" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Trader Shylock$<BR>Oh, I didn’t give you your reward yet. <FONT color=#7e12d2>(He hands over the rewards with an overexaggerated gesture.)</FONT><BR>Take this and get yourself a drink at the pub to cool your head.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n2632_trader_shylo-4-d" mid="50" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Rewards)</FONT></html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Quest Rewards$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2632_trader_shylo-4-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="51"><![CDATA[<html>$Trader Shylock$<BR>I missed the golden time to catch it! Now I’d have to form a search squad to…….<BR>
+Huh?! Why are you still here? You’ve done well. Go and rest now!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions>
+         <chk type="partyChecker" xsi:nil="true" />
+      </conditions>
+      <executions>
+         <exe type="recompense_view">36820,,,,,,,,,</exe>
+         <exe type="setquest">3682</exe>
+         <exe type="talk" npc="n2632_trader_shylo">1</exe>
+         <exe type="conexe" true="0,5" false="4">0</exe>
+         <exe type="talk" npc="n2632_trader_shylo">d</exe>
+         <exe type="talk" npc="n2632_trader_shylo">e</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">36820,,,,,,,,,</exe>
+         <exe type="complete" true="">3682</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2632_trader_shylo" sub="party_check">3</exelink>
+   <exelink qstep="accepting" npc="n2632_trader_shylo" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n2632_trader_shylo" sub="b" />
+   <exelink qstep="1" npc="n2632_trader_shylo" sub="c" />
+   <exelink qstep="1" npc="n2632_trader_shylo" sub="d" />
+   <exelink qstep="1" npc="n2632_trader_shylo" sub="e" />
+   <exelink qstep="1" npc="n2632_trader_shylo" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n2633_freight" sub="b" />
+   <exelink qstep="2" npc="n2633_freight" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n2634_freight" sub="b" />
+   <exelink qstep="3" npc="n2634_freight" sub="b" />
+   <exelink qstep="3" npc="n2634_freight" sub="4">0,1</exelink>
+   <exelink qstep="4" npc="n2632_trader_shylo" sub="b" />
+   <exelink qstep="4" npc="n2632_trader_shylo" sub="c">0</exelink>
+   <exelink qstep="4" npc="n2632_trader_shylo" sub="d">1</exelink>
+   <journal_data recompense="36820" quest_title="수상한 화물" chapterid="" quest_level="95" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_MercaPort.dds</contents_image>
+         <destination_pos>13043,n2632</destination_pos>
+         <destination_mode>custom:13043@1,54@1,11@1</destination_mode>
+         <statemark_npcid>2632</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="52"><![CDATA[His Problems]]></title>
+         <contents mid="53"><![CDATA[<html>A merchant who seems to have just arrived at Merca’s Port seems to be in trouble. Find out what’s bothering him.<BR><BR><FONT color=#086171>Merca’s Port</FONT> - <FONT color=#a82424>Trader Shylock</FONT></html>]]></contents>
+         <destination mid="54"><![CDATA[Talk to Trader Shylock at Merca’s Port]]></destination>
+         <todo_msg mid="55"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_MercaPort.dds</contents_image>
+         <destination_pos>13043,n2633</destination_pos>
+         <destination_mode>custom:13043@1,54@1,11@1</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="56"><![CDATA[Missing Cargo]]></title>
+         <contents mid="57"><![CDATA[<html>A cargo that has passed the inspections has disappeared. Although you don’t know what is inside the cargo, Shylock says there will be trouble if you don’t find it soon.<BR>
+<FONT color=#7e12d2>* You cannot proceed in a party.</FONT><BR><BR><FONT color=#086171>Merca’s Port</FONT> - <FONT color=#a82424>???</FONT></html>]]></contents>
+         <destination mid="58"><![CDATA[(Solo) Find cargo at Merca’s Port]]></destination>
+         <todo_msg mid="59"><![CDATA[Find Shylock’s cargo at Merca’s Port.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_MercaPort.dds</contents_image>
+         <destination_pos>13043,n2634</destination_pos>
+         <destination_mode>custom:13043@1,54@1,11@1</destination_mode>
+         <statemark_npcid />
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="60"><![CDATA[A Living Cargo]]></title>
+         <contents mid="61"><![CDATA[<html>A cargo that contains unknown objects moved on its own and disappeared!<BR>
+<FONT color=#7e12d2>* You cannot proceed in a party.</FONT><BR><BR><FONT color=#086171>Merca’s Port</FONT> - <FONT color=#a82424>???</FONT></html>]]></contents>
+         <destination mid="62"><![CDATA[(Solo) Find the moving cargo at Merca’s Port]]></destination>
+         <todo_msg mid="63"><![CDATA[Find the missing cargo!]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_MercaPort.dds</contents_image>
+         <destination_pos>13043,n2632</destination_pos>
+         <destination_mode>custom:13043@1,54@1,11@1</destination_mode>
+         <statemark_npcid>2632</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Unidentified Cargo]]></title>
+         <contents mid="65"><![CDATA[<html>You’ve completely lost the moving cargo. Return to Shylock and report what happened.<BR><BR><FONT color=#086171>Merca’s Port</FONT> - <FONT color=#a82424>Trader Shylock</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Talk to Trader Shylock at Merca’s Port]]></destination>
+         <todo_msg mid="67"><![CDATA[Return to Trader Shylock.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9816</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

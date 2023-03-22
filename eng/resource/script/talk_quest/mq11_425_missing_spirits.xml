@@ -1,0 +1,213 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_425_missing_spirits</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>425</qid>
+      <designer>김인정</designer>
+      <qlevel>34</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>426</nextqid>
+      <nextqname>mq11_426_sea_monsters_insignia</nextqname>
+      <nextqnpc>n039_bishop_ignasio</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[A Monster's Lost Soul]]></qkname>
+      <qnpc>
+         <npcid>39</npcid>
+         <npcename>n039_bishop_ignasio</npcename>
+         <npckname>주교 이그나시오</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-accepting-acceptted" mid="42" select_type="3" />
+      <talk_question mid="40"><![CDATA[<html>$Bishop Ignacio$<BR>Now that the <FONT color=#a82424>fragment of power</FONT> is ready, I'm going to get ready for the purification ritual.<BR><FONT color=#7e12d2>(The bishop shakes your hand)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-a" mid="52" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Bishop Ignacio${action:Talk}<BR>Now there must be a sacrifice to borrow some powers. I've looked through my ancient book, and it seems like I will need a big <FONT color=#a82424>sacrifice</FONT>, to have a big ritual.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-b" mid="53" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What kind of a sacrifice?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-c" mid="54" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Bishop Ignacio$<BR>I've given it quite some thought, but it was difficult to think of a monster that is as big as the Black Dragon.<BR>But for now, I was thinking about using the <FONT color=#a82424>Sea Monster</FONT>.<BR>
+<FONT color=#7e12d2>(The Bishop explains enthusiastically)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-d" mid="55" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Bishop Ignacio$<BR>The <FONT color=#a82424>Sea Monster</FONT> was subdued when it threatened Saint Haven's seas long time ago. First, go to the <FONT color=#a82424>Forsaken Islet</FONT> and recover the Sea Monster's head.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-e" mid="56" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>What? The head?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-1-f" mid="57" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>$Bishop Ignacio$<BR>Haha, you can't bring the head back. It would have decomposed by now, leaving only the bones. Even the bones would be too large to carry back. Bring back the <FONT color=#a82424>soul</FONT> that has leaked from the monster's head.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-1-f" image="QW_46.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-2" mid="58" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Bishop Ignacio$<BR>This is a <FONT color=#a82424>Crystal Bottle</FONT> specially passed down in our Order. If you take this to the <FONT color=#a82424>Sunken Cargo Vessel</FONT>, you'll be able to collect the Sea Monster's soul from the monsters there. Well then, I'll count on you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-2" image="QW_46.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-2-" mid="60" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Bishop Ignacio$<BR>Collect the Sea Monster's soul in the <FONT color=#a82424>Crystal Bottle</FONT>. If you take it to the <FONT color=#a82424>Sunken Cargo Vessel</FONT>, you'll be able to collect the Sea Monster's soul from the monsters there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-3" image="QS_Default.dds" itemindex="300023" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-3-a" mid="61" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Bishop Ignacio${action:Talk}<BR>Welcome back.<BR>Did you manage to get the Sea Monster's soul?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-3-b" mid="63" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Here it is.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-3-c" mid="64" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Bishop Ignacio$<BR>That's amazing.<BR>You must have been sent by the goddess to save <FONT color=#a82424>Saint Haven</FONT>.<BR>
+<FONT color=#7e12d2>(The Bishop speaks delightedly as he grabs your hands)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-3-c" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-3-d" mid="65" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Bishop Ignacio$<BR><FONT color=#a82424>Geraint</FONT> would be happy too when we get rid of all the evil powers.<BR>Work hard for Saint Haven and for Geraint who has protected the city with his life!<BR>
+<FONT color=#7e12d2>(The Bishop receives the crystal bottle with eyes full of emotions)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-3-e" mid="66" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Bishop Ignacio$<BR>Now it is time to get the <FONT color=#a82424>Sea Monster's Seal</FONT>. The Sea Monster has been broken into pieces, so you will have no choice but to go back and forth many times. I know I'm troubling you, but please do me this favor.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-3-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-3-f" mid="67" select_type="4" />
+      <talk_question mid="25"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n039_bishop_ignasio-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Bishop.dds" center_image="">
+      <talk_answer link_index="n039_bishop_ignasio-3-!next" mid="69" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">425</exe>
+         <exe type="talk" npc="n039_bishop_ignasio">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="addquestitem" num="1">300023</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4,5,6">1197</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4,5,6">201197</exe>
+         <exe type="custom">api_quest_IncCounting(userObjID, 2, 1197);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">4251,4251,4252,4253,4254,4254,4256,,</exe>
+         <exe type="delquestitem" num="-1">300023</exe>
+         <exe type="complete" true="">425</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n039_bishop_ignasio" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n039_bishop_ignasio" sub="b" />
+   <exelink qstep="1" npc="n039_bishop_ignasio" sub="c" />
+   <exelink qstep="1" npc="n039_bishop_ignasio" sub="d" />
+   <exelink qstep="1" npc="n039_bishop_ignasio" sub="e" />
+   <exelink qstep="1" npc="n039_bishop_ignasio" sub="f" />
+   <exelink qstep="1" npc="n039_bishop_ignasio" sub="2">0,1,2,3,7</exelink>
+   <exelink qstep="3" npc="n039_bishop_ignasio" sub="b" />
+   <exelink qstep="3" npc="n039_bishop_ignasio" sub="c" />
+   <exelink qstep="3" npc="n039_bishop_ignasio" sub="d" />
+   <exelink qstep="3" npc="n039_bishop_ignasio" sub="e">0</exelink>
+   <exelink qstep="3" npc="n039_bishop_ignasio" sub="f">1,2</exelink>
+   <exelink qstep="3" npc="n039_bishop_ignasio" sub="!next" />
+   <journal_data recompense="1:4251,2:4252,3:4253,4:4254,5:4254,6:4256" quest_title="사라진 괴수의 혼" chapterid="5" quest_level="34" quest_mark_type="1" use_item_list="300023">
+      <journal index="1">
+         <contents_image>QN_Npc_Bishop.dds</contents_image>
+         <destination_pos>11,n39</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>39</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="28"><![CDATA[Something Needed]]></title>
+         <contents mid="29"><![CDATA[<html>You have retrieved the Black Core, so find out if there's anything else needed.<BR> <BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ Bishop Ignacio</FONT></html>]]></contents>
+         <destination mid="30"><![CDATA[Talk to Bishop Ignacio]]></destination>
+         <todo_msg mid="31"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_46.dds</contents_image>
+         <destination_pos>463,0,0</destination_pos>
+         <destination_mode>custom:461@3,462@3,463@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="32"><![CDATA[Collect the Sea Monster's Soul]]></title>
+         <contents mid="33"><![CDATA[<html>A ritual will be held to purify the remaining traces of the Black Dragon. An offering has to be made, so go to <FONT color=#a82424>Sunken Cargo Vessel</FONT> and collect the Sea Monster's Soul inside the <FONT color=#a82424>Crystal Bottle</FONT>.<BR>
+<BR><FONT color=#086171>Hermalte Port (Charter Ship)</FONT> <FONT color=#a82424>→ Sunken Cargo Vessel</FONT></html>]]></contents>
+         <destination mid="34"><![CDATA[Defeat the monster at Sunken Cargo Vessel]]></destination>
+         <todo_msg mid="35"><![CDATA[Collect the Sea Monster's Soul at Sunken Cargo Vessel.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Bishop.dds</contents_image>
+         <destination_pos>11,n39</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>39</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="36"><![CDATA[Collection Complete]]></title>
+         <contents mid="37"><![CDATA[<html>You have obtained the Sea Monster's Soul. Report to Bishop Ignacio.<BR> <BR><FONT color=#086171>Saint Haven Royal Castle</FONT> <FONT color=#a82424>→ Bishop Ignacio</FONT></html>]]></contents>
+         <destination mid="38"><![CDATA[Talk to Bishop Ignacio]]></destination>
+         <todo_msg mid="39"><![CDATA[Take the Crystal Bottle to Bishop Ignacio.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>424</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

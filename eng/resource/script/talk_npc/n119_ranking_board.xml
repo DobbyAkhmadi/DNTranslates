@@ -1,0 +1,33 @@
+   <talk>
+      <npcename>n119_ranking_board</npcename>
+      <npcid>119</npcid>
+      <startexe>4</startexe>
+      <comment>랭킹을 적용하기 시작하면 클릭시 실행문을 0으로</comment>
+      <npckname mid="1"><![CDATA[Leaderboard]]></npckname>
+      <talk_paragraph index="001" image="QW_DarkVillage.dds" itemindex="">
+         <talk_answer link_index="ranking" mid="5"><![CDATA[<html>Hatred Pirandello 1st Floor ~ Top Floor</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Leaderboard${action:Touch}<BR>
+You can see the rankings for <FONT color=#a82424>Gates of Darkness</FONT>.<BR>
+ <BR>
+※ <FONT color=#7e12d2>Please select the region.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="001_no" image="" itemindex="">
+         <talk_question mid="155"><![CDATA[<html>$Leaderboard$<BR>
+Ranking information for <FONT color=#a82424>Gates of Darkness</FONT> is currently being initialized.<BR><BR>※ <FONT color=#7e12d2>Ranking will be initialized every Saturday morning. You cannot check the ranking or enter the dungeon during this time.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_ranking" image="" itemindex="">
+         <talk_question mid="158"><![CDATA[<html>$Leaderboard$<BR>
+Currently there is no ranking being tabulated.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="3" false="1">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenMonsterBattleRankBoard( userObjID, 12702 );</exe>
+         <exe type="talk">001_no</exe>
+         <exe type="talk">no_ranking</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_env_CheckCloseGateByTime(12702) == 1</chk>
+      </conditions>
+      <exelink idx="ranking">2</exelink>
+   </talk>

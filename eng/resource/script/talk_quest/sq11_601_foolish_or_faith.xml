@@ -1,0 +1,283 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq11_601_foolish_or_faith</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>601</qid>
+      <designer>나은하</designer>
+      <qlevel>38</qlevel>
+      <qdesc>칼라엔은 돈히코테가 잃어버린 시간의 폐허에 나타났다면서 그곳에서 뭘하는지를 알아오라고 한다. 잃어버린 시간의 폐허 보스방에 가면 돈히코테가 있다. 위습 자이언트를 물리치고 말을 걸면, 돈히코테는 자신이 정령들의 여왕을 구하러 왔다가 공격을 당했다고 한다.
+그는 위습 자이언트를 정령들의 여왕이라고 믿고 있고, 그녀가 저주에 걸려서 이성을 잃었다고 단언하고 있다. 그는 새로운 계시를 받았다면서 로터스 마쉬로 떠나겠다고 한다.
+칼라엔은 돈히코테의 이야기를 비웃다가, 유저가 그를 옹호하면 위습들이 정령들의 변형체일지도 모른다는 이야기를 한다.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Foolishness and Creed]]></qkname>
+      <qnpc>
+         <npcid>110</npcid>
+         <npcename>n110_donhicote</npcename>
+         <npckname>자칭기사 돈히코테</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>111</npcid>
+         <npcename>n111_chanso</npcename>
+         <npckname>자칭종자 찬소</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>38</npcid>
+         <npcename>n038_royal_magician_kalaen</npcename>
+         <npckname>궁정 소서리스 칼라엔</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>The Queen of spirits must be here somewhere.<BR>I must save her.<BR><FONT color=#7e12d2>(You have to get the quest from Court Sorceress Kayleen)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n111_chanso-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$self-Acclaimed Squire Chanso$<BR>Don Xiqote, I have my eyes open wide too.<BR>We will be able to find the Queen of spirits.<BR><FONT color=#7e12d2>(You have to get the quest from Court Sorceress Kayleen)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-accepting-a" mid="9" select_type="0"><![CDATA[<html>He said he'll first search Ruins of Lost Time.</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Court Sorceress Kayleen$<BR>You know that monster, some knight or something. <BR>Where did he say he was going to find the Queen of spirits?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-accepting-a" image="QW_47.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-accepting-b" mid="11" select_type="0"><![CDATA[<html>I'm not sure. He didn't seem like he'd give up easily.</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Court Sorceress Kayleen${action:Talk}<BR>Hoho, <FONT color=#a82424>Ruins of Lost Time</FONT>?<BR>They're incorrigible.<BR>They'll get a good lesson and give up.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-accepting-c" mid="13" select_type="0"><![CDATA[<html>A bet?</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Court Sorceress Kayleen$<BR>We'll know the results if we continue to observe it.<BR>So? Do you want to bet if he'll give up?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-accepting-d" mid="15" select_type="0"><![CDATA[<html>(You must be really bored)</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Court Sorceress Kayleen$<BR>
+If I win, you run my errands for 3 months, and if you win, I'll give you this.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-accepting-acceptted!" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Foolishness and Creed$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-1" image="QW_47.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Court Sorceress Kayleen$<BR>I'm sure you know where <FONT color=#a82424>Ruins of Lost Time</FONT> is.<BR>Hurry up.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n111_chanso-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="23"><![CDATA[<html>$self-Acclaimed Squire Chanso$<BR>Oh my, Don Xiqote!!<BR>D-didn't you say that the Queen of spirits must be here?!!<BR><FONT color=#7e12d2>(Chanso seems to shocked to talk)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n110_donhicote-1-a" mid="26" select_type="0"><![CDATA[<html>Are you okay?</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>Huh... Th-this... It can't be?!<BR><FONT color=#7e12d2>(Don Xiqote seems very surprised)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n110_donhicote-1-b" mid="28" select_type="0"><![CDATA[<html>Queen of Spirits?</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>I'm not hur.<BR>B-but... Why did the spirits attack me, the knight who has received their queen's devine revelation....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n110_donhicote-1-c" mid="30" select_type="0"><![CDATA[<html>Don't tell me you think that fierce wisp is the queen?</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>That's right. The Goddess told me in my dream last night that the Queen of Spirits was held captive here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n110_donhicote-1-d" mid="33" select_type="0"><![CDATA[<html>Skirt?</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>Fierce? What a ludicrous statement about the noble ladies?!<BR>Can't you see?<BR>That elegant dress that only the Queen of the spirits can wear?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n110_donhicote-1-e" mid="35" select_type="0"><![CDATA[<html>(Don Xiqote continues to talk nonsense)</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>The dress that sprinkles sparkling fairy's powder when she softly takes her steps...For its purity I'm awed and feel like kissing the tip of the dress....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n110_donhicote-1-f" mid="37" select_type="0"><![CDATA[<html>If that wisp really is a spirit then it shouldn't attack you.</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>Oh, with my blunt words, I can't even describe how beautiful it is.<BR><FONT color=#7e12d2>(Don Xiqote seems to be thinking for sure that the wisp is the queen of spirits)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n110_donhicote-1-g" mid="40" select_type="0"><![CDATA[<html>Reason?</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR><FONT color=#7e12d2>(Don Xiqote ponders for a while and claps like he understood something)</FONT><BR>Oh, yes. I get it!<BR>I understand the reason now.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n110_donhicote-1-h" mid="42" select_type="0"><![CDATA[<html>(Don Xiqote closes his eyes like he's praying)</html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>Those spirits must have been cursed like those other spirits that I met last time! So the wise and kind Queen had lost her sanity!<BR>Hmm, please wait for a while.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-1-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n110_donhicote-2" mid="45" select_type="0"><![CDATA[<html>(Ah, he never gives up)</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>I got the new revelation from the Goddess! To break the curse of the Queen, we have to go to <FONT color=#a94407>Lotus Marsh</FONT>! The Goddess said that we'll find a way to turn the Queen back if we go there!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n110_donhicote-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="47"><![CDATA[<html>$self-Acclaimed Knight Don Xiqote$<BR>I will go to <FONT color=#a94407>Lotus Marsh</FONT>, guardian!<BR>Thank you for all your help.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n111_chanso-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="48"><![CDATA[<html>$self-Acclaimed Squire Chanso$<BR>Don Xiqote!<BR>Chanso will follow you to <FONT color=#a94407>Lotus Marsh</FONT>!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-a" mid="50" select_type="0"><![CDATA[<html>He seemed like he was attacked by water wisps.</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Oh, you're back.<BR>So what was that crazy knight-or-something doing?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-b" mid="52" select_type="0"><![CDATA[<html>He was trying to save the water wisp thinking that it was the Queen of Spirits.</html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Court Sorceress Kayleen$<BR>What? Hahaha!!<BR>Did he think that the water wisp was a dragon? To kill that thing and act like a hero?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-c" mid="54" select_type="0"><![CDATA[<html>No. He went to Lotus Marsh saying that he got a new revelation.</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Court Sorceress Kayleen${action:Talk}<BR><FONT color=#7e12d2>(Kayleen burst into laughter)</FONT><BR>Hohoho, thought that the wisp was the queen?<BR>Well, since he learnt a lesson, he wouldn't do this anymore.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-d" mid="56" select_type="0"><![CDATA[<html>He seems like he'll try to break the curse on the queen.</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Court Sorceress Kayleen$<BR>What? He still hasn't learnt his lesson?<BR>And what revelation?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-e" mid="59" select_type="0"><![CDATA[<html>He may be crazy, but I think well of his attitude of devoting himself towards his goal.</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Court Sorceress Kayleen$<BR>He's so persistent. <BR>Isn't it time to give up?<BR>Why is he still not giving up?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-f" mid="61" select_type="0"><![CDATA[<html>(Kayleen seems to be thinking of something)</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Court Sorceress Kayleen${action:Talk}<BR>The devotion of a crazy man will go nowhere.<BR>Did you become sick in the head too?<BR>
+Hmm, but spirits and wisps....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-g" mid="63" select_type="0"><![CDATA[<html>What?</html>]]></talk_answer>
+      <talk_question mid="62"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Well, <FONT color=#a82424>The difference between madness and passion is paper-thin</FONT>.<BR>Maybe...that crazy knight is right.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-h" mid="65" select_type="0"><![CDATA[<html>Then are wisps really spirits?</html>]]></talk_answer>
+      <talk_question mid="64"><![CDATA[<html>$Court Sorceress Kayleen$<BR>The period when wisps started to appear coincides with the period the spirits started to disappear. Nothing gets suddenly created or disappear.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-i" mid="67" select_type="0"><![CDATA[<html>Don't tell me you used the wisps as ingredients for your cosmetics?</html>]]></talk_answer>
+      <talk_question mid="66"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Well, it's always a possibility.<BR><FONT color=#7e12d2>(Kayleen talks to herself)</FONT><BR>Was that the reason why the wisps were so moisturizing?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-j" mid="69" select_type="0"><![CDATA[<html>But you said that the wisps may be spirits. That's a little....</html>]]></talk_answer>
+      <talk_question mid="68"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Yeah, what about that?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-k" mid="71" select_type="0"><![CDATA[<html>W-well...that's...</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Court Sorceress Kayleen$<BR>Quiet! Why are you so stingy on such things.<BR>Let's say the wisps really are spirits.<BR>We don't even know how they can turn back into spirit.?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-2-l" mid="73" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="72"><![CDATA[<html>$Court Sorceress Kayleen$<BR>So stop whining and take this and go.<BR>
+Chey, I lost the bet in the end.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-2-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n038_royal_magician_kalaen-3" mid="75" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="74"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n038_royal_magician_kalaen-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="76"><![CDATA[<html>$Court Sorceress Kayleen$<BR>
+You'll get old soon if you care about such trivial stuff.<BR>You need to be like me to maintain your beauty.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">6011,6011,6012,6013,6014,6014,6016,6017,,</exe>
+         <exe type="setquest">601</exe>
+         <exe type="setjornal">1</exe>
+         <exe type="talk" npc="n038_royal_magician_kalaen">1</exe>
+         <exe type="setstep">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setjornal">2</exe>
+         <exe type="setstep">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">6011,6011,6012,6013,6014,6014,6016,6017,,</exe>
+         <exe type="complete" true="">601</exe>
+         <exe type="setstep">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n038_royal_magician_kalaen" sub="d">0</exelink>
+   <exelink qstep="accepting" npc="n038_royal_magician_kalaen" sub="acceptted!">1,2,3,4</exelink>
+   <exelink qstep="1" npc="n110_donhicote" sub="b" />
+   <exelink qstep="1" npc="n110_donhicote" sub="c" />
+   <exelink qstep="1" npc="n110_donhicote" sub="d" />
+   <exelink qstep="1" npc="n110_donhicote" sub="e" />
+   <exelink qstep="1" npc="n110_donhicote" sub="f" />
+   <exelink qstep="1" npc="n110_donhicote" sub="g" />
+   <exelink qstep="1" npc="n110_donhicote" sub="h" />
+   <exelink qstep="1" npc="n110_donhicote" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="b" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="c" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="d" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="e" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="f" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="g" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="h" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="i" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="j" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="k" />
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="l">0</exelink>
+   <exelink qstep="2" npc="n038_royal_magician_kalaen" sub="3">1,2</exelink>
+   <journal_data recompense="1:6011,2:6012,3:6013,4:6014,5:6014,6:6016,7:6017" quest_title="어리석음과 신념" chapterid="" quest_level="38" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_47.dds</contents_image>
+         <destination_pos>473,n110</destination_pos>
+         <destination_mode>custom:471@1,472@1,473@1,474@0</destination_mode>
+         <statemark_npcid>110</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="78"><![CDATA[Talk to self-Acclaimed Knight Don Xiqote]]></title>
+         <contents mid="79"><![CDATA[<html>Go to <FONT color=#a82424>Ruins of Lost Time</FONT> and look for <FONT color=#a82424>Don Xiqote</FONT>.<BR>
+ <BR>
+<FONT color=#086171>Hermalte Port(River Ruins)</FONT> <FONT color=#a82424>→ Ruins of Lost Time</FONT></html>]]></contents>
+         <destination mid="80"><![CDATA[Talk to self-Acclaimed Knight Don Xiqote]]></destination>
+         <todo_msg mid="81"><![CDATA[New quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Royal_Magician_Kalaen.dds</contents_image>
+         <destination_pos>21,n38</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>38</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="83"><![CDATA[Talk to Court Sorceress Kayleen]]></title>
+         <contents mid="84"><![CDATA[<html>self-Acclaimed Knight Don Xiqote seems to be leaving for Lotus Marsh. Tell this to <FONT color=#a82424>Saint Haven</FONT>'s <FONT color=#a82424>Court Sorceress Kayleen</FONT>.<BR>
+ <BR>
+<FONT color=#086171>Saint Haven Royal Castle</FONT><FONT color=#a82424> → Court Sorceress Kayleen</FONT></html>]]></contents>
+         <destination mid="85"><![CDATA[Talk to Court Sorceress Kayleen]]></destination>
+         <todo_msg mid="86"><![CDATA[Go back to Court Sorceress Kayleen at Saint Haven.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>38:-1</user_level>
+      <user_class />
+      <prev_quest>600</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

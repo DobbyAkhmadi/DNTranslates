@@ -1,0 +1,27 @@
+   <talk>
+      <npcename>n2753_scrapmetal</npcename>
+      <npcid>2753</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Weapon Confiscating Guard]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#2b2723>$Weapon Confiscating Guard$<BR>Behave yourself, fools!</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_3729" mid="15"><![CDATA[<html>Oh, you knew about that?</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Weapon Confiscating Guard$<BR>You're here for some scrap iron, right?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="2" false="1">1</exe>
+         <exe type="conexe" true="3,5" false="2">0</exe>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 3729, 1);</exe>
+         <exe type="enterquest">sqc24_3729_scrap_metal_4</exe>
+         <exe type="talk">quest</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">3721</chk>
+         <chk type="hascomq">3729</chk>
+      </conditions>
+      <exelink idx="q_3729">4</exelink>
+   </talk>

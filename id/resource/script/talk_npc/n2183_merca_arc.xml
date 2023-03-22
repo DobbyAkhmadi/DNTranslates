@@ -1,0 +1,40 @@
+   <talk>
+      <npcename>n2183_merca_arc</npcename>
+      <npcid>2183</npcid>
+      <startexe>7</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Arc]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="6"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Arc$<BR>Jadi ini yah tempat persembunyian Red Dragon. Red Dragon, maafkan aku sudah mengganggumu.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="8" link_target="mqc20_9771_tighten_guard.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Time To Be Wary</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="9" link_target="mqc20_9772_knife_under_smile.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Knife Behind The Smile</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="mqc20_9778_wandering_heart.xml"><![CDATA[<html>{quest_level} <FONT color=#a94407>Feeling Lost</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_quest" mid="22"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Arc$<BR>
+Akan memakan waktu kalau harus mencari satu-persatu.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="24"><![CDATA[<html>$Arc$<BR>Aku merasa ini akan menjadi titik dimana banyak hal akan berubah.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="4" false="2">0</exe>
+         <exe type="conexe" true="5" false="3">1</exe>
+         <exe type="conexe" true="6" false="7">2</exe>
+         <exe type="enterquest">mqc20_9771_tighten_guard</exe>
+         <exe type="enterquest">mqc20_9772_knife_under_smile</exe>
+         <exe type="enterquest">mqc20_9778_wandering_heart</exe>
+         <exe type="conexe" true="8" false="0">3</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9771</chk>
+         <chk type="hasquest">9772</chk>
+         <chk type="hasquest">9778</chk>
+         <chk type="hascomq">9778</chk>
+      </conditions>
+      <exelink idx="back_quest">0</exelink>
+   </talk>

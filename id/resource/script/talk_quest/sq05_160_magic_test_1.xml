@@ -1,0 +1,508 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq05_160_magic_test_1</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>160</qid>
+      <designer>손원호</designer>
+      <qlevel>8</qlevel>
+      <qdesc>타라의 특훈 1단계! 요즘 잘나가는 소서리스들의 필수품인 매직 마스터 시험을 보라고 하는데… 실기 시험을 보기 전에 일단 필기 시험에 도전해보자. 퀴즈 형식의 퀘스트. mq119완료후 수행 가능.
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>161</nextqid>
+      <nextqname>sq05_161_magic_test_2</nextqname>
+      <nextqnpc>n012_sorceress_master_cynthia</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Master License - Written Exam]]></qkname>
+      <qnpc>
+         <npcid>12</npcid>
+         <npcename>n012_sorceress_master_cynthia</npcename>
+         <npckname>상급 소서리스 신시아 (마나리지 소서리 스킬)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>15</npcid>
+         <npcename>n015_sorceress_tara</npcename>
+         <npckname>소서리스 타라   (마나리지)</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-noquest" image="QN_SoceressTara.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="217"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Kamu ingin mengikuti tes Magic Master ?<BR>Bicaralah pada <FONT color=#a82424>Sorceress Tara</FONT> jika kamu yakin akan lulus.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-a" mid="165" select_type="0"><![CDATA[<html>Tadi hanya beruntung.</html>]]></talk_answer>
+      <talk_question mid="164"><![CDATA[<html>$Sorceress Tara${action:Talk}<BR>Selamat untukmu!<BR>Aku yakin kamu telah melewati masa percobaan. Ya kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-b" mid="167" select_type="0"><![CDATA[<html>Mengapa tanggung jawabku begitu banyak...</html>]]></talk_answer>
+      <talk_question mid="166"><![CDATA[<html>$Sorceress Tara$<BR>Jangan cemberut begitu. Master Sorceress Cynthia telah mengakui <FONT color=#a82424>official Sorceress statusmu. Harusnya kamu senang. </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-c" mid="169" select_type="0"><![CDATA[<html>Magic Master License?</html>]]></talk_answer>
+      <talk_question mid="168"><![CDATA[<html>$Sorceress Tara$<BR>Kamu harus belajar giat karena Master Sorceress Cynthia telah menerima kamu sebagai muridnya.<BR>Aku yakin kamu telah memiliki <FONT color=#a82424>Magic Master License</FONT>. Bisakah kita mulai belajar magic yang lebih tinggi? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-d" mid="171" select_type="0"><![CDATA[<html>Aku tak tahu akan hal itu</html>]]></talk_answer>
+      <talk_question mid="170"><![CDATA[<html>$Sorceress Tara$<BR>Apa?! Harusnya kamu sudah punya <FONT color=#a82424>Magic Master License</FONT> saat ini. dan, setidaknya 2 sampai 3 buah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-e" mid="173" select_type="0"><![CDATA[<html>Aku menyesalinya</html>]]></talk_answer>
+      <talk_question mid="172"><![CDATA[<html>$Sorceress Tara$<BR>Kamu pasti menghabiskan waktu hidup untuk yang tidak berguna...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting-e" image="QN_SoceressCynthia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-f" mid="175" select_type="0"><![CDATA[<html>Oh! Aku ingat!</html>]]></talk_answer>
+      <talk_question mid="174"><![CDATA[<html>$Sorceress Tara$<BR>Kamu harus lebih serius. Lady <FONT color=#a82424>Cynthia</FONT> memintaku untuk meningkatkan skillmu dalam 1 minggu jika tidak dia tidak mau menanggung. Kamu pernah melihatnya tersenyum? Sangat menakutkan...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-g" mid="177" select_type="0"><![CDATA[<html>Bagaimana cara mendapatkan licensenya?</html>]]></talk_answer>
+      <talk_question mid="176"><![CDATA[<html>$Sorceress Tara$<BR>Kamu harus membuktikan telah menguasai skill dasar dengan mendapatkan Magic Master License.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-h" mid="179" select_type="0"><![CDATA[<html>Serius, ini sangat membosankan.</html>]]></talk_answer>
+      <talk_question mid="178"><![CDATA[<html>$Sorceress Tara$<BR>Tes terdiri dari tertulis dan praktek. Pertama, mari kita pelajari <FONT color=#a82424>sejarah dari Trinity</FONT> untuk ujian tertulismu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-accepting-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-accepting-acceptted" mid="183" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="182"><![CDATA[<html>$Master License - Written Exam$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-a" mid="6" select_type="0"><![CDATA[<html>Yap.</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Sorceress Tara$<BR>Tolong perhatikan. Kamu mau aku bersikap seperti Master Sorceress Cynthia ? Aku tahu kamu masih belum tahu apa-apa tapi aku berusaha mengajarkanmu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-b" mid="25" select_type="0"><![CDATA[<html>The Sage and the Black Dragon</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-1-f" mid="26" select_type="0"><![CDATA[<html>Origin of the Sorceress</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-1-j" mid="27" select_type="0"><![CDATA[<html>Dragon Raid</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-1-m" mid="28" select_type="0"><![CDATA[<html>Lady Karacule</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-1-p" mid="29" select_type="0"><![CDATA[<html>Aku tahu sekarang!</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Sorceress Tara$<BR>Pilihlah topic dan aku akan mencoba merangkumnya! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-c" mid="31" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="30"><![CDATA[<html>$Sorceress Tara$<BR>Di saat masa kesuraman, ada seorang <FONT color=#a82424>Sage</FONT> yang hidup untuk mendapatkan pesan dari Goddess. Bimbingan dan pengetahuannya memperkuat perkumpulan dan kemanusiaan.  </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-d" mid="33" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Sorceress Tara$<BR>Sage orang bijak, disukai banyak orang tapi tidak semua. Sang <FONT color=#a82424>Black Dragon</FONT> ingin membunuhnya karena ikut campur dan perang terjadi di antara mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-e" mid="35" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Sorceress Tara$<BR>Sang Black Dragon mundur dan saat itu mereka berdua sekarat. Sang Sage meninggalkan <FONT color=#a82424>Vision Orb</FONT> dan <FONT color=#a82424>Sage's Staff</FONT> di saat dia gugur. Keduanya di simpan agar generasi mengetahui perjuangannya.. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-a" mid="37" select_type="0"><![CDATA[<html>Ceritakan aku lagi.</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Sorceress Tara$<BR>Sementara ini, kamu membahayakan hidupmu demi melindungi artifacts legendaris. <BR>Hmm..suara apa itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-g" mid="39" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Sorceress Tara$<BR><FONT color=#a82424>Cleric Jake</FONT> dan <FONT color=#a82424>Lady Marian</FONT> adalah para murid Sage. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-h" mid="41" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Sorceress Tara$<BR>Lady Marian mempelajari sihir baru dengan ilmu dari Sage. Lady Marian membuat <FONT color=#a82424>Ancient Magic</FONT> saat Goddess menciptakan dunia dan sebelum mana ridge ada.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-i" mid="43" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Sorceress Tara$<BR>Lady Marian telah memperingatkan Jake saat berlatih <FONT color=#a82424>Divine Magic</FONT> tapi Jake tidak mendengarkan. Inilah sebab Sorceress dan clerics arahnya berbeda. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-a" mid="45" select_type="0"><![CDATA[<html>Itu menyedihkan. Ayo lanjutkan!</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Sorceress Tara$<BR>Yang aku tahu sekarang, magic yang di gunakan Sorceress berasal dari Ancient Magic yang di ciptakan Lady Marian . <FONT color=#a82424>Hall of Marian</FONT> di Blizzard Plain di buat dengan namanya. Tapi sayang, banyak monster tinggal di area itu sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-k" mid="47" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Sorceress Tara$<BR>Dengan ketiadaan Sage, The <FONT color=#a82424>Black Dragon</FONT> mulai pulih dari lukanya dan akan membawa kehancuran ke seluruh benua. Banyak yang mati. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-l" mid="49" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="48"><![CDATA[<html>$Sorceress Tara$<BR>Seluruh pahlawan di dunia berkumpul dan membentuk Dragon Raid untuk mengalahkan Black Dragon. Lady <FONT color=#a82424>Karacule</FONT>, adalah salah satu anggota raid.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-a" mid="51" select_type="0"><![CDATA[<html>Aku ingin mendengar yang lain. Lanjut!</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Sorceress Tara$<BR>Lady Karacule membuat Black Dragon tumbang setelah pertempuran hebat. Dia terluka parah di pertarungan lalu pensiun dari Trinity dan sekarang tinggal di <FONT color=#a82424>Lotus Marsh</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-n" mid="53" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="52"><![CDATA[<html>$Sorceress Tara$<BR>Lady Marian telah di lewati <FONT color=#a82424>Lady Karacule</FONT>. Keluarganya terkenal akan sihir, namun setelah ikut Dragon Raid, dia menjadi seorang legenda. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-n" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-o" mid="55" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Sorceress Tara$<BR>Keluarga Lady Karacule memiliki kekuatan yang kuat dan belum ada yang dapat menandinginya sampai sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-a" mid="57" select_type="0"><![CDATA[<html>Tolong lanjutkan ceritanya.</html>]]></talk_answer>
+      <talk_question mid="56"><![CDATA[<html>$Sorceress Tara$<BR>Lady Karacule masih Sorceress terkuat. Mungkin kita harus bertemu dengannya untuk latihan kamu. Itu sangat penting. Tolong jangan main-main. Kamu akan membutuhkannya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-p" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-q" mid="59" select_type="0"><![CDATA[<html>Aku sudah siap!</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-1-a" mid="60" select_type="0"><![CDATA[<html>Aku mau mendengarkannya lagi</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Sorceress Tara$<BR>Kamu yakin? Kamu bilang kamu bisa menguasai semuanya saat sedang tidur. Hah hah!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-q" image="QN_SoceressCynthia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-1-r" mid="62" select_type="0"><![CDATA[<html>Percayalah padaku!</html>]]></talk_answer>
+      <talk_question mid="61"><![CDATA[<html>$Sorceress Tara$<BR>Bagus! Bicaralah pada Lady <FONT color=#a82424>Cynthia</FONT> untuk ujian tertulis.<BR>Kamu harus mengulangnya jika salah menjawab.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-1-r" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="63"><![CDATA[<html>$Sorceress Tara$<BR>Perasaanku tidak enak.<BR>Kembalilah ke sini jika ingin mendengar cerita lagi!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="219"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Kamu tertarik dengan tes Magic Master ?<BR>Bicaralah pada <FONT color=#a82424>Sorceress Tara</FONT> jika kamu yakin akan lulus.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-a" mid="66" select_type="0"><![CDATA[<html>Plis...lagi</html>]]></talk_answer>
+      <talk_question mid="65"><![CDATA[<html>$Sorceress Tara${action:Talk}<BR> Kamu ingin aku mengulangnya lagi? Hah hah! Tebakanku benar!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-b" mid="99" select_type="0"><![CDATA[<html>The Sage and the Black Dragon</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-2-f" mid="100" select_type="0"><![CDATA[<html>Origin of the Sorceress</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-2-j" mid="101" select_type="0"><![CDATA[<html>Dragon Raid</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-2-m" mid="102" select_type="0"><![CDATA[<html>Lady Karacule</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-2-p" mid="103" select_type="0"><![CDATA[<html>Baik. Aku tahu!</html>]]></talk_answer>
+      <talk_question mid="98"><![CDATA[<html>$Sorceress Tara$<BR>Pilih satu topik dan akan kubuatkan rangkuman ceritanya! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-c" mid="72" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="71"><![CDATA[<html>$Sorceress Tara$<BR>Di saat masa yang kelam, ada seorang <FONT color=#a82424>Sage</FONT> yang hidup untuk menerima perintah Goddess. Bimbingan dan pengetahuannya membuat perkumpulan kuat dan kemanusiaan.  </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-d" mid="74" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="73"><![CDATA[<html>$Sorceress Tara$<BR>Sage adalah orang bijak, di sukai banyak orang tapi tidak semua. Sang <FONT color=#a82424>Black Dragon</FONT> ingin membunuhnya karena ikut campur dan perang terjadi di antara mereka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-e" mid="76" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Sorceress Tara$<BR>Sang Black Dragon mundur namun keduanya sekarat. Dan Sage meninggalkan <FONT color=#a82424>Vision Orb</FONT> dan juga <FONT color=#a82424>Sage's Staff</FONT> saat dia gugur. Keduanya di simpan untuk mengenang perjuangan Sage.. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-a" mid="78" select_type="0"><![CDATA[<html>Aku mau lagi.</html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Sorceress Tara$<BR>Sementara ini, kamu telah mempertaruhkan hidupmu untuk melindungi artifacts legendaris. <BR>Hmm..suara apa itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-g" mid="80" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="79"><![CDATA[<html>$Sorceress Tara$<BR><FONT color=#a82424>Cleric Jake</FONT> dan <FONT color=#a82424>Lady Marian</FONT> adalah para murid Sage. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-h" mid="82" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="81"><![CDATA[<html>$Sorceress Tara$<BR>Lady Marian mempelajari sihir baru dari ilmu Sage. Lady Marian menciptakan <FONT color=#a82424>Ancient Magic</FONT> saat Goddess menciptakan dunia dan sebelum mana ridge ada.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-i" mid="84" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="83"><![CDATA[<html>$Sorceress Tara$<BR>Lady Marian telah memperingatkan Jake saat berlatih <FONT color=#a82424>Divine Magic</FONT> namun Jake tidak mendengarkan. Inilah mengapa Sorceress dan clerics memiliki alur yang berbeda. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-a" mid="86" select_type="0"><![CDATA[<html>Itu menyedihkan. Ayo lanjutkan!</html>]]></talk_answer>
+      <talk_question mid="85"><![CDATA[<html>$Sorceress Tara$<BR>Yang aku tahu sekarang, magic yang di gunakan Sorceress berasal dari Ancient Magic yang Lady Marian ciptakan. <FONT color=#a82424>Hall of Marian</FONT> di Blizzard Plain di buat dari namanya. Sayang sekali, banyak monster di area itu sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-k" mid="88" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="87"><![CDATA[<html>$Sorceress Tara$<BR>Dengan ketiadaan Sage, Sang <FONT color=#a82424>Black Dragon</FONT> pulih dari lukanya dan akan membawa kehancuran di benua. Banyak yang mati. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-l" mid="90" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="89"><![CDATA[<html>$Sorceress Tara$<BR>Kami mengumpulkan pahlawan dari seluruh dunia untuk membentuk Dragon Raid demi mengalahkan Black Dragon. Legenda yang hidup, Lady <FONT color=#a82424>Karacule</FONT>, adalah kunci dari Dragon Raid.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-a" mid="92" select_type="0"><![CDATA[<html>Mengenaskan. Lanjut!</html>]]></talk_answer>
+      <talk_question mid="91"><![CDATA[<html>$Sorceress Tara$<BR>Lady Kassandra mengalahkannya setelah pertarungan panjang. Dia pensiun dari Trinity setelah dia terluka dan pindah ke <FONT color=#a82424>Lotus Marsh</FONT>. Itu sangat di sayangkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-n" mid="94" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="93"><![CDATA[<html>$Sorceress Tara$<BR>Jika asal usul Trinity adalah Lady Marian, dan puncaknya adalah <FONT color=#a82424>Lady Karacule</FONT>. Dia keturunan keluarga ahli magic, tapi dia menjadi legenda setelah bergabung dengan Dragon Raid. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-n" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-o" mid="96" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="95"><![CDATA[<html>$Sorceress Tara$<BR>Lady Kassandra yang terkuat dari semua Sorceress dan semua keluarganya punya kekuatan hebat juga.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-a" mid="105" select_type="0"><![CDATA[<html>Bisa kita lanjutkan lagi?</html>]]></talk_answer>
+      <talk_question mid="104"><![CDATA[<html>$Sorceress Tara$<BR>Baik, untuk menemui Master dari semua Sorceress Lady Kassandra, perjalanannya adalah bagian penting dari latihanmu, jika kamu tahu itu lebih awal sebaiknya kamu tidak menghamburkan uangmu</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-p" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-q" mid="107" select_type="0"><![CDATA[<html>Aku sudah siap!</html>]]></talk_answer>
+      <talk_answer link_index="n015_sorceress_tara-2-a" mid="108" select_type="0"><![CDATA[<html>Sekali lagi boleh kan?</html>]]></talk_answer>
+      <talk_question mid="106"><![CDATA[<html>$Sorceress Tara$<BR>Apa kamu yakin sudah mengerti semua, kamu hanya tidur daritadi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-q" image="QN_SoceressCynthia.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n015_sorceress_tara-2-r" mid="110" select_type="0"><![CDATA[<html>Percayalah padaku!</html>]]></talk_answer>
+      <talk_question mid="109"><![CDATA[<html>$Sorceress Tara$<BR>Pergilah ke Lady <FONT color=#a82424>Cynthia</FONT> dan ambil ujian tertulis.<BR>Berhati-hatilah! Kamu harus mengulang jika ada satu jawaban yang salah</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n015_sorceress_tara-2-r" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="111"><![CDATA[<html>$Sorceress Tara$<BR>Perasaanku tidak enak nih.<BR>Datanglah kembali jika mau dengar cerita lagi!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-a" mid="116" select_type="0"><![CDATA[<html>Aku ingin mengikuti ujian tertulis Magic Master!</html>]]></talk_answer>
+      <talk_question mid="112"><![CDATA[<html>$Master Sorceress Cynthia${action:Talk}<BR>Apa yang kamu lakukan sekarang? Bukankah sudah kubilang untuk belajar?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-b" mid="118" select_type="0"><![CDATA[<html>Aku sudah belajar!</html>]]></talk_answer>
+      <talk_question mid="117"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Ah.. Lucu sekali, muridku yang nakal ini mau mengikuti ujian?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-c" mid="120" select_type="0"><![CDATA[<html>Tentu saja.</html>]]></talk_answer>
+      <talk_question mid="119"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Kamu ingin mempermalukan diri sendiri seperti ini? Yakin?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-d" mid="122" select_type="0"><![CDATA[<html>Ya, ya sudahlah!</html>]]></talk_answer>
+      <talk_question mid="121"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Baik, karena kamu yang minta. Ok. Tapi ingat satu jawaban yang salah kamu mengulang dari awal. Sorceress Tara tidak bisa mengajarimu. <FONT color=#a82424> Jadi, yakin mau mengikuti ujian sekarang?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-e" mid="124" select_type="0"><![CDATA[<html>(Kamu mendengarkan dengan seksama.)</html>]]></talk_answer>
+      <talk_question mid="123"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Kalau begitu kita mulai <FONT color=#a82424>Magic Master written exam</FONT>.<BR>Dengarkan pertanyaanku baik-baik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="126" select_type="0"><![CDATA[<html>  Divine Magic</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-f" mid="134" select_type="0"><![CDATA[<html>  Ancient Magic</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="135" select_type="0"><![CDATA[<html>  Dark Magic</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="136" select_type="0"><![CDATA[<html>  Magic Missile</html>]]></talk_answer>
+      <talk_question mid="125"><![CDATA[<html>$Magic Master Written Exam Sheet$<BR><FONT color=#382000>Magic tipe apa yang menjadi dasar magic kita?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-g" mid="206" select_type="0"><![CDATA[<html>Tidak masalah!</html>]]></talk_answer>
+      <talk_question mid="205"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Hmm.. Tebakan yang bagus. Ayo kita lihat sampai mana keberuntungan kamu akan bertahan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-g" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="128" select_type="0"><![CDATA[<html>  Green Dragon</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="138" select_type="0"><![CDATA[<html>  Gold Dragon</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-h" mid="139" select_type="0"><![CDATA[<html>  Black Dragon</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="140" select_type="0"><![CDATA[<html>  Invisible Dragon</html>]]></talk_answer>
+      <talk_question mid="127"><![CDATA[<html>$Magic Master Written Exam Sheet$<BR><FONT color=#382000>Dragon apa yang bertarung dengan Sage pada jaman dahulu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-i" mid="208" select_type="0"><![CDATA[<html>Benar, Pertanyaan selanjutnya!</html>]]></talk_answer>
+      <talk_question mid="207"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Maksudku, seberapa kuat dan terkenal Black Dragon dalam sejarah, kamu sangat bodoh jika memilih yang lain. Setidaknya kamu masih punya akal.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-i" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="130" select_type="0"><![CDATA[<html>Mario</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-j" mid="141" select_type="0"><![CDATA[<html>Marian</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="142" select_type="0"><![CDATA[<html>Maria</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="143" select_type="0"><![CDATA[<html>Marianne</html>]]></talk_answer>
+      <talk_question mid="129"><![CDATA[<html>$Magic Master Written Exam Sheet$<BR><FONT color=#382000>Pendiri dari Astral Trinity juga murid dari sang Sage. Siapakah itu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-j" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-k" mid="210" select_type="0"><![CDATA[<html>Aku curang? Tidak! Tunjukkan pertanyaan berikutnya!</html>]]></talk_answer>
+      <talk_question mid="209"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Aku terkejut kamu ingat nama Lady Marian.<BR>Kamu tidak curang, bukan? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-k" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-l" mid="132" select_type="0"><![CDATA[<html>Karacule</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="144" select_type="0"><![CDATA[<html>Barnac</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="145" select_type="0"><![CDATA[<html>Gerraint</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="146" select_type="0"><![CDATA[<html>Nerwin</html>]]></talk_answer>
+      <talk_question mid="131"><![CDATA[<html>$Magic Master Written Exam Sheet$<BR><FONT color=#382000>Yang manakah Sorceress pahlawan dalam Dragon Raid?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-m" mid="212" select_type="0"><![CDATA[<html>Tolong pertanyaan berikutnya!</html>]]></talk_answer>
+      <talk_question mid="211"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Kamu tidak boleh lupa Lady Karacule jika ingin menjadi Sorceress sejati. Dia adalah Sorceress termasyur.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-m" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="154" select_type="0"><![CDATA[<html>  Mana Ridge</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="155" select_type="0"><![CDATA[<html>  Calderock Village</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="156" select_type="0"><![CDATA[<html>  Saint's Haven</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-n" mid="157" select_type="0"><![CDATA[<html>  Lotus Marsh</html>]]></talk_answer>
+      <talk_question mid="147"><![CDATA[<html>$Magic Master Written Exam Sheet$<BR><FONT color=#382000>Tempat manakah yang menjadi tempat Lady Karacule istirahat ketika pensiun?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-n" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-o" mid="214" select_type="0"><![CDATA[<html>Oh! (Melihat pertanyaan terakhir)</html>]]></talk_answer>
+      <talk_question mid="213"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Ya, Lady Karacule sekarang ada di swamp of Lotus Marsh. Tempat yang belum pernah kamu kunjungi, tapi suatu hari kamu akan ke sana. Ok, karena kamu telah menyelesaikan pertanyaan terakhir!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-o" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="158" select_type="0"><![CDATA[<html>  Karacule</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="159" select_type="0"><![CDATA[<html>  Marian</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-r" mid="160" select_type="0"><![CDATA[<html>  Sorceress Cynthia yang Cantik</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-p" mid="161" select_type="0"><![CDATA[<html>  Sorceress Tara</html>]]></talk_answer>
+      <talk_question mid="148"><![CDATA[<html>$Magic Master Written Exam Sheet$<BR><FONT color=#382000>Siapa Sorceress tercantik dari semuanya?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-p" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-d" mid="162" select_type="0"><![CDATA[<html>Ambil ujian tertulis lagi.</html>]]></talk_answer>
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-q" mid="163" select_type="0"><![CDATA[<html>Pergi ke Sorceress Tara dan pelajari lagi.</html>]]></talk_answer>
+      <talk_question mid="149"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Apa?! Maksudmu kamu tidak tahu ini? Pergilah ke <FONT color=#a82424>Sorceress Tara</FONT> dan pelajari hingga terbawa mimpi!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-q" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="150"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Aku tahu! Muridku memang keras kepala. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-r" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-s" mid="184" select_type="0"><![CDATA[<html>Hmm, itu mudah.</html>]]></talk_answer>
+      <talk_question mid="151"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Ya Tuhan!<BR>Kamu lulus ujian!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-s" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-t" mid="188" select_type="0"><![CDATA[<html>Ujian praktek?</html>]]></talk_answer>
+      <talk_question mid="187"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Ermm, lumayan juga ujian tertulismu...Sekarang, kamu harus melewati <FONT color=#a82424>ujian praktek</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-t" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-u" mid="200" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="199"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Itu adalah tes dasar untuk mengetahui magicmu dalam berbagai situasi. Ok, ini dia!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-u" image="QW_10.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-v" mid="202" select_type="0"><![CDATA[<html>Tentu!</html>]]></talk_answer>
+      <talk_question mid="201"><![CDATA[<html>$Master Sorceress Cynthia$<BR>Selesaikan <FONT color=#a82424>Frost Wind Forest.</FONT><BR>Hmm... Mungkin menurutmu cukup simpel.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n012_sorceress_master_cynthia-2-v" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n012_sorceress_master_cynthia-2-!next" mid="216" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="215"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">1600,,,,,,,,,</exe>
+         <exe type="setquest">160</exe>
+         <exe type="talk" npc="n015_sorceress_tara">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">1600,,,,,,,,,</exe>
+         <exe type="complete" true="">160</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n015_sorceress_tara" sub="h">0</exelink>
+   <exelink qstep="accepting" npc="n015_sorceress_tara" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="b" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="f" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="j" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="m" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="p" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="c" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="d" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="e" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="g" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="h" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="i" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="k" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="l" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="n" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="o" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="q" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="1" npc="n015_sorceress_tara" sub="r">0,1</exelink>
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="b" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="f" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="j" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="m" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="p" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="c" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="d" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="e" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="g" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="h" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="i" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="k" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="l" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="n" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="o" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="q" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="a" />
+   <exelink qstep="2" npc="n015_sorceress_tara" sub="r" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="b" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="c" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="d" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="e" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="f" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="g" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="h" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="i" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="j" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="k" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="l" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="m" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="n" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="o" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="r" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="p" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="d" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="q" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="s" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="t" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="u" />
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="v">0</exelink>
+   <exelink qstep="2" npc="n012_sorceress_master_cynthia" sub="!next">1</exelink>
+   <journal_data recompense="0:1600" quest_title="매직 마스터 자격증을 따자! (필기)" chapterid="" quest_level="8" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_SoceressTara.dds</contents_image>
+         <destination_pos>5,n15</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>15</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="190"><![CDATA[Bicara pada Sorceress Tara]]></title>
+         <contents mid="191"><![CDATA[<html>Kamu telah meminta latihan spesial dari Sorceress Tara,pergi kepadanya dan mulailah!<BR><BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Sorceress Tara</FONT></html>]]></contents>
+         <destination mid="192"><![CDATA[Bicara pada Sorceress Tara]]></destination>
+         <todo_msg mid="193"><![CDATA[Bicara pada Sorceress Tara untuk latihan spesial.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_SoceressCynthia.dds</contents_image>
+         <destination_pos>5,n12</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>12</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="195"><![CDATA[Bicara pada Cynthia]]></title>
+         <contents mid="196"><![CDATA[<html>Pergi kepada Master Sorceress Cynthia untuk mengambil ujian tertulis. Jika kamu lupa sesuatu, kembali ke Sorceress Tara dan pelajari lagi.<BR> <BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Master Sorceress Cynthia</FONT></html>]]></contents>
+         <destination mid="197"><![CDATA[Bicara pada Cynthia]]></destination>
+         <todo_msg mid="198"><![CDATA[Kunjungi Cynthia untuk mengikuti ujian.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>6:-1</user_level>
+      <user_class>3</user_class>
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

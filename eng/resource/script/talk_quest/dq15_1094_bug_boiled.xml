@@ -1,0 +1,141 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>dq15_1094_bug_boiled</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>1094</qid>
+      <designer>김인정</designer>
+      <qlevel>56</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Daily] Mutant's Habitat]]></qkname>
+      <qnpc>
+         <npcid>87</npcid>
+         <npcename>n087_beggar</npcename>
+         <npckname>걸인 로피</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-accepting-a" mid="6" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Loffy the Beggar$<BR>Keke. Aren't you interested in teaching the bad monsters a lesson?<BR>
+Though nothing will change even if you work hard.... Kuehehehe!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-accepting-b" mid="71" select_type="0"><![CDATA[<html>(Accept request)</html>]]></talk_answer>
+      <talk_question mid="70"><![CDATA[<html>$Loffy the Beggar$<BR>What? You're interested?<BR>
+Hehe, uehehe! You really don't know how to give up! You're a fool!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-accepting-acceptted" mid="11" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT></html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$[Daily] Mutant's Habitat$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-1" image="QW_59.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="73"><![CDATA[<html>$Loffy the Beggar$<BR>Go to <FONT color=#a82424>Mutant's Habitat</FONT> and teach a lesson to the strongest monster there.<BR>
+I'll treat you to stri-fried insects. Kueh, kueheheheh!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-2-a" mid="76" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Loffy the Beggar$<BR>No matter what everythin is in vain. Nothing will change.<BR>
+Am I not right, Hound? Woof woof! Grrrr, ruffruff!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n087_beggar-2-b" mid="78" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="77"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n087_beggar-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="79"><![CDATA[<html>$Loffy the Beggar${action:Talk}<BR>But you still can't give up? That's why you're living on too?<BR>Until the complete despair comes!! Kuehehehehe!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">10940,,,,,,,,,</exe>
+         <exe type="setquest">1094</exe>
+         <exe type="talk" npc="n087_beggar">1</exe>
+         <exe type="huntmon" num="1" party="1" exe="6,7,8" onexe="">600061</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="5">700061</exe>
+         <exe type="custom">api_quest_IncCounting(userObjID, 2, 600061);</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">10940,,,,,,,,,</exe>
+         <exe type="complete" true="">1094</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n087_beggar" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n087_beggar" sub="acceptted">1,2,3,4</exelink>
+   <exelink qstep="2" npc="n087_beggar" sub="a">0</exelink>
+   <exelink qstep="2" npc="n087_beggar" sub="b">1</exelink>
+   <journal_data recompense="10940" quest_title="[일일] 돌연변이 서식지" chapterid="" quest_level="56" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_59.dds</contents_image>
+         <destination_pos>591,0,0</destination_pos>
+         <destination_mode>custom:591@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>24</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="42"><![CDATA[Mutant's Habitat Patrol]]></title>
+         <contents mid="43"><![CDATA[<html>Defeat the strongest monster at Mutant's Habitat.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance) </FONT><FONT color=#a82424>→ Mutant's Habitat</FONT></html>]]></contents>
+         <destination mid="44"><![CDATA[Mutant's Habitat]]></destination>
+         <todo_msg mid="45"><![CDATA[Defeat monsters at Mutant's Habitat.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Beggar.dds</contents_image>
+         <destination_pos>11,n87</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>87</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="46"><![CDATA[Report to Loffy the Beggar]]></title>
+         <contents mid="47"><![CDATA[<html>Report to Saint Haven's Loffy the Beggar.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Loffy the Beggar</FONT></html>]]></contents>
+         <destination mid="48"><![CDATA[Report to Loffy the Beggar]]></destination>
+         <todo_msg mid="49"><![CDATA[Report to Loffy the Beggar.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>56:59</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

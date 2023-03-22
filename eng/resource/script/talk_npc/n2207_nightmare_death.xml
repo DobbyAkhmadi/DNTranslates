@@ -1,0 +1,64 @@
+   <talk>
+      <npcename>n2207_nightmare_death</npcename>
+      <npcid>2207</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Spirit of Death (Prologue)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#7e12d2> (There is a woman who is emanating an awful aura of death.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="qu_01" mid="38"><![CDATA[<html>"Insignificant" human? You're not talking about me, are you?</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Spirit of Death$<BR>Ah… The fragrance of fresh blood… Is it you who summoned me, insignificant human?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_01" image="" itemindex="">
+         <talk_answer link_index="qu_03" mid="39"><![CDATA[<html>What?</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Spirit of Death$<BR>Who else is here other than you? Well, there's a more useless human lying over there but he can be ignored.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_03" image="" itemindex="">
+         <talk_answer link_index="qu_04" mid="40"><![CDATA[<html>Who are you calling insignificant? I'm a genius sorceress…!</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Spirit of Death$<BR>Don't you agree, insignificant human?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_04" image="" itemindex="">
+         <talk_answer link_index="qu_05" mid="41"><![CDATA[<html>I summoned you? When?</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Spirit of Death$<BR>
+Whatever. The fact that you summoned me here remains unchanged.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_05" image="" itemindex="">
+         <talk_answer link_index="qu_06" mid="42"><![CDATA[<html>Spell of darkness...?</html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Spirit of Death$<BR>
+You call yourself a genius but your memory seems to be failing you.<BR>You must have chanted a spell to summon me. A forbidden dark spell.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_06" image="" itemindex="">
+         <talk_answer link_index="qu_07" mid="43"><![CDATA[<html>But why now?</html>]]></talk_answer>
+         <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#7e12d2> (A dark spell…? I remember chanting one from a magic book I stole out of desperation while I was being chased by the loansharks.<BR>But nothing happened so I thought it was just a useless old book...)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_07" image="" itemindex="">
+         <talk_answer link_index="qu_08" mid="44"><![CDATA[<html>My blood...?</html>]]></talk_answer>
+         <talk_question mid="21"><![CDATA[<html>$Spirit of Death$<BR>You seem confused.<BR>The spell you chanted was a dark magic spell recorded by the Ancients long ago. It is only manifested with the blood of the spell user.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_08" image="" itemindex="">
+         <talk_answer link_index="quest_end" mid="49"><![CDATA[<html>Somewhere cosy?</html>]]></talk_answer>
+         <talk_question mid="23"><![CDATA[<html>$Spirit of Death$<BR>
+You must have a lot of questions.<BR>But this place isn't good for a conversation.<BR>Let's have a secret chat somewhere cosy...</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,3" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 85 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 998, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 240, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 342, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 759, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 760, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 761, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 762, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 763, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 84</chk>
+      </conditions>
+      <exelink idx="quest_end">4,5,6,7,8,9,10,11</exelink>
+   </talk>

@@ -1,0 +1,536 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc01_9463_orb_to_find</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>9463</qid>
+      <designer>강지영</designer>
+      <qlevel>4</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9464</nextqid>
+      <nextqname>mqc01_9464_first_mission</nextqname>
+      <nextqnpc>n011_priest_leonardo</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Temukan Orb]]></qkname>
+      <qnpc>
+         <npcid>11</npcid>
+         <npcename>n011_priest_leonardo</npcename>
+         <npckname>상급 클레릭 레오날드</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1686</npcid>
+         <npcename>n1686_eltia</npcename>
+         <npckname>엘티아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1687</npcid>
+         <npcename>n1687_kaye</npcename>
+         <npckname>케이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>206</npcid>
+         <npcename>n206_cleric_jake</npcename>
+         <npckname>클레릭 제이크</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Master Cleric Leonard$<BR>Jadi kamu ingin menyelesaikan kesalahpahaman tentang dirimu.<BR>Aku dengar juga teriakan Sorceress yang sombong itu kepadamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-b" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Terlebih dari itu, Aku tidak dapat membiarkan kejahatan merajalela.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-accepting-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-accepting-!next" mid="10" select_type="3" />
+      <talk_question mid="9"><![CDATA[<html>$Master Cleric Leonard$<BR>Kita menunggu dan melihat jika kamu bukanlah bagian dari kejahatan itu atau tidak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-a" mid="101" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Master Cleric Leonard$<BR>Tidak ada satupun orang yang memiliki petunjuk tentang siapa pelaku yang mencuri Staff itu jadi akan lebih baik jika banyak yang membantu.<BR>Tapi sebelum itu, aku ingin bertanya sesuatu. Aku akan mempercayaimu jika kamu menjawab pertanyaanku dengan jujur.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-b" mid="102" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm... apa?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-c" mid="103" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Master Cleric Leonard$<BR>Mengapa kamu berada di Mana Ridge?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-d" mid="104" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm... Kita hanya berjalan-jalan saja...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-e" mid="105" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Master Cleric Leonard$<BR>Hmm.... Kudengar kamu memberitahukan Cyntia jika kamu memiliki suatu <FONT color=#a82424>tugas</FONT>. Jika kamu ingin kami mempercayaimu lebih baik kamu berkata jujur akan siapa yang mengirimu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-f" mid="106" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm yah... Aku tidak begitu yakin...<BR>(Apa yang harus aku lakukan? Jika aku tidak mengatakan yang sejujurnya, itu akan membuat aku semakin dicurigai...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-g" mid="107" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Master Cleric Leonard$<BR>Kamu tidak tau...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-g" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-h" mid="108" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Cleric Ethan$<BR>Maaf jika aku memotong pembicaraan?<BR>Bagiku, gadis itu terlalu ceroboh untuk seorang pencuri.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-h" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-i" mid="109" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Cleric Ethan$<BR>Kupikir dia tak memiliki niat jahat. Hanya saja dia kurang bisa berkomunikasi dengan baik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-j" mid="110" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Master Cleric Leonard$<BR>Walaupun kamu berkata seperti itu, kita harus tetap berhati-hati.<BR>Bahkan para sorceress mewaspadai dia. Hubungan kita dengan Sorceress akan rusak jika kita tidak berhati-hati.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-j" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-k" mid="111" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Cleric Ethan$<BR>Kamu benar. Bukankah kamu berkata bahwa kamu adalah<FONT color=#387206>{user_nick}</FONT>?<BR><FONT color=#7e12d2>(Ethan menghadap dirimu)</FONT><BR> Sepertinya kamu memiliki alasanmu sendiri. Tolong berkata jujur dan aku bersumpah tidak akan mengatakan apapun tentang itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-k" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-l" mid="112" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Oh Ethan... Aku sebenarnya dari Brrr... brrr....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-l" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-m" mid="113" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Ethan menganggukan kepalanya agar aku dapat berkata yang sebenarnya.</FONT><BR>
+<FONT color=#662500>Tapi Ayah selalu berkata untuk jangan pernah mengungkapkan identitas sebagai Brotherhood of Steel dalam resiko apapun.</FONT><BR>
+<FONT color=#662500>Walaupun kita sedang dituduh sesuatu...</FONT><FONT color=#662500>)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-n" mid="114" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Maafkan aku! Aku tidak bisa...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-n" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-o" mid="115" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Master Cleric Leonard$<BR>Hmph! <FONT color=#7e12d2>(Master Cleric Leonard menjadi serius)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-o" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-p" mid="116" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Cleric Ethan$<BR><FONT color=#7e12d2>(Cleric Ethan menggelengkan kepalanya)</FONT><BR>Kalau begitu aku tidak dapat membantumu, <FONT color=#387206>{user_nick}</FONT>.<BR>Kepercayaan adalah hal yang sangat penting.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-1-p" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-1-" mid="117" select_type="5" />
+      <talk_question mid="27"><![CDATA[<html><BR><FONT color=#7e12d2>(Akan sangat sulit membuat mereka kembali percaya kepadamu. <BR>Tanya Eltia apa yang harus dilakukan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-1-" mid="118" select_type="5" />
+      <talk_question mid="28"><![CDATA[<html>$Eltia$<BR>Kuharap Staff itu bisa ditemukan agar mereka tidak menuduhmu lagi... Apakah kamu sudah mencoba berbicara ke <FONT color=#a82424>Master Cleric Leonard</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-1-" mid="119" select_type="5" />
+      <talk_question mid="29"><![CDATA[<html>$Kay$<BR>Hmm... Bagaimana perkembangan misi dari Ras? Aku merasa tidak tenang karena kamu yang dipilih.<BR>Tanya kepada Eltia dahulu sebelum kamu melakukan sesuatu!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-1-" mid="120" select_type="5" />
+      <talk_question mid="30"><![CDATA[<html>$Cleric Jake$<BR>Apa yang membawamu kemari?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-2" image="" itemindex="" portrait_left="NPC_Left_Edan.dds" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-2-" mid="121" select_type="5" />
+      <talk_question mid="31"><![CDATA[<html><BR><FONT color=#7e12d2>(Akan sangat sulit membuat mereka kembali percaya kepadamu. <BR>Tanya Eltia apa yang harus dilakukan.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-a" mid="122" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Eltia$<BR>Oh tidak... Jadi kamu tidak menemukan apapun?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-b" mid="123" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Bukankah mereka terlalu berlebihan?! Kenapa!!! Mengapa aku harus mengatakan semuanya ke mereka???</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-c" mid="124" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Eltia$<BR>Kamu seharusnya berbicara seperti itu ke mereka. Banyak Adventurers yang memiliki rahasianya sendiri. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-d" mid="125" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Semua orang disini berhati dingin sesuai dengan cuaca di tempat ini! Orang-orang berhati dingin!<BR>Bahkan Ethan!! Dia cuma menang Ganteng doang! Tetap saja berhati dingin, dasar sial!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-d" image="QN_Kaye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-e" mid="126" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Eltia$<BR>...Hmm. Apakah Ethan ini lebih tampan daripada <FONT color=#387206>Kay</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-f" mid="127" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa? Kay? Oh tolong... Tentu saja Ethan lebih ganteng!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-g" mid="128" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Eltia$<BR>Pfft. Baiklah. <BR>Tapi, Dengan ada campur tangan dari <FONT color=#a82424>Dragon Follower</FONT> bukankah permasalahan ini menjadi lebih serius dari yang dibayangkan. Kita harus memberitahukan Kay tentang ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-h" mid="129" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dia belum kembali membawa pesan dari ayah, Ya kan?<BR>Apakah ada cara lain kita bisa menghubungi Kay?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-i" mid="130" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Eltia$<BR>Yah tidak terlalu sulit sih sebenarnya.<BR>Gunakan ini <FONT color=#a82424>Blue Bird</FONT>.. Tekan Blue bird ini dengan jarimu ... dan katakan... <FONT color=#086171>[Kay, aku ingin berbicara denganmu. Cepatlah datang ke Blizzard Plain - Eltia]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-j" mid="131" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Wow kerenn!! Kamu menyiapkan banyak barang untuk perjalanan ini ya!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-2-" mid="132" select_type="5" />
+      <talk_question mid="42"><![CDATA[<html>$Eltia$<BR>Ayah yang mengajarkanku agar aku bisa menjagamu. Menggunakan ini adalah hal yang umum digunakan untuk berkomunikasi di Brotherhood Of Steel. <BR>Kay pasti sudah melihat pesan ini sekarang. Pergilah ke Blizzard Plain dan temui dia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1686_eltia-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Eltia.dds" center_image="">
+      <talk_answer link_index="n1686_eltia-3-" mid="133" select_type="5" />
+      <talk_question mid="43"><![CDATA[<html>$Eltia$<BR>Kuharap Staff itu bisa ditemukan agar mereka tidak menuduhmu lagi...<BR><FONT color=#7e12d2>(Eltia mengkhawatirkan dirimu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-a" mid="134" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Kay$<BR>Sepertinya tidak ada perkembangan sedikitpun. Mengapa kamu ingin menemui aku?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-b" mid="135" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Sepertinya Dragon Follower terlibat di kejadian ini. Dragon Followers adalah musuh bebuyutan Brotherhood!<BR>Kupikir ini permasalahan ini terlalu besar untuk kita, jadi kita ingin mendapatkan saran. Apa yang ayah katakan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-c" mid="137" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Kay$<BR>Dragon Follower? Hmm... Aneh. Ras belum membalas apapun.<BR>Aku bahkan tidak dapat memberitahukan bawah Orb itu palsu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-d" mid="138" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Benarkah? Hmm... Apakah dia sibuk? <BR>Bagaimana bisa sibuk mengurusi hal lain di saat anak-anaknya yang berharga ini ada di Mana Ridge? Jika kita membiarkan hal ini, Keluarga kita akan dituduh sebagai Dragon Follower...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-e" mid="139" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Kay$<BR>Pertama-tama, cari petunjuk yang mungkin akan membantu kita menemukan Orb atau Staff itu. Mungkin aitu akan membuat orang-orang akan kembali mempercayaimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-f" mid="140" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu benar. Tapi tidak ada yang bisa aku temukan, dan mereka tidak memberitahukan apapun yang dapat membantu aku dalam pencarian.<BR>Aku seperti dikucilkan.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-g" mid="141" select_type="0"><![CDATA[<html>Katakan padanya tentang Minotaur.</html>]]></talk_answer>
+      <talk_answer link_index="n1687_kaye-3-m" mid="142" select_type="0"><![CDATA[<html>Katakan padanya tentang Ethan.</html>]]></talk_answer>
+      <talk_answer link_index="n1687_kaye-3-n" mid="143" select_type="0"><![CDATA[<html>Katakan padanya tentang pemandangan.</html>]]></talk_answer>
+      <talk_question mid="50"><![CDATA[<html>$Kay$<BR>Hei, pikirkan juga adikmu yang menunggu sendirian di Mana Ridge.<BR>Aku akan membantumu. Berikan aku informasi lagi tentang situasi saat Orb tersebut dicuri.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-g" image="QM_minotauros_Bison.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-h" mid="144" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Kay$<BR>Apa? Aku telah menerima laporan kalau <FONT color=#a82424>Minotaur</FONT> sedang menuju kesini... <BR>Tapi kenapa Minotaur menginginkan Orb itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-i" mid="145" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Benarkah? Kemana Minotaur itu pergi??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-i" image="QW_9.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-j" mid="146" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Kay$<BR>Hei hei, berhenti menyelak pembicaraanku!<BR>Laporan terakhir yang aku terima, Minotaur itu menuju ke <FONT color=#a82424>Silent Monastery</FONT>. Tapi aku tidak tahu apakah Minotaur itu masih disana atau tidak.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-k" mid="147" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ooh~ Kay, kamu tidak jahat.<BR>Aku akan segera mendapatkan Orb itu kembali. dadah!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-l" mid="148" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Kay$<BR>Hei! <FONT color=#387206>{user_nick}</FONT>!! Kamu tidak dapat bertarung sendirian melawan Minotaur!<BR>Jangan bikin masalah segera kembali ke Mana Ridge dan cari petunjuk tentang Staff itu lagi, ok?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-4" mid="149" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa yang baru saja kamu beritahukan itu adalah sebuah petunjuk!! Yang dibutuhkan sekarang adalah keyakinan, keadilan akan menang!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-f" mid="150" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Kay$<BR>Aku tau kamu suka laki-laki ganteng, tapi apakah ini waktu yang tepat untuk membicarakan mereka?<BR>Haduh... Belajarlah dari adikkmu. Dia...<FONT color=#7e12d2>(Kay mulai tersipu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-3-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-3-f" mid="151" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Kay$<BR>Apakah pemandangan di Parelina Resting Place indah? Apakah kamu sedang liburan?<BR>Berikan aku Informasi yang berguna donk!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-4" image="QW_9.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-4-" mid="152" select_type="5" />
+      <talk_question mid="59"><![CDATA[<html><BR><FONT color=#7e12d2>(Pergilah ke Silent Monastery)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-a" mid="153" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Cleric Jake$<BR>Jadi kamu mencari Orb itu juga.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-b" mid="154" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apakah kamu mengenalku?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-c" mid="155" select_type="2" />
+      <talk_question mid="62"><![CDATA[<html>$Cleric Jake$<BR>Kudengar dari Leonard, ada bangsawan cantik yang tertarik pada Orb dan Staff.<BR>Sepertinya itu kamu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-d" mid="156" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Terima kasih telah bilang kalau aku cantik. Hehe.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-d" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-e" mid="157" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>$Cleric Jake$<BR>Akan kamu gunakan sebagai apa Orb itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-f" mid="158" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku akan memberikannya kepada para Cleric di Mana Ridge dan menyelesaikan kesalahpahaman tentang diriku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-g" mid="159" select_type="2" />
+      <talk_question mid="66"><![CDATA[<html>$Cleric Jake$<BR>I see.<BR>Kalau begitu akan aku ambilkan untukmu.<FONT color=#7e12d2>(Cleric Jake mengeluarkan tangannya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-h" mid="160" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm... Aku ingin memberikannya langsung.<BR>Eltia... Maksutku, adik kecilku berkata untuk tidak mempercayai orang asing.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-i" mid="161" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>$Cleric Jake$<BR>Tapi aku adalah pelayan Sang Goddess. Kamu dapat mempercayaiku.<BR>Jika tidak, Aku tidak dapat mempercayaimu dan terpaksa aku harus mengambilnya dengan kekerasan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-5-j" mid="162" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Erm Itu bukan ide yang baik. Bagaimana jika kita kembali ke Mana Ridge bersama?<BR>Bukankah begitu lebih enak bagi kita berdua.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-5-j" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-6" mid="163" select_type="2" />
+      <talk_question mid="70"><![CDATA[<html>$Cleric Jake$<BR><FONT color=#7e12d2>(Cleric Jake berpikir sejenak dan berkata)</FONT>…Baiklah, mari kita lakukan itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1687_kaye-6" image="QW_ManaRidge.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Kaye.dds" center_image="">
+      <talk_answer link_index="n1687_kaye-6-" mid="164" select_type="5" />
+      <talk_question mid="71"><![CDATA[<html>$Kay$<BR>Hei kudengar kamu telah menemukan Orb itu. Pergilah dan temui <FONT color=#a82424>Master Cleric di Mana Ridge </FONT> untuk menyelesaikan kesalahpahaman akan dirimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n206_cleric_jake-6" image="QW_ManaRidge.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jake.dds" center_image="">
+      <talk_answer link_index="n206_cleric_jake-6-" mid="165" select_type="5" />
+      <talk_question mid="72"><![CDATA[<html>$Cleric Jake$<BR>Aku akan pergi menemui<FONT color=#a82424>Master Cleric Leonard</FONT> denganmu.<BR>Mari kiembali ke Mana Ridge sekarang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-6" image="QS_Default.dds" itemindex="300059" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-6-a" mid="166" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Master Cleric Leonard$<BR>Ini adalah Vision Orb yang dicuri oleh Minotaur.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-6-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_Leonardo.dds" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-6-b" mid="167" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku mempertaruhkan nyawaku untuk mendapatkan kembali Orb ini agar aku bisa mendapatkan kepercayaanmu.<BR>Sekarang apakah kalian percaya kepadaku??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n011_priest_leonardo-6-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n011_priest_leonardo-6-!next" mid="169" select_type="4" />
+      <talk_question mid="75"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9463</exe>
+         <exe type="talk" npc="n011_priest_leonardo">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="huntmon" num="1" party="1" exe="" onexe="3,4,5,6">269</exe>
+         <exe type="addquestitem" num="1">300059</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>3스텝에서 사냥하면 오브(300059) 획득하게 적용</comment>
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300059</exe>
+         <exe type="recompense">94630,,,,,,,,,</exe>
+         <exe type="complete" true="">9463</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n011_priest_leonardo" sub="!next">0,1</exelink>
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="b" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="c" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="d" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="e" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="f" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="g" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="h" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="i" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="j" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="k" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="l" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="m" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="n" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="o" />
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="p">0,1</exelink>
+   <exelink qstep="1" npc="n011_priest_leonardo" sub="" />
+   <exelink qstep="2" npc="n1686_eltia" sub="b" />
+   <exelink qstep="2" npc="n1686_eltia" sub="c" />
+   <exelink qstep="2" npc="n1686_eltia" sub="d" />
+   <exelink qstep="2" npc="n1686_eltia" sub="e" />
+   <exelink qstep="2" npc="n1686_eltia" sub="f" />
+   <exelink qstep="2" npc="n1686_eltia" sub="g" />
+   <exelink qstep="2" npc="n1686_eltia" sub="h" />
+   <exelink qstep="2" npc="n1686_eltia" sub="i" />
+   <exelink qstep="2" npc="n1686_eltia" sub="j">0,1</exelink>
+   <exelink qstep="2" npc="n1686_eltia" sub="" />
+   <exelink qstep="3" npc="n1687_kaye" sub="b" />
+   <exelink qstep="3" npc="n1687_kaye" sub="c" />
+   <exelink qstep="3" npc="n1687_kaye" sub="d" />
+   <exelink qstep="3" npc="n1687_kaye" sub="e" />
+   <exelink qstep="3" npc="n1687_kaye" sub="f" />
+   <exelink qstep="3" npc="n1687_kaye" sub="g" />
+   <exelink qstep="3" npc="n1687_kaye" sub="m" />
+   <exelink qstep="3" npc="n1687_kaye" sub="n" />
+   <exelink qstep="3" npc="n1687_kaye" sub="h" />
+   <exelink qstep="3" npc="n1687_kaye" sub="i" />
+   <exelink qstep="3" npc="n1687_kaye" sub="j" />
+   <exelink qstep="3" npc="n1687_kaye" sub="k" />
+   <exelink qstep="3" npc="n1687_kaye" sub="l" />
+   <exelink qstep="3" npc="n1687_kaye" sub="4">0,1,2</exelink>
+   <exelink qstep="3" npc="n1687_kaye" sub="f" />
+   <exelink qstep="3" npc="n1687_kaye" sub="f" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="b" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="c" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="d" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="e" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="f" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="g" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="h" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="i" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="j" />
+   <exelink qstep="5" npc="n206_cleric_jake" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n011_priest_leonardo" sub="b">0,1</exelink>
+   <exelink qstep="6" npc="n011_priest_leonardo" sub="!next">2</exelink>
+   <journal_data recompense="94630" quest_title="오브를 찾아서" chapterid="1" quest_level="4" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_ManaRidge.dds</contents_image>
+         <destination_pos>5,n011</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>11</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="76"><![CDATA[His Help]]></title>
+         <contents mid="77"><![CDATA[<html>Cleric Ethan berkata dia akan membantumu menyelesaikan kesalahpahaman akan dirimu. Berbicara kepada Master Cleric Leonard.<BR><BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>- Master Cleric Leonard</FONT></html>]]></contents>
+         <destination mid="78"><![CDATA[Berbicara kepada Master Cleric Leonard]]></destination>
+         <todo_msg mid="79"><![CDATA[Quest ditambahkan]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Eltia.dds</contents_image>
+         <destination_pos>5,n1686</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1686</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="80"><![CDATA[Unresolved Misunderstanding]]></title>
+         <contents mid="81"><![CDATA[<html>Kesalahpahaman ini tidak bisa diselesaikan dan kamu hanya bisa mendapatkan kepercayaan dari Leonard dan Ethan. <BR>Beritahukan Eltia tentang situasi ini.<BR><BR><FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>- Eltia</FONT></html>]]></contents>
+         <destination mid="82"><![CDATA[Berbicara kepada Eltia]]></destination>
+         <todo_msg mid="83"><![CDATA[Berbicara kepada Eltia di Mana Ridge]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Kaye.dds</contents_image>
+         <destination_pos>7,n1687</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>1687</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Contact]]></title>
+         <contents mid="85"><![CDATA[<html>Eltia mengirimkan pesan untuk Kay, Eltia berkata jangan ceroboh jika Dragon Follower terlibat di masalah ini. Pergilah ke Blizzard Plain untuk menemui Kay.<BR><BR><FONT color=#086171>Blizzard Plain</FONT> <FONT color=#a82424>- Kay</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Berbicara keKay di Blizzard Plain]]></destination>
+         <todo_msg mid="87"><![CDATA[Temui Kay di Blizzard Plain]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QW_9.dds</contents_image>
+         <destination_pos>93,0,0</destination_pos>
+         <destination_mode>custom:91@1,92@1,93@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="88"><![CDATA[With the Power of Justice]]></title>
+         <contents mid="89"><![CDATA[<html>Kay telah memberitahukan dimana keberadaan Minotaur. Minotaur bukanlah lawan yang mudah di kalahkan, akan tetapi mendapatkan kembali Orb itu adalah hal utama yang kamu perdulikan saat ini.<BR>Pergilah ke Silent Monastery untuk mendapatkan Orb kembali.<BR><BR><FONT color=#086171>Blizzard Plain (Monastery Gate)</FONT> <FONT color=#a82424>- Silent Monastery</FONT></html>]]></contents>
+         <destination mid="90"><![CDATA[Kalahkan Minotaur di Silent Monastery]]></destination>
+         <todo_msg mid="91"><![CDATA[Pergilah ke Silent Monastery.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Jake.dds</contents_image>
+         <destination_pos>93,n206</destination_pos>
+         <destination_mode>custom:91@1,92@1,93@1</destination_mode>
+         <statemark_npcid>206</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="92"><![CDATA[Recovered Vision Orb]]></title>
+         <contents mid="93"><![CDATA[<html>Kamu bertemu dengan seorang Cleric setelah kamu mengalahkan Minotaur dan mendapatkan Orb kembali. <BR>Berbicara kepadanya.<BR><BR><FONT color=#086171>Blizzard Plain (Monastery Gate)</FONT><FONT color=#a82424> - Silent Monastery (Cleric Jake)</FONT></html>]]></contents>
+         <destination mid="94"><![CDATA[Berbicara kepada Cleric Jake]]></destination>
+         <todo_msg mid="95"><![CDATA[Berbicara kepada Cleric Jake di Silent Monastery.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QW_7.dds</contents_image>
+         <destination_pos>5,n011</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>11</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="96"><![CDATA[Deliver the Genuine Orb]]></title>
+         <contents mid="97"><![CDATA[<html>Cleric Jake memintamu untuk memberikan Vision Orb kepadanya, tapi akan lebih baik jika kamu antar sendiri.<BR>Kembali ke kota dan berikan Vision Orb ke Master Cleric Leonard.<BR><BR><FONT color=#086171>Mana Ridge</FONT><FONT color=#a82424> - Master Cleric Leonard</FONT></html>]]></contents>
+         <destination mid="98"><![CDATA[Kembali ke Master Cleric Leonard]]></destination>
+         <todo_msg mid="99"><![CDATA[Kembali ke Master Cleric Leonard di Mana Ridge.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>9462</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

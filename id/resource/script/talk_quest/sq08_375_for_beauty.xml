@@ -1,0 +1,289 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_375_for_beauty</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>375</qid>
+      <designer>김인정</designer>
+      <qlevel>13</qlevel>
+      <qdesc>259 아르젠타의 보양식 퀘스트의
+아카데믹 버전.
+아카데믹은 본 퀘스트에서 노예의 증거를 받지 않으므로, 여기에서 받게 됩니다.
+
+죽음의 숲 진액	300113
+노예의 증거	300003
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>376</nextqid>
+      <nextqname>sq08_376_meet_david</nextqname>
+      <nextqnpc>n024_adventurer_guildmaster_decud</nextqnpc>
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[For the Beauty]]></qkname>
+      <qnpc>
+         <npcid>164</npcid>
+         <npcename>n164_argenta_wounded</npcename>
+         <npckname>아르젠타(잿빛폐허)</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>24</npcid>
+         <npcename>n024_adventurer_guildmaster_decud</npcename>
+         <npckname>모험자 길드장 데커드</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-noquest" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Argenta$<BR>...Apa? Apa yang kau lihat? Kupikir kamu tak ada waktu berjalan-jalan di daerah ini?<BR><FONT color=#7e12d2>(Perlu mendapatkan quest dari Adventurer s' Guild Master Deckard untuk melanjutkan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-a" mid="7" select_type="0"><![CDATA[<html>(Dia tidak terluka ketika menolong yang lain, tapi aku akan membiarkannya)</html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Adventurers' Guild Master Deckard${action:Talk}<BR>...aku dengar beritanya. <FONT color=#a82424>Silver-haired Swordswoman</FONT> terluka parah.<BR>Dari apa yang kudengar, dia terluka ketika menolong Ethan dan Angelica... Dia sungguh luar biasa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-b" mid="9" select_type="0"><![CDATA[<html>Tidak ada hubungannya antara kecantikan dan terluka.</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>selain itu, kudengar swordwoman itu sangat cantik!<BR>
+aku dapat melihatnya karena <FONT color=#a82424>Ethan</FONT> tersipu dan panik.<BR>Karena wanita secantik itu terluka, dia mungkin telah sangat menderita!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-b" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-c" mid="109" select_type="0"><![CDATA[<html>Jadi tidak ada hubungannya antara kecantikan dan terluka!</html>]]></talk_answer>
+      <talk_question mid="108"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Bagaimanapun, karena dia terluka, dia mungkin memiliki makanan favorit tertentu.<BR>Tidak baik bila wanita cantik jika dia tidak makan dengan baik.<BR>Intinya...!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-c" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-d" mid="11" select_type="0"><![CDATA[<html>Baiklah.</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Kalau begitu, kenapa kamu tidak mencarikan beberapa <FONT color=#a82424>invigorating food</FONT> dan bawanya?<BR>Kita harus selalu saling menolong. Sedih rasanya kalau kamu harus sendirian saat sakit. Haha~!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-d" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-e" mid="15" select_type="0"><![CDATA[<html>Aku akan mencarikannya untuk dia.</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Bagaimana kalau membuat <FONT color=#a82424>Forest of Death Sap</FONT> dengan irisan <FONT color=#a82424>Blue Mushrooms</FONT> dari <FONT color=#a82424>Forest of Death</FONT>? Luka yang kecil akan segera sembuh.<BR>Itu dari jamur yang beracun, jadi kalau terlalu banyak tidak akan bagus untuk kesehatan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$For the Beauty$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1" image="QS_Default.dds" itemindex="300113" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-1-a" mid="60" select_type="0"><![CDATA[<html>(Beritahu dia aku akan melakukannya)</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Yah, menemukan 5 <FONT color=#a82424>Forest of Death Saps</FONT> tidak ada artinya untuk kamu kan?<BR>Cepatlah pergi.<BR>Setidaknya dia akan membutuhkan itu untuk mengobati lukanya dan menjaga dirinya sendiri!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-1-a" image="QS_Default.dds" itemindex="300113" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="61"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Kecantikan yang berkurang dan makanan yang menyehatkan...<BR>
+Bagus, bagus. Bagus sekali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Argenta$<BR>...Apa? Apa yang kamu lihat??<BR>Bukankah kamu terlalu sibuk untuk mondar-mandir seperti ini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-2" image="QS_Default.dds" itemindex="300113" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Kamu harus mencari 5 <FONT color=#a82424>Forest of Death Saps</FONT>.<BR>
+Tidak sulit pastinya untuk kamu. Ya kan? Sekarang pergilah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="24"><![CDATA[<html>$Argenta$<BR>...Apa? Apa yang kamu lihat??<BR>Bukankah kamu terlalu sibuk untuk mondar-mandir seperti ini?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3" image="QS_Default.dds" itemindex="300113" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-3-a" mid="32" select_type="0"><![CDATA[<html>Apa aku harus memberikannya kepada Argenta?</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Oh~ <FONT color=#a82424>Forest of Death Sap</FONT>... Terlihat lezat dan aromanya juga lezat! Hanya dengan melihatnya, kamu akan tahu ini akan berguna untuk wanita cantik?<BR>Yah, walaupun mengandung sejumlah racun, kalau kamu menggunakannya sedikit saja ini akan menjadi obat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-3-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="33"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Baiklah.<BR>Cepat, berikan makanan yang menggiurkan itu kepada <FONT color=#a82424>si cantik</FONT> yang terluka.<BR>Jangan lupa memberitahunya aku yang mengirimkan ini!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3" image="QS_Default.dds" itemindex="300113" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-a" mid="62" select_type="0"><![CDATA[<html>Adventurers' Guild Master Deckard menyuruhmu memberikan makanan lezat ini...</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html><FONT color=#2b2723>$Argenta$<BR>Huh...? Apa ini?<BR>Ini makanan?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-a" image="QS_Default.dds" itemindex="300113" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-b" mid="64" select_type="0"><![CDATA[<html>(Dia memakannya semua dengan satu lahap)</html>]]></talk_answer>
+      <talk_question mid="63"><![CDATA[<html>$Argenta$<BR>Makanan untuk menyehatkan? Kalau ini <FONT color=#a82424>invigorating food</FONT>, bukankah seharusnya mengandung daging? Ah tidak tahu hal yang dasar seperti itu...<BR>
+<FONT color=#7e12d2>(Argenta memakan Forest of Death Sap dengan satu lahapan)</FONT><BR>
+...Satu kali makan sudah habis.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-c" mid="66" select_type="0"><![CDATA[<html>Dia mengkhawatirkan kamu.</html>]]></talk_answer>
+      <talk_question mid="65"><![CDATA[<html>$Argenta$<BR>Oh... Aku tidak nafsu makan.<BR>
+Apa dia hanya memberimu segini? Yah, katakan padanya tidak perlu khawatir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-d" mid="85" select_type="0"><![CDATA[<html>Yah, kamu telah membantu kami...</html>]]></talk_answer>
+      <talk_question mid="84"><![CDATA[<html>$Argenta$<BR>Dia tidak perlu mengkhawatirkan luka kecil ini. Beraninya mereka mengkhawatirkan aku?<BR>
+Itu lebih tidak menyenangkan.<BR>Kamu dan <FONT color=#a82424>anak-anak itu</FONT>... Jangan kurang ajar.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-d" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-e" mid="110" select_type="0"><![CDATA[<html>Jadi?</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html><FONT color=#a82424><FONT color=#2b2723>$Argenta$<BR>Oh~ kamu ingin menolongku?<FONT></FONT><BR>Ketika kamu melawan <FONT color=#a82424><FONT color=#2b2723>si <FONT color=#a82424>Black Knight</FONT>, kamu pasti terluka parah, kalau bukan karena aku.</FONT></FONT><BR><FONT color=#a82424><FONT color=#2b2723>Baiklah. Aku akan meminta bantuan kamu. Jadi...</FONT></FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-e" image="QS_Default.dds" itemindex="300003" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n164_argenta_wounded-3-f" mid="112" select_type="0"><![CDATA[<html>Apa?! Budak?!!! (Itu ilegal!)</html>]]></talk_answer>
+      <talk_question mid="111"><![CDATA[<html>$Argenta$<BR>
+Kalau begitu, aku akan memberikan kamu ini seperti yang aku berikan pada anak-anak lain!<BR>
+Bukti kalau kamu adalah budakku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-3-f" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="113"><![CDATA[<html>$Argenta$<BR>
+Apa kamu tidak senang? Tidak perlu berterima kasih. Aku sangatlah sabar dan lelah sekarang. Aku tidak butuh sapaan-sapaan.<BR>
+Selesaikan misimu dan kembalilah.<BR>
+Kembali ke <FONT color=#a82424>Adventurers' Guild Master</FONT> yang menyebalkan itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n164_argenta_wounded-4" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="39"><![CDATA[<html>$Argenta$<BR>Kenapa kamu sudah kembali?<BR>...Aku masih belum tahu apa yang aku ingin kamu kerjakan, kembalilah lagi nanti.<BR>
+<FONT color=#7e12d2>(Lapor ke Adventurer s' Guild Master Deckard)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4-a" mid="68" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html><FONT color=#2b2723>$Adventurers' Guild Master Deckard$<BR>Jadi, apa swordwoman berambut perak itu senang?!</FONT><BR>
+<FONT color=#2b2723>Pasti kamu sangat senang menjadi teman seseorang yang <FONT color=#a82424>cantik</FONT> seperti itu berkat aku. Haha!<BR>Yah, kamu tidak perlu berterima kasih padaku. Haha.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4-b" mid="70" select_type="0"><![CDATA[<html>Dia memberitahumu untuk berhenti.</html>]]></talk_answer>
+      <talk_question mid="69"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Apa yang wanita cantik itu katakan?<BR>
+Beritahu aku... <BR>Yah, aku tidak memaksamu tapi... hmm.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4-c" mid="87" select_type="0"><![CDATA[<html>(Huh? Trend aneh.)</html>]]></talk_answer>
+      <talk_question mid="86"><![CDATA[<html>$Adventurers' Guild Master Deckard${action:Talk}<BR>Apa?! ...Kamu tidak akan pernah tahu apa yang dipikirkan wanita.<BR>Akhir-akhir ini di <FONT color=#a82424>Saint's Haven</FONT>, ada trend kalau kamu tidak menunjukkan perasaanmu bahkan ketika kamu senang...<BR>
+Mungkin itu hal yang sama.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4-d" mid="89" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="88"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n024_adventurer_guildmaster_decud-4-d" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n024_adventurer_guildmaster_decud-4-!next" mid="91" select_type="0"><![CDATA[<html>Baiklah.</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$Adventurers' Guild Master Deckard$<BR>Bagaimanapun, kerja bagus.<BR>Sampaikan pada <FONT color=#a82424>silver-haired swordswoman</FONT> aku kirim salam.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">3750,,,,,,,,,</exe>
+         <exe type="setquest">375</exe>
+         <exe type="talk" npc="n024_adventurer_guildmaster_decud">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="huntitem" num="5" exe="5,3,4" onexe="">300113</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="delcount">.</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="delquestitem" num="-1">300113</exe>
+         <exe type="addquestitem" num="1">300003</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">375</exe>
+         <exe type="recompense">3750,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="e">0</exelink>
+   <exelink qstep="accepting" npc="n024_adventurer_guildmaster_decud" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n024_adventurer_guildmaster_decud" sub="a">0,1,2</exelink>
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="b" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="c" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="d" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="e" />
+   <exelink qstep="3" npc="n164_argenta_wounded" sub="f">0,2,3,1</exelink>
+   <exelink qstep="4" npc="n024_adventurer_guildmaster_decud" sub="b" />
+   <exelink qstep="4" npc="n024_adventurer_guildmaster_decud" sub="c">1</exelink>
+   <exelink qstep="4" npc="n024_adventurer_guildmaster_decud" sub="d">0</exelink>
+   <exelink qstep="4" npc="n024_adventurer_guildmaster_decud" sub="!next" />
+   <journal_data recompense="3750" quest_title="미인을 위하여" chapterid="" quest_level="13" quest_mark_type="10" use_item_list="300113">
+      <journal index="1">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="43"><![CDATA[Deckard's Consideration]]></title>
+         <contents mid="44"><![CDATA[<html><FONT color=#2b2723>Adventurers' Guild Master Deckard menyarankan bahwa kita memberikan pada Argenta makanan favoritnya.</FONT><BR>
+<BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Adventurer s' Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="45"><![CDATA[Bicaralah kepada Adventurer s' Guild Master Deckard]]></destination>
+         <todo_msg mid="46"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_17.dds</contents_image>
+         <destination_pos>134,0,0</destination_pos>
+         <destination_mode>custom:131@3,132@3,133@3,134@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="94"><![CDATA[Kumpulkan Forest of Death Sap]]></title>
+         <contents mid="95"><![CDATA[<html>Tak peduli apapun alasannya, aku mungkin mendapatkan bantuan dari Argenta. Jadi potonglah beberapa <FONT color=#a82424>Blue Mushrooms</FONT> di <FONT color=#086171><FONT color=#a82424>Forest of Death</FONT></FONT> dan buat beberapa <FONT color=#a82424>Forest of Death Sap</FONT> untuknya.<BR><BR><FONT color=#086171>Gray Ruins → Lower Ridge(Forest of Death Entrance)</FONT> <FONT color=#a82424>→ Forest of Death</FONT></html>]]></contents>
+         <destination mid="96"><![CDATA[Kumpulkan Forest of Death Sap]]></destination>
+         <todo_msg mid="97"><![CDATA[Kumpulkan 5 Forest of Death Saps di Forest of Death.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Argenta.dds</contents_image>
+         <destination_pos>8,n164</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>164</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="98"><![CDATA[For Argenta]]></title>
+         <contents mid="99"><![CDATA[<html>Atas permintaan <FONT color=#a82424>Adventurers' Guild Master Deckard</FONT>, temukan makanan favorit Argenta. Berikan <FONT color=#a82424>Argenta</FONT> makanannya.<BR><BR><FONT color=#086171>Gray Ruins</FONT> <FONT color=#a82424>→ Argenta</FONT></html>]]></contents>
+         <destination mid="100"><![CDATA[Bicaralah kepada Argenta di Calderock Village]]></destination>
+         <todo_msg mid="101"><![CDATA[Berikan Forest of Death Sap kepada Argenta di Calderock Village.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Master_Decud.dds</contents_image>
+         <destination_pos>8,n24</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>24</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="102"><![CDATA[Argenta's Reaction]]></title>
+         <contents mid="103"><![CDATA[<html>Telah memberikan <FONT color=#a82424>Argenta</FONT> makanan favoritnya, namun sepertinya dia tidak suka. Kembalilah kepada <FONT color=#a82424>Adventurers' Guild Master</FONT> <FONT color=#a82424>Deckard</FONT> dan beritahu apa yang dia katakan.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Adventurer s' Guild Master Deckard</FONT></html>]]></contents>
+         <destination mid="104"><![CDATA[Bicaralah kepada Adventurer s' Guild Master Deckard]]></destination>
+         <todo_msg mid="105"><![CDATA[Laporkan kepada Adventurer s' Guild Master Deckard.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>5</user_class>
+      <prev_quest>226</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

@@ -1,0 +1,532 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc28_9939_struggle</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>28</qchapter>
+      <qid>9939</qid>
+      <designer>유지은</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9940</nextqid>
+      <nextqname>mqc28_9940_value_of_trust</nextqname>
+      <nextqnpc>n2062_hologram_nophee</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Deepening Conflict]]></qkname>
+      <qnpc>
+         <npcid>2062</npcid>
+         <npcename>n2062_hologram_nophee</npcename>
+         <npckname>홀로그램 노르페</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3080</npcid>
+         <npcename>n3080_raven_guard</npcename>
+         <npckname>청오당 병사</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3081</npcid>
+         <npcename>n3081_rhadames_guard</npcename>
+         <npckname>라다메스 경비병</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>3082</npcid>
+         <npcename>n3082_developer</npcename>
+         <npckname>아에르갈 기술자</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-accepting" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-accepting-acceptted" mid="6" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9938_sp_05.ogg}<BR>I don't think it's possible, but it will surely serve as a good lesson for me if you succeed.<BR>Then, I will trust you with this mission, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-1" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-1-a" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay, you can count on me!<BR>(I better start by hearing each one of them out.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-1-a" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-1-" mid="10" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Hologram Norfe$<BR>Everyone, <FONT color=#387206>{user_nick}</FONT> here will lead the mission.<BR>If you have any difficulties, please let me know and cooperate to repair the pipes safely.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1" image="QW_Hologram.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-a" mid="12" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Blue Clan Soldier${action:Talk}<BR>What, are you some kind of <FONT color=#a82424>boss</FONT> here or something?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-a" image="" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-b" mid="14" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Rhadames Soldier$<BR>How dare you speak to <FONT color=#387206>{user_nick}</FONT> like that!<BR>Don't be rude. If it weren't for <FONT color=#387206>{user_nick}</FONT>, we would be dead right now!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-b" image="QW_135.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-c" mid="16" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Blue Clan Soldier$<BR>Well, no matter how well you get along... <FONT color=#7e12d2>(The arrogant soldier turns surprised.)</FONT><BR>Huh?! Uh... You... Aren't you the <FONT color=#a82424>winner of the Great Arena</FONT>? The one that came to <FONT color=#a82424>Byeoko Village</FONT>?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-c" image="QW_132.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-d" mid="18" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Uh… Yeah, I won in the </FONT><FONT color=#a82424>Great Arena</FONT><FONT color=#662500> and went to </FONT><FONT color=#086171>Byeoko Village</FONT><FONT color=#662500>…<BR>(Is he a native of Byeoko Village? He must remember me somehow.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-d" image="QN_seokyung.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-e" mid="20" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Blue Clan Soldier${action:Talk}{sound:npc_Raven_qu9939_sp_01.ogg}<BR>Hey! It's you! It is an honor to meet the <FONT color=#a82424>Warrior of the Southern Territory, respected guest of Byeoko Village</FONT>!<BR>My family lived right next to Sohyang river dam! What are the chances we'd meet here?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-e" image="" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-f" mid="22" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(At least he kept it short.)<BR>Then, give me a moment, will you? Why are you so angry?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-f" image="QW_132.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-g" mid="24" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Blue Clan Soldier${action:Talk}{sound:npc_Raven_qu9939_sp_02.ogg}<BR>Well, I think the <FONT color=#a82424>Blue Clan</FONT> should be in charge of this operation!<BR>We are the greatest faction in Red Lotus Palace, an organization of the <FONT color=#a82424>mightiest fighters</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-g" image="QW_117.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-h" mid="26" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>How is that related to</FONT><FONT color=#a82424> pipe repairs</FONT><FONT color=#662500>?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-h" image="" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-i" mid="28" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Blue Clan Soldier${sound:npc_Raven_qu9939_sp_03.ogg}<BR>Of course there's a connection! We are going to a place filled with potential enemies,<BR>so they have to listen to the strong ones who will be protecting them!<BR><FONT color=#a82424>It is the law of this</FONT> <FONT color=#a82424>world </FONT><FONT color=#a82424>that the weak must obey the strong</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-i" image="QW_117.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-1-j" mid="30" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Rhadames Soldier$<BR>What a load of crap! You don't even know the way there.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-1-j" image="" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-2" mid="32" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Blue Clan Soldier$<BR>Just tell us where to go and we'll lead the way. The <FONT color=#a82424>map</FONT> should be entrusted to the <FONT color=#a82424>leader</FONT>!<BR>Either way, it's obvious the <FONT color=#a82424>Blue Clan</FONT> should be in charge of this mission!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-2" image="" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-2-" mid="34" select_type="5" />
+      <talk_question mid="33"><![CDATA[<html>$Blue Clan Soldier${action:Talk}<BR>You're strong enough to know what I mean.<BR>How can one be protected by the strong and not listen to what the strong says?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3082_developer-2-a" mid="36" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Aergal Engineer${action:Talk}<BR>What <FONT color=#a82424>ignorant nonsense</FONT>…<BR>Do you also think <FONT color=#a82424>fighting is all there is</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2-a" image="QN_Lily.dds" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3082_developer-2-b" mid="38" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Rhadames Soldier$<BR>Watch yourself! You are speaking to a companion of your <FONT color=#a82424>Princess</FONT> who went with her<BR>to save an <FONT color=#a82424>Aergalian child</FONT> not long ago!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2-b" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3082_developer-2-c" mid="40" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>$Aergal Engineer$<BR>Well, thank you again for saving the child.<BR>But you must have done it for your own <FONT color=#a82424>reasons</FONT>, so just how long do I have to grovel with gratitude?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2-c" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3082_developer-2-d" mid="42" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Whew… What the heck?)<BR>Hey now, there's no need to talk like that.<BR>Anyway, what are your grievances regarding this mission?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2-d" image="QW_13050.dds" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3082_developer-2-e" mid="44" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>$Aergal Engineer$<BR>Well, for starters, the technical accomplishments you have made here are commendable, but only by the standards of you outsiders.<BR>To us Aergalians they are on the level of <FONT color=#a82424>children's toys</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2-e" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3082_developer-2-f" mid="46" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>$Rhadames Soldier$<BR>See, this is how <FONT color=#a82424>rude</FONT> you've been this whole time!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2-f" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3082_developer-2-g" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Please wait your turn to speak.<BR>I need to hear the full story, so can you wait </FONT> <FONT color=#a82424>a little longer </FONT><FONT color=#662500>for your turn to talk?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2-g" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3082_developer-2-h" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Rhadames Soldier$<BR>... Yes, my apologies…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2-h" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3082_developer-2-i" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Aergal Engineer${sound:npc_Aergal_qu9939_sp_01.ogg}<BR>We Aergalians have solved all manner of issues with our <FONT color=#a82424>amazing technology</FONT>.<BR>It <FONT color=#a82424>makes no sense</FONT> for us to be bossed around by <FONT color=#a82424>Outsiders</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-2-i" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3082_developer-3" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Aergal Engineer$<BR>If our kingdom didn't suddenly collapse like that... If we hadn't become refugees...<BR>Your <FONT color=#a82424>old-fashioned facilities</FONT> would never have a <FONT color=#a82424>high-quality human resource</FONT> like myself to mobilize.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3082_developer-3" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3082_developer-3-" mid="56" select_type="5" />
+      <talk_question mid="55"><![CDATA[<html>$Aergal Engineer${sound:npc_Aergal_qu9939_sp_02.ogg}<BR>So, of course you have to do your best to protect me, the <FONT color=#a82424>brains of the operation</FONT>.<BR>And it's only natural that you listen to the <FONT color=#a82424>instructions</FONT> coming from your intellectual and technical superior.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3" image="" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-3-a" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Rhadames Guard${action:Talk}<BR>I don't need to hear any more of this.<BR><FONT color=#387206>{user_nick}</FONT>, how dare someone who fled to <FONT color=#086171>Rhadames</FONT> talk to us like that?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3-a" image="QN_hongryun_pether.dds" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="Npc_Right_blue_raven_soilder.dds" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-3-b" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Blue Clan Soldier$<BR>We only came here because Master <FONT color=#a82424>Ultima</FONT> told us to. What other reason would we have to be here?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3-b" image="" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-3-c" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$Aergal Engineer$<BR>I never wanted anything from you ignorant people to begin with.<BR>And if I could go back now, I would.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3-c" image="QW_refugee.dds" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-3-d" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$Rhadames Guard${action:Talk}<BR>And yet you came! Because we were willing to accept even the likes of you after you ended up as <FONT color=#a82424>refugees</FONT>!<BR>That's the kind of people we are!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3-d" image="QW_Rhadames.dds" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-3-e" mid="66" select_type="2" />
+      <talk_question mid="65"><![CDATA[<html>$Rhadames Guard${sound:npc_Rhadames_qu9939_sp_01.ogg}<BR>Do you know what we've been doing here this whole time?<BR>In this <FONT color=#a82424>barren land</FONT> we established facilities little by little, took in people<BR>and <FONT color=#a82424>devoted ourselves</FONT> to ensuring they had food to eat and a means to survive.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3-e" image="" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-3-f" mid="68" select_type="2" />
+      <talk_question mid="67"><![CDATA[<html>$Rhadames Guard${sound:npc_Rhadames_qu9939_sp_02.ogg}<BR>To complete our mission, to save as many people as possible,<BR><FONT color=#a82424>we were willing to kill or be killed.</FONT> That is our way!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3-f" image="QN_refugeeboy.dds" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-3-g" mid="70" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(But… Isn't it natural to be willing to kill or be killed…?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3-g" image="" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-3-h" mid="72" select_type="2" />
+      <talk_question mid="71"><![CDATA[<html>$Rhadames Guard$<BR>That's how we defended this place. So how dare you crawl in from the outside and <FONT color=#a82424>tell us how to mind our affairs</FONT>?<BR>Do you think we <FONT color=#a82424>sacrificed</FONT> ourselves to endure this from you?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3-h" image="" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-3-i" mid="74" select_type="2" />
+      <talk_question mid="73"><![CDATA[<html>$Aergal Engineer$<BR>But you didn't sacrifice for us,<BR>you simply suffered losses because you acted in a manner that wasn't sufficiently intelligent to meet your goals at the time...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-3-i" image="" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-4" mid="76" select_type="2" />
+      <talk_question mid="75"><![CDATA[<html>$Rhadames Guard${action:Talk}<BR><FONT color=#a82424>Shut up! </FONT>I won't just stand here and listen to you belittle our sacrifice like that!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3081_rhadames_guard-4" image="QW_Rhadames.dds" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3081_rhadames_guard-4-" mid="78" select_type="5" />
+      <talk_question mid="77"><![CDATA[<html>$Rhadames Guard${sound:npc_Rhadames_qu9939_sp_03.ogg}<BR>Someone who escapes to Rhadames should listen to the orders of Rhadames.<BR>Of course the people of Rhadames should lead!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4" image="QW_132.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-a" mid="80" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Blue Clan Soldier$<BR>There, has everybody heard our arguments? I believe our friend has been sufficiently convinced.<BR>The <FONT color=#a82424>Blue Clan</FONT> must lead!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-a" image="" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-b" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Aergal Engineer$<BR>You really are <FONT color=#a82424>stupid</FONT>. I can barely stand talking to you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-b" image="QW_117.dds" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-c" mid="84" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>$Rhadames Guard$<BR>Like I've been saying this whole time,<BR>you don't even know the way!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-c" image="" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-d" mid="86" select_type="2" />
+      <talk_question mid="85"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Listen up, everyone. Just give some thought to what each of you are saying.<BR>Being strong doesn't solve everything. Does winning fights fix the pipes?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-e" mid="88" select_type="2" />
+      <talk_question mid="87"><![CDATA[<html>$Aergal Engineer$<BR>See? That's what I'm saying.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-e" image="QW_117.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-f" mid="90" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>But you aren't in the position to speak either, Aergalian.<BR>If you want to go to the facilities, you have to walk a treacherous path.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-f" image="QW_117.dds" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-g" mid="92" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>$Rhadames Guard$<BR>That's why we should lead!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-g" image="" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-h" mid="94" select_type="2" />
+      <talk_question mid="93"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Sure, you won't be able to get there without the guidance of Rhadames.<BR>But you can't fix the pipes yourselves either.<BR>So if you have no choice but to </FONT><FONT color=#a82424>cooperate</FONT><FONT color=#662500>, there's no cause for fighting-…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-h" image="" itemindex="" portrait_left="Npc_Left_rhadames.dds" portrait_right="Npc_Right_blue_raven_soilder.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-i" mid="96" select_type="2" />
+      <talk_question mid="95"><![CDATA[<html>$Blue Clan Soldier${action:Talk}<BR>What? So we, the strong ones, have to serve these weaklings?<BR>You're saying such weak things for a <FONT color=#a82424>brave warrior of the Great Arena</FONT>. <FONT color=#a82424>How disappointing!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_blue_raven_soilder.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-j" mid="98" select_type="2" />
+      <talk_question mid="97"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It's not that I'm weak, it's just that I've given it some thought.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-j" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="Npc_Right_blue_raven_soilder.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-k" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>$Aergal Engineer${action:Talk}<BR>That's your conclusion after giving it thought...? Haha...<BR>I can't accept intelligent people like us having to listen to the orders of ignorant knuckle-draggers.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-k" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-l" mid="102" select_type="2" />
+      <talk_question mid="101"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Why does anyone have to listen to orders?<BR>I said to </FONT><FONT color=#a82424>cooperate</FONT><FONT color=#662500>, not give or follow </FONT><FONT color=#a82424>orders</FONT><FONT color=#662500>-...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-l" image="" itemindex="" portrait_left="NPC_Left_Engineer_Aergal.dds" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-m" mid="104" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>$Rhadames Guard${action:Talk}<BR>See how stubborn they are?<BR>Is it even possible to do the job with those two butting heads? <FONT color=#a82424>I don't think so!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-n" mid="106" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>... Hey.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-n" image="QW_Rhadames.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-o" mid="108" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Rhadames Guard$<BR>They know nothing of the <FONT color=#a82424>spirit of sacrifice</FONT>. Or the resolve to complete a mission.<BR>These obstinate mules have no gratitude for <FONT color=#086171>Rhadames</FONT> taking them in-…!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-o" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-p" mid="110" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>${user_nick}$<BR><FONT color=#a82424>... HEY!!!!!!!!!!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-p" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-q" mid="112" select_type="2" />
+      <talk_question mid="111"><![CDATA[<html>$Rhadames Guard$<BR>Oh?!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-q" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-r" mid="114" select_type="2" />
+      <talk_question mid="113"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I've heard enough. You guys are hopeless.<BR>And for that reason, </FONT><FONT color=#a82424>I-will-be-the-one-in-charge.</FONT><FONT color=#662500> You will answer to me.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-r" image="QW_132.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-s" mid="116" select_type="2" />
+      <talk_question mid="115"><![CDATA[<html>$Blue Clan Soldier$<BR>B-but our faction is…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-s" image="QW_gust_dragon.dds" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="Npc_Right_rhadames.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-t" mid="118" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay, about that. Do you really think you're stronger than me? More capable than me?<BR>Have you fought more Childs than me? Does that mean you've taken on a few </FONT><FONT color=#a82424>Dragons</FONT><FONT color=#662500>?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-t" image="" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-4-u" mid="120" select_type="2" />
+      <talk_question mid="119"><![CDATA[<html>$Aergal Engineer$<BR>What cause do you have to think you're more competent than me...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-4-u" image="" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-5" mid="122" select_type="2" />
+      <talk_question mid="121"><![CDATA[<html>${user_nick}$<BR><FONT color=#a82424>Pfft, be quiet!</FONT><FONT color=#662500> All you guys do is talk about yourselves.<BR>None of you are fit to be leaders. </FONT><FONT color=#a82424>I'll do it. Just do as you're told!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n3080_raven_guard-5" image="" itemindex="" portrait_left="Npc_Left_blue_raven_soilder.dds" portrait_right="NPC_Right_Engineer_Aergal.dds" center_image="">
+      <talk_answer link_index="n3080_raven_guard-5-" mid="124" select_type="5" />
+      <talk_question mid="123"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(I guess I better inform Norfe.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-a" mid="156" select_type="2" />
+      <talk_question mid="125"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9939_sp_01.ogg}<BR>Hmm… I see.<BR>Well, considering your <FONT color=#a82424>might</FONT>, they had no choice but to obey.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5-a" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-b" mid="157" select_type="2" />
+      <talk_question mid="126"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Nah, it wasn't like that.<BR>They were just taken aback when I came at them so forcefully is all.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5-b" image="QN_pythia.dds" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-c" mid="158" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>$Hologram Norfe${sound:npc_Hologram_Norphee_qu9939_sp_02.ogg}<BR>Doesn't that mean you overwhelmed them with strength?<BR>That is something anyone in <FONT color=#7e12d2>Mistland</FONT> would understand.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5-c" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-d" mid="159" select_type="2" />
+      <talk_question mid="128"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>No, I didn't overwhelm anyone with force, and they weren't even persuaded.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5-d" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-e" mid="160" select_type="2" />
+      <talk_question mid="129"><![CDATA[<html>$Hologram Norfe$<BR>Yes?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5-e" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-f" mid="161" select_type="2" />
+      <talk_question mid="130"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>They just didn't know what to say after I laid out my resume.<BR>The important thing is </FONT><FONT color=#a82424>trust</FONT><FONT color=#662500>. That's a good place to begin.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5-f" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-g" mid="162" select_type="2" />
+      <talk_question mid="131"><![CDATA[<html>$Hologram Norfe$<BR>Haha… How intriguing.<BR>You think you can <FONT color=#a82424>trust</FONT> them?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5-g" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-h" mid="163" select_type="2" />
+      <talk_question mid="132"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>I can't come at things as coldly as you do, and... I'm not really good at talking.<BR>I just... I have no choice but to trust them and have faith they will do the job.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5-h" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-i" mid="164" select_type="2" />
+      <talk_question mid="133"><![CDATA[<html>$Hologram Norfe$<BR>I will be watching with interest.<BR>Then, I suppose it's time for you to depart.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n2062_hologram_nophee-5-i" image="" itemindex="" portrait_left="Npc_Left_Hologram.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n2062_hologram_nophee-5-!next" mid="165" select_type="4" />
+      <talk_question mid="134"><![CDATA[<html>$Quest Complete$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9939</exe>
+         <exe type="talk" npc="n2062_hologram_nophee">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="custom">api_npc_Rage(userObjID,3081);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="custom">api_npc_Rage(userObjID,3080);</exe>
+         <exe type="custom">api_npc_Rage(userObjID,3081);</exe>
+         <exe type="custom">api_npc_Rage(userObjID,3082);</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">99390,,,,,,,,,,</exe>
+         <exe type="complete" true="">9939</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n2062_hologram_nophee" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n2062_hologram_nophee" sub="" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="b" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="c" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="d" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="e" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="f" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="g" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="h" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="i" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="j" />
+   <exelink qstep="1" npc="n3080_raven_guard" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n3082_developer" sub="b" />
+   <exelink qstep="2" npc="n3082_developer" sub="c" />
+   <exelink qstep="2" npc="n3082_developer" sub="d" />
+   <exelink qstep="2" npc="n3082_developer" sub="e" />
+   <exelink qstep="2" npc="n3082_developer" sub="f" />
+   <exelink qstep="2" npc="n3082_developer" sub="g" />
+   <exelink qstep="2" npc="n3082_developer" sub="h" />
+   <exelink qstep="2" npc="n3082_developer" sub="i" />
+   <exelink qstep="2" npc="n3082_developer" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n3081_rhadames_guard" sub="b" />
+   <exelink qstep="3" npc="n3081_rhadames_guard" sub="c" />
+   <exelink qstep="3" npc="n3081_rhadames_guard" sub="d">2</exelink>
+   <exelink qstep="3" npc="n3081_rhadames_guard" sub="e" />
+   <exelink qstep="3" npc="n3081_rhadames_guard" sub="f" />
+   <exelink qstep="3" npc="n3081_rhadames_guard" sub="g" />
+   <exelink qstep="3" npc="n3081_rhadames_guard" sub="h" />
+   <exelink qstep="3" npc="n3081_rhadames_guard" sub="i" />
+   <exelink qstep="3" npc="n3081_rhadames_guard" sub="4">0,1,2</exelink>
+   <exelink qstep="4" npc="n3080_raven_guard" sub="b" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="c" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="d" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="e" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="f" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="g" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="h" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="i">2</exelink>
+   <exelink qstep="4" npc="n3080_raven_guard" sub="j" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="k">4</exelink>
+   <exelink qstep="4" npc="n3080_raven_guard" sub="l" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="m">3</exelink>
+   <exelink qstep="4" npc="n3080_raven_guard" sub="n" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="o" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="p" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="q" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="r" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="s" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="t" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="u" />
+   <exelink qstep="4" npc="n3080_raven_guard" sub="5">0,1</exelink>
+   <exelink qstep="5" npc="n2062_hologram_nophee" sub="b" />
+   <exelink qstep="5" npc="n2062_hologram_nophee" sub="c" />
+   <exelink qstep="5" npc="n2062_hologram_nophee" sub="d" />
+   <exelink qstep="5" npc="n2062_hologram_nophee" sub="e" />
+   <exelink qstep="5" npc="n2062_hologram_nophee" sub="f" />
+   <exelink qstep="5" npc="n2062_hologram_nophee" sub="g" />
+   <exelink qstep="5" npc="n2062_hologram_nophee" sub="h" />
+   <exelink qstep="5" npc="n2062_hologram_nophee" sub="i">0</exelink>
+   <exelink qstep="5" npc="n2062_hologram_nophee" sub="!next">1</exelink>
+   <journal_data recompense="99390" quest_title="깊어가는 갈등" chapterid="28" quest_level="95" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_blue_raven_soilder.dds</contents_image>
+         <destination_pos>175,n3080</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3080</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="135"><![CDATA[Blue Raven's Strength]]></title>
+         <contents mid="136"><![CDATA[<html>There seems to be a clash between factions with the <FONT color=#a82424>Aergal Refugees</FONT> and <FONT color=#a82424>Blue Clan members</FONT> gathered in <FONT color=#086171>Rhadames</FONT>. Even though this kind of dispute is typical of <FONT color=#7e12d2>Mistland</FONT>, you can't just stand by and watch them squabble. Try talking to the <FONT color=#a82424>Blue Clan</FONT> member first.<BR><BR><FONT color=#086171>Rhadames </FONT>- <FONT color=#a82424>Blue Clan Soldier</FONT></html>]]></contents>
+         <destination mid="137"><![CDATA[(Solo) Speak with Blue Clan Soldier in the Rhadames]]></destination>
+         <todo_msg mid="138"><![CDATA[Speak with Blue Clan Soldier.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Engineer_Aergal.dds</contents_image>
+         <destination_pos>175,n3082</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3082</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="139"><![CDATA[Mole's Wisdom]]></title>
+         <contents mid="140"><![CDATA[<html>The <FONT color=#a82424>Blue Clan Soldier</FONT> argues that it is only natural that the <FONT color=#a82424>strongest</FONT> lead. But is that really true? Now try speaking with the <FONT color=#a82424>Aergal Engineer</FONT>.<BR>
+<BR><FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Aergal Engineer</FONT></html>]]></contents>
+         <destination mid="141"><![CDATA[(Solo) Talk to Aergal Engineer in Rhadames]]></destination>
+         <todo_msg mid="142"><![CDATA[Speak with Aergal Engineer.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_rhadames.dds</contents_image>
+         <destination_pos>175,n3081</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3081</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="143"><![CDATA[Bee's Patience]]></title>
+         <contents mid="144"><![CDATA[<html>The <FONT color=#a82424>Aergal Engineer</FONT> says the most intellectually superior deserves to lead. Now speak to the <FONT color=#a82424>Rhadames Guard</FONT>, who is blinded by rage.<BR><BR>
+<FONT color=#086171> Rhadames  </FONT>- <FONT color=#a82424> Rhadames Guard </FONT></html>]]></contents>
+         <destination mid="145"><![CDATA[(Solo) Speak with Rhadames Guard in Rhadames]]></destination>
+         <todo_msg mid="146"><![CDATA[Speak with Rhadames Guard.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_blue_raven_soilder.dds</contents_image>
+         <destination_pos>175,n3080</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>3080</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="147"><![CDATA[Intervene? But How?]]></title>
+         <contents mid="148"><![CDATA[<html>You heard everything the three had to say. Above all, the <FONT color=#a82424>Blue Clan Soldier</FONT> values <FONT color=#086171>strength</FONT>, the <FONT color=#a82424>Aergal Engineer</FONT> values <FONT color=#086171>technological prowess</FONT>, and the <FONT color=#a82424>Rhadames Guard</FONT> values <FONT color=#086171>sacrifice and perseverance</FONT>. They <FONT color=#a82424>all want to be in charge</FONT>. Is there any way to make them cooperate?<BR><BR>
+<FONT color=#086171>Rhadames</FONT> - <FONT color=#a82424>Blue Clan Soldier</FONT></html>]]></contents>
+         <destination mid="149"><![CDATA[(Solo) Speak with Blue Clan Soldier in the Rhadames]]></destination>
+         <todo_msg mid="150"><![CDATA[Speak with Blue Clan Soldier.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Hologram.dds</contents_image>
+         <destination_pos>175,n2062</destination_pos>
+         <destination_mode>custom:175@1</destination_mode>
+         <statemark_npcid>2062</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="151"><![CDATA[Do What You Can]]></title>
+         <contents mid="152"><![CDATA[<html>You couldn't take it anymore and simply decided to take charge of the operation. It seems you'll have to personally show them what trust means. Now go speak with <FONT color=#a82424>Hologram Norfe</FONT>.<BR><BR>
+<FONT color=#086171> Rhadames</FONT> - <FONT color=#a82424>  Hologram Norfe</FONT></html>]]></contents>
+         <destination mid="153"><![CDATA[(Solo) Speak with Hologram Norfe in Rhadames]]></destination>
+         <todo_msg mid="154"><![CDATA[Speak with Hologram Norfe.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>95:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>9938</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

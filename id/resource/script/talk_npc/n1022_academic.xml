@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n1022_academic</npcename>
+      <npcid>1022</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Tinkerer Comelina]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#387206>${user_nick}$<BR></FONT><FONT color=#7e12d2>Terlihat halusinasi yang tidak mungkin kelihatan.</FONT><BR><FONT color=#7e12d2>Wajah yang kelihatan sedang menahan nangis.</FONT><BR>
+<FONT color=#7e12d2>Apa yang sedang dilihat...</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="4"><![CDATA[<html>$Tinkerer Comelina$<BR>
+Gorge ini dulunya kuburan...<BR>
+Mungkin karena itu, tempat ini membuat hati menjadi tenang.<BR>
+Apa yang orang mati pikirkan ya?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="enterquest">mq15_9247_fateful_future</exe>
+         <exe type="conexe" true="3" false="5">1</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="6" false="4">2</exe>
+         <exe type="enterquest">mq15_9384_sacrifice_of_generation</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9247</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="hasquest">9384</chk>
+      </conditions>
+   </talk>

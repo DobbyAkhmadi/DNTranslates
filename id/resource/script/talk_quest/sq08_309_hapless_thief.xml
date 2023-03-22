@@ -1,0 +1,322 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq08_309_hapless_thief</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>309</qid>
+      <designer>김인정</designer>
+      <qlevel>18</qlevel>
+      <qdesc>스테이지 1번만 가도록 수정</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[The Hapless Thief]]></qkname>
+      <qnpc>
+         <npcid>26</npcid>
+         <npcename>n026_trader_may</npcename>
+         <npckname>소모품 상인 메이</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>266</npcid>
+         <npcename>n266_invisible_thief</npcename>
+         <npckname xml:space="preserve">　</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>35</npcid>
+         <npcename>n035_soceress_master_tiana</npcename>
+         <npckname>상급 소서리스 티아나</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-noquest" image="QN_Npc_SoceressTiana.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Merchant May$<BR>Ugh~ pria yang mencuri makananku akan jatuh sakit jika aku dapat menangkapnya. <BR><FONT color=#7e12d2>(Dapatkan quest dari Master Sorceress Tiana.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n266_invisible_thief-noquest" image="QN_Npc_SoceressTiana.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Invisible Thief$<BR>Bau yang sangat tidak enak? Siapa yang membuat makanan seaneh ini?<BR><FONT color=#7e12d2>(Dapatkan quest dari Master Sorceress Tiana.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-accepting" image="QW_21.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-accepting-a" mid="8" select_type="0"><![CDATA[<html>Aku?</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Sorceress Tiana${action:talk}<BR>Aku telah mendengarnya dan aku tak dapat pergi dari <FONT color=#a82424>Fairystar Magic Laboratory</font> berbau seperti ini. Dapatkah kamu membuatkanku beberapa <FONT color=#a82424>Deodorant</font> untuk menghilangkannya? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-accepting-a" image="QW_21.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-accepting-b" mid="10" select_type="0"><![CDATA[<html>Hmm...Baiklah.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Master Sorceress Tiana$<BR>Walaupun hanya seorang thief, tak akan kubiarkan Fairystar berbau seperti sampah. Mengerti?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-accepting-c" mid="12" select_type="0"><![CDATA[<html><FONT color=#086171>Terima Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$The Unlucky Thief$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-accepting-c" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Master Sorceress Tiana$<BR><FONT color=#a82424>Merchant May</font> mungkin dapat membuat <FONT color=#a82424>Deodorant</font>. <BR>Tapi belakangan ini wanita itu sibuk memasak, aku tak yakin dia punya waktu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-1" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-1-a" mid="16" select_type="0"><![CDATA[<html>Ok...baik</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Master Sorceress Tiana$<BR><FONT color=#a82424>Merchant May</font> mungkin dapat membuat <FONT color=#a82424>Deodorant</font>. <BR>Tapi belakangan ini wanita itu sibuk memasak, aku tak yakin dia punya waktu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-1-a" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="17"><![CDATA[<html>$Master Sorceress Tiana${action:talk}<BR>Terakhir kali<FONT color=#a82424>Merchant May</font> membuat Nutritious Hound Feed, bau tidak enak menyelimuti seluruh tempat selama satu bulan. <BR>Siapa lagi yang dapat membuatnya lebih baik? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-1" image="QN_Npc_SoceressTiana.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="18"><![CDATA[<html>$Merchant May$<BR>Ugh~  pria yang mencuri makananku akan jatuh sakit jika aku dapat menangkapnya! <BR><FONT color=#7e12d2>(Bicaralah kepada Master Sorceress Tiana.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n266_invisible_thief-1" image="QN_Npc_SoceressTiana.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>$Invisible Thief$<BR>Bau yang sangat tidak enak? Siapa yang membuat makanan seaneh ini??<BR><FONT color=#7e12d2>(Bicaralah kepada Master Sorceress Tiana.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-2" image="QN_Npc_Woman_Trader_May.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="20"><![CDATA[<html>$Master Sorceress Tiana$<BR>Terakhir kali <FONT color=#a82424>May</font> membuat Nutritious Hound Feed, bau tidak enak menyelimuti seluruh tempat selama satu bulan. Siapa lagi yang dapat membuatnya lebih baik? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2" image="QN_Npc_Woman_Trader_Doris.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-a" mid="22" select_type="0"><![CDATA[<html> (May terlihat bingung) </html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Merchant May${action:talk}<BR>Ya? Apakah seseorang membuat <FONT color=#a82424>Nutritious Hound Feed</font>? Bukan aku kali ini. Adakah orang yang mengetahui resepnya? Aku yakin pastilah <FONT color=#a82424>Doris</font> dari <FONT color=#a82424>Prairie Town</font>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-b" mid="24" select_type="0"><![CDATA[<html>(May mencari bukti piagam penghargaan memasaknya)</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Merchant May$<BR>Bagaimanapun, aku akan membuat <FONT color=#a82424>Super Strong Cleanser</font>. <BR>Dapat digunakan dan membersihkan bau dari tubuh. Jadi...aku perlu sesuatu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-b" image="QS_Default.dds" itemindex="400108" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-2-c" mid="26" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Merchant May$<BR><FONT color=#7e12d2>(Membuka Cookbook) Sekarang...kita memerlukan beberapa <FONT color=#a82424>Blizzard Sorceress Tarantula Extract</font>. Dapatkah kamu mencarikan beberapa untukku? Aku sangat sibuk.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="27"><![CDATA[<html>$Merchant May${action:Angry}<BR>Hmm ~ aku sudah menyiapkan seluruh persiapan untuk kompetisi memasak dan seseorang mencurinya. <BR> Aku akan memburu Thief jelek itu!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-3" image="QW_21.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="30"><![CDATA[<html>$Merchant May$<BR>Bunuh <FONT color=#a82424>Blizzard Tarantulas</font> di <FONT color=#a82424>Fairystar Magic Laboratory</font>. Bunuh sekitar 20 dan aku akan dapat memprosesnya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-3" image="QW_21.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="31"><![CDATA[<html>$Master Sorceress Tiana$<BR>Apa kamu menemukan May? Ini tak dapat dibiarkan karena <FONT color=#a82424>Fairystar Magic Laboratory</font> berbau seperti Hound's Food. Jadi cepatlah melakukan persiapan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n266_invisible_thief-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n266_invisible_thief-3-a" mid="33" select_type="0"><![CDATA[<html>Baik. Aku akan kembali.</html>]]></talk_answer>
+      <talk_question mid="32"><![CDATA[<html>$Invisible Thief$<BR>Ew ~ Aku sangat bau! Kalau aku tidak invisible, aku akan mengundang perhatian semua monster dan aku dalam bahaya sekarang. Bagaimana ini dapat membantu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n266_invisible_thief-3-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="34"><![CDATA[<html>$Invisible Thief$<BR>Aku akan menunggu kembalinya dia. Semoga monster tidak menemukan aku.<BR> <FONT color=#7e12d2>(Melanjutkan bergumam)</font> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-4-a" mid="36" select_type="0"><![CDATA[<html>(Memberikan May Spider Extract)</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Merchant May${action:talk}<BR>Oh, aku sangat sibuk. Mengapa ada orang mencuri makananku? Aku tak keberatan berbagi jika mereka memintanya. Hmph! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-4-a" image="QS_Default.dds" itemindex="300215" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n026_trader_may-5" mid="38" select_type="0"><![CDATA[<html>(Sepertinya tak dapat dikonsumsi manusia)</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Merchant May$<BR>Oops! Tunggu sebentar ~ hampir selesai. <FONT color=#7e12d2>(Menaburi Spider Extract ke dalam pot yang penuh cairan bergelegak. Warnanya secara mister berubah gelap)</font>  <BR>Selesai! Mungkin ada efek samping dan aku belum pernah mencobanya. Semoga beruntung!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n026_trader_may-5" image="QW_21.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="39"><![CDATA[<html>$Merchant May$<BR>Sampai jumpa lagi!<BR><FONT color=#7e12d2>(Kembalilah ke Invisible Thief di Fairystar Magic Laboratory.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n266_invisible_thief-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n266_invisible_thief-5-a" mid="41" select_type="0"><![CDATA[<html> ... ini. (Baunya aneh) </html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Invisible Thief$<BR>Apa aroma yang manis ini? Apa kamu membawa <FONT color=#a82424>Deodorant</font> yang akan melepaskanku dari bau ini? Ayo...berikan padaku!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n266_invisible_thief-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n266_invisible_thief-6" mid="43" select_type="0"><![CDATA[<html>(Terlihat tidak ada reaksi.)</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Invisible Thief$<BR>Ahhh..aku merasa lebih baik! Sungguh menjengkelkan hidup berbau busuk. Aku akan belajar dari kesalahan seperti ini dan memulai hidup baru.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n266_invisible_thief-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="44"><![CDATA[<html>$Invisible Thief$<BR>Kalau begitu, Selamat tinggal Young Adventurer! Kalau berjodoh kita akan bertemu kembali! <BR><FONT color=#7e12d2>(suara langkah kaki menjauh)</font></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-6" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-6-a" mid="46" select_type="0"><![CDATA[<html>May memberitahuku dialah thief yang mencuri makanannya.</html>]]></talk_answer>
+      <talk_question mid="45"><![CDATA[<html>$Master Sorceress Tiana$<BR>Apa yang terjadi dengan <FONT color=#a82424>Strange Odour</font>? Apa? Sudah hilang? ...Hmm, aku berharap kita menangkap thief tapi sepertinya juga tidak ada yang dicuri.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-6-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-6-b" mid="48" select_type="0"><![CDATA[<html>Sob Sob (dengan pelan)</html>]]></talk_answer>
+      <talk_question mid="47"><![CDATA[<html>$Master Sorceress Tiana${action:talk}<BR>Benar? Kamu juga tidak membawanya ke dia? <BR>Gunakan untuk menangkap thief...si jelek itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-6-b" image="QW_21.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-6-c" mid="50" select_type="0"><![CDATA[<html>(Tiana berubah menjadi sangat menyenangkan)</html>]]></talk_answer>
+      <talk_question mid="49"><![CDATA[<html>$Master Sorceress Tiana$<BR>Bagaimanapun aroma di <FONT color=#a82424>Fairystar Magic Laboratory</font> telah hilang. Terima kasih.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-6-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n035_soceress_master_tiana-6-d" mid="52" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n035_soceress_master_tiana-6-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="53"><![CDATA[<html>$Master Sorceress Tiana${action:talk}<BR>Hmmm... Aku masih penasaran dengan apa yang <FONT color=#a82424>thief</font> itu rencanakan. Hampir tidak ada yang berharga untuk dicuri di Calderock.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">3097,3091,3092,3093,3094,3095,3096,3097,3098,3099</exe>
+         <exe type="setquest">309</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="huntmon" num="20" party="1" exe="" onexe="1">507</exe>
+         <exe type="addquestitem" num="1">400108</exe>
+         <exe type="huntitem" num="20" exe="3,6,7" onexe="">400108</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="1">200507</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">400108</exe>
+         <exe type="addquestitem" num="1">300215</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">300215</exe>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">3097,3091,3092,3093,3094,3095,3096,3097,3098,3099</exe>
+         <exe type="complete" true="">309</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n035_soceress_master_tiana" sub="b">0</exelink>
+   <exelink qstep="accepting" npc="n035_soceress_master_tiana" sub="c">1,2,3</exelink>
+   <exelink qstep="1" npc="n035_soceress_master_tiana" sub="a">0,1</exelink>
+   <exelink qstep="2" npc="n026_trader_may" sub="b" />
+   <exelink qstep="2" npc="n026_trader_may" sub="c">6,7</exelink>
+   <exelink qstep="4" npc="n026_trader_may" sub="5">0,1,2,3</exelink>
+   <exelink qstep="5" npc="n266_invisible_thief" sub="6">0,1,2</exelink>
+   <exelink qstep="6" npc="n035_soceress_master_tiana" sub="b" />
+   <exelink qstep="6" npc="n035_soceress_master_tiana" sub="c">0</exelink>
+   <exelink qstep="6" npc="n035_soceress_master_tiana" sub="d">1</exelink>
+   <journal_data recompense="1:3091,2:3092,3:3093,4:3094,5:3095,6:3096,7:3097,8:3098,9:3099" quest_title="불운한 도둑" chapterid="" quest_level="18" quest_mark_type="10" use_item_list="400108,300215">
+      <journal index="1">
+         <contents_image>QN_Npc_SoceressTiana.dds</contents_image>
+         <destination_pos>8,n35</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>35</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="55"><![CDATA[Tiana's Request]]></title>
+         <contents mid="56"><![CDATA[<html>Master Sorceress Tiana ingin mendiskusikan aroma aneh di Fairystar Magic Laboratory<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Master Sorceress Tiana</FONT></html>]]></contents>
+         <destination mid="57"><![CDATA[Bicaralah kepada Master Sorceress Tiana]]></destination>
+         <todo_msg mid="58"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="59"><![CDATA[May's Secret]]></title>
+         <contents mid="60"><![CDATA[<html>Tanyakan bagaimana cara membuat Deodorant.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→May</FONT></html>]]></contents>
+         <destination mid="61"><![CDATA[Bicaralah kepada Merchant May]]></destination>
+         <todo_msg mid="62"><![CDATA[Bicaralah kepada Merchant May]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Blizzard Sorceress Tarantula Extract]]></title>
+         <contents mid="65"><![CDATA[<html>Kalahkah Blizzard Sorceress Tarantulas di Fairystar Magic Laboratory dan kumpulkan beberapa Blizzard Sorceress Tarantula Spider Extract.<BR><BR><FONT color=#086171>Crystal Stream → Blizzard Plain (Secret Path)</FONT> <FONT color=#a82424>→Fairystar Magic Laboratory</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Kalahkan monster di Fairystar Magic Laboratory]]></destination>
+         <todo_msg mid="67"><![CDATA[Pergilah ke Fairystar Magic Laboratory dan kalahkan Blizzard Sorceress Tarantulas.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Woman_Trader_May.dds</contents_image>
+         <destination_pos>8,n26</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>26</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="68"><![CDATA[Super Strong Cleanser]]></title>
+         <contents mid="69"><![CDATA[<html>Kembalilah ke Merchant May dan antar Spider Extract untuk mendapatkan Super Strong Cleanser.<BR> <BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ May</FONT></html>]]></contents>
+         <destination mid="70"><![CDATA[Bicaralah kepada Merchant May]]></destination>
+         <todo_msg mid="71"><![CDATA[Quest telah selesai. Laporkan kepada Merchant May.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QW_21.dds</contents_image>
+         <destination_pos>153,n266</destination_pos>
+         <destination_mode>custom:151@1,152@1,153@1</destination_mode>
+         <statemark_npcid>266</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="72"><![CDATA[Odour Removal]]></title>
+         <contents mid="73"><![CDATA[<html>Merchant May telah memberimu Super Strong Cleanser. Kembalilah ke Fairystar Magic Laboratory dan berikan ke Invisible Thief.<BR><BR><FONT color=#086171>Crystal Stream → Blizzard Plain (Secret Path)</FONT> <FONT color=#a82424>→ Fairystar Magic Laboratory</FONT></html>]]></contents>
+         <destination mid="74"><![CDATA[Bicaralah kepada Invisible Thief]]></destination>
+         <todo_msg mid="75"><![CDATA[Bicaralah kepada Invisible Thief di Fairystar Magic Laboratory]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_SoceressTiana.dds</contents_image>
+         <destination_pos>8,n35</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>35</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="76"><![CDATA[Complete Cleansing]]></title>
+         <contents mid="77"><![CDATA[<html>Aroma telah berhasil dibersihkan dari Fairystar Magic Laboratory. Kembalilah ke Master Sorceress Tiana.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Master Sorceress Tiana</FONT></html>]]></contents>
+         <destination mid="78"><![CDATA[Bicaralah kepada Master Sorceress Tiana]]></destination>
+         <todo_msg mid="79"><![CDATA[Laporkan kepada Master Sorceress Tiana.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>17:-1</user_level>
+      <user_class />
+      <prev_quest>308</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

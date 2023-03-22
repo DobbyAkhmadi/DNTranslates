@@ -1,0 +1,54 @@
+   <talk>
+      <npcename>n2017_darklair_parfait</npcename>
+      <npcid>2017</npcid>
+      <startexe>1</startexe>
+      <comment>3 : 실버 직업 구분을 위한 공용 퀘스트
+4,6,7,8,9,10 : 아처 15레벨 45레벨 전직 퀘스트 완료 
+(239,341,764,765,766,767 )
+실버: 80 실버헌터 :81</comment>
+      <npckname mid="1"><![CDATA[Priestess of Darkness Parfait]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><BR><FONT color=#7e12d2>(There is a lady with sadness on her face whom you've never seen before.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="qu_02" mid="22"><![CDATA[<html><FONT size=2 face=Arial>The truth? What do you mean?</FONT></html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Priestess of Darkness Parfait$<BR>O the one who will conquer the nightmare.<BR>Maybe you can accept the truth about this world. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_02" image="" itemindex="">
+         <talk_answer link_index="qu_03" mid="23"><![CDATA[<html>Nightmare?</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Priestess of Darkness Parfait$<BR>The truth that everyone wants to deny... <BR>The place where they would rather believe it does not exist but it certainly does. <BR>Nightmare has creeped into this place, the purest of all places. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_03" image="" itemindex="">
+         <talk_answer link_index="qu_04" mid="24"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Priestess of Darkness Parfait$<BR>There is someone who has been led by thirst for power to choose the nightmare instead of peace. He thought he could control the nightmare, but the nightmare was much stronger than he expected. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_04" image="" itemindex="">
+         <talk_answer link_index="qu_05" mid="25"><![CDATA[<html>So this place is like a dimensional gap?</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Priestess of Darkness Parfait$<BR>His nightmare has grown too big and created a crack in the dimensions. Alas, you and I, people who should never meet, are standing before each other. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_05" image="" itemindex="">
+         <talk_answer link_index="qu_06" mid="26"><![CDATA[<html>I don't understand what you're saying.</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Priestess of Darkness Parfait$<BR>You're not ready to hear the answer yet. Both the truth and reality will not answer anything and they will only make your good will lose its way. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_06" image="" itemindex="">
+         <talk_question mid="16"><![CDATA[<html>$Priestess of Darkness Parfait$<BR>
+All I can tell you is that only your good soul can save him. </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,5" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 997, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 239, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 81 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 341, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 764, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 765, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 766, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 767, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 80</chk>
+      </conditions>
+      <exelink idx="qu_06">3,4,6,7,8,9,10</exelink>
+   </talk>

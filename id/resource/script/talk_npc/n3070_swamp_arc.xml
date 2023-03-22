@@ -1,0 +1,24 @@
+   <talk>
+      <npcename>n3070_swamp_arc</npcename>
+      <npcid>3070</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Arc]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="6"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Arc$<BR>Please keep the fact that you've seen me a secret.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="8" link_target="mqc27_9919_infinite_battlefield.xml"><![CDATA[<html>{quest_level}<FONT color=#a82424>Infinite Battlefield</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="9"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Arc$<BR>Thank you for coming this far,<FONT color=#387206> {user_nick}</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="0">0</exe>
+         <exe type="enterquest">mqc27_9919_infinite_battlefield</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9919</chk>
+      </conditions>
+   </talk>

@@ -1,0 +1,57 @@
+   <talk>
+      <npcename>n2165_darklair_phantom</npcename>
+      <npcid>2165</npcid>
+      <startexe>1</startexe>
+      <comment>4 : 다크 직업 구분을 위한 공용 퀘스트
+5,6,7,8,9,10 : 클레릭 15레벨 45레벨 전직 퀘스트 완료 
+(241,343,751,752,753,754 )
+헤러틱: 82 아크헤러틱 :83
+13 : ?마크 보여주는 임시 퀘스트 완료</comment>
+      <npckname mid="1"><![CDATA[Mysterious Phantom]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#7e12d2>(There is a phantom of a woman with a sad face.)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="qu_02" mid="5"><![CDATA[<html>What are you talking about…? Who are you?</html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Mysterious Phantom$<BR>
+<FONT color=#2b2723>You're the one who is at the boundary of darkness.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_02" image="" itemindex="">
+         <talk_answer link_index="qu_03" mid="7"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Mysterious Phantom$<BR>
+The power is still weak and you don't seem to notice it.<BR>But the fact that you can see my phantom means your power is starting to awaken...</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_03" image="" itemindex="">
+         <talk_answer link_index="qu_04" mid="9"><![CDATA[<html>What power? I don't understand what you're talking about.</html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Mysterious Phantom$<BR>Maybe it was sparked when you saved that man. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_04" image="" itemindex="">
+         <talk_answer link_index="qu_05" mid="19"><![CDATA[<html>(The space starts to become distorted.)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Mysterious Phantom$<BR>
+I can't tell you everything yet.<BR>I have too little time. <BR>
+But please remember...</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_05" image="" itemindex="">
+         <talk_question mid="20"><![CDATA[<html>(The space starts to become distorted.)</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,3" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 83 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 998, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 241, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 343, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 751, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 752, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 753, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 754, 0, 1, 1, 0);</exe>
+         <exe type="conexe" true="12" false="1">1</exe>
+         <exe type="enterquest">sq_changejob_4873_woman_identity</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 82</chk>
+         <chk type="hasquest">4873</chk>
+      </conditions>
+      <exelink idx="qu_05">4,5,6,7,8,9,10</exelink>
+   </talk>

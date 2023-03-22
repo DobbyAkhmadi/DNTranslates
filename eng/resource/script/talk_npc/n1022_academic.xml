@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n1022_academic</npcename>
+      <npcid>1022</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Academic Comelina]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html><FONT color=#387206>${user_nick}$<BR></FONT><FONT color=#7e12d2>You see a mirage.</FONT><BR><FONT color=#7e12d2>It is a face that looks like it is going to cry.</FONT><BR>
+<FONT color=#7e12d2>What is the face looking at…?</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="4"><![CDATA[<html>$Academic Comelina$<BR>
+They say this canyon used to be a grave...<BR>
+Is that why I feel calm here?<BR>
+I wonder what the dead people thought about.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="enterquest">mq15_9247_fateful_future</exe>
+         <exe type="conexe" true="3" false="5">1</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="6" false="4">2</exe>
+         <exe type="enterquest">mq15_9384_sacrifice_of_generation</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9247</chk>
+         <chk type="class" op="=">5</chk>
+         <chk type="hasquest">9384</chk>
+      </conditions>
+   </talk>

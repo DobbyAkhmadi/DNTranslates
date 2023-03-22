@@ -1,0 +1,25 @@
+   <talk>
+      <npcename>n1606_general_duglars</npcename>
+      <npcid>1606</npcid>
+      <startexe>2</startexe>
+      <comment>조건 0,1 사용안함</comment>
+      <npckname mid="1"><![CDATA[General Douglas (Anu Arendel)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="9" link_target="sqc14_4559_blade_without_handle.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Late Confession</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$General Douglas$<BR>
+Jadi ini... Anu Arendel....</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="5">0</exe>
+         <exe type="conexe" true="3" false="2">1</exe>
+         <exe type="conexe" true="4" false="5">2</exe>
+         <exe type="enterquest">sqc14_4554_belated_confession</exe>
+         <exe type="enterquest">sqc14_4559_blade_without_handle</exe>
+         <exe type="talk">001</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">4553</chk>
+         <chk type="hascomq">4554</chk>
+         <chk type="hasquest">4559</chk>
+      </conditions>
+   </talk>

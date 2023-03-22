@@ -1,0 +1,49 @@
+   <talk>
+      <npcename>n2739_ilyn_promise</npcename>
+      <npcid>2739</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Event Helper Irine]]></npckname>
+      <talk_paragraph index="basic" image="" itemindex="">
+         <talk_answer link_index="re_try" mid="15"><![CDATA[<html><FONT color=#387206>[Try Again]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="lv_ck" mid="24"><![CDATA[<html><FONT color=#2b2723>[Leave]</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Event Helper Irine$<BR>
+I never realized so many people wanted to take the oath.<BR>
+Too bad you failed this time. But you can always try again!<BR>
+Good luck, <FONT color=#387206>{user_nick}</FONT>!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="go_out_lv8" image="" itemindex="">
+         <talk_answer link_index="go_move" mid="16"><![CDATA[<html><FONT color=#387206>[Calderock Village]</FONT></html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Event Helper Irine$<BR>
+I'll send you to Calderock Village, <FONT color=#387206>{user_nick}</FONT>.<BR>
+See you later!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="go_out_lv24" image="" itemindex="">
+         <talk_answer link_index="go_move_saint" mid="21"><![CDATA[<html><FONT color=#387206>[To Saint Haven]</FONT></html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Event Helper Irine$<BR>
+I'll send you to Saint Haven, <FONT color=#387206>{user_nick}</FONT>.<BR>
+See you later!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="re_try" image="" itemindex="">
+         <talk_answer link_index="re_enter" mid="26"><![CDATA[<html>[OK]</html>]]></talk_answer>
+         <talk_question mid="25"><![CDATA[<html>$Event Helper Irine$<BR>
+Would you try one more time?<BR>
+Click [OK] when you are ready.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">basic</exe>
+         <exe type="conexe" true="4" false="5">0</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,11,1);</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,8,1);</exe>
+         <exe type="talk">go_out_lv24</exe>
+         <exe type="talk">go_out_lv8</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13661,1);</exe>
+      </executions>
+      <conditions>
+         <chk type="lvl" op=">=">24</chk>
+      </conditions>
+      <exelink idx="lv_ck">1</exelink>
+      <exelink idx="go_move">3</exelink>
+      <exelink idx="go_move_saint">2</exelink>
+      <exelink idx="re_enter">6</exelink>
+   </talk>

@@ -1,0 +1,486 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq08_225_get_back</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>2</qchapter>
+      <qid>225</qid>
+      <designer>김인정</designer>
+      <qlevel>12</qlevel>
+      <qdesc>300030	순종의 팬던트
+</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>226</nextqid>
+      <nextqname>mq08_226_unexpected_situation</nextqname>
+      <nextqnpc>n392_academic_station</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Got the Device Back]]></qkname>
+      <qnpc>
+         <npcid>28</npcid>
+         <npcename>n028_scholar_bailey</npcename>
+         <npckname>문장학자 베일리</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>34</npcid>
+         <npcename>n034_cleric_master_germain</npcename>
+         <npckname>상급 클레릭 저메인</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>392</npcid>
+         <npcename>n392_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>543</npcid>
+         <npcename>n543_angelica</npcename>
+         <npckname>소서리스 안젤리카</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-noquest" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-noquest-" mid="200" select_type="5" />
+      <talk_question mid="5"><![CDATA[<html><FONT color=#7e12d2>(Tidak dapat berkomunikasi dengan kakak karena tidak ada alat komunikasi.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-noquest" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-noquest-" mid="201" select_type="5" />
+      <talk_question mid="6"><![CDATA[<html>$Master Cleric Jermain$<BR><FONT color=#a82424>Heraldry Scholar Bailey</FONT> pengetahuannya sangat dalam. <BR>Tidak buruk untuk mendapatkan nasihat dari Bailey.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-noquest" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-noquest-" mid="202" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Sorceress Angelica$<BR>Ya? Interkom aku? …Aku, Aku~ akan kasih~ Aku cuman lihat sebentar saja~<BR>Hehehe~ Mengerti kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Scholar_Baily.dds" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-accepting-acceptted" mid="107" select_type="3" />
+      <talk_question mid="8"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Apa? Kamu bertanya padaku dimana Pendant of the Pure?<BR>Oh tidak... Aku tidak tahu wanita muda sepertimu akan melakukan tugas yang berbahaya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Scholar_Baily.dds" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-check_level01" mid="108" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Aku tidak tahu apakah memberitahumu hal yang benar untuk dilakukan...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Scholar_Baily.dds" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-b" mid="110" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Jangan cemas.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-b" image="QN_Npc_Cl_master_Germain.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Scholar_Baily.dds" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-" mid="111" select_type="5" />
+      <talk_question mid="12"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Pendant of the Pure...<BR>
+adalah milik Cleric William.<BR>Muridnya, <FONT color=#a82424>Master Cleric Jermain</FONT> tahu dimana pendant itu, jadi kamu harus menemui dan bertanya langsung padanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Scholar_Baily.dds" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-1-" mid="199" select_type="5" />
+      <talk_question mid="183"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Heraldry Scholar Bailey mencemaskanmu. <BR><BR><FONT color=#7e12d2>※ Kamu harus minimal Level 12  untuk  melanjutkan.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-1" image="QN_Npc_Scholar_Baily.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-1-" mid="112" select_type="5" />
+      <talk_question mid="13"><![CDATA[<html>$Master Cleric Jermain$<BR><FONT color=#a82424>Heraldry Scholar Bailey</FONT> tahu banyak hal. <BR>Ide yang bagus  untuk mendatanginya dan meminta saran.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-1" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-1-" mid="113" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html><FONT color=#7e12d2>(Tidak mungkin berkomunikasi dengan Jasmine tanpa communicator)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-1-" mid="114" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Sorceress Angelica$<BR>Huh? Communicator? ...Aku akan mengembalikannya~ Sudah kubilang aku ingin memainkannya sebentar~<BR>Hehe~ Okay?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n028_scholar_bailey-2" image="QN_Npc_Cl_master_Germain.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Scholar_Baily.dds" center_image="">
+      <talk_answer link_index="n028_scholar_bailey-2-" mid="115" select_type="5" />
+      <talk_question mid="16"><![CDATA[<html>$Heraldry Scholar Bailey$<BR>Anyway, Pendant of the Pure...<BR>
+milik Cleric William.<BR>Muridnya, <FONT color=#a82424>Master Cleric Jermain</FONT> tahu dimana pendant, jadi kamu harus bertemu dan bertanya sendiri padanya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-a" mid="116" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Master Cleric Jermain$<BR>Halo.<BR>Aku khawatir tentang <FONT color=#a82424>Prophet</FONT>. Dia pasti takut dengan Black Knight.<BR>Kita harus menyelamatkannya secepatnya...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-b" mid="118" select_type="2" />
+      <talk_question mid="117"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku sedang mencari Pendant of the Pure.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-b" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-c" mid="119" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Master Cleric Jermain$<BR>Wow! Apakah gadis kecil sepertimu ikutan juga mencari <FONT color=#a82424>Prophet</FONT>?<BR> <FONT color=#a82424>Pendant of the Pure</FONT> milik masterku, Master Cleric William....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-c" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-d" mid="120" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Master Cleric Jermain$<BR>Masterku tewas saat Calderock Struggle lebih dari 10 tahun lalu, dekat <FONT color=#a82424>Forest of Death</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-d" image="QS_Default.dds" itemindex="300030" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-e" mid="121" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Master Cleric Jermain$<BR>Pada saat itu, area itu penuh dengan gas beracun dan aku tidak bisa mengumpulkan barang-barang sisa guruku.<BR>Pendant of the Pure merupakan item yang sangat penting, <FONT color=#a82424>kunci untuk ke Sleepers' Temple</FONT>, tapi aku tidak punya pilihan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-e" image="QN_Npc_Cl_master_Germain.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-2-f" mid="122" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>$Master Cleric Jermain$<BR>Aku akan pergi kesana dengan beberapa adventurer.<BR>
+Kamu tidak harus mengambil resiko pergi kesana, gadis kecil.<BR>
+<FONT color=#7e12d2>(Jermain terlihat cemas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-2-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-3" mid="124" select_type="2" />
+      <talk_question mid="123"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Aku tidak apa-apa. Aku segera kesana.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-3" image="QW_17.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-3-" mid="125" select_type="5" />
+      <talk_question mid="28"><![CDATA[<html>$Master Cleric Jermain$<BR>Pendant of the Pure masih ada di sekitar <FONT color=#a82424>Forest of Death</FONT>.<BR>Semoga para monster tidak mengambilnya....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4" image="QS_Default.dds" itemindex="300030" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-a" mid="126" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Sorceress Angelica$<BR>Wow! <FONT color=#387206>{user_nick} </FONT>!<BR>
+Aku melihatnya!! Aku melihat semuanya~ Haha~<BR>Aku melihatnya, kamu mengambil <FONT color=#a82424>Pendant of the Pure</FONT>, kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-b" mid="128" select_type="2" />
+      <talk_question mid="127"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Aku bukan anak kecil!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-b" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-c" mid="129" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Sorceress Angelica${action:Talk}<BR>Betul, <FONT color=#387206>{user_nick}</FONT>yang hebat~<BR>
+<FONT color=#7e12d2>(Angelica mencoba memujiku)<BR></FONT>Bisakah kamu memberikanku pendant itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-d" mid="131" select_type="2" />
+      <talk_question mid="130"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Kembalikan dulu communicatorku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-d" image="QN_Npc_Angelica.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-e" mid="132" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Sorceress Angelica$<BR>Communicator? Umm....<BR>
+<FONT color=#7e12d2>(Kamu bisa mendengar Angelica menghitung uang dikepalanya)<BR></FONT>Okay! Kenapa tidak~!! Aku akan memberikannya padamu!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-f" mid="134" select_type="2" />
+      <talk_question mid="133"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Saatnya aku memulai.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-f" image="QS_Default.dds" itemindex="300030" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-g" mid="135" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Sorceress Angelica$<BR>Oh~ hei~ jangan pikirkan hal kecil. haha~<BR>
+Anyway! Sekarang, kamu akan memberikan padaku <FONT color=#a82424>Pendant of the Pure</FONT>?<BR>
+<FONT color=#7e12d2>(Wajah Angelica memelas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-h" mid="136" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Sorceress Angelica$<BR>Aku lakukan ini karena aku mencemaskanmu.<BR>
+Aku tidak mau kamu terluka.<BR>
+Aku akan menjadi kakakmu dan pergi ke tempat berbahaya demimu, oke?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-i" mid="138" select_type="2" />
+      <talk_question mid="137"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Aku tidak mau  kakak sepertimu!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-4-j" mid="139" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Sorceress Angelica$<BR>Kenapa kamu bicara kejam seperti itu?<BR>Aku sudah memberi yang kamu minta jadi pergilah~<BR>
+Bye~</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-4-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-5" mid="141" select_type="2" />
+      <talk_question mid="140"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Kakakku cantik dan pintar dan... Huh?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n543_angelica-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Angelica.dds" center_image="">
+      <talk_answer link_index="n543_angelica-5-" mid="142" select_type="5" />
+      <talk_question mid="42"><![CDATA[<html>$Sorceress Angelica$<BR>Bye cil~ Sampai jumpa!<BR><FONT color=#7e12d2>(Angelica tersenyum polos dan pergi)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n034_cleric_master_germain-5" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Cl_master_Germain.dds" center_image="">
+      <talk_answer link_index="n034_cleric_master_germain-5-" mid="143" select_type="5" />
+      <talk_question mid="43"><![CDATA[<html>$Master Cleric Jermain$<BR>Baiklah...<BR>Pasti sulit bagimu mendapatkan pendant itu, tapi kamu sudah menyerahkannya ke Sorceress Angelica... Kamu wanita yang baik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-a" mid="144" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Tinkerer Station$<BR><FONT color=#7e12d2>(Mencoba terhubung)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-a" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-b" mid="47" select_type="0"><![CDATA[<html>(Ceritakan pada Jasmine apa yang baru saja terjadi)</html>]]></talk_answer>
+      <talk_answer link_index="n392_academic_station-5-b" mid="145" select_type="0"><![CDATA[<html>(Bicara tentang adventurer)</html>]]></talk_answer>
+      <talk_answer link_index="n392_academic_station-5-b" mid="146" select_type="0"><![CDATA[<html>(Bicara tentang Pendant of the Pure)</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_CG_Jasmin_sp_0.ogg}<BR>Bagaimana statusmu, <FONT color=#387206>{user_nick}</FONT>?<BR>Aku menjadi sangat khawatir karena kamu cukup lama tidak melapor.<BR>Semuanya baik baik saja?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-b" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-c" mid="147" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_Jasmin_qu225_01.ogg}<BR>Hmm... baiklah. Aku khawatir kamu terlalu mudah percaya pada orang lain.<BR>Tidak semua orang didunia baik, jadi jangan terlalu baik pada siapapun.<BR>Dan jangan juga memberitahu ke semua orang bahwa kamu dari masa depan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-d" mid="149" select_type="2" />
+      <talk_question mid="148"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>B-benarkah?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-d" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-e" mid="150" select_type="2" />
+      <talk_question mid="102"><![CDATA[<html>$Tinkerer Jasmine$<BR>
+Ya, jangan beritahu orang bahwa kamu dari mada depan atau apa yang akan terjadi di masa depan. Kamu mungkin pahlawan atau guardian di dunia ini, tapi kamu hanya adventurer  biasa di dunia itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-f" mid="152" select_type="2" />
+      <talk_question mid="151"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-f" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-g" mid="153" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Tinkerer Jasmine$<BR>
+Jika masa depan berubah, rencana  kita dalam bahaya. Ingat itu.<BR>
+Juga, aku mencemaskan....<BR>Communicator itu, apakah benar tidak apa-apa?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-h" mid="155" select_type="2" />
+      <talk_question mid="154"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Communicator? Sepertinya tidak apa-apa....</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-h" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-i" mid="156" select_type="2" />
+      <talk_question mid="52"><![CDATA[<html>$Tinkerer Jasmine$<BR>
+Menilai dari yang kamu katakan padaku tentang Angelica, dia pasti tidak mengembalikan communicator padamu tanpa menyentuh sesuatu....<BR>
+Kalau dia merusak sirkuit internal atau memorinya, akan semakin rumit.<BR>Apa kamu sudah benar-benar  memeriksanya?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-j" mid="158" select_type="2" />
+      <talk_question mid="157"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tunggu.... Aku akan memeriksanya sekarang!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-j" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-k" mid="159" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html><FONT color=#7e12d2>(Memeriksa data dan sirkuit. Tidak ditemukan data)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-k" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-l" mid="161" select_type="2" />
+      <talk_question mid="160"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>...Oh tidak!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-l" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-m" mid="162" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_CG_Jasmin_sp_04.ogg}<BR>Apa?<BR>
+Apa yang terjadi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-n" mid="164" select_type="2" />
+      <talk_question mid="163"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Memory chipnya... hilang!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-n" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-o" mid="165" select_type="2" />
+      <talk_question mid="58"><![CDATA[<html>$Tinkerer Jasmine$<BR>Apa?!<BR>
+<FONT color=#7e12d2>(Jasmine kaget)</FONT><BR>...!! Aku tidak pernah menyangka kejadian seperti ini akan terjadi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-o" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-p" mid="167" select_type="2" />
+      <talk_question mid="166"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ahh... Apa yang harus aku lakukan...?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-p" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-q" mid="168" select_type="2" />
+      <talk_question mid="100"><![CDATA[<html>$Tinkerer Jasmine$<BR><FONT color=#7e12d2>(Jasmine bicara dengan tenang)</FONT><BR>Karena semua data sudah hilang, kamu tidak akan bisa menggunakan communicator selain hanya untuk tujuan komunikasi...<BR>Karena ini situasi genting, kamu harus mendownload data dasar kemudian dimasukkan ke auxiliary memory yang terpasang di communicator....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-q" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-r" mid="170" select_type="2" />
+      <talk_question mid="169"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Mungkinkah itu?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-r" image="QN_Npc_Academic_jasmine.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-s" mid="171" select_type="2" />
+      <talk_question mid="60"><![CDATA[<html>$Tinkerer Jasmine$<BR>Ini tidak akan mudah. Ada banyak batasan untuk mengirimkan data melalui ruang dan waktu...<BR>Tapi, hanya itu satu-satunya cara saat ini.<BR>Kalau tidak ada data dasar, akan sulit bagimu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-s" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-t" mid="173" select_type="2" />
+      <talk_question mid="172"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Berikan padaku.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n392_academic_station-5-t" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n392_academic_station-5-!next" mid="174" select_type="4" />
+      <talk_question mid="62"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">225</exe>
+         <exe type="talk" npc="n028_scholar_bailey">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="lvl" op="]=">12</chk>
+      </conditions>
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="conexe" true="3" false="4">0</exe>
+         <exe type="talk" npc="n028_scholar_bailey">a</exe>
+         <exe type="talk" npc="n028_scholar_bailey">c</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">433</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4">200433</exe>
+         <exe type="addquestitem" num="1">300030</exe>
+         <exe type="huntitem" num="1" exe="" onexe="6,7,8">300030</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="delquestitem" num="-1">300030</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">2250,,,,,,,,</exe>
+         <exe type="complete" true="">225</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n028_scholar_bailey" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="check_level01">2</exelink>
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="b">0,1</exelink>
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="" />
+   <exelink qstep="1" npc="n028_scholar_bailey" sub="" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="b" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="c" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="d" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="e" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="f" />
+   <exelink qstep="2" npc="n034_cleric_master_germain" sub="3">0,2,3,5,1</exelink>
+   <exelink qstep="4" npc="n543_angelica" sub="b" />
+   <exelink qstep="4" npc="n543_angelica" sub="c" />
+   <exelink qstep="4" npc="n543_angelica" sub="d" />
+   <exelink qstep="4" npc="n543_angelica" sub="e" />
+   <exelink qstep="4" npc="n543_angelica" sub="f" />
+   <exelink qstep="4" npc="n543_angelica" sub="g" />
+   <exelink qstep="4" npc="n543_angelica" sub="h" />
+   <exelink qstep="4" npc="n543_angelica" sub="i" />
+   <exelink qstep="4" npc="n543_angelica" sub="j" />
+   <exelink qstep="4" npc="n543_angelica" sub="5">0,1,2</exelink>
+   <exelink qstep="5" npc="n392_academic_station" sub="b" />
+   <exelink qstep="5" npc="n392_academic_station" sub="b" />
+   <exelink qstep="5" npc="n392_academic_station" sub="b" />
+   <exelink qstep="5" npc="n392_academic_station" sub="c" />
+   <exelink qstep="5" npc="n392_academic_station" sub="d" />
+   <exelink qstep="5" npc="n392_academic_station" sub="e" />
+   <exelink qstep="5" npc="n392_academic_station" sub="f" />
+   <exelink qstep="5" npc="n392_academic_station" sub="g" />
+   <exelink qstep="5" npc="n392_academic_station" sub="h" />
+   <exelink qstep="5" npc="n392_academic_station" sub="i" />
+   <exelink qstep="5" npc="n392_academic_station" sub="j" />
+   <exelink qstep="5" npc="n392_academic_station" sub="k" />
+   <exelink qstep="5" npc="n392_academic_station" sub="l" />
+   <exelink qstep="5" npc="n392_academic_station" sub="m" />
+   <exelink qstep="5" npc="n392_academic_station" sub="n" />
+   <exelink qstep="5" npc="n392_academic_station" sub="o" />
+   <exelink qstep="5" npc="n392_academic_station" sub="p" />
+   <exelink qstep="5" npc="n392_academic_station" sub="q" />
+   <exelink qstep="5" npc="n392_academic_station" sub="r" />
+   <exelink qstep="5" npc="n392_academic_station" sub="s" />
+   <exelink qstep="5" npc="n392_academic_station" sub="t">0</exelink>
+   <exelink qstep="5" npc="n392_academic_station" sub="!next">1</exelink>
+   <journal_data recompense="2250" quest_title="물건을 돌려받았습니다" chapterid="2" quest_level="12" quest_mark_type="1" use_item_list="300030">
+      <journal index="1">
+         <contents_image>QN_Npc_Scholar_Baily.dds</contents_image>
+         <destination_pos>8,n28</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>28</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="65"><![CDATA[Got the Device Back I]]></title>
+         <contents mid="66"><![CDATA[<html>Temui Heraldry Scholar Bailey dan cari tahu tentang Obidient Pendant.<BR>
+ <BR>
+<FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Heraldry Scholar Bailey</FONT></html>]]></contents>
+         <destination mid="67"><![CDATA[Bicara dengan Heraldry Scholar Bailey]]></destination>
+         <todo_msg mid="68"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Cl_master_Germain.dds</contents_image>
+         <destination_pos>8,n34</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>34</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="71"><![CDATA[Got the Device Back II]]></title>
+         <contents mid="72"><![CDATA[<html>Tanyakan Master Cleric Jermain tentang Obidient Pendant, sebuah Ancient artifact.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Master Cleric Jermain</FONT></html>]]></contents>
+         <destination mid="73"><![CDATA[Bicara dengan Master Cleric Jermain]]></destination>
+         <todo_msg mid="74"><![CDATA[Temui Master Cleric Jermain.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_17.dds</contents_image>
+         <destination_pos>134,0,0</destination_pos>
+         <destination_mode>custom:131@1,132@1,133@1,134@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="75"><![CDATA[Got the Device Back III]]></title>
+         <contents mid="76"><![CDATA[<html>Carilah Obidient Pendant di Forest of Death.<BR>
+ <BR>
+<FONT color=#086171>Lower Ridge(Forest of Death Entrance)</FONT> <FONT color=#a82424>→ Forest of Death</FONT></html>]]></contents>
+         <destination mid="77"><![CDATA[Temukan Obidient Pendant di Forest of Death]]></destination>
+         <todo_msg mid="78"><![CDATA[Temukan Obidient Pendant di Forest of Death.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Angelica.dds</contents_image>
+         <destination_pos>134,n543</destination_pos>
+         <destination_mode>custom:131@1,132@1,133@1,134@1</destination_mode>
+         <statemark_npcid>543</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="79"><![CDATA[Got the Device Back IV]]></title>
+         <contents mid="80"><![CDATA[<html>Temui Sorceress Angelica. Minta dia untuk mengembalikan communicator.<BR>
+ <BR>
+<FONT color=#086171>Lower Ridge(Forest of Death Entrance)</FONT> <FONT color=#a82424>→ Forest of Death(Sorceress Angelica)</FONT></html>]]></contents>
+         <destination mid="81"><![CDATA[Bicara dengan Sorceress Angelica di Forest of Death]]></destination>
+         <todo_msg mid="82"><![CDATA[Bicara dengan Sorceress Angelica.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>8,n392</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>392</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="83"><![CDATA[Got the Device Back V]]></title>
+         <contents mid="84"><![CDATA[<html>Dapatkan communicator kembali. Cobalah untuk berkomunikasi dengan Jasmine dari Tinkerer Station di Calderock Village.<BR><BR><FONT color=#086171>Calderock Village</FONT> <FONT color=#a82424>→ Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="85"><![CDATA[Menghubungi Tinkerer Station di Calderock Village]]></destination>
+         <todo_msg mid="86"><![CDATA[Menghubungi Tinkerer Station di Calderock Village.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>224</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

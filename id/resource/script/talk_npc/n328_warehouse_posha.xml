@@ -1,0 +1,21 @@
+   <talk>
+      <npcename>n328_warehouse_posha</npcename>
+      <npcid>328</npcid>
+      <startexe>0</startexe>
+      <npckname mid="1"><![CDATA[Storekeeper Posha]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="warehouse_001" mid="3"><![CDATA[<html>[Buka Storage]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Storekeeper Posha${action:Talk}<BR>Coba pakai gudang kami kalau repot membawa item yang tidak diperlukan.<BR>Kami akan berusaha sekeras mungkin untuk menjaganya baik-baik. Haha!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenWareHouse(userObjID);</exe>
+         <exe type="conexe" true="4" false="1">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_ui_OpenGuildWareHouse (userObjID);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_guild_HasGuildWare(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="warehouse_001">2</exelink>
+   </talk>

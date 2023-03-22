@@ -1,0 +1,27 @@
+   <talk>
+      <npcename>n1714_kaye_blind</npcename>
+      <npcid>1714</npcid>
+      <startexe>5</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Kay]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Kay${sound:npc_Kaye_1739_sp_02.ogg}<BR><FONT color=#7e12d2>(Kay is lost in his thoughts)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_question mid="6"><![CDATA[<html>$Kay${sound:npc_Kaye_1687_sp_05.ogg}<BR>What?<BR>… Is it someone that idiot brought....</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="3">0</exe>
+         <exe type="enterquest">mqc08_9528_traces_of_comrades</exe>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="4" false="2">1</exe>
+         <exe type="enterquest">mqc08_9529_purification_failed</exe>
+         <exe type="conexe" true="0" false="6">2</exe>
+         <exe type="talk">002</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9528</chk>
+         <chk type="hasquest">9529</chk>
+         <chk type="class" op="=">8</chk>
+      </conditions>
+   </talk>

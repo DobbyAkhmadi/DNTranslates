@@ -1,0 +1,30 @@
+   <talk>
+      <npcename>n2152_cronicle_velskud</npcename>
+      <npcid>2152</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Velskud (Dolyong)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="15"><![CDATA[<html>(Next)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Velskud$<BR>... <BR><FONT color=#7e12d2>(Black Knight sedang menatap)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="16" link_target="sq_cronicle_2922_return_hero_02.xml"><![CDATA[<html>(Coba berbicara) </html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="17" link_target="sq_cronicle_2923_return_hero_03.xml"><![CDATA[<html>(Coba berbicara) </html>]]></talk_answer>
+         <talk_answer link_index="001" mid="18"><![CDATA[<html>(Berhentilah)</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Velskud${sound:npc_Velskud_2052_sp_01.ogg}<BR>…Apa yang anda ingin bicarakan?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="0" false="2">0</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+         <exe type="enterquest">sq_cronicle_2922_return_hero_02</exe>
+         <exe type="enterquest">sq_cronicle_2923_return_hero_03</exe>
+         <exe type="conexe" true="3" false="0">2</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">2923</chk>
+         <chk type="hascomq">2922</chk>
+         <chk type="hascomq">2921</chk>
+      </conditions>
+   </talk>

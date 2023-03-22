@@ -1,0 +1,95 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq42_7109_fedro_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>7109</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About interesting rumours]]></qkname>
+      <qnpc>
+         <npcid>711</npcid>
+         <npcename>n711_warrior_fedro</npcename>
+         <npckname>상급 워리어 페드로</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-a" mid="8" select_type="0"><![CDATA[<html>(Lanjutkan)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Warrior Pedro$<BR>Aah, Baru-baru ini aku mendengar gosip menarik.<BR>Hahaha!! Aku dengar Gerraint sebenarnya adalah the Gold Dragon!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n711_warrior_fedro-accepting-b" mid="18" select_type="0"><![CDATA[<html>Aku tidak tertarik dengan rumor</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-accepting-c" mid="19" select_type="0"><![CDATA[<html>Itu rumour yang menarik</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-accepting-d" mid="20" select_type="0"><![CDATA[<html>Dia adalah the Gold Dragon</html>]]></talk_answer>
+      <talk_answer link_index="n711_warrior_fedro-accepting-e" mid="21" select_type="0"><![CDATA[<html>Mana mungkin Gerraint adalah Gold Dragon!</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Master Warrior Pedro$<BR>Orang-orang itu tidak cukup menghina six heroes. Bahkan mereka berbicara omong kosong.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Master Warrior Pedro$<BR>Khmm, kamu tidak asyik ah.<BR>Bahkan aku tidak bisa bercanda denganmu.<BR><FONT color=#7e12d2>(Pedro merona seakan malu)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Master Warrior Pedro$<BR>Yeah, bukankah itu omong kosong?!<BR>Maka Velskud adalah the Black Dragon dan Teramai adalah ... White Dragon atau sejenisnya?<BR>Hahaha... Dan jika seluruh dragon bersatu, maka jadilah dragon yang transparan? Pwahahaha!<BR><FONT color=#7e12d2>(Pedro tertawa terbahak-bahak)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Master Warrior Pedro$<BR>Kamu serius sekali bercandanya!<BR>Tidak seru lagi. Pergi sana.<BR><FONT color=#7e12d2>(Pedro marah sekali)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n711_warrior_fedro-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="38"><![CDATA[<html>$Master Warrior Pedro$<BR>Tentu! Bahkan Barnac memujinya seakan dia adalah panutan yang harus ditiru semua manusia.<BR>Berkata bahwa seseorang yang Barnac puji ialah seekor naga merupakan penghinaan baginya dan bagi Barnac.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,7109, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 500 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 711, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="b">0,4</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="c">0,2</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="d">0,3</exelink>
+   <exelink qstep="accepting" npc="n711_warrior_fedro" sub="e">0,1</exelink>
+   <journal_data recompense="" quest_title="[대화] 재미있는 소문에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>711:15000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

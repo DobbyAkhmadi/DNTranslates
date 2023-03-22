@@ -1,0 +1,49 @@
+   <talk>
+      <npcename>n2557_darklair_pretzel</npcename>
+      <npcid>2557</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Priestess of Darkness Pretzel]]></npckname>
+      <talk_paragraph index="basic" image="" itemindex="">
+         <talk_answer link_index="quest" mid="7"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Priestess of Darkness Pretzel${action:Talk}<BR>Welcome.<BR>I’m Pretzel and I’ll be in charge of Anu Arendel from now.<BR>The Nest situation worries me.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="8" link_target="sqc22_3679_nest_where.xml"><![CDATA[<html>[World] <FONT color=#086171>Where are the Nests?</FONT></html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="11"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="5"><![CDATA[<html>$Priestess of Darkness Pretzel$<BR>I’d like to ask you for a favour.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="bd-nest" image="" itemindex="">
+         <talk_answer link_index="go_bdnest" mid="15"><![CDATA[<html>Yes, please.</html>]]></talk_answer>
+         <talk_answer link_index="basic" mid="16"><![CDATA[<html>No, I will start with something else.</html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Dark Oracle Pretzel$<BR>So you're here to end the nightmare that is the <FONT color=#a82424>Black Dragon</FONT>.<BR>Let me help you.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="rd-nest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="24" link_target="mqc16_9569_penitent_man.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>The Penitent</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="mqc16_9570_penitent_man.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>The Penitent</FONT></html>]]></talk_answer>
+         <talk_question mid="17"><![CDATA[<html>$Dark Oracle Pretzel$<BR>So you plan to advance into the nest of the <FONT color=#a82424>Red Dragon</FONT>.<BR>Do you need my help?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="party" image="" itemindex="">
+         <talk_question mid="27"><![CDATA[<html>$Dark Oracle Pretzel$<BR>I'll be here, so come find me whenever you're ready.<BR><BR><FONT color=#7e12d2>※ This quest cannot be carried out while in a party.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">basic</exe>
+         <exe type="conexe" true="10" false="4">0</exe>
+         <exe type="talk">bd-nest</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,17004,1);</exe>
+         <exe type="conexe" true="8" false="5">1</exe>
+         <exe type="conexe" true="8" false="0">2</exe>
+         <exe type="talk">rd-nest</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,17011,1);</exe>
+         <exe type="conexe" true="6" false="9">3</exe>
+         <exe type="talk">party</exe>
+         <exe type="conexe" true="2" false="9">3</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_quest_GetQuestStep(userObjID, (9737)) == 1</chk>
+         <chk type="hasquest">9569</chk>
+         <chk type="hasquest">9570</chk>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="go_bdnest">3</exelink>
+   </talk>

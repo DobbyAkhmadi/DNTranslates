@@ -1,0 +1,93 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq16_6604_casius_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>6604</qid>
+      <designer>박정민</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Bicara] Six Heroes]]></qkname>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n040_king_casius-accepting-a" mid="7" select_type="0"><![CDATA[<html>Orang-orang mungkin tidak menganggapnya hebat.</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-accepting-b" mid="8" select_type="0"><![CDATA[<html>Itu karena para Hero tersebut memang hebat.</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-accepting-c" mid="9" select_type="0"><![CDATA[<html>Itu karena tidak ada cerita tentangnya.</html>]]></talk_answer>
+      <talk_answer link_index="n040_king_casius-accepting-d" mid="10" select_type="0"><![CDATA[<html>Mengapa kamu tidak menulis buku tentang biografinya dan menceritakannya pada masyarakat umum?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$King Cassius$<BR>Semua orang mengagumi para pahlawan 50 tahun yang lalu. Tapi mengapa mereka tidak menyebutkan bahwa kakekku menguasai Saint's Haven pada saat itu? Kurasa kakekku mengendalikan situasi krisis tersebut dengan cukup baik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="11"><![CDATA[<html>$King Cassius$<BR>Hmm, orang yang malang. Aku harus mencari cara agar mereka tahu tentang prestasi kakekku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="12"><![CDATA[<html>$King Cassius$<BR>
+Mmm, mungkin kamu benar. Bahkan, aku juga berpikir bahwa petualangan mereka itu menarik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$King Cassius$<BR>
+Sungguh disayangkan. Apa yang harus kulakukan agar orang-orang tahu prestasi kakekku? Aku harus memikirkan sesuatu tentang ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="14"><![CDATA[<html>$King Cassius$<BR>Itu ide yang bagus! Aku akan segera memerintahkan penerbitan buku biografinya.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 6604, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddMalicePoint( userObjID, 40, 180 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 40, 90 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 40, 40 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 40, 180 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n040_king_casius" sub="a">1,0</exelink>
+   <exelink qstep="accepting" npc="n040_king_casius" sub="b">2,0</exelink>
+   <exelink qstep="accepting" npc="n040_king_casius" sub="c">3,0</exelink>
+   <exelink qstep="accepting" npc="n040_king_casius" sub="d">4,0</exelink>
+   <journal_data recompense="" quest_title="[대화] 여섯 영웅에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>40:2250:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

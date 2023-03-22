@@ -1,0 +1,126 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>eq_2464_2018newyear</qename>
+      <qtype>dayquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2464</qid>
+      <designer>노지혜</designer>
+      <qlevel>95</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Event] Runny Nose Crazy Park (Stage Entry)]]></qkname>
+      <qnpc>
+         <npcid>1888</npcid>
+         <npcename>n1888_storyteller_kesey</npcename>
+         <npckname>이야기꾼 케시</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-accepting-a" mid="6" select_type="0"><![CDATA[<html>Ya! Aku siap untuk pergi</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Storyteller Casey$<BR>Sudah siap <FONT color=#a82424>mengomeli</FONT> Crazy Park supaya dia <FONT color=#a82424>bertobat</FONT>?<BR>Mari berpindah ke <FONT color=#387206>{map:13627}</FONT> dan menemui Old Man Morrie.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-accepting-acceptted" mid="58" select_type="0"><![CDATA[<html><FONT color=#387206>(Terima Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="57"><![CDATA[<html>$[Event] Runny Nose Crazy Park$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-1-a" mid="13" select_type="0"><![CDATA[<html>Baiklah.</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Storyteller Casey$<BR>Sebelum kamu pergi, ada <FONT color=#a82424>Catatan</FONT> penting.<BR><FONT color=#387206>{map:13627}</FONT> hanya dapat dimasuki <FONT color=#a82424>satu kali per hari</FONT>.<BR>Bila berada dalam <FONT color=#a82424>party</FONT> atau <FONT color=#a82424>pertarungan yang penting</FONT> maka kamu tidak akan dapat pergi ke sana.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-1-changemap" mid="55" select_type="0"><![CDATA[<html>[<FONT color=#387206>{map:13627}</FONT> Stage Entry]</html>]]></talk_answer>
+      <talk_question mid="54"><![CDATA[<html>$Storyteller Casey$<BR>Nah, ayo <FONT color=#a82424>berangkat</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-1-back_1" mid="15" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Storyteller Casey$<BR><FONT color=#2b2723>Aduh, kamu jangan berbohong.</FONT><BR>
+<FONT color=#2b2723>Kamu tidak boleh membawa teman.</FONT><BR><FONT color=#7e12d2>※ Tidak dapat masuk saat berada di dalam party.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1888_storyteller_kesey-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1888_storyteller_kesey-1-back_2" mid="17" select_type="0"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Storyteller Casey$<BR>Waduh! Kamu sedang berada dalam pertarungan penting?<BR>
+Kamu harus meninggalkannya terlebih dahulu.<BR><FONT color=#7e12d2>※ Tidak dapat masuk saat sedang menjalani Rumble Mode atau Ladder Matching.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">2464</exe>
+         <exe type="talk" npc="n1888_storyteller_kesey">1</exe>
+         <exe type="recompense_view">24640,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions>
+         <chk type="custom">api_user_GetPartymemberCount(userObjID) == 1</chk>
+         <chk type="custom">api_user_IsMatching(userObjID) == 1</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="conexe" true="3" false="4">1</exe>
+         <exe type="talk" npc="n1888_storyteller_kesey">b</exe>
+         <exe type="talk" npc="n1888_storyteller_kesey">c</exe>
+         <exe type="complete" true="5">2464</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID,13627,1);</exe>
+         <exe type="custom">api_npc_NextScript(userObjID, npcObjID, "001", "n1888_storyteller_kesey.xml");</exe>
+         <exe type="recompense">24640,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1888_storyteller_kesey" sub="a">2</exelink>
+   <exelink qstep="accepting" npc="n1888_storyteller_kesey" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n1888_storyteller_kesey" sub="a">7</exelink>
+   <exelink qstep="1" npc="n1888_storyteller_kesey" sub="changemap">0</exelink>
+   <exelink qstep="1" npc="n1888_storyteller_kesey" sub="back_1">6</exelink>
+   <exelink qstep="1" npc="n1888_storyteller_kesey" sub="back_2">6</exelink>
+   <journal_data recompense="24640" quest_title="[이벤트] 눈물콧물 크레이지 박 (스테이지 입장)" chapterid="" quest_level="95" quest_mark_type="23" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_SaintHaven.dds</contents_image>
+         <destination_pos>11,n1888</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1888</statemark_npcid>
+         <statemark_type>25</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="47"><![CDATA[[Crazy Hit] Entry (Daily)]]></title>
+         <contents mid="48"><![CDATA[<html>Berbicara dengan Storyteller Casey dan masuklah ke <FONT color=#a82424>[{map:13627}]</FONT><FONT color=#2b2723> stage</FONT>. <BR><FONT color=#7e12d2>※ {map:13627} hanya dapat dimasuki sekali per hari.</FONT><BR>
+ <BR>
+<FONT color=#086171>Saint's Haven</FONT><FONT color=#a82424> - Storyteller Casey</FONT></html>]]></contents>
+         <destination mid="49"><![CDATA[Berbicara dengan Storyteller Casey ]]></destination>
+         <todo_msg mid="50"><![CDATA[Berbicara dengan Storyteller Casey dan berpindah ke Crazy Hit Stage.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>2463</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

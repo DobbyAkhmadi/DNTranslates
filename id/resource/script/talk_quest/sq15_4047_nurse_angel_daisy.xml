@@ -1,0 +1,344 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_4047_nurse_angel_daisy</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4047</qid>
+      <designer>나은하</designer>
+      <qlevel>57</qlevel>
+      <qdesc>호호 나아라풀
+데이지가 구해오란 약초. 겉으로는 그냥 평범한 잡초처럼 보인다. 
+
+
+데이지가 동물들을 치료하기 위해서 도움을 청함. 그런데 그 치료제를 몬스터에게 씀. 데이지에게 그러면 안돼라고 일러주지만 데이지는 역으로 생명의 소중함을 설교. 데이지는 이상한 아이임</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Nurse Angel Daisy]]></qkname>
+      <qnpc>
+         <npcid>100</npcid>
+         <npcename>n100_event_ilyn</npcename>
+         <npckname>이벤트 도우미 아이린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>36</npcid>
+         <npcename>n036_adventurer_guildmaster_gunter</npcename>
+         <npckname>모험자 길드장 군터</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>849</npcid>
+         <npcename>n849_daisy</npcename>
+         <npckname>데이지</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>850</npcid>
+         <npcename>n850_invisible</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Irine$<BR>Belakangan ini aku menjadi semakin dekat dengan Daisy.<BR>Tapi Daisy gadis yang misterius.<BR><FONT color=#7e12d2>(※ Quest dapat diambil dari Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$Daisy$<BR>Daisy sedang menunggu kakeknya.<BR><FONT color=#7e12d2>(※ Quest dapat diambil dari Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n850_invisible-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="8"><![CDATA[<html>$???$<BR>
+<FONT color=#7e12d2>(Sepertinya tidak ada yang spesial)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-a" mid="11" select_type="0"><![CDATA[<html>Yeah.</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Gadis kecil itu bilang dia merawat monster?<BR>Aneh sekali. Scarabee Lord Knactun terluka serius. Seorang gadis kecil tidak mungkin bisa merawat luka seperti itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-b" mid="13" select_type="0"><![CDATA[<html>Sepertinya Irine akan terus merawatnya.</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Pasti kakeknya yang merawat monster itu.<BR>Selidiki tentang kakek dan gadis itu.<BR>Apa ada yang mengenal dia?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-b" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-c" mid="15" select_type="0"><![CDATA[<html>Mengerti.</html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Lalu pergilah ke <FONT color=#a82424>Irine</FONT> dan tanyakan apakah dia mengenal gadis itu?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-accepting-acceptted" mid="17" select_type="0"><![CDATA[<html><FONT color=#086171>(Menerima Quest)</FONT></html>]]></talk_answer>
+      <talk_question mid="16"><![CDATA[<html>$Nurse Angel Daisy$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-1" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="19"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Semoga <FONT color=#a82424>Irine</FONT> mempunyai informasi yang berguna.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Daisy$<BR>Daisy sedang menunggu kakek.<BR><FONT color=#7e12d2>(※Bicara dengan Irine di Saint's Haven)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-1-a" mid="24" select_type="0"><![CDATA[<html>(Ceritakan apa yang terjadi)</html>]]></talk_answer>
+      <talk_question mid="23"><![CDATA[<html>$Irine$<BR>Oh, <FONT color=#387206>{user_nick}</FONT>! Daisy sepertinya marah padamu, <FONT color=#387206>{user_nick}</FONT>. Apa yang terjadi?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-1-b" mid="26" select_type="0"><![CDATA[<html>Merawat atau menyembuhkan sesuatu?</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Irine$<BR>Jadi itu yang terjadi. <BR>
+<FONT color=#7e12d2>(Irine memiringkan kepalanya)</FONT> <BR>
+Sebenarnya aku juga belum pernah mendengar tentang kakeknya Daisy. Daisy mengatakan dia punya kakek tapi dia lebih bersemangat menceritakan tentang merawat atau menyembuhkan yang lain.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-1-c" mid="28" select_type="0"><![CDATA[<html>Tapi bukankah akan menjadi masalah kalau merawat monster?</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Irine$<BR>Daisy bilang dia menjadi ibu mereka. Dia sepertinya menyukai mengasuh atau merawat makhluk lain. <BR>
+Dia gadis yang baik. Dan gadis muda suka bertingkah seperti orang dewasa. Menurutku kakeknya pasti juga baik.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-1-c" image="QN_Npc_Daisy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n100_event_ilyn-2" mid="30" select_type="0"><![CDATA[<html>Hmm, okay.</html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Irine$<BR>Saat muda kamu tidak bisa membedakan mana yang buruk atau bagus. Dan kamu juga tidak menyadari kalau Daisy mempunyai kemampuan untuk menyembuhkan monster.<BR>Kenapa kamu tidak tanyakan langsung <FONT color=#a82424>Daisy</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n100_event_ilyn-2" image="QN_Npc_Daisy.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="32"><![CDATA[<html>$Irine$<BR>Saat masih muda, aku juga ingin menjadi dokter. Anak perempuan biasanya memimpikan itu. <FONT color=#a82424>Daisy</FONT> akan berhenti saat dia tua nanti.<BR>Jangan khawatir.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-a" mid="35" select_type="0"><![CDATA[<html>.......</html>]]></talk_answer>
+      <talk_question mid="34"><![CDATA[<html>$Daisy$<BR>Hmmph, Aku tidak mau bicara sama <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-b" mid="37" select_type="0"><![CDATA[<html>(Jelaskan alasan kenapa dia tidak seharusnya merawat monster)</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Daisy$<BR>Daisy sedang marah. Kenapa kamu mengganggu kerjanya Daisy?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-c" mid="39" select_type="0"><![CDATA[<html>(Teruskan)</html>]]></talk_answer>
+      <talk_question mid="38"><![CDATA[<html>$Daisy$<BR>Bukan bukan! Daisy tidak tahu itu!<BR>{user_nick} jahat.<BR>Mereka juga bisa berubah kalau dikasihi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-d" mid="41" select_type="0"><![CDATA[<html>...... Er, Daisy? Aku nggak ngerti apa yang kamu bicarakan.</html>]]></talk_answer>
+      <talk_question mid="40"><![CDATA[<html>$Daisy$<BR>Ikatan batin sangatlah penting. Juga kepercayaan.<BR>Bukan hanya kita yang tinggal didunia ini. Ada kota lain, hutan, langit, benda hidup....<BR>Bukan kita aja jadi kita tidak boleh egois.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-d" image="QW_63.dds " itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-e" mid="43" select_type="0"><![CDATA[<html>Untuk apa?</html>]]></talk_answer>
+      <talk_question mid="42"><![CDATA[<html>$Daisy$<BR> {user_nick}! Daisy akan mengajari kamu cara merawat dengan baik!<BR>Pertama, pergilah ke <FONT color=#a82424>Meteor Crash Site Core</FONT> dan ambil <FONT color=#a82424>hoho heal plant</FONT>!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-2-f" mid="45" select_type="0"><![CDATA[<html>... Kenapa aku harus melakukan itu?</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Daisy$<BR>Karena Daisy membutuhkannya untuk merawat anak-anak yang terluka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-2-f" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-3" mid="47" select_type="0"><![CDATA[<html>Okay, Aku akan kembali.</html>]]></talk_answer>
+      <talk_question mid="46"><![CDATA[<html>$Daisy$<BR>Ikatan batin sangatlah penting. Juga kepercayaan.<BR>We are not the only ones in this world. There are other towns, forests, skies, living things....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-3" image="QW_63.dds " itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="51"><![CDATA[<html>$Daisy$<BR><FONT color=#387206>{user_nick}</FONT>, waktu kamu merawat anak kecil, kamu juga akan menjadi baik.<BR>Pergilah ke <FONT color=#a82424>Meteor Crash Site Core</FONT> dan ambil <FONT color=#a82424>hoho heal plant</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n850_invisible-3" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n850_invisible-4" mid="91" select_type="0"><![CDATA[<html>(Kumpulkan hoho heal plant)</html>]]></talk_answer>
+      <talk_question mid="90"><![CDATA[<html>$???$<BR>
+<FONT color=#7e12d2>(Ini terlihat seperti rumput. Sepertinya ini adalah hoho heal plant yang dibicarakan Daisy.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-4-a" mid="54" select_type="0"><![CDATA[<html>(Berikan padanya hoho heal plant)</html>]]></talk_answer>
+      <talk_question mid="53"><![CDATA[<html>$Daisy$<BR>Kamu lama sekali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-4-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-4-b" mid="57" select_type="0"><![CDATA[<html>Jangan lakukan itu.</html>]]></talk_answer>
+      <talk_question mid="55"><![CDATA[<html>$Daisy$<BR>Sekarang aku akan pergi ke Meteor Crash Site Core dan merawat mereka yang luka.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-4-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-4-c" mid="59" select_type="0"><![CDATA[<html>Jadi Daisy, apakah kakekmu yang merawat Knactty?</html>]]></talk_answer>
+      <talk_question mid="58"><![CDATA[<html>$Daisy$<BR>Hei <FONT color=#387206>{user_nick}</FONT> jahat!<BR>Ikatan batin sangatlah penting. Juga kepercayaan.<BR>Kita tidak hidup sendirian.......<BR><FONT color=#7e12d2>(Sepertinya sulit untuk membujuk Daisy)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-4-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n849_daisy-5" mid="61" select_type="0"><![CDATA[<html>(Teruskan)</html>]]></talk_answer>
+      <talk_question mid="60"><![CDATA[<html>$Daisy$<BR>Sudah kubilang berapa kali bahwa Daisy yang merawat mereka.<BR>Kamu benar-benar bodoh, <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n850_invisible-4" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="93"><![CDATA[<html>$???$<BR>
+<FONT color=#7e12d2>(Sepertinya tidak ada yang spesial)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n849_daisy-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="64"><![CDATA[<html><FONT color=#7e12d2>(Tidak ada gunanya berbicara dengan Daisy lagi. Kembalilah ke Adventurer's Guild Master Gunther)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-a" mid="66" select_type="0"><![CDATA[<html>Maafkan aku.</html>]]></talk_answer>
+      <talk_question mid="65"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>... Jadi kamu tidak berhasil mendapatkan informasi tentang anak itu?<BR>Jadi kamu hanya menjalankan tugas untuknya?<BR><FONT color=#7e12d2>(Gunther menarik napas panjang)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-b" mid="68" select_type="0"><![CDATA[<html>(Teruskan)</html>]]></talk_answer>
+      <talk_question mid="67"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>Tidak itu bukan salahmu.<BR>Terimakasih.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n036_adventurer_guildmaster_gunter-5-c" mid="70" select_type="0"><![CDATA[<html><FONT color=#086171>(Terima reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="69"><![CDATA[<html>$Quest reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n036_adventurer_guildmaster_gunter-5-c" image="QN_Event_Red.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="104"><![CDATA[<html>$Adventurer's Guild Master Gunther$<BR>
+Kita harus selidiki lagi kakek gadis itu.<BR>
+<FONT color=#a82424>Irine</FONT> mungkin menemukan sesuatu jadi pergilah dan temui <FONT color=#a82424>Irine</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">40470,,,,,,,,,</exe>
+         <exe type="setquest">4047</exe>
+         <exe type="talk" npc="n036_adventurer_guildmaster_gunter">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="huntitem" num="1" exe="" onexe="3,4,5">400311</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="addquestitem" num="1">400311</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment>아이템 인덱스 임시</comment>
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">400311</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">40470,,,,,,,,,</exe>
+         <exe type="complete" true="">4047</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="c">0</exelink>
+   <exelink qstep="accepting" npc="n036_adventurer_guildmaster_gunter" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n100_event_ilyn" sub="b" />
+   <exelink qstep="1" npc="n100_event_ilyn" sub="c" />
+   <exelink qstep="1" npc="n100_event_ilyn" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n849_daisy" sub="b" />
+   <exelink qstep="2" npc="n849_daisy" sub="c" />
+   <exelink qstep="2" npc="n849_daisy" sub="d" />
+   <exelink qstep="2" npc="n849_daisy" sub="e" />
+   <exelink qstep="2" npc="n849_daisy" sub="f" />
+   <exelink qstep="2" npc="n849_daisy" sub="3">0,1,2</exelink>
+   <exelink qstep="3" npc="n850_invisible" sub="4">0</exelink>
+   <exelink qstep="4" npc="n849_daisy" sub="a">0</exelink>
+   <exelink qstep="4" npc="n849_daisy" sub="b" />
+   <exelink qstep="4" npc="n849_daisy" sub="c" />
+   <exelink qstep="4" npc="n849_daisy" sub="5">1,2</exelink>
+   <exelink qstep="5" npc="n036_adventurer_guildmaster_gunter" sub="b">0</exelink>
+   <exelink qstep="5" npc="n036_adventurer_guildmaster_gunter" sub="c">1</exelink>
+   <journal_data recompense="40470" quest_title="간호천사 데이지" chapterid="" quest_level="57" quest_mark_type="10" use_item_list="400311">
+      <journal index="1">
+         <contents_image>QN_Event_Red.dds</contents_image>
+         <destination_pos />
+         <destination_mode>custom:1@4,5@4,8@4,11@4,15@4</destination_mode>
+         <statemark_npcid>100</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="73"><![CDATA[Daisy's Identity]]></title>
+         <contents mid="74"><![CDATA[<html>Adventurer's Guild Master Gunther  ingin lebih mengenal Daisy. Pergi ke Events Planner Irine dan tanyakan tentang Daisy.<BR><BR><FONT color=#086171>Prairie Town</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><BR><FONT color=#086171>Mana Ridge</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><BR><FONT color=#086171>Saint's Haven</FONT><FONT color=#2b2723> </FONT><FONT color=#a82424>→ Events Planner Irine</FONT><BR><FONT color=#086171>Lotus Marsh</FONT> <FONT color=#a82424>→ Events Planner Irine</FONT></html>]]></contents>
+         <destination mid="75"><![CDATA[Bicara dengan Events Planner Irine]]></destination>
+         <todo_msg mid="76"><![CDATA[Quest baru telah ditambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Daisy.dds</contents_image>
+         <destination_pos>14,n849</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>849</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="79"><![CDATA[Friendly Daisy]]></title>
+         <contents mid="80"><![CDATA[<html>Events Planner Irine bilang Daisy suka menyembuhkan dan merawat orang lain. Tapi sepertinya Irine juga tidak banyak mengetahui tentang Irine. Temui DAisy dan tanyakan langsung.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf</FONT> <FONT color=#a82424>→ Daisy</FONT></html>]]></contents>
+         <destination mid="81"><![CDATA[Bicara dengan Daisy di Riverwort Wharf]]></destination>
+         <todo_msg mid="82"><![CDATA[Bicara dengan Daisy di Riverwort Wharf.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_63.dds</contents_image>
+         <destination_pos>631,0,0</destination_pos>
+         <destination_mode>custom:631@4,632@0</destination_mode>
+         <statemark_npcid>850</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="84"><![CDATA[Hoho heal]]></title>
+         <contents mid="85"><![CDATA[<html>Daisy meminta kamu membawa hoho heal plant dari Meteor Crash Site Core. Pergi ke Meteor Crash Site Core.<BR><BR><FONT color=#086171>Riverwort Wharf (Meteor Crash Site Entrance)</FONT> <FONT color=#a82424>→ Meteor Crash Site Core</FONT></html>]]></contents>
+         <destination mid="86"><![CDATA[Kumpulkan hoho heal plant di Meteor Crash Site Core]]></destination>
+         <todo_msg mid="87"><![CDATA[Temukan hoho heal plant di Meteor Crash Site Core.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Daisy.dds</contents_image>
+         <destination_pos>14,n849</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>849</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="95"><![CDATA[Talk to Daisy]]></title>
+         <contents mid="96"><![CDATA[<html>Berhasil mendapatkan hoho heal plant. Sekarang  pergilah ke Riverwort Wharf dan berikan pada Daisy.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf</FONT> <FONT color=#a82424>→ Daisy</FONT></html>]]></contents>
+         <destination mid="97"><![CDATA[Bicara dengan Daisy di Riverwort Wharf]]></destination>
+         <todo_msg mid="98"><![CDATA[Bicara dengan Daisy di Riverwort Wharf.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Master_Gunter.dds</contents_image>
+         <destination_pos>11,n36</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>36</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="100"><![CDATA[Lapor ke Adventurer's Guild Master Gunther]]></title>
+         <contents mid="101"><![CDATA[<html>Lapor ke Saint's Haven's Adventurer's Guild Master Gunther about Daisy.<BR>
+<FONT color=#086171></FONT> <BR>
+<FONT color=#086171>Saint's Haven</FONT> <FONT color=#a82424>→ Adventurer's Guild Master Gunther</FONT></html>]]></contents>
+         <destination mid="102"><![CDATA[Bicara dengan Adventurer's Guild Master Gunther]]></destination>
+         <todo_msg mid="103"><![CDATA[Bicara dengan Adventurer's Guild Master Gunther di Saint's Haven.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>57:-1</user_level>
+      <user_class />
+      <prev_quest>4046</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

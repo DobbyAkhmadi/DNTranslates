@@ -1,0 +1,31 @@
+   <talk>
+      <npcename>n2155_cronicle_box</npcename>
+      <npcid>2155</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Treasure Box of Returned Hero]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="15"><![CDATA[<html>(Next)</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Treasure Box of Returned Hero$<BR><FONT color=#7e12d2>(Telah muncul Box berbentuk aneh di depan mata)</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="16" link_target="sq_cronicle_2915_return_hero_4.xml"><![CDATA[<html>(Coba berbicara) </html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="17" link_target="sq_cronicle_2916_return_hero_5.xml"><![CDATA[<html>(Coba berbicara) </html>]]></talk_answer>
+         <talk_answer link_index="001" mid="18"><![CDATA[<html>(Berhentilah)</html>]]></talk_answer>
+         <talk_question mid="9"><![CDATA[<html>$Treasure Box of Returned Hero$<BR>
+Senang bertemu denganmu <FONT color=#387206>{user_nick}</FONT>.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="0" false="2">0</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+         <exe type="enterquest">eq_cronicle_2915_return_hero_4</exe>
+         <exe type="enterquest">eq_cronicle_2916_return_hero_5</exe>
+         <exe type="conexe" true="3" false="0">2</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">2916</chk>
+         <chk type="hascomq">2915</chk>
+         <chk type="hascomq">2914</chk>
+      </conditions>
+   </talk>

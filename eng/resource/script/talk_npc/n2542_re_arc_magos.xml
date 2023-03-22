@@ -1,0 +1,35 @@
+   <talk>
+      <npcename>n2542_re_arc_magos</npcename>
+      <npcid>2542</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Magos]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Magos$<BR><FONT color=#2b2723>You fool.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="qu_01" mid="12"><![CDATA[<html>Please take cover! This place is too near the raid location<FONT color=#387206>……</FONT></html>]]></talk_answer>
+         <talk_question mid="4"><![CDATA[<html>$Magos$<BR><FONT color=#2b2723>Oh? I’ve finally found something useful.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="qu_01" image="" itemindex="">
+         <talk_answer link_index="end_talk" mid="13"><![CDATA[<html><FONT color=#7e12d2>(Consciousness fades with a pang of great pain.)</FONT></html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Magos$<BR><FONT color=#2b2723>Tsk. How stupid.</FONT><BR>
+ </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2,3" false="0">0</exe>
+         <exe type="talk">002</exe>
+         <exe type="custom">api_user_SetSecondJobSkill( userObjID, 83 );</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 241, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 343, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 751, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 752, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 753, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID, 754, 0, 1, 1, 0);</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetUserJobID(userObjID) == 82</chk>
+      </conditions>
+      <exelink idx="end_talk">4,5,6,7,8,9</exelink>
+   </talk>

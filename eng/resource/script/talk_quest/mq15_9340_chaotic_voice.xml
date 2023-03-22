@@ -1,0 +1,350 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq15_9340_chaotic_voice</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>6</qchapter>
+      <qid>9340</qid>
+      <designer>정진호</designer>
+      <qlevel>43</qlevel>
+      <qdesc>(714 용추종자 점거지 참조)
+유저는 용추종자 점거지에서 모든 상황이 끝는 것을 본다. 할아버지를 안고 울고 있는 차티를 목격한다.
+충격을 받은 유저. 혼란스럽다.
+그때 일루전이 나타난다.
+'내가 말했지. 그녀는 너를 속이고 있다고.
+그녀는 네가 시간의 미아가 되지 않도록 하는 법을 알고 있어. 알면서도 네게 숨기고 있는 거다. 미쳐버리도록.'
+사라지는 일루전.
+루나와 대화. 루나는 '나는 네 생각까지 들을 수는 없어.' 라고 답한다.
+그가 본 일루전은 내면의 일루전이었다. 유저는 점점 혼란해진다.
+'나도 너도 시간혼란이 심해지고 있다. 네 세계에서 시간을 순행구조로 살아내고 있는 건 지금 너 자신뿐이다.'
+루나는 순백의 오브와 에클레르가 만들어준 도구의 힘도 다했다며, 더 강력한 무언가가 필요하다고 말한다.
+카라큘에게 돌아가 보자.</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9341</nextqid>
+      <nextqname>mq15_9341_crisscross</nextqname>
+      <nextqnpc>n1177_lunaria</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Voice in Confusion]]></qkname>
+      <qnpc>
+         <npcid>1169</npcid>
+         <npcename>n1169_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1176</npcid>
+         <npcename>n1176_illusion</npcename>
+         <npckname>일루전</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1177</npcid>
+         <npcename>n1177_lunaria</npcename>
+         <npckname>루나리아</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>492</npcid>
+         <npcename>n492_charty</npcename>
+         <npckname>차티</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>493</npcid>
+         <npcename>n493_charty_grandfather</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>709</npcid>
+         <npcename>n709_trader_lucita</npcename>
+         <npckname>상인 루시타</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-accepting-acceptted" mid="8" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Merchant Lucita$<BR>Hello adventurer.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-1-a" mid="11" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Merchant Lucita$<BR>Is there still no news about Charti's grandfather?<BR>I hope everyone can get along well…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n709_trader_lucita-1-a" image="QW_54.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lucita.dds" center_image="">
+      <talk_answer link_index="n709_trader_lucita-1-" mid="13" select_type="5" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Lunaria said she saw the other adventurers going towards the Dragon Follower Base.<BR>I don't know how much time had become distorted but I should still try going there.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1169_lunaria-1" image="QW_54.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1169_lunaria-1-" mid="16" select_type="5" />
+      <talk_question mid="15"><![CDATA[<html>$Lunaria$<BR><FONT color=#a82424>Dragon Follower Base</FONT>.<BR>Whether you go or not is your choice. I will only follow.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-1-" mid="18" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>$Illusion${sound:npc_Illusion_qu_9340_01.ogg}<BR>
+Don't you get it?<BR>My foolish past self.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-1-" mid="20" select_type="5" />
+      <talk_question mid="19"><![CDATA[<html>$Lunaria$<BR>…I have nothing else to say to you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-a" mid="23" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Charti$<BR>Oh no… grandpa… I'm sorry I came too late….<BR>I should have… ran a little faster….<BR>Grandpa…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-a" image="" itemindex="" portrait_left="NPC_Left_Chartygrandfather.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-b" mid="25" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Charti's Grandfather${action:Stand}<BR>No my child… I am grateful to our ancestors that you came here before it's too late.<BR>…It's time I left to join our ancestors… (Coughs)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-b" image="" itemindex="" portrait_left="NPC_Left_Chartygrandfather.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-c" mid="27" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(What's happening? I thought Charti was dead…?<BR>Did I travel back in time again…?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-d" mid="29" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Charti$<BR>No! Please don't leave me!<BR>I need you!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-d" image="" itemindex="" portrait_left="NPC_Left_Chartygrandfather.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-e" mid="31" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Charti's Grandfather$<BR>I'm sorry Charti… You should lead our tribe from now on….<BR>I will let you know… where the holy place of our tribe is….<BR><FONT color=#7e12d2>(Charti's grandfather whispers to Charti)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-e" image="" itemindex="" portrait_left="NPC_Left_Chartygrandfather.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-f" mid="33" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Charti's Grandfather$<BR>The Dragon Followers tried to get the secret out of me with torture but…<BR>I… kept the… secret… of… (coughs) … our ancestors… </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-f" image="" itemindex="" portrait_left="NPC_Left_Chartygrandfather.dds" portrait_right="" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-g" mid="35" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Charti's Grandfather${action:Die}<BR>Charti… Please keep that secret to yourself too… Please…<BR>
+Protect the... dragon's jewel…<BR><FONT color=#7e12d2>(Charti's grandfather closes his eyes)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-h" mid="37" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Charti$<BR>No! Grandpa! Please… Please wake up!<BR>Don't leave me… Please…<BR><FONT color=#7e12d2>(Charti sobs loudly)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-i" mid="39" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-1-j" mid="41" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Charti$<BR>Go away… Please. Leave me alone with my grandpa….<BR>Grandpa…<BR><FONT color=#7e12d2>(Charti curls up beside her grandfather and continues to cry)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-1-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-2" mid="43" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Charti, erm…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n493_charty_grandfather-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Charty.dds" center_image="">
+      <talk_answer link_index="n493_charty_grandfather-2-" mid="46" select_type="5" />
+      <talk_question mid="45"><![CDATA[<html>$Charti$<BR><FONT color=#7e12d2>(Charti is holding onto her grandfather's body which is turning cold)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-2-a" mid="48" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Illusion${sound:npc_Illusion_qu_9340_01.ogg}<BR>Don't you get it now? Foolish past.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-2-b" mid="50" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What are you? An imagination from within myself or another physical self?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-2-c" mid="52" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>$Illusion${sound:npc_Illusion_qu_9340_02.ogg}<BR>…I'm you.<BR>And you are me of the past. After wasting some time, you will finally become me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-2-d" mid="54" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Illusion${sound:npc_Illusion_qu_9340_03.ogg}<BR>Didn't I tell you before?<BR>That woman is deceiving you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-2-e" mid="56" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What is he saying?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-2-f" mid="58" select_type="2" />
+      <talk_question mid="57"><![CDATA[<html>$Illusion${sound:npc_Illusion_qu_9340_04.ogg}<BR>That woman knows how you can stop being lost in time.<BR>Yet, she is hiding it from you.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-2-g" mid="60" select_type="2" />
+      <talk_question mid="59"><![CDATA[<html>$Illusion${sound:npc_Illusion_qu_9340_05.ogg}<BR>So that you go crazy.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-2-h" mid="62" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>What?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-3" mid="64" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>$Illusion${sound:npc_Illusion_qu_9340_06.ogg}<BR>Stupid idiot….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1176_illusion-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Illusion.dds" center_image="">
+      <talk_answer link_index="n1176_illusion-3-" mid="67" select_type="5" />
+      <talk_question mid="66"><![CDATA[<html>$Illusion${sound:npc_Illusion_qu_9340_07.ogg}<BR>Only after you've gone mad, you'll think back at the times you've wasted.<BR>Only after you have become lost in time full of regrets.<BR>
+My foolish self….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-a" mid="69" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>$Lunaria$<BR>You're asking whether I saw Illusion?<BR>Did you just ask me if I heard his voice?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-b" mid="71" select_type="2" />
+      <talk_question mid="70"><![CDATA[<html>$Lunaria$<BR>No I can't see him.<BR>How can I see your thoughts? He's an illusion inside your inner self.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-c" mid="73" select_type="2" />
+      <talk_question mid="72"><![CDATA[<html>$Lunaria${action:Stand1}<BR>At the end of the day, you're just talking to yourself.<BR>I can't possibly know about it.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-d" mid="75" select_type="2" />
+      <talk_question mid="74"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>It was so real. So he wasn't separated from me but he was inside me?<BR>…I don't know. I'm getting more and more confused about where I am, who I am, and who he is….</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-e" mid="77" select_type="2" />
+      <talk_question mid="76"><![CDATA[<html>$Lunaria$<BR>The time confusion is getting worse for both you and me.<BR>The only one who is experiencing time linearly in your world is only yourself.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-f" mid="79" select_type="2" />
+      <talk_question mid="78"><![CDATA[<html>$Lunaria$<BR>The tool from Priestess of Darkness Éclair must be not working too.<BR>You need to find something more powerful.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-g" mid="103" select_type="2" />
+      <talk_question mid="102"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Something more powerful…?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-h" mid="105" select_type="2" />
+      <talk_question mid="104"><![CDATA[<html>$Lunaria$<BR><FONT color=#2b2723>Yes. Something that has immense power.<BR>Something that can hold us down in these waves of time.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-i" mid="98" select_type="4" />
+      <talk_question mid="82"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1177_lunaria-3-i" image="QW_LiverwortFerry.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Lunaria.dds" center_image="">
+      <talk_answer link_index="n1177_lunaria-3-!next" mid="100" select_type="2" />
+      <talk_question mid="99"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Anyway, let's go to Riverwort Wharf.<BR>Nothing will get solved if we just stand here.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9340</exe>
+         <exe type="talk" npc="n709_trader_lucita">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">93400,,,,,,,,,</exe>
+         <exe type="complete" true="">9340</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n709_trader_lucita" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n709_trader_lucita" sub="" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="b" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="c" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="d" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="e" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="f" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="g" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="h" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="i" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="j" />
+   <exelink qstep="1" npc="n493_charty_grandfather" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n1176_illusion" sub="b" />
+   <exelink qstep="2" npc="n1176_illusion" sub="c" />
+   <exelink qstep="2" npc="n1176_illusion" sub="d" />
+   <exelink qstep="2" npc="n1176_illusion" sub="e" />
+   <exelink qstep="2" npc="n1176_illusion" sub="f" />
+   <exelink qstep="2" npc="n1176_illusion" sub="g" />
+   <exelink qstep="2" npc="n1176_illusion" sub="h" />
+   <exelink qstep="2" npc="n1176_illusion" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n1177_lunaria" sub="b" />
+   <exelink qstep="3" npc="n1177_lunaria" sub="c" />
+   <exelink qstep="3" npc="n1177_lunaria" sub="d" />
+   <exelink qstep="3" npc="n1177_lunaria" sub="e" />
+   <exelink qstep="3" npc="n1177_lunaria" sub="f" />
+   <exelink qstep="3" npc="n1177_lunaria" sub="g" />
+   <exelink qstep="3" npc="n1177_lunaria" sub="h">0</exelink>
+   <exelink qstep="3" npc="n1177_lunaria" sub="i">1</exelink>
+   <exelink qstep="3" npc="n1177_lunaria" sub="!next" />
+   <journal_data recompense="93400" quest_title="혼란 속의 목소리" chapterid="6" quest_level="43" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QW_54.dds</contents_image>
+         <destination_pos>542,n493</destination_pos>
+         <destination_mode>custom:541@1,542@1</destination_mode>
+         <statemark_npcid>493</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="85"><![CDATA[Voice in Confusion I]]></title>
+         <contents mid="86"><![CDATA[<html>The adventurers were seen heading towards the Dragon Follower Base. Though you don't know how the time will change and who you will meet there, it would be better to go and take a look.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Riverwort Ruins)</FONT> <FONT color=#a82424>- Dragon Follower Base</FONT></html>]]></contents>
+         <destination mid="87"><![CDATA[Dragon Follower Base]]></destination>
+         <todo_msg mid="88"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_NPC_Illusion.dds</contents_image>
+         <destination_pos>542,n1176</destination_pos>
+         <destination_mode>custom:541@1,542@1</destination_mode>
+         <statemark_npcid>1176</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="90"><![CDATA[Voice in Confusion II]]></title>
+         <contents mid="91"><![CDATA[<html>It seems like you jumped across time again. You saw Charti's grandfather die in front of your eyes.<BR>And you met Illusion. Is he real? Or is he just a figment of imagination?<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Riverwort Ruins)</FONT> <FONT color=#a94407>- Dragon Follower Base(Illusion)</FONT></html>]]></contents>
+         <destination mid="92"><![CDATA[Talk to Illusion at Dragon Follower Base]]></destination>
+         <todo_msg mid="93"><![CDATA[Talk to Illusion who has suddenly appeared]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_NPC_Lunaria.dds</contents_image>
+         <destination_pos>542,n1177</destination_pos>
+         <destination_mode>custom:541@1,542@1</destination_mode>
+         <statemark_npcid>1177</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="94"><![CDATA[Voice in Confusion III]]></title>
+         <contents mid="95"><![CDATA[<html>Talk to Lunaria.<BR>
+ <BR>
+<FONT color=#086171>Riverwort Wharf (Riverwort Ruins)</FONT> <FONT color=#a94407>- Dragon Follower Base(Lunaria)</FONT></html>]]></contents>
+         <destination mid="96"><![CDATA[Talk to Lunaria at Dragon Follower Base]]></destination>
+         <todo_msg mid="97"><![CDATA[Talk to Lunaria.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class>7</user_class>
+      <prev_quest>9339</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

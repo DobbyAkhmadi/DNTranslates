@@ -1,0 +1,456 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq11_395_realize_foreboding</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>5</qchapter>
+      <qid>395</qid>
+      <designer>김인정</designer>
+      <qlevel>38</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>396</nextqid>
+      <nextqname>mq11_396_last_hope</nextqname>
+      <nextqnpc>n393_academic_station</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Sense of Foreboding is Correct]]></qkname>
+      <qnpc>
+         <npcid>216</npcid>
+         <npcename>n216_geraint_wounded</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>220</npcid>
+         <npcename>n220_elite_soldier_wounded</npcename>
+         <npckname>부상당한 정예병사</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>393</npcid>
+         <npcename>n393_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>40</npcid>
+         <npcename>n040_king_casius</npcename>
+         <npckname>국왕 카시우스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>519</npcid>
+         <npcename>n519_cian</npcename>
+         <npckname>워리어 시안</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>528</npcid>
+         <npcename>n528_acamedic_jasmin</npcename>
+         <npckname>아카데믹 자스민</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-noquest" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html>$Gerraint$<BR>Yang ada di sini hanya gadis tertidur itu dan yang bukan manusia itu.<BR>Bagimu, dunia luar yang enerjik lebih cocok.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n220_elite_soldier_wounded-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="6"><![CDATA[<html>$Injured Elite Soldier$<BR>Ahh...<BR><FONT color=#7e12d2>(Sepertinya tidak dapat berbicara karena cedera yang parah.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-noquest" image="QN_Rose.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="7"><![CDATA[<html>$King Cassius$<BR>Sang Prophet... belum terbangun...?<BR>Apakah karena aku tidak cukup bagus? Betulkah...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="208"><![CDATA[<html>$Warrior Xian$<BR>Aku akan mengerahkan semua kemampuanku untuk melindungi Saint's Haven!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-accepting-a" mid="270" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_03.ogg}<BR>Jangan khawatirkan Serpentra.<BR>Adventurer lain akan mengalahkannya.
+Kamu hanya perlu menjaga <FONT color=#a82424>Prophet</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-accepting-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-accepting-acceptted" mid="272" select_type="3" />
+      <talk_question mid="271"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-1-" mid="274" select_type="5" />
+      <talk_question mid="139"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_08.ogg}<BR>Pergi ke <FONT color=#a82424>King Cassius</FONT> dan perhatikan baik-baik. Aku masih tidak mengerti kenapa Gerraint memindahkan Nest dan menghilang atau kemana Prophet pergi. Aku tidak mengerti.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n220_elite_soldier_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n220_elite_soldier_wounded-1-" mid="275" select_type="5" />
+      <talk_question mid="140"><![CDATA[<html>$Injured Elite Soldier$<BR>Ahh....<BR><FONT color=#7e12d2>(Sepertinya tidak bisa bicara karena terluka parah.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-1-" mid="276" select_type="5" />
+      <talk_question mid="141"><![CDATA[<html>$Gerraint$<BR>Yang ada disini hanya gadis yang tidur dan bukan-manusia.<BR>Untukmu, energi dunia luar cocok denganmu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-a" mid="277" select_type="2" />
+      <talk_question mid="142"><![CDATA[<html>$King Cassius$<BR>Beranilah <FONT color=#387206>{user_nick}</FONT>, dalam situasi ini, apa...<BR>
+Apa...... Apa yang harus aku lakukan?<BR><FONT color=#7e12d2>(Dia gemetaran.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-b" mid="279" select_type="2" />
+      <talk_question mid="278"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa yang terjadi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-c" mid="280" select_type="2" />
+      <talk_question mid="145"><![CDATA[<html>$King Cassius$<BR>Keadaan darurat.<BR>
+<FONT color=#a82424>scout</FONT> diserang, dan mereka harus mundur meninggalkan yang terluka.<BR>Apa yang harus aku lakukan....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-d" mid="282" select_type="2" />
+      <talk_question mid="281"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Siapa yang diserang?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-d" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-e" mid="283" select_type="2" />
+      <talk_question mid="147"><![CDATA[<html>$King Cassius$<BR>Katanya mereka akan mengirim tentara untuk memeriksanya....<BR>
+Aku tidak tenang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-e" image="QN_Npc_Elite_Soilder.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-f" mid="285" select_type="2" />
+      <talk_question mid="284"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Coba aku pergi periksa.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-1-g" mid="286" select_type="2" />
+      <talk_question mid="209"><![CDATA[<html>$King Cassius$<BR>Oh, kamu mau? Kamu gadis yang pemberani, <FONT color=#387206>{user_nick}</FONT>....<BR>Aku merasa tenang.<BR>
+<FONT color=#7e12d2>(Cassius terlihat lega)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-1-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2" mid="288" select_type="2" />
+      <talk_question mid="287"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kemana aku harus pergi?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-1-" mid="289" select_type="5" />
+      <talk_question mid="211"><![CDATA[<html>$Warrior Xian$<BR>Aku akan berusaha sebaik mungkin untuk melindungi Saint's Haven!<BR>Semoga <FONT color=#387206>{user_nick}</FONT> bergabung dengaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-2" image="QW_39.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-2-" mid="290" select_type="5" />
+      <talk_question mid="212"><![CDATA[<html>$King Cassius$<BR>Tentara yang terluka yang tidak bisa mundur ada di <FONT color=#a82424>Captain Darlant's Base</FONT>.<BR>Pergi cari tahu apa yang diinginkan monster jahat itu.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-2-" mid="291" select_type="5" />
+      <talk_question mid="213"><![CDATA[<html>$Gerraint$<BR>...Apakah Serpentra benar-benar revive?<BR>
+Aku tidak mengerti. Kenapa dia melakukan tindakan tidak berguna itu...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n220_elite_soldier_wounded-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n220_elite_soldier_wounded-2-a" mid="292" select_type="2" />
+      <talk_question mid="214"><![CDATA[<html>$Injured Elite Soldier$<BR>Ahh...! Monster...! Monster besar...<BR>Pergi ke arah itu...!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n220_elite_soldier_wounded-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n220_elite_soldier_wounded-2-b" mid="294" select_type="2" />
+      <talk_question mid="293"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu tidak apa-apa?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n220_elite_soldier_wounded-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n220_elite_soldier_wounded-2-c" mid="295" select_type="2" />
+      <talk_question mid="216"><![CDATA[<html>$Injured Elite Soldier$<BR>Ahh... Aku... Baik-baik saja... Harus pergi ke Royal Palace untuk lapor...!!<BR>Besar... Monster laut... muncul... cepat...<BR>
+Kita harus cepat... Dan memberitahu mereka!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n220_elite_soldier_wounded-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n220_elite_soldier_wounded-2-d" mid="297" select_type="2" />
+      <talk_question mid="296"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Monster laut?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n220_elite_soldier_wounded-2-d" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n220_elite_soldier_wounded-2-e" mid="298" select_type="2" />
+      <talk_question mid="218"><![CDATA[<html>$Injured Elite Soldier$<BR>... <FONT color=#a82424>Serpentra</FONT>yang jahat... Serpentra telah muncul!<BR>Cepat, lapor... ke <FONT color=#a82424>Royal Palace</FONT>...!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n220_elite_soldier_wounded-2-e" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n220_elite_soldier_wounded-3" mid="300" select_type="2" />
+      <talk_question mid="299"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku mengerti.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n220_elite_soldier_wounded-3" image="QN_Npc_King_Casius.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Elite_Soilder.dds" center_image="">
+      <talk_answer link_index="n220_elite_soldier_wounded-3-" mid="301" select_type="5" />
+      <talk_question mid="220"><![CDATA[<html>$Injured Elite Soldier$<BR>Terima... Kasih... Ahh....!!.<BR><FONT color=#7e12d2>(Elite Soldier terdiam.</FONT><BR>
+<FONT color=#7e12d2>(Cepat kembali ke Royal Palace dan lapor.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3" image="QN_six_heroes_silhouette.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-a" mid="302" select_type="2" />
+      <talk_question mid="222"><![CDATA[<html>$King Cassius$<BR>Pa katamu? Aku tidak percaya <FONT color=#a82424>Serpentra</FONT> kembali lagi...!<BR>
+Kukira monster itu dibunuh oleh <FONT color=#a82424>Six Heroes</FONT> 50 tahun lalu, apa yang terjadi?<BR>
+Apakah karena aku raja yang buruk...? (hiks)</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-a" image="QN_six_heroes_silhouette.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-b" mid="304" select_type="2" />
+      <talk_question mid="303"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tenang.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-b" image="QN_Npc_Duke_Stwart.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-3-c" mid="305" select_type="2" />
+      <talk_question mid="224"><![CDATA[<html>$King Cassius$<BR>Oh, okay. Aku akan bicara dengan General dan pamanku dan memutuskan apa yang harus dilakukan.<BR>Terimakasih sudah memberitahuku. Gadis pemberani!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-3-c" image="QN_Npc_Duke_Stwart.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-4" mid="307" select_type="2" />
+      <talk_question mid="306"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Aku harus melakukan apa sekarang?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-3-a" mid="308" select_type="2" />
+      <talk_question mid="226"><![CDATA[<html>$Warrior Xian$<BR>Kamu sudah dengar tentang kembalinya Serpentra?<BR>Saatnya untuk kita menyelamatkan kembali Saint's Haven!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n519_cian-3-a" image="QN_Npc_Geraint_Closeeye.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Cian.dds" center_image="">
+      <talk_answer link_index="n519_cian-3-" mid="309" select_type="5" />
+      <talk_question mid="228"><![CDATA[<html>$Warrior Xian${action:Talk}<BR>Aku akan pergi dengan Gerraint untuk mengalahkan Serpentra.<BR><FONT color=#387206>{user_nick}</FONT>, kamu mauk ikut?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n040_king_casius-4" image="QN_Npc_Velskud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_King_Casius.dds" center_image="">
+      <talk_answer link_index="n040_king_casius-4-" mid="310" select_type="5" />
+      <talk_question mid="229"><![CDATA[<html><FONT color=#7e12d2>(Pergi ke Velskud di Foothills of Black Mountain dan laporkan situasinya dan diskusikan langkah selanjutnya.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-4" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-4-" mid="311" select_type="5" />
+      <talk_question mid="230"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_CG_Jasmin_sp_06.ogg}<BR>Serpentra muncul? bagaimana dengan <FONT color=#a82424>Velskud</FONT>...? kamu bertemu dengannya?<BR>Sekarang, berdasarkan catatan, Prophet akan menghilang dan kita harus melakukan sesuatu!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-5" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-5-a" mid="312" select_type="2" />
+      <talk_question mid="231"><![CDATA[<html>$Gerraint$<BR>Serpentra...<BR>
+Kita sudah melakukan banyak hal agar dia tidak bangkit, tapi sekarang malah begini.<BR>
+<FONT color=#7e12d2>(Gerraint terlihat kesal)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-5-a" image="QN_Npc_Cian.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-5-b" mid="313" select_type="2" />
+      <talk_question mid="233"><![CDATA[<html>$Gerraint$<BR>Karena aku sudah berjanji untuk melindungi Saint's Haven, aku tidak punya pilihan selain mengalahkan Serpentra.<BR>Aku akan pergi dengan <FONT color=#a82424>Warrior Xian</FONT> ke tempat monster itu terlihat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-5-b" image="QN_Npc_Cian.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-5-c" mid="315" select_type="2" />
+      <talk_question mid="314"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku akan melindungi Prophet.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-5-d" mid="316" select_type="2" />
+      <talk_question mid="236"><![CDATA[<html>$Gerraint$<BR>Nest tidak dipindahkan bahkan saat aku meninggalkan tempatku untuk melawan monster itu.<BR>Tapi kalau itu maumu, jaga baik-baik ya.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6" mid="318" select_type="2" />
+      <talk_question mid="317"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n216_geraint_wounded-6" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Geraint_Closeeye.dds" center_image="">
+      <talk_answer link_index="n216_geraint_wounded-6-" mid="319" select_type="5" />
+      <talk_question mid="238"><![CDATA[<html>$Gerraint$<BR>Sekarang, aku akan pergi.<BR><FONT color=#7e12d2>(Pergi ke Tinkerer Station dan lapor ke Jasmine tentang situasi saat ini.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-a" mid="320" select_type="2" />
+      <talk_question mid="239"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_SH_Jasmin_sp_04.ogg}<BR>
+Akhirnya Serpentra datang.<BR>Tapi <FONT color=#a82424>Gerraint</FONT> dan adventurer lain akan mengalahkannya, jadi jangan cemas. Okay?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-b" mid="322" select_type="2" />
+      <talk_question mid="321"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Ya, aku putuskan untuk tinggal</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-c" mid="323" select_type="2" />
+      <talk_question mid="242"><![CDATA[<html>$Tinkerer Jasmine$<BR>Gadis pintar. Ini kesempatan kita untuk mengambil <FONT color=#a82424>Prophet</FONT>.<BR>Kita telah gagal menemukan lokasi<FONT color=#a82424>Monolith</FONT>, tapi Prophet sudah bangun, masalah akan terpecahkan.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-d" mid="325" select_type="2" />
+      <talk_question mid="324"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dia pasti tahu dimana Monolith.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-e" mid="326" select_type="2" />
+      <talk_question mid="244"><![CDATA[<html>$Tinkerer Jasmine$<BR>Ya, jadi pergilah ke <FONT color=#a82424>Secret Area di Basement Royal Palace</FONT> dan terus awasi Prophet.<BR>Akan lebih baik jika kita bisa membangunkannya, tapi kita tidak tahu kapan Nest akan hilang.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-f" mid="328" select_type="2" />
+      <talk_question mid="327"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tapi kenapa Nest akan menjadi tidak aktif?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-g" mid="329" select_type="2" />
+      <talk_question mid="246"><![CDATA[<html>$Tinkerer Jasmine$<BR>Well.... mungkin setelah mengalahkan Serpentra, <FONT color=#a82424>Gerraint</FONT> akan merasa muak dengan manusia dan pergi.<BR>Atau masalah lain bisa timbul dan tiba-tiba, dia harus memindahkan Nest....<BR>
+<FONT color=#7e12d2>(Jasmine menebak-nebak)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-h" mid="331" select_type="2" />
+      <talk_question mid="330"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Itu hanya perkiraan.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n393_academic_station-6-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n393_academic_station-6-!next" mid="332" select_type="4" />
+      <talk_question mid="248"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">395</exe>
+         <exe type="talk" npc="n393_academic_station">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">3950,,,,,,,,</exe>
+         <exe type="complete" true="">395</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n393_academic_station" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n040_king_casius" sub="b" />
+   <exelink qstep="1" npc="n040_king_casius" sub="c" />
+   <exelink qstep="1" npc="n040_king_casius" sub="d" />
+   <exelink qstep="1" npc="n040_king_casius" sub="e" />
+   <exelink qstep="1" npc="n040_king_casius" sub="f" />
+   <exelink qstep="1" npc="n040_king_casius" sub="g" />
+   <exelink qstep="1" npc="n040_king_casius" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n220_elite_soldier_wounded" sub="b" />
+   <exelink qstep="2" npc="n220_elite_soldier_wounded" sub="c" />
+   <exelink qstep="2" npc="n220_elite_soldier_wounded" sub="d" />
+   <exelink qstep="2" npc="n220_elite_soldier_wounded" sub="e" />
+   <exelink qstep="2" npc="n220_elite_soldier_wounded" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n040_king_casius" sub="b" />
+   <exelink qstep="3" npc="n040_king_casius" sub="c" />
+   <exelink qstep="3" npc="n040_king_casius" sub="4">0,1</exelink>
+   <exelink qstep="3" npc="n519_cian" sub="" />
+   <exelink qstep="5" npc="n216_geraint_wounded" sub="b" />
+   <exelink qstep="5" npc="n216_geraint_wounded" sub="c" />
+   <exelink qstep="5" npc="n216_geraint_wounded" sub="d" />
+   <exelink qstep="5" npc="n216_geraint_wounded" sub="6">0,1</exelink>
+   <exelink qstep="6" npc="n393_academic_station" sub="b" />
+   <exelink qstep="6" npc="n393_academic_station" sub="c" />
+   <exelink qstep="6" npc="n393_academic_station" sub="d" />
+   <exelink qstep="6" npc="n393_academic_station" sub="e" />
+   <exelink qstep="6" npc="n393_academic_station" sub="f" />
+   <exelink qstep="6" npc="n393_academic_station" sub="g" />
+   <exelink qstep="6" npc="n393_academic_station" sub="h">0</exelink>
+   <exelink qstep="6" npc="n393_academic_station" sub="!next">1</exelink>
+   <journal_data recompense="3950" quest_title="나쁜 예감은 적중합니다" chapterid="5" quest_level="38" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>11,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="192"><![CDATA[Sense of Foreboding is Correct I]]></title>
+         <contents mid="193"><![CDATA[<html>Tidak tahu kapan Serpentra akan bangkit lagi. Bicara pada raja dan cari tahu apakah dia tahu sesuatu.<BR>
+<BR><FONT color=#086171>Saint's Haven Royal Palace</FONT> <FONT color=#a82424>→ King Cassius</FONT></html>]]></contents>
+         <destination mid="194"><![CDATA[Bicara pada King Cassius]]></destination>
+         <todo_msg mid="195"><![CDATA[Bicara pada King Cassius.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QW_39.dds</contents_image>
+         <destination_pos>392,n220</destination_pos>
+         <destination_mode>custom:391@1,392@1</destination_mode>
+         <statemark_npcid>220</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="250"><![CDATA[Sense of Foreboding is Correct II]]></title>
+         <contents mid="251"><![CDATA[<html>Untuk mencari tahu Monster tersebut, pergi ke tempat penampakannya di Captain Darlant's Base.<BR>
+ <BR>
+<FONT color=#086171>Hermalte Port (Forsaken Islet Transport)</FONT> <FONT color=#a82424>→ Captain Darlant's Base</FONT></html>]]></contents>
+         <destination mid="252"><![CDATA[Bicara pada prajurit terluka di Captain Darlant's Base]]></destination>
+         <todo_msg mid="253"><![CDATA[Temui prajurit terluka di Captain Darlant's Base]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_Npc_King_Casius.dds</contents_image>
+         <destination_pos>11,n40</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>40</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="254"><![CDATA[Sense of Foreboding is Correct III]]></title>
+         <contents mid="255"><![CDATA[<html>Menurut prajurit terluka tersebut, Monster yang menyerang mereka adalah Serpentra. Laporkan monster tersebut pada King Cassius.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven Royal Palace</FONT> <FONT color=#a82424>→ King Cassius</FONT></html>]]></contents>
+         <destination mid="256"><![CDATA[Bicara pada King Cassius]]></destination>
+         <todo_msg mid="257"><![CDATA[Kembali ke King Cassius dan laporkan.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Velskud.dds</contents_image>
+         <destination_pos>13,0,0</destination_pos>
+         <destination_mode>custom:13@4</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="258"><![CDATA[Sense of Foreboding is Correct IV]]></title>
+         <contents mid="259"><![CDATA[<html>Temui Velkskud di Black Mountain dan ceritakan padanya apa yang terjadi.<BR><FONT color=#7e12d2></FONT><BR><FONT color=#7e12d2>※ Tidak dapat melanjutkan Quest ketika berada dalam Party.</FONT><BR><BR><FONT color=#086171>Foothills of Black Mountain</FONT> → Velskud</html>]]></contents>
+         <destination mid="260"><![CDATA[(Solo) Bicara pada Velkskud di Black Mountain]]></destination>
+         <todo_msg mid="261"><![CDATA[Temui Velkskud di Black Mountain.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Geraint_Closeeye.dds</contents_image>
+         <destination_pos>13014,n216</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>216</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="262"><![CDATA[Sense of Foreboding is Correct V]]></title>
+         <contents mid="263"><![CDATA[<html>Sudah mencoba memberi tahu Velkskud bahwa Serpentra telah muncul, tapi dia sudah meninggalkan Black Mountain. Pergi ke ruang bawah tanah di Royal Palace, lapor pada Gerraint dan diskusikan apa yang harus dilakukan.<BR>
+ <BR>
+<FONT color=#086171>Saint's Haven Royal Palace(Secret Basement Area)</FONT> <FONT color=#a82424>→ Gerraint</FONT></html>]]></contents>
+         <destination mid="264"><![CDATA[Bicara pada Gerraint di Secret Basement Area Royal Palace]]></destination>
+         <todo_msg mid="265"><![CDATA[Velskud sudah hilang. Pergi temui Gerraint.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>11,n393</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>393</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="266"><![CDATA[Sense of Foreboding is Correct VI]]></title>
+         <contents mid="267"><![CDATA[<html>Gerraint akan pergi mengalahkan Serpentra bersama Warrior Xian. Memutuskan untuk melindungi Prophet, maka pergi melapor ke Jasmine.<BR><BR><FONT color=#086171>Saint's Haven</FONT><FONT color=#a82424> → Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="268"><![CDATA[Hubungkan ke Tinkerer Station]]></destination>
+         <todo_msg mid="269"><![CDATA[Hubungkan ke Tinkerer Station lalu melapor.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>-1:-1</user_level>
+      <user_class />
+      <prev_quest>394</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

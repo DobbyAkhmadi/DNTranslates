@@ -1,0 +1,39 @@
+   <talk>
+      <npcename>n2696_promise_ilyn</npcename>
+      <npcid>2696</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Event Helper Irine]]></npckname>
+      <talk_paragraph index="basic" image="" itemindex="">
+         <talk_answer link_index="congratulation" mid="7"><![CDATA[<html><FONT color=#387206>[Congratulate oath-taker]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="host" mid="21"><![CDATA[<html><FONT color=#387206>[Go to carry out Oath Ceremony]</FONT></html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Event Helper Irine$<BR>Today a new oath-taker is born!<BR>Irine must be present on such a day.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_host" image="" itemindex="">
+         <talk_answer link_index="basic" mid="22"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="11"><![CDATA[<html>$Event Helper Irine$<BR>Sorry, but only oath-takers can take part in the Oath Ceremony.<BR>If you are hear to offer congratulations, I can pass it on for you!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="sorry" image="" itemindex="">
+         <talk_answer link_index="basic" mid="23"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="13"><![CDATA[<html>$Event Helper Irine$<BR>I already have a guest seeking congratulations.<BR>Please try again later.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="play_congratulation" image="" itemindex="">
+         <talk_question mid="15"><![CDATA[<html>$Event Helper Irine$<BR>Ta-da! ☆★<BR>Well? Do you like Irine's congratulatory event?<BR>A lot of thought was put into this.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">basic</exe>
+         <exe type="custom">api_npc_NpcActionFieldMsg(userObjID, npcObjID, "Gun_Salute", 5)</exe>
+         <exe type="conexe" true="1" false="3">0</exe>
+         <exe type="talk">sorry</exe>
+         <exe type="talk">play_congratulation</exe>
+         <exe type="conexe" true="7" false="6">1</exe>
+         <exe type="talk">no_host</exe>
+         <exe type="custom">api_trigger_WarpByPosition(userObjID,189, 64683, 67316, 2183492, 3)</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_npc_NpcActionFieldMsgTimeCheck(userObjID, npcObjID) == 1</chk>
+         <chk type="custom">api_user_IsPromiseUserInHall(userObjID) == 1</chk>
+      </conditions>
+      <exelink idx="congratulation">2</exelink>
+      <exelink idx="host">5</exelink>
+   </talk>

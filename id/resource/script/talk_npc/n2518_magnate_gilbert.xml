@@ -1,0 +1,35 @@
+   <talk>
+      <npcename>n2518_magnate_gilbert</npcename>
+      <npcid>2518</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Merchant Gilbert]]></npckname>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="quest" mid="6"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Merchant Gilbert$<BR>Come take a look at rare items shipped here from the other side of the ocean!<BR>I won’t force you to buy. Just take a look!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="8" link_target="mqc23_9821_mana_reservoir.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>Magic Repository</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="20" link_target="mqc28_9946_blue_viper.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>To the Blue Viper's Nest</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="mqc28_9947_reunion.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>Finally Reconvening</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="25" link_target="mqc06_9960_ice_flower_story.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>Talk of the Ice Flower</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="26" link_target="mqc06_9961_short_romance.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>A Short Tale of Heroic Exploits</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back" mid="27"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Merchant Gilbert$<BR>
+Take all the time you need to look around. By the way, how much is your budget?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk_polite" image="" itemindex="">
+         <talk_answer link_index="quest" mid="23"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Merchant Gilbert$<BR>Come take a look at rare items shipped here from the other side of the ocean!<BR>
+You don't have to buy anything! Just take a look.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">talk</exe>
+         <exe type="talk">talk_polite</exe>
+         <exe type="conexe" true="1" false="0">0</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">9946</chk>
+      </conditions>
+      <exelink idx="back">2</exelink>
+   </talk>

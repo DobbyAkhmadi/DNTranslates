@@ -1,0 +1,756 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc16_9567_mind_of_dragon</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>16</qchapter>
+      <qid>9567</qid>
+      <designer>최지은</designer>
+      <qlevel>80</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9568</nextqid>
+      <nextqname>mqc16_9568_belated_reconciliation</nextqname>
+      <nextqnpc>n1774_gereint_kid</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Heart of Dragon]]></qkname>
+      <qnpc>
+         <npcid>1782</npcid>
+         <npcename>n1782_rubinat</npcename>
+         <npckname>레드 드래곤 루비나트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1789</npcid>
+         <npcename>n1789_gereint_kid_memory</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>1138</npcid>
+         <npcename>n1138_elf_guard_sitredel</npcename>
+         <npckname>엘프 경비병 시트리델</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1790</npcid>
+         <npcename>n1790_jasmin</npcename>
+         <npckname>자스민</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1774</npcid>
+         <npcename>n1774_gereint_kid</npcename>
+         <npckname>제레인트</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1791</npcid>
+         <npcename>n1791_jasmin_memory</npcename>
+         <npckname />
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1789_gereint_kid_memory-accepting" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1789_gereint_kid_memory-accepting-acceptted_1" mid="145" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Gerraint tidak ada disini…)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1782_rubinat-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1782_rubinat-accepting-acceptted_2" mid="302" select_type="3" />
+      <talk_question mid="301"><![CDATA[<html>$Red Dragon Rubinart$<BR>
+Apa? Masih belum pergi juga?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1782_rubinat-1" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_rubinat.dds" center_image="">
+      <talk_answer link_index="n1782_rubinat-1-" mid="148" select_type="5" />
+      <talk_question mid="7"><![CDATA[<html>$Red Dragon Rubinart$<BR>Cepatlah pergi. Katanya kamu mau pergi untuk mencari Gerraint.<BR><FONT color=#7e12d2>(Pergilah ke Anu Arendel untuk menemui Gerraint)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1789_gereint_kid_memory-1" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1789_gereint_kid_memory-2" mid="149" select_type="2" />
+      <talk_question mid="8"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Meskipun sudah menceari di sekitarnya, Gerraint tidak kelihatan.. Gimana ya…?)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1789_gereint_kid_memory-2" image="QN_Npc_Basha.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1789_gereint_kid_memory-2-" mid="143" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Ah, Citriel sedang melihat arah sini... Coba tanya kepada Citriel. Siapa tahu ia melihatnya!)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1138_elf_guard_sitredel-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sitredel.dds" center_image="">
+      <talk_answer link_index="n1138_elf_guard_sitredel-2-a" mid="151" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Elf Guard Citriel${sound:npc_Sitredel_9567_qu_01.ogg}<BR><FONT color=#387206>{user_nick}</FONT>!! Ada apa? Kenapa kamu kelihatan terburu-buru…?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1138_elf_guard_sitredel-2-a" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sitredel.dds" center_image="">
+      <talk_answer link_index="n1138_elf_guard_sitredel-2-b" mid="152" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Citriel!! Apak kamu tida melihat Gerraint?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1138_elf_guard_sitredel-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sitredel.dds" center_image="">
+      <talk_answer link_index="n1138_elf_guard_sitredel-2-c" mid="153" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>$Elf Guard Citriel${sound:npc_Sitredel_9567_qu_02.ogg}<BR>Gerraint..? Tadi ia ada disini... Aku bertanya ada apa dengannya karena matanya bengkak.. Tapi ia menghilang dengan berkata aku tidak perlu tahu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1138_elf_guard_sitredel-2-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sitredel.dds" center_image="">
+      <talk_answer link_index="n1138_elf_guard_sitredel-2-d" mid="154" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Apa kamu tidak tahu ia pergi kemana?! Apa ia tidak kasih tahu ia mau pergi kemana?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1138_elf_guard_sitredel-2-d" image="QW_103.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sitredel.dds" center_image="">
+      <talk_answer link_index="n1138_elf_guard_sitredel-2-e" mid="155" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Elf Guard Citriel$<BR>Emm... Ah, aku berpikir ia menangis karena matanya berair, tetapi ia bilang tidak.  Ia pergi dengan berkata bahwa matanya berair karena airnya terlalu banyak di <FONT color=#a82424>Corridor of Tangled Memories</FONT>.. Tapi aku tidak tahu ia pergi kesana atau tidak. Karena aku juga keluar saat ngombrol...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1138_elf_guard_sitredel-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Sitredel.dds" center_image="">
+      <talk_answer link_index="n1138_elf_guard_sitredel-3" mid="156" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Untuk saat ini cuman itu harapannya)<BR>Terima kasih, Citriel!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1138_elf_guard_sitredel-3" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Sitredel.dds" center_image="">
+      <talk_answer link_index="n1138_elf_guard_sitredel-3-" mid="157" select_type="5" />
+      <talk_question mid="16"><![CDATA[<html>$Elf Guard Citriel$<BR>Eh, emm... Bukan apa-apa. Tapi Gerraint adalah Dragon. Apa perlu khawatir seperti itu…?<BR><FONT color=#7e12d2>(Pergilah ke Corridor of Tangled Memories untuk mencari Gerraint)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4" image="QW_81.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-class_check" mid="158" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Jasmine!?!?! Yg mati di Jasmine Expedition base…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-b" mid="160" select_type="0"><![CDATA[<html>Kok masih hidup?</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-4-b" mid="161" select_type="0"><![CDATA[<html>Kamu bermuka tebal, Jasmine!</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-4-b" mid="162" select_type="0"><![CDATA[<html>…Kenapa ada disini...</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_01.ogg}<BR>Wah, sudah lama tidak bertemua. Aku tidak nyangka bisa bertemu dengan kamu disini. Kamu kelihatan sehat, XD-26.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-c" mid="163" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_02.ogg}<BR>Cuman itu yg kamu ucapkan setelah bertemu dengan aku yg sekian lama tidak betemu? Ya.. mau gimana lagi. Kamu menyingkirkan saudara kamu dengan tangan sendiri dan kamu berteriak bahwa akan melindungi semua nyata di dunia ini . Tapi pintu Monolith terbuka dengan cepat.. Kamu pasti sedang kebingungan. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-d" mid="164" select_type="0"><![CDATA[<html>Apa bisa mengubah tanggung jawab masalah itu kepada satu orang?</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-4-d" mid="165" select_type="0"><![CDATA[<html>…Meskipun begitu, kamu pikir membunuh semua kehidupan yg ada di dunia ini benar?</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-4-d" mid="166" select_type="0"><![CDATA[<html>(Hiks)</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_03.ogg}<BR>Iya, betul. Apa kamu tahu?<BR>Kita datang ke masa lalu karena masa depan akan kiamat setelah 50 tahun. Tapi sepertinya masa lalu akan kiamat lebih cepat lagi. Kamu pikir ini gara-gara siapa?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-e" mid="167" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_04.ogg}<BR><FONT color=#7e12d2>(Jasmine tersenyum dengan sedih)</FONT>Aku pikir ini tanggung jawab kita karena jika kita datang kesini, sejarah tidak akan berubah... Kalau dipikir, jika kamu tidak mengganggu kita bisa menangkap Luniria dan Feder dengan teknik yg dikembangkan 50 tahun kemudian? Jadi ini semua karena kamu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-f" mid="168" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Jangan melempar tanggung jawabnya. Kakak... Apakah kamu lupa apa yg kamu perbuat di dunia ini? Memangnya siapa yg membakar Tel Rosa City dan Arnute Canyon, melepas para tentara di Occupied Ancient Temple dam membuat Expedition base untuk mengalihkan perhatian orang? Dan apakah bisa menangkap Goddess dengan teknologi 50 tahun kemudian? Kita yg tidak bisa mengalahkan tentaranya Mist Land?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-g" mid="169" select_type="0"><![CDATA[<html>Meskipun aku ingin tahu....</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-4-g" mid="170" select_type="0"><![CDATA[<html>Aku tidak ingin tahu.</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-4-g" mid="171" select_type="0"><![CDATA[<html>Jangan mengubah kata-kata!</html>]]></talk_answer>
+      <talk_question mid="24"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_05.ogg}<BR>… Jadi cuman itu yg bisa kamu bicarakan?<BR>Ok. Kalau begitu kita ngomong yg lain saja. Kamu… kamu tidak ingin tahu apa yg terjadi dengan dunia 50 tahun kemudian yg kamu tinggalkan??</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-h" mid="172" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Jasmine$<BR>…Meskipun kamu kasih jawaban apapun, aku harus ngomong. 50 tahun kemudian, dunianya hilang, XD-26.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-i" mid="173" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-i" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-j" mid="174" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_07.ogg}<BR>Kamu mengerti? Hilang. Tidak bisa kontak siapapun . Tidak ada yg bisa dicapai. Velskud juga mati. Kakeknya Kevin juga, semuanya, pasti sudah mati!! Apa kamu mengerti? Dunia yg telah diminta kepadaku untuk melindunginya telah mati, XD-26!!! Tempat itu pasti sudah… menjadi tempat seperti Mist Land...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-j" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-k" mid="175" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_08.ogg}<BR>…Puas? XD-26.<BR>Karena kamu memilih dunia ini.. Maka dunia itu mati.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-k" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-l" mid="176" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Kan hanya tidak tercapai!! Jangan menduga.. Jangan menduga yg tidak!! </FONT><BR><FONT color=#662500>karena itu. Aku ingin menyelamatkan dunia ini supaya tidak terjadi hal seperti itu di masa depan! Meskipun aku tidak bisa berubah menjadi Dragon, aku adalah serpihan Ancient Dragon yg mendapatkan misi untuk melindungi nyawa yg ada di dunia ini. Jasmine juga kebenaran itu... Misi itu...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-l" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-m" mid="177" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_09.ogg}<BR>…Misi? Dragon?? Aduh...Aduh…Ahahaha, Ahahaha!!<BR><FONT color=#7e12d2>(Jasmine tertawa lumayan lama)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-n" mid="178" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Jasmine…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-n" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-o" mid="179" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_10.ogg}<BR>…Astaga. Misi? Kamu tahu apa itu misi? Aku tidak begitu tahu. Aku tidak tahu kamu mendengar apa di tempat lain.. Mana bisa bilang Jewel yg tidak bisa berubah menjadi Dragon itu Dragon? Dan juga, misi? Melindungi nyawa di dunia ini? Bukankah hal itu jelas saja harus dijalankan? Tapi aku tidak tahu kenapa kamu ngomongin hal itu kepadaku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-o" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-p" mid="180" select_type="0"><![CDATA[<html>Aku ngomong mengenai hal yg menurut aku benar.</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-4-q" mid="181" select_type="0"><![CDATA[<html>(Tunggu, mungkin sekarang masih bisa membujuknya)</html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_11.ogg}<BR>…Aku pikir kamu mau ngomong apa setelah tidak bertemu sekian waktu... Ah, siapa yg ngomong ke kamu seperti itu dan orang itu apa yg dipikirkannya. Sepertinya ini membuang waktu jika ngobrol lebih lama lagi sama kamu. Tadinya aku ingin tahu apa yg ingin kamu bicarakan di situasi seperti ini… </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-p" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-u" mid="183" select_type="2" />
+      <talk_question mid="182"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_12.ogg}<BR>…iya, makanya kamu bisa menghabiskan saudaranya sendiri tanpa ragu.<BR>Aku akan beritahu kabar baik. Yg dimiliki oleh Feder adalah setengah Jewelnya Red Dragon... Dengan kondisi membangkitkan dunia di masa depan, aku membuat Jewelnya Feder menjadi sempurna.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-q" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-r" mid="184" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Anu, kakak. Dunia masa depan adalah dunia yg penting untuk kita… Tapi jika ujung jalan itu adalah kiamat.. Mungkin sekarang kita bisa mengubah takdir itu… Makanya, kakak… Kakak.. juga…</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-r" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-s" mid="185" select_type="0"><![CDATA[<html>(…Sepertinya sudah tidak bisa membujuknya)</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-4-s" mid="186" select_type="0"><![CDATA[<html>…Jadi itu kenginginan kakak.</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_13.ogg}<BR>…Apa kamu membujuknya karena aku adalah kakak? Tapi kamu adalah sampah. Untuk aku, kamu dan omongan kamu hanyala sampah yg tidak berguna.. Untuk aku, dunia ini tidak berarti. Dunia yg aku tinggal dulu, hanya itulah yg berarti untukku. Dunia yg harus aku selamatkan adalah dunia itu. Aku ada di era apapun, hal itu tidak akan berubah.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-s" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-t" mid="187" select_type="0"><![CDATA[<html>Masalah seperti ini....?</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-4-t" mid="188" select_type="0"><![CDATA[<html>…Maksudnya apa?!</html>]]></talk_answer>
+      <talk_question mid="36"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_14.ogg}<BR>…Kamu terlalu lemah di saat seperti ini. Padahal kamu sudah dibuang oleh aku…<BR>Iya, kenapa waktu itu kamu tidak membunuh aku? Kalau begitu, tidak akan terjadi hal seperti ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-t" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-u" mid="189" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_15.ogg}<BR>Berkat kamu, aku kehilangan semua.. Dan bertemu dengan Feder saat gelandang diluar  Expedition base. Ia memiliki Jewel setengah dari Red Dragon dan sedang mencari cara untuk menyempurnakannya. Jadi... berjanji. Jika aku membuat Jewel itu sempurna, ia akan menjadi God dengan tenaga Dragon itu.. Dan membuat kembali dunia aku.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-u" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-v" mid="190" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_16.ogg}<BR>Meskipun aku butuh sedikit pengaturan.. Kalau kamu, tidak akan bisa berbuat apapun. Feder adalah Dragon yg kuat yg tidak bisa dibandingkan dengan Zakad. Mungkin ia adalah Dragon terkuat di zaman ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-v" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-w" mid="191" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>A, A... Apa!!</FONT><BR>
+<FONT color=#662500>Kenapa bisa berbuat seperti itu.. Sekarang Feder ingin menghilangkan dunia ini!</FONT><BR>
+<FONT color=#662500>Kenapa kamu membantu orang seperti itu.. Kenapa!! </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-w" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-x" mid="192" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_17.ogg}<BR>XD-26... Alasan yg sama dengan kamu. <FONT color=#7e12d2>(Jasmine tertawa dengan mengangkat ujung bibirnya. Tapi matanya tidak tertawa)</FONT><BR>Kamu memilih dunia ini dengan pengkhianati semua. Aku juga sama, ingin menghidupkan kembali dunia aku dengan cara apapun.. Jika caranya menghancurkan dunia ini... Semua ini sama secara umum.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-x" image="QN_Npc_Academic_Normal.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-4-y" mid="193" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_18.ogg}<BR>Aku berharap kamu merasakan derita yg sama seperti yg aku rasakan, XD-26. Tapi sayangnya aku tidak ada saudara yg bisa di khianati seperti kamu. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-4-y" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-6" mid="194" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_19.ogg}<BR>Karena tidak ada siapapun di sekitar aku.<BR>Berjuanglah, XD-26. Semoga kamu menjadi seperti saudara kamu di depanku. Di Red Dragon Nest. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5" image="QN_Npc_Academic_Commelina.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-a" mid="196" select_type="0"><![CDATA[<html>Tetapi saat itu....</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-5-a" mid="197" select_type="0"><![CDATA[<html>Untuk apa kamu menjukkan dirinya lagi?</html>]]></talk_answer>
+      <talk_question mid="43"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_20.ogg}<BR>…Aku tunggu disini dengan mengharapkan bisa bertemu dengan Comelina.. Tapi tidak nyangka kamu yg datang.<BR>Bilang orang itu mati.. Kamu ini keterlaluan.<FONT color=#7e12d2>(Jasmine tertawa tanpa dendam)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-b" mid="198" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_21.ogg}<BR>…Kamu tidak terlalu tahu mengenai aku, sepertinya Comelina menjelaskan dengan baik. Kamu benar-benar siaga sama aku. Bukankah ini keterlaluan? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-c" mid="199" select_type="2" />
+      <talk_question mid="45"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Aku mendengar bahwa kamu berencana menghancurkan dunia ini dan migrasi semua manusia yg ada di masa depan.<BR>Kamu pikir aku tidak akan siaga sama kamu? Eh, tidak.. Jika yg kamu maksud adalah manusia yg ada di 50 tahun kemudian.. Kamu pikir dunia ini akan aman sampai 50 tahun?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-c" image="QN_Npc_Academic_Commelina.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-d" mid="200" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_22.ogg}<BR>…<FONT color=#7e12d2>(Jasmine menggeleng kepalanya)</FONT>Itu tidak mungkin kan.<BR>Sejarah sudah berubah banyak. Sebenarnya makhluk seperti Comelina tidak boleh ada di zaman ini.. Dari saat itu kita bisa bilang sejarah sudah berubah dan masa lalu itu menjadi tidak jelas. Meskipun begitu, aku bisa bicara dengan pasti bahwa…</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-e" mid="201" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_23.ogg}<BR>Dunia di masa depan yg ingin aku selamatkan sudah tidak ada lagi.<BR>Tidak bisa di kontak dan tidak ada yg tersentuh. Semuanya dimakan oleh Mist Land. Sekarang… tidak ada yg tertinggal.<FONT color=#7e12d2>(Jasmine terlihat kesepian)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-e" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-f" mid="202" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…!!Apa? Maksudnya…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-f" image="QN_Npc_Academic_Commelina.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-g" mid="203" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_24.ogg}<BR>Jika Comelina dan kamu tidak mengganggu.. Aku bisa menjalankan rencana migrasi aku dengan sukses. Terlalu telat untuk kaget.. Kalian membunuh semua yg ada di dunia aku dan menyelamatkan semua yg ada di dunia ini.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-h" mid="204" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Tapi! Walaupun begitu kita tidak bisa berdiam diri kan?!<BR>Apakah kamu bisa membiarkan musuh yg datang dari masa lalu?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-h" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-i" mid="205" select_type="0"><![CDATA[<html><FONT color=#662500>…!!!!</FONT></html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-5-i" mid="206" select_type="0"><![CDATA[<html><FONT color=#662500>…...</FONT></html>]]></talk_answer>
+      <talk_question mid="51"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_25.ogg}<BR>Iya, aku tahu. Aku mengetahuinya. Walaupun tidak teriak seperti itu, aku tahu...<BR><FONT color=#7e12d2>(Matanya Jasmine terlihat sedih...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-i" image="QN_NPC_Npc_Pether.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-j" mid="207" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_26.ogg}<BR>Tapi sekarang bisa mengembalikkan itu semua. Sekarang aku bersama Feder.<BR>Aku mengetahui bahwa ia memiliki setengah Jewelnya Dragon dan membuatnya menjadi sempurna. Ia akan menjadi Dragon dengan kekuatan itu dan menjadi God dengan membunuh God... Dan ia akan membuat kembali dunia aku. Ia sudah berjanji.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-j" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-k" mid="208" select_type="2" />
+      <talk_question mid="54"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…!?! Maksudnya apa?!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-k" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-l" mid="209" select_type="2" />
+      <talk_question mid="55"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_27.ogg}<BR>Iya. Makanya aku memintanya untuk membuatnya kembali. Jika ia mendapatkan kekuatan God yg bisa membuat dunia baru, ia berjanji akan membuat dunia yg aku lindungi. Jadi aku membantu dia. Mungkin sekarang Red Dragon Nest sudah mau jadi sempurna.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-l" image="QN_NPC_Npc_Pether.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-m" mid="210" select_type="2" />
+      <talk_question mid="56"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Kamu... Apa kamu tahu apa yg kamu perbuat?!! Kamu, berkata bahwa membangkitkan Feder sebagai Red Dragon yg asli…? Kamu berkata bahwa untuk menyelamatkan dunia kamu, kamu mau menghilangkan dunia ini?!!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-m" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-5-n" mid="298" select_type="0"><![CDATA[<html>Jangan-jangan kamu, sambil memotong tubuh kamu sendiri...?</html>]]></talk_answer>
+      <talk_answer link_index="n1790_jasmin-5-n" mid="299" select_type="0"><![CDATA[<html>Tidak mungkin...!!</html>]]></talk_answer>
+      <talk_question mid="57"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_28.ogg}<BR>Tentu saja. Aku tidak butuh apapun selain dunia aku. Aku tidak peduli jika ia menghancurkan dunia ini.. Jika bisa membangkitkan dunia aku.. Jika saat itu aku bisa membangkitkan semuanya, aku cukup dengan itu. Walaupun badan aku akan menderita karena harus terus mengatur Jewelnya Chaos.. atau harus terus memimpikan mimpi buruk.. Hahahha....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-5-n" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-6" mid="215" select_type="2" />
+      <talk_question mid="61"><![CDATA[<html>$Jasmine${sound:npc_Jasmin_9567_qu_29.ogg}<BR>…Tidak ada yg tidak masuk akal kan? Huhu... Sebenarnya aku tidak mau kasih tahu ke kamu, tapi aku memberitahukannya. Huhu. Bahuku terasa ringkan karena tidak ada yg tertinggal lagi untuk aku. Tapi sepertinya bahu kamu terasa berat karena banyak dunia yg harus kamu lindungi... Kalau begitu kita bertemu ladi di Red Dragon Nest, <FONT color=#387206>{user_nick}</FONT><FONT color=#2b2723>...</FONT><FONT color=#a94407> Pahlawan di era ini</FONT><FONT color=#2b2723>...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1790_jasmin-6" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n1790_jasmin-6-" mid="230" select_type="5" />
+      <talk_question mid="62"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Sebelum menjawab, Jasmine menyembunyikan dirinya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1791_jasmin_memory-7" image="QN_NPC_Npc_Pether.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1791_jasmin_memory-7-class_check_2" mid="216" select_type="2" />
+      <talk_question mid="63"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>...Ah… itu tidak mungkin… Feder menjadi Dragon…?</FONT><BR><FONT color=#662500>Lebih parahnya, Red Dragon Nest…!!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1791_jasmin_memory-7-a" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1791_jasmin_memory-7-b" mid="219" select_type="2" />
+      <talk_question mid="64"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…Dan itu juga dibantu oleh kakak... Kalau aku ingin melawan Feder, apa aku harus bertarung lagi dengan kakak... Aku tahu. Bahwa aku memilih pilihan yg sudah tidak bisa diubah... Berdiri di tengah-tengah perubahan sejarah... Aku tidak pernah berpikir untuk menghindar dari pertanggungjawaban. Tidak pernah. Tidak pernah… Meskpun begitu.. ini.. ini… !! Kalau seperti ini kenapa Argenta… !!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1791_jasmin_memory-7-b" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1791_jasmin_memory-8" mid="223" select_type="2" />
+      <talk_question mid="68"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ah… tidak.. Aku ingin menangis... Sekarang aku mau pergi untuk menenangkan Gerraint, aku tidak bisa memperlihatkan diri aku yg lemah... Tunggu, tunggu... Aku akan menangis untuk sementara... tidak apa-apa, Aku tidak apa-apa…!!(Berusaha untuk mengeluarkan suara yg gagah. Suaranya bergema di koridor)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1791_jasmin_memory-7-c" image="QN_NPC_Npc_Pether.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1791_jasmin_memory-7-d" mid="225" select_type="2" />
+      <talk_question mid="69"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>...Ah… itu tidak mungkin… Feder menjadi Dragon… Red Dragon… Dibantu oleh Jasmine? Apakah itu tenaganya manusia dari masa depan?! Astaga, apa yg terjadi… (Memegang kepalanya dengan keras) Padahal Argenta melemahkan Feder…!! Tetapi, ia menjadi Red Dragon Nest…!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1791_jasmin_memory-7-d" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1791_jasmin_memory-8" mid="228" select_type="2" />
+      <talk_question mid="72"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Ti, tidak. Tidak ada waktu untuk duduk diam seperti ini. Untuk saat ini harus pergi untuk mencari Gerraint.<BR>Tindakan selanjutnya… Tidak akan keluar jawaban jika berdiam disini…</FONT><BR><FONT color=#662500>Aku tidak bisa memperlihatkan diri aku yg sekarang.. Harus tenang dulu...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1791_jasmin_memory-8" image="QN_Npc_geraint_Kid.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1791_jasmin_memory-8-" mid="217" select_type="5" />
+      <talk_question mid="73"><![CDATA[<html>${user_nick}$<FONT color=#662500><BR>Ok, bagus. Tidak apa-apa. Tidak apa-apa!</FONT><BR>
+<FONT color=#662500>Semoga tidak terjadi apa-apa dengan Gerraint…!<BR>(Masuk lebih dalam lagi)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8" image="QN_NPC_rubinat.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-a" mid="231" select_type="0"><![CDATA[<html>Aku tidak akan pergi kemana-mana dengan meninggalkan Gerraint.</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-8-a" mid="232" select_type="0"><![CDATA[<html>Walaupun Rubinart kuat, ia tidak akan sebanding dengan Gerraint.</html>]]></talk_answer>
+      <talk_question mid="74"><![CDATA[<html>$Gerraint$<BR>…Apa? Kenapa kamu datang? Kan muncul dragon yg kuat, kamu tinggal bersama saja dengan dia.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-b" mid="233" select_type="0"><![CDATA[<html>Kalau dulu tidak tahu. Tapi sekarang kan akrab.</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-8-b" mid="234" select_type="0"><![CDATA[<html>Sekarang kan teman.</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-8-b" mid="235" select_type="0"><![CDATA[<html>Karena kamu temannya Argenta. Berarti temanku juga.</html>]]></talk_answer>
+      <talk_question mid="75"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_01.ogg}<BR>…Sebenarnya aku sama kamu kan tidak terlalu akrab. Tetapi kamu terus-terusan sok akrab.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-c" mid="263" select_type="0"><![CDATA[<html>Tidak ada hubungannya dengan kuat atau tidak.</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-8-c" mid="264" select_type="0"><![CDATA[<html>Tidak mungkin tidak memperhatikan Gerraint.</html>]]></talk_answer>
+      <talk_question mid="76"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_02.ogg}<BR>…<FONT color=#7e12d2>(Gerraint berbicara tanpa melihat ke arah sini)</FONT><BR>Aku tidak boleh lemah. Aku harus mengalahkan musuh, tapi aku kamu memerlukan aku yg tidak berguna? Bukankah sama saja ada aku atau tidak? Jangan buang waktu kamu disini. Kamu tidak perlu memikirkan aku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-c" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-d" mid="239" select_type="2" />
+      <talk_question mid="78"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_03.ogg}<BR>…Argenta juga tidak begitu senang saat aku lahir… Karena aku lahir dengan tubuh lemah... Aku bertanya banyak hal kepada Argenta, tapi ia tidak menjawab. Tapi ia senang saat aku bilang, aku senang bertarung... Karena ia bilang, itu cocok dengan misi aku...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-d" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-e" mid="240" select_type="2" />
+      <talk_question mid="79"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_04.ogg}<BR>Tapi selain itu, masih banyak yg tidak dijawab olehnya… <FONT color=#7e12d2>(Gerraint terlihat ingin menangis)</FONT> Harus berpikir bahwa akuk harus melawan musuh yg kuat karena aku kuat. Kalau tidak, aku yg akan susah...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-e" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-f" mid="241" select_type="2" />
+      <talk_question mid="80"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_05.ogg}<BR>Ia bilang aku tidak boleh bertanya lagi. Jadi aku tidak tahu apa-apa. Sepertinya aku menjadi lemah kalau aku mengetahuinya. Aku harus kuat. Tapi... Ia bilang suatu saat aku akan mengetahuinya... Aku mendengar kata-kata itu terlalu banyak, tapi sekarang Argenta juga sudah tidak ada.. Aku tidak tahu nanti yg ia bicarakan kapan akan datang...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-f" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-g" mid="242" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_06.ogg}<BR>Apalagi sekarang aku menjadi lemah... Aku harus berbuat apa… Jika Argenta mengetahui hal ini, ia akan marah seperti apa… Ia akan benci...<BR><FONT color=#7e12d2>(Gerraint terus berbicara dan akhirnya menutup mukanya menggunakan kedua tangannya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-g" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-h" mid="244" select_type="2" />
+      <talk_question mid="83"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(…Tidak mungkin Argenta membenci Gerraint. Argenta hanya... …Maafkan aku, Argenta. Aku tidak mungkin tidak memberitahu hal ini kepada Gerraint. Aku tidak mau kalau Gerraint punya kesalahpahaman terhadap Argenta.. Aku ingin ia mengetahui lebih banyak hal… dan dapat berkembang baik dengan itu...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-i" mid="245" select_type="2" />
+      <talk_question mid="84"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Gerraint. (Memegang tangannya Gerraint dengan kuat)<BR>Aku mengetahui semua hal. Aku memang tidak selalu bersamanya, tapi aku mengetahui apa yg terjadi pada Argenta dan apa yg terjadi pada Gerraint… Jika Gerraint ingin mengetahui masa lalunya, aku bisa menceritakan semuanya. Meskipun ceritanya panjang... Apakah kamu mau mendengarkannya?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-j" mid="249" select_type="2" />
+      <talk_question mid="88"><![CDATA[<html>$Gerraint$<BR><FONT color=#7e12d2>(Gerraint mengangguk… Dan aku mulai bercerita)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-k" mid="250" select_type="2" />
+      <talk_question mid="89"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Mulai dari pertemuan dengan Gerraint besar, perkelahian antar Velskud dan Gerraint, dan sampai ingatan Argenta dan Ancient yg aku lihat di masa lalu… Menceritakan semua yg aku tahu. Gerraint mendengarkannya dengan baik... Hanya, ia terus berkata bahwa tidak bisa memahami saat aku menceritakan cerita 50 tahung yg lalu...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-l" mid="251" select_type="2" />
+      <talk_question mid="90"><![CDATA[<html>$Gerraint$<BR>...Velskud marah karena aku tidak bilang bahwa aku adalah Dragon, dan ia mengambil Jewel dengan melukai mataku… dan ia menjadi Dragon… Jadi aku sama Velskud terus berkelahi… Ini yg disebut pengkhianatan kan? Apakah akan susah jika dikhianati oleh manusia? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-m" mid="252" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Eh... Kamu akan seperti apa jika aku mengkhianati Gerraint? Tiba-tiba berada di pihak Feder...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-n" mid="265" select_type="0"><![CDATA[<html>(Untung sekali. Ia mengerti dengan cepat)</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-8-n" mid="266" select_type="0"><![CDATA[<html>(Mungkin Gerraint pintar)</html>]]></talk_answer>
+      <talk_question mid="92"><![CDATA[<html>$Gerraint$<BR>Tidak!! Aku tidak suka. Meskipun begitu, sampai sekarang…!<BR>.....eh... Apa begitu.. Apa seperti ini...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-n" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-8-o" mid="256" select_type="0"><![CDATA[<html>Ehhhhh!?!? Kenapa kamu tiba-tiba?!!</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-8-o" mid="257" select_type="0"><![CDATA[<html>Akkkkk!! Matahari akan terbit dari barat!!</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-8-o" mid="258" select_type="0"><![CDATA[<html>Weks.. Aku tidak tahu… Takut… Siapa ini!!</html>]]></talk_answer>
+      <talk_question mid="94"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_07.ogg}<BR>.....Kalau dipikir, kamu selalu berusaha untuk menjawab aku jika aku bertanya...<BR>…Sepertinya aku harus berterima kasih atas hal itu… Kalau tidak, kamu pasti kecew... Terima Kasih.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-8-o" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9" mid="259" select_type="0"><![CDATA[<html>Hahaha, lucu sekali (Menusuk pipi)</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-9" mid="260" select_type="0"><![CDATA[<html>(Mengelus kepala Gerraint)</html>]]></talk_answer>
+      <talk_question mid="95"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_08.ogg}<BR>…Ka, kamu seperti itu juga meskipun aku berterima kasih!?! Aku tidak akan berterima kasih lagi! Bodoh!! <FONT color=#7e12d2>(Gerraint ngambek)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-a" mid="270" select_type="0"><![CDATA[<html>Itu sudah pasti...</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-9-a" mid="271" select_type="0"><![CDATA[<html>Tentu saja.</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-9-a" mid="272" select_type="0"><![CDATA[<html>Tidak ada hubungannya dengan lemah...</html>]]></talk_answer>
+      <talk_question mid="96"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_09.ogg}<BR>Ja, jangan…<FONT color=#7e12d2>(Gerraint menyingkirkan tanganku)</FONT><BR>Emm, anu, aku mau bertanya satu hal lagi. Kamu… saat aku mati, gimana perasaan kamu? Kalau mati artinya lemah kan? <BR>Apa kamu sedih, walaupun aku yg lemah mati?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-b" mid="273" select_type="0"><![CDATA[<html>Ada apa?</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-9-b" mid="274" select_type="0"><![CDATA[<html>(Apa ya? Pengakuan?)</html>]]></talk_answer>
+      <talk_question mid="97"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_10.ogg}<BR>…Iya…<FONT color=#7e12d2>(Gerraint berpikir sejenak)</FONT><BR>Kalau begitu, mungkin aku bisa cerita kepada kamu satu hal.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-c" mid="275" select_type="2" />
+      <talk_question mid="98"><![CDATA[<html>$Gerraint$<BR>…Aku… meskipun sudah berpikir beberapa kali.. aku tidak bisa mengerti aku yg dulu yg disukai oleh semua orang… dan tidak punya percaya diri jika aku dirusuh bertindak seperti dia... Tapi aku tahu sekarang bahwa, jika aku mati... itu akan jadi luka kepada kamu dan Argenta...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-d" mid="276" select_type="0"><![CDATA[<html>Gerraint?!</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-9-d" mid="277" select_type="0"><![CDATA[<html>Tidak mati?</html>]]></talk_answer>
+      <talk_question mid="99"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_11.ogg}<BR>Aku, tidak akan mati. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-e" mid="278" select_type="0"><![CDATA[<html>(Berjanji)</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-9-f" mid="279" select_type="0"><![CDATA[<html>(Tidak berjanji)</html>]]></talk_answer>
+      <talk_question mid="101"><![CDATA[<html>$Gerraint$<BR>Eh, kalau begitu apa aku juga akan terluka jika kamu mati...? Ok, kalau begitu kamu tidak boleh mati! Kalau seperti itu, tidak ada masalah kan? <BR>Karena kita akan terus berkelahi jika melakukan sesuatu yg akan menyakiti satu sama lain...<BR>Jadi berjanjilah! Janji!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-g" mid="280" select_type="2" />
+      <talk_question mid="103"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>…물론이에요. 약속해요. 그런 일을 또 겪는 건 사양이니까...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-g" mid="282" select_type="0"><![CDATA[<html>Tidak, aku akan janji.</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-9-g" mid="283" select_type="0"><![CDATA[<html>Aku akan berusaha. Aku janji.</html>]]></talk_answer>
+      <talk_question mid="104"><![CDATA[<html>$Gerraint$<BR>Eh...<FONT color=#7e12d2>(Mukanya terlihat terluka parah. Walaupun Rubinart bilang ia bukanlah anak kecil.. Tapi dilihat dari segi apapun ia seperti anak kecil. Sepertinya aku harus berjanji)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-h" mid="284" select_type="2" />
+      <talk_question mid="105"><![CDATA[<html>$Gerraint${sound:npc_GerraintKid_9567_qu_12.ogg}<BR>Ok! Bagus. <FONT color=#7e12d2>(Gerraint tersenyum puas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-i" mid="285" select_type="2" />
+      <talk_question mid="106"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Aku menjanjikan sesuatu yg berat… Tapi aku akan berusaha supaya bisa mengabulkannya.. Omong-omong.)<BR>Omong-omong Gerraint. Bukankah kita harus pergi untuk minta maaf kepada Rubinart. Karena Gerraint ngomong sembarangan kepada Rubinart, jadi kamu harus minta maaf kepadanya. Kan kita tidak mungkin selesai dengan hubungan tidak enak ini.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-j" mid="286" select_type="2" />
+      <talk_question mid="107"><![CDATA[<html>$Gerraint$<BR>Em, emm. Apa aku hanya perlu minta maaf saja? Aku juga ingin lepas dari kutukan.<BR>
+Apakah ia akan melepaskan kutukannya jika aku minta maaf...?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-k" mid="288" select_type="2" />
+      <talk_question mid="108"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Jangan kasih tahu bahwa kutukannya bisa lepas sendiri kalau lewat beberapa waktu)<BR>Emm.. Kalau begitu, gimana kalau kamu menggunakan bahasa sopan? Karena Dragon yg bernama Rubinart sangat mementingan etika.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-l" mid="289" select_type="2" />
+      <talk_question mid="109"><![CDATA[<html>$Gerraint$<BR>Ngomong dengan sopan…? Aku tidak tahu caranya.<BR>
+Mungkin tinggal belajar sama kamu...</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-l" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-m" mid="290" select_type="4" />
+      <talk_question mid="111"><![CDATA[<html>$Quest Selesai$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-m" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-n" mid="291" select_type="0"><![CDATA[<html>Kayaknya sekarang bukan waktunya untuk bercanda...(Meskipun aku ingin)</html>]]></talk_answer>
+      <talk_answer link_index="n1774_gereint_kid-9-n" mid="292" select_type="0"><![CDATA[<html>Bercanda dengan Chaos Dragon yg sudah berumur.. Itu agak sedikit....</html>]]></talk_answer>
+      <talk_question mid="112"><![CDATA[<html>$Gerraint$<BR>Tidak, emm...<FONT color=#7e12d2>(Muka yg ragu)</FONT><BR>
+Kamu tidak menertawakan aku sambil bohong kepadaku kan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1774_gereint_kid-9-n" image="QW_104.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_geraint_Kid.dds" center_image="">
+      <talk_answer link_index="n1774_gereint_kid-9-!next" mid="293" select_type="2" />
+      <talk_question mid="114"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Kasih tahu cara bicaranya. Gerraint terlihat tidak senang. Tapi ia bilanng ia akan melakukannya... Aku harap ia tidak berbuat yg aneh...)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9567</exe>
+         <exe type="talk" npc="n1782_rubinat">1</exe>
+         <exe type="talk" npc="n1789_gereint_kid_memory">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment>스텝 4, 저널 3은 자스민 나오고 나서 넘어간다.</comment>
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">5</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2,3">0</exe>
+         <exe type="talk" npc="n1790_jasmin">a</exe>
+         <exe type="setstep">5</exe>
+         <exe type="talk" npc="n1790_jasmin">5</exe>
+         <exe type="setstep">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="6">
+      <comment>7스텝 전개는 트리거로.</comment>
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="7">
+      <comment />
+      <conditions>
+         <chk type="class" op="=">5</chk>
+      </conditions>
+      <executions>
+         <exe type="conexe" true="1" false="2">0</exe>
+         <exe type="talk" npc="n1791_jasmin_memory">a</exe>
+         <exe type="talk" npc="n1791_jasmin_memory">c</exe>
+         <exe type="setstep">8</exe>
+         <exe type="setjornal">6</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="8">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">9</exe>
+         <exe type="setjornal">7</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="9">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="complete" true="">9567</exe>
+         <exe type="recompense">95670,,,,,,,,,</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1789_gereint_kid_memory" sub="acceptted_1">0,2</exelink>
+   <exelink qstep="accepting" npc="n1782_rubinat" sub="acceptted_2">0,1</exelink>
+   <exelink qstep="1" npc="n1789_gereint_kid_memory" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n1138_elf_guard_sitredel" sub="b" />
+   <exelink qstep="2" npc="n1138_elf_guard_sitredel" sub="c" />
+   <exelink qstep="2" npc="n1138_elf_guard_sitredel" sub="d" />
+   <exelink qstep="2" npc="n1138_elf_guard_sitredel" sub="e" />
+   <exelink qstep="2" npc="n1138_elf_guard_sitredel" sub="3">0,1</exelink>
+   <exelink qstep="4" npc="n1790_jasmin" sub="class_check">0</exelink>
+   <exelink qstep="4" npc="n1790_jasmin" sub="b" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="b" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="b" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="c" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="d" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="d" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="d" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="e" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="f" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="g" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="g" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="g" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="h" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="i" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="j" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="k" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="l" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="m" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="n" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="o" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="p" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="q" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="u" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="r" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="s" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="s" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="t" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="t" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="u" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="v" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="w" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="x" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="y" />
+   <exelink qstep="4" npc="n1790_jasmin" sub="6">4</exelink>
+   <exelink qstep="5" npc="n1790_jasmin" sub="b" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="c" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="d" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="e" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="f" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="g" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="h" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="i" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="i" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="j" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="k" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="l" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="m" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="n" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="n" />
+   <exelink qstep="5" npc="n1790_jasmin" sub="6">0</exelink>
+   <exelink qstep="7" npc="n1791_jasmin_memory" sub="class_check_2">0</exelink>
+   <exelink qstep="7" npc="n1791_jasmin_memory" sub="b" />
+   <exelink qstep="7" npc="n1791_jasmin_memory" sub="8">3,4</exelink>
+   <exelink qstep="7" npc="n1791_jasmin_memory" sub="d" />
+   <exelink qstep="7" npc="n1791_jasmin_memory" sub="8">3,4</exelink>
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="b" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="b" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="b" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="c" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="c" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="d" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="e" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="f" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="g" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="h" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="i" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="j" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="k" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="l" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="m" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="n" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="n" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="o" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="o" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="o" />
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="9">0,1</exelink>
+   <exelink qstep="8" npc="n1774_gereint_kid" sub="9">0,1</exelink>
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="b" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="b" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="c" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="d" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="d" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="e" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="f" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="g" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="g" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="g" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="h" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="i" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="j" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="k" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="l">1</exelink>
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="m">0</exelink>
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="n" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="n" />
+   <exelink qstep="9" npc="n1774_gereint_kid" sub="!next" />
+   <journal_data recompense="95670" quest_title="드래곤의 마음" chapterid="16" quest_level="80" quest_mark_type="1" use_item_list="">
+      <journal index="1">
+         <contents_image>QN_Npc_geraint_Kid.dds</contents_image>
+         <destination_pos>34,n1789</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1789</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="115"><![CDATA[Heart of Dragon 1]]></title>
+         <contents mid="116"><![CDATA[<html>Sangat mengkhawatirkan Gerraint. Pergilah ke Anu Arendel untuk mencari Gerraint.<BR><BR><FONT color=#086171>Anu Arendel Gateway</FONT> <FONT color=#a82424>- Gerraint</FONT></html>]]></contents>
+         <destination mid="117"><![CDATA[Berbicara dengan Gerraint di Anu Arendel]]></destination>
+         <todo_msg mid="118"><![CDATA[Quest telah ditambahkan.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Basha.dds</contents_image>
+         <destination_pos>34,n1138</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1138</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="119"><![CDATA[Heart of Dragon 2]]></title>
+         <contents mid="120"><![CDATA[<html>Gerraint tidak ada ditempat. Tanya keberadaan Gerraint kepada Elf Guard Citriel.<BR><BR><FONT color=#086171>Anu Arendel Gateway(Life Tree Entrance)</FONT> <FONT color=#a82424>- Elf Guard Citriel</FONT></html>]]></contents>
+         <destination mid="121"><![CDATA[Berbicara dengan Citriel di Anu Arendel]]></destination>
+         <todo_msg mid="122"><![CDATA[Tanya keberadaan Gerraint kepada Elf Guard Citriel.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QW_103.dds</contents_image>
+         <destination_pos>1079,n1774</destination_pos>
+         <destination_mode>custom:1079@1</destination_mode>
+         <statemark_npcid>1774</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="123"><![CDATA[Heart of Dragon 3]]></title>
+         <contents mid="124"><![CDATA[<html>Citriel berbicara bahwa Gerraint pergi ke Corridor of Tangled Memories. Pergilah ke Corridor of Tangled Memories untuk mencari Gerraint.<BR><BR><FONT color=#086171>Anu Arendel Gateway(Small Forest of Shadow)</FONT> <FONT color=#a82424>- Corridor of Tangled Memories(Gerraint)</FONT></html>]]></contents>
+         <destination mid="125"><![CDATA[Ke Corridor of Tangled Memories]]></destination>
+         <todo_msg mid="126"><![CDATA[Pergi ke Corridor of Tangled Memories untuk mencari Gerraint.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Academic_jasmine.dds</contents_image>
+         <destination_pos>1079,n1790</destination_pos>
+         <destination_mode>custom:1079@1</destination_mode>
+         <statemark_npcid>1790</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="127"><![CDATA[Heart of Dragon 4]]></title>
+         <contents mid="128"><![CDATA[<html>Di Corridor of Tangled Memories ada Jasmine?! Coba berbicara dengannya.<BR><BR><FONT color=#086171>Anu Arendel Gateway(Small Forest of Shadow)</FONT> <FONT color=#a82424>- Corridor of Tangled Memories(Jasmine)</FONT></html>]]></contents>
+         <destination mid="129"><![CDATA[Berbicara dengan Jasmine di Corridor of Tangled Memories]]></destination>
+         <todo_msg mid="130"><![CDATA[Jasmine muncul. Coba berbicara dengannya.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_Npc_Academic_jasmine.dds</contents_image>
+         <destination_pos>1079,n1791</destination_pos>
+         <destination_mode>custom:1079@1</destination_mode>
+         <statemark_npcid>1791</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="131"><![CDATA[Heart of Dragon 5]]></title>
+         <contents mid="132"><![CDATA[<html>Jasmine bilang sekarang dirinya ada di sisinya Feder.. Dan berhasil membuat Feder menjadi Red Dragon yg sempurna menggunakan teknologi dari masa depan. Coba rapihkan pikirannya.<BR><BR><FONT color=#086171>Anu Arendel Gateway(Small Forest of Shadow)</FONT> <FONT color=#a82424>- Corridor of Tangled Memories(Tempat dimana Jasmine berdiri)</FONT></html>]]></contents>
+         <destination mid="133"><![CDATA[Atur pikiran di lokasi dimana Jasmine hilang]]></destination>
+         <todo_msg mid="134"><![CDATA[Jasmine hilang… Coba atur pikirannya.]]></todo_msg>
+      </journal>
+      <journal index="6">
+         <contents_image>QN_Npc_geraint_Kid.dds</contents_image>
+         <destination_pos>1079,n1774</destination_pos>
+         <destination_mode>custom:1079@1</destination_mode>
+         <statemark_npcid>1774</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="135"><![CDATA[Heart of Dragon 6]]></title>
+         <contents mid="136"><![CDATA[<html>Sudah mengatur pikirannya. Untuk saat ini, harus cari Gerraint terlebih duhulu. Pergi untuk mencari Gerraint.<BR><BR><FONT color=#086171>Anu Arendel Gateway(Small Forest of Shadow)</FONT> <FONT color=#a82424>- Corridor of Tangled Memories(Gerraint)</FONT></html>]]></contents>
+         <destination mid="137"><![CDATA[Berbicara dengan Gerraint di Corridor of Tangled Memories]]></destination>
+         <todo_msg mid="138"><![CDATA[Pergilah untuk mencari Gerraint.]]></todo_msg>
+      </journal>
+      <journal index="7">
+         <contents_image>QN_Npc_geraint_Kid.dds</contents_image>
+         <destination_pos>1079,n1774</destination_pos>
+         <destination_mode>custom:1079@1</destination_mode>
+         <statemark_npcid>1774</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="139"><![CDATA[Heart of Dragon 7]]></title>
+         <contents mid="140"><![CDATA[<html>Sepertinya Gerraint juga mendapatkan banyak masalah. Menjawab pertanyaan dari Gerraint.<BR><BR><FONT color=#086171>Anu Arendel Gateway(Small Forest of Shadow)</FONT><FONT color=#a82424> - Corridor of Tangled Memories(Gerraint)</FONT></html>]]></contents>
+         <destination mid="141"><![CDATA[Pergilah ke Corridor of Tangled Memories dan berbicara dengan Gerraint]]></destination>
+         <todo_msg mid="142"><![CDATA[Menjawab pertanyaan dari Gerraint.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>80:-1</user_level>
+      <user_class />
+      <prev_quest>9566</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

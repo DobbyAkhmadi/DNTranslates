@@ -1,0 +1,105 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_2321_deuk_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>2321</qid>
+      <designer>이한나</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About Deux]]></qkname>
+      <qnpc>
+         <npcid>1266</npcid>
+         <npcename>n1266_deuk</npcename>
+         <npckname>알테이아 으뜸 훈남 데우크</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1266_deuk-accepting-a" mid="16" select_type="0"><![CDATA[<html>(Tanyakan tinggi Deux)</html>]]></talk_answer>
+      <talk_answer link_index="n1266_deuk-accepting-b" mid="17" select_type="0"><![CDATA[<html>(Tanyakan pekerjaan Deux)</html>]]></talk_answer>
+      <talk_answer link_index="n1266_deuk-accepting-c" mid="18" select_type="0"><![CDATA[<html>(Tanyakan kenapa Deux bisa terkenal)</html>]]></talk_answer>
+      <talk_answer link_index="n1266_deuk-accepting-d" mid="19" select_type="0"><![CDATA[<html>(Tanyakan daya tarik Deux)</html>]]></talk_answer>
+      <talk_question mid="15"><![CDATA[<html>$Hunk Deux Cowok Tertampan Se~Verathea$<BR>
+Hai sayang, kamu pasti ingin tahu tentangku.<BR>
+Aku mengerti. Memang selalu seperti ini.<BR>
+Jadi, apa yang ingin kamu ketahui tentang <FONT color=#086171>si tampan Mr. Deux?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="21"><![CDATA[<html>$Hunk Deux Cowok Tertampan Se~Verathea$<BR>
+<FONT color=#a82424>Tinggi?!</FONT> <FONT color=#086171>Tinggi!</FONT> <FONT color=#a94407>Tinggi!!</FONT> Kamu penasaran dengan Tinggiku?<BR>
+<FONT color=#387206>{user_nick}</FONT>. Apapun yang kamu pikirkan, aku lebih tinggi!!<BR>
+Jadi ayo <FONT color=#7e12d2>ubah topik</FONT> sekarang juga.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="22"><![CDATA[<html>$Hunk Deux Cowok Tertampan Se~Verathea$<BR>
+<FONT color=#387206>{user_nick}</FONT>. Kamu memang jiwa yang penasaran. Aku...<BR>
+seorang <FONT color=#7e12d2>pengembara</FONT> yang pergi kesana kesini, mencari cinta wanita-wanita.<BR>
+Jangan bertanya lagi.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="23"><![CDATA[<html>$Hunk Deux Cowok Tertampan Se~Verathea$<BR>
+Jadi kamu mau tahu kenapa aku sangat terkenal?<BR>
+Dengan tampang yang ganteng ini, tubuh yang bagus, dan hati yang seluas Samudra Pasifik, tidakkah kamu merasakan semua <FONT color=#7e12d2>panah Cupid</FONT> menembus hatimu? Jadi, <FONT color=#a94407>kamu sudah jatuh cinta padaku??</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1266_deuk-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="24"><![CDATA[<html>$Hunk Deux Cowok Tertampan Se~Verathea$<BR>
+Oh! <FONT color=#387206>{user_nick}</FONT>. Jika dibandingkan dengan <FONT color=#a94407>mata</FONT> mu yang berkilau dan <FONT color=#a94407>hati </FONT>mu yang lembut, aku tidak ada apa-apanya.<BR>
+Sayangku <FONT color=#387206>{user_nick}</FONT>, jangan buat aku tidak berarti lagi.<BR>
+<FONT color=#7e12d2>(Deuk tersenyum puas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,2321, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1266, 5 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1266, 8 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1266, 20 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 1266, 30 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n1266_deuk" sub="a">0,1</exelink>
+   <exelink qstep="accepting" npc="n1266_deuk" sub="b">0,2</exelink>
+   <exelink qstep="accepting" npc="n1266_deuk" sub="c">0,3</exelink>
+   <exelink qstep="accepting" npc="n1266_deuk" sub="d">0,4</exelink>
+   <journal_data recompense="" quest_title="[대화] 데우크에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>1266:1000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

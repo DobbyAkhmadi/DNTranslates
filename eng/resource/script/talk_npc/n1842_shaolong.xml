@@ -1,0 +1,44 @@
+   <talk>
+      <npcename>n1842_shaolong</npcename>
+      <npcid>1842</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Xiaolong (Prologue Map)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_question mid="3"><![CDATA[<html>$Xiaolong$<BR>
+What are you doing here?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina01" image="" itemindex="">
+         <talk_answer link_index="prologue_makina02" mid="37"><![CDATA[<html>Who are you? Where am I?</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Mysterious Tiger Man$<BR>Splendid! Those are some great moves you've got there!<BR>I've finally found a disciple to pass down my One-armed Kung Fu! </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina02" image="" itemindex="">
+         <talk_answer link_index="prologue_makina03" mid="38"><![CDATA[<html><FONT color=#2b2723>Why would I do that...?</FONT></html>]]></talk_answer>
+         <talk_question mid="8"><![CDATA[<html>$Mysterious Tiger Man$<BR>Ehem. My name is Xiaolong and you're near Prairie Town right now. <BR><FONT color=#7e12d2>(Xiaolong suddenly looks around.)</FONT><BR>Hmm… this place is too dangerous for a chat. Let's continue talking in Prairie Town.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina03" image="" itemindex="">
+         <talk_answer link_index="prologue_makina04" mid="39"><![CDATA[<html><FONT color=#2b2723>A pass? </FONT></html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Xiaolong$<BR>Why? <FONT color=#7e12d2>(Xiaolong flusters as he didn't expect such a question from you.)</FONT><BR>Well… nothing good will come out of staying here… Don't tell me you don't have a pass. </html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina04" image="" itemindex="">
+         <talk_answer link_index="prologue_makina05" mid="40"><![CDATA[<html>Oh… okay...</html>]]></talk_answer>
+         <talk_question mid="12"><![CDATA[<html>$Xiaolong$<BR>Hybrids like us need passes to go to other towns.<BR>Krrang… I guess you don't have one since you're keeping quiet. <BR>Well then… You should just sneak in! Come right to me and avoid eye contact with the mayor or the other people in town!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="prologue_makina05" image="" itemindex="">
+         <talk_answer link_index="next" mid="41"><![CDATA[<html><FONT color=#2b2723>(Xiaolong vanishes in a second.)</FONT></html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Xiaolong$<BR>I'll tell you more in Prairie Town!</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="conexe" true="1" false="2">0 or 1</exe>
+         <exe type="talk">001</exe>
+         <exe type="talk">prologue_makina01</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID,9571, 2);</exe>
+         <exe type="custom">api_quest_SetQuestStep(userObjID, 9571, 1);</exe>
+         <exe type="custom">api_quest_SetJournalStep(userObjID, 9571, 1);</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">9571</chk>
+         <chk type="hasquest">9571</chk>
+      </conditions>
+      <exelink idx="next">3,4,5</exelink>
+   </talk>

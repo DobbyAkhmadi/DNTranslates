@@ -1,0 +1,198 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq15_4148_find_treasure1</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4148</qid>
+      <designer>최지은</designer>
+      <qlevel>60</qlevel>
+      <qdesc>400352 낡은 일기장 1권</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Treasure Hunt I]]></qkname>
+      <qnpc>
+         <npcid>1003</npcid>
+         <npcename>n1003_event_diary</npcename>
+         <npckname />
+      </qnpc>
+      <qnpc>
+         <npcid>249</npcid>
+         <npcename>n249_saint_guard</npcename>
+         <npckname>왕성 근위병 로이</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1003_event_diary-noquest" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="5"><![CDATA[<html><FONT color=#7e12d2>It looks like something is buried here.</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-a" mid="7" select_type="0"><![CDATA[<html>It isn't that I'm not free…(but I'm getting behind with my quests) </html>]]></talk_answer>
+      <talk_question mid="6"><![CDATA[<html>$Royal Guard Roy$<BR><FONT color=#7e12d2>(Roy lowers his voice and talks)<BR></FONT><FONT color=#387206>{user_nick}</FONT>, are you free now? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-b" mid="9" select_type="0"><![CDATA[<html>What is it?</html>]]></talk_answer>
+      <talk_question mid="8"><![CDATA[<html>$Royal Guard Roy$<BR>The thing is that I found this while I was cleaning the library.<BR><FONT color=#7e12d2>(Roy shows a thin paper note)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-c" mid="11" select_type="0"><![CDATA[<html>A treasure?</html>]]></talk_answer>
+      <talk_question mid="10"><![CDATA[<html>$Royal Guard Roy$<BR>It seems to be a code for something.<BR>According to my analysis, it looks like a code about a treasure….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-c" image="QW_72.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-d" mid="13" select_type="0"><![CDATA[<html>Tel Noir Temple…</html>]]></talk_answer>
+      <talk_question mid="12"><![CDATA[<html>$Royal Guard Roy$<BR>Yes. I deciphered the code in secret, and it says that 'a great treasure which cannot be gained even with money is hidden in <FONT color=#a82424>Tel Noir Temple</FONT> so go there and find it'.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-accepting-acceptted" mid="15" select_type="0"><![CDATA[<html><FONT color=#086171>Accept Quest</FONT> </html>]]></talk_answer>
+      <talk_question mid="14"><![CDATA[<html>$Treasure Hunt I$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-1" image="QW_72.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="17"><![CDATA[<html>$Royal Guard Roy$<BR>As I'm in charge of the security of Saint Haven, I won't be able to go. So I laeve it to you.<BR>The treasure should be somewhere in <FONT color=#a82424>Tel Noir Temple</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1003_event_diary-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1003_event_diary-1-a" mid="19" select_type="0"><![CDATA[<html>(Dig out)</html>]]></talk_answer>
+      <talk_question mid="18"><![CDATA[<html>$????$<BR><FONT color=#7e12d2>(There is a trace that something has been buried in a messy way. It also looks like it has been dug out many times already)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1003_event_diary-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n1003_event_diary-2" mid="21" select_type="0"><![CDATA[<html>(This seems to be the only treasure. Take it to Roy)</html>]]></talk_answer>
+      <talk_question mid="20"><![CDATA[<html>$????$<BR><FONT color=#7e12d2>(An old diary was found. It's dirty and hard to open)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-2-a" mid="26" select_type="0"><![CDATA[<html>It was this old book.</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Royal Guard Roy$<BR>You are back. What kind of treasure was it? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-2-b" mid="28" select_type="0"><![CDATA[<html>Maybe there is something else in the book?</html>]]></talk_answer>
+      <talk_question mid="27"><![CDATA[<html>$Royal Guard Roy$<BR>My, it wasn't a treasure. That's too bad….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-2-c" mid="30" select_type="0"><![CDATA[<html>(Roy opened the diary and began to read it) </html>]]></talk_answer>
+      <talk_question mid="29"><![CDATA[<html>$Royal Guard Roy$<BR><FONT color=#7e12d2>(Roy looks at the book this way and that)<BR></FONT>Hm, it is thick but it is not an officially published book. Looks like it was a fancy diary.<BR>The content… has been worn out as it was handwritten. There is no much thing that can be read, but let's see….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-2-d" mid="32" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="31"><![CDATA[<html>$Old diary$<BR><FONT color=#2b2723>x month x day, clear day<BR>Long time has passed since I participated in the Black Dragon Raid.<BR>The resistance of the monsters is fierce, but it doesn't look like we are completely losing the battle.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2-d" image="QN_Npc_Geraint.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-2-e" mid="34" select_type="0"><![CDATA[<html>(Of course that will be better….) </html>]]></talk_answer>
+      <talk_question mid="33"><![CDATA[<html><FONT color=#2b2723><FONT color=#2b2723>$Old diary$</FONT></FONT><BR><FONT color=#2b2723>It seems that Geraint heard about the wine-flavored milk that has been popular recently.<BR><FONT color=#7e12d2>[What is this so-called wine-flavored milk?]</FONT> he asked, so I got him one.<BR>After drinking the milk, Geraint said.<BR></FONT><FONT color=#7e12d2>[At least this is better than Karacule's cooking]</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2-e" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-2-f" mid="36" select_type="0"><![CDATA[<html>(100 bottles?)</html>]]></talk_answer>
+      <talk_question mid="35"><![CDATA[<html>$Old diary$<BR>Argenta, who was next to him, said tartly.<BR><FONT color=#7e12d2>[You should know how to distinguish a posion like that and a real popular drink. Is your tongue numb?]<BR></FONT>So it was that Argenta bought around 100 bottles of wine-flavored milk. I was worried when she would finish drinking all of them, but I was surprised to find the pile of empty milk bottles next day at the quarter. And… <FONT color=#7e12d2>(the last part can't be read because it's too worn out)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2-f" image="QN_Npc_Argenta.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-2-g" mid="38" select_type="0"><![CDATA[<html>I thought she could be, but not this much.</html>]]></talk_answer>
+      <talk_question mid="37"><![CDATA[<html>$Royal Guard Roy$<BR>Um, so this seems to be the diary of a solider who participated in the Black Dragon Raid….<BR>But it sure is unexpected that Argenta was a big eater.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2-g" image="QM_black_Dragon.dds" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-2-h" mid="40" select_type="0"><![CDATA[<html>Umm... Well.</html>]]></talk_answer>
+      <talk_question mid="39"><![CDATA[<html>$Royal Guard Roy$<BR>That's right, <FONT color=#387206>{user_nick}</FONT> said you once had fought with the Black Dragon before.<BR>What about if <FONT color=#387206>{user_nick}</FONT> also write a diary?<BR>It would surely become an important historical source.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2-h" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n249_saint_guard-2-i" mid="42" select_type="0"><![CDATA[<html><FONT color=#086171>(Receive Reward)</FONT></html>]]></talk_answer>
+      <talk_question mid="41"><![CDATA[<html>$Quest Completed$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n249_saint_guard-2-i" image="QS_Default.dds" itemindex="400352" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="43"><![CDATA[<html>$Royal Guard Roy$<BR>Haha, I'm not forcing you.<BR>But this diary looks familiar.<BR>I've heard from somewhere that there is a book of this kind....</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1003_event_diary-2" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="58"><![CDATA[<html>$????$<BR><FONT color=#7e12d2>Now there is no more business left.</FONT><BR><FONT color=#7e12d2>Go back to Royal Guard Roy.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">41480,,,,,,,,,</exe>
+         <exe type="setquest">4148</exe>
+         <exe type="talk" npc="n249_saint_guard">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+         <exe type="addquestitem" num="1">400352</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="delquestitem" num="-1">400352</exe>
+         <exe type="recompense">41480,,,,,,,,,</exe>
+         <exe type="complete" true="">4148</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n249_saint_guard" sub="d">0</exelink>
+   <exelink qstep="accepting" npc="n249_saint_guard" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n1003_event_diary" sub="2">0,1,2</exelink>
+   <exelink qstep="2" npc="n249_saint_guard" sub="b" />
+   <exelink qstep="2" npc="n249_saint_guard" sub="c" />
+   <exelink qstep="2" npc="n249_saint_guard" sub="d" />
+   <exelink qstep="2" npc="n249_saint_guard" sub="e" />
+   <exelink qstep="2" npc="n249_saint_guard" sub="f" />
+   <exelink qstep="2" npc="n249_saint_guard" sub="g" />
+   <exelink qstep="2" npc="n249_saint_guard" sub="h">1</exelink>
+   <exelink qstep="2" npc="n249_saint_guard" sub="i">0,2</exelink>
+   <journal_data recompense="41480" quest_title="보물을 찾아서Ⅰ" chapterid="" quest_level="60" quest_mark_type="10" use_item_list="400352">
+      <journal index="1">
+         <contents_image>QW_72.dds</contents_image>
+         <destination_pos>721,n1003</destination_pos>
+         <destination_mode>custom:721@1</destination_mode>
+         <statemark_npcid>1003</statemark_npcid>
+         <statemark_type>11</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="46"><![CDATA[In Search of the Treasure]]></title>
+         <contents mid="47"><![CDATA[<html>Roy talked about the note's code. He says there is a treasure in Tel Noir Temple. Could it be true? Go to Tel Noir Temple to confirm it.<BR><BR><FONT color=#086171>Riverwort Wharf (Tel Numara Gates)</FONT> <FONT color=#a82424>→ Tel Noir Temple</FONT> </html>]]></contents>
+         <destination mid="48"><![CDATA[Explore Tel Noir Temple]]></destination>
+         <todo_msg mid="49"><![CDATA[Find the treasure at Tel Noir Temple.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Elite_Soilder.dds</contents_image>
+         <destination_pos>11,n249</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>249</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="52"><![CDATA[Is this the treasure?]]></title>
+         <contents mid="53"><![CDATA[<html>So this treasure you've found is an old diary.<BR>First, take it to Roy.<BR><BR><FONT color=#086171>Saint Haven</FONT> <FONT color=#a82424>→ Royal Guard Roy</FONT></html>]]></contents>
+         <destination mid="54"><![CDATA[Talk with Royal Guard Roy]]></destination>
+         <todo_msg mid="55"><![CDATA[Hand the old diary to Royal Guard Roy.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>60:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest>9228,9244,9549</have_quest>
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

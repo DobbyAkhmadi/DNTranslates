@@ -1,0 +1,118 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>sq_guide_4994_crystal_02</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>4994</qid>
+      <designer>안여옥</designer>
+      <qlevel>24</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[Crystal Point, The Beautiful Brightness]]></qkname>
+      <qnpc>
+         <npcid>998</npcid>
+         <npcename>n998_experience_shop</npcename>
+         <npckname>만물상점 도우미 체르니</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_promise_quest_clear_fail">
+      <talk_question mid="100000"><![CDATA[<html>{ui_string:257}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-accepting-a" mid="6" select_type="0"><![CDATA[<html>Is there any good stuff?</html>]]></talk_answer>
+      <talk_question mid="5"><![CDATA[<html>$Cherry$<BR>Hihi. Have you ever been Crystal Shop?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-accepting-acceptted" mid="8" select_type="0"><![CDATA[<html>(Accept Quest)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Crystal Point, The Beautiful Brightness$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-1-a" mid="10" select_type="0"><![CDATA[<html>Well I'm afraid I can not purchase everything haha.</html>]]></talk_answer>
+      <talk_question mid="9"><![CDATA[<html>$Cherry$<BR>Hihi, <FONT color=#387206>{user_nick}</FONT>. Good to see you.<BR>I'm <FONT color=#086171>Cherry</FONT>. I'm selling stuffs that can be purchased with <FONT color=#a82424>Crystal Point</FONT> only.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-1-b" mid="12" select_type="0"><![CDATA[<html>Can I get it only from main quest?</html>]]></talk_answer>
+      <talk_question mid="11"><![CDATA[<html>$Cherry$<BR>Oh, really? That's unfortunate... These are really really valuable. Well, <FONT color=#7e12d2>Main Quest Reward</FONT> will give you <FONT color=#a82424>Crystal Point</FONT>, I think you can gather them very easy!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-1-c" mid="22" select_type="0"><![CDATA[<html>Hmm, Ok. I will try.</html>]]></talk_answer>
+      <talk_question mid="21"><![CDATA[<html>$Cherry$<BR>Noooo!! That's not true. <FONT color=#7e12d2>95lv</FONT> From now on, as <FONT color=#7e12d2>Daily Mission Reward</FONT>, you can get <FONT color=#a82424>Crystal Point</FONT>!! You cannot get much at once but, one day you can gather enough!! Oh, right, this will help you as well. I believe <FONT color=#387206>{user_nick}</FONT>can purchase what you want!!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n998_experience_shop-1-d" mid="20" select_type="0"><![CDATA[<html>(Success)</html>]]></talk_answer>
+      <talk_question mid="19"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n998_experience_shop-1-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="13"><![CDATA[<html>$Cherry$<BR>I'm always here, so come back anytime you want!! Good luck!</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense_view">49940,,,,,,,,,,</exe>
+         <exe type="setquest">4994</exe>
+         <exe type="talk" npc="n998_experience_shop">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">49940,,,,,,,,,,</exe>
+         <exe type="complete" true="">4994</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n998_experience_shop" sub="a">0</exelink>
+   <exelink qstep="accepting" npc="n998_experience_shop" sub="acceptted">1,2</exelink>
+   <exelink qstep="1" npc="n998_experience_shop" sub="b" />
+   <exelink qstep="1" npc="n998_experience_shop" sub="c">0</exelink>
+   <exelink qstep="1" npc="n998_experience_shop" sub="d">1</exelink>
+   <journal_data recompense="49940" quest_title="크리스탈 포인트, 그 찬란함에 대하여" chapterid="-1" quest_level="24" quest_mark_type="10" use_item_list="">
+      <journal index="1">
+         <contents_image />
+         <destination_pos>11,n998</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>998</statemark_npcid>
+         <statemark_type>12</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="15"><![CDATA[Crystal Shop]]></title>
+         <contents mid="16"><![CDATA[<html>Go to Cherry.<BR><BR><FONT color=#086171>Saint Haven -</FONT><FONT color=#a82424>Cherry</FONT></html>]]></contents>
+         <destination mid="17"><![CDATA[Talk to Cherry]]></destination>
+         <todo_msg mid="18"><![CDATA[Quest has been added.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level>24:-1</user_level>
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

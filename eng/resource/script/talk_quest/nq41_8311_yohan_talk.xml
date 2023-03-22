@@ -1,0 +1,109 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>nq41_8311_yohan_talk</qename>
+      <qtype>subquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>-1</qchapter>
+      <qid>8311</qid>
+      <designer>김인정</designer>
+      <qlevel>1</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid />
+      <nextqname />
+      <nextqnpc />
+      <uistyle>0</uistyle>
+      <qkname mid="1"><![CDATA[[Talk] About future]]></qkname>
+      <qnpc>
+         <npcid>714</npcid>
+         <npcename>n714_cleric_yohan</npcename>
+         <npckname>상급 클레릭 요한</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-accepting-a" mid="8" select_type="0"><![CDATA[<html>(Continue)</html>]]></talk_answer>
+      <talk_question mid="7"><![CDATA[<html>$Master Cleric Johan$<BR>
+I intend to continue to investigate the Dragon Followers and find out who their leader is.<BR>
+And I will work hard to make humans and the natives understand each other.<BR>
+I guess those are the plans that the Goddess has for me.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-a" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_answer link_index="n714_cleric_yohan-accepting-b" mid="18" select_type="0"><![CDATA[<html>Isn't that useless?</html>]]></talk_answer>
+      <talk_answer link_index="n714_cleric_yohan-accepting-c" mid="19" select_type="0"><![CDATA[<html>I've never thought about it</html>]]></talk_answer>
+      <talk_answer link_index="n714_cleric_yohan-accepting-d" mid="20" select_type="0"><![CDATA[<html>I want to help people in need</html>]]></talk_answer>
+      <talk_answer link_index="n714_cleric_yohan-accepting-e" mid="21" select_type="0"><![CDATA[<html>I want to save the world!</html>]]></talk_answer>
+      <talk_question mid="17"><![CDATA[<html>$Master Cleric Johan$<BR>
+<FONT color=#387206>{user_nick}</FONT>, what is your plan?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-b" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="35"><![CDATA[<html>$Master Cleric Johan$<BR>
+Oh my. It's a pity that you think so.<BR>
+Try seriously thinking about your future.<BR>
+<FONT color=#7e12d2>(Johan's face stiffened)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-c" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="36"><![CDATA[<html>$Master Cleric Johan$<BR>
+It's a pity that a person like you have never thought about your future.<BR>
+There are a lot of people in the world who need you. Maybe you can try thinking about how you can help them.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-d" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="37"><![CDATA[<html>$Master Cleric Johan$<BR>
+That's a simple but honest hope!<BR>
+The heroes who have done great things actually started out with such small plans.<BR>
+I will keep a look out on how far you will go.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n714_cleric_yohan-accepting-e" image="" itemindex="" portrait_left="" portrait_right="" center_image="">
+      <talk_question mid="42"><![CDATA[<html>$Master Cleric Johan$<BR>
+Hahaha, you have a big dream.<BR>
+Try making a detailed plan about how you will save the world.</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="custom">api_quest_ForceCompleteQuest(userObjID,8311, 0, 1, 1, 0);</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 500 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 300 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 100 );</exe>
+         <exe type="custom">api_npc_AddFavorPoint( userObjID, 714, 50 );</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="b">0,4</exelink>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="c">0,3</exelink>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="d">0,1</exelink>
+   <exelink qstep="accepting" npc="n714_cleric_yohan" sub="e">0,2</exelink>
+   <journal_data recompense="" quest_title="[대화] 앞으로의 계획에 대해서" chapterid="" quest_level="1" quest_mark_type="10" use_item_list="" />
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest />
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor>714:19000:-1</npc_favor>
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

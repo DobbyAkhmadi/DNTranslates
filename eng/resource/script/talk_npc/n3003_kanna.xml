@@ -1,0 +1,34 @@
+   <talk>
+      <npcename>n3003_kanna</npcename>
+      <npcid>3003</npcid>
+      <startexe>1</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Healer Kanna]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="19"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Healer Kanna$<BR>…….</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="20" link_target="sq_3899_finding.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>In Search of a Shooting Star</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="21" link_target="sq_3900_finding2.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Phantom Thief or Mercenary?</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="22" link_target="sq_3901_v_finding.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Finding Another Me</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="23" link_target="sq_3902_v_finding2.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Ask the Star Lord</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="24"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="7"><![CDATA[<html>$Healer Kanna$<BR>
+What should I do?</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="conexe" true="2" false="3">0</exe>
+         <exe type="enterquest">mqc04_9911_blunder</exe>
+         <exe type="conexe" true="4" false="5">1</exe>
+         <exe type="enterquest">mqc04_9914_fatal_combination</exe>
+         <exe type="conexe" true="6" false="0">2</exe>
+         <exe type="enterquest">mqc04_9915_stalemate</exe>
+      </executions>
+      <conditions>
+         <chk type="hasquest">9911</chk>
+         <chk type="hasquest">9914</chk>
+         <chk type="hasquest">9915</chk>
+      </conditions>
+   </talk>

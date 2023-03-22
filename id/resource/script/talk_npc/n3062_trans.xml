@@ -1,0 +1,26 @@
+   <talk>
+      <npcename>n3062_trans</npcename>
+      <npcid>3062</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Crate Collector Alin]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="cloneupgrade" mid="6"><![CDATA[<html>[Enhance Conversion Item]</html>]]></talk_answer>
+         <talk_answer link_index="changeshop" mid="9"><![CDATA[<html>[Conversion Shop]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="15"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Crate Collector Alin$<BR>Welcome. I'm sure I'll be able to lighten my crates thanks to you!<BR>Good luck!!!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="11"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="10"><![CDATA[<html>$Crate Collector Alin$<BR>If Traveller Pri's got a hat, I've got this crate. It's a magic box that takes me anywhere I need to go.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="custom">api_ui_OpenUpgradeClone(userObjID);</exe>
+         <exe type="custom">api_ui_OpenUpgradeCash(userObjID);</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,77000,100);</exe>
+      </executions>
+      <conditions />
+      <exelink idx="cloneupgrade">1</exelink>
+      <exelink idx="changeshop">3</exelink>
+   </talk>

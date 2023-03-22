@@ -1,0 +1,42 @@
+   <talk>
+      <npcename>n2652_hongryun_maid</npcename>
+      <npcid>2652</npcid>
+      <startexe>0</startexe>
+      <comment>龍異刎頸錄 용이문경록의 한자입니다.</comment>
+      <npckname mid="1"><![CDATA[Banquet Helper Miles]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="75"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="dragon_list" mid="130"><![CDATA[<html>[Record of Honored Dragon Slayer]</html>]]></talk_answer>
+         <talk_answer link_index="talk" mid="647"><![CDATA[<html>[Talk]</html>]]></talk_answer>
+         <talk_question mid="20"><![CDATA[<html>$Banquet Helper Miles${action:Talk}<BR>To make sure people one hundred miles away<BR>hear news about upcoming banquets in Red Lotus Palace,<BR>look no further than yours truly, Miles!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="001" mid="638"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="648" link_target="sqc25_3774_raging_gust_of_wind.xml"><![CDATA[<html>{quest_level} <FONT color=#a82424>Frenzy Gust</FONT></html>]]></talk_answer>
+         <talk_question mid="631"><![CDATA[<html>$Banquet Helper Miles$<BR>Banquets filled with drinks, cakes, laughs and songs:<BR>What else could you call it but a little taste of paradise!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="talk" image="" itemindex="">
+         <talk_answer link_index="001" mid="644"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="632"><![CDATA[<html>$Banquet Helper Miles$<BR>May the blessings of Commander Hwaran be with you...</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="dragon_list" image="" itemindex="">
+         <talk_answer link_index="dragon_check" mid="655"><![CDATA[<html><FONT color=#086171>[Record of Gust Dragon]</FONT></html>]]></talk_answer>
+         <talk_question mid="649"><![CDATA[<html>$Banquet Helper Miles$<BR><FONT color=#a82424>Record of Honored Dragon Slayer</FONT> is a special scroll that records brave ones who defeat the ancient one, the Dragon. Which record do you like to check?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="not_clear" image="" itemindex="">
+         <talk_question mid="656"><![CDATA[<html>$Banquet Helper Miles$<BR>Oh? <FONT color=#387206>{user_nick}</FONT> I can't see your name here?</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="gust_dragon" image="" itemindex="">
+         <talk_question mid="657"><![CDATA[<html>$Record of Gust Dragon$<BR><FONT color=#7e12d2>Scroll shines and record  {user_nick}'s brilliant and brave achievement. But do not forget. The weak will be forgotten and only the strong will be remembered.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">not_clear</exe>
+         <exe type="conexe" true="3" false="1">0</exe>
+         <exe type="talk">gust_dragon</exe>
+      </executions>
+      <conditions>
+         <chk type="hascomq">3774</chk>
+      </conditions>
+      <exelink idx="dragon_check">2</exelink>
+   </talk>

@@ -1,0 +1,409 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mqc02_9577_entry_to_the_uninvited_guest</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>2</qchapter>
+      <qid>9577</qid>
+      <designer>이현진 </designer>
+      <qlevel>9</qlevel>
+      <qdesc />
+      <qdifficulty>1</qdifficulty>
+      <nextqid>9578</nextqid>
+      <nextqname>mqc02_9578_rescue_a_girl</nextqname>
+      <nextqnpc>n023_ranger_fugus</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Enter Uninvited]]></qkname>
+      <qnpc>
+         <npcid>23</npcid>
+         <npcename>n023_ranger_fugus</npcename>
+         <npckname>정찰병 퍼거스</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>1848</npcid>
+         <npcename>n1848_shaolong</npcename>
+         <npckname>샤오룽 </npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>4</npcid>
+         <npcename>n004_guard_steave</npcename>
+         <npckname>자경단장 스티브</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-accepting" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-accepting-a" mid="6" select_type="2" />
+      <talk_question mid="5"><![CDATA[<html>$Vigilante Leader Steve$<BR>Take this pass and show it to him. <BR>By the way... you'll need help with various things when you travel. Go and look for Calderock Village's Adventurer's Guild if you need any help. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-accepting-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-accepting-acceptted" mid="8" select_type="3" />
+      <talk_question mid="7"><![CDATA[<html>$Vigilante Leader Steve$<BR><FONT color=#387206>{user_nick}</FONT>, please don't disappoint the mayor who was kind enough to give you a pass and don't create any trouble. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n004_guard_steave-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Guard_Steave.dds" center_image="">
+      <talk_answer link_index="n004_guard_steave-1-" mid="75" select_type="5" />
+      <talk_question mid="9"><![CDATA[<html>$Vigilante Leader Steve$<BR><FONT color=#7e12d2>(It seems like he has nothing else to say. Go to Calderock Village.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-1-" mid="76" select_type="5" />
+      <talk_question mid="10"><![CDATA[<html>$Xiaolong$<BR>I know you are too excited to be reunited with your master but go and say hi to Scout Fergus of Calderock Village first!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-a" mid="77" select_type="2" />
+      <talk_question mid="11"><![CDATA[<html>$Scout Fergus$<BR>I'm Scout Fergus from Calderock's Adventurer's Guild. <BR>…What is a hybrid like you doing around here?<BR>Excuse me but can you show me your identification? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-b" mid="78" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Show him your Cristal Stream Pass.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-c" mid="79" select_type="2" />
+      <talk_question mid="13"><![CDATA[<html>$Scout Fergus$<BR>…Oh, you must be the <FONT color=#387206>{user_class}</FONT> <FONT color=#387206>{user_nick}</FONT> from Prairie Town. I didn't expect you to be a hybrid...<BR>I don't know what's on the minds of Prairie Town's mayor and vigilante leader nowadays.<BR>How can they give a pass to a hybrid?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-1-d" mid="80" select_type="2" />
+      <talk_question mid="14"><![CDATA[<html>$Scout Fergus$<BR>Not long ago, another hybrid just showed me a Cristal Stream Pass and went to see the guild master. <BR>He looked so ugly and frightening compared to the hybrids I saw in books when I studied for scout qualification test. But you look like one of those I saw in the books, <FONT color=#387206>{user_nick}</FONT>. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-1-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-2" mid="81" select_type="2" />
+      <talk_question mid="15"><![CDATA[<html>$Scout Fergus$<BR>Oh by the way, that hybrid wanted me to ask you to come and see him if you happened to come here.<BR>
+His name was Xiaolong. <BR>What a peculiar name. It stuck in my head easily.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-2-a" mid="82" select_type="2" />
+      <talk_question mid="16"><![CDATA[<html>$Scout Fergus$<BR>Are all hybrids named like that? Well... <FONT color=#387206>{user_nick}</FONT> is a nice name so maybe not….<BR>
+Anyway, please go and see him. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-2-" mid="83" select_type="5" />
+      <talk_question mid="17"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Xiaolong is in Calderock Village?? (Did he forge a fake pass again...) </FONT><BR>
+<FONT color=#662500>Thanks for telling me. I'll go and see him, although I'm not that keen on a reunion. </FONT><BR>
+</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-a" mid="84" select_type="2" />
+      <talk_question mid="18"><![CDATA[<html>$Xiaolong$<BR><FONT color=#387206>{user_nick}</FONT>! Here you are at last! I waited for you for ages! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-b" mid="85" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>How did you get here? Are you stalking me?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-c" mid="86" select_type="2" />
+      <talk_question mid="20"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9577_qu_01.ogg}<BR>Krrah! "Stalk" you?! It's only natural for the master to be where the disciple is! Honestly I'm disappointed.<BR>You left for Calderock Village without a word…! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-c" image="QN_Master_Decud.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-d" mid="87" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Xiaolong$<BR>Have you said hi to <FONT color=#a94407>Adventurer's Guild Master Deckard</FONT> yet? No? Tsk tsk, I knew it.<BR>You know, connections are important in the human world! And the most important thing of it all is to make useful friends!<BR>No matter how close you are to the guild members, it wouldn't help if you're not on good terms with the guild master!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-e" mid="88" select_type="2" />
+      <talk_question mid="22"><![CDATA[<html>$Xiaolong$<BR>Oh don't be so scared. I've put in some good words to him on your behalf already! Wakakaka!<BR>This is the art of living! Watch and learn! You must be well versed in such things to survive in the human world. If not, it will be hard for us hybrids to get information from the humans. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-f" mid="89" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9577_qu_02.ogg}<BR>Adventurer's Guild Master Deckard didn't want to be seen with me at first but he soon opened up when I perked up his ego a little. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-g" mid="90" select_type="2" />
+      <talk_question mid="24"><![CDATA[<html>$Xiaolong$<BR>I found out that adventurers were deployed from a rural village called <FONT color=#a82424>Mana Ridge</FONT> to protect <FONT color=#2b2723>Rose</FONT><FONT color=#2b2723>. He said something about the Prophet too... Don't you want to know what the Prophet is?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-h" mid="91" select_type="2" />
+      <talk_question mid="25"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9577_qu_03.ogg}<BR>Well... I also don't know! Wakakaka. But do we need to find out if Rose is the Prophet? Of course not! We only have one goal! And that's to find Rose before Suriya does.<BR>But what if the adventurers from Mana Ridge whisk Rose away first?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-i" mid="92" select_type="2" />
+      <talk_question mid="26"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>We can't let that happen. Rose is the only one who can lure Suriya out... If we take any more time, my villagers may die!</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-j" mid="93" select_type="2" />
+      <talk_question mid="27"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9577_qu_04.ogg}<BR>From what I heard from Adventurer's Guild Master Deckard, the adventurers from Mana Ridge have not even arrived yet. I heard a harpy took Rose to Sigh Canyon so... I'll meet the adventurers from Mana Ridge and distract them while you go and save Rose.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-k" mid="94" select_type="2" />
+      <talk_question mid="28"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Okay. When you meet the adventurer tell him or her that the Red Harpy took Rose to a place somewhere other than Sigh Canyon. You might as well tell that human to go back to Mana Ridge! </FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-2-l" mid="95" select_type="2" />
+      <talk_question mid="29"><![CDATA[<html>$Xiaolong${sound:npc_Shaolung_9577_qu_05.ogg}<BR><FONT color=#7e12d2>(Xiaolong pulls a straight face.)</FONT><BR>I can't do that. Martial artists should be honest! </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-2-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-3" mid="96" select_type="2" />
+      <talk_question mid="30"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>You? Honest? Hmm....</FONT> </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n1848_shaolong-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Shaolong.dds" center_image="">
+      <talk_answer link_index="n1848_shaolong-3-" mid="122" select_type="5" />
+      <talk_question mid="31"><![CDATA[<html>$Xiaolong$<BR>Krrang! You should trust your master!<BR>Now go to <FONT color=#a82424> </FONT><FONT color=#a82424>Sigh Canyon</FONT><FONT color=#2b2723></FONT>! You can ask Scout Fergus about how to go there! You can leave this place to me! Hah! <BR><FONT color=#7e12d2>(Xiaolong executes a tiger punch with a shout. His wooden hand dangles pathetically.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-a" mid="97" select_type="2" />
+      <talk_question mid="32"><![CDATA[<html>$Scout Fergus$<BR>Here we meet again, <FONT color=#387206>{user_class}</FONT> <FONT color=#387206>{user_nick}</FONT>. Have you met the guy called Xiaolong? </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-b" mid="98" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Tell him what Xiaolong and ask about how to go to Sigh Canyon.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-b" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-c" mid="99" select_type="2" />
+      <talk_question mid="34"><![CDATA[<html>$Scout Fergus$<BR>I see. So you've decided to help Deckard to save the girl. Actually, the scouts of the Adventurer's Guild saw a red-feathered harpy taking a girl to Sigh Canyon before you arrived here.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-d" mid="101" select_type="2" />
+      <talk_question mid="35"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>I was on duty at that time so I chased after the Red Harpy into the Sigh Canyon. But unfortunately, I lost them inside the canyon.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-e" mid="102" select_type="2" />
+      <talk_question mid="36"><![CDATA[<html>$Scout Fergus$<BR>We've been keeping an eye on the Sigh Canyon from then onwards but we saw the Red Harpy only once.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-f" mid="103" select_type="2" />
+      <talk_question mid="37"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Only once? When was that?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-g" mid="104" select_type="2" />
+      <talk_question mid="38"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>There's a Dark Elf living in the Raiders' Den. She goes to Sigh Canyon from time to time and she seems to be related to the Red Harpy in some way. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-h" mid="105" select_type="2" />
+      <talk_question mid="39"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>In what way…?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-h" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-i" mid="106" select_type="2" />
+      <talk_question mid="40"><![CDATA[<html>$Scout Fergus$<BR>I'm not sure... but they seemed to be contacting each other regularly. When the Dark Elf played her harp inside the canyon, the Red Harpy appeared. Then they exchanged something and walked away.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-i" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-j" mid="107" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dark Elf's harp...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-j" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-k" mid="108" select_type="2" />
+      <talk_question mid="42"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Yes. If you have the harp, you can find the Red Harpy and the girl. The leader of the Dark Elves in Raiders' Den has the harp.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-k" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-3-l" mid="109" select_type="2" />
+      <talk_question mid="43"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Then we can get the harp.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-3-l" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4" mid="110" select_type="2" />
+      <talk_question mid="44"><![CDATA[<html>$Scout Fergus$<BR>Dark Elves are swift yet powerful monsters.<BR>Please be careful not to be mesmerised by their dance.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-4" image="QM_DarkelfGray.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-4-" mid="111" select_type="5" />
+      <talk_question mid="45"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Please go to <FONT color=#a82424>Raiders' Den</FONT> and get the harp from <FONT color=#a82424>Dark Elf Assassin Lydia</FONT>. Dark Elves are swift yet powerful monsters.<BR>Please be careful not to be mesmerised by their dance.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-5" image="QS_203.dds" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-5-a" mid="112" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>You've found the harp. It must have been tough on you. </html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-5-a" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-5-b" mid="113" select_type="2" />
+      <talk_question mid="47"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Dark Elf Lydia also had this.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-5-b" image="QS_Default.dds" itemindex="300089" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-5-c" mid="114" select_type="2" />
+      <talk_question mid="48"><![CDATA[<html>$Scout Fergus$<BR>This is a command scoll for the monsters... <BR>Let me take a look.<BR><FONT color=#7e12d2>(Fergus reads the command scroll.)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-5-c" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-5-d" mid="115" select_type="2" />
+      <talk_question mid="49"><![CDATA[<html>$Scout Fergus${action:Talk}<BR>Hmm... it seems like the Red Harpy was going to pass the girl over to the Dark Elf for her to send her somewhere. That's good. We can use the harpy to save the girl. But... oh no….</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-5-d" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-5-e" mid="116" select_type="2" />
+      <talk_question mid="50"><![CDATA[<html>$Scout Fergus$<BR>The harp's strings are broken. This is bad. My sister would have fixed it easily but... We have no choice but to ask for help from Adelynn. She used to play the harp together with my sister.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-5-e" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-5-f" mid="117" select_type="2" />
+      <talk_question mid="51"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>Grrr... Everything is so troublesome...</FONT><BR>
+<FONT color=#662500>So I just have to find this person called Adelynn?</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-5-f" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-5-g" mid="118" select_type="4" />
+      <talk_question mid="52"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n023_ranger_fugus-5-g" image="" itemindex="" portrait_left="" portrait_right="NPC_Right_Ranger_Fugus.dds" center_image="">
+      <talk_answer link_index="n023_ranger_fugus-5-!next" mid="119" select_type="2" />
+      <talk_question mid="53"><![CDATA[<html>$Scout Fergus$<BR>Fortunately, Adelynn was with me when I chased after the Red Harpy so she must have heard the melody too. Please learn how to play the harp from her before going to Sigh Canyon. </html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">9577</exe>
+         <exe type="talk" npc="n004_guard_steave">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="4,5,6,7">350</exe>
+         <exe type="huntitem" num="1" exe="" onexe="">300015</exe>
+         <exe type="setstep">5</exe>
+         <exe type="setjornal">5</exe>
+         <exe type="addquestitem" num="1,1">300089,300015</exe>
+         <exe type="delcount">.</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="5">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">95770,,,,,,,,,</exe>
+         <exe type="complete" true="">9577</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n004_guard_steave" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n023_ranger_fugus" sub="b" />
+   <exelink qstep="1" npc="n023_ranger_fugus" sub="c" />
+   <exelink qstep="1" npc="n023_ranger_fugus" sub="d" />
+   <exelink qstep="1" npc="n023_ranger_fugus" sub="2">0,1</exelink>
+   <exelink qstep="2" npc="n023_ranger_fugus" sub="" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="b" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="c" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="d" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="e" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="f" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="g" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="h" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="i" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="j" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="k" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="l" />
+   <exelink qstep="2" npc="n1848_shaolong" sub="3">0,1</exelink>
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="b" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="c" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="d" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="e" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="f" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="g" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="h" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="i" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="j" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="k" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="l" />
+   <exelink qstep="3" npc="n023_ranger_fugus" sub="4">0,1,2,3</exelink>
+   <exelink qstep="5" npc="n023_ranger_fugus" sub="b" />
+   <exelink qstep="5" npc="n023_ranger_fugus" sub="c" />
+   <exelink qstep="5" npc="n023_ranger_fugus" sub="d" />
+   <exelink qstep="5" npc="n023_ranger_fugus" sub="e" />
+   <exelink qstep="5" npc="n023_ranger_fugus" sub="f">0</exelink>
+   <exelink qstep="5" npc="n023_ranger_fugus" sub="g">1</exelink>
+   <exelink qstep="5" npc="n023_ranger_fugus" sub="!next" />
+   <journal_data recompense="95770" quest_title="불청객으로 입장 " chapterid="2" quest_level="9" quest_mark_type="1" use_item_list="300089,300015">
+      <journal index="1">
+         <contents_image>QN_ranger_fugus.dds</contents_image>
+         <destination_pos>8,n23</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>23</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="54"><![CDATA[Calderock Village]]></title>
+         <contents mid="55"><![CDATA[<html>You must leave Prairie Town and go to Calderock Village.<BR>Go past Cristal Stream and to Calderock Village. <BR><BR><FONT color=#086171> Prairie Town - Cristal Stream</FONT><FONT color=#a82424> - Calderock Village (Scout Fergus)</FONT></html>]]></contents>
+         <destination mid="56"><![CDATA[Talk to Scout Fergus]]></destination>
+         <todo_msg mid="57"><![CDATA[Talk to Scout Fergus at Calderock Village.]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QN_Npc_Shaolong.dds</contents_image>
+         <destination_pos>8,n1848</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>1848</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="58"><![CDATA[Xiaolong Everywhere]]></title>
+         <contents mid="59"><![CDATA[<html>Xiaolong came to Calderock Village. He seems to have something to tell you so go and talk to him. <BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Xiaolong</FONT></html>]]></contents>
+         <destination mid="60"><![CDATA[Talk to Xiaolong]]></destination>
+         <todo_msg mid="61"><![CDATA[Talk to Xiaolong.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_ranger_fugus.dds</contents_image>
+         <destination_pos>8,n23</destination_pos>
+         <destination_mode>custom:</destination_mode>
+         <statemark_npcid>23</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="62"><![CDATA[To Sigh Canyon]]></title>
+         <contents mid="63"><![CDATA[<html>The girl is trapped in Sigh Canyon. Meet Scout Fergus and ask for his advice. <BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Scout Fergus</FONT></html>]]></contents>
+         <destination mid="64"><![CDATA[Talk to Scout Fergus]]></destination>
+         <todo_msg mid="65"><![CDATA[Meet Scout Fergus.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QM_DarkelfGray.dds</contents_image>
+         <destination_pos>114,0,0</destination_pos>
+         <destination_mode>custom:111@1,112@1,113@1,114@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="66"><![CDATA[Dark Elf's Harp]]></title>
+         <contents mid="67"><![CDATA[<html>To break the barrier in Sigh Canyon, get the magic harp from Dark Elf Lydia at Raiders' Den. <BR><BR><FONT color=#086171>Cristal Stream (Raiders' Den Entrance)</FONT> <FONT color=#a82424>- Raiders' Den</FONT></html>]]></contents>
+         <destination mid="68"><![CDATA[Kill the Dark Elf at Raiders' Den]]></destination>
+         <todo_msg mid="69"><![CDATA[Find the magic harp at Raiders' Den.]]></todo_msg>
+      </journal>
+      <journal index="5">
+         <contents_image>QN_ranger_fugus.dds</contents_image>
+         <destination_pos>8,n23</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>23</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="70"><![CDATA[Talk to Scout Fergus]]></title>
+         <contents mid="71"><![CDATA[<html>You have attained the magic harp and command scroll by killing Dark Elf Lydia. <BR>Go back to Scout Fergus. <BR><BR><FONT color=#086171>Calderock Village</FONT><FONT color=#a82424> - Scout Fergus</FONT></html>]]></contents>
+         <destination mid="72"><![CDATA[Talk to Scout Fergus]]></destination>
+         <todo_msg mid="73"><![CDATA[You have attained Dark Elf's magic harp and command scroll. Go back to Scout Fergus.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class>9</user_class>
+      <prev_quest>9576</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

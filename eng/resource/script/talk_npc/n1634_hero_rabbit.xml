@@ -1,0 +1,27 @@
+   <talk>
+      <npcename>n1634_hero_rabbit</npcename>
+      <npcid>1634</npcid>
+      <startexe>0</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Dimensional Rabbit]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="12"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="26" link_target="sq_3696_everyone_shop2.xml"><![CDATA[<html>[Everyone's Banquet Store]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Dimensional Rabbit$<BR>Beside me is the gate to the <FONT color=#a94407>Hero's Battlefield</FONT>.<BR>Hero's Battlefield is sort of a training ground where you can fight against enemies that you might have met before, or fight alongside the heroes you used to admire.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="7" link_target="sq_hero_4435_knight_of_dreams.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Hero's Battlefield - Knight of Dreams</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="15" link_target="sqc23_3695_cleric_mission.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Role of the Temple Knights</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="18" link_target="sqc21_4980_new_banquet.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Everyone's Banquet</FONT></html>]]></talk_answer>
+         <talk_answer link_index="001" mid="19"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Dimensional Rabbit$<BR>The Goddess will wake up from her dream one day… we need to prepare for that day.</html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="enterquest">sq15_852_chaos_crack</exe>
+         <exe type="conexe" true="1" false="0">0</exe>
+         <exe type="custom">api_ui_OpenShop(userObjID,59001,100);</exe>
+         <exe type="enterquest">sq_3696_everyone_shop2</exe>
+      </executions>
+      <conditions />
+   </talk>

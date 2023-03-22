@@ -1,0 +1,60 @@
+   <talk>
+      <npcename>n574_shadow_meow</npcename>
+      <npcid>574</npcid>
+      <startexe>2</startexe>
+      <comment />
+      <npckname mid="1"><![CDATA[Shadow Nyang
+(Saint's Haven)]]></npckname>
+      <talk_paragraph index="001" image="" itemindex="">
+         <talk_answer link_index="quest" mid="3"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="skill1" mid="4"><![CDATA[<html>[Learn Skill]</html>]]></talk_answer>
+         <talk_answer link_index="training_1" mid="209"><![CDATA[<html>[Battle Training Field Entrance]</html>]]></talk_answer>
+         <talk_question mid="2"><![CDATA[<html>$Shadow Nyang${action:Stand2}<BR>Yang terganteng Shadow Nyang semakin hebat setiap hari!<BR>Hasil dari latihan keras setiap hari~! Meong~!</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="002" image="" itemindex="">
+         <talk_answer link_index="quest" mid="7"><![CDATA[<html>[Quest]</html>]]></talk_answer>
+         <talk_answer link_index="training_2" mid="210"><![CDATA[<html>[Battle Training Field Entrance]</html>]]></talk_answer>
+         <talk_question mid="6"><![CDATA[<html>$Shadow Nyang${action:Talk}<BR>Meong? Kamu begitu merindukan aku?<BR>Lama-lama aku bisa tenggelam di lautan kasih sayang yang aku terima~</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="quest" image="" itemindex="">
+         <talk_answer link_index="q_enter" mid="191" link_target="mq11_9300_arrive_sainthaven.xml"><![CDATA[<html>[Lv24] <FONT color=#a94407>Arrived at Saint's Haven</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="192" link_target="mq11_9309_develop_and_inprove.xml"><![CDATA[ <html>[Lv30] <FONT color=#a94407>Develop and Improve</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="193" link_target="mq11_9310_end_of_raide.xml"><![CDATA[<html>[Lv30] <FONT color=#a94407>Outcome of the Dragon Raid</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="203" link_target="mq15_9382_by_time_for_time.xml"><![CDATA[ <html>[Lv60] <FONT color=#a94407>Generation to Generation</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="196" link_target="mq15_9383_feeling_of_disaster.xml"><![CDATA[<html>[Lv60] <FONT color=#a94407>Air of Disaster</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="197" link_target="mq15_9384_sacrifice_of_generation.xml"><![CDATA[<html>[Lv60] <FONT color=#a94407>Victim of Generation</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="198" link_target="mq15_9385_promise_of_start.xml"><![CDATA[<html>[Lv60] <FONT color=#a94407>Promise of the Beginning</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="199" link_target="mq15_9386_shadow_for_you.xml"><![CDATA[<html>[Lv60] <FONT color=#a94407>Your Shadow</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="200" link_target="mq15_9388_truth_which_has_regret.xml"><![CDATA[<html>[Lv60] <FONT color=#a94407>Sincere Regrets</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="206" link_target="mq34_9402_for_hope.xml"><![CDATA[<html>[Lv70] <FONT color=#a94407>Hope To</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="217" link_target="sq_changejob_4976_harmony.xml"><![CDATA[<html>[Extra] <FONT color=#086171>Harmony of Fate</FONT></html>]]></talk_answer>
+         <talk_answer link_index="q_enter" mid="211" link_target="sq_guide_4867_battle_training_as.xml"><![CDATA[<html>{quest_level} <FONT color=#086171>Battle Training Field Entrance</FONT></html>]]></talk_answer>
+         <talk_answer link_index="back_quest" mid="194"><![CDATA[<html>(Kembali)</html>]]></talk_answer>
+         <talk_question mid="174"><![CDATA[<html>$Shadow Nyang$<BR>Senang melihatmu bekerja begitu giat. Tetap semangat~</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="no_training" image="" itemindex="">
+         <talk_answer link_index="back_training" mid="213"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="212"><![CDATA[<html>$Shadow Meow$<BR>
+Kenapa disana ada beberapa hal ya meow.<BR>
+<FONT color=#7e12d2>*Tidak dapat memasuki Battle Training Field ketika join Party.</FONT><BR>
+ </html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">001</exe>
+         <exe type="talk">002</exe>
+         <exe type="conexe" true="0" false="1">0</exe>
+         <exe type="custom">api_ui_OpenSkillShop(userObjID);</exe>
+         <exe type="conexe" true="5" false="6">1</exe>
+         <exe type="custom">api_user_ChangeMap(userObjID, 11111, 1);</exe>
+         <exe type="talk">no_training</exe>
+      </executions>
+      <conditions>
+         <chk type="class" op="=">7</chk>
+         <chk type="custom">api_user_IsPartymember(userObjID) == 0</chk>
+      </conditions>
+      <exelink idx="skill1">3</exelink>
+      <exelink idx="training_1">4</exelink>
+      <exelink idx="training_2">4</exelink>
+      <exelink idx="back_quest">2</exelink>
+      <exelink idx="back_training">2</exelink>
+   </talk>

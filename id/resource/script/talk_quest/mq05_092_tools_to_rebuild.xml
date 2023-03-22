@@ -1,0 +1,290 @@
+<quest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <quest_desc>
+      <qename>mq05_092_tools_to_rebuild</qename>
+      <qtype>mainquest</qtype>
+      <qcomtype>ONCE</qcomtype>
+      <qchapter>1</qchapter>
+      <qid>92</qid>
+      <designer>김인정</designer>
+      <qlevel>2</qlevel>
+      <qdesc>400300 방패 조각</qdesc>
+      <qdifficulty>1</qdifficulty>
+      <nextqid>93</nextqid>
+      <nextqname>mq05_093_review_the_current_time</nextqname>
+      <nextqnpc>n391_academic_station</nextqnpc>
+      <uistyle>1</uistyle>
+      <qkname mid="1"><![CDATA[Repairing the Equipment]]></qkname>
+      <qnpc>
+         <npcid>16</npcid>
+         <npcename>n016_trader_borin</npcename>
+         <npckname>대장장이 보린</npckname>
+      </qnpc>
+      <qnpc>
+         <npcid>391</npcid>
+         <npcename>n391_academic_station</npcename>
+         <npckname>아카데믹 스테이션</npckname>
+      </qnpc>
+   </quest_desc>
+   <talk_paragraph index="q_enter" />
+   <talk_paragraph index="!quit" />
+   <talk_paragraph index="_no_quest">
+      <talk_question mid="2"><![CDATA[<html>{ui_string:1200001}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_quest">
+      <talk_question mid="3"><![CDATA[<html>{ui_string:1200002}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_inventory">
+      <talk_question mid="4"><![CDATA[<html>{ui_string:1200003}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_daily_quest_fail">
+      <talk_question mid="99998"><![CDATA[<html>{ui_string:1200004}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="_full_Qinventory">
+      <talk_question mid="99999"><![CDATA[<html>{ui_string:1200005}</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-accepting" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-accepting-acceptted" mid="68" select_type="3" />
+      <talk_question mid="5"><![CDATA[<html>$Blacksmith Borin$<BR>
+Oh iya, kamu ingin aku memeriksa senjatamu.<BR>
+Baiklah, sini aku periksa.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-1" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-1-a" mid="69" select_type="2" />
+      <talk_question mid="7"><![CDATA[<html>$Blacksmith Borin$<BR>Hmm... Gadis kecil. Aku akan memperbaiki ini GRATIS.<BR>
+Equipment kamu ini adalah tantangan baru untuk blacksmith hebat seperti aku!</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-1-a" image="QS_Default.dds" itemindex="400300" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-1-b" mid="70" select_type="2" />
+      <talk_question mid="10"><![CDATA[<html>$Blacksmith Borin$<BR>Ah aku kekurangan bahan untuk memperbaiki equipment kamu.<BR>Carikan aku pecahan dari perisai yang digunakan oleh monster di <FONT color=#a82424>Frost Wind Valley</FONT>?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-1-b" image="QW_7.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-1-c" mid="71" select_type="2" />
+      <talk_question mid="12"><![CDATA[<html>$Blacksmith Borin$<BR>Iya. Saat keluar kota, kamu akan melihat <FONT color=#a82424>Blizzard Plain</FONT>. Setelah sampai di Blizzard Plain, kamu akan langsung menemukan jalan ke <FONT color=#a82424>Frost Wind Valley</FONT>.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-1-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-1-" mid="72" select_type="5" />
+      <talk_question mid="14"><![CDATA[<html>$Blacksmith Borin$<BR>Aku tidak yakin untuk meminta gadis cilik sepertimu melawan monster.<BR>Tapi kalau kamu Adventurer, kamu harus bisa melakukannya sendiri.<BR>Aku akan menunggu kamu kembali.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-1" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_Academic_Station.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-1-" mid="73" select_type="5" />
+      <talk_question mid="40"><![CDATA[<html>$Tinkerer Station$<BR>▶ Mission Objective.<BR>▷ <FONT color=#7e12d2>Meet Blacksmith Borin and optimize the equipment to current body.</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-2" image="QW_7.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-2-" mid="74" select_type="5" />
+      <talk_question mid="16"><![CDATA[<html>$Blacksmith Borin$<BR>Pergilah ke <FONT color=#a82424>Frost Wind Valley</FONT> dan bawakan aku pecahan dari perisai monster di sana.<BR>Lihat Arah panah petunjuk Quest di sebelah kanan layar monitor kamu jadi kamu tidak tersesat.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-a" mid="75" select_type="2" />
+      <talk_question mid="17"><![CDATA[<html>$Blacksmith Borin$<BR>
+Wow... Kamu menemukannya.<BR>
+Boleh juga kamu gadis kecil.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-a" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-b" mid="76" select_type="2" />
+      <talk_question mid="19"><![CDATA[<html>$Blacksmith Borin$<BR>
+Baiklah, tunggu yah.<BR>
+Aku akan membuat senjatamu seperti baru.<BR>
+<FONT color=#7e12d2>(Borin mengambil palu dan melakukan peragangan)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-c" mid="77" select_type="2" />
+      <talk_question mid="21"><![CDATA[<html>$Blacksmith Borin${sound:UI_Item_Repair.wav}<BR>
+<html>$Blacksmith Borin${sound:UI_Item_Repair.wav}<BR>
+Haiya~!!<BR>
+Haaaaar~!!!<BR>
+<FONT color=#7e12d2>(Borin mulai memukul dengan kecepatan tinggi)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-d" mid="78" select_type="2" />
+      <talk_question mid="23"><![CDATA[<html>$Blacksmith Borin${sound:UI_Item_Fail.wav}<BR>
+Haargh~! <FONT color=#7e12d2>(Clank)</FONT><BR>
+Yeah~!! <FONT color=#7e12d2>(Clonk)</FONT><BR>
+Warhh~!!! <FONT color=#7e12d2>(Clunk)</FONT><BR>
+Ayo mulai~!!!! <FONT color=#7e12d2>(Crack)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-d" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-e" mid="26" select_type="0"><![CDATA[<html>(.........)</html>]]></talk_answer>
+      <talk_answer link_index="n016_trader_borin-3-e" mid="79" select_type="0"><![CDATA[<html>A lot of things seem to have happened just now...</html>]]></talk_answer>
+      <talk_question mid="25"><![CDATA[<html>$Blacksmith Borin${sound:UI_Item_Broken.wav}<BR>
+Oh... Tidak..........<BR>
+<FONT color=#7e12d2>(Borin berhenti. Tangan Borin memegang palu dan matanya agak berkaca-kaca)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-e" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-f" mid="80" select_type="2" />
+      <talk_question mid="31"><![CDATA[<html>$Blacksmith Borin$<BR>
+Ahh... Hahahahahahaha!<BR>
+Nih, sudah aku perbaiki dengan sempurrrrnaaa!<BR>
+<FONT color=#7e12d2>(Borin tertawa puas)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-f" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-g" mid="82" select_type="2" />
+      <talk_question mid="81"><![CDATA[<html>${user_nick}$<BR>
+<FONT color=#662500>Apa? Dimana?!</FONT><BR>
+<FONT color=#662500>Sepertinya aku mendengar ada sesuatu yang pecah...</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-g" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-3-h" mid="83" select_type="2" />
+      <talk_question mid="33"><![CDATA[<html>$Blacksmith Borin$<BR>
+Tenang dulu gadis kecil, sepertinya kamu tidak mengerti....<BR>
+Kalau kamu melihat retakan kecil ini, kamu akan tahu aku membuatnya dengan sengaja untuk mendinginkannya kalau suatu saat senjatamu terlalu panas.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-3-h" image="QN_BlackSmith_dorin.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-4" mid="84" select_type="2" />
+      <talk_question mid="41"><![CDATA[<html>$Blacksmith Borin$<BR>Kalau begitu, selamat berpetualang.<BR>
+Ah aku ingin sekali menghancurkan senjata hari ini....<BR>
+<FONT color=#7e12d2>(Borin sepertinya enggan melepasnya)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n016_trader_borin-4" image="QN_Npc_Academic_station.dds" itemindex="" portrait_left="" portrait_right="Npc_Right_BlackSmith_dorin.dds" center_image="">
+      <talk_answer link_index="n016_trader_borin-4-" mid="85" select_type="5" />
+      <talk_question mid="43"><![CDATA[<html>${user_nick}$<BR><FONT color=#662500>(Optimasi Equipment sudah selesai. Bicaralah pada Jasmine melalui Tinkerer Station)</FONT></html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-4" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-4-a" mid="45" select_type="0"><![CDATA[<html>Tapi, dia melakukan sesuatu terhadap equipment...</html>]]></talk_answer>
+      <talk_question mid="44"><![CDATA[<html>$Tinkerer Jasmine${sound:npc_MR_Jasmin_sp_03.ogg}<BR><FONT color=#387206>{user_nick}</FONT>, ada masalah dengan equipment?</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-4-a" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-4-b" mid="89" select_type="2" />
+      <talk_question mid="46"><![CDATA[<html>$Tinkerer Jasmine$<BR>Really? <FONT color=#a82424>Borin</FONT> is a renowned blacksmith even at our headquarters, so he must have repaired it well.</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-4-b" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-4-c" mid="90" select_type="4" />
+      <talk_question mid="48"><![CDATA[<html>$Quest Reward$</html>]]></talk_question>
+   </talk_paragraph>
+   <talk_paragraph index="n391_academic_station-4-c" image="" itemindex="" portrait_left="" portrait_right="Npc_Right_Jasmin.dds" center_image="">
+      <talk_answer link_index="n391_academic_station-4-!next" mid="92" select_type="2" />
+      <talk_question mid="91"><![CDATA[<html>$Tinkerer Jasmine$<BR>Now, shall we start with our plan?</html>]]></talk_question>
+   </talk_paragraph>
+   <qstep_change qstep="accepting">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setquest">92</exe>
+         <exe type="talk" npc="n016_trader_borin">1</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="1">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="huntmon" num="30000" party="1" exe="" onexe="2,3,4,5">224</exe>
+         <exe type="huntitem" num="1" exe="" onexe="">400300</exe>
+         <exe type="addquestitem" num="1">400300</exe>
+         <exe type="delcount">.</exe>
+         <exe type="setstep">3</exe>
+         <exe type="setjornal">3</exe>
+         <exe type="setstep">2</exe>
+         <exe type="setjornal">2</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="2">
+      <comment />
+      <conditions />
+      <executions />
+   </qstep_change>
+   <qstep_change qstep="3">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="setstep">4</exe>
+         <exe type="setjornal">4</exe>
+         <exe type="delquestitem" num="-1">400300</exe>
+      </executions>
+   </qstep_change>
+   <qstep_change qstep="4">
+      <comment />
+      <conditions />
+      <executions>
+         <exe type="recompense">920,,,,,,,,</exe>
+         <exe type="complete" true="">92</exe>
+      </executions>
+   </qstep_change>
+   <exelink qstep="accepting" npc="n016_trader_borin" sub="acceptted">0,1</exelink>
+   <exelink qstep="1" npc="n016_trader_borin" sub="b" />
+   <exelink qstep="1" npc="n016_trader_borin" sub="c">0,1,6,7</exelink>
+   <exelink qstep="1" npc="n016_trader_borin" sub="" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="b" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="c" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="d" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="e" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="e" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="f" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="g" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="h" />
+   <exelink qstep="3" npc="n016_trader_borin" sub="4">0,1,2</exelink>
+   <exelink qstep="4" npc="n391_academic_station" sub="b">0</exelink>
+   <exelink qstep="4" npc="n391_academic_station" sub="c">1</exelink>
+   <exelink qstep="4" npc="n391_academic_station" sub="!next" />
+   <journal_data recompense="920" quest_title="도구를 재정비 합니다" chapterid="1" quest_level="2" quest_mark_type="1" use_item_list="400300">
+      <journal index="1">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>5,n16</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>16</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="51"><![CDATA[Repairing the Equipment I]]></title>
+         <contents mid="52"><![CDATA[<html>Temui Blacksmith Borin dan tingkatkan equipment.<BR>
+ <BR>
+<FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Blacksmith Borin</FONT></html>]]></contents>
+         <destination mid="53"><![CDATA[Bicaralah dengan Blacksmith Borin]]></destination>
+         <todo_msg mid="54"><![CDATA[Menerima Quest]]></todo_msg>
+      </journal>
+      <journal index="2">
+         <contents_image>QM_OrcBlue.dds</contents_image>
+         <destination_pos>83,0,0</destination_pos>
+         <destination_mode>custom:81@1,82@1,83@3</destination_mode>
+         <statemark_npcid />
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="55"><![CDATA[Repairing the Equipment II]]></title>
+         <contents mid="56"><![CDATA[<html>Habisi monster dan kumpulkan bagian perisai di Frost Wind Valley.<BR>
+ <BR>
+<FONT color=#086171>Blizzard Plain (Frost Wind Valley Entrance)</FONT> <FONT color=#a82424>→ Frost Wind Valley</FONT></html>]]></contents>
+         <destination mid="57"><![CDATA[Frost Wind Valley]]></destination>
+         <todo_msg mid="58"><![CDATA[Kumpulkan bagian perisai dari Frost Wind Valley.]]></todo_msg>
+      </journal>
+      <journal index="3">
+         <contents_image>QN_BlackSmith_dorin.dds</contents_image>
+         <destination_pos>5,n16</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>16</statemark_npcid>
+         <statemark_type>2</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="60"><![CDATA[Repairing the Equipment III]]></title>
+         <contents mid="61"><![CDATA[<html>Mendapatkan bagian dari perisai. Kembali ke Blacksmith Borin di Mana Ridge.<BR>
+ <BR>
+<FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Blacksmith Borin</FONT></html>]]></contents>
+         <destination mid="62"><![CDATA[Bicaralah dengan Blacksmith Borin]]></destination>
+         <todo_msg mid="63"><![CDATA[Telah mengumpulkan bagian perisai. Kembali ke Blacksmith Borin.]]></todo_msg>
+      </journal>
+      <journal index="4">
+         <contents_image>QN_Npc_Academic_station.dds</contents_image>
+         <destination_pos>5,n391</destination_pos>
+         <destination_mode>custom</destination_mode>
+         <statemark_npcid>391</statemark_npcid>
+         <statemark_type>3</statemark_type>
+         <trigger_string />
+         <maptool_index />
+         <title mid="64"><![CDATA[Repairing the Equipment IV]]></title>
+         <contents mid="65"><![CDATA[<html>Selesai meningkatkan equipment. Hubungi Tinkerer Station and Bicaralah dengan Jasmine.<BR>
+ <BR>
+<FONT color=#086171>Mana Ridge</FONT> <FONT color=#a82424>→ Tinkerer Station</FONT></html>]]></contents>
+         <destination mid="66"><![CDATA[Hubungi Tinkerer Station]]></destination>
+         <todo_msg mid="67"><![CDATA[Perbaikan Equipment selesai. Pindah ke Tinkerer Station.]]></todo_msg>
+      </journal>
+   </journal_data>
+   <condition_data>
+      <user_level />
+      <user_class />
+      <prev_quest>91</prev_quest>
+      <have_quest />
+      <have_normal_item />
+      <complete_mission />
+      <npc_favor />
+      <have_cash_item />
+      <have_daily_quest />
+   </condition_data>
+</quest>

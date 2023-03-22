@@ -1,0 +1,58 @@
+   <talk>
+      <npcename>n2695_officiant_teramai</npcename>
+      <npcid>2695</npcid>
+      <startexe>3</startexe>
+      <comment>api_quest_PromiseChannelBuff(userObjID, 268483790);
+api_quest_ApplyWorldBuff(userObjID, 268483790, 189);</comment>
+      <npckname mid="1"><![CDATA[Officiator Terrence Terramai]]></npckname>
+      <talk_paragraph index="basic" image="" itemindex="">
+         <talk_answer link_index="return" mid="6"><![CDATA[<html><FONT color=#387206>[Parting Gift]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="out" mid="11"><![CDATA[<html>[Leave dais]</html>]]></talk_answer>
+         <talk_question mid="3"><![CDATA[<html>$Officiator Terrence Terramai$<BR>Ho-ho, congratulations for completing the oath.<BR>If you want to thank the guests who come here, give them a<FONT color=#a82424>Parting Gift</FONT>.<BR>You can give them <FONT color=#a82424>something nice</FONT>.<BR>Press 'Leave' to travel if you are finished preparations.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="basic_promisenum3" image="" itemindex="">
+         <talk_answer link_index="return1" mid="48"><![CDATA[<html><FONT color=#387206>[Guest Appreciation]</FONT></html>]]></talk_answer>
+         <talk_answer link_index="return_bonus" mid="49"><![CDATA[<html><FONT color=#7e12d2>[Addiotional Appreciation] ★Perfect Oath Scroll Benefit★ </FONT></html>]]></talk_answer>
+         <talk_answer link_index="out1" mid="50"><![CDATA[<html>[Exit to Rostrum]</html>]]></talk_answer>
+         <talk_question mid="14"><![CDATA[<html>$Officiator Terrence Terramai$<BR>Hehe, congratulation for your wedding.<BR>If you appreciate guests here <FONT color=#a82424>Guest Appreciation</FONT>is something you could do.<BR><FONT color=#a82424>Great Gift</FONT>will be sent.<BR>If everything is complete, you could click Leave.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="add_quest_item" image="" itemindex="">
+         <talk_answer link_index="basic_promisenum3" mid="51"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="18"><![CDATA[<html>$Officiator Terrence Terramai$<BR>
+You are already given something for Additional Appreciation.<BR><FONT color=#a82424>Go to see Oath Assistant Grace</FONT> after the Oath Ceremony.<BR>
+She might have a better idea for you.<BR>
+Of course, you better check the stuff gotten from me first though.</html>]]></talk_question>
+      </talk_paragraph>
+      <talk_paragraph index="add_quest" image="" itemindex="">
+         <talk_answer link_index="basic_promisenum3" mid="63"><![CDATA[<html>(Back)</html>]]></talk_answer>
+         <talk_question mid="59"><![CDATA[<html>$Officiator Terrence Terramai$<BR>
+My part is done for you.<BR>
+Now, go to see others who will help you.<BR>
+ <BR>
+<FONT color=#7e12d2>※ Quest for Additional Appreciation is already complete or currently being done.</FONT></html>]]></talk_question>
+      </talk_paragraph>
+      <executions>
+         <exe type="talk">basic</exe>
+         <exe type="custom">api_quest_PromiseChannelBuff(userObjID, 268483790);</exe>
+         <exe type="custom">api_trigger_WarpByPosition(userObjID, 189, 56882, 0, 1772718, 2)</exe>
+         <exe type="conexe" true="4" false="0">0</exe>
+         <exe type="talk">basic_promisenum3</exe>
+         <exe type="conexe" true="7" false="10">3</exe>
+         <exe type="custom">api_quest_AddQuest(userObjID, 3741, 7 );</exe>
+         <exe type="talk">add_quest_item</exe>
+         <exe type="enterquest">sqc24_3742_promise_buff2</exe>
+         <exe type="talk">add_quest</exe>
+         <exe type="conexe" true="9" false="8">1 / 2</exe>
+      </executions>
+      <conditions>
+         <chk type="custom">api_user_GetPromiseGrade(userObjID) == 3</chk>
+         <chk type="hasquest">3741</chk>
+         <chk type="hascomq">3741</chk>
+         <chk type="item" num="1" op=">=">268484097</chk>
+      </conditions>
+      <exelink idx="return">1</exelink>
+      <exelink idx="out">2</exelink>
+      <exelink idx="return1">1</exelink>
+      <exelink idx="return_bonus">5</exelink>
+      <exelink idx="out1">2</exelink>
+   </talk>
